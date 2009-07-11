@@ -1,0 +1,628 @@
+%%
+%%
+%%  the_books.tex
+%%
+%%   The appendix 'The Books' for
+%%     the book "Some Important Books in Astronomy and
+%%      Astrophysics in the 20th Century"
+%%
+%%   Copyright 2008 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%% 
+%%
+%%   The last known changes were checked in by $Author$
+%%   as revision $LastChangedRevision$
+%%   on $Date$
+%%
+%%
+
+%%
+%% \bkentry{author}{year}{title}{publishing}{description}{references}
+%%
+\newcounter{bksctr}
+
+\newcommand{\bkentry}[6]{
+\stepcounter{bksctr}
+\vspace*{1 cm}
+\noindent
+{\bf\arabic{bksctr}  #2}\newline
+{\it\large #3\hfil}\newline
+{\bf #1}, #4\newline
+#5\newline
+#6\newline
+Comments:\newline
+}
+
+%
+% Example book entry, no index number
+%
+\newcommand{\exbkentry}[6]{
+\vspace*{1 cm}
+\noindent
+{\bf Index  #2}\newline
+{\it\large #3}\newline
+{\bf #1}, #4
+#5\newline
+#6\newline
+Comments:\newline
+}
+
+
+\chapter{The Books}
+
+\textbf{What order should the books be listed in? Alphabetic, by author or title? By subject,
+stellar, galactic, radio, visual? By date? I'm inclined to list them by date at this time.
+What about multiple editions or first editions published in Europe and the USA?  How do
+we list them under one book entry?}
+
+The books are listed by date of publication in order to emphasize the historical
+development of astronomy.  Where there are multiple books
+published in a single year, they are listed alphabeticly by the author's last
+name.
+
+The entries contain an index number, the author(s), title, date, place
+of publication, and publisher.  Also included is a bibliographic description of the 
+book.  This is followed by any references to other lists, if such exist. Finally
+a comment as to why the book is considered important as well as any publishing
+history known, e.g.\ number of edition, translation, etc.
+
+A book entry is formated as follows:
+
+\exbkentry{Year}{Author}{Title}{place of publication, Publisher}
+{Bibliographic description}{References to other lists}
+Reasons why the book is important and any publishing history.
+
+\section*{References}
+References to other lists are as follows:
+\begin{itemize}
+\item AAA --- \emph{Astronomy and Astrophysics Abstracts}, \cite{aaa:1969},
+References are given as AAAvvv.sss.nnn, where vvv is the volume number, sss is the section number (usually 003, books), and nnn is the index number in the section.
+\item AJB --- \emph{Astronomischer Jahresbericht}, \cite{ajr:1900}
+\item BEA --- \emph{Biographical Encyclopedia of Astronomy} [get citation]
+\item DeV --- DeVorkin, D., \emph{The History of Modern Astronomy and Astrophysics},
+\cite{devorkin:1982}
+\item DSB --- Gillispie, C.\ C., \emph{Dictionary of Scientific Biographies}, \cite{gillispie:1970}
+\item Kp --- Kemp, D.A., \emph{Astronomy and Astrophysics, a bibliographical guide}, \cite{kemp:1970}
+\end{itemize}
+
+\textbf{Need BEA and DSB entries for all authors. Do we want to give the doi: for any entries?
+What is a doi:?}
+\newpage
+
+\section*{Books}
+\setcounter{bksctr}{0}
+%%\indent
+
+\bkentry{1914}{Eddington, Arthur}
+{Stellar Movement and the Structure of the Universe}
+{London, Macmillian \& Co}
+{15 x 22.5 cm, xii, 266, (2) pp, 4 plates, 22 figures, index, 2 pages of advertisments
+in the back, blue cloth}
+{}
+
+\bkentry{1929}{Jeans, James}
+{Astronomy and Cosmology}
+{Cambridge, Cambridge University Press}
+{18 x 26.25 cm, x, 428 pp, 16 plates, 63 figures, 32 tables, dark blue cloth}
+{}
+
+\bkentry{1930}{Eddington, Arthur}
+{The Internal Constitution of Stars}
+{Cambridge, Cambridge University Press}
+{18 x 26.25 cm, x, 407 pp, 5 figs, 48 tables}
+{BEA 134; DSB 2:337; DeV 1140}
+
+\bkentry{1930}{Payne, Ceclia}
+{The Stars of High Luminosity}
+{New York, McGraw-Hill}
+{15 x 22.5 cm, xiv, 320 pp, red cloth}
+{}
+
+\bkentry{1930}{Shapley, Harlow}
+{Star Clusters}
+{New York, McGraw-Hill}
+{15 x 22 cm, xi, 276 pp, illus, bibliography, red cloth}
+{}
+Harvard Observatory Monographs number 1.
+
+\bkentry{1931}{Smarrt, William}
+{Textbook on Spherical Astronomy}
+{Cambridge, Cambridge University Press}
+{13.75 x 21.25 cm, xii, 414 pp, 146 figures, blue cloth}
+{}
+
+\bkentry{1936}{Hubble, Edwin}
+{The Realm of the Nebulae}
+{New Haven, Yale University Press}
+{15 x 22.5 cm, xii, (2), 210 pp, blue cloth}
+{}
+
+\bkentry{1936}{Rossland, Sven}
+{Theoretical Astrophysics}
+{Oxford, Claredon Press}
+{23 x 16.25 cm, xx, 355 pp, brown cloth}
+{}
+
+\bkentry{1938}{Payne-Gaposhkin, Ceclia and Sergie Gaposhkin}
+{Variable Stars}
+{Cambridge, Harvard Observatory}
+{15 x 22 cm, xiv, (1),386 pp, red cloth, gilt spine}
+{}
+Harvard Observatory Monographs number 5.
+
+\bkentry{1938}{Smartt, W.~M.}
+{Stellar Dynamics}
+{Cambridge, Cambridge University Press}
+{20 x 25 cm, viii, 434 pp, 52 tables, 75 figures, blue cloth}
+{}
+
+\bkentry{1939}{Chandrasekhar, Subramanian}
+{An Introduction to the Study of Stellar Structure}
+{Cambridge, Cambridge University Press}
+{XX x XX cm, ix, (1), 509 pp, 44 tables, 38 figures, cloth}
+{}
+
+\bkentry{1943}{Goldberg, Leo and Lawrence Aller}
+{Atoms, Stars and Nebulae}
+{Philadelphia, Blakiston Company}
+{21.25 x 19 cm, vi, 323, (3) pp, 16 tables, 150 figures, cloth with dust jacket}
+{}
+
+\bkentry{1950}{Chandrasekhar, Subramanian}
+{Radiative Transfer}
+{Oxford, Oxford University Press}
+{241 x 165 mm, xiv, 393 pp, 35 tables, 35 figures, dark blue cloth with brown dust jacket}
+{}
+
+\bkentry{1953--1963}{Kuiper, Gerald P.\ and Barbara M.\ MiddleHurst}
+{The Solar System}
+{Chicago, The University of Chicago Press}
+{4 vols.}
+{}
+
+\bkentry{1954}{Dufay, Jean}
+{N\'{e}buleuses Galactiques et Mati\`{e}re Interstellaire}
+{Paris, The French Publishing Company}
+{229 x 260 mm, 352 pp, cloth}
+{}
+First published in France in 1954, it was translated by A.\ J.\ Pomerans
+and published in the UK in 1957 by Hutchinson \& Co., London, as part of their Scientific and 
+Technical Publications.  The first American publication also occurred in 1957 and was 
+handled by the Philosophical Library, New York. It was later republished in 1968 by Dover
+Publications from the Hutchinson edition.
+
+\bkentry{1958}{Schwarzschild, Martin}
+{Structure and Evolution of Stars}
+{Princeton, Princeton University Press}
+{235 x 260 mm, xvii, (1), 296 pp, cloth with dust jacket}
+{}
+The second major work on stellar evolution after Chandrasekhar's 1939 work {\bf [c.f\ 11]}.
+
+\bkentry{1959}{Kopal, Zden\u{e}k}
+{Close Binary Systems}
+{New York, John Wiley \& Sons}
+{241 x 159 mm, xiv, (1), 558 pp blue/green cloth}
+{}
+Volume five of The International Astrophysics Series.
+
+\bkentry{1960-1975}{Kuiper, Gerald P.\ and Barbara M.\ Middlehurst}
+{Stars and Stellar Systems}
+{Chicago, The University of Chicago Press}
+{8 vols.}
+{}
+
+\bkentry{1962}{Podobed, V.\ V.}
+{Fundamental Astrometry (in Russian, of course)}
+{Moscow, Fizmatgiz}
+{XX x XX mm, XX pp, cheap cloth}
+{}
+First published in Moscow, it was translated into English by Scripta
+Technica, Inc., with editorial work by A.\ N.\ Vyssotsky, and published
+by the University of Chicago Press, Chicago, in 1965.  Although astrometry
+was no longer the leading subject in astronomy as it was in the early \Cen{19},
+it was becoming more important with the rise of the space program and the requirement
+of hitting what you aim for.
+
+\bkentry{1963--}{}
+{Annual Reviews of Astronomy and Astrophysics}
+{Palo Alto, Annual Reviews}
+{}
+{DeV 122}
+An annual series of review articles in topics of current interest.  This has become
+the standard to which astronomers and students turn when they wish to
+begin research on a subject.  From 1977 on the volumes also included a brief biographical
+article by a senior astronomer. The series was edited by Leo Goldberg, A.J.\ Deutsch,
+D.\ Layzer, J.\ Phillips and G.\ Burbidge.
+
+\textbf{Need to note when the spine includes AR logo. Find out if dust jackets ever issued.}
+
+\begin{itemize}
+	\item (1963), vol.\ 1, eds.\ Goldberg, Leo, Armin J.\ Deutsch and David Layzer, 228x157 mm,
+	viii, 418, (1) pp, subject index,
+	blue cloth with gold lettering, gold title on cover enclosed in	four gold box outlines,
+	spine quarter black surrounding gold title, year and volume number with blue cloth,
+	
+	\item (1964), vol.\ 2, eds.\ Goldberg, Leo, Armin J.\ Deutsch and David Layzer, 228x157 mm,
+	viii, 462, (2) pp, subject index, cumulative title/author index vols.\ 1--2,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1965), vol.\ 3, eds.\ Goldberg, Leo, Armin J.\ Deutsch and David Layzer, 228x157 mm,
+	viii, 438, (1) pp, subject index, cumulative title/author index vols.\ 1--3,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1966), vol.\ 4, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	viii, 513 pp, subject index, cumulative title/author index vols.\ 1--4,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1967), vol.\ 5, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	viii, 694, pp, subject index, cumulative title/author index vols.\ 1--5,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1968), vol.\ 6, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	viii, 525 pp, subject index, cumulative title/author index vols.\ 2--6,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1969), vol.\ 7, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	viii, 717 pp, subject index, cumulative title/author index vols.\ 3--7,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1970), vol.\ 8, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	ix, 495 pp, subject index, cumulative title/author index vols.\ 4--8,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1971), vol.\ 9, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	ix, 394 pp, subject index, cumulative title/author index vols.\ 5--9,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1972), vol.\ 10, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	viii, 435 pp, subject index, cumulative title/author index vols.\ 6--10,
+	blue cloth with gold lettering, gold title on cover enclosed in four gold box outlines
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1973), vol.\ 11, eds.\ Goldberg, Leo, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 513, pp, subject index, cumulative title/author index vols.\ 7--11,
+	blue cloth with gold lettering, gold title,
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+  
+  The gold rectangles on the cover disappeared in this and subsequent volumes.
+	
+	\item (1974), vol.\ 12, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(4), 495, (1) pp, subject index, cumulative title/author index vols.\ 8--12,
+	blue cloth with gold lettering, gold title,
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1975), vol.\ 13, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 557, (4) pp, subject index, cumulative title/author index vols.\ 9--13,
+	blue cloth with gold lettering, gold title
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1976), vol.\ 14, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 500, (1) pp, subject index, cumulative title/author index vols.\ 10--14,
+	blue cloth with gold lettering, gold title
+  spine quarter black surrounding gold title, year and volume number with blue cloth.
+	
+	\item (1977), vol.\ 15, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(6), 602, (1) pp, subject index, cumulative title/author index vols.\ 11--15,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors.
+  
+  For the first time the authors were listed on the front cover and the editors on the spine.
+  All subsequent volumes have this style.  The first biographical article appears written by
+  E.J.\ Opik.
+	
+	\item (1978), vol.\ 16, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 652, (1) pp, subject index, cumulative title/author index vols.\ 12--16,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors.
+  
+  Instead of a biographical article, C.\ Payne-Gaposchkin wrote an article about the development
+  of our knowledge of variable stars.
+   
+	\item (1979), vol.\ 17, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 585, (2) pp, subject index, cumulative title/author index vols.\ 13--17,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+  The return of the biographical article, this time by Paul Swings.  All subsequent volumes will
+  include such an article. The first order form appears in this volume.
+  
+	\item (1980), vol.\ 18, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 591, (3) pp, subject index, cumulative title/author index vols.\ 14--18,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+	\item (1981), vol.\ 19, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(5), 479, (3) pp, subject index, cumulative title/author index vols.\ 15--19,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+	\item (1982), vol.\ 20, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	xii, 631, (2) pp, subject index, cumulative title/author index vols.\ 16--20,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+  \textbf{Verify end pages in this volume.}
+  
+	\item (1983), vol.\ 21, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	(6), 482, (1) pp, subject index, cumulative title/author index vols.\ 11--21,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+  The last volume to not use any page numbering for the front matter; the first volume in which
+  the cumulative index covers ten years instead of five.
+  
+	\item (1984), vol.\ 22, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 635, (1) pp, subject index, cumulative title/author index vols.\ 12--22,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+  
+	\item (1985), vol.\ 23, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 466, (2) pp, subject index, cumulative title/author index vols.\ 13--23,
+	blue cloth with gold lettering, gold title with list of authors,
+  spine quarter black surrounding gold title, year and volume number with blue cloth and list of
+  editors, two page lite-blue order form in rear before free endpaper, no dust jacket issued.
+
+	\item (1986), vol.\ 24, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 627, (1) pp, subject index, cumulative title/author index vols 14--24,
+	blue cloth with gold and black lettering, spine quarter black with silver lettering,
+	two page dark blue order form in rear before free endpaper, no dust jacket issued.
+
+	\item (1987), vol.\ 25, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 684, (5) pp, subject index, cumulative title/author index vols 15--25,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page dark blue order form in rear before free endpaper, no dust jacket issued.
+	
+	The appearance of the spine changed with this volume when the lettering was switched
+	from silver to gold.  The front cover retained the gold lettering. 
+
+	\item (1988), vol.\ 26, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	x, 703, (3) pp, subject index, cumulative title/author index vols 16--26,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page dark blue order form in rear before free endpaper, no dust jacket issued.
+
+	\item (1989), vol.\ 27, eds.\ Burbidge, Geoffrey, David Layzer and John G.\ Phillips, 228x157 mm,
+	xii, 773, (3) pp, subject index, cumulative title/author index vols 17--27,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page dark blue order form in rear before free endpaper, no dust jacket issued.
+
+	\item (1990), vol.\ 28, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	xii, 767, (2) pp, subject index, cumulative title/author index vols 18--28,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page green order form in rear before free endpaper, no dust jacket issued.
+
+	\item (1991), vol.\ 29, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	x, 777, (1) pp, subject index, cumulative title/author index vols 19--29,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page purple order form in rear before free endpaper, no dust jacket issued.
+	
+	\item (1992), vol.\ 30, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	xii, 767, (2) pp, subject index, cumulative title/author index vols 20--30,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in rear before free endpaper, no dust jacket issued.
+	
+	\item (1993), vol.\ 31, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	xi, 787, (2) pp, subject index, cumulative title/author index vols 21--31,
+	blue cloth with gold and black lettering,
+	two page green order form in back before free endpaper, no dust jacket issued.
+	
+	\item (1994), vol.\ 32, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	x, 662, (2) pp, subject index, cumulative title/author index vols 22--32,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket	issued.
+	
+	\item (1995), vol.\ 33, eds.\ Burbidge, Geoffrey, David Layzer and Allen Sandage, 228x157 mm,
+	x, 656, (2) pp, subject index, cumulative title/author index vols 23--33,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket issued.
+	
+	\item (1996), vol.\ 34 revised, eds.\ Burbidge, Geoffrey, and Allen Sandage, 228x157 mm,
+	x, 825, (2) pp, subject index, cumulative title/author index vols 24--34,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket issued.
+	
+	This is a revised edition.  A original edition was printed and distributed in September 1996
+	but there were problems in the final stages of production and the volume was reprinted and
+	reissued in December of 1996.  The revised edition states ``(revised edition)'' under the
+	volume number on the title page and contains the editors preface after the copyright page.
+	
+	\item (1997), vol.\ 35, eds.\ Burbidge, Geoffrey, Allen Sandage and Frank H.\ Shu, 228x157 mm,
+	xii, 699, pp, subject index, cumulative title/author index vols 25--35,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket	issued.
+	
+	\item (1998), vol.\ 36, eds.\ Burbidge, Geoffrey, Allen Sandage and Frank H.\ Shu, 228x157 mm,
+	x, 692, (1) pp, subject index, cumulative title/author index vols 26--36,
+	blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket	issued.
+	
+	\item (1999), vol.\ 37, eds.\ Burbidge, Geoffrey, Allen Sandage and Frank H.\ Shu, 236x157 mm,
+	viii, (1), 689, (2) pp, subject index, cumulative title/author index vols 27--37,
+	grey-blue cloth with gold and black lettering, spine quarter black with gold lettering,
+	two page blue order form in back before free endpaper, no dust jacket	issued.
+	
+	The appearance of the volumes changes with this issue; they are now a little taller
+	and the color of the binding has gotten more grey.
+	
+\end{itemize}
+
+
+\bkentry{1966}{Shlovskii, I.\ S.\ and Carl Sagan}
+{Intellegent Life in the Universe}
+{San Francisco, Holden-Day, Inc.}
+{172 x 232 mm, xiv, (2), 509 pp, illus, red cloth with dust jacket}
+{}
+This work is a translation, extension and revision of I.\ S.\ Schlovskii's
+1963 semipopuler book {\it Vselennaia, Zhizn, Razum (Universe, Life, Mind)}.
+The english translation was done by Paula Fern and Sagan indicates that it
+was also translated in numerous other languages.  The first serious scientific study 
+of the possibilities of intelegent life elsewhere in the universe.
+
+\bkentry{1968}{Spitzer, Lyman}
+{Diffuse Matter in Interstellar Space}
+{New York, Interscience Publishers}
+{216 x 140 mm, xiii, 262 pp, illus, yellow cloth}
+{}
+
+\bkentry{1968}{Glasstone, Samuel}
+{The Book of Mars}
+{Washington, D.C., NASA}
+{248 x 178 mm, vii, frontis, 315 pp, red cloth}
+{}
+NASA SP-179
+
+\bkentry{1969}{Chandrasekhar, Subramanian}
+{Ellipsoidal Figures of Equilibrium}
+{New Haven, Yale University Press}
+{235 x 165 mm, xi, 252 pp, cloth}
+{}
+
+\bkentry{1971}{Peebles, P.\ James E.}
+{Physical Cosmology}
+{Princeton, Princeton University Press}
+{235 x 152 mm, xvi, 282 pp, cloth}
+{}
+
+\bkentry{1973}{Harwitt, Martin}
+{Astrophysical Concepts}
+{New York, John Wiley \& Sons}
+{235 x 165 mm, Xiv, 561 pp, blue paper with a silver and red stamps}
+{}
+Second edition, 1988, Springer-Verlag, (bib data),
+third edition, 19xx, Springer-Verlag, (bib data),
+fourth edition, 2006, Springer-Verlag, (bib data).
+
+
+\bkentry{1974}{Osterbrock, Donald}
+{Astrophysics of Gaseous Nebulae}
+{San Francisco, W.\ H.\ Freeman and Company}
+{235 x 152 mm, xiv, 251 pp, cloth}
+{}
+
+\bkentry{1976}{Mutch, Thomas et.\ al.}
+{The Geology of Mars}
+{Princeton, Princeton University Press}
+{286 x 222 mm, ix, 400 oom cloth with dust jacket}
+{}
+Other authors are Raymond Arvidson, James Head, Kenneth Jones,
+and R.\ Saunders.
+
+\bkentry{1978}{Tassoul, Jean-Louis}
+{Theory of Rotating Stars}
+{Princeton, Princeton University Press}
+{235 x 159 mm, xvi, 506 p, cloth with dust jacket}
+{}
+The Princeton Series in Astrophysics number One
+
+\bkentry{1978}{Spitzer, Lyman}
+{Physical Processes in the Interstellar Medium}
+{New York, John Wiley and Sons}
+{229 x 152 mm, xvii, 318 pp, blue cloth}
+{}
+
+\bkentry{1978}{Morgan, William W., Helmut Abt and J.\ Tapscott}
+{Revised MK Spectral Atlas For Stars Earlier the the Sun}
+{Williams Bay, Yerkes Observatory}
+{381 x 311 mm, 14 pp, 32 plates, blue plastic wrappers}
+{}
+
+\bkentry{1970}{Mihalis, Dimitri}
+{Stellar Atmospheres}
+{San Francisco, W.\ H.\ Freeman and Company}
+{235 x 152 mm, xx, 623 pp, cloth}
+{}
+Second edition published in 1978 (San Francisco, W.\ H.\ Freeman and Company,
+235 x 152 mm, xx, 623 pp, red stamped cloth.)
+
+\bkentry{1979}{Kopal, Zden\u{e}k}
+{Language of the Stars}
+{Dordrecht, D.\ Reidel}
+{241 x 165 mm, vii, 280 pp, cloth}
+{}
+
+\bkentry{1980}{Peebles, P.\ J.\ E.}
+{The Large Scale Structure of the Universe}
+{Princeton, Princeton University Press}
+{235 x 159 mm, xvii, 422 pp, cloth with dust jacket}
+{}
+Work on the new(?) topic of cosmology.
+
+\bkentry{1980}{Cox, John}
+{Theory of Stellar Pulsation}
+{Princeton, Princeton University Press}
+{235 x 165 mm, xiv, 380 pp, cloth with dust jacket}
+{}
+
+\bkentry{1981}{Carr, Michael}
+{The Surface of Mars}
+{New Haven, Yale University Press}
+{279 x 292 mm, xi, 232 pp, cloth with dust jacket}
+{}
+
+\bkentry{1981}{Mihalis, Dimitri and James Binney}
+{Galactic Astronomy}
+{San Francisco, W.\ H.\ Freeman and Compeny}
+{235 x 159 mm, xiv, (2), 597 pp, cloth}
+{}
+
+\bkentry{1983}{Murray, C.}
+{Vectorial Astronomy}
+{Bristol, Adam Hilger}
+{232 x 156 mm, xiii, (1), 353 pp, cloth with dust jacket}
+{}
+An important work on telescope pointing during the period
+of large telescope construction.
+
+\bkentry{1983}{Shapiro, S.\ and S.\ Teulkosky}
+{Black Holes, White Dwarfs and Neutron Stars}
+{New York, John Wiley and Sons}
+{229 x 165 mm, xvii, 645 pp, cloth with dust jacket}
+{}
+
+\bkentry{1984}{Mihalis, Dimtri and Barbara Mihalis}
+{Foundations of Radiation Hydrodynamics}
+{Oxford, Oxford University Press}
+{235 x 165 mm, xv, 718 pp, cloth}
+{}
+A revision and extention of his previous work on {\it Stellar Atmospheres.}
+
+\bkentry{1987}{Binney, James and Scott Tremaine}
+{Galactic Dynamics}
+{Princeton, Princeton University Press}
+{235 x 165 mm, xv, 733 pp, cloth with dust jacket}
+{}
+A revised and enlarged version of Binney and Mihalis, {\it Galactic Astronomy.}
+
+\bkentry{1987}{Spitzer, Lyman}
+{Dynamical Evolution of Globular Clusters}
+{Princeton, Princeton University Press}
+{235 x 165 mm, x, 180 pp, cloth with dust jacket}
+{}
+
+%%
+%% $Header$
+%%
+%%
+%%  $Log$
+%%
+%%

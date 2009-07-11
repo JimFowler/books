@@ -1,0 +1,7 @@
+
+  Important files and directories to save in backups
+
+   /home/jrf
+   /var/lib/mysql
+
+   Where ever subversion files will reside

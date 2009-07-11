@@ -1,0 +1,21 @@
+
+  Software and current versions used to support the Books20 Project
+
+     System version -- description -- maintainer
+
+  Ubuntu 9.04  -- the Linux operating system -- Ubuntu
+  Thunderbird 2.0.22 -- email client program -- Ubuntu
+  Firefox 3.0.11  -- web browser -- Ubuntu
+  Emacs 22.2.1  -- text editor -- Ubuntu
+  Apache HTTPD Server 2.2.11  -- web server -- Ubuntu
+  TeX 3.141592 -- document formatting language -- Ubuntu
+  MySQL 5.0.75 -- Database interface -- Ubuntu
+  Perl 5.10 -- scripting language -- Ubuntu
+  Php 5.2.6 -- dynamic web language -- Ubuntu
+  Subversion 1.5.4 -- Change Mangement System -- Ubuntu
+  Tomcat 6 -- Java servlet engine -- Ubuntu
+  Java 2.5 -- Java engine -- Ubuntu
+  Roller 4.0.1 -- Blog engine -- roller.apache.org
+     mysql connector 3.1.14 -- mysql jave interface -- dev.mysql.com
+     javamail 1.4.2 -- jave mail interface -- java.sun.com
+     jaf 1.1.1 -- java activation engine -- java.sun.com

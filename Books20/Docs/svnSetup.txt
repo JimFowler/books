@@ -1,0 +1,51 @@
+#
+# svn commands used in Books20
+#
+#
+#   The last known changes were checked in by $Author$
+#   as revision $LastChangedRevision$
+#   on $Date$
+#
+#
+
+#
+# create initial archive
+#
+cd ~/Documents/
+
+svn import Books20    svn://localhost/books/trunk/Books20
+svn import Collection svn://localhost/books/trunk/Collection
+
+mv Books20    Books20.bck
+mv Collection Collection.bck
+
+svn checkout svn://localhost/books/trunk/Books20
+svn checkout svn://localhost/books/trunk/Collection
+
+
+#
+# Basic usage
+#
+
+1. Update your working copy
+   svn update
+
+2. Make changes
+   svn add
+   svn delete
+   svn copy
+   svn move
+
+3. Examine your chages
+   svn status
+   svn diff
+
+4. Undo some changes
+   svn revert
+
+5. Resolve conflicts
+   svn update
+   svn resolve
+
+6. Commit your changes
+   svn commit

@@ -1,0 +1,6 @@
+<h3>History of Reading</h3>
+    <a href="http://hott.fsu.edu">History of Text Technology</a>
+<br><a href="http://www.hps.cam.ac.uk/">HPS Research Center</a>
+<br><a href="http://www.sharpweb.org/">SHARP Web</a>
+<br><a href="http://www.h-net.org/">H-Ideas Discussion</a>
+<br>More...

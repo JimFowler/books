@@ -1,0 +1,127 @@
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Some Important Books in Astronomy and Astrophysics 
+%%   from the 20th Century
+%%
+%%   Copyright 2008 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%% 
+%%   The last known changes were checked in by $Author$
+%%   as revision $LastChangedRevision$
+%%   on $Date$
+%%
+%----------------------------------------------------------
+%
+\documentclass{book}%
+%
+%----------------------------------------------------------
+% This is a sample document for the standard LaTeX Book Class
+% Class options
+%       --  Body text point size:
+%                        10pt (default), 11pt, 12pt
+%       --  Paper size:  letterpaper (8.5x11 inch, default)
+%                        a4paper, a5paper, b5paper,
+%                        legalpaper, executivepaper
+%       --  Orientation (portrait is the default):
+%                        landscape
+%       --  Printside:   oneside, twoside (default)
+%       --  Quality:     final(default), draft
+%       --  Title page:  titlepage, notitlepage
+%       --  Columns:     onecolumn (default), twocolumn
+%       --  Start chapter on left:
+%                        openright(no, default), openany
+%       --  Equation numbering (equation numbers on right is the default):
+%                        leqno
+%       --  Displayed equations (centered is the default):
+%                        fleqn (flush left)
+%       --  Open bibliography style (closed bibliography is the default):
+%                        openbib
+% For instance the command
+%          \documentclass[a4paper,12pt,reqno]{book}
+% ensures that the paper size is a4, fonts are typeset at the size 12p
+% and the equation numbers are on the right side.
+%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+
+%----------------------------------------------------------
+\newcommand{\Cen}[1]{\ensuremath{#1^{th}} Century}
+%----------------------------------------------------------
+%
+% History
+% created 30 Nov 2008
+%
+%----------------------------------------------------------
+\begin{document}
+
+\frontmatter
+\title{Some Important Books in Astronomy and Astrophysics from the \Cen{20}}
+\author{James R. Fowler}
+\date{copy of \today}
+\maketitle
+
+\vspace*{5 in}
+Copyright \copyright 2008 by James R. Fowler
+
+All rights reserved. No part of this publication may be
+reproduced, stored in a retrival system, or transmitted
+in any form or by any means, electronic, mechanical,
+photocopying, recording, or otherwise, without prior written
+permission of the author.
+
+\tableofcontents
+
+\include{preface}
+\mainmatter
+
+\include{intro}
+
+\include{astro_pre}
+
+\include{astro_20}
+
+\include{the_process}
+
+\chapter{Speculations on the Future}
+
+It is always perilous to speculate about the future.
+What will be the exciting topics in astronomy and astrophysics?
+Will we see images of exo-planets?  Will larger space telescopes
+give us views we can't imagine today?
+
+what of books in the age of the internet?
+It is going to be interesting to see how publishing
+changes in this age of information.  Will
+summary works still be printed? What of the permanence
+of documents published on the web only? 
+
+\appendix
+
+\include{the_books}
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+
+\chapter{Afterword}
+
+The back matter often includes one or more of an index, an afterword,
+acknowledgements, a bibliography, a colophon, or any other similar item. In
+the back matter, chapters do not produce a chapter number, but they are
+entered in the table of contents. If you are not using anything in the back
+matter, you can delete the back matter \TeX field and everything that follows it.
+
+%
+% The End
+%
+\end{document}

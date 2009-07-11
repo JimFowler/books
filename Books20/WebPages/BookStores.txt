@@ -1,0 +1,9 @@
+<h3>Book Stores and Publishers</h3>
+Booking the Big Bend
+<br><a href="http://www.amazon.com/">Amazon</a>
+<br><a href="http://www.barnesandnoble.com/">Barnes and Noble</a>
+<br><a href="http://www.semcoop.com/">Seminary Coop</a>
+<br><a href="http://www.powells.com/">Powell's Used Books</a>
+<br><a href="http://www.uapress.arizona.edu/">Univ. of Arizona Press</a>
+<br><a href="http://www.nesfa.org/">new England SciFi Assoc.</a>
+<br>More...

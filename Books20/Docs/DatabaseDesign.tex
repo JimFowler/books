@@ -1,0 +1,145 @@
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Some Important Books in Astronomy and Astrophysics 
+%%   from the 20th Century
+%%
+%%   Copyright 2008 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%% 
+%%   The last known changes were checked in by $Author$
+%%   as revision $LastChangedRevision$
+%%   on $Date$
+%%
+%----------------------------------------------------------
+%
+\documentclass{article}%
+%
+%----------------------------------------------------------
+%
+\begin{document}
+
+\title{Books20: Project Plan}
+\author{James R. Fowler}
+\maketitle
+\vfil\eject
+
+\vspace*{5 in}
+Copyright \copyright 2009 by James R. Fowler
+
+All rights reserved. No part of this publication may be
+reproduced, stored in a retrival system, or transmitted
+in any form or by any means, electronic, mechanical,
+photocopying, recording, or otherwise, without prior written
+permission of the author.
+
+\vfil\eject
+
+%
+% Goals and Purpose of the Project
+%
+\section{Goals of the Project}
+The primary goal of the Books20 project is to explore the question,
+What are the important and influential books in astronomy and
+astrophysics from the 20th Century? I come at this problem as a
+working astronomer and bibliophile so my original intent was to
+explore what were the collectable books from the 20th
+Century. Important 20th Century books are generally less expensive
+than the important books from the 19th or 18th Century.  Some of the
+original questions included how to find out what books were published
+during the 20th Century in astronomy and astrophysics and what makes a
+book important? This led to a series of auxiliary questions such as,
+how did astronomers use books during the 20th Century as information
+transmission in astronomy transitioned from books to journals to the
+web; what were publishers doing as the industry changed; what were the
+important topics in astronomy during the 20th Century; how were books
+used in the 19th Century and how was that different from the 20th
+Century.  These questions lead me to research in the History of
+Astronomy, Reading, Publishing and the Sociology of Science.
+
+Although I had been thinking about these questions for many years the
+formal start of the project was Nov 2008. With a full time job and
+other volunteer activities I manage to get a few hours a week for the
+project. During Nov '08 I spent the time thinking about the questions
+and how to approach them.  I began looking for sources and references
+and I took out a Community Borrowers card from the Sul Ross State
+University library in Alpine.  The month of December '08 was spent in
+the Sul Ross, McDonald Observatory, and University of Texas at Austin
+libraries looking at books on the history of astronomy. The main
+(re)discovery was of Astronomy and Astrophysics Abstracts and
+Astronomischer Jahresbericht which lists all publications in astronomy
+from 1899 to the current time. A complete set of these books are in
+the McDonald Observatory library. During this time I also began a
+draft of the project report, written in LaTeX, originally under
+Windows Vista and TeXnic Center (www.texniccenter.org); this is a very
+nice editor.  The draft gave a brief summary of the questions to ask,
+a history of astronomy in the 19th and 20th Centuries, and a first
+attempt at formatting the book list.  I began to have some idea of the
+scope of what I was taking on.
+
+
+%
+% Design of the database
+%
+\section{Database Design}
+
+The Books20 database is a relational database containing tables for
+the basic book, author, and publisher information as well as a linking
+tables between the books and authors.  The database is designed around
+three views of the data, first, from the Web were a user can search
+for information about a particular book or perform a search for a
+particular class of books.  The second view is a reporting view. The
+primary view is will be a sequential presentation of the books in
+copyright sequence order with the output in TeX for incorporation in
+the manuscript. Other views may be incorporated but these views are
+principally for the project personel. The finally view is for the
+editors.  It allows them to update information about a book, add a new
+book, and change the status of a book from prospective to included.
+
+\subsection{Database Tables}
+\subsubsection{The Book Table}
+  The Book table contains the basic publishing information about a
+book.  Such items as title and subtitle, copyright year, the printing
+edition, the publisher and the location of publication.  For books
+that have one, the ISBN number is included.  ISBN number were
+introduced in ???? and became manditory in ????.  The bibliographic
+description should include the size of the book in millimeters, page
+counts, whether the book is illustrated, figure count, table count and
+index count.  This information should also include information about
+the binding and about the dust jacket if the book was issued with one.
+
+\subsubsection{The Author Table}
+
+\subsubsection{The Publisher Table}
+
+\subsubsection{The BookAuthor Table}
+
+
+%
+% Software
+%
+\section{Supporting Software}
+The database software is MySql (www.mysql.com) with the interface written
+in PhP (www.php.net).
+
+MySql issues: security! internationalization, localization (see the MySql
+developer web site)
+
+%
+% The End
+%
+\end{document}
+
+%%
+%%   $Log$
+%%
+%%
+%%   $History$
+%%
+%%
+%%

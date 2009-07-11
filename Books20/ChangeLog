@@ -1,0 +1,92 @@
+2009-07-08  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Makefile: Tested install target for webpages. Got
+	things working.
+
+	* All: Checked in first version of Books20 to the subversion
+	archive
+
+2009-07-07  Jim Fowler  <jrf@Biblion>
+
+	* Docs/svnSetup.txt: created initial svn repository and added
+	documentation to svnSetup.txt and Words.txt.  Need to test
+	WebPages Makefile installation target before doing check of the
+	Books20 directory.
+	
+2009-07-05  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Makefile: Created WebPages directory and copied both
+	public and private material into it.  Create a Makefile with
+	installation and backup targets.
+
+	* Scripts/Makefile: Added Makefile to the scripts directory.
+
+	* All: Added svn keyword to files that I want to keep track of.
+
+2009-06-25  Jim Fowler  <jrf@Biblion>
+
+	* Data: Received section 012 of AAA from ARIBIB today.
+
+2009-06-24  Jim Fowler  <jrf@Biblion>
+
+	* Data: Received section 003 of AAA from ARIBIB today.  They packaged
+	it up for me so I don't need the script.
+
+	* Scripts/aribib.pl (ParseArgs): Started fleshing out the script.
+
+2009-06-22  Jim Fowler  <jrf@Biblion>
+
+	* Docs/svnSetup.txt: began svnSetup.txt commands.
+
+	* Scripts/aribib: Added Scripts directory today and began work
+	on script to harvest AAA references. If only AJR had these...
+
+2009-06-20  Jim Fowler  <jrf@Biblion>
+
+	* private_html/20thCentury.txt: Added link to manuscript pdf file.
+
+	* Manuscript/Makefile: added install target to copy pdf file
+	to ~/public_html
+
+2009-06-17  Jim Fowler  <jrf@Biblion>
+
+	* Manuscript: copied *.tex and *.bib files from Vista. Built
+	Makefile to build under Ubuntu.
+
+	* private_html/Tools.txt:  added subversion item to Tools
+	in 20Century.php
+
+2009-06-14  Jim Fowler  <jrf@Biblion>
+
+	* public_html: created books web pages using PhP under Ubuntu.
+
+2009-05-26  Jim Fowler  <jrf@Biblion>
+
+	* Rebuild.sql: copied the Rebuild.sql script from Collections.
+
+2009-05-25  Jim Fowler  <jrf@Biblion>
+
+	* System: Got Apache, PHP, and phpMyAdmin running today.  
+
+2009-04-19  Jim Fowler  <jrf@Biblion>
+
+	* docs/DatabaseDesign.txt: Began design document to keep track
+	of what I was doing and why.  This forces me to think about
+	the table design before I start entering data.
+
+	* docs/DeleteTables.sql: Wrote a script to delete the tables
+	from Books20 database.
+
+	* docs/CreateTables.sql: Wrote this script to implement the basic
+	steps to create the tables in the database.  Created the Book,
+	Author, Publisher, and BookAuthor tables.
+
+	* docs/InitialSetup.sql: Wrote the initial setup commands and
+	the account creation commands in a script.  Deleted the
+	MySql_Setup.txt file.
+
+2009-04-18  Jim Fowler  <jrf@Biblion>
+
+	* MySql_Setup.txt: Created accounts and database under mysql.
+	
+

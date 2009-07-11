@@ -1,0 +1,28 @@
+%%
+%%   The last known changes were checked in by $Author$
+%%   as revision $LastChangedRevision$
+%%   on $Date$
+%%
+
+  Secret Passwords to the accounts used in the Books20 Project
+
+  Biblion
+         root  Tea!bpot
+          jrf  bug3lite
+
+  MySQL
+         root  MNyt34sdqwlk
+   BookMaster  papyrus
+       Reader  librarycard
+   blogmaster  blahblah
+
+      
+
+  Roller
+   blogmaster  blaHBlah34
+          jrf  34Books20
+
+  Subversion
+          svn  sv34sv34n
+    svn users
+          jrf  letmein
