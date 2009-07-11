@@ -1,0 +1,329 @@
+AuthorID|LastName|MiddleName|FirstName|Born|Died|Comments|
+23|Albrecht|A.|Miguel|1001-01-01|1001-01-01||
+24|Egret||Daniel|1001-01-01|1001-01-01||
+25|Alexander|Francis O'Donel|Arthur|1001-01-01|1001-01-01||
+26|Aller|H,|Lawrence|1001-01-01|1001-01-01||
+27|Ames|S.|J|1001-01-01|1001-01-01||
+29|Armitage||Angus|1001-01-01|1001-01-01||
+30|Arp||Halton|1001-01-01|1001-01-01|Known by his nickname Chip|
+31|Batson|M.|R.|1001-01-01|1001-01-01||
+32|Bridges|M.|Patricia|1001-01-01|1001-01-01||
+33|Inge|L.|Jay|1001-01-01|1001-01-01||
+34|Batten|H.|Alan|1001-01-01|1001-01-01||
+35|Bell||Louis|1001-01-01|1001-01-01||
+36|Binney||James|1001-01-01|1001-01-01||
+37|Tremaine||Scott|1001-01-01|1001-01-01||
+38|Brashear||John|1001-01-01|1001-01-01||
+39|Scaife|Lucien|W.|1001-01-01|1001-01-01||
+40|Bruck|Alexander|Hermann|1001-01-01|1001-01-01||
+41|Bruck|T.|Mary|1001-01-01|1001-01-01||
+42|Burbidge||Geoffrey|1001-01-01|1001-01-01||
+43|Burbidge||Margaret|1001-01-01|1001-01-01||
+44|Burnham|W.|Shelly|1001-01-01|1001-01-01||
+45|Burton|B.|W.|1001-01-01|1001-01-01||
+46|Elmegreen|G.|Bruce|1001-01-01|1001-01-01||
+47|Genzel||R.|1001-01-01|1001-01-01||
+48|Buttman||Gunther|1001-01-01|1001-01-01||
+49|Chandrasekhar||S.|1001-01-01|1996-01-01||
+50|Christianson|E.|Gale|1001-01-01|1001-01-01||
+51|Clerke|M.|Agnus|1001-01-01|1001-01-01||
+52|Cox|P.|John|1001-01-01|1001-01-01||
+53|Cutri|M.|Roc|1001-01-01|1001-01-01||
+54|Latter|B.|William|1001-01-01|1001-01-01||
+55|Dalgarno||A.|1001-01-01|1001-01-01||
+56|Layzer||David|1001-01-01|1001-01-01||
+57|De Morgan||Augustus|1001-01-01|1001-01-01||
+58|Doazan||V.|1001-01-01|1001-01-01||
+60|Sedmak||G.|1001-01-01|1001-01-01||
+61|Barylak||M.|1001-01-01|1001-01-01||
+62|Rusconi||L.|1001-01-01|1001-01-01||
+63|Drake||Stillman|1001-01-01|1001-01-01||
+64|Eddington|Stanley|Arthur|1001-01-01|1001-01-01||
+65|Evans|S.|David|1001-01-01|1001-01-01||
+66|Deeming|J.|Terence|1001-01-01|1001-01-01||
+67|Evans|Hall|Betty|1001-01-01|1001-01-01||
+68|Goldfarb||Stephen|1001-01-01|1001-01-01||
+70|Mullholland|Derral|J.|1001-01-01|1001-01-01||
+71|Farnsworth|Hall|Alice|1001-01-01|1001-01-01||
+72|Flower||David|1001-01-01|1001-01-01||
+73|Fogg|J.|Martyn|1001-01-01|1001-01-01||
+74|Forbes|J.|Eric|1001-01-01|1001-01-01||
+75|Frost|Brant|Edwin|1001-01-01|1001-01-01||
+76|Stuve||Otto|1001-01-01|1001-01-01||
+77|Elvey|T.|C.|1001-01-01|1001-01-01||
+78|Garrison|F.|Robert|1001-01-01|1001-01-01||
+79|Gascoigne|C. B.|S.|1001-01-01|1001-01-01||
+80|Proust|M.|K.|1001-01-01|1001-01-01||
+81|Robin|O.|M.|1001-01-01|1001-01-01||
+82|Gingerich||Owen|1001-01-01|1001-01-01||
+83|Glassgold|E.|A.|1001-01-01|1001-01-01||
+84|Huggins|J.|P.|1001-01-01|1001-01-01||
+85|Schucking|I.|E.|1001-01-01|1001-01-01||
+86|Goldberg||Leo|1001-01-01|1001-01-01||
+87|Griffen|F.|R.|1001-01-01|1001-01-01||
+88|Hale|Ellery|George|1001-01-01|1001-01-01||
+89|Ellerman||Francis|1001-01-01|1001-01-01||
+90|Parkhurst|A.|J.|1001-01-01|1001-01-01||
+91|Kent|A.|Norton|1001-01-01|1001-01-01||
+92|Hanisch|J.|R.|1001-01-01|1001-01-01||
+93|Brissenden|J. V.|R.|1001-01-01|1001-01-01||
+95|Barnes||J.|1001-01-01|1001-01-01||
+96|Haramundanis||Katherine|1001-01-01|1001-01-01|Daughter of Cecilia Payne-Gaposchkin|
+98|Hargrove|C.|Eugene|1001-01-01|1001-01-01||
+99|Harrison|R.|George|1001-01-01|1001-01-01||
+100|Hearnshaw|B.|J.|1001-01-01|1001-01-01||
+102|Herbig|H.|George|1001-01-01|1001-01-01||
+103|Henry|C.|Richard|1001-01-01|1001-01-01||
+104|Landsman|B.|Wayne|1001-01-01|1001-01-01||
+105|Murthy||Jayant|1001-01-01|1001-01-01||
+106|Tennyson|D.|Peter|1001-01-01|1001-01-01||
+107|Wofford|B.|James|1001-01-01|1001-01-01||
+108|Wilson||Robert|1001-01-01|1001-01-01||
+109|Herschel|F. W.|John|1001-01-01|1001-01-01|Sir John Herschel|
+110|Herzberg||Gerhard|1001-01-01|1001-01-01||
+111|Spinks|W. T.|J.|1001-01-01|1001-01-01||
+112|Hey|S.|J.|1001-01-01|1001-01-01||
+113|Hollenback|J.|D.|1001-01-01|1001-01-01||
+114|Thronson|A.|Harley|1001-01-01|1001-01-01||
+115|Houk||Nancy|1001-01-01|1001-01-01||
+116|Newberry|V.|Michael|1001-01-01|1001-01-01||
+118|Irvine|J.|Nelson|1001-01-01|1001-01-01||
+119|Rosenbush||David|1001-01-01|1001-01-01||
+120|Howse||Derek|1001-01-01|1001-01-01||
+121|Hoyt|Graves|William|1001-01-01|1001-01-01||
+122|Hubble||Edwin|1001-01-01|1001-01-01||
+123|Huggins||William|1001-01-01|1001-01-01|Sir William Huggins|
+124|Huggins||Lady|1001-01-01|1001-01-01|Wife of Sir William Huggins|
+125|Jacob|H.|Donald|1001-01-01|1001-01-01||
+126|Jaschek||Carlos|1001-01-01|1001-01-01||
+127|Murtagh||Fionn|1001-01-01|1001-01-01||
+128|Jaschek||Mercedes|1001-01-01|1001-01-01||
+129|Jeans|H.|James|1001-01-01|1001-01-01|Sir James H. Jeans|
+130|Jones|Z.|B.|1001-01-01|1001-01-01||
+131|Boyd|G.|L.|1001-01-01|1001-01-01||
+132|Jones|Zaban|Bessie|1001-01-01|1001-01-01||
+133|Kaler|B.|James|1001-01-01|1001-01-01||
+134|Kenney|A.|Louis|1001-01-01|1001-01-01||
+135|Kirchoff||Gustav|1001-01-01|1001-01-01||
+136|Kopal||Zdenek|1001-01-01|1001-01-01||
+137|Koppes|R.|Clayton|1001-01-01|1001-01-01||
+138|Kurucz|L.|Robert|1001-01-01|1001-01-01||
+139|Furnelid||Ingemar|1001-01-01|1001-01-01||
+140|Brault||James|1001-01-01|1001-01-01||
+141|Testerman||Larry|1001-01-01|1001-01-01||
+142|Lamb||Horace|1001-01-01|1001-01-01||
+143|Levy|H.|David|1001-01-01|1001-01-01||
+144|Lockyer|Norman|J.|1001-01-01|1001-01-01||
+145|Lovell||Bernard|1001-01-01|1001-01-01||
+146|Lovelock||James|1001-01-01|1001-01-01||
+147|Allaby||Michael|1001-01-01|1001-01-01||
+148|Maffeo||Sabino|1001-01-01|1001-01-01|Society of Jesus|
+149|Coyne|V.|George|1001-01-01|1001-01-01|Society of Jesus|
+150|Malina|F.|Roger|1001-01-01|1001-01-01||
+151|Bowyer||Stuart|1001-01-01|1001-01-01||
+152|Mascart|E.|M.|1001-01-01|1001-01-01||
+153|McDougall|A.|Walter|1001-01-01|1001-01-01||
+154|McGucken||William|1001-01-01|1001-01-01||
+155|Mihalis||Dimitri|1001-01-01|1001-01-01||
+156|Mihalis||Barbara|1001-01-01|1001-01-01||
+157|Milne|A.|E.|1001-01-01|1001-01-01||
+158|Morgan|W.|William|1001-01-01|1001-01-01||
+159|Abt|A.|Helmut|1001-01-01|1001-01-01||
+160|Tabscott|W.|J.|1001-01-01|1001-01-01|Photographic assistant at Yerkes Observatory.|
+161|Moulton|Ray|Frank|1001-01-01|1001-01-01||
+162|Murdin||Lesley|1001-01-01|1001-01-01||
+163|Murray|A.|C.|1001-01-01|1001-01-01||
+164|Narrien||John|1001-01-01|1001-01-01||
+166|Neugebauer||Otto|1001-01-01|1001-01-01||
+167|Nininger|H.|Harvey|1001-01-01|1001-01-01||
+168|Osterbrock|E.|Donald|1001-01-01|1001-01-01||
+169|Gustafson|R.|J.|1001-01-01|1001-01-01||
+170|Unruh|J. Shiloh|W.|1001-01-01|1001-01-01||
+171|Pais||Abraham|1001-01-01|1001-01-01||
+172|Payne|H.|Cecilia|1001-01-01|1001-01-01|later Payne-Gaposhkin|
+173|Peebles|James E.|P.|1001-01-01|1001-01-01||
+174|Podobed|V.|V.|1001-01-01|1001-01-01||
+175|Preston||Richard|1001-01-01|1001-01-01||
+176|Proctor|A.|Richard|1001-01-01|1001-01-01||
+177|Ritchy|W.|George|1001-01-01|1001-01-01||
+178|Ronan|A.|Colin|1001-01-01|1001-01-01||
+179|Roscoe|Enfield|Henry|1001-01-01|1001-01-01||
+180|Rosseland||Sven|1001-01-01|1001-01-01||
+181|Rowland|Augustus|Henry|1001-01-01|1001-01-01||
+182|Russell|Norris|Henry|1001-01-01|1001-01-01||
+183|Salet||P.|1001-01-01|1001-01-01||
+184|Saward||Dudley|1001-01-01|1001-01-01||
+185|Scheiner||J.|1001-01-01|1001-01-01||
+186|Schellen||H.|1001-01-01|1001-01-01||
+187|Lassell||Jane|1001-01-01|1001-01-01||
+188|Lassell||Caroline|1001-01-01|1001-01-01||
+189|Shapiro|L.|S.|1001-01-01|1001-01-01||
+190|Teukolsky|A.|S.|1001-01-01|1001-01-01||
+191|Shapley||Harlow|1001-01-01|1001-01-01||
+192|Sheehan||William|1001-01-01|1001-01-01||
+193|Shklovskii|S.|I.|1001-01-01|1001-01-01||
+194|Sagan||Carl|1001-01-01|1997-01-01||
+195|Smartt|M.|W.|1001-01-01|1001-01-01||
+196|Smith|W.|Robert|1001-01-01|1001-01-01||
+197|Spitzer|J.|Lyman|1001-01-01|1997-01-01||
+198|Stephenson||Bruce|1001-01-01|1001-01-01||
+199|Sternberg||Shlomo|1001-01-01|1001-01-01||
+200|Swerdlow||Noel|1001-01-01|1001-01-01||
+201|Tassoul||Jean-Louis|1001-01-01|1001-01-01||
+202|Terrell||Dirk|1001-01-01|1001-01-01||
+203|Mukherjee|D.|J.|1001-01-01|1001-01-01||
+204|Tombaugh|W.|Clyde|1001-01-01|1997-01-01||
+205|Moore||Patrick|1001-01-01|1001-01-01||
+206|Tucker|H.|Wallace|1001-01-01|1001-01-01||
+207|Tuckerman||Alfred|1001-01-01|1001-01-01||
+208|Tufte|Rolf|Edward|1001-01-01|1001-01-01||
+209|Ulmer|P.|Melville|1001-01-01|1001-01-01||
+210|van Helden||Albert|1001-01-01|1001-01-01||
+211|Verschurr|L.|Gerrit|1001-01-01|1001-01-01||
+212|Kellerman|I.|K.|1001-01-01|1001-01-01||
+213|Wali||Kameshwar|1001-01-01|1001-01-01||
+214|Webb|Ernest|George|1001-01-01|1001-01-01||
+215|Wienberg||Steve|1001-01-01|1001-01-01||
+216|Wilard|C.|Berton|1001-01-01|1001-01-01||
+217|Wright||Helen|1001-01-01|1001-01-01||
+218|Zombeck|V.|Martin|1001-01-01|1001-01-01||
+219|Wilson|E.|R.|1001-01-01|1001-01-01||
+220|Phillip|G. Davis|A.|1001-01-01|1001-01-01||
+221|Hauck||Bernard|1001-01-01|1001-01-01||
+222|Upgren|R.|Arthur|1001-01-01|1001-01-01||
+223|Smoluchowski||Roman|1001-01-01|1001-01-01||
+224|Bahcall|N.|John|1001-01-01|1001-01-01||
+225|Matthews|S.|Mildred|1001-01-01|1001-01-01||
+226|Tattersfield||D.|1001-01-01|1001-01-01||
+227|Di Gesu||V.|1001-01-01|1001-01-01||
+228|Scarsi||L.|1001-01-01|1001-01-01||
+229|Crane||P.|1001-01-01|1001-01-01||
+230|Craig|J. D.|Ian|1001-01-01|1001-01-01||
+231|Brown|C.|John|1001-01-01|1001-01-01||
+232|Kitchen|R.|C.|1001-01-01|1001-01-01||
+233|Harwit||Martin|1001-01-01|1001-01-01||
+234|Schroeder|J.|Daniel|1001-01-01|1001-01-01||
+236|Couteau||Paul|1001-01-01|1001-01-01||
+237|Battan||Alan|1001-01-01|1001-01-01||
+238|Glasstone||Samuel|1001-01-01|1001-01-01||
+239|Goldsmith||Donald|1001-01-01|1001-01-01||
+240|Rothery|A.|David|1001-01-01|1001-01-01||
+241|Chaisson|J.|Eric|1001-01-01|1001-01-01||
+242|Hanbury Brown||R.|1001-01-01|1001-01-01||
+243|Florence||Ronald|1001-01-01|1001-01-01||
+244|Candler||C.|1001-01-01|1001-01-01||
+245|Dufay||Jean|1001-01-01|1001-01-01||
+246|Carr|H.|Michael|1001-01-01|1001-01-01||
+247|Emerson||D.|1001-01-01|1001-01-01||
+248|Doyle|Reeve|Laurance|1001-01-01|1001-01-01||
+249|Wright|L.|Jerome|1001-01-01|1001-01-01||
+250|Zubrin|M.|Robert|1001-01-01|1001-01-01||
+251|Wagner|S,|Richard|1953-01-01|1001-01-01||
+252|Stern||Alan|1001-01-01|1001-01-01||
+253|Mitton||Jacqueline|1001-01-01|1001-01-01||
+254|Lyman||Theodore|1001-01-01|1001-01-01||
+255|Uhler|S|H|1001-01-01|1001-01-01||
+256|Wood|Wilson|Robert|1001-01-01|1001-01-01||
+257|Payne-Gaposchkin||Cecilia|1001-01-01|1001-01-01|See also Cecilia Payne|
+258|Gaposchkin||Sergei|1001-01-01|1001-01-01|Husband of Cecilia Payne-Gaposchkin|
+259|Watts|Marshall|W.|1001-01-01|1001-01-01|D.Sc., Senior Physical Science Master in the Manchester Grammer School (1872)|
+260|Living|D.|G.|1001-01-01|1001-01-01|Fellow of St. John's College, Professor of Chemistry|
+261|Dewar||J.|1001-01-01|1001-01-01|Fellow of Peterhouse, Jacksonian Professor in the University of Cambridge|
+262|Stoney|Johnstone|George|1001-01-01|1001-01-01||
+263|Aitken|Grant|Robert|1001-01-01|1001-01-01||
+264|Edmonson|K.|Frank|1001-01-01|1001-01-01||
+265|Name|No|Known|1001-01-01|1001-01-01|Empty Record|
+266|Hartree|R.|D.|1897-01-01|1958-01-01|F.R.S., Plummer Professor of mathematical physics at Cambridge University|
+267|Sommerfeld||Arnold|1868-01-01|1951-01-01||
+268|Martin|R.|A.|1001-01-01|1001-01-01||
+269|Schwarzshild||Martin|1001-01-01|1001-01-01||
+270|Lieber|Rosanoff|Lillian|1886-01-01|1986-01-01|Professor and Head of the Department of Mathmatics, Long Island University, retired 1950 See also the Wikpedia entry and http://www34.homepage.villanova.edu/robert.jantzen/lieber/|
+271|Lieber|Gray|Hugh|1001-01-01|1001-01-01|Professor and Head of the Department of Fine Arts, Long Island University|
+272|Manguel||Alberto|1001-01-01|1001-01-01||
+273|Gordy||Walter|1001-01-01|1001-01-01|Professor of Physics, Duke University|
+274|Smith|V.|William|1001-01-01|1001-01-01|Professor of Phsics, University of Delaware|
+275|Trambarulo|F.|Ralph|1001-01-01|1001-01-01|Assistant Professor of Physics, Pennsylvania State College|
+276|McClure|M|Donald|1001-01-01|1001-01-01|Radio Corporation of America Laboratories, Princeton New Jersey, University of Chicago|
+277|Baker|L|Gregory|1001-01-01|1001-01-01|Bryn Athyn College of New Church, Pennsylvania|
+278|Blackburn|A|James|1001-01-01|1001-01-01|Willim laurier Univiersity Ontario, Canada|
+279|van Cleempoel||Koenraad|1001-01-01|1001-01-01||
+280|Jardetzky|S|Wenceslas|1001-01-01|1001-01-01|Manhattan College and Columbia University, New York, NY|
+281|Eckart||Andreas|1001-01-01|1001-01-01|University of Cologne, Germany|
+282|Shodel||Rainer|1001-01-01|1001-01-01|University of Cologne, Germany|
+283|Straubmeir||Christian|1001-01-01|1001-01-01|University of Cologne, Germany|
+284|Bertin||Giuseppe|1001-01-01|1001-01-01|Professor of Physics, Scruola Normale Superiore, Pisa, Italy|
+285|Lin|Ch'iao|Chia|1916-01-01|1001-01-01|Professor Emeritus of Physics, MIT|
+286|van den Bergh||Sidney|1001-01-01|1001-01-01|Dominion Astrophysical Observatory|
+287|Brown|B|Earle|1001-01-01|1001-01-01||
+288|Warwick||Andrew|1001-01-01|1001-01-01||
+289|Collins||Harry|1001-01-01|1001-01-01||
+290|Cronin|W|James|1001-01-01|1001-01-01|Professor of Physics, University of Chicago Nobel Prize Physics|
+291|Stanley||Mattew|1001-01-01|1001-01-01|Professor of History, Michigan State University|
+292|Srinivasan||Ganasen|1942-01-01|1001-01-01||
+293|Berry|Elton|Robert|1001-01-01|1001-01-01||
+294|Westfall|S|Richard|1001-01-01|1001-01-01|Professor of History, Indiana University|
+295|Cohen|Bernard|I|1001-01-01|1001-01-01||
+296|Sebring|A|Thomas|1001-01-01|1001-01-01||
+297|Dirac|Adrien Maurice|Paul|1902-01-01|1001-01-01||
+298|Bird||Kai|1001-01-01|1001-01-01||
+299|Sherwin|J|Martin|1001-01-01|1001-01-01|Professor of English and History Tufts University|
+300|Alder||Ken|1001-01-01|1001-01-01|Professor of History Northwestern University|
+301|Standage||Tom|1001-01-01|1001-01-01||
+302|McInnes|R|Colin|1968-01-01|1001-01-01||
+303|Ramsey||JoAnne|1001-01-01|1001-01-01|Wife of Harry Ramsey|
+304|DeVorkin|H|David|1001-01-01|1001-01-01||
+305|Bradbury||Ray|1001-01-01|1001-01-01||
+306|Clarke|C|Arthur|1001-01-01|1001-01-01||
+307|Murray||Bruce|1001-01-01|1001-01-01||
+308|Sullivan||Walter|1001-01-01|1001-01-01||
+309|Harrison|A|Albert|1001-01-01|1001-01-01||
+310|Cowan|D|Robert|1001-01-01|1001-01-01||
+311|Turner|L'e|Gerard|1001-01-01|1001-01-01||
+312|Gardner||Martin|1001-01-01|1001-01-01||
+313|Field||George|1929-01-01|1001-01-01|Professor of Applied Astronomy, Harvard University|
+314|Michel||Henri|1001-01-01|1001-01-01|Academie Internationale d'Histoire des Sciendes|
+315|Paschen||Friedrich|1865-01-01|1947-01-01|Probably the greatest experimental spectroscopist of his time, DSB, X pp 345-349|
+316|Gotze||R.|1001-01-01|1001-01-01||
+317|Greenspan|Thordike|Nancy|1001-01-01|1001-01-01||
+318|Lewis|Judd|S.|1001-01-01|1001-01-01||
+319|Heppenheimer|A.|T.|1001-01-01|1001-01-01||
+320|Travers|W|Morris|1001-01-01|1001-01-01||
+321|Meadows|J.|A.|1001-01-01|1001-01-01||
+322|Lockyer|Mary|T.|1001-01-01|1001-01-01||
+323|Lockyer|L.|Winifred|1001-01-01|1001-01-01||
+324|Draper|William|John|1001-01-01|1001-01-01||
+325|Buchwald|Z.|Jed|1001-01-01|1001-01-01||
+326|Secchi|A|P|1818-01-01|1878-01-01||
+327|Faraday||Michael|1001-01-01|1001-01-01||
+328|Mutch|A|Thomas|1001-01-01|1001-01-01||
+329|Arvidson|E|Raymond|1001-01-01|1001-01-01||
+330|Head|W|James|1001-01-01|1001-01-01||
+331|Head|W|James|1001-01-01|1001-01-01||
+332|Jones|L|Kenneth|1001-01-01|1001-01-01||
+333|Saunders|Stephen|R|1001-01-01|1001-01-01||
+334|Sidgreaves||Walter|1001-01-01|1001-01-01|S.J, F.R.A.S,|
+335|Drake||Frank|1001-01-01|1001-01-01||
+336|Sobel||Dava|1001-01-01|1001-01-01||
+337|Shostak||Seth|1001-01-01|1001-01-01||
+338|Billingham||John|1001-01-01|1001-01-01||
+339|Smyth|Piazzi|Charles|1819-01-01|1900-01-01|Astronomer Royal for Scotland 1845-1888|
+340|Miller|I|Arthur|1001-01-01|1001-01-01|Professor of the History and Philosophy of Science, Unversity College London|
+341|Glass|S|I|1001-01-01|1001-01-01||
+342|Goodchild||Peter|1001-01-01|1001-01-01||
+343|Seabrook||William|1886-01-01|1001-01-01||
+344|Warnow|N|Joan|1001-01-01|1001-01-01||
+345|Weiner||Charles|1001-01-01|1001-01-01||
+346|Schmidt||Stanley|1001-01-01|1001-01-01||
+347|Hardy|W|John|1001-01-01|1001-01-01||
+348|Evans||Nancy|1001-01-01|1001-01-01||
+349|Thackeray|D.|A.|1001-01-01|1001-01-01||
+350|Hill||Edward|1001-01-01|1001-01-01||
+351|Young|A|C|1001-01-01|1001-01-01||
+352|Longair|S|Malcom|1001-01-01|1001-01-01||
+353|Hartmann||Dap|1001-01-01|1001-01-01||
+354|Levine|N|Ira|1001-01-01|1001-01-01||
+355|Green|M|Robin|1001-01-01|1001-01-01||
+356|Morton||Oliver|1001-01-01|1001-01-01||
+357|Munitz|K|Milton|1001-01-01|1001-01-01||
+358|Fison|H|Alfred|1001-01-01|1001-01-01||
+359|Dauvillier||A.|1001-01-01|1001-01-01|Professor, College de France, Pic-du-Midi Observatory|

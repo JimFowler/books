@@ -1,0 +1,58 @@
+2009-05-25  Jim Fowler  <jrf@Biblion>
+
+	* System: Got Apache, PHP, and phpMyAdmin running today.
+
+2009-05-03  Jim Fowler  <jrf@Biblion>
+
+	* docs/Rebuild.sql: Wrote Rebuild.sql to ease the testing process.
+
+	* docs/BooksA.txt: Successfully got the book data imported.  Had
+	to change the output date format in Access, delete the time string
+	that Access put in, delete the dollar sign in the price value,
+	and accept null values for Edition, Printing, and PurchasedFrom
+	fields.  Need to have trailing field separator at end of each
+	line or we need to enclose comments in quotes of some sort.
+
+2009-05-02  Jim Fowler  <jrf@Biblion>
+
+	* docs/Books.txt: Imported all tables from my Access database
+	without warnings except Books.txt. Use '|' as separator char
+	and did not mark string fields with quotes.  
+	
+	Numerous changes 
+	   empty date fields in Author table, filled with 1001-01-01
+	   numerous bogus entries
+	   use of <CR> in author comments
+	   mm/dd/yyyy 00:00:00 <--> YYYY-MM-DD
+	   $0.00  <--> integer ; should be floating with no dollar signs
+	
+
+2009-04-30  Jim Fowler  <jrf@Biblion>
+
+	* docs/ImportData.sql: Successfully read imported data from Access
+	to mySql.  Had to make text file publicly readable and add the
+	local flag to the load data command.  Numerous warnings though.
+
+2009-04-29  Jim Fowler  <jrf@Biblion>
+
+	* docs/Books.txt: Copy Books.txt, Authors.txt, Projects.txt,
+	Vendors.txt, BookAuthor.txt and BookProject.txt from my old
+	Access database.
+
+2009-04-20  Jim Fowler  <jrf@Biblion>
+
+	* docs/ImportData.sql: Began work on ImportData.sql
+
+	* docs/InitialSetup.sql: Wrote initial setup commands to create
+	the database and grant privileges to BookMaster.
+
+2009-04-19  Jim Fowler  <jrf@Biblion>
+
+
+	* docs/DeleteTables.sql: Wrote a script to delete the tables
+	from MyBooks database.
+
+	* docs/CreateTables.sql: Wrote this script to implement the basic
+	steps to create the tables in the database.  Created the Book,
+	Author, Publisher, and BookAuthor tables.
+
