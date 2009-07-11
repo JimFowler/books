@@ -22,6 +22,12 @@ mv Collection Collection.bck
 svn checkout svn://localhost/books/trunk/Books20
 svn checkout svn://localhost/books/trunk/Collection
 
+cd Books20 [Docs Manuscript Scripts Webpages]
+svn propset svn:keywords "Date Author Revision" *
+   [note: if a directory is encountered in the file list this command
+          quits processing.  You will have to run the command again
+	  for those file after the directory.]
+
 
 #
 # Basic usage
