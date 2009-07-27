@@ -1,10 +1,28 @@
+2009-07-26  Jim Fowler  <jrf@Biblion>
+
+	* Docs/Quotes.tex: started file of quotes found in 
+	various books that sum up my way of thinking.
+
+	* All: checked in to svn
+
+2009-07-16  Jim Fowler  <jrf@Biblion>
+
+	* Docs/BooksRead.bib: Created BooksRead.bib to keep track
+	of the books which have been read for this project.
+
+	* Docs/BooksNoted.bib: Created BooksNoted.bib to keep track
+	of books heard about that might be useful to the project.
+
+2009-07-11  Jim Fowler  <jrf@Biblion>
+
+	* All: Checked in first version of Books20 to the subversion
+	archive. Not on the 8th as previously reported.
+
+
 2009-07-08  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Makefile: Tested install target for webpages. Got
 	things working.
-
-	* All: Checked in first version of Books20 to the subversion
-	archive
 
 2009-07-07  Jim Fowler  <jrf@Biblion>
 

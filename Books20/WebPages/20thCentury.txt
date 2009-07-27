@@ -2,6 +2,7 @@
 <a href="http://127.0.0.1:8080/roller/Books20">My Blog</a>
 <br><a href="ToDoList">To Do List</a>
 <br>The Books20 Database
-<br><a href="./books20.pdf">The Manuscript</a> (pdf)
+<br><a href="./books20.pdf">The Manuscript</a> 
+    (<a href="./books20.pdf">pdf</a>)
 <br>My Book Collection
 <br>More...

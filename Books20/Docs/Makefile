@@ -31,7 +31,7 @@ WEBPAGES = /home/jrf/public_html
 
 TEXFILES = DatabaseDesign.txt
 
-BIBFILES = 
+BIBFILES = BooksRead.bib BooksNoted.bib
 
 
 SAVFILES = backup.date ${TEXFILES} ${BIBFILES} Makefile
@@ -50,11 +50,17 @@ default:
 #
 # Basic TeX processing
 #
-docs: DatabaseDesign
+docs: DatabaseDesign Quotes
+
 DatabaseDesign: DatabaseDesign.tex
 	${LATEX} DatabaseDesign.tex
 	${LATEX} DatabaseDesign.tex
 
+Quotes:
+	${LATEX} Quotes.tex
+	${BIBTEX} Quotes.aux
+	${LATEX} Quotes.tex
+	${LATEX} Quotes.tex
 
 
 #

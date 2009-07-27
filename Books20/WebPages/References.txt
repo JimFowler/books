@@ -3,7 +3,7 @@ OED online
 <br><a href="http://www.lib.utexas.edu/refsites/dictionaries.html">UT Dictionaries</a>
 <br><a href="http://en.wikipedia.org/">Wikipedia</a>
 <br><a href="http://www.ari.uni-heidelberg.de/aribib">AAA and AJB<a>
-<br><a href="http://www.doi.org/">DOI: digital object identifiers</a>
+<br><a href="http://www.doi.org/">DOI: Digital Object Id's</a>
 <br><a href="http://www.isbn.org/">ISBN: Int. Std. Book Number</a>
 <br><a href="http://www.issn.org/">ISSN: Int. Std. Serial Number</a>
 <br>More...
