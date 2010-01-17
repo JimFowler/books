@@ -26,13 +26,14 @@ PUBLICWEB = /home/jrf/public_html
 
 PRIVATEWEB = /home/jrf/private_html
 
-PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html
+PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
+	robots.txt
 
 PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	BookStores.txt Collecting.txt HistoryAstronomy.txt \
 	HistoryPublishing.txt HistoryReading.txt \
-	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt Resources.txt \
-	SociologyScience.txt ToDoList.txt Tools.txt
+	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt \
+	Resources.txt SociologyScience.txt ToDoList.txt Tools.txt
 
 PRIVATEPHP = phpBooks.inc
 
@@ -80,6 +81,8 @@ install_images:
 svn:
 	@echo "svn routines for books20 are not defined yet"
 
+addprop:
+	svn propset svn:keywords "Data Author Revision"  ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}
 
 #
 # Backup routines

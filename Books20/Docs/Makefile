@@ -62,6 +62,11 @@ Quotes:
 	${LATEX} Quotes.tex
 	${LATEX} Quotes.tex
 
+Notes:
+	${LATEX} Notes.tex
+	${BIBTEX} Notes.aux
+	${LATEX} Notes.tex
+	${LATEX} Notes.tex
 
 #
 # Copy the PDF file to the web site

@@ -1,0 +1,1652 @@
+From barry Fri Aug 20 10:49 PDT 1999
+Received: from castor.ipac.caltech.edu (castor [134.4.10.10]) 
+	  by bigbang.ipac.caltech.edu (8.8.8/8.6.4)
+	  with ESMTP id KAA05823
+	  for <cd@Bigbang>; Fri, 20 Aug 1999 10:49:17 -0700 (PDT)
+From: Barry Madore <barry>
+Received: from wolf (wolf.ipac.caltech.edu [134.4.20.94]) 
+	  by castor.ipac.caltech.edu (8.8.8/8.6.4)
+	  with ESMTP id KAA08345
+	  for <cd>; Fri, 20 Aug 1999 10:49:17 -0700 (PDT)
+Received: (barry@localhost) by wolf (8.6.8.1/8.6.4) id KAA05641 for cd; Fri, 20 Aug 1999 10:49:17 -0700
+Message-Id: <199908201749.KAA05641@wolf>
+Subject: history.txt
+To: cd (Cren Diaconu)
+Date: Fri, 20 Aug 1999 10:49:17 -0700 (PDT)
+X-Mailer: ELM [version 2.4 PL25]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Content-Length: 49072
+Status: RO
+
+Cren
+
+Perhaps this  can go in  the  Tabular Information  section until I can
+think of somewhere better.
+
+Thanks,
+
+Barry
+
+
+
+
+                 THE HISTORY OF RADIO ASTRONOMY
+                   A BIBLIOGRAPHY 1898-1983
+
+Compiled by:
+
+Sarah Stevens-Rayburn
+Librarian
+National Radio Astronomy Observatory
+
+INTRODUCTION
+
+  The  history of  radio astronomy  -  whether one begins with Hertz's
+experiments,  or  Lodge's, or Jansky's   - is one   of fascination and
+serendipity.   The development   of the  science  has    been fun  and
+frustrating, often with the theorists  two steps behind the observers,
+but with the former occasionally  waiting around the  bend of the next
+revelation smirking  "I  told   you   so."  It  is   hoped  that   the
+bibliography that follows will give  some of the  essence of the early
+days and that tde reader will be able  to share some of the excitment,
+both  of the   early engineers who   quickly  realized they  were onto
+something  theretofore unknown  and the  later  radio astronomers  who
+continued in their  footsteps. The attempt  has  been made  to include
+most of the early engineering  papers  as well  as  a sampling of  the
+theoretical  ones    that tried to  explain   what  the engineers were
+revealing.  In addition, there are  included discovery papers for some
+of radio  astronomy's "main events," a  sampling of papers that reveal
+the  development of  the science in  various  countries, and books and
+papers  that summarize the history of   radio astronomy, or particular
+aspects of it, up to a certain point.
+
+  There are, of course, omissions.  Some  are deliberate. In order  to
+keep the listing to a manageable size (<350),  some things are covered
+only  briefly, such as  the numerous  radio  source catalogs,  just to
+provide examples of  the kind of  work being done. Other omissions are
+through ignorance or a biased selectivity. when talking to a scientist
+knowledgeable in the  history of the  field, one finds  a certain bias
+toward that  individual's  own  work.   when this bias  was  confirmed
+through further study, it  was included; when not, it  was not. But if
+one had talked to a different subset  of scientists, the results would
+probably have been  skewed another way. If  what you consider the most
+important  paper in the history of  radio astronomy  has been omitted,
+please accept my apologies and let me know  what the paper is, so that
+perhaps a later edition can be better rounded.
+
+FORMAT
+
+  The bibliography  is   divided into  two parts.  First,   there is a
+chronological list that begins  with Wilsing and Scheiner's attempt to
+detect solar radiation  in the late  nineteenth century  and continues
+through the discovery of the millisecond pulsar in  1982.  The list is
+alphabetical,  by first author,  within a particular year.  The second
+part is  an alphabetical, by first author,  list of all  of the papers
+and books listed in the first part, with SEE references from secondary
+authors.  Numbers to the left of each entry indicate  that the item is
+either a monograph  (B)  or an article    (A), or (S)  if included  in
+Sullivan's  Classics in Radio Astronomy  (1982)).  The format for each
+item is:
+
+      No.  Author(s)
+           "Title"
+(publication year) place:  publisher (for monographs) or journal title,
+volume, and inclusive pagination (for articles)
+
+  You are invited to peruse the bibliography and encouraged to go back
+and read the originals. The bibliography  gives some of the essence of
+the history but to enjoy the full flavor you must  read the papers for
+yourself.  Many are contained in Sullivan's  Classics and the majority
+of  the   others  are likely  available  in  your  own  library  or on
+interlibrary  loan   from  the  National   Radio Astronomy Observatory
+library.
+
+
+ABBREVIATIONS
+
+AJ                                    Astronomical Journal
+
+Amer. Scientist                       American Scientist
+
+Ann. d'Astrophys.                     Annales d'Astrophysique
+
+Ann. Physik u. Chemie                 Annalen der Physik und Chemie
+
+Annals N.Y. Acad. Sci.                Annals of the New York Academy of Sciences
+
+Astr. Tsirk.                          Astronomicheskii Tsirkuliar
+
+Astr. Zh.                             Astronomicheskii Zhurnal
+
+Astrophys. J.                         Astrophysical Journal
+
+Aust. J. Phys.                        Australian Journal of Physics
+
+Aust. J. Sci. Res.                    Australian Journal of Scientific Research
+
+BAN                                   Bulletin of the Astronomical Institutes of
+                                      the Netherlands
+
+Bell Lab. Rec.                        Bell Laboratories Record
+
+Comp. Rendus Acad. Sci.(Paris)        Comptes Rendus Hebdomadaires des Seances 
+                                      de l'Academie  des Sciences
+
+Dokl. Akad. nauk SSSR                 Doklady Akademiia nauk SSSR
+
+Ergebn. Exakt. Naturwiss              Ergebnisse der exakten Naturwissenschaften
+
+Hochfreq. Electroakustik              Hochfrequenztechnik und Elektroakustik
+
+Hung. Phys. Acta                      Hungarica Physica Acta
+
+IAU Symp.                             International Astronomical Union Symposium
+
+ICC `79                               1979 International Conference on Communications(IEEE)
+
+IRE Trans. Ant. Prop.                 Institute of Radio Engineers Transactions on Antennas
+                                       and Propagation
+
+J. Franklin Inst.                     Journal of the Franklin Institute
+
+J. Phys., USSR                        Journal of Physics (Akademiia nauk SSSR)
+
+JGR                                   Journal of Geophysical Research
+
+JRASC                                 Journal of the Royal Astronomical Society of Canada
+
+MNRAS                                 Monthly Notices of the Royal Astronomical Society
+
+Naturwiss.                            Naturwissenschaften
+
+NBS TN                                National Bureau of Standards Technical Note
+
+Ned. Tijdschr. Natuurk.               Nederlandsch Tijdschrift voor Natuurkunde
+
+PASP                                  Publications of the Astronomical Society of the Pacific
+
+Phil. Mag.                            Philosophical Magazine; a journal of theoretical,
+                                      experimental and applied physics
+
+Phys. Rev.                            Physical Review
+
+Phys. Rev. Lett.                      Physical Review Letters
+
+Phys. Today                           Physics Today
+
+Proc. IEEE                            Proceedings of the Institute of Electrical and Electronics
+                                      Engineers
+
+Proc. IRE                             Proceedings of the Institute of Radio Engineers
+
+Proc. IRE Australia                   Proceedings of the Institution of Radio Engineers of
+                                      Australia
+
+Proc. NAS                             Proceedings of the National Academy of Sciences
+
+Proc. Phys. Soc.                      Proceedings of the Physical Society
+
+Proc. Roy. Soc.                       Proceedings of the Royal Society
+
+QJRAS                                 Quarterly Journal of the Royal Astronomical Society
+
+Rep. Radio Res. Japan                 Report of Radio Research in Japan
+
+Rev. Astron. (Argentina)              Revista Astronomica (Argentina)
+
+Rev. Mod. Phys.                       Reviews of Modern Physics
+
+Rev. Sci. Instrum.                    Review of Scientific Instruments
+
+Sci. Amer.                            Scientific American
+
+Sci. Dimension (Canada)               Science Dimension (Canada)
+
+Sci. Monthly                          Scientific Monthly
+
+Sky Telesc.                           Sky and Telescope
+
+Sov. Astron. AJ                       Soviet Astronomy--AJ
+
+Sterne                                Die Sterne
+
+Telecommun. J.                        Telecommunication Journal (ITU)
+
+Trudy Fiz. Inst. im. P.N. Lebedeva.   Trudy Fizicheskogo Instituta imeni P.N. Lebedeva.
+
+Trudy Sovesch. Vop. Kosmog.           Trudy Soveshchaniia po Voprosam Kosmogonii
+
+URSI Spec. Rep.                       Union Radio Scientifique Internationale Special Report
+
+Vistas Astron.                        Vistas in Astronomy
+
+z.  Astrophys.                        Zeitschrift fUr Astrophysik
+
+Zh. Eksp. Teor. Fiz.                  Zhurnal Eksperimentalnoi i Teoreticheskoi Fiziki
+
+
+*****************************************************************
+
+S22 Wilsing, J., Scheiner, J., 
+"On  an  attempt to detect electrodynamic   solar radiation and on the
+change in  contact  resistance when  illuminating   two conductors  by
+electric   radiation =  Ueber  einen Versuch,   eine electrodynamische
+Sonnenstrahlung  nachzeweisen,     and    ueber   die     Aederung des
+Uebergangswiderstandes bei Beruehrung  zweier Leiter durch electrische
+Bestrahlung" 
+(1896) Ann. Physik u. Chemie 59: 782-792
+
+A59  Lodge, 0.J., 
+"Signalling through  space without  wires" 
+(1900) The  Electrician, 3d ed: 33
+
+S24 Deslandres, H., Decombe, L., 
+"On the search for Hertzian radiation emanating  from the sun = Sur la
+recherche   d'un   rayonnement Hertzian    emane  du   soleil"  
+(1902) Comp. Rendus Acad. Sci. (Paris) 134: 527-530
+
+S23    Nordmann, C.,
+"A search for Hertzian waves emanating from the sun = Recherche des
+ondes Hertziennes emanees du soliel"
+(1902) Comp. Rendus Acad. Sci. (Paris) 134: 273-275
+
+A292   Oswald, A.A.,
+"Transoceanic telephone service--short-wave equipment:  technical
+features of the new short-wave radio stations of the Bell System"
+(1930) Trans. AIEE 49: 629-637
+
+S14    Jansky, K.G.,
+"Directional studies of atmospherics at high frequencies"
+(1932) Proc. IRE 20: 1920-1932
+
+A72    Anon.,
+"New radio waves traced to centre of the Milky way"
+(1933) N.Y. Times 82: 1 (5 May)
+
+A169   Jansky, K.G.,
+"Electrical phenomena that apparently are of interstellar origin"
+(1933) Pop. Astron. 41: 548-555
+
+A61    Jansky, K.G.,
+"Radio waves from outside the solar system"
+(1933) Nature 132: 66
+
+S15    Jansky, K.G.,
+"Electrical disturbances apparently of extraterrestrial origin"
+(1933) Proc. IRE 21: 1387-1398
+
+S5     Jansky, K.G.,
+"A note on the source of interstellar interference"
+(1935) Proc. IRE 23: 1158-1163
+
+A62    Arakawa, D.,
+"Abnoraml attenuation in short radio wave propagation"
+(1936) Rep. Radio Res. Japan 6:31-38 (May)
+
+A274   Friis, H.T., Feldman, C.B.,
+"A multiple unit steerable antenna for short-wave reception"
+(1937) Proc. IRE 25: 841-917
+
+A181   Jansky, K.G.,
+"Minimum noise levels obtained on short-wave radio receiving systems"
+(1937) Proc. IRE 25: 1517-1530
+
+A263   Newton, H.W., Barton, H.J.,
+"Bright solar eruptions and radio fading, 1935-1936"
+(1937) MNRAS 97: 594-611
+
+A12    Whipple, F.L., Greenstein, J.L.,
+"On the origin of interstellar radio disturbances"
+(1937) Proc. NAS 23: 177-181
+
+S11    Henyey, L.G., Keenan, P.C.,
+"Interstellar radiation from free electrons and hydrogen atoms"
+(1940) Astrophys. J. 91: 625-630
+
+S16    Reber, G.,
+"Cosmic static"
+(1940) Proc. IRE 28: 68-70
+
+S7     Reber, G.,
+"Cosmic static"
+(1940) Astrophys. J. 91: 621-624
+
+A166   Baade, W.,
+"The Crab Nebula"
+(1942) Astrophys. J. 96: 188-198
+
+A275   Fraenz, K.,
+"Measurement of the sensitivity of receivers with short
+electric waves [in German]"
+(1942) Hochfreq. Electroakustik 59: 105-112, 143-144
+
+A172   Minkowski, R.,
+"The Crab Nebula"
+(1942) Astrophys. J. 96: 199-213
+
+A93    Reber, G.,
+"Cosmic static"
+(1942) Proc. IRE 30: 367-378
+
+S8     Reber, G.,
+"Cosmic static"
+(1944) Astrophys. J. 100: 279-287
+
+A100   Appleton, E.V.,
+"Departure of long-wave solar radiation from black-body intensity"
+(1945) Nature 156: 534-535
+
+A102   Artsimovich, L.A., Pomeranchuk, I.Ya.,
+"The radiation of fast electrons in a magnetic field"
+(1945) J. Phys., USSR 9: 267-276
+
+A276   Bakker, C.J.,
+"Radiogolven uit het wereldruim = The reception of radio waves from
+space"
+(1945) Ned. Tijdschr. Natuurk. 11: 201-209
+
+S26    Southworth, G.C.,
+"Microwave radiation from the sun"
+(1945) J. Franklin Inst. 239: 285-297
+
+S10    Van de Hulst, H.C.,
+"Radiogolven uit het wereldrium; herkomst der radiogolven"
+(1945) Ned. Tijdschr. Natuuurk. 11: 210-221
+
+A101   Appleton, E.V., Hey, J.S.,
+"Solar radio noise"
+(1946) Phil. Mag. 37: 73-84
+
+A108   Appleton, E.V., Hey, J.S.,
+"Circular Polarization of solar radio noise"
+(1946) Nature 158: 339
+
+A102   Artsimovich, L.A., Pomeranchuk, I.Ya.,
+"The radiation of fast electrons in a magnetic field"
+(1946) Zh. Eksp. Terr. Fiz. 16: 379-389
+
+A277   Dicke, R.H., Beringer, R., Kyhl, R.L., Vane, A.B.,
+"Atmospheric absorption measurements with a microwave radiometer"
+(1946) Phys. Rev. 70: 340-348
+
+S20    Dicke, R.H.,
+"The measurement of thermal radiation at microwave frequencies"
+(1946) Rev. Sci. Instrum. 17: 268-275
+
+S31    Dicke, R.H., Beringer, R.,
+"Microwave radiation from the sun and moon"
+(1946) Astrophys. J. 103: 375-376
+
+A95    Gamow, G.,
+"The expanding universe and the origin of the elements"
+(1946) Phys. Rev. 70: 572-573
+
+A278   Ginzburg, V.L.,
+"On solar radiation in the radio spectrum [in Russian]"
+(1946) Dokl. Akad. nauk SSSR 52: 487-490
+
+A92    Greenstein, J.L., Henyey, L.G., Keenan, P.C.,
+"Interstellar origin of cosmic radiation at radio frequencies"
+(1946) Nature 157: 805
+
+A168   Hey, J.S., Phillips, J.W., Parsons, S.J.,
+"Cosmic radiations at 5 metres wave-length"
+(1946) Nature 157: 296-297
+
+S25    Hey, J.S.,
+"Solar radiations in the 4-6 metre radio wave-length band"
+(1946) Nature 157: 47-48
+
+S32    Hey, J.S., Parsons, S.J., Phillips, J.W.,
+"Fluctuations in cosmic radiation at radio-frequencies"
+(1946) Nature 158: 234
+
+A279   Martyn, D.F.,
+"Polarization of solar radio-frequency emissions"
+(1946) Nature 158: 308
+
+S29    Martyn, D.F.,
+"Temperature radiation from the quiet sun in the radio spectrum"
+(1946) Nature 158: 632-633
+
+A183   Moxon, L.A.,
+"Variation of cosmic radiation with frequency"
+(1946) Nature 158: 758-759
+
+A173   Pawsey, J.L., Payne-Scott, R., McCready, L.L.,
+"Radio-frequency energy from the sun"
+(1946) Nature 157: 158-159
+
+S30    Pawsey, J.L.,
+"Observation of million degree thermal radiation from the sun at a
+wave-length of 1.5 metres"
+(1946) Nature 158: 633-634
+
+S27    Ryle, M., Vonberg, D.D.,
+"Solar radiation on 175 Mc./s."
+(1946) Nature 158: 339-340
+
+A280   Saha, M.N.,
+"Origin of radio-waves from the sun and the stars"
+(1946) Nature 158: 717-718
+
+A184   Sander, K.F.,
+"Measurements of galactic noise at 60 Mc/s"
+(1946) J. IEE 93: 1487-1496
+
+A103   Shklovsky, I.S.,
+"Oh izluchenii radiovoln galaktikoi i verkhnimi sloiamiatmosfery solntsa
+= on the radiation of radio-waves by the Galaxy and by the upper layers
+of the solar atmosphere"
+(1946) Astr. Zh. 23: 333-347
+
+A281   Onsoeld, A.,
+"Die kosmische kurzwellenstrahlung = The cosmic short-wave radiation"
+(1946) Naturwiss. 33: 37-40
+
+A264   Bay, Z.,
+"Reflection of microwaves from the moon"
+(1947) Hung. Phys. Acta 1: 1-22
+
+A177   Lovell, A.C.B.,
+"Meteoric ionization and ionospheric abnormalities"
+(1947) Rep. Prog. Phys. 11: 415-443
+
+S28    McCready, L.L., Pawsey, J.L., Payne-Scott, R.,
+"Solar radiation at radio frequencies and its relation to sunspots"
+(1947) Proc. Roy. Soc. A190: 357-375
+
+A266   Payne-Scott, R., Yabsley, D.E., Bolton, J.G.,
+"Relative times of arrivals of bursts of solar noise on different radio
+frequencies"
+(1947) Nature 160: 256-257
+
+A174   Reber, G., Greenstein, J.L.,
+"Radio-frequency investigations of astronomical interest"
+(1947) Observatory 67: 15-26
+
+A179   Sander, K.F.,
+"Radio noise from the sun at 3.2 cm"
+(1947) Nature 159: 506-507
+
+A282   Schott, E.,
+"175-MHz radiation from the sun [in German]"
+(1947) Phys. Blatt. 3: 159-160
+
+A89    Bolton, J.G.,
+"Discrete sources of galactic radio frequency noise"
+(1948) Nature 162: 141-142
+
+A90    Bolton, J.G., Stanley, G.J.,
+"Observations of the variable source of cosmic radio frequency radiation
+in the constellation of Cygnus"
+(1948) Aust. J. Sci. Res. A1: 58-69
+
+S33    Bolton, J.G., Stanley, G.J.,
+"Variable source of radio frequency radiation in the constellation of
+Cygnus"
+(1946) Nature 161: 312-313
+
+A104   Covington, A.E.,
+"Solar noise observations on 10.7 centimeters"
+(1948) Proc. IRE 36: 454-457
+
+A185   Herbstreit, J.W., Johler, J.R.,
+"Frequency variation of the intensity of cosmic radio noise"
+(1948) Nature 161: 515-516
+
+A105   Hey, J.S., Parsons, S.J., Phillips, J.W.,
+"An investigation of galactic radiation in the radio spectrum"
+(1948) Proc. Roy. Soc. A192: 425-445
+
+A265   Hey, J.S., Parsons, S.J., Phillips, J.W.,
+"Some characteristics of solar radio emissions"
+(1948) MNRAS 108: 354-371
+
+A106   Ivanenko, D.D., Sokolov, A.A.,
+"On the theory of the `luminous' electron"
+(1948) Dokl. Akad. nauk SSSR 59: 1551-1554
+
+A107   Martyn, D.F.,
+"Solar radiation in the radio spectrum I. Radiation from quiet sun"
+(1948) Proc. Roy. Soc. A193: 44-59
+
+A283   Northcott, R.J., Williamson, R.E.,
+"Galactic noise and the plane of the galaxy"
+(1948) JRASC 42: 269-279
+
+S17    Reber, G.,
+"Cosmic static"
+(1948) Proc. IRE 36: 1215-1218
+
+A268   Ryle, M.,
+"The generation of radio-frequency radiation in the sun"
+(1948) Proc. Roy. Soc. 195: 82-97
+
+A50    Ryle, M., Vonberg, D.D.,
+"An investigation of radio-frequency radiation from the sun"
+(1948) Proc. Roy. Soc. A193: 98-120
+
+S34    Ryle, M., Smith, F.G.,
+"A new intense source of radio-frequency radiation in the constellation
+of Cassiopeia"
+(1948) Nature 162: 462-463
+
+A284   Williamson, R.E.,
+"The present state of microwave astronomy"
+(1948) JRASC 42: 9-32
+
+A96    Alpher, R.A., Herman, R.C.,
+"Remarks on the evolution of the expanding universe"
+(1949) Phys. Rev. 75: 1089-1095
+
+A109   Bolton, J.G., Stanley, G.J.,
+"The position and probable identification of the source of galactic
+radio-frequency radiation Taurus A"
+(1949) Aust. J. Sci. Res. A2: 139-148
+
+S35    Bolton, J.G., Stanley, G.J., Slee, O.B.,
+"Positions of three discrete sources of galactic radio-frequency
+radiation"
+(1949) Nature 164: 101-102
+
+A162   Hey, J.S.,
+"Reports on the progress of astronomy: radio astronomy"
+(1949) MNRAS 109: 179-214
+
+A285   Piddington, J.H., Minnett, H.C.,
+"Microwave thermal radiation from the moon"
+(1949) Aust. J. Sci. Res. A2: 63-77
+
+A286   Reber, G.,
+"Radio astronomy"
+(1949) Sci. Amer. 181: 35-41 (Sept.)
+
+A269   Ryle, M.,
+"The significance of the observation of intense
+radio-frequency emission from the sun"
+(1949) Proc. Phys. Soc. 62A: 483-491
+
+A270   Ryle, M.,
+"Evidence for the stellar origin of cosmic rays"
+(1949) Proc. Phys. Soc. 62A: 491-499
+
+A110   Schwinger, J.,
+"On the classical radiation of accelerated electrons"
+(1949) Phys. Rev. 75: 1912-1925
+
+S43    Shklovsky, I.S.,
+"Monokhromaticheskoe radioieluchenie galaktiki idvoemozhnost' ego
+nabliudeniia = Monochromatic radio emission from the galaxy and the
+possibility of its observation"
+(1949) Astr. Zh. 26: 10-14
+
+A47    Struve, O.,
+"Progress in radio astronomy - I"
+(1949) Sky Telesc. 9: 27-30
+
+A175   Unsoeld, A.,
+"Ueber der Ursprung der Radiofrequenzstrahlung und der
+Ultrastrahlung in der Milchstrasse"
+(1949) Z. Astroph. 26: 176-199
+
+S36    Alfven, H., Herlofson, N.,
+"Cosmic radiation and radio stars"
+(1950) Phys. Rev. 78: 616
+
+A186   Allen, C.W., Gum, C.S.,
+"Survey of galactic radio noise at 200 Mc/s"
+(1950) Aust. J. Sci. Res. A3: 224-233
+
+A171   Bolton, J.G., Westfold. K.C.,
+"Galactic radiation at radio frequencies. III. Galactic structure"
+(1950) Aust. J. Sci. Res. A3: 251-264
+
+A187   Bolton, J.G., Westfold, K.C.,
+"Galactic radiation at radio frequencies. I. 100-Mc/s survey"
+(1950) Aust. J. Sci. Res. A3: 19-23
+
+A267   Bolton, J.G., Westfold, K.C.,
+"Structure of the galaxy and the sense of rotation of spiral nebulae"
+(1950) Nature 165: 487-488
+
+A97    Brown, R.H., Hazard, C.,
+"Radio-frequency radiation from the great nebula in Andromeda (M 31)"
+(1950) Nature 166: 901-902
+
+S18    Kiepenheuer, K.O.,
+"Cosmic rays as the source of general galactic radio emission"
+(1950) Phys. Rev. 79: 738-739
+
+A99    Little, C.G., Lovell, A.C.B.,
+"Origin of the fluctuations in the intensity of radio waves from
+galactic sources - Jodrell Bank observations"
+(1950) Nature 165: 423-424
+
+A163   Pawsey, J.L.,
+"Solar radio-frequency radiation"
+(1950) Proc. IEE 97: 290-310
+
+A49    Ryle, M.,
+"Radio astronomy"
+(1950) Rep. Prog. Phys. 13: 184-246
+
+A52    Ryle, M., Smith, F.G., Elsmore, B.,
+"A preliminary survey of the radio stars in the northern hemisphere"
+(1950) MNRAS 110: 508-523
+
+A111   Smerd, S.F.,
+"Radio-frequency radiation from the quiet sun"
+(1950) Aust. J. Sci. Res. A3: 34-59
+
+A98    Smith, F.G.,
+"Origin of the fluctuations in the intensity of radio waves from
+galactic sources - Cambridge observations"
+(1950) Nature 165: 422-423
+
+A287   Stanier, H.M.,
+"Distribution of radiation from the undisturbed sun at a wave-length of
+60 cm"
+(1950) Nature 165: 354-355
+
+A51    Stanley, G.J., Slee, O.B.,
+"Galactic radiation at radio frequencies II. The discrete sources"
+(1950) Aust. J. Sci. Res. A3: 234-250
+
+A48    Struve, O.,
+"Progress in radio astronomy - II"
+(1950) Sky Telesc. 9: 55-56
+
+A236   U.R.S.I.,
+"Solar and galactic radio noise"
+(1950) URSI Spec. Rep. 1
+
+A91    Brown, R.H., Hazard, C.,
+"Radio emission from the Andromeda nebula"
+(1951) MNRAS 111: 357-367
+
+S44    Ewen, H.I., Purcell, E.M.,
+"Observation of a line in the galactic radio spectrum -
+radiation from galactic hydrogen at 1,420 Mc./sec."
+(1951) Nature 168: 356-357
+
+A19    Ginzburg, V.L.,
+"Kosmicheskie luchi kak istochnik galakticheskogo radioielueniia =
+Cosmic rays as the source of galactic radio emission"
+(1951) Dokl. Akad. nauk SSSR 76: 377-380
+
+A63    Lovell, A.C.B.,
+"The new science of radio astronomy"
+(1951) Nature 167: 94-97
+
+A112   Machin, K.E., Smith, F.G.,
+"A new radio method for measuring the electron density in the solar
+corona"
+(1951) Nature 168: 599-600
+
+A288   Machin, K.E.,
+"Distribution of radiation across the solar disk at a frequency of 81.5
+Mc./s."
+(1951) Nature 167: 889-891
+
+A289   Mills, B.Y., Thomas, A.B.,
+"Observations of the source of radio-frequency radition in the
+constellation of Cygnus"
+(1951) Aust. J. Sci. Res. A4: 158-171
+
+S45    Muller, C.A., Oort, J.H.,
+"The interstellar hydrogen line at 1,420 Mc./sec., and an estimate of
+galactic rotation"
+(1951) Mature 168: 357-358
+
+A189   Piddington, J.H.,
+"The origin of galactic radio-frequency radiation"
+(1951) MNRAS 111: 45-63
+
+A190   Ryle, M., Elsmore, B.,
+"A search for long-period variations in the intensity of radio stars"
+(1951) Nature 168: 555-556
+
+A191   Smith, F.G.,
+"An attempt to measure the annual parallax or proper
+motion of four radio stars"
+(1951) Nature 168: 962-963
+
+S37    Smith, F.G.,
+"An accurate determination of the Positions of four radio stars"
+(1951) Nature 168: 555
+
+B23    Van de Hulst, H.C.,
+"A Course in Radio Astronomy"
+(1951) Harvard lectures (Leiden-mimeo.)
+
+A192   Westerhout, G., Oort, J.H.,
+"A comparison of the intensity distribution of radio-frequency radiation
+with a model of galactic systems"
+(1951) BAN 11: 323-333
+
+A114   Brown, R.H., Hazard, C.,
+"Radio-frequency radiation from Tycho Brahe's supernova (A.D. 1572)"
+(1952) Nature 170: 364-365
+
+A194   Brown, R.H., Hazard, C.,
+"Extragalactic radio-frequency radiation"
+(1952) Phil. Mag. 43: 136-152
+
+S39    Brown, R.H., Jennison, R.C., Das Gupta, M.K.,
+"Apparent angular sizes of discrete radio sources - observations at
+Jodrell Bank, Manchester"
+(1952) Nature 170: 1061-1063
+
+A116   Christiansen, W.N., Hindman, J.V.,
+"A preliminary survey of 1420 Mc/s. lineemission from galactic hydrogen"
+(1952) Aust. J. Sci. Res. A5: 437-455
+
+A290   Getmantsev, G.G.,
+"Cosmic electrons as a source of radio emission from the galaxy
+[in Russian]"
+(1952) Dokl. Akad. nauk SSSR 83: 557-560
+
+A193   Gum, C.S.,
+"A large H II region at galactic longitude 226"
+(1952) Observatory 72: 151-154
+
+B24    Lovell, B., Clegg, J.A.,
+"Radio Astronomy"
+(1952) London: Chapman & Hall
+
+A117   Machin, K.E., Smith, F.G.,
+"Occultation of a radio star by the solar corona"
+(1952) Nature 170: 319-320
+
+A170   Mills, B.Y.,
+"The positions of six discrete sources of cosmic radio radiation"
+(1952) Aust. J. Sci. Res. A5: 456-463
+
+A53    Mills, B.Y.,
+"The distribution of the discrete sources of radiation"
+(1952) Aust. J. Sci. Res. A5: 266-287
+
+S40    Mills, B.Y.,
+"Apparent angular sizes of discrete radio sources-observations at
+Sydney"
+(1952) Nature 170: 1063-1064
+
+A195   Piddington, J.H., Minnett, H.C.,
+"Radio-frequency radiation from the constellation of Cygnus"
+(1952) Aust. J. Sci. Res. A5: 17-34
+
+S21    Ryle, M.,
+"A new radio interferomter and its application to the observation of
+weak radio stars" (1952) Proc. Roy. Soc. A211: 351-375
+
+A196   Shklovsky, I.S., Parenago, P.P.,
+"Otozhdestvlenie sverkhnovoi zvezdy 369 goda s moshchnoi radiozvezdoi v
+Kassiopee = Identification of the supernova of 369 with an intense radio
+star in Cassiopeia"
+(1952) Astr. Tsirk. 131: 1-2
+
+A197   Shklovsky, I.S., Kholopov, P.N.,
+"Otozhdestvlenie tumannosti NGC 1316 s radiozvezdoi v
+sozvezdii Pechi = Identification of the nebula NGC 1316
+with the radio star in the constellation of Fornax"
+(1952) Astr. Tsirk. 3: 2-3
+
+A291   Shklovsky, I.S.,
+"Radio spectroscopy of the galaxy [in Russian]"
+(1952) Astr. Zh. 29: 144-153
+
+A54    Shklovsky, I.S.,
+"O prirode radioizlucheniia galaktiki = On the nature of the radio
+emission from the Galaxy"
+(1952) Astr. Zh. 29: 418-449
+
+S41    Smith, F.G.,
+"Apparent angular sizes of discrete radio sources-observations at
+Cambridge"
+(1952) Nature 170: 1065
+
+A118   Vitkevich, V.V.,
+"Interferentsionnyi metod v radioastronomii = Interferometer methods for
+radio astronomy"
+(1952) Astr. Zh. 29: 450-462
+
+A198   Wild, J.P.,
+"The radio-frequency line spectrum of atomic hydrogen and its
+applications in astronomy"
+(1952) Astrophys. J. 115: 206-221
+
+A201   Brown, R.H., Hazard, C.,
+"An extended radio-frequency source of extragalactic origin"
+(1953) Nature 172: 997-998
+
+A241   Brown, R.H., Hazard, C.,
+"A survey of 23 localized radio sources in the northern hemisphere"
+(1953) MNRAS 113: 123-133
+
+A293   Christiansen, W.N.,
+"A high-resolution aerial for radio astronomy"
+(1953) Nature 171: 831-833
+
+A199   Ginzburg, V.I.,
+"Sverkhnovye i novye zvezdy kak istochniki kosmikheskogo
+i radioizlukhennia = Supernovae and novae as sources of
+cosmic and radio radiation"
+(1953) Dokl. Akad. nauk SSSR 92: 1133-1136
+
+A200   Greenstein, J.L.,
+"The Crab Nebula  as a radio source"
+(1953) Astrophys. J. 118: 1-15
+
+S42    Jennison, R.C., Das Gupta, M.K.,
+"Fine structure of the extra-terrestrial radio source Cygnus 1"
+(1953) Nature 172: 996-997
+
+A202   Kraus, J.D., Ko, H.C.,
+"Radio radiation from the supergalaxy"
+(1953) Nature 172: 538-539
+
+A119   Mills, B.Y.,
+"The radio brightness distributions over four discrete sources of cosmic
+noise"
+(1953) Aust. J. Phys. 6: 452-470
+
+A120   Mills, B.Y., Little, A.G.,
+"A high-resolution aerial system of a new type"
+(1953) Aust. J. Phys. 6: 272-278
+
+A294   O'Brien, P.A.,
+"The distribution of radiation across the solar disk at
+metre wave-lengths"
+(1953) MNRAS 113: 597-612
+
+A178   Pawsey, J.L.,
+"Radio astronomy in Australia"
+(1953) JRASC 47: 137-152
+
+A203   Sanders, T.M. Jr., Schawlow, A.L., Dousmanis, G.C., Townes, C.H.,
+"A microwave spectrum of the free OH radical"
+(1953) Phys. Rev. 89: 1158-1159
+
+A204   Scheuer, P.A.G., Ryle, M.,
+"An investigation of the H II regions by a radio method"
+(1953) MNRAS 113: 3-17
+
+A121   Shklovsky, I.S.,
+"O prirode svecheniia Krabovidnoi tumannosti = On the nature of the
+radiation from the Crab Nebula"
+(1953) Dokl. Akad. nauk SSSR 90: 983-986
+
+A122   Shklovsky, I.S.,
+"The possibility of observing monochromatic radio emission from
+interstellar molecules [in Russian]"
+(1953) Dokl. Akad. nauk SSSR 92: 25-28
+
+A295   Shklovsky, I.S.,
+"Problema kosmicheskogo radioizlucheniia = The problem of cosmic radio
+waves"
+(1953) Astr. Zh. 30: 15-36
+
+A147   Vaucouleurs, G. de,
+"Normal and abnormal galaxies as radio sources"
+(1953) Observatory 73: 252-254
+
+A167   Baade, W., Minkowski, R.,
+"On the identification of radio sources"
+(1954) Astrophys. J. 119: 215-231
+
+S38    Baade, W., Minkowski, R.,
+"Identification of the radio sources in Cassiopeia, Cygnus A, and
+ Puppis A"
+(1954) Astrophys. J. 119: 206-214
+
+A205   Baldwin, J.E., Elsmore, B.,
+"Radio emission from the Perseus cluster"
+(1954) Nature 173: 818
+
+A240   Bracewell, R.N., Roberts, J.A.,
+"Aerial smoothing in radio astronomy"
+(1954) Aust. J. Phys. 7: 615-640
+
+A123   Brown, R.H., Twiss, R.Q.,
+"A new type of interferometer for use in radio astronomy"
+(1954) Phil. Mag. 45: 663-682
+
+A248   Brown, R.H., Palmer, H.P., Thompson, A.R.,
+"Galactic radio sources of large angular diameter"
+(1954) Nature 173: 945-946
+
+A124   Dombrovsky, V.A.,
+"O prirode izlucheniia Krabovidnoi tumannosti = On the nature of the
+radiation from the Crab Nebula"
+(1954) Dokl. Akad. nauk SSSR 94: 1021-1024
+
+A70    Greenstein, J.L.,
+"Washington conference on radio astronomy--1954, ed. by
+J.L. Greenstein"
+(1954) JGR 59: 149-201
+
+A206   Haddock, F.T., Mayer, C.H., Sloanaker, R.M.,
+"Radio observations of ionized hydrogen nebulae and other discrete
+sources at a wavelength of 9.4 cm"
+(1954) Nature 174: 176-177
+
+A207   Haddock, F.T., Mayer, C.H., Sloanaker, R.M.,
+"Radio emission from the Orion Nebula and other sources at a wavelength
+of 9.4 cm"
+(1954) Astrophys. J. 119: 456-459
+
+A125   Hagen, J.P., McClain, E.F.,
+"Galactic absorption of radio waves"
+(1954) Astrophys. J. 120: 368-370
+
+A126   Kerr, F.J., Hindman, J.V., Robinson, B.J.,
+"Observations of the 21 cm line from the Magellanic Clouds"
+(1954) Aust. J. Phys. 7: 297-314
+
+A209   Kwee, K.K., Muller, C.A., Westerhout, G.,
+"The rotation of the inner parts of the galactic system"
+(1954) BAN 12: 211-222
+
+A210   Shklovsky, I.S.,
+"On the nature of the discrete sources of cosmic radio
+waves [in Russian]"
+(1954) Dokl. Akad. nauk SSSR 98: 353-356
+
+A211   Townes, C.H.,
+"Microwave spectra of astrophysical interest"
+(1954) JGR 59: 191
+
+A271   U.R.S.I.,
+"The distribution of radio brightness on the solar disk"
+(1954) URSI Spec. Rep. 4
+
+A272   U.R.S.I.,
+"Interstellar hydrogen"
+(1954) URSI Spec. Rep. 5
+
+A273   U.R.S.I.,
+"Discrete sources of extra-terrestrial radio noise"
+(1954) URSI Spec. Rep. 3
+
+A208   Van de Hulst, H.C., Muller, C.A., Oort, J.H.,
+"The spiral structure of the outer part of the galactic system derived
+from the hydrogen emission at 21-cm wavelength"
+(1954) BAN 12: 117-149
+
+A9     Vashakidze, M.A.,
+"On the degree of polarization of the light near extragalactic nebulae
+and the Crab Nebula [in Russian]"
+(1954) Astr. Tsirk. 147: 11-13
+
+A212   Williams, D.R.W., Davies, R.D.,
+"A method for the measurement of the distance of radio stars"
+(1954) Nature 173: 1182-1183
+
+A213   Baldwin, J.E.,
+"The distribution of the galactic radio emission"
+(1955) MNRAS 115: 690-700
+
+A71    Bok, B.J.,
+"New science of radio astronomy"
+(1955) Sci. Monthly 80: 333-345
+
+A127   Brown, R.H., Palmer, H.P., Thompson, A.R.,
+"A rotating-lobe interferometer and its application to radio astronomy"
+(1955) Phil. Mag. 46: 857-866
+
+A250   Brown, R.H., Palmer, H.P., Thompson, A.R.,
+"Polarization measurements of three intense radio sources"
+(1955) MNRAS 115: 487-492
+
+A65    Brown, R.H., Lovell, A.C.B.,
+"Large radio telescopes and their use in radio astronomy"
+(1955) Vistas Astron. 1: 542-560
+
+A128   Burke, B.F., Franklin, K.L.,
+"Observations of a variable radio source associated with the planet
+Jupiter"
+(1955) JGR 60: 213-217
+
+A214   Davies, R.D., Williams, D.R.W.,
+"An alternative identification of the radio source in the direction of
+the galactic centre"
+(1955) Nature 175: 1079-1081
+
+A215   Greenstein, J.L.,
+"Theoretical problems of discrete radio sources"
+(1955) IAU Symp. 4: 179-191
+
+A296   Hagen, J.P., Lilley, A.F., McClain, E.F.,
+"Absorption of 21 -cm radiation by interstellar hydrogen"
+(1955) Astrophys. J. 122: 361-375
+
+A2     Hey, J.S.,
+"Solar radio eclipse observations"
+(1955) Vistas Astron. 1: 521-531
+
+A216   Kaidanovsky, N.L., Kardashev, N.S., Shklovsky, I.S.,
+"Results of observations of discrete sources of cosmic radio waves at
+3.2 cm"
+(1955) Dokl. Akad. nauk SSSR 104: 517-519
+
+A217   McClain, E.F.,
+"An approximate distance determination for radio source Sagittarius A"
+(1955) Astrophys. J. 122: 376-384
+
+A129   Mills, B.Y.,
+"The observation and interpretation of radio emission from some bright
+galaxies"
+(1955) Aust. J. Phys. 8: 368-389
+
+B19    Pawsey, J.L., Bracewell, R.N.,
+"Radio Astronomy"
+(1955) Oxford: Clarendon Press
+
+A218   Seaton, M.J.,
+"The kinetic temperature of the interstellar gas in regions of neutral
+hydrogen"
+(1955) Ann. d'Astrophys. 18: 188-205
+
+A219   Shklovsky, I.S.,
+"On the nature of the radiation from the radio galaxy NGC 4486
+[in Russian]"
+(1955) Astr. Zh. 32: 215-225
+
+A220   Stone, S.N.,
+"A possible extragalactic source of 21-cm radio emission"
+(1955) PASP 67: 183-185
+
+A238   AUI,
+"Planning document for the establishment and operation of a radio
+astronomy observatory, prepared for the National Science Foundation"
+(1956) NRAO internal rep.
+
+A221   Baldwin, J.E., Smith, F.G.,
+"Radio emission from the extragalactic nebula M 87"
+(1956) Observatory 76: 141-144
+
+A69    Bok, B.J.,
+"A national radio observatory"
+(1956) Sci. Amer. 195: 56-64 (Oct.)
+
+A130   Burbidge, G.R.,
+"On the synchrotron radiation from Messier 87"
+(1956) Astrophys. J. 124: 416-429
+
+A222   Burke, B.F.,
+"Mills Cross telescopes"
+(1956) AJ 61: 167-168
+
+A142   Droege, F., Priester, W.,
+"Durchmusterung der allgemeinen Radiofrequenz-Strahlung bei 200 MHz =
+Distribution of galactic radiation at 200 MHz"
+(1956) Z. Astrophys. 40: 236-248
+
+A67    Emberson, R.M.,
+"National Radio Astronomy Observatory"
+(1956) Science 130: 1307-1318
+
+A223   Getmantsev, G.G., Razin, V.A.,
+"On the problem of the polarization of nonthermal cosmic radio emission
+[in Russian]"
+(1956) Trudy Soveshch. Vop. Kosmog. 5: 496-505
+
+A224   Heeschen, D.S.,
+"21 -cm line emission from the Coma cluster"
+(1956) Astrophys. J. 124: 660-662
+
+A247   Jennison, R.C., Das Gupta, M.K.,
+"The measurement of the angular diameter of two intense radio sources I.
+A radio interferometer using post-detector correlation [and] II.
+Diameter and structural measurements of the radio stars Cygnus A and
+cassiopeia A"
+(1956) Phil. Mag. 55-75
+
+A225   Mills, B.Y.,
+"The radio source near the galactic centre"
+(1956) Observatory 76: 65-67
+
+B15    Pfeiffer, J.,
+"The Changing Oniverse"
+(1956) New York: Random House
+
+A115   Piddington, J.H., Trent, G.H.,
+"A survey of cosmic radio emission at 600 Mc/s"
+(1956) Aust. J. Phys. 9: 481-493
+
+B20    Shklovsky, I.S.,
+"Kosmicheskoe Fadioizluchenie"
+(1956) Moscow: Gos. Izd. Tek. Lit.
+
+A46    Southworth, G.C.,
+"Early history of radio astronomy"
+(1956) Sci. Monthly 82: 55-66
+
+B18    Anon.,
+"Symposiuim on Radio Astronomy - C.S.I.R.O. Radiophysics
+Laboratory, Sydney - September 1956"
+(1957) Melbourne: CSIRO
+
+A226   Barrett, A.H., Lilley, A.E.,
+"A search for the 21 -cm line of OH in the interstellar medium"
+(1957) AJ 62: 5-6
+
+A113   Blythe, J.H.,
+"A new type of pencil beam aerial for radio astronomy"
+(1957) MNRAS 117: 644-651
+
+A227   Bolton, J.G., Wild, J.P.,
+"On the possibility of measuring interstellar magnetic fields by 21 -cm
+Zeeman splitting"
+(1957) Astrophys. J. 125: 296-297
+
+A228   Heeschen, D.S.,
+"Neutral hydrogen in M 32, M 51, and M 81"
+(1957) Astrophys. J. 126: 471- 479
+
+A229   Heeschen, D.S.,
+"Neutral hydrogen emission from the Hercules and Corona Borealis
+clusters of galaxies"
+(1957) PASP 69: 350-351
+
+A60    Jansky, C.M. Jr.,
+"The beginnings of radio Astronomy"
+(1957) Amer. Scientist 45: 5-12
+
+A81    Lovell, A.C.E.,
+"The Jodrell Bank Radio Telescope"
+(1957) Nature 180: 60-62
+
+A231   Mayer, C.H., McCullough, T.P., Sloanaker, R.M.,
+"Evidence for polarized radio radiation from the Crab Nebula"
+(1957) Astrophys. J. 126: 468-470
+
+A249   Morris, D., Palmer, H.P., Thompson, A.R.,
+"Five radio sources of small angular diameter"
+(1957) Observatory 77: 103-106
+
+A232   Muller, C.A., Westerhout, G.,
+"A catalogue of 21 -cm line profiles"
+(1957) BAN 13: 151-195
+
+A131   Townes, C.H.,
+"Microwave and radio-frequency resonance lines of interest to radio
+astronomy"
+(1957) IAU Symp. 4: 92-103
+
+A230   Van de Hulst, H.C., Raimond, E., Van Woerden, H.,
+"Rotation and density distribution of the Andromeda Nebula derived from
+observations of the 21 -cm line"
+(1957) BAN 14: 1-16
+
+B26    Van de Hulst, H.C.,
+"Radio Astronomy - IAU Symp. 4, ed. by H.C. van de Hulst"
+(1957) Cambridge: Cambridge University Press
+
+A76    Blum, E.J., Denisse, J.F., Steinberg, J.L.,
+"Radio astronomy at the Meudon Observatory"
+(1958) Proc. IRE 46: 39-43
+
+A243   Bracewell, R.N.,
+"Radio interferometry of discrete sources"
+(1958) Proc. IRE 46: 97-105
+
+B14    Brown, R.H., Lovell, A.C.B.,
+"The Exploration of Space by Radio"
+(1958) New York: Wiley
+
+A68    Emberson, R.M., Ashton, N.L.,
+"The telescope program for the National Radio Astronomy Observatory at
+Green Bank, West Virginia"
+(1958) Proc. IRE 46: 23-35
+
+A13    Haddock, F.T.,
+"Introduction to radio astronomy"
+(1958) Proc. IRE 46: 3-12
+
+A66    Haddock, F.T.,
+"Radio astronomy special issue, ed. by F.T. Haddock"
+(1958) Proc. IRE 46: 1-355
+
+A80    Heeschen, D.S., Dieter, N.H.,
+"Extragalactic 21 -CM line studies"
+(1958) Proc. IRE 46: 234-239
+
+A64    Jansky, C.M. Jr.,
+"The discovery and identification by Karl Guthe Jansky of
+electromagnetic radiation of extraterrestrial origin in the radio
+spectrum"
+(1958) Proc. IRE 46: 13-15
+
+A188   Jennison, R.C.,
+"A phase sensitive interferometer technique for the measurement of the
+fourier transforms of spatial brightness distributions of small angular
+extent"
+(1958) MNRAS 118: 276-284
+
+A237   Kennelly, A.E.,
+"Radio astronomy in 1890: a proposed experiment"
+(1958) PASP 70: 303-304
+
+A79    Kraus, J.D.,
+"Radio telescope antennas of large aperture"
+(1958) Proc. IRE 46: 92-97
+
+A77    Mills, B.Y., Little, A.G., Sheridan, K.V., Slee, O.B.,
+"A high resolution radio telescope for use at 3.5 M"
+(1958) Proc. IRE 46: 67-84
+
+A233   Oort, J.H., Kerr, F.T., Westerhout, G.,
+"The galactic system as a spiral nebula"
+(1958) MNRAS 118: 379-389
+
+A6     Reber, G.,
+"Early radio astronomy at Wheaton, Illinois"
+(1958) Proc. IRE 46: 15-23
+
+A132   Ryle, M.,
+"The nature of cosmic radio sources"
+(1958) Proc. Roy. Soc. A248: 289-308
+
+A78    Shain, C.A.,
+"The Sydney 19.7 Mc radio telescope"
+(1958) Proc. IRE 46: 85-88
+
+B10    Bracewell, R.N.,
+"Paris Symposium on Radio Astronomy (IAU Symp. 9, URSI Symp. 1), ed. by
+R.N. Bracewell"
+(1959) Stanford: Stanford Univ. Press
+
+B22    Christensen, R.,
+"World Developments in Radio Astronomy"
+(1959) Santa Barbara: GE
+
+A57    Elwert, G,
+"Die 21 cm-Linie des Wasserstoffs und die Spiralstruktur des
+Milchstrassenssystems = The 21 cm hydrogen line and galactic spiral
+structure"
+(1959) Ergebn. Exakt. Naturwiss. 32: 1-78
+
+A234   Kerr, F.J., Hindman, J.V., Gum, C.S.,
+"A 21 -cm survey of the southern Milky Way"
+(1959) MNRAS 119: 297-308
+
+B9     Kokurin, Yu.L.,
+"Radioastronomiya: annotirovannyi, bibliograficheskii ukazatel
+otechestvennoi i inostrannoi literatury, 1932-1958 gg. = Radioastronomy:
+annotated bibliographical index of native and foreign literature,
+1932-1958, ed. by Yu.L. Kokurin"
+(1960) Moscow: Akad. nauk SSSR
+
+A235   Rougoor, G.W., Oort, J.H.,
+"Distribution and motion of interstellar hydrogen in the Galactic System
+with particular reference to the region within 3 kpc of the center"
+(1960) Proc. NAS 46: 1-13
+
+
+A133   Ryle, M., Hewish, A.,
+"The synthesis of large radio telescopes"
+(1960) MNRAS 120: 220-230
+
+A134   Shklovsky, I.S.,
+"Radiogalaktiki"
+(1960) Astr. Zh. 37: 945-960
+
+B21    Shklovsky, I.S.,
+"Cosmic Radio Waves"
+(1960) Cambridge: Harvard Univ. Press
+
+B6     Smith, F.G.,
+"Radio Astronomy"
+(1960) New York: McGraw-Hill
+
+B27    Tuve, M.A.,
+"Symposium on Radio Astronomy, delivered before the autumn meeting of
+the National Academy of Sciences, Indiana University, Bloomington,
+November 17, 1959, Chairman, Merle A. Tuve"
+(1960) Proc. NAS special reprint
+
+A245   Bracewell, R.N., Swarup, G.,
+"The Stanford microwave spectroheliograph antenna, a microsteradian
+pencil beam interferometer"
+(1961) IRE Trans. Ant. Prop. AP-9: 23-30
+
+A135   Burbidge, G.R.,
+"Galactic explosions as sources of radio emission"
+(1961) Nature 190: 1053-1056
+
+A136   Hazard, C.,
+"Lunar occultation of a radio source"
+(1961) Nature 191: 58
+
+B5     McKinley, D.W.,
+"Meteor Science and Engineering"
+(1961) New York: McGraw-Hill
+
+A134   Shklovsky, I.S.,
+"Radio galaxies"
+(1961) Sov. Astron. AJ 4: 885-896
+
+A242   Swarup, G., Yang, K.S.,
+"Phase adjustment of large antennas"
+(1961) IRE Trans. Ant. Prop. AP-9: 75-81
+
+A180   Ryle, M.,
+"The new Cambridge radio telescope"
+(1962) Nature 194: 517-518
+
+A137   Scheuer, P.A.G.,
+"On the use of lunar occultations for investigating the angular
+structure of radio sources"
+(1962) Aust. J. Phys. 15: 333-343
+
+A55    Skobel'tsyn, D.V.,
+"Radioastronomiia [special issue]"
+(1962) Trudy Fiz. Inst. im. P.N. Lebedeva 17: 1-190
+
+A161   Whitford, A.E.,
+"Radio astronomy section - Whitford Committee report (preliminary
+edition)"
+(1962) NRAO internal rep.
+
+A254   Blum, E.J., Boischot, A., Lequeux, J.,
+"Radio astronomy in France"
+(1963) Proc. IRE Australia 24: 208-213
+
+A259   Bowen, E.G., Minnett, H.C.,
+"The Australian 210 -foot radio telescope"
+(1963) Proc. IRE Australia 24: 98-105
+
+A138   Burbidge, G.R., Burbidge, E.M., Sandage, A.,
+"Evidence for the occurrence of violent events in the nuclei of
+galaxies"
+(1963) Rev. Mod. Phys. 35: 947-972
+
+A139   Conway, R.G., Kellermann, K.I., Long, R.J.,
+"The radio frequency spectra of discrete radio sources"
+(1963) MNRAS 125: 261-284
+
+A256   Davies, R.D.,
+"Radio astronomy at Jodrell Bank"
+(1963) Proc. IRE Australia 24: 231-236
+
+A140   Greenstein, J.L., Matthews, T.A.,
+"Red-shift of the unusual radio source 3C 48"
+(1963) Nature 197: 1041-1042
+
+A258   Hatanaka, T.,
+"Radio astronomy in Japan"
+(1963) Proc. IRE Australia 24: 243-251
+
+A260   Hewish, A.,
+"The realisation of giant radio telescopes by synthesis techniques"
+(1963) Proc. IRE Australia 24: 225-231
+
+A257   Kalachov, P.D.,
+"Some radio telescopes in the U.S.S.R."
+(1963) Proc. IRE Australia 24: 237-242
+
+A58    Nupen, W.,
+"Bibliography on atmospheric aspects of radio astronomy, including
+selected references to related fields"
+(1963) NBS TN 171: 1-385
+
+A253   Pawsey, J.L.,
+"Radio astronomy issue, ed. by J.L. Pawsey"
+(1963) Proc. IRE Australia 24: 93-255
+
+A141   Schmidt, M.,
+"3C 273: a star-like object with large red-shift"
+(1963) Nature 197: 1040
+
+B16    Steinberg, J.L., Lequeux, J.,
+"Radio Astronomy"
+(1963) New York: McGraw-Hill
+
+A143   Weinreb, S., Barrett, A.H., Meeks, M.L., Henry, J.C.,
+"Radio observations of OH in the interstellar medium"
+(1963) Nature 200: 829-831
+
+A255   Westerhout, G.,
+"Current radio astronomical research in the Netherlands"
+(1963) Proc. IRE Australia 24: 214-218
+
+A144   Bolton, J.G., Van Damme, K.J., Gardner, F.F., Robinson, B.J.,
+"Observation of OH absorption lines in the radio spectrum of the
+galactic centre"
+(1964) Nature 201: 279
+
+A145   Hewish, A., Scott, P.F., Wills, D.,
+"Interplanetary scintillation of small diameter radio sources"
+(1964) Nature 203: 1214-1217
+
+A252   Kraus, J.D.,
+"Radio and radar astronomy [special issue], ed. by J.D.  Kraus"
+(1964) IEEE Trans. Mil. Elec. MIL- 8: 143-301
+
+A56    Kraus, J.D.,
+"Recent advances in radio astronomy"
+(1964) IEEE Spectrum 1: 78-95 (Sept.)
+
+B7     Smith, F.G., Carr, T.D.,
+"Radio Exploration of the Planetary System"
+(1964) New York: Van Nostrand
+
+B11    Zheleznyakov, V.V.,
+"Radioizluchenie Sclntsa i Planet = Radio Emission of the Sun and
+planets"
+(1964) Moscow: Nauka
+
+A146   Dicke, R.H., Peebles, P.J.E., Roll, P.G., Wilkinson, D.T.,
+"Cosmic black-body radiation"
+(1965) Astrophys. J. 142: 414-419
+
+A182   Friis, H.T.,
+"Karl Jansky: his career at Bell Telephone Laboratories"
+(1965) Science 149: 841-842
+
+B12    Gt. Brit., S.R.C.,
+"Radio astronomy: report of the Committee ... under the chairmanship of
+Lord Fleck, 1961-1964"
+(1965) London: HMSO
+
+A94    Penzias, A.A., Wilson, R.W.,
+"A measurement of excess antenna temperature at 4080 Mc/s"
+(1965) Astrophys. J. 142: 419-421
+
+A246   Ryle, M., Elsmore, B., Neville, A.C.,
+"High-resolution observations of the radio sources in Cygnus and
+Cassiopeia"
+(1965) Nature 205: 1259-1262
+
+B13    Kraus, J.D.,
+"Radio Astronomy"
+(1966) New York: McGraw-Hill
+
+A148   Longair, M.S.,
+"On the interpretation of radio source counts"
+(1966) MNRAS 133: 421-436
+
+A149   Roll, P.G., Wilkinson, D.T.,
+"Cosmic background radiation at 3.2 cm--support for cosmic black-body
+radiation"
+(1966) Phys. Rev. Lett. 16: 405-407
+
+A4     Ze-zong, X., Shu-ren, B.,
+"Ancient novae and supernovae recorded in the annals of China, Korea,
+and Japan and their significance in radio astronomy"
+(1966) Science 154: 597-603
+
+A244   Broten, N.W., Legg, T.H., Locke, J.L., McLeish, C.W., Richards,
+R.S., Chisholm, R.M., Gush, H.P., Yen, J.L., Galt, J.A.,
+"Long base line interferometry: a new technique"
+(1967) Science 156: 1592-1593
+
+
+A150   Gold, T.,
+"Rotating neutron stars as the origin of the pulsating radio sources"
+(1968) Nature 218: 731-732
+
+A151   Hewish, A., Bell, S.J., Pilkington, J.D., Scott, P.F., Collins,
+R.A.,
+"Observation of a rapidly pulsating radio source"
+(1968) Nature 217: 709-713
+
+A152   Large, M.I., Vaughan, A.E., Mills, B.Y.,
+"A pulsar supernova association?"
+(1968) Nature 220: 340-341
+
+B4     Lovell, B.,
+"The Story of Jodrell Bank"
+(1968) New York: Harper & Row
+
+A153   Lyne, A.G., Smith, F.G.,
+"Linear polarization in pulsating radio sources"
+(1968) Nature 218: 124-126
+
+A154   Staelin, D.H., Reifenstein, E.C.,
+"Pulsating radio sources near the Crab Nebula"
+(1968) Science 162: 1481-1483
+
+A262   Swenson, G.W. Jr., Mathur, N.C.,
+"The interferometer in radio astronomy"
+(1968) Proc. IEEE 56: 2114-2130
+
+A155   Cocke, W.J., Disney, M.J., Taylor, D.J.,
+"Discovery of optical signals from the pulsar NP 0532"
+(1969) Nature 221: 525-527
+
+A160   Smith, F.G.,
+"The pulsars"
+(1970) Telecommun. J. 37: 750-752
+
+A3     Westerhout, G.,
+"The early history of radio astronomy"
+(1972) Annals N.Y. Acad. Sci. 198: 211-218
+
+A261   Findlay, J.F.,
+"Radio and radar astronomy [special issue], ed. by J.F. Findlay"
+(1973). Proc. IEEE 61: 1172-1363
+
+B2     Hey, J.S.,
+"The Evolution of Radio Astronomy"
+(1973) New York: Science History Publ.
+
+B17    Lovell, B.,
+"Out of the Zenith"
+(1973) Oxford: University Press
+
+B25    Brown, R.H.,
+"The Intensity Interferometry - its application to astronomy"
+(1974) London: Taylor & Francis
+
+A164   Poppel, W.,
+"Radioastronomia en linea de 21cm del hidrogeno interstelar =
+Radioastronomy in the 21 cm line of interstellar hydrogen"
+(1974) Rev. Astron. (Argentina) 46: 23-32
+
+B1     Edge, D., Mulkay, M.J.,
+"Astronomy Transformed: The Emergence of Radio Astronomy in Britain"
+(1976) New York: Wiley
+
+B3     Kraus, J.,
+"Big Ear"
+(1976) Columbus: Cygnus Bks
+
+A1     Edge, D.,
+"The sociology of innovation in modern astronomy"
+(1977) QJRAS 18: 326-339
+
+A176   Lovell, B.,
+"The effects of defence science on the advance of astronomy"
+(1977) J. Hist. Astron. 8: 151-173
+
+A159   Sullivan, W.T. III,
+"A new look at Karl Jansky's original data"
+(1978) Sky Telesc. 56: 101-105
+
+A165   Aaronson, S.,
+"Radio astronomy and the big bang"
+(1979) Bell lab. Rec. 57: 4-11
+
+A157   Hagen, J.P.,
+"The CCIR and radio astronomy"
+(1979) ICC `79 09.4: 1-4
+
+A156   Haines, S.A.,
+"The beginnings of Canadian radio astronomy"
+(1979) Sci. Dimensions (Canada) 11: 18-20 (no. 3)
+
+A73    Jansky, C.M. Jr.,
+"My brother Karl Jansky and his discovery of radio waves from beyond the
+earth"
+(1979) Cosmic Search  1: 12-16 (fall)
+
+A158   Wilson, R.W.,
+"The cosmic microwave background"
+(1979) Rev. Mod. Phys. 51: 435-445
+
+A74    Kraus, J.,
+"The first 50 years of radio astronomy, part 1: Karl Jansky and his
+discovery of radio waves from our galaxy"
+(1981) Cosmic Search 3: 8-12 (fall)
+
+A86    Baars, J.W.M.,
+"Millimeter-Radioastronomie: ein neues Fenster in den Weltraum"
+(1982) Sterne 58: 211-220
+
+A297   Backer, D.C., Kulkarni, S.R., Heiles, C., Davis, M.M.,
+Goss, W.M.,
+"A millisecond pulsar"
+(1982) Nature 300: 615-618
+
+A83    Guertler, J.,
+"Fuenfzig Jahre Radioastronomie"
+(1982) Sterne 58: 195-196
+
+A75    Kraus, J.,
+"The first 50 years of radio astronomy, part 2: Grote Reber and the
+first radio maps of the sky"
+(1982) Cosmic Search 4: 14-19 (first half)
+
+A87    Krueger, A.,
+"Erforschung der Sonne mit Mitteln der Radioastronomie"
+(1982) Sterne 58: 221-231
+
+A84    Lovell, B.,
+"Die fruehe Geschichte der Radiosternwarte Jodrell Bank"
+(1982) Sterne 58: 197-205
+
+A85    Penzias, A.A.,
+"Die Entdeckung der Mikrowellenreststrahlung"
+(1982) Sterne 58: 206-210
+
+A88    Preuss, E.,
+"Zu Stand und Entwicklung der Radiointerferometrie in der Astronomie"
+(1982) Sterne 58: 232-251
+
+A251   Sullivan, W.T. III,
+"Radio astronomy's golden anniversary"
+(1982) Sky Telesc. 64: 544-550
+
+B8     Sullivan, W.T. III,
+"Classics in Radio Astronomy"
+(1982) Dordrecht: D. Reidel
+
+A239   Thaddeus, P.,
+"Facilities for US radioastronomy"
+(1982) Phys. Today 35: 36-42 (Nov.)
+
+A82    Vallee, J.P.,
+"Cinquante annees de radioastronomie: progres, decouvertes et avenir =
+fifty years of radioastronomy:  progress, discoveries and prospects"
+(1982) JRASC 76: 1-18
+
+A298   Kraus, J.,
+"The first 50 years of radio astronomy, part 3: Post-war radio
+astronomy"
+(1983) AstroSearch 1: 5-6
+

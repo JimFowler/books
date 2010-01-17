@@ -1,3 +1,12 @@
+2010-01-03  Jim Fowler  <jrf@Biblion>
+
+	* Docs/book_notes.tex: added notes on "Scientific Literature".
+
+2009-08-22  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Makefile: Added target "addprop" to add keyword
+	properties to all pages.
+
 2009-07-26  Jim Fowler  <jrf@Biblion>
 
 	* Docs/Quotes.tex: started file of quotes found in 

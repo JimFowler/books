@@ -1,4 +1,9 @@
 <h3>History of Astronomy</h3>
-    19th Century Astronomy...
-<br>20th Century Astronomy...
+<a href="18-centy.htm">18th Century (NYSkies)</a><br>
+<a href="http://www.public.asu.edu/~warrenve/s18_ast.html">
+   18th Century (ASU)</a><br>
+<a href="http://www.public.asu.edu/~warrenve/s19_ast.html">
+   19th Century (ASU)</a><br>
+<a href="http://www.public.asu.edu/~warrenve/s20_ast.html">
+   20th Century (ASU)</a>
 <br>More...

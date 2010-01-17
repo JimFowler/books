@@ -1,9 +1,10 @@
 <h3>Collecting</h3>
 <a href="http://www.booksourcemagazine.com/">Book Source Magazine</a>
 <br><a href="http://www.finebooksmagazine.com/">Fine Books and Collecting</a>
-<br><a href="http://www.rarebookreviewcom/">Rare Book Review</a>
+<!-- <br><a href="http://www.rarebookreviewcom/">Rare Book Review</a> -->
 <br><a href="http://www.abebooks/">Advanced Book Exchange</a>
 <br><a href="http://www.biblio.com/">Biblio</a>
 <br><a href="http://www.alibris.com/">Alibris</a>
+<br><a href="http://www.ilab.org/index.php">Int. Leag. Antiq. Bksellers</a>
 <br><a href="http://www.addallcom/">AddAll Comparision</a>
 <br>More...

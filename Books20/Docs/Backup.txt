@@ -2,6 +2,17 @@
   Important files and directories to save in backups
 
    /home/jrf
+	Documents
+	Music
+	Pictures
+	private_html
+	public_html
+	Src
    /home/svn
-   /var/lib/mysql
+   /var/lib/mysql  (must be accessed as root)
+
+
+   filename biblion_yyyymmdd.tgz
+
+   use ftp to transfer to 192.168.1.11/backups
 

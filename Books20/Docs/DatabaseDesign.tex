@@ -103,32 +103,164 @@ book, and change the status of a book from prospective to included.
 
 \subsection{Database Tables}
 \subsubsection{The Book Table}
-  The Book table contains the basic publishing information about a
-book.  Such items as title and subtitle, copyright year, the printing
-edition, the publisher and the location of publication.  For books
-that have one, the ISBN number is included.  ISBN number were
-introduced in ???? and became manditory in ????.  The bibliographic
-description should include the size of the book in millimeters, page
-counts, whether the book is illustrated, figure count, table count and
-index count.  This information should also include information about
-the binding and about the dust jacket if the book was issued with one.
+
+The Book table contains the basic publishing information about a book
+as well as bibliographic information and the project information. Such
+items as title and subtitle, copyright year, the printing and edition,
+the publisher and the location of publication. Note that author
+information is handled in the BookAuthor table. For books that have
+one, the ISBN number is included.  ISBN numbers were introduced in
+1970 as 10 digit number but became thirteen digits in 2007.  A
+checksum calculation to verify the validity of the ISBN should be
+included in the entry form. The bibliographic description should
+include the size of the book in millimeters, page counts, whether the
+book is illustrated, figure count, table count and index count.  This
+information should also include information about the binding and
+about the dust jacket if the book was issued with one. Project
+information will include a flag stating that this item is included in
+the book as well as flags indicating whether the book is a sub item of
+another book, e.g.\ a second edition or part of a series.
+
+\begin{itemize}
+\item Book Table
+\begin{itemize}
+ \item Book ID
+ \item Publishing information
+ \begin{itemize}
+  \item Title
+  \item sub-Title
+  \item Copyright Year
+  \item City of Publication
+  \item Publisher ID
+  \item Edition
+  \item Printing
+  \item ISBN
+ \end{itemize}
+ \item Bibliographic information
+ \begin{itemize}
+  \item Height in mm
+  \item Width in mm
+  \item Page counts
+  \item Figure, table, index, illustration count
+  \item Binding
+  \item Dust jacket if issued
+ \end{itemize}
+ \item Project information
+ \begin{itemize}
+  \item Keywords
+  \item Flag: include in Books20
+  \item Parent Book if any
+  \item Links to other bibliography lists
+  \item Link to online book (google, amazon, etc.)
+  \item Comment about why this book is important
+ \end{itemize}
+\end{itemize}
+\end{itemize}
+
 
 \subsubsection{The Author Table}
 
+The Author table contains as complete a set of information about the
+authors of the books as I can obtain.  At a minimum it contains an
+author's last name. But may include first name, any middle names,
+birth and death dates, as well as any biographical information about
+the author. The database may contain a separate section with comments
+about an author that will be included in the Books20 publication. Note
+that some books may not have a published author so we need to account
+for a null author. We also include links or references to other
+biographical lists such as the Biographical Encyclopedia of Astronomer
+or the Dictionary of Scientific Biography.  Consider importing the
+Author list from the collection database as a starting point.
+
+\begin{itemize}
+\item Author Table
+  \begin{itemize}
+  \item Author ID
+  \item Last name
+  \item First name
+  \item Middle names
+  \item Born
+  \item Died
+  \item Biographical comments
+  \item Links to other author lists (BEA; DSB; etc.)
+  \item Books20 comments
+  \item Flag: include comment
+  \end{itemize}
+\end{itemize}
+
 \subsubsection{The Publisher Table}
+
+The Publisher table contains information about the publishers of the
+books.  The important information is the publisher's name and address
+but any information about prior names or dates that the publisher
+existed would be important. Finally we include any URLs as well as a
+comment section that might be included in the Books20 publication.\
+
+\begin{itemize}
+\item Publisher Table
+  \begin{itemize}
+  \item Publsher ID
+  \item Publisher Name
+  \item Address
+    \begin{itemize}
+    \item Street 1
+    \item Street 2
+    \item City
+    \item State or Province
+    \item Country
+    \item Postal Code
+    \end{itemize}
+  \item URL
+  \item Use to be 1 (Publisher ID)
+  \item Use to be 2 (Publisher ID)
+  \item Use to be 3 (Publisher ID)
+  \item Comment
+  \item Books20 comment
+  \item Flag: include comment?
+  \end{itemize}
+\end{itemize}
 
 \subsubsection{The BookAuthor Table}
 
+The BookAuthor table contains the links between books and authors.
+This is neccesary because Book to Author is a many-to-many
+relationship.  That is, one book many have many authors and one author
+may write many books.  We need to state what order this author is for
+this particular book and how this author's name was written on the
+title page of this book. This may be different for the same author in
+different books. We also include a flag is this link describes an
+editor rather than an author. Finally, if we wish to add a comment
+about that particular author with regard to this particular book we
+include a comment section to be included in the Books20 publication.
 
+\begin{itemize}
+\item BookAuthor Table
+  \begin{itemize}
+  \item Book ID
+  \item Author ID
+  \item Priority (first, second, third author ...)
+  \item As Written
+  \item Editor?
+  \item Books20 comments
+  \item Flag: include comment?
+  \end{itemize}
+\end{itemize}
 %
 % Software
 %
 \section{Supporting Software}
-The database software is MySql (www.mysql.com) with the interface written
-in PhP (www.php.net).
+The database software is MySql v5.1 (www.mysql.com) with the interface written
+in PhP v 5.2.10 (www.php.net).
 
 MySql issues: security! internationalization, localization (see the MySql
 developer web site)
+
+Documentation sofware is \TeX/\LaTeX, issues define the format of the manuscript.
+This can be done late in the process.
+
+Version control software is Subversion v1.6.5.
+
+Blogging software is Apache Roller under Apache Tomcat 6.
 
 %
 % The End
@@ -136,10 +268,5 @@ developer web site)
 \end{document}
 
 %%
-%%   $Log$
-%%
-%%
-%%   $History$
-%%
-%%
+%% end of DatabaseDesign.tex
 %%

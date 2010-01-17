@@ -25,6 +25,10 @@
           jrf  34Books20
 
   Subversion
-          svn  sv34sv34n
+          svn  sv34nsv34n
     svn users
           jrf  letmein
+
+  Repository
+          jrf  bug3lite
+
