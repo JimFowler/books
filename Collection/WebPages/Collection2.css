@@ -1,0 +1,21 @@
+<!--
+
+  Collection.css
+
+  The style sheet for the webpages for my Collection of books
+
+  The last known changes were checked in by $Author$
+  in revision $LastChangedRevision$
+  on $Date$
+--> 
+
+td.Title{
+    font-style: italic;
+    font-weight: 100;
+}
+
+<?--
+
+  End of Collection.css
+
+-->

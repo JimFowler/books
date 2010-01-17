@@ -10,9 +10,10 @@
 --   mysql -u root -p
 --    mysql> source InitialSetup.sql
 --
---   $Log$
 --
---   $History$
+-- The last known changes were checked in by $Author$
+-- as revision $LastChangedRevision$
+-- on $Date$
 --
 --
 

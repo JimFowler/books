@@ -1,0 +1,76 @@
+<?php
+/*
+  AllBooks.php
+
+  The main web page for accessing my collection of books.
+
+  The last known changes were checked in by $Author$
+  in revision $LastChangedRevision$
+  on $Date$
+
+*/
+
+  require '/home/jrf/private_html/phpBooks.inc';
+
+  StartBookHtml();
+  StartBookHead( 'All Books in the Collection of JRF' );
+  StyleSheet( 'Collection.css' );
+  EndBookHead();
+  StartBookBody();
+
+  BooksTop( 'Books in My Collection' );
+
+
+  echo "<table>
+    <tr valign=\"Top\"><td>";
+
+  NavigationBar();
+
+  echo "</td><td><table class=\"Books\">
+         <tr><td><b>Title</b></td><td><b>Author</b></td><td><b>Copyright</b></td></tr>\n";
+
+/*
+ Ok, get the Books data
+*/
+  if ( !($link = mysql_connect( 'localhost', 'Reader', 'librarycard' )) ) {
+    echo 'Unable to connect to localhost as Reader';
+    EndBookBody();
+    EndBookHtml();
+    return;
+  }
+
+  if ( !mysql_select_db( 'Collection', $link ) ) {
+    echo 'Can not connect to the Collection database!';
+    EndBookBody();
+    EndBookHtml();
+    return;
+  }
+
+
+  $bookQuery = 'SELECT Books.BookId, Books.Title, Books.Copyright, Authors.LastName
+      FROM Books INNER JOIN
+             (Authors INNER JOIN BookAuthor ON Authors.AuthorId = BookAuthor.AuthorId)
+              ON Books.BookId = BookAuthor.BookId
+      WHERE (BookAuthor.Priority = 1)
+      ORDER BY Authors.LastName';
+
+  $books = mysql_query( $bookQuery );
+
+  mysql_close( $link );
+
+  while ($row = mysql_fetch_array( $books, MYSQL_BOTH )) {
+    echo "<tr><td colspan=\"3\"><hr></td></tr>\n";
+    echo "<tr><td>
+<form method=\"POST\" action=\"BookView.php\">
+<input type=\"hidden\" name=\"bookid\" value=\"$row[BookId]\"> 
+<input class=\"Title\" type=\"submit\" value=\"$row[Title]\" name=\"submit\">
+</form></td><td>$row[LastName]</td><td>$row[Copyright]</td></tr>\n";
+  }
+
+  echo "</td></tr></table></table>\n";
+
+
+  EndBookBody();
+  EndBookHtml();
+
+?>
