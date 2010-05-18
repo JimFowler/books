@@ -32,3 +32,8 @@
   Repository
           jrf  bug3lite
 
+#
+# Secret passwords for web accounts
+#
+
+www.scribd.com   jrf12 Books20jrf

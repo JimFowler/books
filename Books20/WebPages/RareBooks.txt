@@ -1,7 +1,7 @@
 <h3>Rare Books</h3>
 <a href="http://www.glaserrarebooks.com/">Edwin V. Glaser</a>
 <br><a href="http://weberrarebooks.com/">Jeff Weber Rare Books</a>
-<br><a href="http://antiquarianscientist.com">Antiquarian Scientist</a>
+<br><a href="http://antiquarianscientist.com">Antiquarian Scientist</a> Broken
 <br><a href="http://www.strandbooks.com/">The Strand Bookstore</a>
 <br><a href="http://historyofscience.com/">History of Science</a>
 <br><a href="http://www.baumanrarebooks.com/">Bauman Rare Books</a>
