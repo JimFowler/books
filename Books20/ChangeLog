@@ -1,3 +1,8 @@
+2010-10-31  Jim Fowler  <jrf@Biblion>
+
+	* Commit files to svn.  It has been 18 months since the list
+	commit.  Need to do this every night that I make changes
+
 2010-05-21  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Makefile: Changed the location for the public pages
