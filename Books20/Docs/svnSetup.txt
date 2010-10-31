@@ -28,6 +28,12 @@ svn propset svn:keywords "Date Author Revision" *
           quits processing.  You will have to run the command again
 	  for those file after the directory.]
 
+#
+# Every day that I make changes
+#
+cd Books20
+svn commit
+
 
 #
 # Basic usage
@@ -37,12 +43,13 @@ svn propset svn:keywords "Date Author Revision" *
    svn update
 
 2. Make changes
-   svn add
+   svn add    # add svn:keywords also
    svn delete
    svn copy
    svn move
 
-3. Examine your chages
+3. Examine your changes
+   svn list
    svn status
    svn diff
 

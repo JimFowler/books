@@ -11,9 +11,18 @@
       <td width=250 height=250 valign="Top">
       	  <?php echo LoadPrivateFile( "20thCentury.txt")    ?> </td>
       <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "SociologyScience.txt") ?> </td>
+      	  <?php echo LoadPrivateFile( "Libraries.txt")    ?> </td>
       <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "Tools.txt")  ?> </td>
+      	  <?php echo LoadPrivateFile( "References.txt") ?> </td>
+    </tr>
+
+    <tr valign="Top">
+      <td width=250 height=250 valign="Top">
+      	  <?php echo LoadPrivateFile( "Collecting.txt") ?> </td>
+      <td width=250 height=250 valign="Top">
+      	  <?php echo LoadPrivateFile( "Resources.txt") ?> </td>
+      <td width=250 height=250 valign="Top">		  
+      	  <?php echo LoadPrivateFile( "RareBooks.txt") ?> </td>
     </tr>
 
     <tr valign="Top">
@@ -27,22 +36,13 @@
 
     <tr valign="Top">
       <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "Libraries.txt")    ?> </td>
-      <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "References.txt") ?> </td>
-      <td width=250 height=250 valign="Top">
       	  <?php echo LoadPrivateFile( "BooksOnLine.txt")  ?> </td>
+      <td width=250 height=250 valign="Top">
+      	  <?php echo LoadPrivateFile( "SociologyScience.txt") ?> </td>
+      <td width=250 height=250 valign="Top">
+      	  <?php echo LoadPrivateFile( "Tools.txt")  ?> </td>
     </tr>
 
-
-    <tr valign="Top">
-      <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "Collecting.txt") ?> </td>
-      <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "Resources.txt") ?> </td>
-      <td width=250 height=250 valign="Top">		  
-      	  <?php echo LoadPrivateFile( "RareBooks.txt") ?> </td>
-    </tr>
 
   </table>
  </body>

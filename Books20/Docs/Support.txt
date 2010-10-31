@@ -19,3 +19,4 @@
      mysql connector 3.1.14 -- mysql jave interface -- dev.mysql.com
      javamail 1.4.2 -- jave mail interface -- java.sun.com
      jaf 1.1.1 -- java activation engine -- java.sun.com
+  Jabraf 2.5  -- Jave program to deal with BibTeX databases -- Ubuntu

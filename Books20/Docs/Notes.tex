@@ -13,6 +13,14 @@
 %%   in any form or by any means, electronic, mechanical,
 %%   photocopying, recording, or otherwise, without prior written
 %%   permission of the author.
+%%
+%%
+%% The last known changes were checked in by $Author$
+%% as revision $LastChangedRevision$
+%% on $Date$
+%%
+%%
+
 %% 
 
 \documentclass{article}
@@ -29,17 +37,83 @@
 \date{copy of \today}
 \maketitle
 
+\section{Notes on Notes}
+
+{\bf 10/19/2010} Format for Note Taking
+
+Still can't quite make up my mind on how I want to take
+notes. Handwritten notes on paper has been my medium of choice for 30
+years now. However, since any writing I do will be on the computer
+electronics notes are advantageous.  So paper notes that I might take
+at times when my computer is not available will be transcribed into
+electronic form. This will be a nuisance as it means writing notes
+twice but it also means that notes are readable five years later.
+When a computer is available notes will be written directly to
+electronic form and if necessary, copied into this document.  By using
+\TeX\ the notes can be formatted neatly although one has a lot more
+flexibility with handwritten notes. On the other hand, with electronic
+notes I can change my mind about the note during the composition.
+Indeed, I changed by mind about the rules portion of this note; at
+first is was to be a paragraph but I quickly realized that it would be
+more readable as a list.
+
+I need to consolidate the note taking in some preferred format.  Right now
+I have paper notes as well as electronic notes on multiple computer
+and in multiple formats.
+
+My rules for taking notes:
+\begin{itemize}
+\item {\bf Always} include a date for the note. Put the date in bold face.
+\item If a note is about a book or from a book, include the title,
+  author and a citation from the master bibliography as well as
+  chapter and page reference. The master bibliography should include
+  Library of Congress and Dewey Decimal catalog numbers.
+\item Never change an electronic note after it has been written. This
+  includes misspellings. Changes may be made while composing notes but
+  not the next day. Instead make a dated addition to the note. We wish
+  to preserve the historical flow and avoid any {\it 1984} style of
+  rewriting history.
+\item Keep a paper copy. Scribble on it as necessary. Update this file.
+The paper copy of this file should aways include the date that it was
+processed from \TeX\ to PDF.
+\end{itemize}
+
+Some references that I have used for trying to find the best way to take
+notes.
+\begin{itemize}
+\item My thirty years of reading and note taking mostly with pen and  paper.
+\item Booth, W., et al.\ {\it The Craft of Research 3rd. ed.}
+  \cite{booth:2008}
+\item Cronon, William, {\it Learning to Do Historical Research}
+  http://williamcronon.net/researching/index.htm specifically the
+  section on note taking
+  http://williamcronon.net/researching/notetaking.htm
+  \cite{cronon:2008}
+\item Cantor and Schnieder, {\it How to Study History} \cite{cantor:1967}
+\end{itemize}
+
+
 %%\mainmatter
 
-\section{Astronomy}\
+\section{Notes about the History of Astronomy}\
 \input{18Cent}
 
-\section{Books}\
+\section{Note about Books}\
 \input{book_notes}
 
+\section{Notes about Bibliographies}\
+\input{biblio_notes}
+
+%\section{History of Reading}\
+%\input{hist_reading_notes}
+%
+%\section{Sociology of Science}\
+%\input{socsci_notes}
+
 %%\backmatter
+\vfil\eject
 
 \bibliographystyle{plain}
-\bibliography{BooksRead}
+\bibliography{MasterBib}
 
 \end{document}

@@ -3,10 +3,16 @@ Define questions to be asked of the MySQL database.
 <br>Define the MySQL database.
 <br>Define the appearance of the web interface to the database.
 <br>&nbsp&nbsp&nbsp&nbsp Use current books as practice.
-<br><font color="#888888">Done 11 July 2009 -- Set up subversion archive and begin checkins.</font>
 <br>Build a project structure with autoconf/automake.
-<br><font color="#888888">Done 30 Oct 2009 -- Define the backup process and get hardware. Do It!</font>
 <br>Get LaTeX book and determine style guidelines.
-<br>Gain at least a reading knowledge of German and read AJB.
+<br><font color="#888888"> Started 28 Sept 2010 -- Gain at least a reading knowledge of German and read AJB.</font>
+<br>
+<br>Add svn comments to web pages
+<br>Add svn tasks, mainly commit, to Makefiles
+<br>Should I update Docs/Support.txt for current versions?
 <br>
 <br>Oh yea! Actually research books.
+
+<br />
+<br><font color="#888888">Done 11 July 2009 -- Set up subversion archive and begin checkins.</font>
+<br><font color="#888888">Done 30 Oct 2009 -- Define the backup process and get hardware. Do It!</font>
