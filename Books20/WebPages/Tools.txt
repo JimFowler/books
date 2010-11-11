@@ -5,6 +5,6 @@
 <br><a href="http://www.perl.org/">Perl</a>
 <br><a href="http://www.apache.org/">Apache</a>
 <br><a href="http://roller.apache.org/">Roller</a>
-<br><a href="http://subversion.tigris.org/">Subversion</a>
+<br><a href="http://subversion.apache.org/">Subversion</a>
     <a href="./svn-book.pdf"> (the book)</a>
 <br>More...
