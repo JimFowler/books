@@ -4,7 +4,7 @@
 <br><a href="http://www.thebookcollector.co.uk/">The Book Collector</a>
 <br><a href="http://www.nicholasbasbanes.com/">Nicholas A. Basbanes</a>
 <!-- <br><a href="http://www.rarebookreviewcom/">Rare Book Review</a> -->
-<br><a href="http://www.abebooks/">Advanced Book Exchange</a>
+<br><a href="http://www.abebooks.com/">Advanced Book Exchange</a>
 <br><a href="http://www.biblio.com/">Biblio</a>
 <br><a href="http://www.alibris.com/">Alibris</a>
 <br><a href="http://www.ilab.org/index.php">Int. Leag. Antiq. Bksellers</a>

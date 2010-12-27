@@ -1,16 +1,21 @@
 
+  Build 'deweb' to strip html from text files
+
+  Design data structure for AJB/AAA entry/book count by section
+
   Test MySql/PHP with copy of current book collection
 
   Define mysql database
 
   Define appearance of web (php) forms
 
+  Build project structure with autoconf/automake?
+
+  Define backup process.
+
   done -- Setup apache server
 
   done -- Setup CVS|subversion archive
 
-  Build project structure with autoconf/automake?
-
   done -- Get Web pages in to directory structure
 
-  Define backup process.
