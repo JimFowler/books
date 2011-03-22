@@ -1,31 +1,45 @@
-<h3>Book Blogs</h3>
+<tr valign="Top">
+<td width=250 height=250 valign="Top">
+  <h3>Book Blogs</h3>
 
-<a href="http://www.bookpatrol.net/">Book Patrol</a>
-<br><a href="http://privatelibrary.typepad.com/the_private_library/">
+  <a href="http://www.bookpatrol.net/">Book Patrol</a>
+  <br><a href="http://privatelibrary.typepad.com/the_private_library/">
        Private Library</a>
-<br><a href="http://bookhuntersholiday.wordpress.com/">
+  <br><a href="http://bookhuntersholiday.wordpress.com/">
        Book Hunters Holiday</a>
-<br><a href="http://oakknollbooks.wordpress.com/">Oak Knoll Book Blog</a>
-<br><a href="http://booktwo.org/">Book Two</a>
-<br><br>
+  <br><a href="http://oakknollbooks.wordpress.com/">Oak Knoll Book Blog</a>
+  <br><a href="http://booktwo.org/">Book Two</a>
+</td>
 
 
-<h3>Tech Blogs</h3>
+<td width=250 height=250 valign="Top">
+  <h3>Tech Blogs</h3>
 
-<a href="http://techessence.info/">Tech Essence</a>
-<br><a href="http://thetechstatic.com/">The Tech Static</a>
-<br><br>
+  <a href="http://techessence.info/">Tech Essence</a>
+  <br><a href="http://thetechstatic.com/">The Tech Static</a>
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Library Blogs</h3>
+
+  <a href="http://www.libology.com?">Libology</a>
+  <br><a href="http://www.frbr.org/">FRBR Blog</a>
+  <br><a href="http://www.dlib.org/">D-Lib Magazine</a>
+  <br><a href="http://shelfcheck.blogspot.com/">Shelf Check</a>
+</td>
+</tr>
 
 
-<h3>Library Blogs</h3>
+<tr valign="Top">
 
-<a href="http://www.libology.com?">Libology</a>
-<br><a href="http://www.frbr.org/">FRBR Blog</a>
-<br><a href="http://www.dlib.org/">D-Lib Magazine</a>
+<td width=250 height=250 valign="Top">
+  <h3>Humanities Blogs</h3>
 
-<br><br>
-<h3>Humanities Blogs</h3>
+  <a href="http://www.dancohen.org/">Digital Humanities</a>
+</td>
 
-<a href="http://www.dancohen.org/">Dan Cohen Dig Humanities</a>
+<td>
+  <br><br>Soon to be more...
+</td>
+</tr>
 
-<br><br>Soon to be more...

@@ -6,14 +6,8 @@
  <body>
  <?php BooksTop( "Books20:<br>The Blog List" ) ?>
  <P>
- <table>
-    <tr valign="Top">
-      <td width=250 height=250 valign="Top">
-      	  <?php echo LoadPrivateFile( "BlogLists.txt")    ?> </td>
-    </tr>
-    </tr>
-
-
+  <table>
+      	  <?php echo LoadPrivateFile( "BlogLists.txt")    ?>
   </table>
  </body>
 </html>
