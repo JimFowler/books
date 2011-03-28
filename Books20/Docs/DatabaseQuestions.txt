@@ -1,0 +1,23 @@
+
+  Questions to asked the Books20 Database
+    21 Mar 2011 JRF
+
+1. What titles has X been an author|editor|participant on?
+    w/wo translations?
+    during which time period?
+
+2. What books has publisher Y put out?
+     over which time period?
+
+3. How many expressions/manifestation of work Z?
+     and what is the time history?
+
+4. Who were the major publishers? Book count.
+     over what time period?
+
+
+5. What don't I know about a work? What fields are empty?
+
+6. What categories are available for which years?
+
+7. What works by categories-year?
