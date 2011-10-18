@@ -2,6 +2,6 @@
 <br><a href="http://www.ari.uni-heidelberg.de/aribib">AAA and AJB<a>
 <br><a href="http://adswww.harvard.edu/">Astrophysics Data System</a>
 <br><a href="http://cdsweb.u-strasbg.fr/CDS.html">Simbad</a>
-<br><a href="http://xxx.lanl.gov/"arXiv</a>
+<br><a href="http://xxx.lanl.gov/">arXiv</a>
 <br>More...
 
