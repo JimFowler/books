@@ -17,10 +17,17 @@
 #   in revision $LastChangedRevision$
 #   on $Date$
 #
+#   History:
+#     21 May 2010 installed Ubuntu 10.04 and my php pages would not load.
+#             The php5 distribution no longer allows php scripts in 
+#             user directories.  Move my public pages to /var/www/jrf.
+#
+#
 
 PRINTER = lp -Phome
 
-PUBLICWEB = /home/jrf/public_html
+#PUBLICWEB = /home/jrf/public_html
+PUBLICWEB = /var/www/jrf
 
 PRIVATEWEB = /home/jrf/private_html
 
