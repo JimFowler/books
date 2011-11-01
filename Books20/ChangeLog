@@ -1,3 +1,10 @@
+2011-10-20  Jim Fowler  <jrf@Biblion>
+
+	* Git: converted version control from svn to git. 'Master'
+	repository will be in biblion:/home/git/books with distributed
+	versions on biblion:/home/jrf and on my Mac Book. Just need to
+	remember to push/pull frequently.
+
 2011-08-02  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/BooksOnLine.txt: Added www.worldlibrary.net,
