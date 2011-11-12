@@ -1,0 +1,79 @@
+#
+# git commands used in Books20
+#
+#
+#
+#
+#
+#
+#
+
+#
+# create initial archive
+#
+
+sudu adduser --home /home/git --shell /bin/bash git
+sudo passwd git (gi34tgi34t)
+
+# import the existing svn projects into git
+login as git
+  git svn clone file:///home/svn/books -s
+
+#
+# checkout to a local git repository
+#
+login as jrf
+
+  # create .gitconfig file
+[user]
+        name = Jim Fowler
+        email = jrf12@mac.com
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+
+[core]
+        editor = /usr/bin/emacs
+
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        pushit = push origin HEAD
+        plo = pull origin
+        pso = push origin
+
+  # get local copy of repository
+  git clone file:///home/git/books
+
+
+#
+# Basic usage
+#
+
+1. Stage local changes
+   git add .|file
+
+2. Commit changes to repository
+   git commit
+
+3. Push changes to origin # this doesn't work yet
+   git push
+   git push origin master
+
+   or # this does work
+   su - git
+   git pull file:///home/jrf/Documents/books
+
+4. Examine changes
+   git status
+   git diff
+
+5. Get other changes from origin
+   git pull [repository] [branch]
+
+   or
+   git fetch [repository] [branch]
+   git merge
