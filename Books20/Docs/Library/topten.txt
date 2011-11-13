@@ -1,0 +1,119 @@
+The Top Ten Things Library Administrators Should Know About Technology
+By Roy Tennant - Posted on September 12th, 2009
+
+
+It's not insulting to say that those who run libraries tend not to
+know all that much about technology. A very different set of skills
+are needed to run an organization, and those skills do not often come
+packaged along with technical knowledge and experience. But
+administrators need to know some specific things about technology in
+order to do their jobs well, so here is my list:
+
+   1. Technology isn't as hard as you think it is. At least compared
+   to years ago it isn't. Any reasonably competent library
+   technologist can take a server from scratch to a fully-functioning
+   web site in a day. And with services like Amazon's Elastic Compute
+   Cloud (EC2), you don't even need hardware to get a site up and
+   going in no time. Quite literally, you can go from nothing to a
+   fully-functional LAMP stack (operating system, web server,
+   database, and programming language) as well as any of a number of
+   free content management systems (e.g., Drupal) in less than a
+   day. Sure, there are some things that are still quite time
+   consuming and complicated (e.g., writing software from scratch),
+   but many of the basic services are today quite easy and fast.
+
+   2. Technology gets easier all the time. I recall a time not all
+   that long ago when installing software on Unix was a royal
+   pain. You would need to download the release, then configure it,
+   then compile it. And if you hadn't already installed required
+   software dependencies (other applications this application needs),
+   then you'd have to do those first. Now installing applications and
+   any required dependencies can be as simple as a one-line command
+   (e.g., "sudo apt-get install X"). Plus, there are now projects like
+   Bitnami that have pre-packaged complete technology stacks that can
+   take you from scratch to fully-functional in a variety of
+   applications in no time at all.
+
+   3. Technology gets cheaper all the time. I rent a server from a
+   service provider, and have for years. Recently when I filled my
+   disk drive I realized that I could pay the same amount per month
+   but upgrade to a server with twice the RAM and more than twice the
+   amount of disk space. Just keep breathing and what you can buy for
+   the same amount of money gets better all the time.
+
+   4. Maximize the effectiveness of your most costly technology
+   investment -- your people. As technology itself falls in price per
+   unit, your staff is likely to get more expensive. So pay attention
+   to what is required to make the most effective use of them. This
+   means getting them the training and resources they need to do their
+   job well. I can't believe how many administrators skimp on hardware
+   and make their staff make do with inadequate amounts of RAM and
+   processors when they are the least expensive part of the
+   equation. Believe me, you do not want your most expensive resource
+   sitting around waiting for your least expensive resource to boot
+   up.
+
+   5. Iterate, don't perfect. Librarians seem to love perfection. We
+   don't want to put any technology out for the public to use until we
+   think it is perfect. Well, we need to get over ourselves. Savvy
+   tech companies know the path to success is to release early and
+   iterate often. One of the major benefits of this is that your users
+   can provide early feedback on what they like and don't like,
+   thereby providing essential input into further development. Do not
+   be afraid of a "beta" or "prototype" label -- people are now
+   accustomed to such, and it can provide the necessary "cover" to
+   being less than perfect.
+
+   6. Be prepared to fail. The twin to our tendency toward perfection
+   is our fear of failure. But just like the pursuit of perfection is
+   the enemy of progress, so is our fear of failure. Innovative
+   organizations know that they will throw many things against the
+   wall and only some will stick. But you don't usually know ahead of
+   time which ones they will be, so you need to experiment, try things
+   out, and see what works. This means you must be prepared for some
+   experiments to fail. Just learn what you can and move on.
+
+   7. Be prepared to succeed. Hardly any technology success can be
+   truly successful without a set of associated non-technology efforts
+   to support it. Full administrative support that is communicated
+   throughout the organization is essential. Publicity is often key,
+   to alert your user community to a new web site or tool. Don't make
+   the mistake of implementing a technology well but fail to get it
+   out the door properly.
+
+   8. Never underestimate the power of a prototype. Prototypes are
+   simple implementations of a new site or service that can help
+   demonstrate what a fully-developed site or service would be
+   like. Since many of us find it difficult to imagine a new site or
+   service from a text description, prototypes can spark understanding
+   in a way that few things can. Also, they tend to be much easier and
+   faster to put together and can provide enough learning
+   opportunities so that if you decide to support full development,
+   the result will be more effective than it would have been
+   otherwise.
+
+   9. A major part of good technology implementation is good project
+   management. Many technology projects are not as simple as just
+   installing an application -- often the process is a long and
+   complicated one that requires developing an implementation plan, a
+   schedule, and coordinating with other affected individuals and
+   departments. Therefore, many technology projects require good
+   project management to be successful. Keep in mind that your best
+   technologist may not be your best project manager -- this is why
+   using teams is often the best implementation strategy for anything
+   beyond minor projects.
+
+   10. The single biggest threat to any technology project is
+   political in nature. In the end, technology is the easy
+   part. What's difficult is the people part. That's why your role, as
+   library administrator, is the single most important role in any
+   technology implementation. Are you willing to throw your political
+   support behind it? Are you willing to invest the resources required
+   to make it a success? Will you marshall the entire organization to
+   support, promote, and use this new site or service? If not, simply
+   don't bother. If yes, then welcome to what will likely be a
+   successful project.
+
+This is my list, and I welcome your comments on what would be on your
+list, or if you prefer, arguments about where I went wrong. Effective
+use of technology in libraries is too important to not get right.

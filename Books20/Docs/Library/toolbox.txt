@@ -1,0 +1,136 @@
+What's in my Librarian Toolbox?
+By Roy Tennant - Posted on September 21st, 2009
+
+I was recently asked by Blake Carver, of LIShost, to answer a few
+questions for an upcoming presentation he was making. I thought that
+my answer might be interesting to others, so I'm reposting it here. He
+asked me what is in my "toolbox" (online and offline) that helps me do
+the following things:
+
+1) Be more productive
+
+This is an interesting and tricky question. I can answer for myself,
+but in classic style I will have to say that "your mileage may vary"
+-- in fact, I'm fairly certain it will. But I will try to call out
+those things that are more broadly applicable.
+
+As someone who is not employed as a programmer, but who has needed
+enough technical skills to prototype and develop proof-of-concept
+services that can then be re-engineered in a production environment,
+I've found the following skills essential:
+
+    * Knowledge of a scripting language. I know Perl, but others may
+      suffice as well for some things. The think about Perl is that it
+      is very well suited to text processing, which is what you often
+      need to do with metadata records.  With tools like regular
+      expressions, substringing, splitting, and others, there really
+      is very little you can't do in processing piles of metadata or
+      virtually any text file (I've used these skills, for example, to
+      transform en masse all of the HTML files of a web site).
+
+    * Experience with text indexing software. In my case, I know
+      Swish-e quite well, and it has served me in good stead for over
+      15 years. I've used it continuously over that period, and it
+      still powers most of my web sites.  Lately I've been indexing
+      over 2 million MARC records with it and a search that returns
+      all of the records performs quite well.
+
+    * Facility with XML and XSLT. I'm really beginning to think that
+      with XML, XSLT, Swish-e and Perl there really is nothing I can't
+      do in libraries. As I mentioned above, I can create a usable
+      interface to 2 million MARC records using only these tools. The
+      one piece that I can't handle well with these tools is immediate
+      updating. For that, it is helpful to have...
+
+    * Knowledge of a decent database application. Most like this would
+      be MySQL, but it could just as easily be PostgreSQL or something
+      else. This provides real-time updating when such is required.
+
+    * XTML and CSS knowledge. As we all know, pretty much everything
+      is delivered through the web, and this is the mechanism required
+      to do so. CSS is incredibly powerful when joined up with
+      well-structured XHTML. Once you learn it, you will NEVER go
+      back.
+
+Skills that are more generally applicable include:
+
+    * The ability to skim and summarize. Reading a lot of professional
+      literature, whether in journals or blogs, is required these days
+      to keep up.  You can cover a lot more ground if you don't read
+      every sentence, but scan instead, and uncover the juicy bits
+      without getting bogged down in the details.
+
+    * Finding and using filtering sources. I've long thought that
+      using filtering sources is an important tool to keep up -- so
+      much so that 19 years ago I invented one. Called "Current Cites"
+      it attempts to find the best of the information technology
+      literature and provide a one paragraph summary. A team of
+      volunteers has published it every month for nearly two
+      decades. There are others as well -- seek them out and use them.
+
+    * Learning as you breathe -- that is, all the time without even
+      thinking about it. We must learn constantly or else soon be
+      relegated to ignorance and apathy.
+
+    * Doing only what really must get done. Out of all the work facing
+      you, there is very likely work that really should get done and
+      work that isn't all that important. Cultivate a sense of what to
+      prioritize. If you focus on what absolutely needs to happen to
+      support your organization's mission and goals, by definition
+      that which does not get done doesn't need to.
+
+    * Understanding what is best done at the last minute. Not all
+      things require early and ongoing attention. I hardly ever do
+      presentations, for example, ahead of time. Last week I arrived
+      at a two-day conference where I was to provide the summation,
+      and put it together during the conference.  Another time I
+      arrived a conference with something prepared, but threw it away
+      after speaking to the organizers and created what they really
+      needed from scratch that night for the next morning. Any time
+      spent preparing the presentation I arrived with was wasted.
+
+    * Becoming skillful at a few key tools of the trade. Only you can
+      decide which tools these are for your given position, but
+      whatever they are, learn them well. I mentioned throwing
+      together a presentation while at a conference, and I had a
+      colleague who was looking over my shoulder remark that she
+      didn't know Powerpoint that well. She probably didn't need to,
+      but given as many presentations as I give in a year, I did. If I
+      were inefficient at doing it, I would be wasting a lot of time.
+
+2) Increases your visibility in the profession (presence)
+
+Writing and speaking has increased my presence in the profession
+immeasurably. Beginning (in my case) with a book in the Fall of 1992
+(Crossing the Internet Threshold with Anne Lipow and John Ober), I was
+able to parlay that into a variety of workshop and speaking
+opportunities.  Writing magazine and journal articles eventually gave
+me the confidence to pitch the idea for a column to Library Journal,
+where I wrote monthly for ten years.
+
+Being exposed in such a way brought speaking invitations, which when I
+performed adequately led to more. Now I blog as well, also for Library
+Journal, as well as for my day job and at TechEssence.info. I also use
+Twitter.
+
+3) Connects you to others when you need help/ideas
+
+I started the Web4Lib electronic discussion in 1994, and it has helped
+me tremendously over the years with information, assistance, advice
+and professional development. The community is very knowledgeable and
+I think it has actually fostered the learning and professional
+development of many librarians, thereby making the transition to the
+Web as smooth as possible given the tremendous upheaval it represented
+in how we do things.
+
+In recent years I've also appreciated the Code4Lib IRC chatroom, which
+is where about 40-50 library programmers and techies "congregate"
+online on a daily basis. Most people probably have not experienced a
+chatroom, so what it is is basically a group instant messaging system
+-- whenever someone in the room types something in, everyone else sees
+it. Although some days I hardly look at the window for the chatroom, I
+find it not only a comfort, as I've come to know many people there,
+but also as a place where I can as a quick question and often get an
+answer immediately.
+
+Roy Tennant's blog  •  Login or register to post comments  •  8119 reads
