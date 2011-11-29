@@ -5,4 +5,5 @@
 <br><a href="http://www.strandbooks.com/">The Strand Bookstore</a>
 <br><a href="http://historyofscience.com/">History of Science</a>
 <br><a href="http://www.baumanrarebooks.com/">Bauman Rare Books</a>
+<br><a href="Auction.php">Auction Houses...</a>
 <br>More...

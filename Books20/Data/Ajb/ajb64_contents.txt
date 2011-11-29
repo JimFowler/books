@@ -10,538 +10,538 @@ Astronomical bibliography AJB
 1964)*
 
 ------------------------------------------------------------------------
-Back to Guiding Page <./ajb064.htm> or Publications <../../index.htm> or
-Homepage <../../../index.eng.htm>
+Back to Guiding Page  or Publications  or
+Homepage 
 ------------------------------------------------------------------------
-	  	
-Contents 	  	
-	  	
-	  	Title, Preface, Contents, Introduction <#P>
-I 	  	History, Reports <#I>
-II 	  	Astronomical Literature, Border Fields <#II>
-III 	  	Instruments <#III>
-IV 	  	Positional Astronomy <#IV>
-V 	  	Theoretical Astronomy <#V>
-VI 	  	Theoretical Astrophysics <#VI>
-VII 	  	Sun <#VII>
-VIII 	  	Earth <#VIII>
-IX 	  	Planets, Satellites <#IX>
-X 	  	Interplanetary Objects <#X>
-XI 	  	Stars <#XI>
-XII 	  	Binaries, Multiple Stars <#XII>
-XIII 	  	Variable Stars <#XIII>
-XIV 	  	Diffuse Objects, Radio Sources, Cosmic Rays <#XIV>
-XV 	  	Stellar Systems <#XV>
-	  	Indexes <#IN>
-
-
-------------------------------------------------------------------------
-	  	
-	  	Title, Preface, Contents, Introduction 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-		I <fulltext/gif.c001.htm> 	  	Title <fulltext/gif.c001.htm>
-		III <fulltext/gif.c003.htm> 	  	Preface <fulltext/gif.c003.htm>
-		V <fulltext/gif.c005.htm> 	  	Contents <fulltext/gif.c005.htm>
-		IX <fulltext/gif.c009.htm> 	  	Abbreviations <fulltext/gif.c009.htm>
-		XII <fulltext/gif.c012.htm> 	  	Transliteration of the Russian
-Alphabet <fulltext/gif.c012.htm>
+,   , 
+Contents ,   , 
+,   , 
+,   , Title, Preface, Contents, Introduction 
+I ,   , History, Reports 
+II ,   , Astronomical Literature, Border Fields 
+III ,   , Instruments 
+IV ,   , Positional Astronomy 
+V ,   , Theoretical Astronomy 
+VI ,   , Theoretical Astrophysics 
+VII ,   , Sun 
+VIII ,   , Earth 
+IX ,   , Planets, Satellites 
+X ,   , Interplanetary Objects 
+XI ,   , Stars 
+XII ,   , Binaries, Multiple Stars 
+XIII ,   , Variable Stars 
+XIV ,   , Diffuse Objects, Radio Sources, Cosmic Rays 
+XV ,   , Stellar Systems 
+,   , Indexes 
 
 
 ------------------------------------------------------------------------
-	  	
-I 	  	History, Reports 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-1 		001 <fulltext/gif.p001.htm> 	  	Bibliography <fulltext/gif.p001.htm>
-1 	1 	001 <fulltext/gif.p001.htm> 	  	Bibliography, Sources
-<fulltext/gif.p001.htm>
-1 	2 	011 <fulltext/gif.p011.htm> 	  	Bibliography, Bibliographic
-Publications <fulltext/gif.p011.htm>
-1 	3 	013 <fulltext/gif.p013.htm> 	  	Bibliography, Reviews of
-Literature <fulltext/gif.p013.htm>
-2 		014 <fulltext/gif.p014.htm> 	  	History <fulltext/gif.p014.htm>
-3 		017 <fulltext/gif.p017.htm> 	  	History, Biography
-<fulltext/gif.p017.htm>
-3 	1 	020 <fulltext/gif.p020.htm> 	  	History, Biography, Galilei
-<fulltext/gif.p020.htm>
-3 	2 	022 <fulltext/gif.p022.htm> 	  	History, Biography, Obituaries
-<fulltext/gif.p022.htm>
-3 	3 	023 <fulltext/gif.p023.htm> 	  	History, Biography, Personal Notes
-<fulltext/gif.p023.htm>
-4 		024 <fulltext/gif.p024.htm> 	  	History, Reports, Observatories,
-Institutes <fulltext/gif.p024.htm>
-5 		051 <fulltext/gif.p051.htm> 	  	History, Reports, Planetaria,
-Exhibitions <fulltext/gif.p051.htm>
-6 		052 <fulltext/gif.p052.htm> 	  	History, Reports, Societies,
-Organisations <fulltext/gif.p052.htm>
-7 		060 <fulltext/gif.p060.htm> 	  	History, Reports, Meetings,
-Expeditions <fulltext/gif.p060.htm>
-8 		066 <fulltext/gif.p066.htm> 	  	History, Reports, International
-Cooperation, Present Situation, Progress <fulltext/gif.p066.htm>
-8 	1 	066 <fulltext/gif.p066.htm> 	  	History, Reports, International
-Cooperation <fulltext/gif.p066.htm>
-8 	2 	067 <fulltext/gif.p067.htm> 	  	History, Reports, Present
-Situation, Progress <fulltext/gif.p067.htm>
-8 	3 	068 <fulltext/gif.p068.htm> 	  	History, Reports, Astronomy in
-Various Countries <fulltext/gif.p068.htm>
-8 	4 	070 <fulltext/gif.p070.htm> 	  	History, Reports, Teaching in
-Astronomy <fulltext/gif.p070.htm>
+,   , 
+,   , Title, Preface, Contents, Introduction , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+, , I  ,   , Title 
+, , III  ,   , Preface 
+, , V  ,   , Contents 
+, , IX  ,   , Abbreviations 
+, , XII  ,   , Transliteration of the Russian
+Alphabet 
 
 
 ------------------------------------------------------------------------
-	  	
-II 	  	Astronomical Literature, Border Fields 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-11 		071 <fulltext/gif.p071.htm> 	  	Astronomical Literature, Astronomy
-and Astrophysics <fulltext/gif.p071.htm>
-12 		076 <fulltext/gif.p076.htm> 	  	Astronomical Literature,
-Collections <fulltext/gif.p076.htm>
-13 		077 <fulltext/gif.p077.htm> 	  	Astronomical Literature, Conference
-Proceedings <fulltext/gif.p077.htm>
-14 		080 <fulltext/gif.p080.htm> 	  	Astronomical Literature,
-Mathematics <fulltext/gif.p080.htm>
-15 		081 <fulltext/gif.p081.htm> 	  	Astronomical Literature,
-Automation, Techniques, Numerical Methods <fulltext/gif.p081.htm>
-16 		083 <fulltext/gif.p083.htm> 	  	Astronomical Literature, Physics
-<fulltext/gif.p083.htm>
-16 	1 	089 <fulltext/gif.p089.htm> 	  	Astronomical Literature, Physics,
-Plasma <fulltext/gif.p089.htm>
-16 	2 	090 <fulltext/gif.p090.htm> 	  	Astronomical Literature, Physics,
-Velocity of Light <fulltext/gif.p090.htm>
-17 		090 <fulltext/gif.p090.htm> 	  	Astronomical Literature,
-Astronautics <fulltext/gif.p090.htm>
-17 	1 	094 <fulltext/gif.p094.htm> 	  	Astronomical Literature,
-Astronautics, Spaceflight <fulltext/gif.p094.htm>
-17 	2 	095 <fulltext/gif.p095.htm> 	  	Astronomical Literature,
-Astronautics, Astrodynamics, Navigation <fulltext/gif.p095.htm>
-17 	3 	099 <fulltext/gif.p099.htm> 	  	Astronomical Literature,
-Astronautics, Lunar Probes, Lunar Satellites <fulltext/gif.p099.htm>
-17 	4 	100 <fulltext/gif.p100.htm> 	  	Astronomical Literature,
-Astronautics, Interplanetary Probes <fulltext/gif.p100.htm>
-18 		100 <fulltext/gif.p100.htm> 	  	Astronomical Literature, Artificial
-Earth Satellites, Space Probes <fulltext/gif.p100.htm>
-18 	1 	103 <fulltext/gif.p103.htm> 	  	Astronomical Literature,
+,   , 
+I ,   , History, Reports , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+1 , , 001  ,   , Bibliography 
+1 , 1 , 001  ,   , Bibliography, Sources
+
+1 , 2 , 011  ,   , Bibliography, Bibliographic
+Publications 
+1 , 3 , 013  ,   , Bibliography, Reviews of
+Literature 
+2 , , 014  ,   , History 
+3 , , 017  ,   , History, Biography
+
+3 , 1 , 020  ,   , History, Biography, Galilei
+
+3 , 2 , 022  ,   , History, Biography, Obituaries
+
+3 , 3 , 023  ,   , History, Biography, Personal Notes
+
+4 , , 024  ,   , History, Reports, Observatories,
+Institutes 
+5 , , 051  ,   , History, Reports, Planetaria,
+Exhibitions 
+6 , , 052  ,   , History, Reports, Societies,
+Organisations 
+7 , , 060  ,   , History, Reports, Meetings,
+Expeditions 
+8 , , 066  ,   , History, Reports, International
+Cooperation, Present Situation, Progress 
+8 , 1 , 066  ,   , History, Reports, International
+Cooperation 
+8 , 2 , 067  ,   , History, Reports, Present
+Situation, Progress 
+8 , 3 , 068  ,   , History, Reports, Astronomy in
+Various Countries 
+8 , 4 , 070  ,   , History, Reports, Teaching in
+Astronomy 
+
+
+------------------------------------------------------------------------
+,   , 
+II ,   , Astronomical Literature, Border Fields , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+11 , , 071  ,   , Astronomical Literature, Astronomy
+and Astrophysics 
+12 , , 076  ,   , Astronomical Literature,
+Collections 
+13 , , 077  ,   , Astronomical Literature, Conference
+Proceedings 
+14 , , 080  ,   , Astronomical Literature,
+Mathematics 
+15 , , 081  ,   , Astronomical Literature,
+Automation, Techniques, Numerical Methods 
+16 , , 083  ,   , Astronomical Literature, Physics
+
+16 , 1 , 089  ,   , Astronomical Literature, Physics,
+Plasma 
+16 , 2 , 090  ,   , Astronomical Literature, Physics,
+Velocity of Light 
+17 , , 090  ,   , Astronomical Literature,
+Astronautics 
+17 , 1 , 094  ,   , Astronomical Literature,
+Astronautics, Spaceflight 
+17 , 2 , 095  ,   , Astronomical Literature,
+Astronautics, Astrodynamics, Navigation 
+17 , 3 , 099  ,   , Astronomical Literature,
+Astronautics, Lunar Probes, Lunar Satellites 
+17 , 4 , 100  ,   , Astronomical Literature,
+Astronautics, Interplanetary Probes 
+18 , , 100  ,   , Astronomical Literature, Artificial
+Earth Satellites, Space Probes 
+18 , 1 , 103  ,   , Astronomical Literature,
 Artificial Earth Satellites, Space Probes, Observations, Methods of
-Observation <fulltext/gif.p103.htm>
-18 	2 	112 <fulltext/gif.p112.htm> 	  	Astronomical Literature,
+Observation 
+18 , 2 , 112  ,   , Astronomical Literature,
 Artificial Earth Satellites, Space Probes, Orbital Motion
-<fulltext/gif.p112.htm>
-18 	3 	119 <fulltext/gif.p119.htm> 	  	Astronomical Literature,
+
+18 , 3 , 119  ,   , Astronomical Literature,
 Artificial Earth Satellites, Space Probes, Individual Earth Satellites,
-Individual Space Probes <fulltext/gif.p119.htm>
-19 		124 <fulltext/gif.p124.htm> 	  	Astronomical Literature,
-Miscellanea <fulltext/gif.p124.htm>
-19 	1 	125 <fulltext/gif.p125.htm> 	  	Astronomical Literature,
-Miscellanea, Life in the Cosmos <fulltext/gif.p125.htm>
+Individual Space Probes 
+19 , , 124  ,   , Astronomical Literature,
+Miscellanea 
+19 , 1 , 125  ,   , Astronomical Literature,
+Miscellanea, Life in the Cosmos 
 
 
 ------------------------------------------------------------------------
-	  	
-III 	  	Instruments 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-21 		127 <fulltext/gif.p127.htm> 	  	Instruments, Optics, Techniques,
-Observational Experience <fulltext/gif.p127.htm>
-22 		133 <fulltext/gif.p133.htm> 	  	Astronomical Instruments
-<fulltext/gif.p133.htm>
-22 	1 	133 <fulltext/gif.p133.htm> 	  	Astronomical Instruments,
-Reflectors, Refractors <fulltext/gif.p133.htm>
-22 	2 	137 <fulltext/gif.p137.htm> 	  	Astronomical Instruments, Transit
-Instruments <fulltext/gif.p137.htm>
-22 	3 	139 <fulltext/gif.p139.htm> 	  	Astronomical Instruments, Solar
-Instruments <fulltext/gif.p139.htm>
-22 	4 	140 <fulltext/gif.p140.htm> 	  	Astronomical Instruments,
-Instruments for Satellite Observation <fulltext/gif.p140.htm>
-22 	5 	142 <fulltext/gif.p142.htm> 	  	Astronomical Instruments, Space
-Instrumentation <fulltext/gif.p142.htm>
-22 	6 	144 <fulltext/gif.p144.htm> 	  	Astronomical Instruments, Radio
-Telescopes <fulltext/gif.p144.htm>
-22 	7 	152 <fulltext/gif.p152.htm> 	  	Astronomical Instruments, Radio
-Communication to Extraterrestrial Civilizations <fulltext/gif.p152.htm>
-22 	8 	153 <fulltext/gif.p153.htm> 	  	Astronomical Instruments, Other
-Instruments <fulltext/gif.p153.htm>
-23 		154 <fulltext/gif.p154.htm> 	  	Auxiliary Instrumentation
-<fulltext/gif.p154.htm>
-23 	1 	154 <fulltext/gif.p154.htm> 	  	Instruments, Auxiliary
-Instrumentation for Astronomical Instruments <fulltext/gif.p154.htm>
-23 	2 	158 <fulltext/gif.p158.htm> 	  	Instruments, Auxiliary
-Instrumentation, Instruments for Data Reduction <fulltext/gif.p158.htm>
-23 	3 	159 <fulltext/gif.p159.htm> 	  	Instruments, Auxiliary
-Instrumentation, Image Tubes, TV Cameras <fulltext/gif.p159.htm>
-23 	4 	159 <fulltext/gif.p159.htm> 	  	Instruments, Utilization of Solar
-Energy <fulltext/gif.p159.htm>
-24 		160 <fulltext/gif.p160.htm> 	  	Instruments, Chronometry
-<fulltext/gif.p160.htm>
-24 	1 	166 <fulltext/gif.p166.htm> 	  	Instruments, Chronometry,
-Sundials <fulltext/gif.p166.htm>
-25 		166 <fulltext/gif.p166.htm> 	  	Instruments, Photography
-<fulltext/gif.p166.htm>
+,   , 
+III ,   , Instruments , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+21 , , 127  ,   , Instruments, Optics, Techniques,
+Observational Experience 
+22 , , 133  ,   , Astronomical Instruments
+
+22 , 1 , 133  ,   , Astronomical Instruments,
+Reflectors, Refractors 
+22 , 2 , 137  ,   , Astronomical Instruments, Transit
+Instruments 
+22 , 3 , 139  ,   , Astronomical Instruments, Solar
+Instruments 
+22 , 4 , 140  ,   , Astronomical Instruments,
+Instruments for Satellite Observation 
+22 , 5 , 142  ,   , Astronomical Instruments, Space
+Instrumentation 
+22 , 6 , 144  ,   , Astronomical Instruments, Radio
+Telescopes 
+22 , 7 , 152  ,   , Astronomical Instruments, Radio
+Communication to Extraterrestrial Civilizations 
+22 , 8 , 153  ,   , Astronomical Instruments, Other
+Instruments 
+23 , , 154  ,   , Auxiliary Instrumentation
+
+23 , 1 , 154  ,   , Instruments, Auxiliary
+Instrumentation for Astronomical Instruments 
+23 , 2 , 158  ,   , Instruments, Auxiliary
+Instrumentation, Instruments for Data Reduction 
+23 , 3 , 159  ,   , Instruments, Auxiliary
+Instrumentation, Image Tubes, TV Cameras 
+23 , 4 , 159  ,   , Instruments, Utilization of Solar
+Energy 
+24 , , 160  ,   , Instruments, Chronometry
+
+24 , 1 , 166  ,   , Instruments, Chronometry,
+Sundials 
+25 , , 166  ,   , Instruments, Photography
+
 
 
 ------------------------------------------------------------------------
-	  	
-IV 	  	Positional Astronomy 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-31 		169 <fulltext/gif.p169.htm> 	  	Positional Astronomy, Astrometry
-<fulltext/gif.p169.htm>
-32 		172 <fulltext/gif.p172.htm> 	  	Positional Astronomy, Star
-Catalogues, Star Charts <fulltext/gif.p172.htm>
-32 	1 	172 <fulltext/gif.p172.htm> 	  	Positional Astronomy, Star
-Catalogues <fulltext/gif.p172.htm>
-32 	2 	176 <fulltext/gif.p176.htm> 	  	Positional Astronomy, Star Charts
-<fulltext/gif.p176.htm>
-33 		177 <fulltext/gif.p177.htm> 	  	Positional Astronomy, Astronomical
-Constants, Fundamental System <fulltext/gif.p177.htm>
-34 		179 <fulltext/gif.p179.htm> 	  	Positional Astronomy, Yearbooks,
-Calendars, Almanacs, Ephemerides <fulltext/gif.p179.htm>
-35 		183 <fulltext/gif.p183.htm> 	  	Positional Astronomy, Eclipses,
-Chronology <fulltext/gif.p183.htm>
-36 		184 <fulltext/gif.p184.htm> 	  	Positional Astronomy, Astronomical
-Geodesy, Navigation <fulltext/gif.p184.htm>
-37 		191 <fulltext/gif.p191.htm> 	  	Positional Astronomy, Latitude
-Service, Polar Motion <fulltext/gif.p191.htm>
-38 		195 <fulltext/gif.p195.htm> 	  	Positional Astronomy, Earth
+,   , 
+IV ,   , Positional Astronomy , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+31 , , 169  ,   , Positional Astronomy, Astrometry
+
+32 , , 172  ,   , Positional Astronomy, Star
+Catalogues, Star Charts 
+32 , 1 , 172  ,   , Positional Astronomy, Star
+Catalogues 
+32 , 2 , 176  ,   , Positional Astronomy, Star Charts
+
+33 , , 177  ,   , Positional Astronomy, Astronomical
+Constants, Fundamental System 
+34 , , 179  ,   , Positional Astronomy, Yearbooks,
+Calendars, Almanacs, Ephemerides 
+35 , , 183  ,   , Positional Astronomy, Eclipses,
+Chronology 
+36 , , 184  ,   , Positional Astronomy, Astronomical
+Geodesy, Navigation 
+37 , , 191  ,   , Positional Astronomy, Latitude
+Service, Polar Motion 
+38 , , 195  ,   , Positional Astronomy, Earth
 Rotation, Measures of Time, Time Scales, Clocks, Time Determination
-<fulltext/gif.p195.htm>
+
 
 
 ------------------------------------------------------------------------
-	  	
-V 	  	Theoretical Astronomy 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-41 		197 <fulltext/gif.p197.htm> 	  	Theoretical Astronomy, Celestial
-Mechanics, Perturbation Theory <fulltext/gif.p197.htm>
-41 	1 	204 <fulltext/gif.p204.htm> 	  	Theoretical Astronomy, Celestial
+,   , 
+V ,   , Theoretical Astronomy , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+41 , , 197  ,   , Theoretical Astronomy, Celestial
+Mechanics, Perturbation Theory 
+41 , 1 , 204  ,   , Theoretical Astronomy, Celestial
 Mechanics, Perturbation Theory, Earth-Moon-Libration Points
-<fulltext/gif.p204.htm>
-42 		204 <fulltext/gif.p204.htm> 	  	Theoretical Astronomy, Orbit
-Determination of Planets and Comets <fulltext/gif.p204.htm>
-43 		205 <fulltext/gif.p205.htm> 	  	Theoretical Astronomy, Kinematics
+
+42 , , 204  ,   , Theoretical Astronomy, Orbit
+Determination of Planets and Comets 
+43 , , 205  ,   , Theoretical Astronomy, Kinematics
 and Dynamics of Stellar Systems, Star Clusters, Galaxies
-<fulltext/gif.p205.htm>
-44 		209 <fulltext/gif.p209.htm> 	  	Theoretical Astronomy, Cosmology,
-Relativity Theory <fulltext/gif.p209.htm>
-44 	1 	219 <fulltext/gif.p219.htm> 	  	Theoretical Astronomy, Cosmology,
-Relativity Theory, Gravitational Collapse <fulltext/gif.p219.htm>
+
+44 , , 209  ,   , Theoretical Astronomy, Cosmology,
+Relativity Theory 
+44 , 1 , 219  ,   , Theoretical Astronomy, Cosmology,
+Relativity Theory, Gravitational Collapse 
 
 
 ------------------------------------------------------------------------
-	  	
-VI 	  	Theoretical Astrophysics 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-51 		225 <fulltext/gif.p225.htm> 	  	Theoretical Astrophysics,
-Fundamental and General Aspects <fulltext/gif.p225.htm>
-51 	1 	228 <fulltext/gif.p228.htm> 	  	Theoretical Astrophysics,
-Gravitational Instability <fulltext/gif.p228.htm>
-51 	2 	230 <fulltext/gif.p230.htm> 	  	Theoretical Astrophysics,
-Magnetohydrodynamics <fulltext/gif.p230.htm>
-51 	3 	230 <fulltext/gif.p230.htm> 	  	Theoretical Astrophysics,
-Radiative Transfer <fulltext/gif.p230.htm>
-51 	4 	234 <fulltext/gif.p234.htm> 	  	Theoretical Astrophysics,
-Neutrino Astronomy <fulltext/gif.p234.htm>
-52 		236 <fulltext/gif.p236.htm> 	  	Theoretical Astrophysics, Nebulae,
-Interstellar Matter <fulltext/gif.p236.htm>
-53 		240 <fulltext/gif.p240.htm> 	  	Theoretical Astrophysics, Stellar
-Atmospheres <fulltext/gif.p240.htm>
-54 		248 <fulltext/gif.p248.htm> 	  	Theoretical Astrophysics, Internal
-Structure of Stars, Sun, and Planets <fulltext/gif.p248.htm>
-54 	1 	248 <fulltext/gif.p248.htm> 	  	Theoretical Astrophysics,
+,   , 
+VI ,   , Theoretical Astrophysics , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+51 , , 225  ,   , Theoretical Astrophysics,
+Fundamental and General Aspects 
+51 , 1 , 228  ,   , Theoretical Astrophysics,
+Gravitational Instability 
+51 , 2 , 230  ,   , Theoretical Astrophysics,
+Magnetohydrodynamics 
+51 , 3 , 230  ,   , Theoretical Astrophysics,
+Radiative Transfer 
+51 , 4 , 234  ,   , Theoretical Astrophysics,
+Neutrino Astronomy 
+52 , , 236  ,   , Theoretical Astrophysics, Nebulae,
+Interstellar Matter 
+53 , , 240  ,   , Theoretical Astrophysics, Stellar
+Atmospheres 
+54 , , 248  ,   , Theoretical Astrophysics, Internal
+Structure of Stars, Sun, and Planets 
+54 , 1 , 248  ,   , Theoretical Astrophysics,
 Internal Structure of Stars, Sun, and Planets, Stars, Sun
-<fulltext/gif.p248.htm>
-54 	2 	256 <fulltext/gif.p256.htm> 	  	Theoretical Astrophysics,
+
+54 , 2 , 256  ,   , Theoretical Astrophysics,
 Internal Structure of Stars, Sun, and Planets, Planets
-<fulltext/gif.p256.htm>
-55 		257 <fulltext/gif.p257.htm> 	  	Theoretical Astrophysics, Formation
-and Evolution of Celestial Bodies <fulltext/gif.p257.htm>
-56 		261 <fulltext/gif.p261.htm> 	  	Theoretical Astrophysics, Formation
-and Evolution of the Planetary System <fulltext/gif.p261.htm>
+
+55 , , 257  ,   , Theoretical Astrophysics, Formation
+and Evolution of Celestial Bodies 
+56 , , 261  ,   , Theoretical Astrophysics, Formation
+and Evolution of the Planetary System 
 
 
 ------------------------------------------------------------------------
-	  	
-VII 	  	Sun 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-61 		263 <fulltext/gif.p263.htm> 	  	Sun, Distance, Magnetism,
-Miscellanea <fulltext/gif.p263.htm>
-61 	1 	263 <fulltext/gif.p263.htm> 	  	Sun, Distance
-<fulltext/gif.p263.htm>
-61 	2 	264 <fulltext/gif.p264.htm> 	  	Sun, Magnetism
-<fulltext/gif.p264.htm>
-61 	3 	265 <fulltext/gif.p265.htm> 	  	Sun, Miscellanea
-<fulltext/gif.p265.htm>
-62 		267 <fulltext/gif.p267.htm> 	  	Sun, Solar Eclipses
-<fulltext/gif.p267.htm>
-62 	1 	268 <fulltext/gif.p268.htm> 	  	Sun, Individual Solar Eclipses
-<fulltext/gif.p268.htm>
-63 		273 <fulltext/gif.p273.htm> 	  	Sun, Solar Patrol
-<fulltext/gif.p273.htm>
-64 		276 <fulltext/gif.p276.htm> 	  	Sun, Photosphere, Spectrum,
-Granulation <fulltext/gif.p276.htm>
-65 		285 <fulltext/gif.p285.htm> 	  	Sun, Sunspots, Faculae, Solar
-Activity <fulltext/gif.p285.htm>
-65 	1 	293 <fulltext/gif.p293.htm> 	  	Sun, Statistics of Sunspots
-<fulltext/gif.p293.htm>
-66 		297 <fulltext/gif.p297.htm> 	  	Sun, Chromosphere, Flares,
-Prominences <fulltext/gif.p297.htm>
-66 	1 	309 <fulltext/gif.p309.htm> 	  	Sun, Individual Flares and
-Prominences <fulltext/gif.p309.htm>
-67 		312 <fulltext/gif.p312.htm> 	  	Sun, Corona, Solar Wind
-<fulltext/gif.p312.htm>
-68 		321 <fulltext/gif.p321.htm> 	  	Sun, Wave- and Particle Radiation
-<fulltext/gif.p321.htm>
-68 	1 	321 <fulltext/gif.p321.htm> 	  	Sun, UV, X Rays
-<fulltext/gif.p321.htm>
-68 	2 	324 <fulltext/gif.p324.htm> 	  	Sun, Radio Radiation
-<fulltext/gif.p324.htm>
-68 	3 	332 <fulltext/gif.p332.htm> 	  	Sun, Corpuscular Radiation
-<fulltext/gif.p332.htm>
-68 	4 	335 <fulltext/gif.p335.htm> 	  	Sun, Solar Cosmic Rays, Relations
-to Cosmic Rays, Solar Modulation <fulltext/gif.p335.htm>
+,   , 
+VII ,   , Sun , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+61 , , 263  ,   , Sun, Distance, Magnetism,
+Miscellanea 
+61 , 1 , 263  ,   , Sun, Distance
+
+61 , 2 , 264  ,   , Sun, Magnetism
+
+61 , 3 , 265  ,   , Sun, Miscellanea
+
+62 , , 267  ,   , Sun, Solar Eclipses
+
+62 , 1 , 268  ,   , Sun, Individual Solar Eclipses
+
+63 , , 273  ,   , Sun, Solar Patrol
+
+64 , , 276  ,   , Sun, Photosphere, Spectrum,
+Granulation 
+65 , , 285  ,   , Sun, Sunspots, Faculae, Solar
+Activity 
+65 , 1 , 293  ,   , Sun, Statistics of Sunspots
+
+66 , , 297  ,   , Sun, Chromosphere, Flares,
+Prominences 
+66 , 1 , 309  ,   , Sun, Individual Flares and
+Prominences 
+67 , , 312  ,   , Sun, Corona, Solar Wind
+
+68 , , 321  ,   , Sun, Wave- and Particle Radiation
+
+68 , 1 , 321  ,   , Sun, UV, X Rays
+
+68 , 2 , 324  ,   , Sun, Radio Radiation
+
+68 , 3 , 332  ,   , Sun, Corpuscular Radiation
+
+68 , 4 , 335  ,   , Sun, Solar Cosmic Rays, Relations
+to Cosmic Rays, Solar Modulation 
 
 
 ------------------------------------------------------------------------
-	  	
-VIII 	  	Earth 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-71 		337 <fulltext/gif.p337.htm> 	  	Earth, Solid Earth, Figure
-<fulltext/gif.p337.htm>
-72 		343 <fulltext/gif.p343.htm> 	  	Earth, Atmosphere
-<fulltext/gif.p343.htm>
-73 		346 <fulltext/gif.p346.htm> 	  	Earth, Refraction, Scintillation,
-Extinction, Astroclimate <fulltext/gif.p346.htm>
-73 	1 	346 <fulltext/gif.p346.htm> 	  	Earth, Refraction
-<fulltext/gif.p346.htm>
-73 	2 	347 <fulltext/gif.p347.htm> 	  	Earth, Scintillation
-<fulltext/gif.p347.htm>
-73 	3 	348 <fulltext/gif.p348.htm> 	  	Earth, Extinction
-<fulltext/gif.p348.htm>
-73 	4 	350 <fulltext/gif.p350.htm> 	  	Earth, Astroclimate
-<fulltext/gif.p350.htm>
-74 		352 <fulltext/gif.p352.htm> 	  	Earth, Radiation of the Sky
-<fulltext/gif.p352.htm>
-75 		360 <fulltext/gif.p360.htm> 	  	Earth, Ionosphere
-<fulltext/gif.p360.htm>
-76 		366 <fulltext/gif.p366.htm> 	  	Earth, Magnetic Field, Aurorae,
-Radiation Belts <fulltext/gif.p366.htm>
-76 	1 	366 <fulltext/gif.p366.htm> 	  	Earth, Magnetic Field
-<fulltext/gif.p366.htm>
-76 	2 	375 <fulltext/gif.p375.htm> 	  	Earth, Aurorae
-<fulltext/gif.p375.htm>
-76 	3 	380 <fulltext/gif.p380.htm> 	  	Earth, Radiation Belt
-<fulltext/gif.p380.htm>
-77 		383 <fulltext/gif.p383.htm> 	  	Earth, Noctilucent Clouds
-<fulltext/gif.p383.htm>
-78 		384 <fulltext/gif.p384.htm> 	  	Earth, Further Influences of Sun
-and Moon, Solar-Terrestrial Relations <fulltext/gif.p384.htm>
-79 		388 <fulltext/gif.p388.htm> 	  	Earth, International Geophysical
-Cooperation <fulltext/gif.p388.htm>
+,   , 
+VIII ,   , Earth , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+71 , , 337  ,   , Earth, Solid Earth, Figure
+
+72 , , 343  ,   , Earth, Atmosphere
+
+73 , , 346  ,   , Earth, Refraction, Scintillation,
+Extinction, Astroclimate 
+73 , 1 , 346  ,   , Earth, Refraction
+
+73 , 2 , 347  ,   , Earth, Scintillation
+
+73 , 3 , 348  ,   , Earth, Extinction
+
+73 , 4 , 350  ,   , Earth, Astroclimate
+
+74 , , 352  ,   , Earth, Radiation of the Sky
+
+75 , , 360  ,   , Earth, Ionosphere
+
+76 , , 366  ,   , Earth, Magnetic Field, Aurorae,
+Radiation Belts 
+76 , 1 , 366  ,   , Earth, Magnetic Field
+
+76 , 2 , 375  ,   , Earth, Aurorae
+
+76 , 3 , 380  ,   , Earth, Radiation Belt
+
+77 , , 383  ,   , Earth, Noctilucent Clouds
+
+78 , , 384  ,   , Earth, Further Influences of Sun
+and Moon, Solar-Terrestrial Relations 
+79 , , 388  ,   , Earth, International Geophysical
+Cooperation 
 
 
 ------------------------------------------------------------------------
-	  	
-IX 	  	Planets, Satellites 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-81 		390 <fulltext/gif.p390.htm> 	  	Planets, Satellites, Planetary
-System <fulltext/gif.p390.htm>
-82 	1 	396 <fulltext/gif.p396.htm> 	  	Planets, Satellites, Mercury
-<fulltext/gif.p396.htm>
-82 	2 	397 <fulltext/gif.p397.htm> 	  	Planets, Satellites, Venus
-<fulltext/gif.p397.htm>
-83 		406 <fulltext/gif.p406.htm> 	  	Planets, Satellites, Moon
-<fulltext/gif.p406.htm>
-83 	1 	429 <fulltext/gif.p429.htm> 	  	Planets, Satellites, Moon, Lunar
-Eclipses <fulltext/gif.p429.htm>
-83 	2 	429 <fulltext/gif.p429.htm> 	  	Planets, Satellites, Moon,
-Individual Lunar Eclipses <fulltext/gif.p429.htm>
-83 	3 	431 <fulltext/gif.p431.htm> 	  	Planets, Satellites, Moon,
-Stellar Occultations <fulltext/gif.p431.htm>
-84 		433 <fulltext/gif.p433.htm> 	  	Planets, Satellites, Mars
-<fulltext/gif.p433.htm>
-85 		440 <fulltext/gif.p440.htm> 	  	Planets, Satellites, Minor Planets
-<fulltext/gif.p440.htm>
-86 		444 <fulltext/gif.p444.htm> 	  	Planets, Satellites, Jupiter
-<fulltext/gif.p444.htm>
-86 	1 	449 <fulltext/gif.p449.htm> 	  	Planets, Satellites, Jupiter,
-Radio Radiation <fulltext/gif.p449.htm>
-86 	2 	453 <fulltext/gif.p453.htm> 	  	Planets, Satellites, Jupiter,
-Jupiter Satellites <fulltext/gif.p453.htm>
-87 		453 <fulltext/gif.p453.htm> 	  	Planets, Satellites, Saturn
-<fulltext/gif.p453.htm>
-88 		455 <fulltext/gif.p455.htm> 	  	Planets, Satellites, Uranus,
-Neptune, Pluto, Transplutonian Planet <fulltext/gif.p455.htm>
+,   , 
+IX ,   , Planets, Satellites , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+81 , , 390  ,   , Planets, Satellites, Planetary
+System 
+82 , 1 , 396  ,   , Planets, Satellites, Mercury
+
+82 , 2 , 397  ,   , Planets, Satellites, Venus
+
+83 , , 406  ,   , Planets, Satellites, Moon
+
+83 , 1 , 429  ,   , Planets, Satellites, Moon, Lunar
+Eclipses 
+83 , 2 , 429  ,   , Planets, Satellites, Moon,
+Individual Lunar Eclipses 
+83 , 3 , 431  ,   , Planets, Satellites, Moon,
+Stellar Occultations 
+84 , , 433  ,   , Planets, Satellites, Mars
+
+85 , , 440  ,   , Planets, Satellites, Minor Planets
+
+86 , , 444  ,   , Planets, Satellites, Jupiter
+
+86 , 1 , 449  ,   , Planets, Satellites, Jupiter,
+Radio Radiation 
+86 , 2 , 453  ,   , Planets, Satellites, Jupiter,
+Jupiter Satellites 
+87 , , 453  ,   , Planets, Satellites, Saturn
+
+88 , , 455  ,   , Planets, Satellites, Uranus,
+Neptune, Pluto, Transplutonian Planet 
 
 
 ------------------------------------------------------------------------
-	  	
-X 	  	Interplanetary Objects 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-91 		455 <fulltext/gif.p455.htm> 	  	Interplanetary Objects, Comets
-<fulltext/gif.p455.htm>
-92 		462 <fulltext/gif.p462.htm> 	  	Interplanetary Objects, Individual
-Comets <fulltext/gif.p462.htm>
-93 		470 <fulltext/gif.p470.htm> 	  	Interplanetary Objects, Meteors
-<fulltext/gif.p470.htm>
-93 	1 	482 <fulltext/gif.p482.htm> 	  	Interplanetary Objects, Meteors,
-Individual Meteor Showers <fulltext/gif.p482.htm>
-94 		484 <fulltext/gif.p484.htm> 	  	Interplanetary Objects, Meteorites
-<fulltext/gif.p484.htm>
-94 	1 	497 <fulltext/gif.p497.htm> 	  	Interplanetary Objects,
-Meteorites, Tunguska Event <fulltext/gif.p497.htm>
-94 	2 	498 <fulltext/gif.p498.htm> 	  	Interplanetary Objects,
-Meteorites, Organic Matter <fulltext/gif.p498.htm>
-94 	3 	498 <fulltext/gif.p498.htm> 	  	Interplanetary Objects,
-Meteorites, Micrometeorites <fulltext/gif.p498.htm>
-94 	4 	499 <fulltext/gif.p499.htm> 	  	Interplanetary Objects,
-Meteorites, Tektites <fulltext/gif.p499.htm>
-94 	5 	501 <fulltext/gif.p501.htm> 	  	Interplanetary Objects,
-Meteorites, Meteorite Craters <fulltext/gif.p501.htm>
-95 		503 <fulltext/gif.p503.htm> 	  	Interplanetary Objects,
-Interplanetary Matter, Zodiacal Light, Gegenschein <fulltext/gif.p503.htm>
+,   , 
+X ,   , Interplanetary Objects , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+91 , , 455  ,   , Interplanetary Objects, Comets
+
+92 , , 462  ,   , Interplanetary Objects, Individual
+Comets 
+93 , , 470  ,   , Interplanetary Objects, Meteors
+
+93 , 1 , 482  ,   , Interplanetary Objects, Meteors,
+Individual Meteor Showers 
+94 , , 484  ,   , Interplanetary Objects, Meteorites
+
+94 , 1 , 497  ,   , Interplanetary Objects,
+Meteorites, Tunguska Event 
+94 , 2 , 498  ,   , Interplanetary Objects,
+Meteorites, Organic Matter 
+94 , 3 , 498  ,   , Interplanetary Objects,
+Meteorites, Micrometeorites 
+94 , 4 , 499  ,   , Interplanetary Objects,
+Meteorites, Tektites 
+94 , 5 , 501  ,   , Interplanetary Objects,
+Meteorites, Meteorite Craters 
+95 , , 503  ,   , Interplanetary Objects,
+Interplanetary Matter, Zodiacal Light, Gegenschein 
 
 
 ------------------------------------------------------------------------
-	  	
-XI 	  	Stars 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-101 		507 <fulltext/gif.p507.htm> 	  	Stars, Distances
-<fulltext/gif.p507.htm>
-102 		508 <fulltext/gif.p508.htm> 	  	Stars, Motions
-<fulltext/gif.p508.htm>
-102 	1 	508 <fulltext/gif.p508.htm> 	  	Stars, Motions, Proper Motions
-<fulltext/gif.p508.htm>
-102 	2 	509 <fulltext/gif.p509.htm> 	  	Stars, Motions, Radial
-Velocities <fulltext/gif.p509.htm>
-103 		510 <fulltext/gif.p510.htm> 	  	Stars, Magnitudes, Colours,
-Photometric Properties <fulltext/gif.p510.htm>
-104 		516 <fulltext/gif.p516.htm> 	  	Stars, Spectra, Temperatures
-<fulltext/gif.p516.htm>
-104 	1 	527 <fulltext/gif.p527.htm> 	  	Stars, Spectra, Temperatures,
-Spectra of Individual Stars <fulltext/gif.p527.htm>
-105 		533 <fulltext/gif.p533.htm> 	  	Stars, Luminosities, Masses,
-Radii, Two-Parameter Diagrams <fulltext/gif.p533.htm>
-105 	1 	535 <fulltext/gif.p535.htm> 	  	Stars, Luminosities, Masses,
-Radii, Two-Parameter Diagrams, White Dwarfs <fulltext/gif.p535.htm>
-106 		536 <fulltext/gif.p536.htm> 	  	Stars, Figures, Rotation
-<fulltext/gif.p536.htm>
-107 		537 <fulltext/gif.p537.htm> 	  	Stars, Magnetic Fields
-<fulltext/gif.p537.htm>
+,   , 
+XI ,   , Stars , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+101 , , 507  ,   , Stars, Distances
 
+102 , , 508  ,   , Stars, Motions
 
-------------------------------------------------------------------------
-	  	
-XII 	  	Binaries, Multiple Stars 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-111 		538 <fulltext/gif.p538.htm> 	  	Binaries, Multiple Stars, General
-Aspects <fulltext/gif.p538.htm>
-112 		543 <fulltext/gif.p543.htm> 	  	Binaries, Multiple Stars, Visual
-Binaries <fulltext/gif.p543.htm>
-113 		548 <fulltext/gif.p548.htm> 	  	Binaries, Multiple Stars,
-Spectroscopic Binaries <fulltext/gif.p548.htm>
+102 , 1 , 508  ,   , Stars, Motions, Proper Motions
+
+102 , 2 , 509  ,   , Stars, Motions, Radial
+Velocities 
+103 , , 510  ,   , Stars, Magnitudes, Colours,
+Photometric Properties 
+104 , , 516  ,   , Stars, Spectra, Temperatures
+
+104 , 1 , 527  ,   , Stars, Spectra, Temperatures,
+Spectra of Individual Stars 
+105 , , 533  ,   , Stars, Luminosities, Masses,
+Radii, Two-Parameter Diagrams 
+105 , 1 , 535  ,   , Stars, Luminosities, Masses,
+Radii, Two-Parameter Diagrams, White Dwarfs 
+106 , , 536  ,   , Stars, Figures, Rotation
+
+107 , , 537  ,   , Stars, Magnetic Fields
+
 
 
 ------------------------------------------------------------------------
-	  	
-XIII 	  	Variable Stars 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-121 		549 <fulltext/gif.p549.htm> 	  	Variable Stars, Catalogues,
-Ephemerides <fulltext/gif.p549.htm>
-122 		550 <fulltext/gif.p550.htm> 	  	Variable Stars, Eclipsing Binaries
-<fulltext/gif.p550.htm>
-123 		560 <fulltext/gif.p560.htm> 	  	Variable Stars, Delta Cephei
-Stars, RR Lyrae Stars <fulltext/gif.p560.htm>
-124 		566 <fulltext/gif.p566.htm> 	  	Variable Stars, Other Variables
-<fulltext/gif.p566.htm>
-125 		576 <fulltext/gif.p576.htm> 	  	Variable Stars, Lists of
-Observations, Individual Observations <fulltext/gif.p576.htm>
-126 		586 <fulltext/gif.p586.htm> 	  	Variable Stars, Novae, Supernovae
-<fulltext/gif.p586.htm>
-126 	1 	586 <fulltext/gif.p586.htm> 	  	Variable Stars, Novae,
-Supernovae, Novae <fulltext/gif.p586.htm>
-126 	2 	587 <fulltext/gif.p587.htm> 	  	Variable Stars, Novae,
-Supernovae, Individual Novae <fulltext/gif.p587.htm>
-126 	3 	591 <fulltext/gif.p591.htm> 	  	Variable Stars, Novae,
-Supernovae, Supernovae <fulltext/gif.p591.htm>
-126 	4 	594 <fulltext/gif.p594.htm> 	  	Variable Stars, Novae,
-Supernovae, Individual Supernovae <fulltext/gif.p594.htm>
+,   , 
+XII ,   , Binaries, Multiple Stars , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+111 , , 538  ,   , Binaries, Multiple Stars, General
+Aspects 
+112 , , 543  ,   , Binaries, Multiple Stars, Visual
+Binaries 
+113 , , 548  ,   , Binaries, Multiple Stars,
+Spectroscopic Binaries 
 
 
 ------------------------------------------------------------------------
-	  	
-XIV 	  	Diffuse Objects, Radio Sources, Cosmic Rays 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-131 		596 <fulltext/gif.p596.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Emission Nebulae, Reflection Nebulae <fulltext/gif.p596.htm>
-132 		601 <fulltext/gif.p601.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Planetary Nebulae <fulltext/gif.p601.htm>
-133 		606 <fulltext/gif.p606.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Interstellar Matter <fulltext/gif.p606.htm>
-134 		611 <fulltext/gif.p611.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Radio and X-Ray Sources <fulltext/gif.p611.htm>
-134 	1 	611 <fulltext/gif.p611.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Radio Sources <fulltext/gif.p611.htm>
-134 	2 	629 <fulltext/gif.p629.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, X-Ray Sources <fulltext/gif.p629.htm>
-135 		632 <fulltext/gif.p632.htm> 	  	Diffuse Objects, Radio Sources,
-Cosmic Rays, Cosmic Radiation <fulltext/gif.p632.htm>
+,   , 
+XIII ,   , Variable Stars , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+121 , , 549  ,   , Variable Stars, Catalogues,
+Ephemerides 
+122 , , 550  ,   , Variable Stars, Eclipsing Binaries
+
+123 , , 560  ,   , Variable Stars, Delta Cephei
+Stars, RR Lyrae Stars 
+124 , , 566  ,   , Variable Stars, Other Variables
+
+125 , , 576  ,   , Variable Stars, Lists of
+Observations, Individual Observations 
+126 , , 586  ,   , Variable Stars, Novae, Supernovae
+
+126 , 1 , 586  ,   , Variable Stars, Novae,
+Supernovae, Novae 
+126 , 2 , 587  ,   , Variable Stars, Novae,
+Supernovae, Individual Novae 
+126 , 3 , 591  ,   , Variable Stars, Novae,
+Supernovae, Supernovae 
+126 , 4 , 594  ,   , Variable Stars, Novae,
+Supernovae, Individual Supernovae 
 
 
 ------------------------------------------------------------------------
-	  	
-XV 	  	Stellar Systems 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-141 		641 <fulltext/gif.p641.htm> 	  	Stellar Systems, Open Clusters,
-Moving Clusters <fulltext/gif.p641.htm>
-142 		649 <fulltext/gif.p649.htm> 	  	Stellar Systems, Globular Clusters
-<fulltext/gif.p649.htm>
-143 		653 <fulltext/gif.p653.htm> 	  	Stellar Systems, Stellar
-Associations <fulltext/gif.p653.htm>
-144 		656 <fulltext/gif.p656.htm> 	  	Stellar Systems, Galaxy
-<fulltext/gif.p656.htm>
-144 	1 	656 <fulltext/gif.p656.htm> 	  	Stellar Systems, Galaxy,
-Structure <fulltext/gif.p656.htm>
-144 	2 	662 <fulltext/gif.p662.htm> 	  	Stellar Systems, Galaxy,
-Kinematics and Dynamics <fulltext/gif.p662.htm>
-144 	3 	665 <fulltext/gif.p665.htm> 	  	Stellar Systems, Galaxy, Radio
-Radiation <fulltext/gif.p665.htm>
-145 		673 <fulltext/gif.p673.htm> 	  	Stellar Systems, Galaxies
-<fulltext/gif.p673.htm>
-145 	1 	673 <fulltext/gif.p673.htm> 	  	Stellar Systems, Galaxies,
-Multiple Galaxies <fulltext/gif.p673.htm>
-145 	2 	681 <fulltext/gif.p681.htm> 	  	Stellar Systems, Galaxies,
-Individual Galaxies <fulltext/gif.p681.htm>
-145 	3 	687 <fulltext/gif.p687.htm> 	  	Stellar Systems, Galaxies,
-Magellanic Clouds <fulltext/gif.p687.htm>
-145 	4 	691 <fulltext/gif.p691.htm> 	  	Stellar Systems, Galaxies,
-Clusters of Galaxies <fulltext/gif.p691.htm>
-145 	5 	693 <fulltext/gif.p693.htm> 	  	Stellar Systems, Galaxies,
-Intergalactic Matter <fulltext/gif.p693.htm>
+,   , 
+XIV ,   , Diffuse Objects, Radio Sources, Cosmic Rays , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+131 , , 596  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Emission Nebulae, Reflection Nebulae 
+132 , , 601  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Planetary Nebulae 
+133 , , 606  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Interstellar Matter 
+134 , , 611  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Radio and X-Ray Sources 
+134 , 1 , 611  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Radio Sources 
+134 , 2 , 629  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, X-Ray Sources 
+135 , , 632  ,   , Diffuse Objects, Radio Sources,
+Cosmic Rays, Cosmic Radiation 
 
 
 ------------------------------------------------------------------------
-	  	
-	  	Indexes 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-		695 <fulltext/gif.p695.htm> 	  	Author Index <fulltext/gif.p695.htm>
-		733 <fulltext/gif.p733.htm> 	  	Subject Index <fulltext/gif.p733.htm>
+,   , 
+XV ,   , Stellar Systems , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+141 , , 641  ,   , Stellar Systems, Open Clusters,
+Moving Clusters 
+142 , , 649  ,   , Stellar Systems, Globular Clusters
+
+143 , , 653  ,   , Stellar Systems, Stellar
+Associations 
+144 , , 656  ,   , Stellar Systems, Galaxy
+
+144 , 1 , 656  ,   , Stellar Systems, Galaxy,
+Structure 
+144 , 2 , 662  ,   , Stellar Systems, Galaxy,
+Kinematics and Dynamics 
+144 , 3 , 665  ,   , Stellar Systems, Galaxy, Radio
+Radiation 
+145 , , 673  ,   , Stellar Systems, Galaxies
+
+145 , 1 , 673  ,   , Stellar Systems, Galaxies,
+Multiple Galaxies 
+145 , 2 , 681  ,   , Stellar Systems, Galaxies,
+Individual Galaxies 
+145 , 3 , 687  ,   , Stellar Systems, Galaxies,
+Magellanic Clouds 
+145 , 4 , 691  ,   , Stellar Systems, Galaxies,
+Clusters of Galaxies 
+145 , 5 , 693  ,   , Stellar Systems, Galaxies,
+Intergalactic Matter 
+
+
+------------------------------------------------------------------------
+,   , 
+,   , Indexes , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+, , 695  ,   , Author Index 
+, , 733  ,   , Subject Index 
 
 ------------------------------------------------------------------------
 
 Letzte Änderung/Updated: 08.02.1999
 
-webmaster@ ari.uni-heidelberg.de <mailto:webmaster@ari.uni-heidelberg.de>
+webmaster@ ari.uni-heidelberg.de 
 

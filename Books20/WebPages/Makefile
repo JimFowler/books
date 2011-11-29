@@ -34,14 +34,14 @@ PUBLICWEB = /var/www/jrf
 PRIVATEWEB = /home/jrf/private_html
 
 PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
-	Bibliographies.php BlogLists.php robots.txt
+	Bibliographies.php BlogLists.php Auction.php robots.txt
 
 PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	BookStores.txt Collecting.txt HistoryAstronomy.txt \
 	HistoryPublishing.txt HistoryReading.txt \
 	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt \
 	Resources.txt SociologyScience.txt ToDoList.txt Tools.txt \
-	BibSources.txt BibTools.txt BibRefs.txt BlogLists.txt
+	BibSources.txt BibTools.txt BibRefs.txt BlogLists.txt Auctions.txt
 
 PRIVATEPHP = phpBooks.inc
 

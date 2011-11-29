@@ -10,666 +10,666 @@ Astronomical bibliography AJB
 1899)*
 
 ------------------------------------------------------------------------
-Back to Guiding Page <./ajb001.htm> or Publications <../../index.htm> or
-Homepage <../../../index.eng.htm>
+Back to Guiding Page  or Publications  or
+Homepage 
 ------------------------------------------------------------------------
-	  	
-Contents 	  	
-	  	
-	  	Title, Preface, Contents, Introduction <#P>
-	  	Part 1: General Aspects, History
-I 	  	General Aspects <#I>
-II 	  	History <#II>
-	  	Part 2: Astronomy
-III 	  	Spherical Astronomy <#III>
-IV 	  	Astronomy, Orbit Determination <#IV>
-V 	  	Astronomy, Celestial Mechanics <#V>
-VI 	  	Astronomy, Instruments and Methods of Observation <#VI>
-VII 	  	Astronomy, Observations <#VII>
-	  	Part 3: Astrophysics
-VIII 	  	Astrophysics, General Aspects, Theoretical Astrophysics,
-Instrumentation <#VIII>
-IX 	  	Astrophysics, Sun <#IX>
-X 	  	Astrophysics, Planets and Satellites <#X>
-XI 	  	Astrophysics, Comets and Meteors <#XI>
-XII 	  	Astrophysics, Stars <#XII>
-	  	Part 4: Geodesy and Nautical Astronomy
-	  	Geodesy and Nautical Astronomy <#XIII>
-	  	Indexes <#IN>
-
-
-------------------------------------------------------------------------
-	  	
-	  	Title, Preface, Contents, Introduction 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-		I <fulltext/gif.c001.htm> 	  	Title <fulltext/gif.c001.htm>
-		XII <fulltext/gif.c012.htm> 	  	Alphabetical List of Abbreviations
-used for Journals and Publications <fulltext/gif.c012.htm>
-		XXIII <fulltext/gif.c023.htm> 	  	List of Collaborators
-<fulltext/gif.c023.htm>
+,   , 
+Contents ,   , 
+,   , 
+,   , Title, Preface, Contents, Introduction 
+,   , Part 1: General Aspects, History
+I ,   , General Aspects 
+II ,   , History 
+,   , Part 2: Astronomy
+III ,   , Spherical Astronomy 
+IV ,   , Astronomy, Orbit Determination 
+V ,   , Astronomy, Celestial Mechanics 
+VI ,   , Astronomy, Instruments and Methods of Observation 
+VII ,   , Astronomy, Observations 
+,   , Part 3: Astrophysics
+VIII ,   , Astrophysics, General Aspects, Theoretical Astrophysics,
+Instrumentation 
+IX ,   , Astrophysics, Sun 
+X ,   , Astrophysics, Planets and Satellites 
+XI ,   , Astrophysics, Comets and Meteors 
+XII ,   , Astrophysics, Stars 
+,   , Part 4: Geodesy and Nautical Astronomy
+,   , Geodesy and Nautical Astronomy 
+,   , Indexes 
 
 
 ------------------------------------------------------------------------
-	  	
-I 	  	General Aspects 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-1 	1 	001 <fulltext/gif.p001.htm> 	  	Reports, Institutes
-<fulltext/gif.p001.htm>
-1 	2 	008 <fulltext/gif.p008.htm> 	  	Reports, Societies, Organizations,
-Meetings <fulltext/gif.p008.htm>
-1 	3 	011 <fulltext/gif.p011.htm> 	  	Reports, Miscellanea
-<fulltext/gif.p011.htm>
-2 	1 	015 <fulltext/gif.p015.htm> 	  	Yearbooks, Ephemerides,
-Collections for 1898-1902 <fulltext/gif.p015.htm>
-2 	2 	021 <fulltext/gif.p021.htm> 	  	Yearbooks, Ephemerides, Almanacs
-for 1899 <fulltext/gif.p021.htm>
-3 		024 <fulltext/gif.p024.htm> 	  	Non-periodic Collections, New
-Editions of Historical Works <fulltext/gif.p024.htm>
-4 		025 <fulltext/gif.p025.htm> 	  	Bibliography <fulltext/gif.p025.htm>
-5 	1 	026 <fulltext/gif.p026.htm> 	  	Astronomical Literature, Textbooks
-<fulltext/gif.p026.htm>
-5 	2 	030 <fulltext/gif.p030.htm> 	  	Astronomical Literature,
-Cosmogony, Cosmology <fulltext/gif.p030.htm>
-5 	3 	034 <fulltext/gif.p034.htm> 	  	Astronomical Literature,
-Philosophical Aspects <fulltext/gif.p034.htm>
-6 		036 <fulltext/gif.p036.htm> 	  	Mathematical and Computational Aids
-<fulltext/gif.p036.htm>
-6 	1 	036 <fulltext/gif.p036.htm> 	  	Mathematical and Computational
-Aids, Error Analysis, Interpolation <fulltext/gif.p036.htm>
-6 	2 	038 <fulltext/gif.p038.htm> 	  	Mathematical and Computational
-Aids, Mathematical Tables, Calculators <fulltext/gif.p038.htm>
+,   , 
+,   , Title, Preface, Contents, Introduction , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+, , I  ,   , Title 
+, , XII  ,   , Alphabetical List of Abbreviations
+used for Journals and Publications 
+, , XXIII  ,   , List of Collaborators
+
 
 
 ------------------------------------------------------------------------
-	  	
-II 	  	History 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-7 		040 <fulltext/gif.p040.htm> 	  	History, General History of
-Astronomy, History of Special Fields <fulltext/gif.p040.htm>
-8 		044 <fulltext/gif.p044.htm> 	  	History, Notes <fulltext/gif.p044.htm>
-8 	1 	044 <fulltext/gif.p044.htm> 	  	History, Notes, Astronomy in
-Various Countries <fulltext/gif.p044.htm>
-8 	2 	046 <fulltext/gif.p046.htm> 	  	History, Notes, Astronomical Views
-of Individual Persons <fulltext/gif.p046.htm>
-8 	3 	048 <fulltext/gif.p048.htm> 	  	History, Notes, Solar System
-<fulltext/gif.p048.htm>
-8 	4 	051 <fulltext/gif.p051.htm> 	  	History, Notes, Beyond the Solar
-System <fulltext/gif.p051.htm>
-8 	5 	052 <fulltext/gif.p052.htm> 	  	History, Notes, Instruments,
-Observational and Numerical Methods <fulltext/gif.p052.htm>
-8 	6 	055 <fulltext/gif.p055.htm> 	  	History, Notes, Miscellanea
-<fulltext/gif.p055.htm>
-9 		056 <fulltext/gif.p056.htm> 	  	History, Biographies and
-Correspondence <fulltext/gif.p056.htm>
-9 	1 	056 <fulltext/gif.p056.htm> 	  	History, Biographies and
-Correspondence, Biographies of Historic Persons <fulltext/gif.p056.htm>
-9 	2 	058 <fulltext/gif.p058.htm> 	  	History, Biographies and
-Correspondence, Obituaries <fulltext/gif.p058.htm>
-9 	3 	061 <fulltext/gif.p061.htm> 	  	History, Biographies and
+,   , 
+I ,   , General Aspects , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+1 , 1 , 001  ,   , Reports, Institutes
+
+1 , 2 , 008  ,   , Reports, Societies, Organizations,
+Meetings 
+1 , 3 , 011  ,   , Reports, Miscellanea
+
+2 , 1 , 015  ,   , Yearbooks, Ephemerides,
+Collections for 1898-1902 
+2 , 2 , 021  ,   , Yearbooks, Ephemerides, Almanacs
+for 1899 
+3 , , 024  ,   , Non-periodic Collections, New
+Editions of Historical Works 
+4 , , 025  ,   , Bibliography 
+5 , 1 , 026  ,   , Astronomical Literature, Textbooks
+
+5 , 2 , 030  ,   , Astronomical Literature,
+Cosmogony, Cosmology 
+5 , 3 , 034  ,   , Astronomical Literature,
+Philosophical Aspects 
+6 , , 036  ,   , Mathematical and Computational Aids
+
+6 , 1 , 036  ,   , Mathematical and Computational
+Aids, Error Analysis, Interpolation 
+6 , 2 , 038  ,   , Mathematical and Computational
+Aids, Mathematical Tables, Calculators 
+
+
+------------------------------------------------------------------------
+,   , 
+II ,   , History , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+7 , , 040  ,   , History, General History of
+Astronomy, History of Special Fields 
+8 , , 044  ,   , History, Notes 
+8 , 1 , 044  ,   , History, Notes, Astronomy in
+Various Countries 
+8 , 2 , 046  ,   , History, Notes, Astronomical Views
+of Individual Persons 
+8 , 3 , 048  ,   , History, Notes, Solar System
+
+8 , 4 , 051  ,   , History, Notes, Beyond the Solar
+System 
+8 , 5 , 052  ,   , History, Notes, Instruments,
+Observational and Numerical Methods 
+8 , 6 , 055  ,   , History, Notes, Miscellanea
+
+9 , , 056  ,   , History, Biographies and
+Correspondence 
+9 , 1 , 056  ,   , History, Biographies and
+Correspondence, Biographies of Historic Persons 
+9 , 2 , 058  ,   , History, Biographies and
+Correspondence, Obituaries 
+9 , 3 , 061  ,   , History, Biographies and
 Correspondence, Biographies of Contemporary Astronomers
-<fulltext/gif.p061.htm>
-9 	4 	063 <fulltext/gif.p063.htm> 	  	History, Biographies and
-Correspondence, Personal Notes <fulltext/gif.p063.htm>
-9 	5 	067 <fulltext/gif.p067.htm> 	  	History, Biographies and
-Correspondence, Correspondence <fulltext/gif.p067.htm>
+
+9 , 4 , 063  ,   , History, Biographies and
+Correspondence, Personal Notes 
+9 , 5 , 067  ,   , History, Biographies and
+Correspondence, Correspondence 
 
 
 ------------------------------------------------------------------------
-	  	
-III 	  	Spherical Astronomy 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-10 	1 	069 <fulltext/gif.p069.htm> 	  	Spherical Astronomy, Textbooks
-and Publications of General Interest, Textbooks <fulltext/gif.p069.htm>
-10 	2 	070 <fulltext/gif.p070.htm> 	  	Spherical Astronomy, Textbooks
+,   , 
+III ,   , Spherical Astronomy , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+10 , 1 , 069  ,   , Spherical Astronomy, Textbooks
+and Publications of General Interest, Textbooks 
+10 , 2 , 070  ,   , Spherical Astronomy, Textbooks
 and Publications of General Interest, Decimal Graduation of the Circle
-and Decimal Time Scales <fulltext/gif.p070.htm>
-11 		072 <fulltext/gif.p072.htm> 	  	Spherical Astronomy, Coordinates
-and Diurnal Motion <fulltext/gif.p072.htm>
-12 		074 <fulltext/gif.p074.htm> 	  	Spherical Astronomy, Refraction
-<fulltext/gif.p074.htm>
-13 		075 <fulltext/gif.p075.htm> 	  	Spherical Astronomy, Aberration
-<fulltext/gif.p075.htm>
-14 		078 <fulltext/gif.p078.htm> 	  	Spherical Astronomy, Precession and
-Nutation <fulltext/gif.p078.htm>
-15 		080 <fulltext/gif.p080.htm> 	  	Spherical Astronomy, Parallaxes
-<fulltext/gif.p080.htm>
-16 		081 <fulltext/gif.p081.htm> 	  	Spherical Astronomy, Number and
-Distribution of Stars <fulltext/gif.p081.htm>
-17 		084 <fulltext/gif.p084.htm> 	  	Spherical Astronomy, Proper Motions
-of Stars and the Sun <fulltext/gif.p084.htm>
-18 		087 <fulltext/gif.p087.htm> 	  	Spherical Astronomy, Eclipses,
-Occultations and Transits <fulltext/gif.p087.htm>
-19 		092 <fulltext/gif.p092.htm> 	  	Spherical Astronomy, Time
+and Decimal Time Scales 
+11 , , 072  ,   , Spherical Astronomy, Coordinates
+and Diurnal Motion 
+12 , , 074  ,   , Spherical Astronomy, Refraction
+
+13 , , 075  ,   , Spherical Astronomy, Aberration
+
+14 , , 078  ,   , Spherical Astronomy, Precession and
+Nutation 
+15 , , 080  ,   , Spherical Astronomy, Parallaxes
+
+16 , , 081  ,   , Spherical Astronomy, Number and
+Distribution of Stars 
+17 , , 084  ,   , Spherical Astronomy, Proper Motions
+of Stars and the Sun 
+18 , , 087  ,   , Spherical Astronomy, Eclipses,
+Occultations and Transits 
+19 , , 092  ,   , Spherical Astronomy, Time
 Determination, Longitude and Latitude, Latitude Variation
-<fulltext/gif.p092.htm>
-19 	1 	092 <fulltext/gif.p092.htm> 	  	Spherical Astronomy, Time
+
+19 , 1 , 092  ,   , Spherical Astronomy, Time
 Determination, Longitude and Latitude, Latitude Variation, Time
-<fulltext/gif.p092.htm>
-19 	2 	094 <fulltext/gif.p094.htm> 	  	Spherical Astronomy, Time
+
+19 , 2 , 094  ,   , Spherical Astronomy, Time
 Determination, Longitude and Latitude, Latitude Variation, Longitude
-<fulltext/gif.p094.htm>
-19 	3 	095 <fulltext/gif.p095.htm> 	  	Spherical Astronomy, Time
+
+19 , 3 , 095  ,   , Spherical Astronomy, Time
 Determination, Longitude and Latitude, Latitude Variation, Latitude
-<fulltext/gif.p095.htm>
-19 	4 	097 <fulltext/gif.p097.htm> 	  	Spherical Astronomy, Time
+
+19 , 4 , 097  ,   , Spherical Astronomy, Time
 Determination, Longitude and Latitude, Latitude Variation, Latitude
-Variation <fulltext/gif.p097.htm>
-20 		099 <fulltext/gif.p099.htm> 	  	Spherical Astronomy, Chronometry,
-Calendars, Chronology <fulltext/gif.p099.htm>
-20 	1 	099 <fulltext/gif.p099.htm> 	  	Spherical Astronomy, Chronometry,
-Calendars, Chronology, Time and Chronology <fulltext/gif.p099.htm>
-20 	2 	100 <fulltext/gif.p100.htm> 	  	Spherical Astronomy, Chronometry,
-Calendars, Chronology, Calendars <fulltext/gif.p100.htm>
-20 	3 	102 <fulltext/gif.p102.htm> 	  	Spherical Astronomy, Chronometry,
-Calendars, Chronology, Calendar Reform <fulltext/gif.p102.htm>
+Variation 
+20 , , 099  ,   , Spherical Astronomy, Chronometry,
+Calendars, Chronology 
+20 , 1 , 099  ,   , Spherical Astronomy, Chronometry,
+Calendars, Chronology, Time and Chronology 
+20 , 2 , 100  ,   , Spherical Astronomy, Chronometry,
+Calendars, Chronology, Calendars 
+20 , 3 , 102  ,   , Spherical Astronomy, Chronometry,
+Calendars, Chronology, Calendar Reform 
 
 
 ------------------------------------------------------------------------
-	  	
-IV 	  	Astronomy, Orbit Determination 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-21 	1 	104 <fulltext/gif.p104.htm> 	  	Astronomy, Orbit Determination,
+,   , 
+IV ,   , Astronomy, Orbit Determination , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+21 , 1 , 104  ,   , Astronomy, Orbit Determination,
 Textbooks and Publications of General Interest, Textbooks
-<fulltext/gif.p104.htm>
-21 	2 	106 <fulltext/gif.p106.htm> 	  	Astronomy, Orbit Determination,
+
+21 , 2 , 106  ,   , Astronomy, Orbit Determination,
 Textbooks and Publications of General Interest, Planets and Satellites
-<fulltext/gif.p106.htm>
-21 	3 	110 <fulltext/gif.p110.htm> 	  	Astronomy, Orbit Determination,
+
+21 , 3 , 110  ,   , Astronomy, Orbit Determination,
 Textbooks and Publications of General Interest, Comets and Meteors
-<fulltext/gif.p110.htm>
-22 		113 <fulltext/gif.p113.htm> 	  	Astronomy, Orbit Determination,
-Methods <fulltext/gif.p113.htm>
-23 		115 <fulltext/gif.p115.htm> 	  	Astronomy, Orbit Determination,
-Definitive Orbit Determination, Elements, Masses <fulltext/gif.p115.htm>
-23 	1 	115 <fulltext/gif.p115.htm> 	  	Astronomy, Orbit Determination,
+
+22 , , 113  ,   , Astronomy, Orbit Determination,
+Methods 
+23 , , 115  ,   , Astronomy, Orbit Determination,
+Definitive Orbit Determination, Elements, Masses 
+23 , 1 , 115  ,   , Astronomy, Orbit Determination,
 Definitive Orbit Determination, Elements, Masses, Planets and Satellites
-<fulltext/gif.p115.htm>
-23 	2 	119 <fulltext/gif.p119.htm> 	  	Astronomy, Orbit Determination,
+
+23 , 2 , 119  ,   , Astronomy, Orbit Determination,
 Definitive Orbit Determination, Elements, Masses, Comets
-<fulltext/gif.p119.htm>
-23 	3 	121 <fulltext/gif.p121.htm> 	  	Astronomy, Orbit Determination,
+
+23 , 3 , 121  ,   , Astronomy, Orbit Determination,
 Definitive Orbit Determination, Elements, Masses, Meteors
-<fulltext/gif.p121.htm>
-23 	4 	126 <fulltext/gif.p126.htm> 	  	Astronomy, Orbit Determination,
+
+23 , 4 , 126  ,   , Astronomy, Orbit Determination,
 Definitive Orbit Determination, Elements, Masses, Binaries
-<fulltext/gif.p126.htm>
-24 		129 <fulltext/gif.p129.htm> 	  	Astronomy, Orbit Determination,
-Compilations and Nomenclature <fulltext/gif.p129.htm>
-24 	1 	129 <fulltext/gif.p129.htm> 	  	Astronomy, Orbit Determination,
-Compilations and Nomenclature, Minor Planets <fulltext/gif.p129.htm>
-24 	2 	136 <fulltext/gif.p136.htm> 	  	Astronomy, Orbit Determination,
-Compilations and Nomenclature, Comets <fulltext/gif.p136.htm>
-24 	3 	142 <fulltext/gif.p142.htm> 	  	Astronomy, Orbit Determination,
-Compilations and Nomenclature, Meteors <fulltext/gif.p142.htm>
-25 		143 <fulltext/gif.p143.htm> 	  	Astronomy, Orbit Determination,
-Tables and Ephemerides <fulltext/gif.p143.htm>
-25 	1 	143 <fulltext/gif.p143.htm> 	  	Astronomy, Orbit Determination,
-Tables and Ephemerides, Tables <fulltext/gif.p143.htm>
-25 	2 	143 <fulltext/gif.p143.htm> 	  	Astronomy, Orbit Determination,
+
+24 , , 129  ,   , Astronomy, Orbit Determination,
+Compilations and Nomenclature 
+24 , 1 , 129  ,   , Astronomy, Orbit Determination,
+Compilations and Nomenclature, Minor Planets 
+24 , 2 , 136  ,   , Astronomy, Orbit Determination,
+Compilations and Nomenclature, Comets 
+24 , 3 , 142  ,   , Astronomy, Orbit Determination,
+Compilations and Nomenclature, Meteors 
+25 , , 143  ,   , Astronomy, Orbit Determination,
+Tables and Ephemerides 
+25 , 1 , 143  ,   , Astronomy, Orbit Determination,
+Tables and Ephemerides, Tables 
+25 , 2 , 143  ,   , Astronomy, Orbit Determination,
 Tables and Ephemerides, Ephemerides of Minor Planets
-<fulltext/gif.p143.htm>
-25 	3 	145 <fulltext/gif.p145.htm> 	  	Astronomy, Orbit Determination,
-Tables and Ephemerides, Ephemerides of Comets <fulltext/gif.p145.htm>
-25 	4 	147 <fulltext/gif.p147.htm> 	  	Astronomy, Orbit Determination,
-Tables and Ephemerides, Ephemerides of Meteors <fulltext/gif.p147.htm>
+
+25 , 3 , 145  ,   , Astronomy, Orbit Determination,
+Tables and Ephemerides, Ephemerides of Comets 
+25 , 4 , 147  ,   , Astronomy, Orbit Determination,
+Tables and Ephemerides, Ephemerides of Meteors 
 
 
 ------------------------------------------------------------------------
-	  	
-V 	  	Astronomy, Celestial Mechanics 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-26 	1 	149 <fulltext/gif.p149.htm> 	  	Astronomy, Celestial Mechanics,
+,   , 
+V ,   , Astronomy, Celestial Mechanics , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+26 , 1 , 149  ,   , Astronomy, Celestial Mechanics,
 Textbooks and Publications of General Interest, Textbooks
-<fulltext/gif.p149.htm>
-26 	2 	150 <fulltext/gif.p150.htm> 	  	Astronomy, Celestial Mechanics,
+
+26 , 2 , 150  ,   , Astronomy, Celestial Mechanics,
 Textbooks and Publications of General Interest, Satellite Motion
-<fulltext/gif.p150.htm>
-26 	3 	152 <fulltext/gif.p152.htm> 	  	Astronomy, Celestial Mechanics,
+
+26 , 3 , 152  ,   , Astronomy, Celestial Mechanics,
 Textbooks and Publications of General Interest, Miscellanea
-<fulltext/gif.p152.htm>
-27 		153 <fulltext/gif.p153.htm> 	  	Astronomy, Celestial Mechanics,
-Gravitation <fulltext/gif.p153.htm>
-28 		156 <fulltext/gif.p156.htm> 	  	Astronomy, Celestial Mechanics,
-Orbital Motion, General and Special Perturbations <fulltext/gif.p156.htm>
-28 	1 	156 <fulltext/gif.p156.htm> 	  	Astronomy, Celestial Mechanics,
+
+27 , , 153  ,   , Astronomy, Celestial Mechanics,
+Gravitation 
+28 , , 156  ,   , Astronomy, Celestial Mechanics,
+Orbital Motion, General and Special Perturbations 
+28 , 1 , 156  ,   , Astronomy, Celestial Mechanics,
 Orbital Motion, General and Special Perturbations, Lunar Theory
-<fulltext/gif.p156.htm>
-28 	2 	160 <fulltext/gif.p160.htm> 	  	Astronomy, Celestial Mechanics,
+
+28 , 2 , 160  ,   , Astronomy, Celestial Mechanics,
 Orbital Motion, General and Special Perturbations, Perturbation Theory
-<fulltext/gif.p160.htm>
-28 	3 	163 <fulltext/gif.p163.htm> 	  	Astronomy, Celestial Mechanics,
+
+28 , 3 , 163  ,   , Astronomy, Celestial Mechanics,
 Orbital Motion, General and Special Perturbations, Perturbation
-Calculations <fulltext/gif.p163.htm>
-29 		165 <fulltext/gif.p165.htm> 	  	Astronomy, Celestial Mechanics,
-Rotation and Constitution of Celestial Bodies <fulltext/gif.p165.htm>
+Calculations 
+29 , , 165  ,   , Astronomy, Celestial Mechanics,
+Rotation and Constitution of Celestial Bodies 
 
 
 ------------------------------------------------------------------------
-	  	
-VI 	  	Astronomy, Instruments and Methods of Observation 	Back to the
-top <#B>
-	  	
-§ 	Sect. 	Page 		
-30 		168 <fulltext/gif.p168.htm> 	  	Astronomy, Instruments and Methods
+,   , 
+VI ,   , Astronomy, Instruments and Methods of Observation , Back to the
+top 
+,   , 
+§ , Sect. , Page , , 
+30 , , 168  ,   , Astronomy, Instruments and Methods
 of Observation, General Aspects, Construction of Observatories
-<fulltext/gif.p168.htm>
-31 		171 <fulltext/gif.p171.htm> 	  	Astronomy, Instruments and Methods
+
+31 , , 171  ,   , Astronomy, Instruments and Methods
 of Observation, Clocks with Auxiliary Instrumentation
-<fulltext/gif.p171.htm>
-31 	1 	171 <fulltext/gif.p171.htm> 	  	Astronomy, Instruments and
+
+31 , 1 , 171  ,   , Astronomy, Instruments and
 Methods of Observation, Clocks with Auxiliary Instrumentation, Clocks
-<fulltext/gif.p171.htm>
-31 	2 	174 <fulltext/gif.p174.htm> 	  	Astronomy, Instruments and
+
+31 , 2 , 174  ,   , Astronomy, Instruments and
 Methods of Observation, Clocks with Auxiliary Instrumentation, Other
-Chronometers <fulltext/gif.p174.htm>
-31 	3 	176 <fulltext/gif.p176.htm> 	  	Astronomy, Instruments and
+Chronometers 
+31 , 3 , 176  ,   , Astronomy, Instruments and
 Methods of Observation, Clocks with Auxiliary Instrumentation,
-Components <fulltext/gif.p176.htm>
-32 		177 <fulltext/gif.p177.htm> 	  	Astronomy, Instruments and Methods
+Components 
+32 , , 177  ,   , Astronomy, Instruments and Methods
 of Observation, Astronomical Instruments with Auxiliary Instrumentation
-<fulltext/gif.p177.htm>
-32 	1 	177 <fulltext/gif.p177.htm> 	  	Astronomy, Instruments and
+
+32 , 1 , 177  ,   , Astronomy, Instruments and
 Methods of Observation, Astronomical Instruments with Auxiliary
 Instrumentation, Refractors, Zenith Tubes, Meridian Circles
-<fulltext/gif.p177.htm>
-32 	2 	184 <fulltext/gif.p184.htm> 	  	Astronomy, Instruments and
+
+32 , 2 , 184  ,   , Astronomy, Instruments and
 Methods of Observation, Astronomical Instruments with Auxiliary
-Instrumentation, Optical Components, Optical Design <fulltext/gif.p184.htm>
-32 	3 	194 <fulltext/gif.p194.htm> 	  	Astronomy, Instruments and
+Instrumentation, Optical Components, Optical Design 
+32 , 3 , 194  ,   , Astronomy, Instruments and
 Methods of Observation, Astronomical Instruments with Auxiliary
-Instrumentation, Micrometers, Measuring Machines <fulltext/gif.p194.htm>
-33 		198 <fulltext/gif.p198.htm> 	  	Astronomy, Instruments and Methods
+Instrumentation, Micrometers, Measuring Machines 
+33 , , 198  ,   , Astronomy, Instruments and Methods
 of Observation, Visual, Photographic and Other Methods
-<fulltext/gif.p198.htm>
-33 	1 	198 <fulltext/gif.p198.htm> 	  	Astronomy, Instruments and
+
+33 , 1 , 198  ,   , Astronomy, Instruments and
 Methods of Observation, Visual, Photographic and Other Methods, Visual
-Methods <fulltext/gif.p198.htm>
-33 	2 	202 <fulltext/gif.p202.htm> 	  	Astronomy, Instruments and
+Methods 
+33 , 2 , 202  ,   , Astronomy, Instruments and
 Methods of Observation, Visual, Photographic and Other Methods,
-Photographic Methods <fulltext/gif.p202.htm>
-33 	3 	208 <fulltext/gif.p208.htm> 	  	Astronomy, Instruments and
+Photographic Methods 
+33 , 3 , 208  ,   , Astronomy, Instruments and
 Methods of Observation, Visual, Photographic and Other Methods, Other
-Methods, Personal Equation <fulltext/gif.p208.htm>
+Methods, Personal Equation 
 
 
 ------------------------------------------------------------------------
-	  	
-VII 	  	Astronomy, Observations 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-34 		210 <fulltext/gif.p210.htm> 	  	Astronomy, Observations, Tips to
+,   , 
+VII ,   , Astronomy, Observations , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+34 , , 210  ,   , Astronomy, Observations, Tips to
 Forthcoming Apparitions, Total Solar Eclipse 1900 May 28
-<fulltext/gif.p210.htm>
-34 	1 	210 <fulltext/gif.p210.htm> 	  	Astronomy, Observations,
-Apparitions, Total Solar Eclipse 1900 May 28 <fulltext/gif.p210.htm>
-34 	2 	212 <fulltext/gif.p212.htm> 	  	Astronomy, Observations,
-Apparitions, Meteor Observations, Leonids 1899 <fulltext/gif.p212.htm>
-35 		215 <fulltext/gif.p215.htm> 	  	Astronomy, Observations,
-Communications, Annals <fulltext/gif.p215.htm>
-36 		219 <fulltext/gif.p219.htm> 	  	Astronomy, Observations,
-Geographical Coordinates and Latitude Variations <fulltext/gif.p219.htm>
-37 	1 	224 <fulltext/gif.p224.htm> 	  	Astronomy, Observations,
+
+34 , 1 , 210  ,   , Astronomy, Observations,
+Apparitions, Total Solar Eclipse 1900 May 28 
+34 , 2 , 212  ,   , Astronomy, Observations,
+Apparitions, Meteor Observations, Leonids 1899 
+35 , , 215  ,   , Astronomy, Observations,
+Communications, Annals 
+36 , , 219  ,   , Astronomy, Observations,
+Geographical Coordinates and Latitude Variations 
+37 , 1 , 224  ,   , Astronomy, Observations,
 Positions, Sun, Planets and Satellites, Satellites of the Four Outer
-Planets <fulltext/gif.p224.htm>
-37 	3 	252 <fulltext/gif.p252.htm> 	  	Astronomy, Observations,
-Positions, Minor Planets <fulltext/gif.p252.htm>
-37 	4 	228 <fulltext/gif.p228.htm> 	  	Astronomy, Observations,
-Positions, Minor Planets, List <fulltext/gif.p228.htm>
-37 	5 	253 <fulltext/gif.p253.htm> 	  	Astronomy, Observations,
-Positions, Comets <fulltext/gif.p253.htm>
-37 	6 	256 <fulltext/gif.p256.htm> 	  	Astronomy, Observations,
-Positions, Comets, List <fulltext/gif.p256.htm>
-37 	7 	255 <fulltext/gif.p255.htm> 	  	Astronomy, Observations,
-Positions, Meteors, Bielids and Lyrids <fulltext/gif.p255.htm>
-37 	8 	266 <fulltext/gif.p266.htm> 	  	Astronomy, Observations,
-Positions, Meteors, Perseids <fulltext/gif.p266.htm>
-37 	9 	271 <fulltext/gif.p271.htm> 	  	Astronomy, Observations,
-Positions, Meteors, Leonids <fulltext/gif.p271.htm>
-37 	10 	286 <fulltext/gif.p286.htm> 	  	Astronomy, Observations,
-Positions, Meteors, Other Meteors <fulltext/gif.p286.htm>
-37 	11 	288 <fulltext/gif.p288.htm> 	  	Astronomy, Observations,
+Planets 
+37 , 3 , 252  ,   , Astronomy, Observations,
+Positions, Minor Planets 
+37 , 4 , 228  ,   , Astronomy, Observations,
+Positions, Minor Planets, List 
+37 , 5 , 253  ,   , Astronomy, Observations,
+Positions, Comets 
+37 , 6 , 256  ,   , Astronomy, Observations,
+Positions, Comets, List 
+37 , 7 , 255  ,   , Astronomy, Observations,
+Positions, Meteors, Bielids and Lyrids 
+37 , 8 , 266  ,   , Astronomy, Observations,
+Positions, Meteors, Perseids 
+37 , 9 , 271  ,   , Astronomy, Observations,
+Positions, Meteors, Leonids 
+37 , 10 , 286  ,   , Astronomy, Observations,
+Positions, Meteors, Other Meteors 
+37 , 11 , 288  ,   , Astronomy, Observations,
 Positions, Stars, Catalogues, Charts and Globes, Short Observation
-Series <fulltext/gif.p288.htm>
-37 	12 	291 <fulltext/gif.p291.htm> 	  	Astronomy, Observations,
+Series 
+37 , 12 , 291  ,   , Astronomy, Observations,
 Positions, Stars, Catalogues, Charts and Globes, Catalogues and Remarks
-<fulltext/gif.p291.htm>
-37 	13 	298 <fulltext/gif.p298.htm> 	  	Astronomy, Observations,
+
+37 , 13 , 298  ,   , Astronomy, Observations,
 Positions, Stars, Catalogues, Charts and Globes, Star Charts
-<fulltext/gif.p298.htm>
-37 	14 	299 <fulltext/gif.p299.htm> 	  	Astronomy, Observations,
+
+37 , 14 , 299  ,   , Astronomy, Observations,
 Positions, Multiple Stars, Star Clusters and Nebulae, Double Stars,
-Catalogue Compilation <fulltext/gif.p299.htm>
-37 	15 	303 <fulltext/gif.p303.htm> 	  	Astronomy, Observations,
+Catalogue Compilation 
+37 , 15 , 303  ,   , Astronomy, Observations,
 Positions, Multiple Stars, Star Clusters and Nebulae, Double Stars,
-Measurements <fulltext/gif.p303.htm>
-37 	16 	305 <fulltext/gif.p305.htm> 	  	Astronomy, Observations,
+Measurements 
+37 , 16 , 305  ,   , Astronomy, Observations,
 Positions, Multiple Stars, Star Clusters and Nebulae, Star Clusters and
-Nebulae <fulltext/gif.p305.htm>
-38 	1 	307 <fulltext/gif.p307.htm> 	  	Astronomy, Observations, Rotation
-and Figure of the Sun, Planets and Satellites, Sun <fulltext/gif.p307.htm>
-38 	2 	308 <fulltext/gif.p308.htm> 	  	Astronomy, Observations, Rotation
+Nebulae 
+38 , 1 , 307  ,   , Astronomy, Observations, Rotation
+and Figure of the Sun, Planets and Satellites, Sun 
+38 , 2 , 308  ,   , Astronomy, Observations, Rotation
 and Figure of the Sun, Planets and Satellites, Planets
-<fulltext/gif.p308.htm>
-38 	3 	312 <fulltext/gif.p312.htm> 	  	Astronomy, Observations, Rotation
+
+38 , 3 , 312  ,   , Astronomy, Observations, Rotation
 and Figure of the Sun, Planets and Satellites, Planetary Satellites
-<fulltext/gif.p312.htm>
-39 	1 	313 <fulltext/gif.p313.htm> 	  	Astronomy, Observations,
+
+39 , 1 , 313  ,   , Astronomy, Observations,
 Eclipses, Transits and Occultations, Solar Eclipses, Solar Eclipse 1899
-June 7 <fulltext/gif.p313.htm>
-39 	2 	315 <fulltext/gif.p315.htm> 	  	Astronomy, Observations,
-Eclipses, Transits and Occultations, Lunar Eclipses <fulltext/gif.p315.htm>
-39 	3 	316 <fulltext/gif.p316.htm> 	  	Astronomy, Observations,
+June 7 
+39 , 2 , 315  ,   , Astronomy, Observations,
+Eclipses, Transits and Occultations, Lunar Eclipses 
+39 , 3 , 316  ,   , Astronomy, Observations,
 Eclipses, Transits and Occultations, Lunar Eclipse 1898 December 27
-<fulltext/gif.p316.htm>
-39 	4 	323 <fulltext/gif.p323.htm> 	  	Astronomy, Observations,
+
+39 , 4 , 323  ,   , Astronomy, Observations,
 Eclipses, Transits and Occultations, Transit of Venus
-<fulltext/gif.p323.htm>
-39 	5 	323 <fulltext/gif.p323.htm> 	  	Astronomy, Observations,
+
+39 , 5 , 323  ,   , Astronomy, Observations,
 Eclipses, Transits and Occultations, Jupiter Satellites
-<fulltext/gif.p323.htm>
-39 	6 	324 <fulltext/gif.p324.htm> 	  	Astronomy, Observations,
+
+39 , 6 , 324  ,   , Astronomy, Observations,
 Eclipses, Transits and Occultations, Stellar Occultations by the Moon
-and Jupiter <fulltext/gif.p324.htm>
-40 		326 <fulltext/gif.p326.htm> 	  	Astronomy, Observations, Parallaxes
-in the Solar System <fulltext/gif.p326.htm>
-41 	1 	326 <fulltext/gif.p326.htm> 	  	Astronomy, Observations, Stellar
+and Jupiter 
+40 , , 326  ,   , Astronomy, Observations, Parallaxes
+in the Solar System 
+41 , 1 , 326  ,   , Astronomy, Observations, Stellar
 Parallaxes and Proper Motions, Parallax Determination
-<fulltext/gif.p326.htm>
-41 	2 	329 <fulltext/gif.p329.htm> 	  	Astronomy, Observations, Stellar
+
+41 , 2 , 329  ,   , Astronomy, Observations, Stellar
 Parallaxes and Proper Motions, Proper Motions out of the Line of Sight
-<fulltext/gif.p329.htm>
-41 	3 	330 <fulltext/gif.p330.htm> 	  	Astronomy, Observations, Stellar
+
+41 , 3 , 330  ,   , Astronomy, Observations, Stellar
 Parallaxes and Proper Motions, Proper Motions in the Line of Sight
-<fulltext/gif.p330.htm>
+
 
 
 ------------------------------------------------------------------------
-	  	
-VIII 	  	Astrophysics, General Aspects, Theoretical Astrophysics,
-Instrumentation 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-42 	1 	334 <fulltext/gif.p334.htm> 	  	General Aspects, Theoretical
+,   , 
+VIII ,   , Astrophysics, General Aspects, Theoretical Astrophysics,
+Instrumentation , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+42 , 1 , 334  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Textbooks and Publications of General
-Interest, Sun and Planets <fulltext/gif.p334.htm>
-42 	2 	335 <fulltext/gif.p335.htm> 	  	General Aspects, Theoretical
+Interest, Sun and Planets 
+42 , 2 , 335  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Textbooks and Publications of General
-Interest, Comets and Meteors <fulltext/gif.p335.htm>
-42 	3 	337 <fulltext/gif.p337.htm> 	  	General Aspects, Theoretical
+Interest, Comets and Meteors 
+42 , 3 , 337  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Textbooks and Publications of General
-Interest, Miscellanea <fulltext/gif.p337.htm>
-43 		338 <fulltext/gif.p338.htm> 	  	General Aspects, Theoretical
+Interest, Miscellanea 
+43 , , 338  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Studies of Astrophysical
-Processes <fulltext/gif.p338.htm>
-43 	1 	338 <fulltext/gif.p338.htm> 	  	General Aspects, Theoretical
+Processes 
+43 , 1 , 338  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Studies of Astrophysical
 Processes, Temperature of the Sun and Gaseous Celestial Bodies
-<fulltext/gif.p338.htm>
-43 	2 	342 <fulltext/gif.p342.htm> 	  	General Aspects, Theoretical
+
+43 , 2 , 342  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Studies of Astrophysical
-Processes, Atmospheres of Planets and Satellites <fulltext/gif.p342.htm>
-43 	3 	342 <fulltext/gif.p342.htm> 	  	General Aspects, Theoretical
+Processes, Atmospheres of Planets and Satellites 
+43 , 3 , 342  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Studies of Astrophysical
-Processes, Density of Stars <fulltext/gif.p342.htm>
-44 		343 <fulltext/gif.p343.htm> 	  	General Aspects, Theoretical
+Processes, Density of Stars 
+44 , , 343  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Photometry and Spectral
-Analysis <fulltext/gif.p343.htm>
-44 	1 	343 <fulltext/gif.p343.htm> 	  	General Aspects, Theoretical
+Analysis 
+44 , 1 , 343  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Photometry and Spectral
-Analysis, Photometry <fulltext/gif.p343.htm>
-44 	2 	345 <fulltext/gif.p345.htm> 	  	General Aspects, Theoretical
+Analysis, Photometry 
+44 , 2 , 345  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Theoretical Photometry and Spectral
-Analysis, Spectral Analysis <fulltext/gif.p345.htm>
-45 		348 <fulltext/gif.p348.htm> 	  	General Aspects, Theoretical
+Analysis, Spectral Analysis 
+45 , , 348  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Photometric, Spectroscopic and Other
-Methods of Observation, Instruments <fulltext/gif.p348.htm>
-45 	1 	348 <fulltext/gif.p348.htm> 	  	General Aspects, Theoretical
+Methods of Observation, Instruments 
+45 , 1 , 348  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Photometric, Spectroscopic and Other
-Methods of Observation, Instruments, Photometry <fulltext/gif.p348.htm>
-45 	2 	349 <fulltext/gif.p349.htm> 	  	General Aspects, Theoretical
+Methods of Observation, Instruments, Photometry 
+45 , 2 , 349  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Photometric, Spectroscopic and Other
-Methods of Observation, Instruments, Spectroscopy <fulltext/gif.p349.htm>
-45 	3 	353 <fulltext/gif.p353.htm> 	  	General Aspects, Theoretical
+Methods of Observation, Instruments, Spectroscopy 
+45 , 3 , 353  ,   , General Aspects, Theoretical
 Astrophysics, Instrumentation, Photometric, Spectroscopic and Other
-Methods of Observation, Instruments, Photography <fulltext/gif.p353.htm>
+Methods of Observation, Instruments, Photography 
 
 
 ------------------------------------------------------------------------
-	  	
-IX 	  	Astrophysics, Sun 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-46 		353 <fulltext/gif.p353.htm> 	  	Astrophysics, Sun, General Aspects
-and Solar Surface <fulltext/gif.p353.htm>
-47 		354 <fulltext/gif.p354.htm> 	  	Astrophysics, Sun, Chromosphere and
-Corona <fulltext/gif.p354.htm>
-47 	1 	354 <fulltext/gif.p354.htm> 	  	Astrophysics, Sun, Chromosphere
-and Corona, Spectroscopy <fulltext/gif.p354.htm>
-47 	2 	356 <fulltext/gif.p356.htm> 	  	Astrophysics, Sun, Chromosphere
+,   , 
+IX ,   , Astrophysics, Sun , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+46 , , 353  ,   , Astrophysics, Sun, General Aspects
+and Solar Surface 
+47 , , 354  ,   , Astrophysics, Sun, Chromosphere and
+Corona 
+47 , 1 , 354  ,   , Astrophysics, Sun, Chromosphere
+and Corona, Spectroscopy 
+47 , 2 , 356  ,   , Astrophysics, Sun, Chromosphere
 and Corona, Total Solar Eclipse 1896 August 8, Total Solar Eclipse 1898
-January 22 <fulltext/gif.p356.htm>
-48 		359 <fulltext/gif.p359.htm> 	  	Astrophysics, Sun, Sunspots,
-Faculae, Prominences <fulltext/gif.p359.htm>
-48 	1 	359 <fulltext/gif.p359.htm> 	  	Astrophysics, Sun, Sunspots,
-Faculae, Prominences, Observations of Sunspots <fulltext/gif.p359.htm>
-48 	2 	364 <fulltext/gif.p364.htm> 	  	Astrophysics, Sun, Sunspots,
-Faculae, Prominences, Observations of Prominences <fulltext/gif.p364.htm>
-48 	3 	366 <fulltext/gif.p366.htm> 	  	Astrophysics, Sun, Sunspots,
+January 22 
+48 , , 359  ,   , Astrophysics, Sun, Sunspots,
+Faculae, Prominences 
+48 , 1 , 359  ,   , Astrophysics, Sun, Sunspots,
+Faculae, Prominences, Observations of Sunspots 
+48 , 2 , 364  ,   , Astrophysics, Sun, Sunspots,
+Faculae, Prominences, Observations of Prominences 
+48 , 3 , 366  ,   , Astrophysics, Sun, Sunspots,
 Faculae, Prominences, Frequency and Heliographic Position
-<fulltext/gif.p366.htm>
-48 	4 	371 <fulltext/gif.p371.htm> 	  	Astrophysics, Sun, Sunspots,
-Faculae, Prominences, Miscellanea <fulltext/gif.p371.htm>
-49 		373 <fulltext/gif.p373.htm> 	  	Astrophysics, Sun, Photometry and
-Spectroscopy <fulltext/gif.p373.htm>
-50 		377 <fulltext/gif.p377.htm> 	  	Astrophysics, Sun, Thermal,
-Electrical and Other Properties <fulltext/gif.p377.htm>
+
+48 , 4 , 371  ,   , Astrophysics, Sun, Sunspots,
+Faculae, Prominences, Miscellanea 
+49 , , 373  ,   , Astrophysics, Sun, Photometry and
+Spectroscopy 
+50 , , 377  ,   , Astrophysics, Sun, Thermal,
+Electrical and Other Properties 
 
 
 ------------------------------------------------------------------------
-	  	
-X 	  	Astrophysics, Planets and Satellites 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-51 		380 <fulltext/gif.p380.htm> 	  	Astrophysics, Planets and
-Satellites, Mercury and Venus <fulltext/gif.p380.htm>
-52 		382 <fulltext/gif.p382.htm> 	  	Astrophysics, Planets and
-Satellites, Earth, Aurorae, Zodiacal Light <fulltext/gif.p382.htm>
-52 	1 	382 <fulltext/gif.p382.htm> 	  	Astrophysics, Planets and
+,   , 
+X ,   , Astrophysics, Planets and Satellites , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+51 , , 380  ,   , Astrophysics, Planets and
+Satellites, Mercury and Venus 
+52 , , 382  ,   , Astrophysics, Planets and
+Satellites, Earth, Aurorae, Zodiacal Light 
+52 , 1 , 382  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Photometry
-<fulltext/gif.p382.htm>
-52 	2 	384 <fulltext/gif.p384.htm> 	  	Astrophysics, Planets and
+
+52 , 2 , 384  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Blue of the Sky
-<fulltext/gif.p384.htm>
-52 	3 	386 <fulltext/gif.p386.htm> 	  	Astrophysics, Planets and
+
+52 , 3 , 386  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Twilight Phenomena
-<fulltext/gif.p386.htm>
-52 	4 	388 <fulltext/gif.p388.htm> 	  	Astrophysics, Planets and
+
+52 , 4 , 388  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Aurorae, Theory
-<fulltext/gif.p388.htm>
-52 	5 	390 <fulltext/gif.p390.htm> 	  	Astrophysics, Planets and
+
+52 , 5 , 390  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Aurorae, Observations, 1898
-September 9 <fulltext/gif.p390.htm>
-52 	6 	392 <fulltext/gif.p392.htm> 	  	Astrophysics, Planets and
+September 9 
+52 , 6 , 392  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Zodiacal Light, Theory and
-Observations <fulltext/gif.p392.htm>
-52 	7 	393 <fulltext/gif.p393.htm> 	  	Astrophysics, Planets and
+Observations 
+52 , 7 , 393  ,   , Astrophysics, Planets and
 Satellites, Earth, Aurorae, Zodiacal Light, Gegenschein
-<fulltext/gif.p393.htm>
-53 		397 <fulltext/gif.p397.htm> 	  	Astrophysics, Planets and
-Satellites, Moon <fulltext/gif.p397.htm>
-53 	1 	397 <fulltext/gif.p397.htm> 	  	Astrophysics, Planets and
-Satellites, Moon, Theory <fulltext/gif.p397.htm>
-53 	2 	400 <fulltext/gif.p400.htm> 	  	Astrophysics, Planets and
-Satellites, Moon, Physical Observations <fulltext/gif.p400.htm>
-53 	3 	404 <fulltext/gif.p404.htm> 	  	Astrophysics, Planets and
-Satellites, Moon, Light and Temperature <fulltext/gif.p404.htm>
-53 	4 	405 <fulltext/gif.p405.htm> 	  	Astrophysics, Planets and
-Satellites, Moon, Atlases and Relief Maps <fulltext/gif.p405.htm>
-54 		408 <fulltext/gif.p408.htm> 	  	Astrophysics, Planets and
-Satellites, Mars and Satellites <fulltext/gif.p408.htm>
-54 	1 	408 <fulltext/gif.p408.htm> 	  	Astrophysics, Planets and
-Satellites, Mars and Satellites, Theory <fulltext/gif.p408.htm>
-54 	2 	411 <fulltext/gif.p411.htm> 	  	Astrophysics, Planets and
+
+53 , , 397  ,   , Astrophysics, Planets and
+Satellites, Moon 
+53 , 1 , 397  ,   , Astrophysics, Planets and
+Satellites, Moon, Theory 
+53 , 2 , 400  ,   , Astrophysics, Planets and
+Satellites, Moon, Physical Observations 
+53 , 3 , 404  ,   , Astrophysics, Planets and
+Satellites, Moon, Light and Temperature 
+53 , 4 , 405  ,   , Astrophysics, Planets and
+Satellites, Moon, Atlases and Relief Maps 
+54 , , 408  ,   , Astrophysics, Planets and
+Satellites, Mars and Satellites 
+54 , 1 , 408  ,   , Astrophysics, Planets and
+Satellites, Mars and Satellites, Theory 
+54 , 2 , 411  ,   , Astrophysics, Planets and
 Satellites, Mars and Satellites, Physical Observations, Opposition
-1898/1899 <fulltext/gif.p411.htm>
-54 	3 	417 <fulltext/gif.p417.htm> 	  	Astrophysics, Planets and
-Satellites, Mars and Satellites, Magnitudes <fulltext/gif.p417.htm>
-55 		418 <fulltext/gif.p418.htm> 	  	Astrophysics, Planets and
-Satellites, Minor Planets <fulltext/gif.p418.htm>
-56 		418 <fulltext/gif.p418.htm> 	  	Astrophysics, Planets and
-Satellites, Jupiter and Satellites <fulltext/gif.p418.htm>
-56 	1 	418 <fulltext/gif.p418.htm> 	  	Astrophysics, Planets and
+1898/1899 
+54 , 3 , 417  ,   , Astrophysics, Planets and
+Satellites, Mars and Satellites, Magnitudes 
+55 , , 418  ,   , Astrophysics, Planets and
+Satellites, Minor Planets 
+56 , , 418  ,   , Astrophysics, Planets and
+Satellites, Jupiter and Satellites 
+56 , 1 , 418  ,   , Astrophysics, Planets and
 Satellites, Jupiter and Satellites, Physical Observations, 1897-1899
-<fulltext/gif.p418.htm>
-56 	2 	422 <fulltext/gif.p422.htm> 	  	Astrophysics, Planets and
+
+56 , 2 , 422  ,   , Astrophysics, Planets and
 Satellites, Jupiter and Satellites, Red Spot and Belts
-<fulltext/gif.p422.htm>
-56 	3 	426 <fulltext/gif.p426.htm> 	  	Astrophysics, Planets and
+
+56 , 3 , 426  ,   , Astrophysics, Planets and
 Satellites, Jupiter and Satellites, Jupiter Satellites
-<fulltext/gif.p426.htm>
-57 		427 <fulltext/gif.p427.htm> 	  	Astrophysics, Planets and
-Satellites, Saturn with Ring- and Satellite System <fulltext/gif.p427.htm>
-57 	1 	427 <fulltext/gif.p427.htm> 	  	Astrophysics, Planets and
+
+57 , , 427  ,   , Astrophysics, Planets and
+Satellites, Saturn with Ring- and Satellite System 
+57 , 1 , 427  ,   , Astrophysics, Planets and
 Satellites, Saturn with Ring- and Satellite System, Saturn System
-<fulltext/gif.p427.htm>
-57 	2 	428 <fulltext/gif.p428.htm> 	  	Astrophysics, Planets and
+
+57 , 2 , 428  ,   , Astrophysics, Planets and
 Satellites, Saturn with Ring- and Satellite System, Saturn Rings
-<fulltext/gif.p428.htm>
-57 	3 	429 <fulltext/gif.p429.htm> 	  	Astrophysics, Planets and
+
+57 , 3 , 429  ,   , Astrophysics, Planets and
 Satellites, Saturn with Ring- and Satellite System, Saturn Satellites
-<fulltext/gif.p429.htm>
-58 		430 <fulltext/gif.p430.htm> 	  	Astrophysics, Planets and
-Satellites, Uranus and Neptune with Satellites <fulltext/gif.p430.htm>
+
+58 , , 430  ,   , Astrophysics, Planets and
+Satellites, Uranus and Neptune with Satellites 
 
 
 ------------------------------------------------------------------------
-	  	
-XI 	  	Astrophysics, Comets and Meteors 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-59 		430 <fulltext/gif.p430.htm> 	  	Astrophysics, Comets and Meteors,
-Figures of Comets, Comet 1899 I Swift <fulltext/gif.p430.htm>
-60 		432 <fulltext/gif.p432.htm> 	  	Astrophysics, Comets and Meteors,
+,   , 
+XI ,   , Astrophysics, Comets and Meteors , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+59 , , 430  ,   , Astrophysics, Comets and Meteors,
+Figures of Comets, Comet 1899 I Swift 
+60 , , 432  ,   , Astrophysics, Comets and Meteors,
 Photometric, Spectroscopic and Other Observations of Comets
-<fulltext/gif.p432.htm>
-61 		434 <fulltext/gif.p434.htm> 	  	Astrophysics, Comets and Meteors,
-Fireballs, Meteors and Meteorites <fulltext/gif.p434.htm>
-61 	1 	434 <fulltext/gif.p434.htm> 	  	Astrophysics, Comets and Meteors,
+
+61 , , 434  ,   , Astrophysics, Comets and Meteors,
+Fireballs, Meteors and Meteorites 
+61 , 1 , 434  ,   , Astrophysics, Comets and Meteors,
 Fireballs, Meteors and Meteorites, Observations of Individual Fireballs
-<fulltext/gif.p434.htm>
-61 	2 	437 <fulltext/gif.p437.htm> 	  	Astrophysics, Comets and Meteors,
-Fireballs, Meteors and Meteorites, Meteorites <fulltext/gif.p437.htm>
-61 	3 	441 <fulltext/gif.p441.htm> 	  	Astrophysics, Comets and Meteors,
+
+61 , 2 , 437  ,   , Astrophysics, Comets and Meteors,
+Fireballs, Meteors and Meteorites, Meteorites 
+61 , 3 , 441  ,   , Astrophysics, Comets and Meteors,
 Fireballs, Meteors and Meteorites, Exceptional Meteor Apparitions
-<fulltext/gif.p441.htm>
+
 
 
 ------------------------------------------------------------------------
-	  	
-XII 	  	Astrophysics, Stars 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-62 		442 <fulltext/gif.p442.htm> 	  	Astrophysics, Stars, Photometric
+,   , 
+XII ,   , Astrophysics, Stars , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+62 , , 442  ,   , Astrophysics, Stars, Photometric
 Observations of Single- and Multiple Stars, Photometric Catalogues
-<fulltext/gif.p442.htm>
-63 		445 <fulltext/gif.p445.htm> 	  	Astrophysics, Stars, Spectroscopic
-and Other Observations of Single- and Multiple Stars, Catalogue
-Compilation <fulltext/gif.p445.htm>
-63 	1 	445 <fulltext/gif.p445.htm> 	  	Astrophysics, Stars,
-Spectroscopic and Other Observations of Single- and Multiple Stars,
-Catalogue Compilation, Spectroscopy <fulltext/gif.p445.htm>
-63 	2 	450 <fulltext/gif.p450.htm> 	  	Astrophysics, Stars,
-Spectroscopic and Other Observations of Single- and Multiple Stars,
-Catalogue Compilation, Thermal Radiation and Colors <fulltext/gif.p450.htm>
-64 		451 <fulltext/gif.p451.htm> 	  	Astrophysics, Stars, Variables and
-Novae, Light Variation, Spectroscopic Properties, Catalogues
-<fulltext/gif.p451.htm>
-64 	1 	451 <fulltext/gif.p451.htm> 	  	Astrophysics, Stars, Variables
-and Novae, Light Variation, Spectroscopic Properties, Catalogues,
-Observations <fulltext/gif.p451.htm>
-64 	2 	460 <fulltext/gif.p460.htm> 	  	Astrophysics, Stars, Variables
-and Novae, Light Variation, Spectroscopic Properties, Catalogues,
-Omicron Ceti <fulltext/gif.p460.htm>
-64 	3 	462 <fulltext/gif.p462.htm> 	  	Astrophysics, Stars, Variables
-and Novae, Light Variation, Spectroscopic Properties, Catalogues, New
-Variables <fulltext/gif.p462.htm>
-64 	4 	468 <fulltext/gif.p468.htm> 	  	Astrophysics, Stars, Variables
-and Novae, Light Variation, Spectroscopic Properties, Catalogues,
-Spectroscopy and Theory <fulltext/gif.p468.htm>
-64 	5 	473 <fulltext/gif.p473.htm> 	  	Astrophysics, Stars, Variables
-and Novae, Light Variation, Spectroscopic Properties, Catalogues,
-Catalogues, Ephemerides <fulltext/gif.p473.htm>
-65 		475 <fulltext/gif.p475.htm> 	  	Astrophysics, Stars, Imaging of the
-Milky Way, Star Clusters and Nebulae <fulltext/gif.p475.htm>
-66 		480 <fulltext/gif.p480.htm> 	  	Astrophysics, Stars, Photometric,
-Spectroscopic and Other Observations of the Milky Way, Star Clusters and
-Nebulae <fulltext/gif.p480.htm>
 
-	  	
-	  	Geodesy and Nautical Astronomy 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-67 		484 <fulltext/gif.p484.htm> 	  	Geodesy and Nautical Astronomy,
+63 , , 445  ,   , Astrophysics, Stars, Spectroscopic
+and Other Observations of Single- and Multiple Stars, Catalogue
+Compilation 
+63 , 1 , 445  ,   , Astrophysics, Stars,
+Spectroscopic and Other Observations of Single- and Multiple Stars,
+Catalogue Compilation, Spectroscopy 
+63 , 2 , 450  ,   , Astrophysics, Stars,
+Spectroscopic and Other Observations of Single- and Multiple Stars,
+Catalogue Compilation, Thermal Radiation and Colors 
+64 , , 451  ,   , Astrophysics, Stars, Variables and
+Novae, Light Variation, Spectroscopic Properties, Catalogues
+
+64 , 1 , 451  ,   , Astrophysics, Stars, Variables
+and Novae, Light Variation, Spectroscopic Properties, Catalogues,
+Observations 
+64 , 2 , 460  ,   , Astrophysics, Stars, Variables
+and Novae, Light Variation, Spectroscopic Properties, Catalogues,
+Omicron Ceti 
+64 , 3 , 462  ,   , Astrophysics, Stars, Variables
+and Novae, Light Variation, Spectroscopic Properties, Catalogues, New
+Variables 
+64 , 4 , 468  ,   , Astrophysics, Stars, Variables
+and Novae, Light Variation, Spectroscopic Properties, Catalogues,
+Spectroscopy and Theory 
+64 , 5 , 473  ,   , Astrophysics, Stars, Variables
+and Novae, Light Variation, Spectroscopic Properties, Catalogues,
+Catalogues, Ephemerides 
+65 , , 475  ,   , Astrophysics, Stars, Imaging of the
+Milky Way, Star Clusters and Nebulae 
+66 , , 480  ,   , Astrophysics, Stars, Photometric,
+Spectroscopic and Other Observations of the Milky Way, Star Clusters and
+Nebulae 
+
+,   , 
+,   , Geodesy and Nautical Astronomy , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+67 , , 484  ,   , Geodesy and Nautical Astronomy,
 Textbooks, Tables, and Publications of General Interest
-<fulltext/gif.p484.htm>
-67 	1 	484 <fulltext/gif.p484.htm> 	  	Geodesy and Nautical Astronomy,
+
+67 , 1 , 484  ,   , Geodesy and Nautical Astronomy,
 Textbooks, Tables, and Publications of General Interest, Textbooks,
-Tables <fulltext/gif.p484.htm>
-67 	2 	488 <fulltext/gif.p488.htm> 	  	Geodesy and Nautical Astronomy,
+Tables 
+67 , 2 , 488  ,   , Geodesy and Nautical Astronomy,
 Textbooks, Tables, and Publications of General Interest, Reports on
-Surveying, Triangulation <fulltext/gif.p488.htm>
-68 		492 <fulltext/gif.p492.htm> 	  	Geodesy and Nautical Astronomy,
-Earth Figure <fulltext/gif.p492.htm>
-69 		494 <fulltext/gif.p494.htm> 	  	Geodesy and Nautical Astronomy,
-Geodetic Instruments and their Use <fulltext/gif.p494.htm>
-69 	1 	494 <fulltext/gif.p494.htm> 	  	Geodesy and Nautical Astronomy,
+Surveying, Triangulation 
+68 , , 492  ,   , Geodesy and Nautical Astronomy,
+Earth Figure 
+69 , , 494  ,   , Geodesy and Nautical Astronomy,
+Geodetic Instruments and their Use 
+69 , 1 , 494  ,   , Geodesy and Nautical Astronomy,
 Geodetic Instruments and their Use, Geodetic Measuring Devices,
-Theodolites <fulltext/gif.p494.htm>
-69 	2 	498 <fulltext/gif.p498.htm> 	  	Geodesy and Nautical Astronomy,
+Theodolites 
+69 , 2 , 498  ,   , Geodesy and Nautical Astronomy,
 Geodetic Instruments and their Use, Devices for Density- and Gravity
-Measurements <fulltext/gif.p498.htm>
-69 	3 	500 <fulltext/gif.p500.htm> 	  	Geodesy and Nautical Astronomy,
-Geodetic Instruments and their Use, Plotters <fulltext/gif.p500.htm>
-70 	1 	502 <fulltext/gif.p502.htm> 	  	Geodesy and Nautical Astronomy,
-Surveying <fulltext/gif.p502.htm>
-70 	2 	504 <fulltext/gif.p504.htm> 	  	Geodesy and Nautical Astronomy,
-Nautics <fulltext/gif.p504.htm>
-70 	3 	506 <fulltext/gif.p506.htm> 	  	Geodesy and Nautical Astronomy,
-Tides <fulltext/gif.p506.htm>
-71 		508 <fulltext/gif.p508.htm> 	  	Geodesy and Nautical Astronomy,
-Primary Triangulation <fulltext/gif.p508.htm>
-72 		509 <fulltext/gif.p509.htm> 	  	Geodesy and Nautical Astronomy,
-Coordinates of Geodetic Points <fulltext/gif.p509.htm>
-72 	1 	509 <fulltext/gif.p509.htm> 	  	Geodesy and Nautical Astronomy,
+Measurements 
+69 , 3 , 500  ,   , Geodesy and Nautical Astronomy,
+Geodetic Instruments and their Use, Plotters 
+70 , 1 , 502  ,   , Geodesy and Nautical Astronomy,
+Surveying 
+70 , 2 , 504  ,   , Geodesy and Nautical Astronomy,
+Nautics 
+70 , 3 , 506  ,   , Geodesy and Nautical Astronomy,
+Tides 
+71 , , 508  ,   , Geodesy and Nautical Astronomy,
+Primary Triangulation 
+72 , , 509  ,   , Geodesy and Nautical Astronomy,
+Coordinates of Geodetic Points 
+72 , 1 , 509  ,   , Geodesy and Nautical Astronomy,
 Coordinates of Geodetic Points, General Aspects and Theory
-<fulltext/gif.p509.htm>
-72 	2 	511 <fulltext/gif.p511.htm> 	  	Geodesy and Nautical Astronomy,
-Coordinates of Geodetic Points, Observations <fulltext/gif.p511.htm>
-73 		514 <fulltext/gif.p514.htm> 	  	Geodesy and Nautical Astronomy,
-Nivellements <fulltext/gif.p514.htm>
-74 		517 <fulltext/gif.p517.htm> 	  	Geodesy and Nautical Astronomy,
-Gravity Measurements <fulltext/gif.p517.htm>
+
+72 , 2 , 511  ,   , Geodesy and Nautical Astronomy,
+Coordinates of Geodetic Points, Observations 
+73 , , 514  ,   , Geodesy and Nautical Astronomy,
+Nivellements 
+74 , , 517  ,   , Geodesy and Nautical Astronomy,
+Gravity Measurements 
 
 
 ------------------------------------------------------------------------
-	  	
-	  	Indexes 	Back to the top <#B>
-	  	
-§ 	Sect. 	Page 		
-		522 <fulltext/gif.p522.htm> 	  	Appendix: Miscellanea
-<fulltext/gif.p522.htm>
-		524 <fulltext/gif.p524.htm> 	  	Author Index <fulltext/gif.p524.htm>
-		537 <fulltext/gif.p537.htm> 	  	Errata <fulltext/gif.p537.htm>
+,   , 
+,   , Indexes , Back to the top 
+,   , 
+§ , Sect. , Page , , 
+, , 522  ,   , Appendix: Miscellanea
+
+, , 524  ,   , Author Index 
+, , 537  ,   , Errata 
 
 ------------------------------------------------------------------------
 
 Letzte Änderung/Updated: 08.02.1999
 
-webmaster@ ari.uni-heidelberg.de <mailto:webmaster@ari.uni-heidelberg.de>
+webmaster@ ari.uni-heidelberg.de 
 

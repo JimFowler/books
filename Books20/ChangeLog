@@ -1,3 +1,21 @@
+2011-11-24  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Auctions.txt: Added Auction House web pages.
+
+2011-11-19  Jim Fowler  <jrf@Biblion>
+
+	* Data/Ajb: added ajb63_books.[docx&txt] and
+	ajb62_books.[docx&txt].  Modified contents.c to replace TAB with
+	CommaSpace. Created ./testing/.gitignore.
+
+2011-11-13  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/contents.c: Wrote contents.c to remove HTML
+	tags fomr AJB table of contents files
+
+	* Data/Ajb/ajb63_books.docx: finally proof read AJB 63 books.
+	Transfered the file from girginaku to biblion.
+	
 2011-10-20  Jim Fowler  <jrf@Biblion>
 
 	* Git: converted version control from svn to git. 'Master'
@@ -22,7 +40,7 @@
 	
 2010-10-31  Jim Fowler  <jrf@Biblion>
 
-	* Commit files to svn.  It has been 18 months since the list
+	* Commit files to svn.  It has been 18 months since the last
 	commit.  Need to do this every night that I make changes
 
 2010-05-21  Jim Fowler  <jrf@Biblion>

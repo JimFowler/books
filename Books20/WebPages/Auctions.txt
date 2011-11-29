@@ -1,0 +1,7 @@
+<h3>Auction Houses</h3>
+<br><a href="http://www.christies.com/">Christies</a>
+<br><a href="http://www.sothebys.com/">Sotheby</a>
+<br><a href="http://www.swanngalleries.com/">Swann</a>
+<br><a href="http://www.ha.com/">Heritage</a>
+<br><br>More...
+
