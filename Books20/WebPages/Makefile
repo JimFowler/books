@@ -28,7 +28,7 @@
 
 PRINTER = lp -Phome
 
-#PUBLICWEB = /home/jrf/public_html
+PUBLICHTML = /home/jrf/public_html
 PUBLICWEB = /var/www/jrf
 
 PRIVATEWEB = /home/jrf/private_html
@@ -56,6 +56,29 @@ default:
 	@echo "    eod: end of day, clean up and create tar file."
 	@echo ""
 
+#
+# HTML
+#
+#  Normally the pages are installed as php scripts and the associated
+# private text files. However, on some of my machines, primarily my
+# Mac Book, I don't have a web server running. In these cases I install
+# the HTML pages and read them as file:///...
+#
+install_html:
+	@echo "Installing HTML pages in ${PUBLICHTML}"
+	@if [ ! -d .tmp ]; then \
+		mkdir .tmp ; \
+	fi
+	@for page in ${PUBLICWEBPAGES}; do \
+	    if `echo $${page} | grep --silent php`; then \
+		basepage=`basename $${page} \.php` ; \
+		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
+		install --mode=444 --preserve-timestamps ./.tmp/$${basepage}.html ${PUBLICHTML} ; \
+	    else \
+		install --mode=444 --preserve-timestamps $${page} ${PUBLICHTML} ; \
+	    fi ; \
+	 done
+	@rm -rf ./.tmp
 
 #
 # Install the pages

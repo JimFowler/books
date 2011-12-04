@@ -1,3 +1,14 @@
+2011-12-01  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Makefile (install_html): Created install_html target
+	for make. This builds html versions of my webpages instead of the
+	php versions.
+
+2011-11-30  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Collecting.txt: Added bookfinder.com to collecting
+	list.
+
 2011-11-24  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Auctions.txt: Added Auction House web pages.
