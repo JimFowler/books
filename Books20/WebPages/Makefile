@@ -28,10 +28,10 @@
 
 PRINTER = lp -Phome
 
-PUBLICHTML = /home/jrf/public_html
+PUBLICHTML = ~/public_html
 PUBLICWEB = /var/www/jrf
 
-PRIVATEWEB = /home/jrf/private_html
+PRIVATEWEB = ~/private_html
 
 PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
 	Bibliographies.php BlogLists.php Auction.php robots.txt
@@ -64,8 +64,12 @@ default:
 # Mac Book, I don't have a web server running. In these cases I install
 # the HTML pages and read them as file:///...
 #
-install_html:
+install_html: install_private
 	@echo "Installing HTML pages in ${PUBLICHTML}"
+	@if [ ! -d ${PUBLICHTML} ]; then \
+		echo "Making ${PUBLICHTML}"; \
+		mkdir ${PUBLICHTML}; \
+	fi
 	@if [ ! -d .tmp ]; then \
 		mkdir .tmp ; \
 	fi
@@ -73,9 +77,9 @@ install_html:
 	    if `echo $${page} | grep --silent php`; then \
 		basepage=`basename $${page} \.php` ; \
 		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
-		install --mode=444 --preserve-timestamps ./.tmp/$${basepage}.html ${PUBLICHTML} ; \
+		install -m 0444 -p ./.tmp/$${basepage}.html ${PUBLICHTML} ; \
 	    else \
-		install --mode=444 --preserve-timestamps $${page} ${PUBLICHTML} ; \
+		install -m 0444 -p $${page} ${PUBLICHTML} ; \
 	    fi ; \
 	 done
 	@rm -rf ./.tmp
@@ -91,8 +95,8 @@ install_private: ${PRIVATEFILES}
 		echo "Making ${PRIVATEWEB}"; \
 		mkdir ${PRIVATEWEB}; \
 	fi
-	install --mode=444 --preserve-timestamps ${PRIVATEFILES} ${PRIVATEWEB}
-	install --mode=444 --preserve-timestamps ${PRIVATEPHP} ${PRIVATEWEB}
+	install -m 0444 -p ${PRIVATEFILES} ${PRIVATEWEB}
+	install -m 0444 -p ${PRIVATEPHP} ${PRIVATEWEB}
 
 install_public: ${PUBLICWEBPAGES}
 	@echo "Installing public web files"

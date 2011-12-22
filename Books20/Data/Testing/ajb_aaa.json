@@ -1,4 +1,4 @@
-{
+ {
   "LiteratureYear" : null,
   "PublicationYear" : null,
   "Comment" : "Some profound statement about the volume",
@@ -28,10 +28,45 @@
               "Entries" : null,
               "Books" : null
             }
-          ] # end of subSections array
+          ]
         }
-      ] # end of Sections array
+      ]
     }
-  ] # end of Parts array
+  ]
+}
+
+#
+# Anoher way of building the JSON object. This is a dictionary of dictionaries
+# still with the Parts:Section:Subsection hierarchy
+#
+ aj = {
+  "LiteratureYear" : null,
+  "PublicationYear" : null,
+  "Comment" : "Some profound statement about the volume",
+  "Previous" : "AAA 70",
+  "Type" : "AAA",
+  "VolumeNumber" : 71,
+  "VolumeName" : "AAA 71",
+  "Next" : "AAA 72",
+  "Part_NN" :  {    # Multiple parts...
+      "PartNumber" : null,
+      "PartName" : null,
+      "Previous" : "1",
+      "Next" : "1",
+      "Section_NN" : {   # ...have multiple sections...
+          "SectionNumber" : 18,
+          "SectionName" : null,
+          "Previous" : "18",
+          "Next" : "18",
+          "subSection_NN" : { # ...which may have multiple subsections.
+              "subSectionNumber" : null,
+              "Previous" : 0,
+              "Next" : 1,
+              "subSectionName" : "Atmospheres",
+              "Entries" : null,
+              "Books" : null
+            }
+        }
+    }
 }
 
