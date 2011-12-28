@@ -1,5 +1,5 @@
 #
-# Makefile
+# Makefile.am
 #
 #   This makefile contains the instructions for working with the
 #   webpages images for the book "Some Important Books in Astronomy and
@@ -15,16 +15,9 @@
 #   permission of the author.
 # 
 #
-#   The last known changes were checked in by $Author$
-#   in revision $LastChangedRevision$
-#   on $Date$
-#
-
-PRINTER = lp -Phome
-
 PUBLICIMAGES = bookrow.jpg
 
-PUBLICWEB = /home/jrf/public_html
+PUBLICWEB = $(prefix)/public_html
 
 install: install_images
 
@@ -34,13 +27,6 @@ install_images: ${PUBLICIMAGES}
 		mkdir ${PUBLICWEB}/Images; \
 	fi
 	install --mode=444 --preserve-timestamps ${PUBLICIMAGES} ${PUBLICWEB}/Images
-
-#
-# clean up the mess
-#
-veryclean:
-	rm -f *~ core
-
 
 #
 # end of Makefile

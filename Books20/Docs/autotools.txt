@@ -1,0 +1,30 @@
+
+2011-12-28 14:04:00
+
+To switch to autotools
+
+create autotools branch in git
+  (insure current mods are committed)
+  git branch autotools
+  git checkout autotools
+
+create basic Makefile.am
+create basic configure.in
+aclocal (create aclocal.m4)
+autoconf (create configure from configure.in)
+automake --add-missing
+  ( added ./missing, ./install-sh, and COPYING
+  (Do we want the GNU Public License?)
+  (generated Makefile.in)
+run ./configure
+  (generates Makefile)
+
+remember to delete the old Makefile in git
+  git rm Makefile
+ create Docs/Makefile.am
+    Manuscript/Makefile.am (need to install TeX/Latex on the Mac Book)
+    WebPages/Makefile.am
+    WebPages/Images/Makefile.am
+
+Update configure.in
+rerun autoconf and automake

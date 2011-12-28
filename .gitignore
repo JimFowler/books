@@ -1,2 +1,12 @@
 *~
 .*~
+Makefile.in
+config.status
+config.log
+config.cache
+autom4te.cache
+configure
+Books20/Makefile
+Books20/*/Makefile
+Books20/WebPages/Images/Makefile
+Makefile.orig
