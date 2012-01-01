@@ -17,6 +17,11 @@
 
 	* ../.gitignore: add Makefile and Makefile.in to the ignore file.
 
+2011-12-22    <jrf@liberty.as.utexas.edu>
+
+	* ../README: added README file and checked Books20 and Collection
+	into git@github.com/JimFowler/books.git
+
 2011-12-01  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Makefile (install_html): Created install_html target
@@ -42,7 +47,7 @@
 2011-11-13  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/contents.c: Wrote contents.c to remove HTML
-	tags fomr AJB table of contents files
+	tags from AJB table of contents files
 
 	* Data/Ajb/ajb63_books.docx: finally proof read AJB 63 books.
 	Transfered the file from girginaku to biblion.
