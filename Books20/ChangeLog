@@ -1,3 +1,10 @@
+2012-01-01  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
+
+	* Webpages: modified all php scripts to 'include' rather than
+	require. Changed to relative path name for the include file.
+	Committed autotools branch and merged with master. Pushed to
+	origin and github.
+
 2011-12-28  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
 
 	* autotools: created autotools branch.
