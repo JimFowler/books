@@ -1,4 +1,4 @@
-<?php require '/home/jrf/private_html/phpBooks.inc';?>
+<?php include 'phpBooks.inc';?>
 <html> 
  <head>
  <Title>Auction Houses</Title>

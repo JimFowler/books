@@ -13,9 +13,13 @@ dnl   reproduced, stored in a retrival system, or transmitted
 dnl   in any form or by any means, electronic, mechanical,
 dnl   photocopying, recording, or otherwise, without prior written
 dnl   permission of the author.
-dnl 
-AC_INIT(AUTHORS)
+dnl
+
+AC_INIT()
 AM_INIT_AUTOMAKE(Books, 1.0)
+
+AC_PROG_INSTALL()
+
 AC_OUTPUT(Makefile
       Docs/Makefile
       Manuscript/Makefile

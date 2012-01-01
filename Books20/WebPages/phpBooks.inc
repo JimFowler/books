@@ -76,8 +76,10 @@ function LoadFile( $inName ) {
 
 
 function LoadPrivateFile( $inName ) {
-  $privateName = '/home/jrf/private_html/' . $inName;
-  return LoadFile( $privateName );
+  $privateName = '../private_html/' . $inName;
+  /*  return LoadFile( $privateName );*/
+  include( $inName );
+  return;
 }
 
 

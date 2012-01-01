@@ -19,6 +19,8 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = bibtex
 
+PUBLICHTML = $(prefix)/public_html
+
 #
 # Basic TeX processing
 #
@@ -45,4 +47,10 @@ Notes:
 #
 lines:
 	wc ${TEXFILES} ${BIBFILES} Makefile
+#
+# Installation
+#
+install_pdf: DatabaseDesign
+	@echo "Installing PDF files in ${PUBLICHTML}"
+	install -m 444 -p ./DatabaseDesign.pdf $(PUBLICHTML)
 

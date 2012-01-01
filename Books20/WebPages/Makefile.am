@@ -37,7 +37,6 @@ PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt \
 	Resources.txt SociologyScience.txt ToDoList.txt Tools.txt \
 	BibSources.txt BibTools.txt BibRefs.txt BlogLists.txt Auctions.txt
-
 PRIVATEPHP = phpBooks.inc
 
 SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}

@@ -26,7 +26,7 @@ install_images: ${PUBLICIMAGES}
 		echo "Making ${PUBLICWEB}/Images"; \
 		mkdir ${PUBLICWEB}/Images; \
 	fi
-	install --mode=444 --preserve-timestamps ${PUBLICIMAGES} ${PUBLICWEB}/Images
+	install -m 444 -p ${PUBLICIMAGES} ${PUBLICWEB}/Images
 
 #
 # end of Makefile
