@@ -50,10 +50,10 @@ SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}
 # the HTML pages and read them as file:///...
 #
 install_html: install_private install_images
-	@echo "Installing HTML pages in ${PUBLICHTML}"
-	@if [ ! -d ${PUBLICHTML} ]; then \
-		echo "Making ${PUBLICHTML}"; \
-		mkdir ${PUBLICHTML}; \
+	@echo "Installing HTML pages in ${htmldir}"
+	@if [ ! -d ${htmldir} ]; then \
+		echo "Making ${htmldir}"; \
+		mkdir ${htmldir}; \
 	fi
 	@if [ ! -d .tmp ]; then \
 		mkdir .tmp ; \
@@ -62,9 +62,9 @@ install_html: install_private install_images
 	    if `echo $${page} | grep --silent php`; then \
 		basepage=`basename $${page} \.php` ; \
 		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
-		install -m 0444 -p ./.tmp/$${basepage}.html ${PUBLICHTML} ; \
+		install -m 0444 -p ./.tmp/$${basepage}.html ${htmldir} ; \
 	    else \
-		install -m 0444 -p $${page} ${PUBLICHTML} ; \
+		install -m 0444 -p $${page} ${htmldir} ; \
 	    fi ; \
 	 done
 	@rm -rf ./.tmp
@@ -85,11 +85,11 @@ install_private: ${PRIVATEFILES}
 
 install_public: ${PUBLICWEBPAGES}
 	@echo "Installing public web files"
-	@if [ ! -d ${PUBLICWEB} ]; then \
-		echo "Making ${PUBLICWEB}"; \
-		mkdir ${PUBLICWEB}; \
+	@if [ ! -d ${htmldir} ]; then \
+		echo "Making ${htmldir}"; \
+		mkdir ${htmldir}; \
 	fi
-	install --mode=444 --preserve-timestamps ${PUBLICWEBPAGES} ${PUBLICWEB}
+	install --mode=444 --preserve-timestamps ${PUBLICWEBPAGES} ${htmldir}
 
 install_images:
 	@echo "Installing Images"

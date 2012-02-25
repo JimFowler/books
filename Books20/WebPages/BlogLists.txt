@@ -27,7 +27,6 @@
   <a href="http://www.libology.com?">Libology</a>
   <br><a href="http://www.frbr.org/">FRBR Blog</a>
   <br><a href="http://www.dlib.org/">D-Lib Magazine</a>
-  <br><a href="http://shelfcheck.blogspot.com/">Shelf Check</a>
 </td>
 </tr>
 
@@ -40,7 +39,15 @@
   <a href="http://www.dancohen.org/">Digital Humanities</a>
 </td>
 
+<td width=250 height=250 valign="Top">
+  <h3>Just Plain Blogs</h3>
+
+  <a href="http://shelfcheck.blogspot.com/">Shelf Check</a>
+  <br><a href="http://bookshelfporn.com">Book Shelf Porn</a>
+</td>
+
 <td>
+<iframe src="http://player.vimeo.com/video/35404908?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/35404908">The Fantastic Flying Books of Mr. Morris Lessmore</a> from <a href="http://vimeo.com/moonbot">Moonbot Studios</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
   <br><br>Soon to be more...
 </td>
 </tr>

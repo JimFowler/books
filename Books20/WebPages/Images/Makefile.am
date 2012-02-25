@@ -22,11 +22,11 @@ PUBLICWEB = $(prefix)/public_html
 install: install_images
 
 install_images: ${PUBLICIMAGES}
-	@if [ ! -d ${PUBLICWEB}/Images ]; then \
-		echo "Making ${PUBLICWEB}/Images"; \
-		mkdir ${PUBLICWEB}/Images; \
+	@if [ ! -d ${htmldir}/Images ]; then \
+		echo "Making ${htmldir}/Images"; \
+		mkdir ${htmldir}/Images; \
 	fi
-	install -m 444 -p ${PUBLICIMAGES} ${PUBLICWEB}/Images
+	install -m 444 -p ${PUBLICIMAGES} ${htmldir}/Images
 
 #
 # end of Makefile

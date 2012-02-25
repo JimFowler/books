@@ -1,3 +1,15 @@
+2012-02-23  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Collecting.txt: Added rarebooksdigest.com to the
+	collecting page.
+
+2012-02-05  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/Makefile.am: switched installation directory for
+	the public web pages from $(PUBLICHTML) to $(htmldir). The
+	$(htmldir) is a configure variable so I can specify it on
+	the command line separately from $(prefix).
+
 2012-01-01  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
 
 	* Webpages: modified all php scripts to 'include' rather than
