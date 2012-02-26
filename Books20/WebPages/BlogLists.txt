@@ -10,7 +10,7 @@
   <br><a href="http://bookhuntersholiday.wordpress.com/">
        Book Hunters Holiday</a>
   <br><a href="http://oakknollbooks.wordpress.com/">Oak Knoll Book Blog</a>
-  <br><a href="http://booktwo.org/">Book Two</a>
+  <br><a href="http://bookmanslog.blogspot.com/">Bookmans Log</a>
 </td>
 
 
@@ -47,7 +47,6 @@
 </td>
 
 <td>
-<iframe src="http://player.vimeo.com/video/35404908?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/35404908">The Fantastic Flying Books of Mr. Morris Lessmore</a> from <a href="http://vimeo.com/moonbot">Moonbot Studios</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
   <br><br>Soon to be more...
 </td>
 </tr>
