@@ -1,5 +1,7 @@
 <h3>Collecting</h3>
-<a href="http://www.bookfinder.com/">Book Finder</a>
+<a href="http://www.ubka.uni-karlsruhe.de/kvk_en.html">Karlsruhe Virtual Catalogue<a>
+<br><a href="http://www.vialibri.net/library_search.php">Via Libri</a>
+<br><a href="http://www.bookfinder.com/">Book Finder</a>
 <br><a href="http://www.abebooks.com/">Advanced Book Exchange</a>
 <br><a href="http://www.ilab.org/index.php">Int. Leag. Antiq. Bksellers</a>
 <br><a href="http://www.biblio.com/">Biblio</a>
