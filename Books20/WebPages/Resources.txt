@@ -1,7 +1,9 @@
 <h3>Resources</h3>
 <a href="./BlogLists.php">Blog Lists...</a>
+<br><a href="http://adsabs.harvard.edu/">Astrophysical Data System</a>
 <br><a href="http://books.google.com/">Google Books</a>
 <br><a href="http://www.usedbooks101.com/">Used Books 101</a>
 <br><a href="http://www.levengers.com/">Levengers</a>
 <br><a href="http://www.readerscatalog.com/">The Readers Catalog</a>
+
 <br>More...

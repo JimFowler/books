@@ -6,6 +6,10 @@ config.log
 config.cache
 autom4te.cache
 configure
+aclocal.m4
+install-sh
+missing
+COPYING
 Books20/Makefile
 Books20/*/Makefile
 Books20/WebPages/Images/Makefile

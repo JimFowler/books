@@ -19,7 +19,7 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = bibtex
 
-PUBLICHTML = $(prefix)/public_html
+PUBLICHTML = $(htmldir)
 
 #
 # Basic TeX processing
