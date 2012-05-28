@@ -1,3 +1,11 @@
+2012-05-28  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
+
+	* autotools: Removed aclocal.m4, install.sh, COPYING, and missing
+	from git tracking.  These files were different on each of my
+	machines and it was difficult to push/pull to the repositories.
+
+	* Docs/TimeLine.ods: updated some entries.
+	xs
 2012-02-23  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Collecting.txt: Added rarebooksdigest.com to the
