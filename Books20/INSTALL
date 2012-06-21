@@ -25,7 +25,7 @@ Commands to do installation:
 
  on Liberty
     automake            # if changes to any Makefile.am
-    ./configure --htmldir=/home/het/jrf/public_html
+    ./configure --prefix=/home/het/jrf --htmldir=/home/het/jrf/public_html
     cd Webpages
     make install_html
 
