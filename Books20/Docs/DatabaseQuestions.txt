@@ -15,9 +15,27 @@
 4. Who were the major publishers? Book count.
      over what time period?
 
+5. Who were the major authors? Book count.
+     over what time period?
 
-5. What don't I know about a work? What fields are empty?
+6. What don't I know about a work? What fields are empty?
+   by work, by field?
 
-6. What categories are available for which years?
+7. What categories are available for which years?
 
-7. What works by categories-year?
+8. What works by categories-year?
+
+9. Reports, verbose list, non-verbose list
+    Books20 pages,
+    books on hand, (should be a query?)
+    books missing, (should be a query?)
+    book cards
+    current query set
+
+10. How many books in each catagory? total count, by year
+    over what time period?
+
+11. Books in category X [or Y[...]]?
+    over what time period?
+
+
