@@ -77,3 +77,32 @@ login as jrf
    or
    git fetch [repository] [branch]
    git merge
+
+
+#
+# Adding a new host to github
+#
+On the new host generate an SSH key
+   ssh-keygen -t rsa -C jrf12@mac.com  # use an empty passphrase
+
+   Sign into http://github.com
+
+   go to Setting->SSH Keys
+
+   Click on "Add SSH key"
+
+   Name the host and copy the contents
+   of id_rsa.pub to the key box
+
+   test the connection
+   ssh -T git@github.com 
+
+On the new host
+
+   Install git if necessary
+
+   git config --global user.name "Jim Fowler"
+   git config --global user.email jrf12@mac.com
+
+   On the new host download the repository with
+   git clone ssh://github.com/JimFowler/books
