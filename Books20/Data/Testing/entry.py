@@ -4,56 +4,20 @@ and object class for manipulating an AJB entry.
 
 Classes
 --------
+Entry()
+    Provided a generic super-class for AJBentry() and AAAentry()
 
-ajbEntry()
-    Takes a unicode string with comma separated fields
-    and returns an entDict object.
+AJBentry( Entry )
+    Takes a unicode string with comma separated fields from the
+    files ajb??_books.txt and fills the Entry data
 
-Functions
----------
+AAAentry( Entry )
+    Takes a unicode string with comma separated fields from the
+    files ajb??_books.txt and fills the Entry data
 
-Some of the parsing functions may be public so that folks can
-use them outside of the class object.
+  An Entry data look like
 
-  A line looks like:
-   Index AJB_Num Author, Title, Place, Publisher, Year, \
-   Pagination, Price, Reviews, Comments
-
-  No field need be present except Index and AJB_Num.
-
-   Field 1 Index AJB_Num Author has format
-
-    Index AJB_Num [I. A. Author [jr.|III|...] [ and H. E. Another [and ...]]] \
-     [ed.|comp.|something else]
-
-   Field 2 Title
-
-   Field 3 Place
-
-     [name | name-name[-name[-...]] Name may contain spaces
-
-   Field 4 Publisher
-
-   Field 5 Year
-
-   Field 6 Pagination
-
-   Field 7 Price
-
-   Field 8 Reviews
-
-     [Journal vol page [and Journal vol page [and ...]]]
-
-     Need to pull the Journal and reference from here
-
-   Field 9 Comment
-
-     Need to do something with these. They contains editions, editors,
-      translators, and other people as well as references and language.
-
-  An ajbEntry object will return
-
-  EntryDict = {
+  _EntryDict = {
     'Index' : -1,
     'AJBNum' : {'volNum':-1, 'sectionNum':-1,
                 'subsectionNum':-1, "entryNum":-1},
@@ -82,6 +46,10 @@ use them outside of the class object.
          { 'Place' : '',
            'PublisherName' : ''
          }
+
+Functions
+---------
+No public functions are provided by this module.
 """     
 
 #
@@ -129,14 +97,16 @@ use them outside of the class object.
 
 import re
 
-class AJBentry:
-    """Class that manages an AJB entry and associated information
+class Entry:
+    """Class that manages a generic book entry and associated information
 
     Functions:
-    __init__(ajbstr=NONE) -- creates a new, empty AJBentry with the values
-          listed below as predfined in the dictionary
+      __init__(line) -- creates a new, empty entry with the values
+          listed below as predfined in the dictionary. If line
+          is present, then it will be parsed by the sub-class and
+          the values put into the new entry.
 
-      extract(line) -- extracts values from a text entry.
+      extract(line) -- virtual function that must be provided by sub-classes
 
       getVal(ValueName:) -- get the value of one of the entries
 
@@ -150,25 +120,31 @@ class AJBentry:
 
       pprint()
     """
-
-    def __init__(self, _ajbstr=None):
+    _Version = "class entry: v1.0.0 dtd 6 Apr 2012"
+    
+    def __init__(self, _entrystr=None):
         """Initialize the entry dictionary with empty or null
         data structure.  If the string _ajbstr is present, try
         to parse it for data to fill entry dictionary.
         """
-
-        self. _Version = { 'major'  : '1', 
-                           'minor'  : '0',
-                           'bugfix' : '0',}
-
         self._EntryDict = {}
+
+        self.blankEntry()
+
+        if _entrystr :
+            self.extract(_entrystr)
+
+
+    def blankEntry(self):
+        """Initialize a blank entry
+        """
 
         self.setval('Index', -1)
 
-        self.setval('AJBNum',        {'volNum':-1,
-                                      'sectionNum':-1,
-                                      'subsectionNum':-1,
-                                      "entryNum":-1} )
+        self.setval('Num',          {'volNum':-1,
+                                     'sectionNum':-1,
+                                     'subsectionNum':-1,
+                                     "entryNum":-1} )
         self.setval( 'Authors',      [] )
         self.setval( 'Editors',      [] )
         self.setval( 'Translators',  [] )
@@ -181,9 +157,6 @@ class AJBentry:
         self.setval( 'Reviews',      [] )
         self.setval( 'Comments',     '' )
         
-        if _ajbstr :
-            self.extract(_ajbstr)
-
 
     def pprint(self, stream=None, indent=1, width=80, depth=None):
         """Pretty print the entry dictionary to the stream.
@@ -198,7 +171,7 @@ class AJBentry:
         return
 
     def version(self):
-        return "" + self._Version['major'] + "." + self._Version['minor'] + "." + self._Version['bugfix']
+        return self._Version
 
     def setval( self, name, value ):
         self._EntryDict[name] = value
@@ -207,11 +180,54 @@ class AJBentry:
         return self._EntryDict[name]
 
     def extract(self, line):
-        """Extract the information for a line in ajb??_books.txt and
-        put the data in the _EntryDict dictionary. This function will
-        return True if the line is good and false otherwise.
-        """
+        assert 0, "extract() method required"
 
+
+
+class AJBentry(Entry):
+    """Extract the information for a line in ajb??_books.txt and
+    put the data in the _EntryDict dictionary. This function will
+    return True if the line is good and false otherwise.
+
+    A line looks like:
+
+    Index AJB_Num Author, Title, Place, Publisher, Year, \
+    Pagination, Price, Reviews, Comments
+    
+    No field need be present except Index and AJB_Num.
+    
+    Field 1 Index AJB_Num Author has format
+
+    Index AJB_Num [I. A. Author [jr.|III|...] [ and H. E. Another [and ...]]] \
+       [ed.|comp.|something else]
+
+    Field 2 Title
+       
+    Field 3 Place
+        [name | name-name[-name[-...]] Name may contain spaces
+
+    Field 4 Publisher
+
+    Field 5 Year
+    
+    Field 6 Pagination
+
+    Field 7 Price
+
+    Field 8 Reviews
+
+     [Journal vol page [and Journal vol page [and ...]]]
+
+     Need to pull the Journal and reference from here
+
+    Field 9 Comment
+
+     Need to do something with these. They contains editions, editors,
+      translators, and other people as well as references and language.
+
+    """
+
+    def extract(self, line):
         Place = ""
         PublisherName = ""
 
@@ -293,7 +309,8 @@ class AJBentry:
         if not nums[4]:
             nums[4] = 0
             
-        return {'volNum':nums[1],
+        return {'volume':'AJB',
+                'volNum':nums[1],
                 'sectionNum':nums[2],
                 'subsectionNum':nums[4],
                 'entryNum':nums[5],
@@ -301,18 +318,40 @@ class AJBentry:
 
     def parseField0( self, line ) : 
 
-        # split out the authors/editors
         fields = line.split( ' ', 2)
         
         self.parseFileIndex( fields[0] )
         
-        self.setval( 'AJBNum', self.parseAJBNum( fields[1] ) )
+        self.setval( 'Num', self.parseAJBNum( fields[1] ) )
 
-        fields[2] = fields[2].strip()
-        self.setval( 'Authors',  fields[2].split(' and ') )
-        #
-        # but check for editors
-        #
+        self.parseAuthors( fields[2].strip() )
+      
+
+    def parseAuthors(self, line ) :
+      """split out the authors/editors
+      """
+
+      ed = False
+      comp = False
+
+      if line.endswith('ed.') :
+        ed = True
+        line = line.replace('ed.', '   ')
+      elif line.endswith('comp.') :
+        comp = True
+        line = line.replace('comp.', '    ')
+                     
+      # split into a list of names
+      names = line.split(' and ')
+      # split names into dictionary
+
+
+      if ed:
+        self.setval( 'Editors', names )
+      elif comp :
+        self.setval( 'Others', names )
+      else :
+        self.setval( 'Authors', names )
 
 
     def parseComments( self, field ):
@@ -335,25 +374,40 @@ if __name__ == '__main__':
 
     ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
+    authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
+
+    editorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
+
+
     badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for bad item 4 AJBnumber 66.145(1).29'
 
+    try:
+      badentry = Entry(ajbstr)
+    except:
+      print "entry() class fails properly with no extract method."
+      
     ajb1 = AJBentry()
-    print "ajb.py version " + ajb1.version()
+    print "\najb.py version " + ajb1.version()
     print "The empty ajb entry looks like:"
     ajb1.pprint()
 
 
     ajb2 = AJBentry(ajbstr)
-    print "ajb.py version " + ajb2.version()
+    print "\najb.py version " + ajb2.version()
     print "The good ajb entry looks like:"
     ajb2.pprint()
 
     ajb3 = AJBentry(badajbstr)
-    print "The bad ajb entry looks like:"
+    print "\nThe bad ajb entry looks like:"
     ajb3.pprint()
 
-    print "Ajb2 still looks like:"
-    ajb2.pprint()
+    authorajb = AJBentry(authorstr)
+    print "\nauthor ajb still looks like:"
+    authorajb.pprint()
+
+    editorajb = AJBentry(editorstr)
+    print "\neditor ajb looks like:"
+    editorajb.pprint()
 
 #import fileinput
 #for line in fileinput.input() : 
