@@ -1,3 +1,14 @@
+2012-07-30  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py: added entry() class as a super class
+	for AJBentry() and someday for AAAentry()
+
+2012-07-28  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/ajb.py (AJBentry.__init__): Wrote initial class
+	definition and the function __init__(), pprint(), and extract()
+	for the AJBentry script
+
 2012-07-21  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/ajb.py: Changed over to a module and
