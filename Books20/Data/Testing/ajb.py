@@ -124,7 +124,7 @@ class AJBentry():
     """Class that manages an AJB entry and associated information
 
     Functions:
-    __init__() -- creates a new, empty AJBentry with the values
+    __init__(ajbstr=NONE) -- creates a new, empty AJBentry with the values
           listed below as predfined in the dictionary
       extract(line) -- extracts values from a text entry.
       getVal(ValueName:) -- get the value of one of the entries
@@ -133,6 +133,15 @@ class AJBentry():
           in the database.
     """
 
+  _entryDict = {}
+  
+  def __init__(ajbstr=NONE):
+    """Alloc entry dictionaru
+    if string in nonempty, parse string and add to entry
+    use self.setparam()
+    """
+
+    
     _EntryDict = {
         'Index' : -1,
         'AJBNum' : {'volNum':-1, 'sectionNum':-1,
