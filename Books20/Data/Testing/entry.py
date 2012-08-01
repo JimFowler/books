@@ -165,8 +165,8 @@ class Entry:
         try:
             import pprint
             pprint.pprint(self._EntryDict, stream, indent, width, depth)
-        except:
-            None
+        except: pass
+
         
         return
 
@@ -233,7 +233,8 @@ class AJBentry(Entry):
 
         #
         # This regular expression is used to check the beginning of a line
-        # for an item number. If no item number is seen .
+        # for an item number. If no item number is seen, then we reject the
+        # line.
         #
         r1 = re.compile(r'\A\d+')
     
@@ -276,7 +277,7 @@ class AJBentry(Entry):
 
             return True
 
-        else:
+        else:  # not a valid line
             return False
                     
     def parseFileIndex(self, line ):
@@ -330,7 +331,6 @@ class AJBentry(Entry):
     def parseAuthors(self, line ) :
       """split out the authors/editors
       """
-
       ed = False
       comp = False
 
@@ -340,12 +340,8 @@ class AJBentry(Entry):
       elif line.endswith('comp.') :
         comp = True
         line = line.replace('comp.', '    ')
-                     
-      # split into a list of names
-      names = line.split(' and ')
-      # split names into dictionary
 
-
+      names = self.MakeAuthorList( line )
       if ed:
         self.setval( 'Editors', names )
       elif comp :
@@ -353,6 +349,50 @@ class AJBentry(Entry):
       else :
         self.setval( 'Authors', names )
 
+
+
+    def MakeAuthorList(self,  line ) :
+    
+        authors_list = []
+        r3 = re.compile(r'[jr|III|IV]\.*', re.IGNORECASE)
+        
+    # split into a list of names
+        names = line.split(' and ')
+        
+        for name in names :
+            name_dict = {}
+            name_list = name.split()
+            
+            # split names into dictionary
+            name_last = name_list[-1].strip()
+            if r3.match(name_last) :
+                name_dict['Suffix'] = name_last
+                del name_list[-1]
+                
+            if len(name_list) < 1 :
+                assert 0, "Oops, no more names left"
+                    
+            # assume at least a last name
+            name_dict['Last'] = name_list[-1].strip()
+            del name_list[-1]
+                    
+            # get first name
+            if len(name_list) > 0 :
+                name_dict['First'] = name_list[0].strip()
+                del name_list[0]
+                        
+            # the rest must be middle names
+            middle_name = ""
+            for nm in name_list :
+                middle_name = middle_name + " " + nm.strip() 
+                
+            if middle_name :
+                name_dict['Middle'] = middle_name
+                    
+            # append to the author list
+            authors_list.append(name_dict)
+                                
+        return authors_list
 
     def parseComments( self, field ):
         self.setval( 'Comments', field )
@@ -376,7 +416,7 @@ if __name__ == '__main__':
 
     authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
-    editorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
+    editorstr = '4 66.145(1).29 P. W. Hodge jr. and I. A. Author III and A. Other ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
 
     badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for bad item 4 AJBnumber 66.145(1).29'

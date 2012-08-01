@@ -1,3 +1,11 @@
+2012-07-31  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (AJBentry.MakeAuthorList): Wrote
+	MakeAuthorList() today. Given a string with authors
+	separated by 'and' it returns a list of dictionaries
+	of the separate authors. The dictionary has First, Middle,
+	Last, and Suffix entries
+
 2012-07-30  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
 
 	* Data/Testing/entry.py (parseAuthors):  modified parseAuthors to
