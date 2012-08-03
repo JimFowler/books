@@ -342,6 +342,7 @@ class AJBentry(Entry):
         line = line.replace('comp.', '    ')
 
       names = self.MakeAuthorList( line )
+
       if ed:
         self.setval( 'Editors', names )
       elif comp :
@@ -372,10 +373,19 @@ class AJBentry(Entry):
             if len(name_list) < 1 :
                 assert 0, "Oops, no more names left"
                     
-            # assume at least a last name
-            name_dict['Last'] = name_list[-1].strip()
-            del name_list[-1]
-                    
+            #
+            # Assume at least a last name. The syntax for AJB and my entries
+            # are A. B. lastname. Only the first and middle Initial have a 
+            # periond in them. So were search and append names until a period
+            # is found.
+            #
+            lastname = ""
+            while -1 == name_list[-1].find( "." ) :
+                lastname = name_list[-1].strip() + " " + lastname
+                del name_list[-1]
+            name_dict['Last'] = lastname.strip()
+                
+                
             # get first name
             if len(name_list) > 0 :
                 name_dict['First'] = name_list[0].strip()
@@ -416,7 +426,7 @@ if __name__ == '__main__':
 
     authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
-    editorstr = '4 66.145(1).29 P. W. Hodge jr. and I. A. Author III and A. Other ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
+    editorstr = '4 66.145(1).29 P. W. Hodge jr. and I. A. Author III and A. Other and A. V. de Long Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
 
     badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for bad item 4 AJBnumber 66.145(1).29'

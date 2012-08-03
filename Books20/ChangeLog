@@ -1,3 +1,9 @@
+2012-08-02  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (AJBentry.MakeAuthorList): Wrote parsing
+	for long (more than one...) last name Need to properly parse
+	comments next.
+
 2012-07-31  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/entry.py (AJBentry.MakeAuthorList): Wrote
