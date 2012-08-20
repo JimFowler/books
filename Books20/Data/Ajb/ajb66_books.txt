@@ -165,7 +165,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 76 66.51(3).106 D. H. Menzel, Selected Papers on the Transfer of Radiation, New York, Dover Publications Inc., 1966, 269 pp, $3.00, PAT 48 84 and Sky Tel. 33 109 and Sterne 43 176 and ZfA 66 429
 
- 77 66.55.18 H. Faul, Ages of Rocks comma Planets comma and Stars, New York, McGraw-Hill Company, 1966, 119 pp, $2.45, Sci. American 216 Nr. 6 152
+77 66.55.18 H. Faul, Ages of Rocks comma Planets comma and Stars, New York, McGraw-Hill Company, 1966, 119 pp, $2.45, Sci. American 216 Nr. 6 152
 
 78 66.56.10 T. Page and L. W. Page ed., The Origin of the Solar System; Genesis of the Sun and Planets and Life on Other Worlds, New York, Macmillan Company, 1966, 8+336 p, $7.95 and 63 s, Science 152 1407 and Sky Tel. 31 297 and Sky Tel. 32 155, also published London Collier-Macmillan Ltd.
 
@@ -461,7 +461,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 221 66.14.12 K. Schütte, Index mathematischer Tafelwerke und Tabellen, München-Wien, Verlag R. Oldenbourg, 1966, 239 pp, DM 49.00, ZfA 66 268, 2nd edition
 
-222 66.16.(0)36 V. C. A. Ferraro and C. Plumpton, An Introduction to Magneto-Fluid Mechanics, Oxford, Claredon Press, 1966, 8+254 pp, £2 5s, Geophys. J. RAS 12 543 and nature 214 54 and Proc. Phys. Soc. 90 1171, 2nd edition also published London Oxford University Press
+222 66.16(0).36 V. C. A. Ferraro and C. Plumpton, An Introduction to Magneto-Fluid Mechanics, Oxford, Claredon Press, 1966, 8+254 pp, £2 5s, Geophys. J. RAS 12 543 and nature 214 54 and Proc. Phys. Soc. 90 1171, 2nd edition also published London Oxford University Press
 
 223 66.16(0).57 E. Hermann, Physikalisches Taschenbuch, Braunschweig, G. Vieweg und Sohn, 1966, 8+706 pp, DM 48.00, ZfA 67 93, 4th edition
 
@@ -473,10 +473,9 @@ For volume AJB 66 Index to the Literature of 1966
 
 227 66.16(0).124 E. Segrè, Nuclei and Particles, New York-Amsterdam, W. A. Benjamin Inc., 1965, 741 pp, $16.50, ZfA 65 501, 2nd edition or 2nd printing?
 
-
 228 66.16(0).137 E. F. Taylor and J. A. Wheeler, Spacetime Physics, San Franscisco-London, W. H. Freeman and Company, 1966, 5+208 pp, £1 16s, J RAS Canada 61 98
 
-229 66.16(0)141 S. Tolansky, Curiosities of Light Rays and Light Waves, New York, American Elsevier Publishing Co. Ltd., 1965, 111 pp, $4.50, Sky Tel. 34 105
+229 66.16(0).141 S. Tolansky, Curiosities of Light Rays and Light Waves, New York, American Elsevier Publishing Co. Ltd., 1965, 111 pp, $4.50, Sky Tel. 34 105
 
 230 66.16(0).155 A. E. S. Green ed., The Middle Ultra-Violet: Its Science and Technology, New York-London-Sydney, Wiley and Sons Inc., 1966, 390 pp,  , Ann d’Astrophys. 30 743 and ZfA 67 254
 

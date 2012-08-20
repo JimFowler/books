@@ -6,7 +6,7 @@ AJB_ID   volume.section(subsection).entry for example 68.144(1).25 would be volu
 
 Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
 
-Save as Unicode text encoding.
+Save as Unicode UTF-8 text encoding.
 
 
 For volume AJB 68 Index to the Literature of 1968
@@ -111,7 +111,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 50 68.62(0).04 A. A. Gorynja redigiert, Die ringförmige Sonnenfinsternis vom 20 Mai 1966, Kiew, Verlag <<Naukowa dumka>>, 1968, 88 pp, 46 Kop,  , in Russian with English references.
 
-51 68.64.(0)118 C. W. Seibel, Helium: Child of the Sun, Lawrence Kansas, University Press of Kansas, 1968, 14+138 pp,  $4.95,  Sci. American 219  nr 3 249 and Science 162 886
+51 68.64(0).118 C. W. Seibel, Helium: Child of the Sun, Lawrence Kansas, University Press of Kansas, 1968, 14+138 pp,  $4.95,  Sci. American 219  nr 3 249 and Science 162 886
 
 52 68.65(0).73 N. Puschkow and B. Silkin, The Quiet Sun, Moskau, Mir Publisher, 1968, 242 pp, ,  Mem SA It (NS) 39 540, translated from the Russian
 
@@ -171,7 +171,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 79 68.44(0).146 E. L. Schatzman, The Structure of the Universe, London, Weidenfeld & Nicholson, 1968, 250 pp, $2.45,  Sky Tel. 37 180, translated by P. Moore
 
-80 68.44.(0).147 E. L. Shatzman, La Struttura dell’Universo, Milano, A. Mondadori, 1968, 250 pp, L 1500, Mem SA It (NS) 39 753
+80 68.44(0).147 E. L. Shatzman, La Struttura dell’Universo, Milano, A. Mondadori, 1968, 250 pp, L 1500, Mem SA It (NS) 39 753
 
 81 68.44(0).148 E. L. Shatzman, The Origin and Evolution of the Universe, New York, Basic Books, 1966, 287 pp, $8.50, Phys. Today 21 nr 6 89
 
@@ -187,7 +187,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 88 68.44(0).192   , Probleme der Geochemie und Kosmologie, Moskau, <<Nauka>>, 1968, 262 pp, 1R. 75 Kop., in Russian
 
-89  68.32(1).09 K. N. Tawastscherna and N. A. Schacht and A. A. Nemiro, Katalog der Sternörter comma die an der Hauptsternwarte Pulkowo an Hand von 1928 bis 1941 an der Melbourner Sternwarte durchgeführten Beobachtungen zusammengestellt wurden. Teil I Katalog der Sterndeklinationen Herausgegeben vom Astronomischen Hauptobservatorium Pulkowo, Leningrad,  , 1968, 188 pp, 69 Kop.,  , in Russian
+89 68.32(1).09 K. N. Tawastscherna and N. A. Schacht and A. A. Nemiro, Katalog der Sternörter comma die an der Hauptsternwarte Pulkowo an Hand von 1928 bis 1941 an der Melbourner Sternwarte durchgeführten Beobachtungen zusammengestellt wurden. Teil I Katalog der Sterndeklinationen Herausgegeben vom Astronomischen Hauptobservatorium Pulkowo, Leningrad,  , 1968, 188 pp, 69 Kop.,  , in Russian
 
 90 68.32(1).13   , Katalog von 2957 hellen Sternen mit Deklinationen zwischen -109 und +90  . Epoche 1975.0 (KGS-2), Moskau, <<Nedra>>, 1968, 213 pp,  3R. 98 Kop., RJ UdSSR 1968 12.51.136 and RJ UdSSR 1968 12.52.58
 
@@ -323,7 +323,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 155 68.11.42 B. M. Middlehurst and L. H. Aller, Nebulae and Interstellar Matter; Stars and Stellar Systems vol. 7, Chicago-London, The University of Chicago Press, 1968, 22+835 pp, $27.50, Ann d’Astrophys. 31 652 and Orion Schaffhausen 13 139 and Science 162 554 and Sky Tel. 35 386 and Sky Tel. 36 249 and SuW 8 22 and ZfA 69 386
 
-156  68.11.43 Jos. Joh. Von Littrow, Die Wunder des Himmels,  ,  ,   ,   , DM 19.80,  Naturwissenschaften 56 152 and Phys. Blätter 25 43 and SuW 7 288, new edition of AJB 63.11.64
+156 68.11.43 Jos. Joh. Von Littrow, Die Wunder des Himmels,  ,  ,   ,   , DM 19.80,  Naturwissenschaften 56 152 and Phys. Blätter 25 43 and SuW 7 288, new edition of AJB 63.11.64
 
 157 68.11.44  ,  Fortschritte der UdSSR in der Erforschung des kosmischen Raumes; Das erste kosmische Jahrzehnt 1957-1967, Moskau, <<Nuaka>>, 1968, 558 pp, 3 R. 15 Kop., RJ UdSSR 1969 2.62.2
 

@@ -19,7 +19,7 @@ AAAentry( Entry )
 
   _EntryDict = {
     'Index' : -1,
-    'AJBNum' : {'volNum':-1, 'sectionNum':-1,
+    'AJBNum' : {'volume':'', 'volNum':-1, 'sectionNum':-1,
                 'subsectionNum':-1, "entryNum":-1},
     'Authors' : [],   # array of author(s) in priority order
     'Editors' : [],   # array of editor(s)
@@ -34,13 +34,8 @@ AAAentry( Entry )
     'Comments' : '',
     }
 
-    where Authors, Editors, Translators, and Other are lists of people.
-    Each list entry will be a dictionary
-         {'FirstName' : '', 
-          'MiddleNames' : '',
-          'LastName' : '',
-          'Suffix' : '',
-         }
+    where Authors, Editors, Translators, and Other are lists of class
+    HumanName() from nameparser::parser.py
 
     Publishers is also a list of dictionarys
          { 'Place' : '',
@@ -52,52 +47,20 @@ Functions
 No public functions are provided by this module.
 """     
 
-#
-# Parse the file of books enteries from Astronomischer Jahresbericht.
-# The entries are found in the ajb??_books.txt file. Once we have the
-# relevant data put the values into the database.  I don't know what the
-# database final form is but is will most likely consist of data tables
-# and relationship tables.
-#
-# created 6 July 2012
-#
-# usage: python ajb.py file1 [file2 [...]]
-#
-#   Work
-#     (new or previously defined)
-#     work attributes ???
-#     general bibliography entries including AJB/AAA entries
-#
-#   Person/Corporation
-#     Authors
-#     Translations
-#     Editors
-#     Publishers
-#      their relationship to the expression
-#
-#   Expressions
-#    bibliography number (AJB num)
-#    Year
-#    Place
-#    Pagination
-#    Cost
-#    Reviews
-#    Relationship
-#       e.g. translation, new edition, Dover release, etc.
-#
-# Parse comments for additional Person/Corporation
-#
 # To Do:
-#  subsitute ',' for ' comma '
-#  check authors string for editors, drop the ' ed.|comp.'
-#  check comments for translators, editions, other publishers
+# check comments for translators, editions, other publishers
 #      reference link, languages from/to,
-#  what to do about error checking?
+# consider grammer for parsing AAA
+#
+# what to do about error checking?
+# replace pprint with __repr__
+# check typographical errors in all ajb??_books.txt
+# get super().version to work
 #
 
 import re
 
-class Entry:
+class Entry(object):
     """Class that manages a generic book entry and associated information
 
     Functions:
@@ -120,52 +83,64 @@ class Entry:
 
       pprint()
     """
-    _Version = "class entry: v1.0.0 dtd 6 Apr 2012"
+    _Version = "class: Entry(object) v1.0.0 dtd 6 Apr 2012"
     
     def __init__(self, _entrystr=None):
         """Initialize the entry dictionary with empty or null
-        data structure.  If the string _ajbstr is present, try
+        data structure.  If the string _entrystr is present, try
         to parse it for data to fill entry dictionary.
         """
         self._EntryDict = {}
-
         self.blankEntry()
+        self._Valid = False
 
         if _entrystr :
             self.extract(_entrystr)
 
+    def isValid(self):
+        return self._Valid
+
 
     def blankEntry(self):
-        """Initialize a blank entry
+        """Initialize a blank entry by setting known fields to
+        null values and deleting all other fields.
         """
-
-        self.setval('Index', -1)
-
-        self.setval('Num',          {'volNum':-1,
-                                     'sectionNum':-1,
-                                     'subsectionNum':-1,
-                                     "entryNum":-1} )
+        keys = self._EntryDict.keys()
+        for k in keys :
+            del(self._EntryDict[k])
+        
+        self.setval('Index',         -1 )
+        self.setval('Num',          {u'volNum':-1,
+                                     u'sectionNum':-1,
+                                     u'subsectionNum':-1,
+                                     u'entryNum':-1,
+                                     u'volume': ''} )
         self.setval( 'Authors',      [] )
         self.setval( 'Editors',      [] )
         self.setval( 'Translators',  [] )
         self.setval( 'Others',       [] )
-        self.setval( 'Title',        '' )
+        self.setval( 'Title',        u'' )
         self.setval( 'Publishers',   [] )
         self.setval( 'Year',         -1 )
-        self.setval( 'Pagination',   '' )
-        self.setval( 'Price',        '' )
+        self.setval( 'Pagination',   u'' )
+        self.setval( 'Price',        u'' )
         self.setval( 'Reviews',      [] )
-        self.setval( 'Comments',     '' )
+        self.setval( 'Comments',     u'' )
+        self.setval( 'OrigStr',      u'' )
         
+    #
+    # should change this to __repr__()
+
 
     def pprint(self, stream=None, indent=1, width=80, depth=None):
         """Pretty print the entry dictionary to the stream.
         See also pprint.py for further info.
         """
         try:
-            import pprint
-            pprint.pprint(self._EntryDict, stream, indent, width, depth)
-        except: pass
+            from pprint import pprint
+            pprint(self._EntryDict, stream, indent, width, depth)
+        except:
+            print "Unable to pretty print this entry"
 
         
         return
@@ -177,17 +152,20 @@ class Entry:
         self._EntryDict[name] = value
 
     def getval( self, name ):
-        return self._EntryDict[name]
+        if self._EntryDict.has_key( name ) :
+            return self._EntryDict[name]
+        else :
+            return None
 
     def extract(self, line):
         assert 0, "extract() method required"
 
 
+from nameparser import HumanName
 
 class AJBentry(Entry):
     """Extract the information for a line in ajb??_books.txt and
-    put the data in the _EntryDict dictionary. This function will
-    return True if the line is good and false otherwise.
+    put the data in the _EntryDict dictionary.
 
     A line looks like:
 
@@ -226,19 +204,34 @@ class AJBentry(Entry):
       translators, and other people as well as references and language.
 
     """
+    _ajbVersion = 'class AJBentry v1.0.0 dtd 5 Aug 2012'
+
+    def version(self):
+        #supVer = super(AJBentry,self).version()
+        return self._ajbVersion
+
+    def __repr__(self) :
+#         if self.unparsable:
+#            return u"<%(class)s : [ Unparsable ] >" % {'class': self.__class__.__name__,}
+
+            return u"<%(class)s : [no entry] >" % {'class': self.__class__.__name__,}
+
+
 
     def extract(self, line):
-        Place = ""
-        PublisherName = ""
+        Place = u""
+        PublisherName = u""
 
         #
         # This regular expression is used to check the beginning of a line
-        # for an item number. If no item number is seen, then we reject the
-        # line.
+        # for an item number, volnum and section number. If no numbers are
+        # seen, then we reject the line.
         #
-        r1 = re.compile(r'\A\d+')
+        r1 = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
     
         if line and r1.match(line):
+            self.setval('OrigStr', line)
+            print line
             fields = line.split(',')
             fieldNum = -1
             for field in fields :
@@ -253,10 +246,10 @@ class AJBentry(Entry):
                     self.setval( 'Title',  field )
                     
                 elif 2 == fieldNum:
-                    Place = field
+                    Place = u"" + field
                     
                 elif 3 == fieldNum:
-                    PublisherName = field
+                    PublisherName = u"" + field
                     self.setval( 'Publishers', [ {'Place' : Place,
                                                    'PublisherName' : PublisherName}] )
                     
@@ -275,10 +268,12 @@ class AJBentry(Entry):
                 elif 8 == fieldNum:
                     self.parseComments( field )
 
-            return True
+            self._Valid = True
+            return
 
         else:  # not a valid line
-            return False
+            self._Valid = False
+            return
                     
     def parseFileIndex(self, line ):
         """
@@ -302,15 +297,14 @@ class AJBentry(Entry):
         # Note that the subsectionNum may not be there in which case both 
         # item 3 and 4 will be NONE and the subsection number defaults to zero.
         #
-        r2 = re.compile(r'(\d+)\.(\d+)(\((\d+)\))*\.(\d+)')
-
+        r2 = re.compile(r'(\d+)\.(\d+)(\((\d+)\))*\.(\d+)', re.UNICODE)
 
         nums = r2.split(line.strip())
         
         if not nums[4]:
             nums[4] = 0
             
-        return {'volume':'AJB',
+        return {'volume':u'AJB',
                 'volNum':nums[1],
                 'sectionNum':nums[2],
                 'subsectionNum':nums[4],
@@ -322,10 +316,11 @@ class AJBentry(Entry):
         fields = line.split( ' ', 2)
         
         self.parseFileIndex( fields[0] )
-        
+
         self.setval( 'Num', self.parseAJBNum( fields[1] ) )
 
-        self.parseAuthors( fields[2].strip() )
+        if len(fields) > 2 :
+            self.parseAuthors( fields[2].strip() )
       
 
     def parseAuthors(self, line ) :
@@ -334,12 +329,12 @@ class AJBentry(Entry):
       ed = False
       comp = False
 
-      if line.endswith('ed.') :
+      if line.endswith(u'ed.') :
         ed = True
-        line = line.replace('ed.', '   ')
-      elif line.endswith('comp.') :
+        line = line.replace(u'ed.', '   ')
+      elif line.endswith(u'comp.') :
         comp = True
-        line = line.replace('comp.', '    ')
+        line = line.replace(u'comp.', '    ')
 
       names = self.MakeAuthorList( line )
 
@@ -353,9 +348,25 @@ class AJBentry(Entry):
 
 
     def MakeAuthorList(self,  line ) :
+        """Returns a list of object of class HumanName. See the package
+        nameparser for full info. The names have the following possible keys
+        "Title", "First", "Middle", "Last", and "Suffix"
+        """
+        name_list = []
+        names = line.split(' and ')
+        
+        for name in names :
+            nm = HumanName( name )
+            name_list.append(nm)
+
+        return name_list
+
+
+    def MakeAuthorList2(self,  line ) :
     
         authors_list = []
-        r3 = re.compile(r'[jr|III|IV]\.*', re.IGNORECASE)
+
+        r3 = re.compile(r'[jr|III|IV]\.*', re.IGNORECASE, re.UICODE)
         
     # split into a list of names
         names = line.split(' and ')
@@ -363,7 +374,10 @@ class AJBentry(Entry):
         for name in names :
             name_dict = {}
             name_list = name.split()
-            
+
+            newname = HumanName(name)
+            newauthor_list.append(newname)
+
             # split names into dictionary
             name_last = name_list[-1].strip()
             if r3.match(name_last) :
@@ -375,8 +389,8 @@ class AJBentry(Entry):
                     
             #
             # Assume at least a last name. The syntax for AJB and my entries
-            # are A. B. lastname. Only the first and middle Initial have a 
-            # periond in them. So were search and append names until a period
+            # are A. B. Lastname. Only the first and middle initials have a 
+            # period in them. So we search and append names until a period
             # is found.
             #
             lastname = ""
@@ -401,7 +415,8 @@ class AJBentry(Entry):
                     
             # append to the author list
             authors_list.append(name_dict)
-                                
+
+        print newauthor_list
         return authors_list
 
     def parseComments( self, field ):
@@ -412,9 +427,18 @@ class AJBentry(Entry):
         
 
 
-
-
-
+    def numStr(self):
+        """Return a stringfied version of the Num entry
+        """
+        a = self.getval('Num')
+        if a:
+            st = '' + a['volume'] + ' ' + a['volNum'] + '.'  +a['sectionNum']
+            if a['subsectionNum']:
+                st = st + '(' + a['subsectionNum'] + ')'
+            st = st + '.' + a['entryNum']
+            return st
+        else:
+            return None
 
 
 
@@ -426,7 +450,7 @@ if __name__ == '__main__':
 
     authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
-    editorstr = '4 66.145(1).29 P. W. Hodge jr. and I. A. Author III and A. Other and A. V. de Long Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
+    editorstr = '4 66.145.29 P. W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for item 4 AJBnumber 66.145(1).29'
 
 
     badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment comma for bad item 4 AJBnumber 66.145(1).29'
@@ -438,29 +462,62 @@ if __name__ == '__main__':
       
     ajb1 = AJBentry()
     print "\najb.py version " + ajb1.version()
-    print "The empty ajb entry looks like:"
-    ajb1.pprint()
+    print 'The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid()
+    #ajb1.pprint()
 
 
     ajb2 = AJBentry(ajbstr)
     print "\najb.py version " + ajb2.version()
-    print "The good ajb entry looks like:"
-    ajb2.pprint()
+    print 'The good ajb entry isValid() is %d and looks like:' % ajb2.isValid()
+    #ajb2.pprint()
 
     ajb3 = AJBentry(badajbstr)
-    print "\nThe bad ajb entry looks like:"
-    ajb3.pprint()
+    print '\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid()
+    #ajb3.pprint()
 
     authorajb = AJBentry(authorstr)
-    print "\nauthor ajb still looks like:"
-    authorajb.pprint()
+    print '\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid()
+    #authorajb.pprint()
 
     editorajb = AJBentry(editorstr)
-    print "\neditor ajb looks like:"
+    print '\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid()
     editorajb.pprint()
 
-#import fileinput
-#for line in fileinput.input() : 
-#   
-#  line = line.strip()
-        
+    print editorajb.numStr()
+
+
+
+
+#
+# Parse the file of books enteries from Astronomischer Jahresbericht.
+# The entries are found in the ajb??_books.txt file. Once we have the
+# relevant data put the values into the database.  I don't know what the
+# database final form is but is will most likely consist of data tables
+# and relationship tables.
+#
+# created 6 July 2012
+#
+# usage: python ajb.py file1 [file2 [...]]
+#
+#   Work
+#     (new or previously defined)
+#     work attributes ???
+#     general bibliography entries including AJB/AAA entries
+#
+#   Person/Corporation
+#     Authors
+#     Translations
+#     Editors
+#     Publishers
+#      their relationship to the expression
+#
+#   Expressions
+#    bibliography number (AJB num)
+#    Year
+#    Place
+#    Pagination
+#    Cost
+#    Reviews
+#    Relationship
+#       e.g. translation, new edition, Dover release, etc.
+#

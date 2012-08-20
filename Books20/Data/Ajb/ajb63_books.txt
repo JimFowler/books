@@ -107,7 +107,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 47 63.72.43 J. A. Ratcliffe ed., Physik der Hochatmosphäre, Moskau, Phys.—Math. Staatsverlag, 1963, 504 pp, 2R. 33 Kop,  , translated from English to Russian of AJB 60.72.48
 
-48 63.76.(1)07 J. Bartels, Collection of Geomagnetic Planetary Indices Kp and Derived Daily Indices Ap and Cp for the Years 1932 to 1961, Amsterdam, North Holland Publishing Company, 1962, 7+188 pp,  , J ATP 25 743
+48 63.76(1).07 J. Bartels, Collection of Geomagnetic Planetary Indices Kp and Derived Daily Indices Ap and Cp for the Years 1932 to 1961, Amsterdam, North Holland Publishing Company, 1962, 7+188 pp,  , J ATP 25 743
 
 49 63.76(2).129 W. Petrie, Keoeeit comma the Story of the Aurora Borealis, London, Pergamon Press, 1963, 12+134 pp, 35s and $5.00, J. Astr. Soc.Victoria 17 32 and Science 144 671, also published New York Macmillan
 
@@ -367,7 +367,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 176 63.11.59 P. Moore ed., Practical Amateur Astronomy, London, Lutterworth Press, 1963, 254 pp, 30s, J. Astr. Soc. Victoria 17 12 and JBAA 74 263 and Spaceflight 6 107
 
-177  63.11.60 A. N. Nesmejanow ed., Mit den Augen eines Wissenschaftlers comma Von der Erde zu den Galaxien comma Zum Kern des Atoms comma Vom Atom zum Molekül comma Vom Molekül zum Organismus, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 739 pp, 3R. 80 Kop., , in Russian
+177 63.11.60 A. N. Nesmejanow ed., Mit den Augen eines Wissenschaftlers comma Von der Erde zu den Galaxien comma Zum Kern des Atoms comma Vom Atom zum Molekül comma Vom Molekül zum Organismus, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 739 pp, 3R. 80 Kop., , in Russian
 
 178 63.11.61 H. P. Palmer and R. D. Davies and M. I. Large  ed., Radio Astronomy Today, Cambridge MA, Harvard University Press, 1963, 8+242 pp, $6.00 and 32s 6d, J. Astr. Soc. Victoria 17 33 and Nature 201 227 and Science 144 525 and Sky Tel. 26 353 and Sky Tel. 27 299 and ZfA 59 136, also published Manchester UK The University Press
 

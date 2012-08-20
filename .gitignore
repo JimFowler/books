@@ -1,5 +1,7 @@
 *~
 .*~
+*.pyc
+ui_*.py
 Makefile.in
 config.status
 config.log

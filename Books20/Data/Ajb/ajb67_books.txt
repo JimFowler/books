@@ -257,7 +257,7 @@ For volume AJB 67 Index to the Literature of 1967
 
 123 67.11.12 F. Hoyle, Granice Astronomii, Warszawa, Państwowe Wydawnictwo Naukowe, 1967, 458 pp, zł 55, Urania Kraków 38 343, translated from English to Polish by J. Smak
 
-124 67.11 13 C. Huffer and M. Bunge and F. E. Trinklein, An Introduction to Astronomy, New York, Holt comma Rinehart and Winston Inc., 1967, 416 pp, $8.95, Phys. Today 20 Nr. 3 120 and Sky Tel. 34 105 and Sky Tel. 34 391
+124 67.11.13 C. Huffer and M. Bunge and F. E. Trinklein, An Introduction to Astronomy, New York, Holt comma Rinehart and Winston Inc., 1967, 416 pp, $8.95, Phys. Today 20 Nr. 3 120 and Sky Tel. 34 105 and Sky Tel. 34 391
 
 125 67.11.14 B. Hultqvist, Introduktion till geokosmofysiken, Stockholm, Natur och Kultur comma Bokförlaget, 1967, 271 pp, Kr. 31:50
 
@@ -265,9 +265,9 @@ For volume AJB 67 Index to the Literature of 1967
 
 127 67.11.16 T. Jarzębowski, Elementy Astronomii, Warszawa, Państwowe Przedsiębiorstwo Wydawnictwo Kartograficznych, 1967, 254 pp, zł 17.80
 
-128 67.11 17 R. Jastrow, Red Giants and White Dwarfs: The Evolution of Stars comma Planets and Life, New York, Harper and Row, 1967, 190 pp, $5.95, Phys. Today 21 Nr. 4 97 and Sci. American 217 Nr. 6 140 and Sky Tel. 34 105 and Sky Tel. 34 323
+128 67.11.17 R. Jastrow, Red Giants and White Dwarfs: The Evolution of Stars comma Planets and Life, New York, Harper and Row, 1967, 190 pp, $5.95, Phys. Today 21 Nr. 4 97 and Sci. American 217 Nr. 6 140 and Sky Tel. 34 105 and Sky Tel. 34 323
 
-129 67.11 18 R. C. Jennison, Introduction to Radio Astronomy, New York, Philosophical Library, 1967, 168 pp, $4.75, IEEE Spectrum 4 Nr. 12 142 and Sky Tel. 34 105
+129 67.11.18 R. C. Jennison, Introduction to Radio Astronomy, New York, Philosophical Library, 1967, 168 pp, $4.75, IEEE Spectrum 4 Nr. 12 142 and Sky Tel. 34 105
 
 130 67.11.19 U. R. Johansson, Det – Oändliga – Rymden comma Stjärnvärldar comma Solsystem, Stockholm, Bonnier Fölag, 1967, 64 pp, Kr. 10:50
 

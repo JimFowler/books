@@ -105,7 +105,7 @@ For volume AJB 60 Index to the Literature of 1960, started 4 Mar 2012, finished 
 
 47 60.53.41 W. W. Sobolew, Moving Envelopes of Stars, Cambridge MA, Harvard University Press, 1960, 14+106 pp, $4.75 and 38s, Ann. d’Astrophys 23 299 and J RAS Canada 54 254 and Nature 187 538 and Obs 80 205 and Publ ASP 72 218 and Sky Tel. 19 372, translated from Russian by S. Gaposchkin also published London Oxford University Press also published Toronto S. J. Reginald Saunders & Co.
 
-48  60.53.62 J. L. Greenstein ed., Stars and Stellar Systems Vol 6 Stellar Atmospheres, Chicago, University of Chicago Press, 1960, 19+724 pp, $17.50, Mem SA It (NS) 32 106 and Sky Tel. 22 43
+48 60.53.62 J. L. Greenstein ed., Stars and Stellar Systems Vol 6 Stellar Atmospheres, Chicago, University of Chicago Press, 1960, 19+724 pp, $17.50, Mem SA It (NS) 32 106 and Sky Tel. 22 43
 
 49 60.54.08 S. Chandrasekhar, An Introduction to the Study of Stellar Structure, New York, Dover Publications Inc., 1960, 509 pp, $2.75, , reprint of AJB 41.35.02
 
@@ -155,7 +155,7 @@ For volume AJB 60 Index to the Literature of 1960, started 4 Mar 2012, finished 
 
 72 60.44.55 T. de Vries, A la découverte de l’Univers, Paris-Brüssel, Editions Sequoia, 1960, 155 pp, 29 fr., Ciel et Terre 76 428 and Gaz astr 42 72, translated from Netherlands by A. M. Hendrickx
 
-73 60.44. 58 G. J. Whitrow, The Structure and Evolution of the Universe, , , , , , ZfMG 84 443, reference AJG 59.44.49
+73 60.44.58 G. J. Whitrow, The Structure and Evolution of the Universe, , , , , , ZfMG 84 443, reference AJG 59.44.49
 
 74 60.31.04 W. Chauvenet, A Manual of Spherical and Practical Astronomy, New York, Cover Publications Inc., 1960, 708 pp and 631 pp, $3.75 ea, Ciel et Terre 76 427 and Sky Tel. 21 107, 2 volumes reprint of 1863
 
@@ -181,7 +181,7 @@ For volume AJB 60 Index to the Literature of 1960, started 4 Mar 2012, finished 
 
 85 60.32(2).32 K. Schaifers ed., Schurig/Götz Himmelsatlas, Mannheim, Bibliographisches Institut, 1960, 4 pp and 9 star tables, DM 9.80, Mitt. Planetenbeobachter 14 15 and Phys. Blätter 17 433 and Sterne 37 132 and Sternenbote 4 100 and VdS Nachr. 10 18, 8th edition.
 
-86 60.32(2),33 , Nachtleuchtende Sternkarte für jedermann, Stuttgart, Franckhsche Verlagshandlung, 1959, , DM 4.80, VdS Nachr. 9 55
+86 60.32(2).33 , Nachtleuchtende Sternkarte für jedermann, Stuttgart, Franckhsche Verlagshandlung, 1959, , DM 4.80, VdS Nachr. 9 55
 
 87 60.35.01 P. Ahnert, Astronomisch-chronologische Tafeln für Sonne comma Mond und Planeten, Leipzig, Johann Ambrosius Barth, 1960, 42 pp, DM 10.20, Gaz astr 42 14 and JBAA 71 38 and RH 41 158 and Sky Tel. 19 501 and Sterne 37 131 and Sternenbote 3 61 and VdS Nachr. 9 133
 
@@ -247,7 +247,7 @@ For volume AJB 60 Index to the Literature of 1960, started 4 Mar 2012, finished 
 
 118 60.11.13 E. M. Dolgich, <<Geschweift>> Sterne und Steine vom Himmel, Kemerowo, Buchverlag, 1960, 43 pp, 55 Kop., , in Russian
 
-119 6011.14 C. G. Dolmage, El Cielo, Barcelona, Ediciones Ave, 1959, 172 pp, , Urania Barcelona 45 125, , from the Enzyclopädie <<Historia Natural del Creación>>
+119 60.11.14 C. G. Dolmage, El Cielo, Barcelona, Ediciones Ave, 1959, 172 pp, , Urania Barcelona 45 125, , from the Enzyclopädie <<Historia Natural del Creación>>
 
 120 60.11.15 J. Gauzit, Images du ciel, Paris, Dunod, 1960, 66pp and 89 photos, 18.50 NF, BSAF 74 143 and La Nature 88 398 and Sky Tel. 20 228
 

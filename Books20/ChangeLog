@@ -1,3 +1,41 @@
+2012-08-18  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/BookEntry.py (BookEntry.GetRecords): Got UTF-8
+	encoding to work with QT. Had to add a line.decode('UTF-8') after
+	the line was read from the file with fileinput
+
+2012-08-13  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (AJBentry.numStr): added numStr() function
+	to AJBentry class.  Needed in Bookentry.py
+
+2012-08-10  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (Entry.isValid): Added isValid() for
+	use in BookEntry.py.
+
+	* Data/Testing/BookEntry.py (BookEntry.GetRecords): wrote
+	GetRecords() and ShowRecords() today. Successfully read a file and
+	displayed the records.
+
+2012-08-09  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/BookEntry.py (BookEntry): created a test dialog
+	to look at book entries. Also created BookEntry.ui with
+	Qt4 designer.
+
+2012-08-05  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (Entry.blankEntry): Added deletion of
+	old key entries when initializing an Entry. Also added space
+	for the string that was parsed to create the entry.
+
+2012-08-04  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py (AJBentry.MakeAuthorList): modified to use
+	the third party python package nameparser version 0.2.0 from
+	http://code.google.com/p/python/python-nameparser
+
 2012-08-02  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/entry.py (AJBentry.MakeAuthorList): Wrote parsing

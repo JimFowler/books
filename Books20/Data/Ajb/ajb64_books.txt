@@ -1,0 +1,594 @@
+﻿Entry format
+
+Num AJB_ID Author [and author [and…]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip subsection 34 and 35 in Part 4
+
+
+For volume AJB 64 Index to the Literature of 1964, finished 18 June 2011
+
+
+1 64.145(1).55 G. de Vaucouleurs and A. de Vaucouleurs, Reference Catalog of Bright Galaxies, Austin, The University of Texas Press, 1964, 4+268 pp, $12.50, Ann d’Astrophyss 28 576 and AJ UdSSR 42 865 and Science 147 1568 and Sky Tel. 29 172 and Sky Tel 30 32 and ZfA 62 154, also published as Univ. of Texas Monographs Astr. Nr. 1
+
+2 64.145(1).61 B. A. Woronzow-Weljaninow, Die Ungebudenheit der Galaxien, Moskau, <<Snanije>>, 1963, 48 pp, 9 Kop.
+
+3 64.145(1).62 B. A. Woronzow-Weljaninow and W. P. Archipowa, Morphologischer Katalog von Galaxien Teil II Katalog von 9650 Galaxien zwischen +45° und +15° Deklination, Moskau, Verlag Univ. Moskau, 1964, 288 pp, 2 R. 65 Kop., RJ UdSSR 1965 4.51.257
+
+4 64.131.01 G. Abetti and M. Hack, Nebulae and Galaxies, London, Faber & Faber Ltd., 1964, 264 pp, 63 s, Endeavour 24 111 and HeD 62 258 and Irish AJ 7 29 and Orion Schaffhausen 9 168 and Sky Tel. 30 169 and Southern Stars 20 183 and Sterne 41 45, translated from the Italian by V. Barocas
+
+5 64.135.36 W. L. Ginsburg and S. I. Syrowatskij, The Origin of Cosmic Rays, Oxford-London, Pergamon Press, 1964, 18+426 pp, £5 5s, Ann d’Astrophys 28 458 and BSAF 79 154 and Phys. Abstr. 68 2010 and Planet. Space Sci. 13 362 and Proc. Phys. Soc. 86 229 and Spaceflight 7 69 and ZfA 61 171, translated from Russian by H.S. H. Massey edited by D. ter Haar
+
+6 64.135.44 V. D. Hopper, Cosmic Radiation and High Energy Interactions, London-New York, Academic Press, 1964, 10+234 pp, 57s 6d and $17.35, Add d’Astrophys 28 459, also published by Logos Press
+
+7 64.135.71 B. Rossi, Cosmic Rays, New York-San Francisco-Toronto-London, McGraw-Hill Book Company, 1964, 12+268 pp, $5.95 and $2.95, Sci. American 212 Nr. 3 134
+
+8 64.126(1).10 C. Payne-Gaposchkin, The Galactic Novae, New York, Dover Publications Inc., 1964, 10+336 pp, $2.45, Sky Tel. 28 301 and Sterne 41 88 and ZfA 61 167, revised reprint of AJB 57.113.06
+
+9 64.111.02 R. G. Aitken, The Binary Stars, New York, Dover Publications Inc., 1964, 10+309 pp, $2.00, BSAF 79 153 and Coelum 33 62 and Sky Tel. 27 366 and Sterne 41 87 and ZfA 61 167, reprint of the 1935 2nd Edition
+
+10 64.91.50 S. K. Wsechswjatskij, Physical Characteristics of Comets, Jerusalem, Israel Program for Scientific Translation, 1964, 596 pp, $6.00, BSAF 79 194 and Ciel et Terre 81 191 and Sky Tel. 29 240 and Sky Tel. 30 34, translation from Russian of AJB 58.80.33
+
+11 64.93(0).35 G. S. Hawkins, The Physics and Astronomy of Meteors comma Comets comma and Meteorites, New York, McGraw-Hill Book Company, 1964, 10+134 pp, $2.50, Ann d’Astrophys 28 749 and Science 147 1136 and Sky Tel. 29 108 and Sky Tel. 30 37
+
+12 64.93(0).63 D. McKinley, Methoden der Meteorastronomie, Moskau, <<Mir>>, 1964, 383 pp, 1R. 79 Kop.,  AJ UdSSR 42 869 and RJ UdSSR 1965 4.51.444, translation from English to Russian of AJB 61.93.57
+
+13 64.94(0).46 F. Heide, Meteorites, Chicago, University of Chicago Press, 1964, 10+144 pp, $6.50 and $1.95,  Ann d’Astrophys  28 457 and BSAF 79 152 and J. Astr. Soc. Victoria 17 101 and NAT 1964 135 and Orion Schaffhausen 10 50 and Science 144 282 and Sky Tel. 27 305 and Sky Tel. 29 37, translated from German by E. Anders and E. R. DuFresne
+
+14 64.95.10 A. Dauvillier, Cosmic Dust, New York, Philosophical Library Inc., 1964, 167 pp, $15.00, Sky Tel. 27 365 and Strolling Astr. 18 79, first American publication? First published 1961 in France and republished Great Britain in 1963
+
+15 64.81.07 S. H. Dole and I. Asimov, Planets for Man, New York, Random House Inc., 1964, 10+242 pp, $4.95, Publ. ASP 76 364 and Strolling Astro.  18 157
+
+16 64.81.10 V. A. Firsoff, Exploring the Planets, London, Sidgwick and Jackson Ltd., 1964, 312 pp, 30s, Obs 85 129 and Sky Tel. 29 173 and Spaceflight 7 65
+
+17 64.81.25 J. Lequeux, Planètes et Satellites, Paris, Presses Universitaires, 1964, 115 pp, f2.50, Ann d’Astrophys 28 457 and Ann d’Astrophys 28 753 and BSAF 79 107
+
+18 64.81.39 W. W. Scharonow, The Nature of the Planets, Jerusalem, Israel Program for Scientific Translations Ltd., 1964, 418 pp, $4.25, Sky Tel. 29 172
+
+19 64.81.42 E. C. Slipher, A Photographic Study of the Brighter Planets, Flagstaff AZ, Lowell Obs., 1964, 16+125 pp, $10.00, Ciel et Terre 81 45 and Publ. ASP 77 64 and Sky Tel. 28 300 and Sky Tel. 29 373 and Strolling Astr. 18 119, also published Washington DC National Geographic Society
+
+20 64.81.43 A. G. Smith and T. D. Carr, Radio Exploration of the Planetary System, London-Princeton, Van Nostrand Co. Inc., 1964, 148 pp, $1.50, IEEE Spectrum 1 Nr. 10 170 and Phys. Today 17 Nr. 7 49 and Planet. Space Sci. 12 904 and Sky Tel. 27 240 and Sky Tel. 28 361
+
+21 64.81.50 W. G. Tejfel, Planeten-Riesen, Moskau, <<Nauka>>, 1964, 86 pp, 13 Kop.
+
+22 64.81.57 F. L. Whipple, Earth comma Moon comma and Planets, Oxford, The University Press, 1964, 8+278 pp, 52s, Obs 84 162, 2nd revised edition
+
+23 64.83(0).02 D. Alter, Pictorial Guide to the Moon, London, Arthur Barker Ltd., 1964, 183 pp, 45s, Obs 85 50 and Spaceflight 7 66
+
+24 64.83(0).18 F. M. Branley, Exploration of the Moon, New York, Doubleday, 1964, 139 pp, $3.50, Sky Tel. 27 113
+
+25 65.83(0).24 V. de Callataӱ, Atlas of the Moon, London, MacMillan & Co. Ltd., 1964, 160 pp, 70s and $15.00, J. Astronaut. Sci. 12 62 and Nature 206 75 and Obs 84 277 and Science 147 1027 and Sky Tel. 28 300 and Spaceflight 7 141, also published New York St. Martin’s Press translated from French by R. G. Lascelles
+
+26 65.83(0).47 V. A. Firsoff, The Moon, London, Arthur Barker Ltd., 1964, 128 pp, 15s, Spaceflight 7 180
+
+27 65.83(0).85 A. A. Jakowkin and I. M Demenko and L. N. Mis, Formeln und Ephemeriden für Feldbeobachtungen auf dem Mond, Kiew, <<Naukowa Dumka>>, 1964, 148 pp, 47 Kop.
+
+28 65.83(0).95 Z. Kopal, The Moon: Our Nearest Celestial Neighbor, New York, Academic Press Inc., 1964, 152 pp, $5.50, Sky Tel. 28 231, 2nd Edition
+
+29 65.83(0).96 Z. Kopal, Der Mond – unser nächster Himmelsnachbar, Moskau, Verlag für ausländische Literatur,  , 138 pp, 29 Kop., Priroda 54 Nr, 7 108, see also AJB 64.83(0).95
+
+30 65.83(0).206 J. W. Salisbury and P. E. Glaser ed., The Lunar Surface Layer, New York-London, Academic Press Inc., 1964, 26+532 pp, 86s and $12.00, Nature 204 974 and Sky Tel.  28 301
+
+31 65.83(0).207 , Fauth Mondatlas, Bremen, , 1964, 38 pp and 28 charts, DM64.00, BSAF 79 286 and Orion Schaffhausen 10 95 and Sterne 41 127 and Stenenbote 7 175 and Strolling Astr. 18 237 and VdS Nachr. 14 14 and Weltraumfahrt 16 63, edited by Oblers-Gesellschaft
+
+32 65.83(0).208  , Pergamon Moon Globe, Oxford, Pergamon Press Ltd., 1964, , £10, Nature 203 1230 and Planet. Space Sci. 12 1141 and Spaceflight 6 212
+
+33 65.83(0).209 , Ranger VII Photographs of the Moon: Part 1: Camera A Series, Washington D.C., NASA, 1964, 27 pp and 199 plates, $6.50, Sky Tel. 29 109
+
+34 65.83(0).210 , Lunar Charts Taken from Photographs of Recent Ranger VII Mission, Washington D.C., Superintendent of Documents, 1964, 5 charts, $3.00, Sky Tel. 29 230
+
+35 65.84.19 F. Jackson and P. Moore, Life on Mars, London, Routledge & Kegan Paul Ltd., , 111 pp, 18s, JBAA 75 208
+
+36 65.85.02/03 D. M. Cole and D. W. Cox, Islands in Space: The Challenge of the Planetoids, Philadelphia, Chilton Company, 1964, 12+276 pp, $6.95, Science 147 1132
+
+37 64.71.04 D. R. Bates, The Planet Earth, New York, Pergamon Press Inc., 1964, 370 pp, 42s, Ann d’Astrophys 27 761 and Ann. Géophys. 20 515 and Nature 205 735, 2nd edition
+
+38 64.71.14 G. Gamow, Planeten Jorden, Stockholm, Albert Bonniers Förlag AG., 1964, 203 pp, Kr. 46, PAT 45 164
+
+39 64.71.18 J. A. Jacobs, The Earth’s Core and Geomagnetism, Oxford, Pergamon Press Ltd., 1963, 137 pp, 17s 6d, J ATP 26 943
+
+40 64.71.53 A. N. Strahler, The Earth Sciences, New York-Evanston, Harper and Row, 1963, 12+671 pp, 75s, Nature 205 735, also published London Harper and Row
+
+41 64.71.63  L. H. Ahrens and F. Press and S. K. Runicorn eds., Physics and Chemistry of the Earth Vol. 5, Oxford, Pergamon Press Lrd., 1964, 398 pp, £5, Geochim. Cosmochim. Acta 29 1017
+
+42 64.71.64 T. W. Donnelly ed., The Earth Sciences, London-New York, University of Chicago Press, 1963, 7+195 pp, $6.00 and 45s, Nature 206 76
+
+43 64.71.65 H. E. Landsberg and J. van Miegham ed., Advances in Geophysics Vol. 10, New York, Academic Press Inc., 1964, 488 pp, $16.50, Sky Tel.  29 240
+
+44 64.71.66  , Die Erde im Weltall,  , Verlag <<Mysl>>, 1964, 492 pp, 1R. 79 Kop., Priroda 54 Nr. 9 114
+
+45 64.72.01 L. Auberger, Atmosphère et Météores, Paris, Fayard, 1964, 149 pp,  , BSAF 79 152
+
+46 64.72.28 B. A. Mirtow, Gaseous Composition of the Atmosphere, Jerusalem, Israel Program for Scientific Translations, 1964, 209pp, $6.00, Sky Tel. 29 316
+
+47 64.74.47 R. M .Goody, Atmospheric Radiation I. Theoretical Basis, London, Oxford University Press, 1964, 11+436 pp, 75s and $8.00, Ann d’Astrophys 27 761 and Geophys. J. RAS 9 284 and J. Optical Soc. America 54 1383 and Planet. Space Sci. 13 268 and Proc. Phys. Soc. 84 1027 and Sci. American 213 Nr. 2 117 and ZfA 61 165, also published Oxford Clarendon Press
+
+48 64.76.21 J. W. Chamberlain, Motion of Charged Particles in the Earth’s Magnetic Field, New York, Gordon & Breach, 1964, 10+33 pp, $1.95 and $3.95, Phys. Today 18 Nr. 7 70 and Proc. Phys. Soc. 86 415 and Science 147 1567
+
+49 64.76.22 S. Chapman, Solar Plasma comma Geomagnetism and Aurora, New York, Gordon & Breach, 1964, 141 pp, $4.95 and $1.95, Nature 206 124 and Nature 207 116 and Proc. Phys. Soc. 86 222, also published London Blackie& Sons Ltd.
+
+50 64.61(3).24 M. Chȩcińska, Energia Słońca, Warszawa, Wiedza Powszechna, 1964, 222 pp, zł 13, , Populäres Bush über die Sonnenenergie (popular book on solar energy)
+
+51 64.61(3).26 G. Gamow, A Star Called the Sun, New York, Viking Press Inc., 1964, 14+208 pp, $5.75, Nature 207 793 and Sci. American 211 Nr. 5 152 and Science 145 476 and Sky Tel. 28 36 and Sky Tel. 28 286
+
+52 64.61(3).28 G. A. Gochwat, Die Sonne arbeitet, Kiew, Techn. Verlag Ukrain. SSR, 1962, 65 pp, 11 Kop.
+
+53 64.61(3).32 D. H. Menzel, Unsere Sonne, Moskau, Phys-Math. Staatsverlag, 1963, 327 pp, 79 Kop.,  AJ UdSSR 41 190, translated into Russian by E. W. Kononowitsch of AJB 69.61.06
+
+54 64.65(0).04 R. J. Bray and R. E. Longhhead, Sunspots, London, Chapman and Hall Ltd.,  1964, 16+303 pp, £4 4s and $13.75, BSAF 79 153 and Ciel et Terre 81 192 and Nature 206 1185 and Phys. Abstr. 68 715 and Phys. Today 18 Nr. 7 68 and Planet. Space Sci. 13 869 and Science 149 46 and Sky Tel. 30 39, also published New York John Wiley & Sons Ltd.
+
+55 64.65(0).48 B. M. Rubaschew, Probleme der Sonnenactivität, Moskau-Leningrad, <<Nauka>>, 1964, 362 pp, 1R. 69 Kop., AJ UdSSR 42 214
+
+56 64.51(0).05 G. Burbidge, Nukleare Astrophysik, Moskau, Verlag <<Mir>>, 1964, 128 pp, 44 Kop., AJ UdSSR 42 869, translated from English to Russian by G. S. Chromow
+
+57 64.51(0).11 J. Dufay, Introduction to Astrophysics: The Stars, New York, Dover Publications Inc., 1964, 164 pp, $2.00, Sky Tel. 28 300 and Sky Tel. 29 168, translated from the French to English by O. Gingerich
+
+58 64.51(0).18 S. Haykawa and H.-Y. Chiu and G. Feinberg and M. Dresden, Lectures on Astrophysics and Weak Interactions, Waltham MA, Brandeis University, 1963, 471 pp, $4.00
+59 64.51(0).42 K. W. Ford ed., Astrophysics and the Many-Body Problem, New York, W. A. Benjamin Inc., 1963, 438 pp, $9.00 and $5.95
+
+60 64.51(0).43 , Untersuchungen zur Physik der Sterne und der diffusen Materie, Kiew, <<Naukowa Dumka>>, 1964, 76 pp, 32 Kop., edited under Atsr. Hauptobs. Akad. Wiss. Ukrain. SSR.
+
+61 64.51(2).61 T. Cowling, Magnetohydrodynamik, Moskau, <<Mir>>, 1964, 80 pp, 27 Kop., translated from English to Russian
+
+62 64.51(3).95 V. Kourganoff and I. W. Busbridge, Basic Methods in Transfer Problems, New York, Dover Publications Inc., 1963, 15+281 pp, $2.00, revised edition of AJB 52.51.20
+
+63 64.54(1).64 S. Rosseland, The Pulsation Theory of Variable Stars, New York, Dover Publications Inc., 1964, 8+152 pp, $1.65, Sky Tel. 28 300 and Sterne 41 87 and ZfA 61 168, revised reprint of AJB 49.111.69
+
+64 64.56.08 B. J. Lewin, Die Entstehung der Erde und der Planten, Moskau, <<Nauka>>, 1964, 116 pp, 18 Kop., AJ UdSSR 42 869 and Priroda 53 Nr. 11 66, 4th edition
+
+65 64.41(0).12 D. Brouwer and G. M. Clemence, Die Methoden der Himmelsmechanik, Moskau, <<Mir>>, 1964, 514 pp, 2R. 52 Kop., translation from English to Russian of AJB 62.41.10
+
+66 64.41(0).13 E. W. Brown and C. A. Shook, Planetary Theory, New York, Dover Publications Inc., 1964, 12+302 pp, $2.25, Ann d’Astrophys 28 457 and BSAF 79 155 and Coelum 33 62 and Sky Tel. 28 301 and Sterne 41 87 and ZfA 61 167, revised reprint of AJB 35.32.41
+
+67 64.41(0).29 G. N. Duboschin, Himmelsmechanik: Analytische und qualitative Methoden, Moskau, Verlag <<Nauka>>, 1964, 560 pp, 95 Kop.
+
+68 64.41(0).36 P. van de Kamp, Elements of Astromechanics, San Francisco, Freeman Co., 1964, 140 pp, $4.00 and $2.00, Phys. Today 17 Nr. 10 60 and Science 149 623 and Sky Tel. 27 306
+
+69 64.42.06 J. C. Watson, Theoretical Astronomy Relating to the Motions of the Heavenly Bodies, New York, Dover Publications Inc., 1964, 8+662 pp, $3.25, Coelum 33 126 and Sky Tel. 29 174 and ZfA 62 155
+
+70 64.44(0).04 H. Arzelliés, Relativité Généralisée Gravitation, Paris, Gauthier-Villars & Cie., 1963, 274 pp, F76 and $16.00, Phys. Blätter 21 234
+
+71 64.44(0).07 H. Bondi, Relativity and Common Sense, New York, Doubleday & Co. Inc., 1964, 177 pp, $1.25, Sky Tel. 28 374 and Sky Tel. 29 234
+
+72 64.44(0).08 W. B. Bonner, The Mystery of the Expanding Universe, New York, The Macmillan Co., 1964, 12+212 pp, $7.50, Science 144 699 and Sky Tel. 27 306 and Sky Tel. 28 89
+
+73 64.44(0).10 M. Born, Die Einsteinsche Relativitätstheorie,  , Verlag <<Mir>>, 1964, 452 pp, 1R. 67 Kop., Priroda 54 Nr. 1 122
+
+74 64.44(0).22 R. H. Dicke, The Theoretical Significance of Experimental Relativity, New York, Gordon & Breach, 1964, 12+153 pp, $1.95 and $4.95, Phys. Today 18 Nr. 7 60 and Proc. Phys. Soc. 86 415
+
+75 64.44(0).31 V. Fock, The Theory of Space comma Time and Gravitation, New York, Macmillan Company, 1964, 12+448 pp, $15.00, Math. Rev. 28 1110 and Nature 205 735 and Phys. Ber. 43 3313 and Proc. Phys. Soc. 84 1028 and Sky Tel. 27 365, translated from Russian by N. Kemmer
+
+76 64.44(0).52 V. Kourganoff, Initiation à la Théorie de la Relativité, Paris, Presses Universitaires de France, 1964, 182 pp, NF12, Ann d’Astrophys 28 575 and Sky Tel. 29 172
+
+77 64.44(0).59 S. M Meljuchin, Über Unendlichkeit und Endlichkeit des Weltalls, Moskau, <<Snanije>>, 1964, 48 pp, 9 Kop.
+
+78 64.44(0).67 R. Nevanlinna, Raum comma Zeit und Relativität, Basel-Stuttgart, Birkhäuser-Verlag, 1964, 229 pp, DM 23.00, VdS Narchr. 14 74
+
+79 64.44(0).93 D. Sciama, Världsalltet som enhet, Stockholm, Albert Bonniers Förlag AB, 1964, 190 pp, Kr. 9:50, PAT 45 164
+
+80 64.44(0).104 M.-A. Tonnelat, Les Vérifications Expérimetales de la Relativité Générale, Paris, Mason et Cie, 1964, 14+307 pp, F84, Phys. Abstr. 68 725 and Phys. Today 18 Nr. 8 49
+
+81 64.44(0).109 H.-Y. Chiu and W. F. Hoffmann ed., Gravitation and Relativity, New York-Amsterdam, W. A. Benjamin Inc., 1964, 35+353 pp, $15.75, AJ 69 220 and Ann d’Astrophys 27 247 and Endeavour 24 56 and Math. Rev. 28 190 and Nature 205 735 and Obs 85 49 and Phys. Abstr. 67 709 and Proc. Phys. Soc. 84 318 and Science 144 700 and Sky Tel. 27 305 and ZfA 61 95
+
+82 64.44(0).110 H. Messel and S. T. Butler ed., The Universe and its Origin, New York, St. Martin’s Press, 1964, 147 pp, $3.75, Phys. Today 17 Nr. 10 60 and Science 145 1288 and Sky Tel. 29 378
+
+83 64.31.14 H. Spencer Jones, General Astronomy, New York, St. Martin’s Press, 1964, 470 pp, $12.00, Sky Tel. 29 316, 4th edition
+
+84 84.31.30 B. Tuckerman, Planetary comma Lunar comma and Solar Positions A.D. 2 to A.D. 1649 at Five-Day and Ten-Day Intervals, Philadelphia, American Philosophical Society, 1964, 7+842 pp, $7.50, Ciel et Terre 80 467 and IEEE Spectrum 1 Nr. 3 267 and Nature 202 943 and Phys. Today 17 Nr. 6 72, Sky Tel. 27 240 and Z. Deutsche Morgenländ. Ges. 113 628
+
+85 64.31.34 , Fragen der Astrometrie, Kiew, <<Naukowa Dumka>>, 1964, 96 pp, 38 Kop., edited under Astr. Hauptobs. Akad. Wiss. Ukrain. SSR
+
+86 64.32(1).04 B. Boss, General Catalogue of 33342 Stars for Epoch 1950 Vols 1—5, New York, Johnson Reprint Corporation, 1963, 339 and 313 and 360 and 331 and 357 pp, $125.00, reprint of AJB 39.71.12
+
+87 64.32(1).09 D. Hoffleit, Catalogue of Bright Stars, New Haven CT, Yale University Observatory, 1964, 415 pp, $15.00, Ciel et Terre 81 192 and Sky Tel. 29 174, 3rd revised edition
+
+88 64.32(1).25 , Index der Sternörter 1925—1960 Index II Band III CoD -22˚ bis CoD -40˚, Berlin, Akademie-Verlag, 1964, 28+295 pp, DM45.00, edited under Deutshen Akademie der Wissenshften zu Berlin reviewed by A. Kahrstedt
+
+89 64.32(1).26 , Index der Sternörter 1925—1960 Index II Band VII BD +21˚ bis BD +30˚, Berlin, Akademie-Verlag, 1964, 28+260 pp, DM45.00, edited under Deutshen Akademie der Wissenshften zu Berlin reviewed by A. Kahrstedt
+
+90 64.32(2).33 A. Bečvář, Atlas of the Heavens—II Catalogue 1950.0, Cambridge MA, Sky Publishing Corp., 1964, 369 pp, $8.75, Sky Tel. 27 306, 4th Edition
+
+91 64.32(2).34 A. Bečvář, Atlas Australis 1950.0, Prague, Nakladatelstvi Československé Akademie Věd, 1964, 1pp 24 charts, Kčs 78, RH 45 222
+
+92 64.32(2).36 I. M. Levitt and R. K. Marshall, Star Maps for Beginners, New York, Simon & Schuster, 1964, 47 pp, $3.95 and $1.95, Sky Tel, 28 36
+
+93 64.32(2).37 A. P. Norton and J.G. Inglis, A Star Atlas and Reference Handbook, Cambridge MA, Sky Publishing Corp., 1964, 114 pp, $6.50, Sky Tel. 29 107, 15th edition
+
+94 64.32(2).38 J. D. W. Staal, Vára Stjärnbilder, Malmö, Berghs Fölag, 1964, 208 pp, 26:75
+
+95 64.32(2).39 H. Vehrenberg, Photographischer Stern-Atlas Südhimmel zwischen -14˚ Deklination und Südpol, Düsseldorf, Treugesell-Verlag, 1964, 16 pp 161 star charts 12 special charts, DM42.00 and DM65.00, Orion Schaffhausen 10 149 and Sternebote 8 47 and VdS Nachr. 14 17, price list for distribution A and distribution B?
+
+96 64.32(2).40 H. Vehrenberg, Photographic Star Atlas; Part III Southern Sky, Cambridge MA, Sky Publishing Corp., 1964, 16 pp 173 charts, $17.00, Sky Tel. 29 168
+
+97 64.33.08 K. A. Kulikow, Fundamental Constants of Astronomy, London, Oldbourne Press, 1964, 9+211 pp, 96s, BSAF 79 154 and Mem SA It (NS) 35 401 and Nature 206 973, also published Jerusalem Israel Program for Scientific Translations
+
+98 64.35.11 W. W. Zybulskij, Die heutigen Kalender der Länder des Nahen und Mittleren Ostens Vergleichende Kalendertafeln und Erklärungen, Moskau, <Nauka>>, 1964, 236 pp, 60 Kop., RJ UdSSR 1965 2.51.9
+
+99 64.36.12 W. F. Djakonow, Nautische Astronomie, Leningrad, <<Hochseetransport>>, 1963, 587 pp, 1R. 60 Kop., 2nd revised edition
+
+100 64.36.15 G. A. Golubew and W. F. Djakonow and B. I. Krassawzew, Aufgabensammlung zur nautischen Astronomie, Moskau, <<Hochseetransport>>, 1963, 287 pp, 1R. 34 Kop.
+
+101 64.36.19 F. R. Helmert, Die mathmatischen und physicalischen Theorien der höheren Geodäsie Teil I und II, Leipzig, B. G. Teubner Verlags-gesellschaft, 1963, 16+631 and 15+610 pp, DM 42.50, Gerlands Beiträge Geophys. 73 253, 2nd edition don’t know if price is each or both Pries je DM 42.50
+
+102 64.36.38 D. A. Moore, Basic Principles of Marine Navigation, London, Kandy Publications, 1964, 128 pp, 10s, J. Inst. Navigation 18 386
+
+103 64.36.49 N. J. Rybaltowskij, Praktische nautische Astronomie, Moskau—Leningrad, <<Transport>>, 1964, 125 pp, 37 Kop.
+
+104 64.36.62 L. W. Woronow, Die Bestimmung astronomischer Asimute, Moskau, Militär-Verlag, 1964, 112 pp, 20 Kop.
+
+105 64.37.36 , Eigenschwingungen der Erde, Moskau, <<Mir>>, 1964, 315 pp, 1R. 4 Kop., translated from English edited by W. N. Sharkow
+
+106 64.37.37  , Arbeitsephemeride für die Talcottsche Methode für Breiten von +35˚ bis +65˚ Epoche 1980.0, Moskau, <<Nedra>>, 1964, 310 pp, 4R.
+
+107 64.38.12 W. H. Munk and G. MacDonald, Die Rotation der Erde, Moskau, Verlag <<Mir>>, 1964, 381 pp, 1R. 47 Kop., AJ UdSSR 42 869, translation from English of AJB 60.38.18 by W. W. Nesterow edited by P. N. Uspenskij
+
+108 64.21.07 R. Brandt, Das Fernrohr des Sternfreundes, Stuttgart, Fanckh’sche Verlagshandlung W. Keller & Co., 1964, 78 pp, DM 6.80, SuW 3 266, 2nd edition
+
+109 64.21.38 A. S. Korowkin, Infrarottechnik und Kosmos, Moskau, <<Snanijes>>, 1964, 40 pp, 7 Kop.
+
+110 64.21.39 A. Kutter, Bau-Anleitung für den Kosmos-Schiefspiegler, Stuttgart, Franckh’sche Verlagshandlung, 1964, 43 pp, DM 12.80, Sky Tel. 29 239 and SuW 4 155
+
+111 64.21.45 E. H. Linfoot, Fourier Methods in Optical Image Evaluation, London-New York, Focal Press Ltd., 1964, 90 pp, 50s, Nature 207 449 and Proc. Phys. Soc. 86 667
+
+112 64.21.57 H. E. Paul, Binoculars and All-Purpose Telescopes, New York, Amphoto, 1964, 128 pp, $2.50, Sky Tel. 29 42 and Sky Tel. 29 170
+
+113 64.21.68 B. Valniček, Moderní technika v astronomii, Prag., Verlag Akad. Wiss., 1964, 280 pp, Kčs 16.50, Kosmické rozhledy 2 Nr. 2-3 18 and RH 45 142 and Vesmír 43 185
+
+114 64.21.75 S. Brown ed., Homebuilt Telescopes, , Edmund Scientific Co., 1964, 32 pp, $0.75, Sky Tel. 29 109
+
+115 64.21.76 P. Moore ed., A Handbook of Practical Amateur Astronomy, New York, W. W. Norton & Co., 1964, 254 pp, $5.95, Strolling Astr. 18 80
+
+116 64.22(1).29 H. Rohr, Das Fernrohr für jedermann, Zürich-Stuttgart, Rascher & Cie. AG, 1964, 211 pp, DM 13.50, Orion Schaffhausen 9 286 and Orion Schaffhausen 10 51 and PAT 46 77 and Phys. Blätter 21 292 and Sky Tel. 29 107 and Sternenbote 8 23 and VdS Nachr. 13 161, 4th edition
+
+117 64.22(1).33 J. Scherman and H. A. Viola, Construcción de Telescopios, , , 1960, 103 pp, , Rev. Astr. 35 29, edited by Asociación Amigos de la Astronomia
+
+118. 64.23(4).80 F. Daniels, Direct Use of the Sun’s Energy, New Haven CT, Yale University Press, 1964, 18+374 pp, $2.45 and $7.50, Phys. Today 18 Nr. 8 52 and Sci. American 213 Nr. 1 120 and Science 148 790
+
+119 64.23(4).87 H. Rau, Solar Energy, New York, Macmillan Company, 1964, 171 pp, $6.00, Phys. Today 18 Nr. 7 65 and Sky Tel. 28 231 and Sky Tel. 29 39, translated from the German by M. Schur
+
+120 64.24(0).02 E. von Bassermann-Jordan, The Book of Old Clocks and Watches, New York, Crown Publishers Inc., 1964, , $20.00, , 4th edition revised by H. von Bertele
+
+121 64.25.12 S. Fujinami, Celestial Photography for Amateur Hand Cameras, Tokyo, Kyoritsu Shuppan Co., 1964, 163 pp, 650 Yen, Sky Tel. 29 42
+
+122 64.25.23 J. Texareau and G. de Vaucouleurs, Astrofotografie für Jedermann, Stuttgart, Franckh’sche Verlagshandlung, 1964, 94 pp, DM 12.80, Orion Schaffhausen 9 232 and PAT 45 163 and Sky Tel. 28 38 and Sterne 40 256 and Sternenbote 7 105 and SuW 4 90 and VdS Nachr. 13 92, translated from the French to German by M. Gerstenberger
+
+123 64.11.01 G. Abell, Exploration of the Universe, New York, Holt & Co. Inc., 1964, 8+646 pp, $9.50, Publ. ASP 76 266 and Sky Tel. 27 305 and Sky Tel. 29 233, also published New York Rinehart & Co. Inc. and Philadelphia Winston Co.
+
+124 64.11.02 A. T. Adams, Astronomy for the Layman, New York, Vantage Press, 1964, 217 pp, $3.95, Sky Tel. 29 108
+
+125 64.11.03 D. Alter and C. H. Cleminshaw and J. G. Phillips, Pictorial Astronomy, London, Museum Press Ltd., 1964, 312 pp, 42s, J. Astro. Soc. Victoria 17 70 and Nature 204 1019
+
+126 64.11.04 C. N. Anderson, The Solar System and the Constellations, New York, Vantage Press, 1964, 269 pp and 10 charts, $8.50, Sky Tel. 30 39 and Sky Tel. 30 168
+
+127 64.11.05 I. Asimov, Adding a Dimension, New York, Doubleday & Co. Inc., 1964, 202 pp, $3.95, Sky Tel. 28 93
+
+128 64.11.06 R. H. Baker, Astronomy, London-Princeton, Van Nostrand Co. Ltd., 1964, 557 pp, $8.25 and 64s, Obs 85 52 and Phys. Today 17 Nr. 5 79 and Sky Tel. 27 240 and Spaceflight 6 177, 8th edition
+
+129 64.11.07 A. Blume and E. N. Svendsen, Astronomie, Kopenhagen, Gyldendalske Boghandel comma Nordisk Forlag A/S,  , 146 pp, Kr. 15.75, NAT 1964 80
+
+130 64.11.08 H. Bondi, Wszechświat nieznany, Warszawa, Wiedze Powszechna, 1964, 136 pp, zł 6, Urania Kraków 35 281, polish translation of H. Bondi <<The Universe at Large>> New York 1960
+
+131 64.11.09 N. Boneff, Astronomie (Lehrbuch für Physik-Mathematikstudenten), Sofia, <<Wissenshaft und Kunst>>, 1964, 440 pp, 1.61 Lewa, Bulgarian 3rd edition
+
+132 64.11.10 J. C. Brandt and P. W. Hodges, Solar System Astrophysics, New York, McGraw-Hill Book Company, 1964, 10+457 pp, $12.50, Ann d’Astrophys 28 460 and Publ. ASP 77 65 and Science 147 386 and Sky Tel. 29 109 and Sky Tel. 29 374
+
+133 64.11.11 R. Brandt, Himmelswunders im Feldstecher, Leipzig, Johann Ambrosius Barth, 1964, 131 pp, DM 6.00, Coelum 32 94 and Sky Tel. 28 94 and Sternenbote 7 119, 7th revised edition
+
+134 64.11.12 C. Fisher and R. S. Dodson jr., Exploring the Heavens, New York, T. Y. Crowell Company, 1964, 214 pp, $4.95, Sky Tel. 28 300
+
+135 64.11.13 J. Gadomski, Opowieści o kosmosie, Warazawa, Ludowa Spółdzielnia Wydawnicza, 1964, 144 pp, zł 19, ,Sammlung von allgemeinverständlichen Aufsätzen aus der Astronomie
+
+136 64.11.14 M. Gardner, The Ambidextrous Universe, New York, Basic Books Inc, 1964, 94 pp, $5.95, Phys. Today 18 Nr. 5 80
+
+137 64.11.15 P. J. Gathier, Sterrenkunde, Groningen, J. B. Wolters, 1963, 152 pp, f 5.90, HeD 62 257
+
+138 64.11.16 A. S. Gregor, A Short History of the Universe, London-New York, The Macmillan & Co., 1964, 127 pp, $4.50, Sky Tel. 28 230 and Sky Tel. 29 104
+
+139 64.11.17 J. Herrmann, Astronomie, Baarn, Bosch & Keunig N. V., 1963, 191 pp and 192 pp, f 4.90, HeD 62 285, published in 2 volumes
+
+140 64.11.18 J. Herrmann, Geburt und Tod im Weltall, Stuttgart, Franckh’sche Verlagshandlung W. Keller & Co., 1964, 161 pp, DM 16.80, SuW 3 266 and VdS Nachr. 13 128
+
+141 64.11.19 J. Heywood, Radio Astronomy and How to Build Your Own Telescope, New York, Arc Books, 1964, 159 pp, $2.50, Sky Tel. 28 374
+
+142 64.11.20 F. Hoyle, L’Astronomie, Paris, Editions du Pont Royal, 1963, 320 pp, F 55.44, La Nature 92 37, translated from the English
+
+143 64.11.21 I. G. Koltschinskij, Observatorien im Kosmos, Kiew, Akad. Wiss. Ukrain. SSR, 1962, 48 pp, 8 Kop., Ukranian
+
+144 64.11.22 R. Kühn, Astronomie popular – eine Einführung in die Himmelskunde, München, Deutscher Taschenbuchverlag, 1964, 165 pp, DM 2.50, 
+
+145 64.11.23 P. H. van Laer, Vreemde Woorden in de Sterrenkunde en Namen van Sterrenbeelden en Sterren, Groningen, J. B. Wolters, 1964, 127 pp, hfl 7.50, HeD 63 260
+
+146 64.11.24 W. Ley and C. Bonestell, Beyond the Solar System, New York, Viking Press Inc., 1964, 140 pp, $6.50, J RAS Canada 59 48 and Sky Tel. 29 108
+
+147 64.11.25 J. B. Mackie, The Elements of Astronomy for Surveyors, London, Charles Griffin & Co. Ltd., 1964, 286 pp, 45s, Sky Tel. 27 305 and Southern Stars 20 179, 6th edition
+
+148 64.11.26 D. H. Menzel, A Field Guide to the Stars and Planets, Boston, Houghton Mifflin Co., 1964, 397 pp, $4.95, Sky Tel. 28 94 and Sky Tel. 29 36
+
+149 64.11.27 P. Moore, The Sky at Night, London, Eyre and Spottiswoode Ltd., 1964, 11+224 pp, 25s, Obs 85 91
+
+150 64.11.28 L. Motz, This is Astronomy, New York—London, Columbia University Press, 1964, 279 pp, 13s and $1.75, Ann d’Astrophys 27 247 and BSAF 79 107 and Coelum 33 107 and Obs 84 220 and Orion Schaffhausen 9 128 and ZfA 59 286 
+
+151 64.11.29 J. Muirden, Stars and Planets, New York, T. Y. Crowell Company, 1964, 318 pp, $4.95, Sky Tel. 29 240
+
+152 64.11.30 J. Muirden, The Pan Book of Astronomy, London, Pan Books Ltd., 1964, 318 pp, 5s, Obs 84 220, same as 64.11.29? the page count is the same
+
+153 64.11.31 R. Müller, Astronomische Begriffe, Mannheim, Bibliographisches Institut, 1964, 186 pp, DM 6.80, VdS Nachr. 13 127
+
+154 64.11.32 K. F. Ogorodnikow,  Rätsel des Kosmos, Moskau, Militär—Verlag, 1963, 87 pp, 14 Kop., EuW 1 Nr. 1 93
+
+155 64.11.33 A. Opolski, Astronomiczne podstawy geografii, Warswaza, Państwowe Wydawnictwo Naukowe, 1964, 232 pp, zł 35, 3rd edition
+
+156 64.11.35 M. Pregizer, Wegweiser zum Auffinden der Sternbilder, Schwäbisch Hall, E. Schwend KG, 1964, , DM 5.40, VdS Nachr. 14 59
+
+157 64.11.36 L. del Rey, The Mysterious Sky, Philadelphia, Chilton Company Book Division, 1964, 183 pp, $3.95, Sky Tel. 27 240
+
+158 64.11.37 C. A. Ronan, A la découverte de l’Univers, Paris, Flammarion et Cie, 1964, 156 pp,  , BSAF 79 193, translated from English
+
+159 64.11.38 C. A. Ronan, Astrophysik und Astronautik, Ravensburg, Otto Maier Verlag, 1964, 157 pp, DM 19.80 and sfr. 21.60, Orion Schaffhausen 10 150 and SuW 4 115, also published Aarau H. R. Sauerländer & Co. translated by W. Petri
+
+160 64.11.39 K. Schaifers, Petra lernt den Himmel kennen, Mannheim, Bibliographisches Institut, 1964, 108 pp, DM 6.80, SuW 3 292 and VdS Nachr. 13 182
+
+161 64.11.40 C. Shalén and C. Roslund and N. Engver, Kompendium för l betyg i Astrofysik, Lund, Studentlitteratur, 1964, 108 pp, ,
+
+162 64.11.41 S. I. Seleschnikow, ABC des Sternhimmels, Leningrad, Leningrader Abt. Ges. <<Snanije>>  Russ. SSR, 1963, 64 pp, 10 Kop., RJ UdSSR 1965 1.51.85
+
+163 64.11.42 W. W. Shelesnjakow, Die Radiostrahlung der Sonne und Planeten, Moskau, Verlag <<Nauka>>, 1964, 560 pp, 2R. 63 Kop., AJ UdSSR 42 869
+
+164 64.11.43 F. J. Siegel, Schätze des Sternhimmels comma Wegwieser durch die Sternbilder, Moskau, <<Nauka>>, 1964, 223 pp, 48 Kop.,
+
+165 64.11.44 W. T. Skilling and R. S. Richardson, Sun comma Moon and Stars, New York, McGraw-Hill Book Co., 1964, 304 pp, $5.95, Sky Tel. 28 93 and Sky Tel. 28 371
+
+166 64.11.45 O. Struve and B. Lynds and H. Pillans, Elementare Astronomie, Moskau, <<Nauka>>, 1964, 457 pp, 1R. 22 Kop., AJ UdSSR 42 870 and Priroda 54 Nr. 6 5, translated from the English of AJB 59.11.56 by I. S. Schtscherbina-Samojlowa and edited by S. Kaplan
+
+167 64.11.46 W. G. Tejfel, Wovon die Sterne erzählen Astrophysik, Alma-Ata, Kaach. Staatsverlag, 1964, 143 pp, 19 Kop.
+
+168 64.11.47 K. Winkler, Den Sternen auf der Spur; Ein Beschäftigungsbuch für junge Astronomen, Halle/Saale, Postreiter-Verlag, , , DM 6.45, Sterne 40 175
+
+169 64.11.48 W. P. Wjasanizyn and M. N. Gnewyschew and O. W. Dobrowolskij and W. A. Krat and A. W. Markow and A. P. Moltschanow and W. M. Sobolew and W. W. Scharonow, Lehrbuch der Astrophysik und Stellarastronomie; Band 3, Moskau, <Nauka>>, 1964, 375 pp, 1R. 83 Kop., AJ UdSSR 42 214 and RJ UdSSR 1965 1.51.54
+
+170 64.11.49 B. A. Woronzow-Weljaminow, Astronomie; Lehrbuch für Mittleschulen, Moskau, <<Prosweschtschenije>>, 1964, 160 pp, 24 Kop., 18th edition
+
+171 64.11.50 B. A. Woronzow-Weljaminow, Über das Weltall, Moskau, Verlag <<Nauka>>, 1964, 552 pp, 1R. 2 Kop., Priroda 53 Nr. 7 119, 5th edition
+
+172 64.11.51 S. P. Wyatt, Principles of Astronomy, Boston, Allyn and Bacon, 1964, 12+561 pp, $8.95, J. Astr. Soc. Victoria 18 59 and Science 144 987 and Sky Tel. 29 165 and Sky Tel. 28 361
+
+173 64.11.52 H. S. Zim and R. H. Baker, Astronomi, Stockholm, Generalstabens Litografiska Anstalts Förlag, 1964, 160 pp, 17:50, PAT 46 76
+
+174 64.11.53 C. Flammarion, Astronomie Populaire, Paris, Flammarion et Cie, 1964, 674 pp, 100s, J. Inst. Navigation 18 120 and SuW 3 292, 2nd edition G. C. Flammarion and A. Danjon ed.,
+
+175 64.11.54 S. von Hoerner and K. Schaifers ed., Meyers Handbuch über das Weltall, Mannheim, Bibliographisches Institut, 1964, 621 pp and atlas, DM 18.00, Orion Schaffhausen 9 234 and Phys. Blätter 21 393 and Sky Tel. 28 93 and VdS Nachr. 13 61 and Weltraumfahrt 15 158, 3rd edition
+
+176 64.11.55 H. Messel and S. T. Butler ed., Space Physics and Radio Astronomy, New York, St. Martin’s Press, 1964, 174 pp, $4.25, Science 145 1288 and Sky Tel. 29 378
+
+177 64.11.56/7  , The Flammarion Book of Astronomy, London, George Allen and Unwin Ltd., 1964, 670 pp, 100s and $22.95, Nature 204 815 and Science 146 1153 and Spaceflight 7 63, translated from French by A. Pagel and B. Pagel also published New York Simon and Schuster
+
+178 64.11.58 S.Rappaport and H. Wright ed., Astronomy, New York, New York University Press, 1964, 14+354 pp, $4.95, Sky Tel. 29 378 and Sky Tel. 30 163 and Science 148 794
+
+179 64.11.59 , Neue Methoden in der Astrophysik, Moskau, Verlag <<Mir>>, 1964, 252 pp, 92 Kop., AJ UdSSR 42 214, under the editorship of P. W. Schtscheglow and translated from English by A. S. Scharow
+
+180 64.11.60 , English-Russian Astronautics (Cosmonautics) Dictionary, Moskau, The Military Publishing House of the Ministry of Defence, 1964, , 0.71R., Spaceflight 6 174, compiled by F. P. Suprun and K. W. Schirokow edited by A. A. Blagonrawow
+
+181 64.11.61 , Astronomie; Ein Lehrbuch für die Oberschule – Klasse 10, Berlin, Volk und Wissen, 1964, 132 pp,  , 
+
+182 64.11.62 , Astronomie; Ein Lehrbuch für die erweiterte Oberschule – Klasse 11, Berlin, Volk und Wissen, 1964, 146 pp,  , 
+
+183 64.11.63 , Physik des Mondes und der Planeten, Kiew, <<Naukowa Dumka>>, 1964, 139 pp, 51 Kop.
+
+184 64.12.02 H. Craig and S. L. Miller and G. J. Wasserburg ed., Isotopic and Cosmic Chemistry, Amsterdam, North Holland Publishing Company, 1964, 25+553 pp, 108s, Nature 207 562 and Planet. Space Sci. 13 270, festschrift für H. C. Urey
+
+185 64.12.03 , Galileo Galilei comma Ausgewählte Werke in zwie Bänden, Moskau, <<Nauka>>, 1964, 640 pp, 3R., ,Band 1 Der Sternenbote comma Brief an Ingoli comma Dialog über die beiden Weltsystems
+
+186 64.12.04 F. Hammer ed., Johannes Kepler comma Band 8 and Band 9, München, C. H. Beck’sche Verlagsbushhandlung, 1960, 516 pp and 560 pp, DM 56.00 and DM 48.00, Nature 207 335, Band 8 Mysterium Cosmographicum comma Editio altera cum notis comma De Cometis comma Hyperspistes; Band 9 Mathematische Schriften
+
+187 64.12.05 A. A. Michajlow ed., N. Kopernicus comma De Revolutionibus orbium caelestium, Moskau, <<Nauka>>, 1964, 653 pp, 3R. 28 Kop., RJ UdSSR 1965 1.51.12, translated from Latin to Russian by I. N. Wesselowskij
+
+188 64.12.06 I. Newton, The Mathematical Principles  of Natural Philosophy, New York, Philosophical Library Inc., 1964, 447 pp, $10.00, Sky Tel. 28 94
+
+189 64.12.07 K. E. Ziolkowskij, Gesammelte Werke comma Band 4 comma Naturwissenschaft und Technik, Moskau, <<Nauka>>, 1964, 460 pp, 2R. 30 Kop.
+
+190 64.12.08 K. E. Ziolkowskij, Leben im interplanetaren Medium, Moskau, <<Nauka>>, 1964, 84 pp, 15 Kop., Priroda 24 Nr. 5 93
+
+191 64.13.01 , Sternspektren im fernen Ultraviolett, Moskau, Verlag <<Mir>>, 1964, 419 pp, 1R. 85 Kop., AJ UdSSR 42 214 and RJ UdSSR 1965 6.62.252, translation into Russian of AJB 61.13.14 under the editorship of G. S. Iwanow-Cholodny and G. M. Nikolskij
+
+192 64.13.02 , Kosmische Gasdynamik, Moskau, Verlag <<Mir>>, 1964, 717 pp, 2R. 34 Kop., AJ UdSSR 42 869, translation in to Russian of AJB 61.13.17 under the editorship of E. E. Dubow
+
+193 64.13.03 T. M. Tabanera ed., Advances in Space Research comma Proceedings of the First Inter-American Symposium on Space Research, Oxford-London-New York-Paris, Pergamon Press, 1964, 8+439 pp, £6, Planet. Space Sci. 13 727 and ZfA 61 169
+
+194 64.13.04 B. Peters ed., Cosmic Rays comma Solar Particles and Space Research, New York-London, Academic Press Inc., 1963, 12+418 pp, $16.00 and £5 14s 6d, Planet. Space Sci. 13 362, Proceedings of the International School of Physics Enrico Fermi Course XIX
+
+195 64.13.07 B. Rossi ed., Space Exploration and the Solar System, New York-London, Academic Press,  1964, 6+311 pp, $13.00, Ann d’Astrophys 28 748 and Ciel et Terre 81 191 and Science 148 210 and Sky Tel. 29 173, Proceedings of the International School of Physics Enrico Fermi Course XXIV
+
+196 64.13.08 L. Infeld ed., Relativistic Theories of Gravitation, London-New York, Pergamon Press, 1964, 18+379 pp, 63s, Phys. Blätter 21 439, also published Paris Gauthier-Villars
+
+197 64.13.10 L. Gratton ed., Star Evolution, New York-London, Academic Press, 1963, 7+488 pp, $18.50, Ann d’Astrophys 28 749 and J RAS Canada 59 47 and Nature 206 49 and Phys. Today 18 Nr. 5 78 and Science 146 1032 and Sky Tel. 28 374, Proceedings of the International School of Physics Enrico Fermi Course XXVIII
+
+198 64.13.11 N. Boneff and I. Hersey ed., XIIIth  International Astronautical Congress Proceedings I and II, Wien-New York, Springer Verlag, 1964, 123+1024 pp, $48.00
+
+199 64.13.13 S. P. Maran and A. G. W. Cameron ed., Physics of Nonthermal Radio Sources, Greenbelt MD, NASA Goddard Institute for Space Studies, 1964, 10+171 pp, $0.75, Sky Tel. 29 173
+
+200 64.13.14 S. F. Singer ed., Torques and Attitude Sensing in Earth Satellites, New York-London, Academic Press Inc., 1964, 13+261 pp, 78s and $9.75, J. Astronaut. Sci. 12 35 and Nature 204 973
+
+201 64.13.15 , Die Rotation der Erde, Kiew, Akad. Wiss. Ukrain. SSR, 1963, 310 pp, 1R. 40 Kop.
+
+202 64.13.16 F. J. Kerr and A. W. Rodgers ed., The Galaxy and the Magellanic Clouds, Canberra, Australian Academy of Science, 1964, 6+393 pp, , Ann d’Astrophy 28 578 and Publ ASP 77 226, IAU-USRI Symposium No. 20
+
+203 64.13.18 E. Thrane ed., Electron Density Distribution in Ionosphere and Exosphere, Amsterdam, North-Holland Publishing Company, 1964, 403 pp, $13.50, Proc IEEE 53 334, also published New York Interscience Publishers Inc.
+
+204 64.13.20 P. J. Brancazio and A. G. W. Cameron ed., The Origin and Evolution of Atmospheres and Oceans, New York, J. Wiley & Sons Inc., 1964, 326 pp, $12.50, Science 146 1621 and Science 147 1021 and Sky Tel. 29 107
+
+205 64.13.22 M. Florkin and A. Dollfus ed., Life Sciences and Space Research II, Amsterdam, North-Holland Publishing Company, 1964, 8+440 pp, $14.00 and 100s, Planet. Space Sci. 13 361 and Nature 204 971
+
+206 64.13.23 P. Muller ed., Space Research IV, Amsterdam, North-Holland Publishing Company, 1964, 16+997 pp, 220s, Nature 204 315 and Obs 84 166 and Planet. Space Sci. 12 1214 and Proc. Phys. Soc. 84 822 and Weltraumfahrt 16 62 and ZfA 60 290
+
+207 64.13.25 V. G. Szebehely ed., Celestial Mechanics and Astrodynamics, New York, Academic Press, 1964, 744 pp, $10.75, Sky Tel. 29 173
+
+208 64.13.32 W. N. Hess ed., AAS-NASA symposium on the physics of solar flares, Washington D.C., NASA Sci. Techn. Inform. Div, 1964, 465 pp, 
+
+209 64.13.34 R. R. Daniel and P. J. Lavakare and M. G. K. Menon and S. Naranan and N. W. Nerurkar and Y. Pal and B. V. Sreekantan ed., Cosmic Rays Vol. 1 Solar Particles and Sun-Earth Relations, Coloba Bombay, Tata Institute of Fundamental Research, 1964, 265 pp, , Nature 206 350
+
+210 64.16(0).82 J. Rublowsky, Light: Our Bridge to the Stars, New York, Basic Books Inc., 1964, 146 pp, $4.50, Sky Tel. 28 231 and Sky Tel. 29 38
+
+211 64.16(1).99 J. F. Denisse and J. L. Delecroix, Plasma Waves, New York-London, Interscience Publishers Inc., 1963, 143 pp, 59s, Ann d’Astrophys 27 262 and Phys. Blätter 21 138 and Proc. Phys. Soc. 85 793 and Space Sci. Rev. 3 856, also published New York-London John Wiley & Sons
+
+212 64.16(1).101 W. L. Ginsberg, The Propagation of Electromagnetic Waves in Plasmas, Oxford-London, Pergamon Press Ltd., 1964, 19+535 pp, ,  ,English translation by J. B. Sykes and R. J. Taylor of AJB 61.16.83
+
+213 64.16(1).103 H. R. Green, Plasma Spectroscopy, New York-London, McGraw-Hill Book Company, 1964, 11+580 pp, $18.50
+
+214 64.17(0).01 T. Alexander, Project Apollo: Man to the Moon, New York, Harper & Row Publishers Inc., 1964, 225 pp, $4.50, J. Astronaut. Sci. 11 128
+
+215 64.17(0).04 B. P. Blasingame, Astronautics, New York, McGraw-Hill Book Company, 1964, 215 pp, 77s, Spaceflight 7 32
+
+216 64.17(0).08 R. Brock, Flugkörper – Raketen – Satelliten, München, J. F. Lehmanns Verlag, 1963, 412 pp, DM 48.00, Sterne 40 175 and Sternenbote 7 158
+
+216a 54.17(0).09 I. Budil, Základy kosmonautiky, Prag., Verlag Ordis, 1964, 446 pp,  Kčs 24.50, Kosmické rozhledy 2 Nr. 4-5 20 and RH 45 239
+
+217 64.17(0).11 M. Caidin, Red Star in Space,  , Crowell-Collier Press, 1963, 280 pp, $4.95, Spaceflight 6 179
+
+218 64.17(0).17 H. Faust, Raketen comma Satelliten comma Weltraumflug, Stuttgart, Verlag Phillip Reclam jun., 1963, 153 pp, DM 1.60, Weltraumfarht 15 127
+
+219 64.17(0).22 J. K. Kaiser, Zu fremden Gestirnen, Baden-Baden, Signal-Verlag Hans Frevert, 1964, 191 pp, DM 9.80, Weltraumfarht 15 158, 2nd edition
+
+220 64.17(0).23 D. P. LeGalley and J. W. McKee, Space exploration, New York, McGraw-Hill Book Company Inc., 1964, 459 pp, $17.50, IEEE Spectrum 1 Nr. 10 172
+
+221 64.17(0).24 W. Ley, Missiles comma Moonprobes comma and Megaparsecs, New York, New York American Library of World Literature Inc., 1964, 181 pp, $0.60, J. Astronaut. Sci. 11 130
+
+222 64.17(0).26 R. Lüst, Die gegenwärtigen Probleme der Weltraumforschung, München, R. Oldenbourg Verlag, 1964, 42 pp, DM 3.40, VdS Nachr. 14 100, also published Düsseldorf VDI-Verlag GMBH
+
+223 64.17(0).28 H. Massey, Space Physics, London-New York, Cambridge University Press, 1964, 8+237 pp, 35s and $6.50, Nature 206 48 and Planet. Space Sci. 13 471 and Proc. Phys. Soc. 86 223 and Science 148 1081 and Spaceflight 7 67
+
+224 64.17(0).30 R. C. Moser, Space-Age Acronyms, New York, Plenum-Press, 1964, 427 pp, $17.50, Weltraumfahrt 16 94
+
+225 64.17(0).31 J. L. Nayler, Dictionary of Astronautics, London, Newnes Ltd., 1964, 316 pp, 35s, Spaceflight 7 34
+
+226 64.17(0).33 M. Stoiko, Project Gemini: Step to the Moon, New York, Holt comma Rinehart and Winston, 1963, 124 pp, $3.95, Spaceflight 7 139
+
+227 64.17(0).39 M. L. Bizony and R. Griffin and D. Forbes ed., The Space Encyclopedia, New York, E. P. Dutton & Company Inc., 1964,  , $2.45
+
+228 64.17(0).40 A. P. Herbert ed., Watch This Space, London, Methuen & Co. Ltd., 1964, 196 pp, 10s 6d, Spaceflight 7 62
+
+229 64.17(0).41 D. Howard ed., Astronautics 1963, , , 1963, 133 pp, 30s, Spaceflight 7 32
+
+230 64.17(0).42 D. P. Legalley and A. Rosen ed., Space Physics, London-New York, John Wiley & Sons, 1964, 20+752 pp, $25.00, Ann d’Astrophys 27 595 and Phys. Today 17 Nr. 10 57 and Planet. Space Sci. 13 869 and Proc. IEEE 53 432 and Science 145 806 and Sky Tel. 28 374 and Sky Tel. 29 235 and Spaceflight 6 211 and Space Sci. Rev. 3 857
+
+231 64.17(0).43 H. Moureu and M. Y. Bernard ed., Astronautique et Recherche Spatiale, Paris, Dunod, 1964, 326 pp, Fr. 28, Space Sci. Rev 3 858
+
+232 64.17(0).44 H. Odishaw ed., The Challenges of Space, London, The University of Chicago Press, 1963, 18+379 pp, 50s, Obs 85 49
+
+233 64.17(0).45 F. I. Ordway III ed., Advances in Space Science and Technology Vol. 6, New York-London, Academic Press Inc., 1964, 17+444 pp, 107s 6d, Nature 206 48
+
+234 64.17(0).46 S. F. Singer ed., Progress in the Astronautical Sciences Vol. 1, Amsterdam, North-Holland Publishing Company, 1964, 416 pp, hfl 43.00, Weltraumfarht 16 63
+
+235 64.17(0).48 , Wissenschaft im Kosmos, Moskau, <<Nauka>>, 1964, 446 pp, 1R. 62 Kop, , translation of AJB 61.17.90
+
+236 64.17(0).49 , Advances in the Astronautical Sciences Vol. 10 comma 12 comma 13 comma 14, North Hollywood CA, Western Periodicals Co., 1963, 320 pp and 255 pp and 682 pp and 375 pp, $11.50 and $11.50 and $16.75 and $15.00, Spaceflight 6 175, multiple volumes listed
+
+237 64.17(1).64 H. Massey and M. O. Robins and R. L. F. Boyd and G. V. Groves and D. W. O Heddle, Scientific Research in Space, London, Elek Books Ltd., 1964, 194 pp, 37s 6d, Nature 206 49 and Planet. Space Sci. 13 471
+
+238 64.17(2).79 R. H. Battin, Astronautical Guidance, New York, McGraw-Hill Book Company, 1964, 400 pp, $15.00, J. Astronaut. Sci. 12 66
+
+239 64.17(2).98 D. F. Lawden, Optimal Trajectories for Space Navigation, London, Butterworth & Co., 1963, 126 pp, $4.25, J. Astronaut. Sci. 12 65
+
+240 64.17(3).123 R. M. Wallisfurth, Rußlands Weg zum Mond, Düsseldorf-Wien, Econ-Verlag GmbH, 1964, 440 pp, DM 22.80, Phys. Blätter 21 240 and VdS Narchr. 13 182
+
+241 64.17(3).126 C. T. Leondes and R. W. Vance ed., Lunar Missions and Explorations, New York, Wiley & Sons Inc., 1964, 20+669 pp, $17.50, Proc IEEE 53 768 and Science 147 1566
+
+242 64.18(0).01 J. L. Alpert and A. W. Gurewitsch and L. P. Pitajewskij, Künstliche Satelliten in verdünntem Plasma, Moskau, Verlag <<Nauka>>, 1964, 384 pp, 1R. 11 Kop., AJ UdSSR 42 214
+
+243 64.18(0).22 H. Pfaffe and P. Stache, Typenbuch der Raumflugkörper 1957—1964, Berlin, Deutscher Militärverlag, 1964, 295 pp, DM 9.00, CdS Nachr. 14 12
+
+244 64.18(0).35 K. W. Gatland ed., Telecommunications Satellites, Englewood Cliffs NJ, Prentice-Hall Inc., 1964, 431 pp, $4.50, IEEE Spectrum 2 Nr. 8 156
+
+245 64.18(2).180 D. G. King-Hele, Theory of Satellite Orbits in an Atmosphere, London, Butterworths, 1964,7+165 pp, £1.10, Ann d’Astronphys 27 597 and JBAA 75 209 and Planet. Space Sci. 13 268
+
+246 64.18(2).200 D. A. Pogorelow, Fundamentals of Orbital Mechanics, San Francisco, Holden-Day, 1964, 112 pp, $5.00, Phys. Today 17 Nr. 11 78 and Science 146 1453, translated from the Russian by M. Friedman
+
+247 64.19(0).01 G. Abetti, L’Unità del Cosmo, Milano, V. Bompiani, 1964, 32+164 pp, L. 1500, Coelum 32 134
+
+248 64.19(0).04 E. Bergaust, The Next Fifty Years in Space, London, Macmillan & Co., 1964, 272 pp, $5.95, Sky Tel. 27 240
+
+249 64.19(0).05 O. O. Binder, Riddles of Astronomy, New York, Basic Books Inc., 1964, 14+210 pp, $4.95, J. Astronaut. Sci. 12 62 and Science 148 939
+
+250 64.19(0).10 F. Hoyle, Of Men and Galaxies, Seattle, University of Washington Press, 1964, 7+73 pp, $2.95, Nature 206 47 and Phys. Today 18 Nr. 6 51 and Sci. American 212 Nr. 5 144 and Sky Tel. 29 42
+
+251 64.19(0).13 M. E. Martin, The Friendly Stars, New York, Dover Publications Inc., 1964,  12+147 pp, $1.00, Coelum 33 27 and Sky Tel. 27 366 and Sky Tel. 28 162/4 and ZfA 61 167, from the 1907 edition
+
+252 64.19(0).14 G. Murchie, La Musique dex Sphères, Paris, Ed. Stock comma Delamain et Boutelleaux, 1964, 528 pp, , Ciel et Terre 80 387, translated from American by J.-P. Harrison
+
+253 64.19(0).17 G. Peisino, Le grandi realtà ed I profondi misteri dell’universo, Fossano, Editrice L’Esperienze, 1964, 160 pp, L 500, Coelum 33 28, Italian
+
+254 64.19(0).20 E. Verhülsdonk, Das kosnische Abenteuer, Franfurt, Verlag Josef Knecht, 1964, 360 pp, DM 19.80, SuW 4 43
+
+255 64.19(0).22 G. Westerhout and C. H. Townes and B. Heezen and N. Y. Chen and S. Ochon and G. Piel, Tomorrow was Yesterday, New York, G. Braziller Inc., 1964, 91 pp, $3.50, Sky Tel. 28 231, see also 64.08(2).36
+
+256 64.19(0).23 W. Herdeg ed., The Sun in Art, Zürich, Amstutz und Herdeg Graphis Press, 1962, 156 pp, $7.50, Sky Tel. 30 169, 3rd edition
+
+257 64.19(1).41 S. H. Dole, Habitable Planets for Man, New York, Blaisdell Publishing Company, 1964, 13+160 pp, $5.75, J. Astronaut. Sci. 12 31 and Sky Tel. 27 366 and Sky Tel. 28 230 and Spaceflight 7 140 and Space Sci. Rev. 4 262
+
+258 64.19(1).42 W. G. Fessenkow, Leben im Weltall, Moskau, <<Snanijes>>, 1964, 55 pp, 11 Kop.
+
+259 64.19(1).43 J. Gadomski, Powstanie Kosmosu i jego życie, Warschau, Wyd. Nasza Księgarnia, 1963, 120 pp, zł 20, Urania Kraków 35 122
+
+260 64.19(1).52 W. Sullivan, We Are Not Alone: The Search for Intelligent Life on Other Worlds, New York, McGraw-Hill Book Company, 1964, 12+325 pp, $6.95, Sci. American 212 Nr. 5 144 and Science 146 1666 and Sky Tel. 29 172 and Sky Tel. 30 101
+
+261 64.01(2).198 W. Lohmann and F. Henn and U. Güntzel-Ligner ed., Astronomisher Jahresbericht Vol. 62, Berlin, Walter de Gruyter & Co., 1964, 16+728 pp, DM 72.00
+
+262 64.01(2).209 J. C. Houzeau and A. Lancaster, Bibliographie Générale de l’Astronomie Jusqu’en 1880, London, Holland Press, 1964, 1727 pp and 85+2225 pp, £35.00 and $98.00, Sky Tel. 29 378, edited by D. W. Dewhirst
+
+262a 64.01(2).211 A. H. Sokoll, Bibliographie zur Aero- und Astronautik Deutschsprachiges Schriftum 1945—1960, München, Alkos-Verlag, 1963, 206 pp, DM 29.80, Weltraumfahrt 15 190
+
+263 64.02.02 R. H. Allen, Star Names: Their Lore and Meaning, New York, Dover Publications Inc., 1964, 577 pp, $2.35, Coelum 33 27 and ZfA 61 167, reprint of the 1899 edition
+
+264 64.02.03 S. A. Bedini, Early American Scientific Instruments and Their Makers, Washington D.C., U.S. Govt. Printing Office, 1964, 184 pp, $1.00, Ciel et Terre 81 46 and Sky Tel. 29 108
+
+265 64.02.21 W. Ley, Watchers of the Sky; An Informal History of Astronomy from Babylon to the Space Age, London, Sidgwick and Jackson Ltd., 1964, 13+528 pp, 45s, J. Astr. Soc. Victoria 17 100 and Nature 203 335 and Spaceflight 7 30
+
+266 64.02.22 J. N. Lockyer, The Dawn of Astronomy, Cambridge MA, The MIT Press, 1964, 16+432 pp, $2.95 and 10.00?, J. Astr. Soc. Victoria 17 102 and Strolling Astronomer 18 299
+
+267 64.02.32 E. Rybka, Four Hundred Years of the Copernican Heritage, Cracow, Jagellonian Univ., 1964, 230 pp, zł 36, Postępy Astr. 13 139
+
+268 64.02.35 I. Todhunter, A History of the Mathematical Theories of Attraction and the Figure of the Earth from the Time of Newton to that of Laplace, New York, Dover Publications Inc., 1962, 36+984 pp, $7.50, Naturwissenschaften  51 472 and ZfA 59 283, reprint of the 1873 edition
+
+269 64.02.39 C. F. Weizsäcker, Die Tragweite der Wissenschaften Band 1 Schöpfung und Weltentstehung, Stuttgart, S. Hirzel Verlag, 1964, 243 pp, DM 10.00, Phys. Blätter 21 338
+
+270 64.02.46 Ptolemäus, Handbuch der Astronomie Band 1 und 2, Liepzig, B. G. Teubner Verlagsgesellschaft, 1963, 32+461 pp and 6+466 pp, DM 18.20 and 16.20, Sternenbote 7 39 and VdS Nachr. 13 155, translated and edited by K. Manitius with a forward by O. Neugebaur
+
+271 64.03(0).05 H. Cuny, Camille Flammarion et l’Astronomie populaire, Paris, Editions Seghers, 1964, 204 pp, F 7.10, BSAF 78 429 and L Nature 92 452
+
+272 64.03(0).21 D. B. Larson, Beyond Newton, Portland OR, North Pacific Publishers, 1964, , $5.00
+
+273 64.03(0).25 N. I. Newskaja, Theodor Alexandrowitsch Bredichin 1831—1904, Moskau-Leningrad, <<Nauka>>, 1964, 253 pp, 80 Kop.
+
+274 64.03(0).26 S. K. Nowoksehanowa (Sokolowskaja), Wassilij Jakowlewitsch Struve, Moskau, <<Nauka>>, 1964, 296 pp, 95 Kop., AJ UdSSR 42 869 and EuW 1 Nr. 4 94 and Priroda 54 Nr. 5 125
+
+275 64.03(0).33 C. Ronan, The Astronomers, London, Evans Brothers, 1964, 232 pp, 25s and $5.00, JBAA 75 67 and Sky Tel. 29 108 and Sky Tel. 29 375, also published New York Hill and Wang Inc.
+
+276 64.03(0).37 W. L. Schaaf, Carl Fredrich Gauss, New York, Franklin Watts Inc., 1964, 168 pp, $2.95, Sky Tel. 28 38
+
+277 64.03(0).38 K. Selig, Albert Einstein, Moskau, <<Atom-Verlag>>, 1964, 205 pp, 63 Kop., RJ UdSSR 1965 1.51.21, translated from German to Russian
+
+278 64.03(0).39 N. Sullivan, Pioneer Astronomers, New York, Atheneum Publishers, 1964, 156 pp, $3.75, Sky Tel. 28 165 and Sky Tel. 29 238
+
+279 64.03(0).45 A. A. Michajlow ed., Wasslij Jakowlewitsch Struve (1793—1864), Moskau, <<Nauka>>, 1964, 250 pp,  , EuW 1 Nr. 4 94
+
+280 64.03(1).61 B. G. Kusnezow, Galilei, Moskau, <<Nauka>>, 1964, 326 pp, 1R. 8 Kop.,
+
+281 64.03(1).71 E. Schuhmacher, Der Fall Galilei, Darmstadt, Progress-Verlag Johann Fladung GmbH, 1964, 254 pp, DM 16.50, Weltraumfahrt 16 95
+
+282 64.03(1).72 L. I. Sedow, Galilei und die Grundlagen der Mechanik Zum 400 Geburtstag, Moskau, <<Nauka>>, 1964, 40 pp, 15 Kop., Priroda 53 Nr. 7 38
+
+283 64.08(2).33 L. Goldberg and A. J. Deutsch and D. Layzer ed., Annual Review of Astronomy and Astrophysics Vol. 2, Palo Alto CA, Annual Reviews Inc., 1964, 8+462 pp, $8.50, Planet. Space Sci. 13 728 and Publ ASP 77 63 and Sky Tel 28 300 and ZfA 60 291
+
+284 64.08(2).34 T. D. Nicholson ed., Astronomy Highlights, New York, Natural History Press, 1964, , $4.00, Science 148 939 and Sky Tel. 28 374
+
+285 64.08(2).35 J. A. Saxton ed., Advances in Radio Research Vol. 1 and 2, New York, Academic Press Inc., 1964, 10+226 pp and 10+215 pp, 50s and 50s, Planet. Space Sci. 13 870
+
+286 64.08(2).36 , Tomorrow Was Yesterday, New York, George Braziller Inc., 1964, 91 pp, $3.50, Publ ASP 76 364, see also 64.19(0).22
+
+287 64.08(3).59 , Ground-Based Astronomy comma a Ten-Year Program, Washington D.C., National Academy of Sciences-National Research Council, 1964, 105 pp, $4.00, BSAF 79 152 and Phys. Today 18 Nr. 2 19 and Science 146 899 and Science 146 1255 and SuW 4 110
+
+288 64.08(4).65 M. M. Dagajew, Labor-Praktikum zum Lehrgang über allgemeine Astronomie für Pädagogische Hochschulen der UdSSR, Moskau, <<Wysschaja Schkola>>, 1963, 316 pp, 77 Kop.
+
+289 64.08(4).66 B. Ernst, Wat geen oog kan zien, Hilversum, , 1964, 24 color picture in small format, f 13.50, HeD 63 25 

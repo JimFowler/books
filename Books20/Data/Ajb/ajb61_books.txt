@@ -51,7 +51,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 20 61.81.43 G. P. Kuiper and B. M. Middlehurst ed., The Solar System Vol. 3 Planets and Satellites, Chicago, University of Chicago Press, 1961, 20+601 pp, $12.50, AJ 67 328 and Ann d’Astrophys 25 50 and J RAS Canada 56 86 and Nature 194 48 and Science 134 1356 and Sky Tel. 23 106 and Sky Tel. 24 99, also published Toronto The University of Toronto Press
 
-21 61.82.(2).37 W. W. Kellogg and C. Sagan, The Atmosphere of Venus and Mars – A Report by the Ad Hoc Panel of Planetary Atmospheres of the Space Science Board, Washington DC, National Academy of Science – National Research Council, 1961, 151 pp, $5.00, ARS J 32 649
+21 61.82(2).37 W. W. Kellogg and C. Sagan, The Atmosphere of Venus and Mars – A Report by the Ad Hoc Panel of Planetary Atmospheres of the Space Science Board, Washington DC, National Academy of Science – National Research Council, 1961, 151 pp, $5.00, ARS J 32 649
 
 22 61.82(2).51 P. Moore, The Planet Venus, London, Faber and Faber Ltd., 1961, 151 pp, 18s and $3.75, Sky Tel. 22 161 and Strolling Astr. 16 126, 3rd edition also published New York Macmillan
 
@@ -477,7 +477,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 226 61.12.07 S. N. Axentjewa ed., A. J. Orlow comma Gesammelte Werke in drei Bänden Band 2, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1961, 243 pp, 1R. 56 Kop., , in Russian
 
-227 61.12 09 A. Pannekoek and E. Crone ed., The Principal Works of Simon Stevin Vol. III Astronomy; Navigation, Amsterdam, C. V. Swets & Zeitlinger, 1961, 5+632 pp, , HeD 60 25
+227 61.12.09 A. Pannekoek and E. Crone ed., The Principal Works of Simon Stevin Vol. III Astronomy; Navigation, Amsterdam, C. V. Swets & Zeitlinger, 1961, 5+632 pp, , HeD 60 25
 
 228 61.13(1).01 , The Rotation of the Earth and Atomic Time Standards, , , , , , ZfA 54 152, reference AJB 59.13.05
 
