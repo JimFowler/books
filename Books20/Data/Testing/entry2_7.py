@@ -54,11 +54,12 @@ No public functions are provided by this module.
 #
 # what to do about error checking?
 # replace pprint with __repr__
+# What to do with names like A.-B. Last, parses as AB Last in nameparser
+#    but should probably be A -B Last, replace ".-" with ". -" or "-"?
 # get super().version to work
 #
 
 import re
-import AJBcomments
 
 class Entry(object):
     """Class that manages a generic book entry and associated information
@@ -105,28 +106,28 @@ class Entry(object):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
         """
-        keys = list(self._EntryDict.keys())
+        keys = self._EntryDict.keys()
         for k in keys :
             del(self._EntryDict[k])
         
         self.setval('Index',         -1 )
-        self.setval('Num',          {'volNum':-1,
-                                     'sectionNum':-1,
-                                     'subsectionNum':-1,
-                                     'entryNum':-1,
-                                     'volume': ''} )
+        self.setval('Num',          {u'volNum':-1,
+                                     u'sectionNum':-1,
+                                     u'subsectionNum':-1,
+                                     u'entryNum':-1,
+                                     u'volume': ''} )
         self.setval( 'Authors',      [] )
         self.setval( 'Editors',      [] )
         self.setval( 'Translators',  [] )
         self.setval( 'Others',       [] )
-        self.setval( 'Title',        '' )
+        self.setval( 'Title',        u'' )
         self.setval( 'Publishers',   [] )
         self.setval( 'Year',         -1 )
-        self.setval( 'Pagination',   '' )
-        self.setval( 'Price',        '' )
+        self.setval( 'Pagination',   u'' )
+        self.setval( 'Price',        u'' )
         self.setval( 'Reviews',      [] )
-        self.setval( 'Comments',     '' )
-        self.setval( 'OrigStr',      '' )
+        self.setval( 'Comments',     u'' )
+        self.setval( 'OrigStr',      u'' )
         
     #
     # should change this to __repr__()
@@ -140,7 +141,7 @@ class Entry(object):
             from pprint import pprint
             pprint(self._EntryDict, stream, indent, width, depth)
         except:
-            print("Unable to pretty print this entry")
+            print "Unable to pretty print this entry"
 
         
         return
@@ -152,7 +153,7 @@ class Entry(object):
         self._EntryDict[name] = value
 
     def getval( self, name ):
-        if name in self._EntryDict :
+        if self._EntryDict.has_key( name ) :
             return self._EntryDict[name]
         else :
             return None
@@ -214,13 +215,13 @@ class AJBentry(Entry):
 #         if self.unparsable:
 #            return u"<%(class)s : [ Unparsable ] >" % {'class': self.__class__.__name__,}
 
-            return "<%(class)s : [no entry] >" % {'class': self.__class__.__name__,}
+            return u"<%(class)s : [no entry] >" % {'class': self.__class__.__name__,}
 
 
 
     def extract(self, line):
-        Place = ""
-        PublisherName = ""
+        Place = u""
+        PublisherName = u""
 
         #
         # This regular expression is used to check the beginning of a line
@@ -231,7 +232,7 @@ class AJBentry(Entry):
     
         if line and r1.match(line):
             self.setval('OrigStr', line)
-            #print(line)
+            print line
             fields = line.split(',')
             fieldNum = -1
             for field in fields :
@@ -246,10 +247,10 @@ class AJBentry(Entry):
                     self.setval( 'Title',  field )
                     
                 elif 2 == fieldNum:
-                    Place = "" + field
+                    Place = u"" + field
                     
                 elif 3 == fieldNum:
-                    PublisherName = "" + field
+                    PublisherName = u"" + field
                     self.setval( 'Publishers', [ {'Place' : Place,
                                                    'PublisherName' : PublisherName}] )
                     
@@ -304,7 +305,7 @@ class AJBentry(Entry):
         if not nums[4]:
             nums[4] = 0
             
-        return {'volume':'AJB',
+        return {'volume':u'AJB',
                 'volNum':nums[1],
                 'sectionNum':nums[2],
                 'subsectionNum':nums[4],
@@ -329,14 +330,14 @@ class AJBentry(Entry):
       ed = False
       comp = False
 
-      if line.endswith('ed.') :
+      if line.endswith(u'ed.') :
         ed = True
-        line = line.replace('ed.', '   ')
-      elif line.endswith('comp.') :
+        line = line.replace(u'ed.', '   ')
+      elif line.endswith(u'comp.') :
         comp = True
-        line = line.replace('comp.', '    ')
+        line = line.replace(u'comp.', '    ')
 
-      names = self.MakeNameList( line )
+      names = self.MakeAuthorList( line )
 
       if ed:
         self.setval( 'Editors', names )
@@ -347,7 +348,7 @@ class AJBentry(Entry):
 
 
 
-    def MakrNameList(self,  line ) :
+    def MakeAuthorList(self,  line ) :
         """Returns a list of object of class HumanName. See the package
         nameparser for full info. The names have the following possible keys
         "Title", "First", "Middle", "Last", and "Suffix"
@@ -416,7 +417,7 @@ class AJBentry(Entry):
             # append to the author list
             authors_list.append(name_dict)
 
-        print(newauthor_list)
+        print newauthor_list
         return authors_list
 
     def parseComments( self, field ):
@@ -458,34 +459,34 @@ if __name__ == '__main__':
     try:
       badentry = Entry(ajbstr)
     except:
-      print("entry() class fails properly with no extract method.")
+      print "entry() class fails properly with no extract method."
       
     ajb1 = AJBentry()
-    print("\najb.py version " + ajb1.version())
-    print('The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid())
+    print "\najb.py version " + ajb1.version()
+    print 'The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid()
     #ajb1.pprint()
 
 
     ajb2 = AJBentry(ajbstr)
-    print("\najb.py version " + ajb2.version())
-    print('The good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    print "\najb.py version " + ajb2.version()
+    print 'The good ajb entry isValid() is %d and looks like:' % ajb2.isValid()
     #ajb2.pprint()
 
     ajb3 = AJBentry(badajbstr)
-    print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
+    print '\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid()
     #ajb3.pprint()
 
     authorajb = AJBentry(authorstr)
-    print('\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid())
+    print '\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid()
     #authorajb.pprint()
 
     editorajb = AJBentry(editorstr)
-    print('\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid())
+    print '\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid()
     editorajb.pprint()
 
-    print(editorajb.numStr())
+    print editorajb.numStr()
     eds = editorajb.getval('Editors')
-    print(eds[0].full_name)
+    print eds[0].full_name
 
 
 

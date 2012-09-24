@@ -38,8 +38,6 @@ class BookEntry( QDialog, ui_BookEntry.Ui_BookEntry ):
       show record 1
 
       change current working file name to basename
-      note that os.path.basename() doesn't work on RedHat
-      nor does os.path.split()
       """
       if not os.path.isfile(fname):
          self.lblFileName.setText('Invalid file')
@@ -49,7 +47,8 @@ class BookEntry( QDialog, ui_BookEntry.Ui_BookEntry ):
       count = 0
 
       for line in fileinput.input([fname]):
-         line = line.decode('UTF-8').strip()
+         #line = line.decode('UTF-8').strip()
+         line = line.strip()
          entTemp.extract(line)
 
          if entTemp.isValid():
@@ -58,8 +57,8 @@ class BookEntry( QDialog, ui_BookEntry.Ui_BookEntry ):
             entTemp = AJBentry()
       
       self.maxRecord = count
-      tlist = fname.split('/')  # unix systems only
-      self.lblFileName.setText(tlist[-1])
+      tlist = os.path.basename(fname)
+      self.lblFileName.setText(tlist)
       if 0 != count:
          self.showRecord(0)
       else:
@@ -102,6 +101,13 @@ class BookEntry( QDialog, ui_BookEntry.Ui_BookEntry ):
       self.lblYear.setText(displayEnt.getval('Year'))
       self.lblPageCnt.setText(displayEnt.getval('Pagination'))
       self.lblPrice.setText(displayEnt.getval('Price'))
+      rev = displayEnt.getval('Reviews')
+      revstr = ''
+      if rev:
+         for item in rev:
+            revstr = revstr + item + '\n'
+         self.teReviews.setPlainText(revstr)
+      self.teComments.setPlainText(displayEnt.getval('Comments'))
       a = displayEnt.getval('Authors')
       if a:
          self.lblAuthor1.setText(a[0].full_name)

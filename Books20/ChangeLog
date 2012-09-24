@@ -1,3 +1,20 @@
+2012-09-08  Jim Fowler  <jrf@Biblion>
+
+	* Docs/18Cent.tex: Added notes from Linton 2004.
+
+2012-08-26  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/AJBcomments.py (Comment): added Language and Other
+	grammars. Required semi-colons on all phrases execpt Reference
+
+2012-08-25  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py: converted entry.py from python v 2.7
+	to python v 3.2.2
+
+	* Data/Testing/AJBcomments.py (Comment): wrote AJB comment grammar
+	over the last two days. All tested successfully
+
 2012-08-18  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/BookEntry.py (BookEntry.GetRecords): Got UTF-8
