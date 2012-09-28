@@ -9,7 +9,6 @@ from PyQt4.QtGui  import *
 import ui_BookEntry
 from entry import *
 
-
 class BookEntry( QDialog, ui_BookEntry.Ui_BookEntry ):
    """BookEntry is the class which handles the BookEntry form
    for display of entries from the text files.

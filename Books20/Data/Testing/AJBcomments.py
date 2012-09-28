@@ -8,6 +8,8 @@ Calling syntax:
     cParser = Comment.parser()
     result = cParser.parse_string( strComment )
 
+See the test comments in the unit tests for an example
+of how comments are written.
 """
 
 import sys
@@ -40,10 +42,10 @@ class Char (Grammar):
     grammar=(ANY)
 
 class uWord (Grammar):
-    """One unicode word (string of charactors)"""
+    """One unicode word (string of characters)"""
     # accept any unicode charactor
-    #grammar = (WORD('A-Za-z'))
-    grammar = (REPEAT(Char))
+    grammar = (WORD('A-Za-z.-'))
+    #grammar = (REPEAT(Char))
 
 class uWords (Grammar):
     """Many unicode words"""
@@ -51,13 +53,13 @@ class uWords (Grammar):
 
 class Initial (Grammar):
     """Only capitalized initials are allowed"""
-    #grammar = (WORD('A-Z', count=1), '.')
-    grammar = (ANY, '.')
+    grammar = (WORD('A-Z', count=1), '.')
+    #grammar = (ANY, '.')
 
 class Name (Grammar):
     grammar = (Initial, OPTIONAL(L('-'), Initial),
                OPTIONAL(Initial),
-               uWord)
+               uWord, OPTIONAL(L('-'), uWord))
 
 class NameList (Grammar):
     grammar = (LIST_OF(Name, sep='and'))
@@ -83,7 +85,6 @@ class PublisherList (Grammar):
 # otherwise the greedy function of the parser will keep waiting for
 # more charactors and will not return the match. This is necessary for
 # variable length grammars, like Editors, Translated, or Publisher
-
 #
 
 class Publishers (Grammar):
@@ -96,6 +97,9 @@ class Translation (Grammar):
 class Editors (Grammar):
     grammar = (L('edited by'), NameList, L(';'))
 
+class Compilers (Grammar):
+    grammar = (L('compiled by'), NameList, L(';'))
+
 class Reprint (Grammar):
     grammar = (L('reprint of'), OR(AJBNum, Year), L(';'))
 
@@ -105,19 +109,23 @@ class Reference (Grammar):
 class Edition (Grammar):
     grammar = (OR(Digit, TwoDigit),
                OR(L('nd'), L('rd'), L('st'), L('th')),
-               OPTIONAL(L('revised')), L('edition'), L(';'))
+               OPTIONAL(OR(L('facsimile'), L('revised'))), L('edition'), L(';'))
 
     def elem_init(self, sessiondata):
         self.edition_num = self[0].string
 
+class LanguageList (Grammar):
+    grammar = (LIST_OF(uWord, sep='and'))
+
 class Language (Grammar):
-    grammar = (L('in'), uWord, L(';'))
+    grammar = (L('in'), LanguageList,
+               OPTIONAL( L('with'), uWord, L('references')),  L(';'))
 
 class Other (Grammar):
     grammar = (L('other'), uWords, L(';'))
 
 class Comment (Grammar):
-    grammar = (OR(Edition, Reference, Reprint, 
+    grammar = (OR(Edition, Compilers, Reference, Reprint, 
                   Editors, Translation, Publishers,
                   Language, Other))
 
@@ -134,9 +142,13 @@ if __name__ == '__main__':
                
                'reference AJB 66.54.32 ',
     
-               'edited by A. J. Reader; ',
-               'edited by A.-B. J. Reader; ',
-               'edited by A. Reader and I. M. Writer; ',
+               'edited by A. J. Reader;',
+               'edited by A.-B. J. Reader;',
+               'edited by A. Reader and I. M. Writer;',
+
+               'compiled by A. J. Reader;',
+               'compiled by A.-B. J. Reader;',
+               'compiled by A. Reader and I. M. Writer;',
 
                'translated by A. J. Reader-Writer; ',
                'translated by A. Reader; ',
@@ -149,16 +161,19 @@ if __name__ == '__main__':
                'translated from Italian into French by A. J. Reader and I. M. Writer; ',
 
                'in Italian;',
-               'in French;',
+               'in French and Italian;',
+               'in French with Russian references; ',
 
                'also published London: Big City Publisher; ',
+               # a unicode city for when we figure out unicode words
+               #'also published G\u00F6ttingen Big City Publisher; ',
                'also published New York: Another Big City Publisher Ltd.; ',
                'also published New York: Another Big City Publisher Ltd. and London: Phys.-Math. Staatsverlag; ',
 
                'other now is the time for all good men;',
                'other you should be able to write anything here;']
 
-    fullstr = 'also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Reader and I. M. Writer; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian; other extraneous material that I do not know how to handle;'
+    fullstr = 'also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Reader and I. M. Writer; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian; other extraneous material that I do not yet know how to handle;'
 
     cParser = Comment.parser()
 

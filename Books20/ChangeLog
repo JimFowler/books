@@ -1,3 +1,14 @@
+2012-09-27  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/entry.py: Created new Entry and AJBentry class
+	based on the dict class rather than the object class.  No need
+	for a dictionary as a class variable.
+
+2012-09-25  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/AJBcomments.py (Compilers): Added Compilers class,
+	extended Language class with LanguageList.
+
 2012-09-08  Jim Fowler  <jrf@Biblion>
 
 	* Docs/18Cent.tex: Added notes from Linton 2004.
