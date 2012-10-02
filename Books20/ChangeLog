@@ -1,3 +1,9 @@
+2012-10-01  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/AJBcomments.py (Comment): found out how to use
+	regular expressions in modgrammar.  Now I just need to figure
+	out the grammar form of a uWord.
+
 2012-09-27  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/entry.py: Created new Entry and AJBentry class

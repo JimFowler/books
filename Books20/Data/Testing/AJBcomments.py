@@ -14,6 +14,7 @@ of how comments are written.
 
 import sys
 from modgrammar import *
+from modgrammar.extras import *
 
 class Digit (Grammar):
     grammar = (WORD("0-9", count=1))
@@ -38,10 +39,10 @@ class Volume (Grammar):
 class AJBNum (Grammar):
     grammar = (L('AJB'), Volume, '.', Section, '.', Item)
 
-class Char (Grammar):
-    grammar=(ANY)
-
 class uWord (Grammar):
+    grammar=(RE(r"\w\w+[.-]*"))
+
+class uWord1 (Grammar):
     """One unicode word (string of characters)"""
     # accept any unicode charactor
     grammar = (WORD('A-Za-z.-'))
@@ -58,8 +59,8 @@ class Initial (Grammar):
 
 class Name (Grammar):
     grammar = (Initial, OPTIONAL(L('-'), Initial),
-               OPTIONAL(Initial),
-               uWord, OPTIONAL(L('-'), uWord))
+               OPTIONAL(Initial), uWord, OPTIONAL(uWord))
+#               uWord, OPTIONAL(L('-'), uWord))
 
 class NameList (Grammar):
     grammar = (LIST_OF(Name, sep='and'))
@@ -166,14 +167,14 @@ if __name__ == '__main__':
 
                'also published London: Big City Publisher; ',
                # a unicode city for when we figure out unicode words
-               #'also published G\u00F6ttingen Big City Publisher; ',
-               'also published New York: Another Big City Publisher Ltd.; ',
+               'also published G\u00F6ttingen Big City Publisher; ',
+               #'also published New York: Another Big City Publisher Ltd.; ',
                'also published New York: Another Big City Publisher Ltd. and London: Phys.-Math. Staatsverlag; ',
 
                'other now is the time for all good men;',
                'other you should be able to write anything here;']
 
-    fullstr = 'also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Reader and I. M. Writer; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian; other extraneous material that I do not yet know how to handle;'
+    fullstr = 'also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Reader and I. M. Writer; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian; other extraneous material that I do not yet know how to handle; '
 
     cParser = Comment.parser()
 
