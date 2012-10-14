@@ -29,7 +29,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 9 68.122.05 R. A. Bozula, Doppelsterne mit Atmosphärenbedeckungen von der Art A Aurigae, Moskau, <<Nauka>>, 1968, 104 pp, 35 kop., RJ UdSSR 1968 9.51.283, in Russian;
 
-10 68.122.125   , BAV – Umgebungskarten für Bedeckungsveränderliche,  ,  , 1968, 81 cards with summaries, DM15.00,  BAV Rundbrief 17 40, Heraugegeben von der Berliner Arbeitsgemeinschaft für veränderliche Sterne e. V., 3rd edition;
+10 68.122.125   , BAV – Umgebungskarten für Bedeckungsveränderliche,  ,  , 1968, 81 cards with summaries, DM15.00,  BAV Rundbrief 17 40, other Heraugegeben von der Berliner Arbeitsgemeinschaft für veränderliche Sterne e. V.; 3rd edition;
 
 11 68.126(3).46 I. S. Schklowskij, Supernovae, London-New York-Sydney, John Wiley and Sons Ltd., 1968, 7+444 pp,  150s
 
@@ -43,7 +43,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 16 68.81(0).41 A. W. Moroshenko and E. G. Janowizkij, Tabellen zur Berechnung der Intensitäten der Strahlung der Planetenatmosphären, Kiew, <<Naukowa dumka>>, 1964, 144 pp, 59 Kop.,  , in Ukrainian;
 
-17 68.81(0).45 E. J. Pakorn(, W kręgu Ziemi I Planet, Warszawa, Nasza Księgarnica, 1967, 100 pp,  zł 25,  Urania Kraków 39 122
+17 68.81(0).45 E. J. Pakorný, W kręgu Ziemi I Planet, Warszawa, Nasza Księgarnica, 1967, 100 pp,  zł 25,  Urania Kraków 39 122
 
 18 68.81(0).51 A. G. Smith and T. D. Carr, Badania Radiowe Układu Planetarnego, Warszawa, Państwowe Wydawnictwo Naukowe, 1968, 194 pp, zł 20
 
@@ -87,7 +87,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 38 68.71.55 H. Ramberg, Gravity comma Deformation and the Earth’s Crust as studied by Centrifuged Models, London-New York, Academic Press, 1967, 9+214 pp,  £2 17s 6d,  Proc. Phys. Soc. (2/General) 1 483
 
-3968.71.72 H. Odishaw, The Earth in Space, London, Routledge & Kegan Paul Ltd., 1968, 12+340 pp 
+39 68.71.72 H. Odishaw, The Earth in Space, London, Routledge & Kegan Paul Ltd., 1968, 12+340 pp 
 
 40 68.72.13 R. A. Craig, The Edge of Space: Exploring the Upper Atmosphere, Garden City N.Y., Doubleday, 1968, 10+150 pp,  $1.25 and $3.95,  Sky Tel. 35 248 and Sky Tel. 36 175
 
@@ -115,7 +115,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 52 68.65(0).73 N. Puschkow and B. Silkin, The Quiet Sun, Moskau, Mir Publisher, 1968, 242 pp, ,  Mem SA It (NS) 39 540, translated from Russian;
 
-53 68.65(0).111  ,  Die Sonnenaktivität, Moskau, <<Nauka>>, 1968, 148 pp,  90 Kop.,  , Sammlung von Aufsätzen Nr. 3
+53 68.65(0).111  ,  Die Sonnenaktivität, Moskau, <<Nauka>>, 1968, 148 pp,  90 Kop.,  , other Sammlung von Aufsätzen Nr. 3;
 
 54 68.68(1).10 W. A. Belinkskij and M. P. Garashda and L. M. Mashennaja and E. I. Newal, Die Ultraviolettstrahlung der Sonne und des Himmels, Moskau, Univ Moskau, 1968, 228 pp,  1 R. 5 Kop.,  , in Russian;
 
@@ -149,7 +149,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 68 68.56.02 H. P. Berlage, The Origin of the Solar System, Oxford-London-New York, Pergamon Press, 1968, 7+130 pp,  12 s 6d and $1.85,  Ann d’Astrophys 31 647 and Orion Schaffhausen 13 139 and Planet Space Sci. 16 1424 and Sky Tel. 36 255 and Sky Tel. 37 105 and ZfA 69 456
 
-69 68.43.76 W. M. Smart, Stellar Kinematics, London, Longmans comma Green and Co. Ltd., 1968, 8+320 pp,  84s.,  J. Phys. (A/General Phys.) 2 242 and Nature 219 772, also by New York John Wiley & Sons
+69 68.43.76 W. M. Smart, Stellar Kinematics, London, Longmans comma Green and Co. Ltd., 1968, 8+320 pp,  84s.,  J. Phys. (A/General Phys.) 2 242 and Nature 219 772, also published by New York: John Wiley & Sons;
 
 70 68.43.93 K. F. Ogorodnikow and T. A. Agekjan comp., Die Astronomie 1966 Kinematik and Dynamik der Sternsysteme, Moskau, WINITI, 1968, 200 pp, 1R. 2 Kop., RJ UdSSR 1968 12.51.443
 
@@ -197,7 +197,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 93 68.32(2).24 H. Vehrenberg, Atlas Stellarum 1950.0, Düsseldorf, Treugesell-Verlag KG, 1968, Lieferung 1-6 bestehend aus je 30 Karten,  je Lieferung DM 15.00,  JBAA 79 164
 
-94 68.32(2).25 J. Hevelius, Atlas des Sternhimmels, Taschkent, Verlag <<FAN>>, 1968, XXXI +56 pp, 3R. 30 Kop.,  Ciel et Terre 85 48, compiled by W. P. Schtzchenglow edited under the Akademie der Wissenschaften der Usbekischen SSR in Russian and English and Usbek;
+94 68.32(2).25 J. Hevelius, Atlas des Sternhimmels, Taschkent, Verlag <<FAN>>, 1968, XXXI +56 pp, 3R. 30 Kop.,  Ciel et Terre 85 48, compiled by W. P. Schtzchenglow; other edited under the Akademie der Wissenschaften der Usbekischen SSR in Russian and English and Usbek;
 
 95 68.32(2).26 , Tafel <<Astronomie>>, Bielefeld-Berlin, Verlag Delius comma Klasing & Co., 1968, 1 plate,  DM 7.50 and 13.80,  Orion Schaffhausen 13 163 and SuW 7 315 and VdS Nachr. 17 154
 
@@ -239,7 +239,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 114 68.25.19 H. V. Soule, Electro-Optical Photography at Low Illumination Levels, New York, Wiley, 1968, 392 pp, $15.95, Sky Tel. 35 180
 
-115 68.11.01 G. Abetti, Exploration of the Universe, London, Faber and Faber Ltd., 1968, 278 pp, 63s and $9.50, Ciel et Terre 84 468 and MN ASSA 27 65 and Orion Schaffhausen 13 162 and Sky Tel. 36 404 and Southern Stars 22 197, also published New York: Elsevier Publishing Company; translated from the Italian into English by V. Barocas;
+115 68.11.01 G. Abetti, Exploration of the Universe, London, Faber and Faber Ltd., 1968, 278 pp, 63s and $9.50, Ciel et Terre 84 468 and MN ASSA 27 65 and Orion Schaffhausen 13 162 and Sky Tel. 36 404 and Southern Stars 22 197, also published New York: Elsevier Publishing Company; translated from Italian into English by V. Barocas;
 
 116 68.11.02 G. Abetti and M. Hack, Le Nebulose e gli Universi-isole, Torino, Paulo Boringhiere, 1968, 16+386 pp, L4.000, Mem SA It (NS) 39 395
 
@@ -247,9 +247,9 @@ For volume AJB 68 Index to the Literature of 1968
 
 118 68.11.04 R. H. Baker and L. W. Fredrick, An Introduction to Astronomy, London-Princeton, D. van Nostrand Company, 1968, 365 pp, 70s, JBAA 79 80 and Obs 89 36 and Spaceflight 10 295, 7th edition;
 
-119 68.11.05 R. Brandt, Himmelswunder im Feldstecher, Leipzig, Johann Ambrosius Barth, 1968, 136 pp, DM 6.00, Blick in das Weltall 1968 page 29, and J.  Astr. Soc. Victoria 21 54 and Orion Schaffhausen 13 80 and Sternenbote 11 103 and SuW 7 162, 8th edition;
+119 68.11.05 R. Brandt, Himmelswunder im Feldstecher, Leipzig, Johann Ambrosius Barth, 1968, 136 pp, DM 6.00, Blick in das Weltall 1968 29 and J.  Astr. Soc. Victoria 21 54 and Orion Schaffhausen 13 80 and Sternenbote 11 103 and SuW 7 162, 8th edition;
 
-120 68.11.06 H. A. Brück ad B. Lovell and R. van der Riet Woolley and M. Ryle and J. Shakeshaft and R. D. Davies and J. L. Greenstein and M. Schmidt and F. Reines and R. H. Dicke, The New Universe, London, Iliffe & Sons Ltd., 1968, 127 pp, 42s and $8.95, Ann d’Astrophys 31 651 and Nature 220 995 and Sky Tel. 37 110 and SuW 7 312, also published New York: Rand McNally and Co.;
+120 68.11.06 H. A. Brück and B. Lovell and R. van der Riet Woolley and M. Ryle and J. Shakeshaft and R. D. Davies and J. L. Greenstein and M. Schmidt and F. Reines and R. H. Dicke, The New Universe, London, Iliffe & Sons Ltd., 1968, 127 pp, 42s and $8.95, Ann d’Astrophys 31 651 and Nature 220 995 and Sky Tel. 37 110 and SuW 7 312, also published New York: Rand McNally & Co.;
 
 121 68.11.06 G. Döbel, Das Weltall und seine Entdeckung, Köln, DuMont Schauberg, 1968, 348 pp, DM 26.00
 
@@ -257,7 +257,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 123 68.11.09 D. S. Evans, Observation in Modern Astronomy, London, English University Press, 1968, 14+273 pp, 84s and $14.00, Nature 220 996 and Phys. Abst. 72 365 and Sky Tel. 36 404 and Sky Tel. 37 242 and ZfA 69 453, also published New York: Elsevier Publishing Company;
 
-124 68.11.10 T. De Galiana, Dictionnaire des découvertes scientifiques, Paris, Librarie Larousse, 1968, 256 pp, F 9.90, Sky Tel, 36 43
+124 68.11.10 T. De Galiana, Dictionnaire des découvertes scientifiques, Paris, Librarie Larousse, 1968, 256 pp, F 9.90, Sky Tel 36 43
 
 125 68.11.11 W. L. Ginsburg, Wie das Weltall aufgebaut ist comma und wie es sich im Laufe der Zeit entwickelt, Moskau, <<Snanije>>, 1968, 62 pp, 12 Kop., , in Russian;
 
@@ -267,7 +267,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 128 68.11.14 E. J. Hartung, Astronomical Objects for Southern Telescopes with an Addendum for Northern Observatories, New York, Cambridge University Press, 1968, 10+238 pp, $10.00 and 50s, Ciel et Terre 84 468 and J. Astr. Soc. Victoria 21 83 and J. Astro. Soc. West Australia 20 Oct. page 2-4 and Mem SA It (NS) 39 539 and MN ASSA 27 87 and Nature 220 513 and Obs. 89 35 and Orion Schaffhausen 13 162 and Sky Tel. 36 181 and Sky Tel. 37 174 and Southern Stars 23 27
 
- 129 68.11.15 G. Henneges, Beobachtungs-Objeckte für Vier- und Sechszöller, Düsseldorf, Treugesell-Verlag KG., 1968, 76 pp, DM 9.40,   , Herausgegeben von H. Vehrenberg
+ 129 68.11.15 G. Henneges, Beobachtungs-Objeckte für Vier- und Sechszöller, Düsseldorf, Treugesell-Verlag KG., 1968, 76 pp, DM 9.40,   , edited by H. Vehrenberg;
 
 130 68.11.16 K. G. Jones, Messier’s Nebulae and Star Clusters, London, Faber and Faber, 1968, 480 pp, 150s, Ciel et Terre 84 388 and Nature 221 292
 
@@ -275,7 +275,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 132 68.11.18 H. Kienle, Modern Astronomy: An Introduction, London, Faber and Faber Ltd., 1968, 141 pp, 45s
 
-133 68.11.19 B. Lewin and L. Radlowa, Astronomie in Bildern,  , <<Djetskaja literatura>>, 1967,  ,  , EuW 1968 Nr. 5, page 92
+133 68.11.19 B. Lewin and L. Radlowa, Astronomie in Bildern,  , <<Djetskaja literatura>>, 1967,  ,  , EuW 1968 Nr. 5 92
 
 134 68.11.20 R. A. Lyttleton, Mysteries of the Solar System, New York, Oxford University: Claredon Press, 1968, 10+261 pp, $7.00 and 35s, Astr. T. 1 142 and BSAF 82 466 and J. Phys (A General Phys.) 2 241 and Planet. Space Sci. 17 773 and Sci. American 220 Nr. 3 146 and Science 164 171 and Sky Tel. 36 333 and Spaceflight 11 34 and SuW 7 315
 
@@ -285,11 +285,11 @@ For volume AJB 68 Index to the Literature of 1968
 
 137 68.11.23 P. Moore, Astronomy 3rd edition, London, Oldbourne, 1967, 254 pp, 42s, Irish AJ 8 145 and JBAA 79 163
 
-138 68.11.24 P. Moore, Amateur Astronomy, New York, Norton, 1968, 328 pp, $6.95, Sky Tel., 35 248
+138 68.11.24 P. Moore, Amateur Astronomy, New York, Norton, 1968, 328 pp, $6.95, Sky Tel. 35 248
 
 139 68.11.25 J. Muirden, The Amateur Astronomer’s Handbook, New York, Thomas Y. Crowell Co., 1968, 12+355 pp, $6.95, Sky Tel. 37 110
 
-140 68.11.26 P. Muller, Collins’ Concise Encyclopedia of Astronomy, Glasgow, W. Collins & Sons, 1968, 6+281 pp, 12s 6p, JBAA 78 488 and Obs 88 276 and Spaceflight 10 363, translated by R. E. W. Maddison also published New York: Follett Publishing Company;
+140 68.11.26 P. Muller, Collins’ Concise Encyclopedia of Astronomy, Glasgow, W. Collins & Sons, 1968, 6+281 pp, 12s 6p, JBAA 78 488 and Obs 88 276 and Spaceflight 10 363, translated by R. E. W. Maddison; also published New York: Follett Publishing Company;
 
 141 68.11.27 J. S. Pickering, 1001 Questions Answered about Astronomy, London, Lutterworth Press, 1965, 420 pp, 30s, Spaceflight 10 293
 
@@ -299,9 +299,9 @@ For volume AJB 68 Index to the Literature of 1968
 
 143 68.11.30 W. M. Smart, The Riddle of the Universe, London, Longmans comma Green and Co. Ltd., 1968, 10+228 pp, $5.00 and 30s, Sky Tel. 36 404 and Sky Tel. 37 173, also published by New York: John Wiley & Sons;
 
-144 68.11.31 Å. Wallenquist, Penguin Dictionary of Astronomy, Harmondsworth Middlesex, Penguin Books Ltd., 1968, 258 pp, 7s 6d, JBAA 79 250 and MB ASSA 27 26 and Nature 218 206, edited from the Swedish translation by S. Engelbrektson
+144 68.11.31 Å. Wallenquist, Penguin Dictionary of Astronomy, Harmondsworth Middlesex, Penguin Books Ltd., 1968, 258 pp, 7s 6d, JBAA 79 250 and MB ASSA 27 26 and Nature 218 206, translated from Swedish by S. Engelbrektson; edited by S. Engelbrektson;
 
-145 68.11.32 A. Weigert and H. Zimmerman, A Concise Encyclopedia of Astronomy, New York, Elsevier Publ. Co., 1968, 5+367 pp, $9.00, JBAA 79 79 and Obs 88 234 and Sky Tel. 36 255 and Strolling Astr. 21 103, translated from German by J. H Dickson.;
+145 68.11.32 A. Weigert and H. Zimmerman, A Concise Encyclopedia of Astronomy, New York, Elsevier Publ. Co., 1968, 5+367 pp, $9.00, JBAA 79 79 and Obs 88 234 and Sky Tel. 36 255 and Strolling Astr. 21 103, translated from German by J. H. Dickson;
 
 146 68.11.33 W. Widmann, Rechts und links der Milchstrasse, Stuttgart, Franckh’sche Verlagshandlung, 1968, 70 pp, DM 5.80
 
@@ -331,7 +331,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 159 68.12.01 S.-I. Akasofu and B. Forle and B. Haurwitz ed., Sydney Chapman comma Eighty comma from his Friends, Boulder, University of Colorado Press, 1968, 13+230 pp, $5.95 and $2.95, Geophys. J. RAS 16 454 and J ATP 30 1601 and Nature 220 1361 and Obs 88 273 and Planet. Space Sci. 16 1425
 
-160 68.12.02 Christian Huygens, The Celestial Worlds Discovered, London, Frank Cass and Co. Ltd., 1968, 6+160 pp, 45s, Astro. T. 1 95 and ZfA 69 160, facsimile edition of 1698;
+160 68.12.02 Christian Huygens, The Celestial Worlds Discovered, London, Frank Cass and Co. Ltd., 1968, 6+160 pp, 45s, Astro. T. 1 95 and ZfA 69 160, other facsimile edition of 1698;
 
 161 68.12.03  A. D. Menut and A. J. Demony ed., N. Oresme comma Le Livre du Ciel et du Monde, Madison, University of Wisconsin Press, 1968, 16+778 pp, $17.50, Science 161 1000,
 
@@ -343,13 +343,13 @@ For volume AJB 68 Index to the Literature of 1968
 
 165 68.13.07 L. Woltjer ed., Galaxies and the Universe, New York, Columbia University Press, 1968, 13+112 pp, $6.00, Ann d’Astrophys 31 645 and MN ASSA 27 52 and Orion Schaffhausen 13 138 and Sky Tel. 36 43 and SuW 8 23 and ZfA 69 388
 
-166 68.13.08 M. Lunc ed., Proc. Of the 17th I.A.F. Congress 5 vols., Paris, Dunod, 1967, 437 and 308 and 426 and 376 and 315 pp, F113.10 and F77.12 and F102.83 and F82.26 and F77.12, Spaceflight 10 293, also published New York; Gordon & Breach and Warsaw: Polish Scientific Publishers;
+166 68.13.08 M. Lunc ed., Proc. Of the 17th I.A.F. Congress 5 vols., Paris, Dunod, 1967, 437 and 308 and 426 and 376 and 315 pp, F113.10 and F77.12 and F102.83 and F82.26 and F77.12, Spaceflight 10 293, also published New York: Gordon & Breach and Warsaw: Polish Scientific Publishers;
 
 167 68.13.09 J. L. Weinberg ed., The Zodiacal Light and the Interplanetary Medium NASA SP-150, Washington, US Govt. Printing Office, 1967, 430 pp, $3.00, Sky Tel. 36 181 and Sky Tel. 37 104
 
 168 68.13.10 W. Markowitz and B. Guinot ed., Continental Drift comma Secular Motion of the Pole comma and Rotation of the Earth IAU Symp 32, Dordrecht, D. Reidel Publishing Co.,  1968, 6+107 pp, Dfl23.00, Ann d’Astrophys 31 645 and Phys. Abstr. 71 2487 and Sci. American 219 nr 3 266 and Urania Barcelona 52 nr 265 127
 
-169 68.13.11 C. de Jager ed., The Structure of the Quiet Photosphere and the Low Chromosphere, Dordrecht, D. Reidel Publishing Company, 1968, 14+240 pp, Dfl30.00, Ann d’Astrophys 31 646 and Mem SA It (NS) 40 105, also published as Solar Physics 1 nr 1
+169 68.13.11 C. de Jager ed., The Structure of the Quiet Photosphere and the Low Chromosphere, Dordrecht, D. Reidel Publishing Company, 1968, 14+240 pp, Dfl30.00, Ann d’Astrophys 31 646 and Mem SA It (NS) 40 105, other published as Solar Physics 1 nr 1;
 
 170 68.13.13 L. H. Ahrens ed., The Origin and Distribution of the Elements, Oxford-New York, Pergamon Press, 1968, 1200 pp,  ,
 
@@ -421,9 +421,9 @@ For volume AJB 68 Index to the Literature of 1968
 
 204 68.17.34  , Encyclopdie van de Ruimtevaart 2 parts, Amsterdam,  , 1968, 447 and 425 pp, hfl 98.00, HeD 66 137
 
-205 68.17.35  , Gemini, London, Collier-Macmillan, 1968, 12+212 pp, $5.95,  , also published New York:Macmillan;
+205 68.17.35  , Gemini, London, Collier-Macmillan, 1968, 12+212 pp, $5.95,  , also published New York: Macmillan;
 
-206 68.17.36  , The McGraw-Hill Encyclopedia of Space, London-New York, McGraw-Hill, 1968, 831 pp, $27.50, Sky Tel., 36 255
+206 68.17.36  , The McGraw-Hill Encyclopedia of Space, London-New York, McGraw-Hill, 1968, 831 pp, $27.50, Sky Tel. 36 255
 
 207 68.17.37  , Astronautics Year; An International Astronautical and Military Space/Missile Review of 1965, Oxford, Pergamon Press, 1966, 330 pp, 63s, Space Sci. Rev. 8 591
 
@@ -441,7 +441,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 214 68.19.05 S. Golowin, Götter der Atomzeit; Moderne Sagenbildung um Raumschiffe und Sternenmenschen, Bern, Francke AG, 1968, 126 pp, Fr 13.80, Orion Schaffhausen 13 138
 
-215 68.19.06 G. Gurew, Die Lehre des Kopernikus und die Religion, Sofia, BKP, 1967,  , 0.60 Lewa,  , translated from Russian to Bulgarian;
+215 68.19.06 G. Gurew, Die Lehre des Kopernikus und die Religion, Sofia, BKP, 1967,  , 0.60 Lewa,  , translated from Russian into Bulgarian;
 
 216 68.19.12 G. Murchie, Music of the Spheres: The Material Universe 2 vols, New York, Dover Publications, 1967, 644 pp, $2.00 each, Science 162 180 and Sky Tel. 36 181
 
@@ -479,7 +479,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 233 68.03.46 M. Clavelin ed., Galilée: Aspects de sa Vie et de son Oeuvre, Paris, Presses Universitaires de France, 1968, 10+382 pp, f 24.00, Endeavour 27 158 and Nature 219 202 and Science 162 553
 
-234 68.03.47 E. McMullin, Galileo: Man of Science, New York, Basic Books, 1968, 14+557 pp, $15.00, Phys. Today 21 nr 12 75, Sci. American 219 nr 5 164 and Science 162 553
+234 68.03.47 E. McMullin, Galileo: Man of Science, New York, Basic Books, 1968, 14+557 pp, $15.00, Phys. Today 21 nr 12 75 and Sci. American 219 nr 5 164 and Science 162 553
 
 235 68.03.48 J. C. Poggendorff, Biographisch-Literarischen Handwörterbuch der Exakten Naturwissenschaften, Berlin, Akademie Verlag, 1968, 305 and 114 pp, DM48.00 and DM24.00,  , other volume VIIIb parts 2 and 3;
 
@@ -487,7 +487,7 @@ For volume AJB 68 Index to the Literature of 1968
 
 237 68.04.07 P. Moore, Armagh Observatory 1790-1967: A History, Armagh, Armagh Observatory, 1967, 62 pp, $1.00 and 5s, Irish AJ 8 142 and Sky Tel. 35 113
 
-238 68.04.177 B. Lovell, The Story of Jodrell Bank, London, The Oxford University Press, 1968, 16+265 pp, $5.95 and 45s, Astr. T. 1 141 and J ATP 30 1837 and JBAA 79 79 and MN ASSA 27 50 and Obs 88 278 and Orion Schaffhausen 13 138 and Planet. Space Sci. 16 1313 and Sci. American 219 nr 4 140 and Science 162 886 and Sky Tel. 36 181 and Sky Tel. 37 106, also published New York: Harper and Row;
+238 68.04.177 B. Lovell, The Story of Jodrell Bank, London, The Oxford University Press, 1968, 16+265 pp, $5.95 and 45s, Astr. T. 1 141 and J ATP 30 1837 and JBAA 79 79 and MN ASSA 27 50 and Obs 88 278 and Orion Schaffhausen 13 138 and Planet. Space Sci. 16 1313 and Sci. American 219 nr 4 140 and Science 162 886 and Sky Tel. 36 181 and Sky Tel. 37 106, also published New York: Harper & Row;
 
 239 68.04.183   , Hidrografski Godišnjak 1967, Split, Hidrografski Institut Jugoslavenske Ratne Mornarice, 1968, 170 pp, 30 n. d.
 

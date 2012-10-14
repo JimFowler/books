@@ -1,4 +1,4 @@
-"""Parse a comment line from an AJB text file.  Separate
+﻿"""Parse a comment line from an AJB text file.  Separate
 out the different sections of the comment.  The calling
 function has to decide what to do with this information
 but an example of how to get that information is included
@@ -28,10 +28,10 @@ class Year (Grammar):
     grammar = (WORD('0-9', count=4))
 
 class Item (Grammar):
-    grammar =(TwoDigit)
+    grammar = (RE(r'[0-9]{2,3}'))
 
 class Section (Grammar):
-    grammar = (TwoDigit)
+    grammar = (RE(r'[0-9]{2,3}'))
 
 class Volume (Grammar):
     grammar = (TwoDigit)
@@ -40,13 +40,26 @@ class AJBNum (Grammar):
     grammar = (L('AJB'), Volume, '.', Section, '.', Item)
 
 class uWord (Grammar):
-    grammar=(RE(r"\w\w+[.-]*"))
+    # one or more unicode characters.
+    # also matches number and underscore.
+    # Match a bunch of punctuation marks.
+    # Punctuation marks are usually used in the Other grammar
+    # but occasionally get used in the main entries.
+    grammar=(RE(r"[-,!()<>?$£&.'′’/\w]+"))
 
-class uWord1 (Grammar):
-    """One unicode word (string of characters)"""
-    # accept any unicode charactor
-    grammar = (WORD('A-Za-z.-'))
-    #grammar = (REPEAT(Char))
+class uAbrv (Grammar):
+    # unicode possessive, (Was abreviation)
+    # \u2019 is a right quote mark
+    #grammar=(uWord, OR(LITERAL('.'), LITERAL('\u2019')))
+    grammar=(uWord, LITERAL('\u2019'))
+
+class uWord2 (Grammar):
+    # unicode word or abbreviation
+    grammar = (OR(uWord, uAbrv))
+
+class uWord3 (Grammar):
+    # hyphenated word or abbreviations
+    grammar = (uWord2, OPTIONAL(WORD("&-"), uWord2))
 
 class uWords (Grammar):
     """Many unicode words"""
@@ -54,13 +67,13 @@ class uWords (Grammar):
 
 class Initial (Grammar):
     """Only capitalized initials are allowed"""
-    grammar = (WORD('A-Z', count=1), '.')
-    #grammar = (ANY, '.')
+    grammar = (RE(r'\w'), LITERAL('.'))
 
 class Name (Grammar):
-    grammar = (Initial, OPTIONAL(L('-'), Initial),
-               OPTIONAL(Initial), uWord, OPTIONAL(uWord))
-#               uWord, OPTIONAL(L('-'), uWord))
+    # accept hypenated first initial and hyphenated last name
+    grammar = (OPTIONAL(Initial, OPTIONAL(L('-'), Initial)),
+               OPTIONAL(REPEAT(Initial, OPTIONAL(L('-'), Initial))),
+               uWords)
 
 class NameList (Grammar):
     grammar = (LIST_OF(Name, sep='and'))
@@ -72,7 +85,7 @@ class ToLanguage(Grammar):
     grammar = (L('into'), uWord)
 
 class Publisher (Grammar):
-    """City colon Name"""
+    """City: Name"""
     grammar = (uWords, L(':'), uWords)
 
 class PublisherList (Grammar):
@@ -101,6 +114,9 @@ class Editors (Grammar):
 class Compilers (Grammar):
     grammar = (L('compiled by'), NameList, L(';'))
 
+class Contributors (Grammar):
+    grammar = (L('contributors'), NameList, L(';'))
+
 class Reprint (Grammar):
     grammar = (L('reprint of'), OR(AJBNum, Year), L(';'))
 
@@ -116,17 +132,21 @@ class Edition (Grammar):
         self.edition_num = self[0].string
 
 class LanguageList (Grammar):
-    grammar = (LIST_OF(uWord, sep='and'))
+    grammar = (LIST_OF(uWords, sep='and'))
 
 class Language (Grammar):
     grammar = (L('in'), LanguageList,
-               OPTIONAL( L('with'), uWord, L('references')),  L(';'))
+               OPTIONAL( L('with'), uWords, L('references')),  L(';'))
 
 class Other (Grammar):
+    """match string with any unicode character except whitespace
+    and a semi-colon"""
+    #grammar = (L('other'), REPEAT(RE(r"[0-9()?'\w]+")), L(';'))
     grammar = (L('other'), uWords, L(';'))
 
 class Comment (Grammar):
-    grammar = (OR(Edition, Compilers, Reference, Reprint, 
+    grammar = (OR(Edition, Compilers, Contributors, 
+                  Reference, Reprint, 
                   Editors, Translation, Publishers,
                   Language, Other))
 
@@ -145,11 +165,17 @@ if __name__ == '__main__':
     
                'edited by A. J. Reader;',
                'edited by A.-B. J. Reader;',
+               'edited by A. B. J. Reader;',
+               'edited by A.-B. C.-D. J. Reader;',
                'edited by A. Reader and I. M. Writer;',
 
                'compiled by A. J. Reader;',
                'compiled by A.-B. J. Reader;',
                'compiled by A. Reader and I. M. Writer;',
+
+               'contributors A. J. Reader;',
+               'contributors A.-B. J. Reader;',
+               'contributors A. Reader and I. M. Writer;',
 
                'translated by A. J. Reader-Writer; ',
                'translated by A. Reader; ',
@@ -166,26 +192,33 @@ if __name__ == '__main__':
                'in French with Russian references; ',
 
                'also published London: Big City Publisher; ',
+               'also published London: Rand McNally & Sons; ',
+               "also published London: St. Martin\u2019s Press;",
                # a unicode city for when we figure out unicode words
-               'also published G\u00F6ttingen Big City Publisher; ',
-               #'also published New York: Another Big City Publisher Ltd.; ',
-               'also published New York: Another Big City Publisher Ltd. and London: Phys.-Math. Staatsverlag; ',
+               'also published G\u00F6ttingen: Big City Publisher; ',
+               'also published New York: Another Big City Publisher Ltd.; ',
+               'also published New York: Another Big City, Publisher Ltd. and London: Phys.-Math. Staatsverlag; ',
 
-               'other now is the time for all good men;',
-               'other you should be able to write anything here;']
+               'other now is the time for all good men ;',
+               'other <<The Books at Large>>;',
+               'other you should be able to write anything here including (45) _ and Abrvs.;']
 
-    fullstr = 'also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Reader and I. M. Writer; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian; other extraneous material that I do not yet know how to handle; '
+    fullstr = 'other extraneous material that I do not yet know how to handle; also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
 
     cParser = Comment.parser()
+    count = 0
 
     for comment in teststr:
         print('\nComment is ', comment)
         result = cParser.parse_string(comment)
         if result:
+            grmName = result.elements[0].grammar_name
+            print(grmName)
             print(result)
         else:
             print('bad result!')
             print(type(comment))
+            count += 1
         cParser.reset()
 
     print( '\nDoing full string')
@@ -193,6 +226,7 @@ if __name__ == '__main__':
     if not result:
         print('bad result for')
         print(fullstr)
+        count += 1
     while result:
         grmName = result.elements[0].grammar_name
         print('\n'+grmName)
@@ -213,6 +247,16 @@ if __name__ == '__main__':
                 print('Year is ' + str(tmp))
 
         elif 'Editors' == grmName:
+            tmp = result.find(NameList)
+            # parse the NameList
+            print(str(tmp))
+
+        elif 'Compilers' == grmName:
+            tmp = result.find(NameList)
+            # parse the NameList
+            print(str(tmp))
+
+        elif 'Contributors' == grmName:
             tmp = result.find(NameList)
             # parse the NameList
             print(str(tmp))
@@ -247,13 +291,17 @@ if __name__ == '__main__':
         result = cParser.parse_string('')
 
     print('\n')
-    #sys.stdout.writelines(generate_ebnf(Comment))
+    sys.stdout.writelines(generate_ebnf(Comment))
 
     """
     nm = FromLanguage.parser()
     result = nm.parse_string( 'from Italian ' )
     print( result.elements )
     """
-    print('\nDone!')
-
+    if 1 == count:
+        s = ' '
+    else:
+        s = 's'
+    result = '\nDone! %d error%c' % (count, s)
+    print(result)
 

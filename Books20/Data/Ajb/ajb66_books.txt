@@ -35,7 +35,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 12 66.91.24 J. Dufay, Les Comètes, Paris, Presse Universitaires de France, 1966, 125 pp, F 3.00, Ann d’Astrophys 30 355 and Sky Tel. 33 172 and Sky Tel. 33 377 and ZfA 66 340
 
-13 66.91.101 W. P. Konoplewa ed., Physics of Comets and Meteors, Jerusalem, Israel Program for Scientific Translations Ltd, 1966, 92 pp, $4.00, Sky Tel. 33 171, translation from Russian of AJB 65.91.48
+13 66.91.101 W. P. Konoplewa ed., Physics of Comets and Meteors, Jerusalem, Israel Program for Scientific Translations Ltd, 1966, 92 pp, $4.00, Sky Tel. 33 171, other translation from Russian; reprint of AJB 65.91.48;
 
 14 66.91.102  , Physik der Kometen und Meteore, Kiew, <<Naukowa dumka>>, 1966, 135 pp, 54 Kop.
 
@@ -47,11 +47,11 @@ For volume AJB 66 Index to the Literature of 1966
 
 18 66.93(0).91  , Die Erforschung der Meteore Nr. 1, Moskau, <<Nauka>>, 1966, 163 pp, 98 Kop.
 
-19 66.94(0).07 N. F. Buchwald and S. Munek, Catalogue of Meteorites in the Mineralogical Museum of the University of Copenhagen, Kopenhagen,  , 1965, , , Urania Ko/benhavn 22 76
+19 66.94(0).07 N. F. Buchwald and S. Munek, Catalogue of Meteorites in the Mineralogical Museum of the University of Copenhagen, Kopenhagen,  , 1965, , , Urania København 22 76
 
-20 66.94(0).26 M. H. Hey, Catalogue of Meteorites, London, British Museum, 1966, 68+637 pp, £6, Geochim. Cosmochim. Acta 31 1117 and Nature 213 446 and Sci. American 216 Nr 6 153, 3rd revised and expanded edition
+20 66.94(0).26 M. H. Hey, Catalogue of Meteorites, London, British Museum, 1966, 68+637 pp, £6, Geochim. Cosmochim. Acta 31 1117 and Nature 213 446 and Sci. American 216 Nr 6 153, 3rd revised edition;
 
-21 66.94(0).36 E. L. Krinow, Giant Meteorites, New York, Pergamon Press, 1966, 397 pp, $15.00 and £5, Geophys. J. RAS 12 540 and J RAS Canada 61 95 and Obs 87 88 and Sci. American 216 Nr. 4 141 and Sky Tel. 33 109 and Sky Tel. 33 299 and Sky Tel. 33 304, translated from Russian to English by J. S. Romankiewicz edited by M. M. Beynon
+21 66.94(0).36 E. L. Krinow, Giant Meteorites, New York, Pergamon Press, 1966, 397 pp, $15.00 and £5, Geophys. J. RAS 12 540 and J RAS Canada 61 95 and Obs 87 88 and Sci. American 216 Nr. 4 141 and Sky Tel. 33 109 and Sky Tel. 33 299 and Sky Tel. 33 304, translated from Russian into English by J. S. Romankiewicz; edited by M. M. Beynon;
 
 22 66.94(0).75 O. A. Schaeffer and J. Zähringer compilers., Potassium Argon Dating, New York, Springer-Verlag, 1966, 246 pp, $10.60
 
@@ -71,7 +71,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 30 66.81.40 W. Sandner, Trabanten im Sonnesystem, Mannheim, Bibliographische Institut, 1966, 115 pp, DM 6.80, Orion Schaffhausen 12 115 and VdS Nachr. 16 6
 
-31 66.82(2).57 P. Moore, Planeta Wenus, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 154 pp, zł 15, translated from English
+31 66.82(2).57 P. Moore, Planeta Wenus, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 154 pp, zł 15, translated from English;
 
 32 66.83(0).24 V. Brenna, De Maan, Zwolle, Tijl N. V. Kon Drukkerij van de Erven, 1966,  , f 11.50, HeD 65 262
 
@@ -79,7 +79,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 33 66.83(0).73 V. A. Firsoff, The Moon, New York, New American Library, 1966, 127 pp, $0.60
 
-34 66.83(0).122 H. C. King, The World of the Moon, London, Barrie and Rockliff, 1966, 14+125 pp, 21 s and $3.95, JBAA 76 291 and Obs 86 214 and Sky Tel. 32 157 and Sky Tel. 33 106 and Sky Tel. 33 242 and Spaceflight 8 408, also published New York T. Y. Crowell Company
+34 66.83(0).122 H. C. King, The World of the Moon, London, Barrie and Rockliff, 1966, 14+125 pp, 21 s and $3.95, JBAA 76 291 and Obs 86 214 and Sky Tel. 32 157 and Sky Tel. 33 106 and Sky Tel. 33 242 and Spaceflight 8 408, also published New York: T. Y. Crowell Company;
 
 35 66.83(0).125 Z. Kopal, An Introduction to the Study of the Moon, Dordrecht, D. Reidel Publishing Company, 1966, 12+464 pp, hfl 72.00, AJ UdSSR 44 908 and Ann d’Astrophys 30 360 and BSAF 81 221 and HeD 65 88 and Mem SA It (NS) 38 449 and Obs 87 176 and Planet. Space Sci. 15 951 and Science 156 784 and Sky Tel. 33 242 and Sky Tel. 34 99 and Spaceflight 9 146
 
@@ -103,37 +103,37 @@ For volume AJB 66 Index to the Literature of 1966
 
 45 66.84.86 W. A. Bronstein ed., Atlas von marseichnungen, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 118 pp, 1 R. 50 Kop., 
 
-46 66.84.87  , A.C.I.C. Mars Map, Washington, Supt. of Documents, 1966,  , $0.50, Strolling Astr. 19 198, Air Force Aeronautical Chart and Information Center
+46 66.84.87  , A.C.I.C. Mars Map, Washington, Supt. of Documents, 1966,  , $0.50, Strolling Astr. 19 198, other Air Force Aeronautical Chart and Information Center;
 
 47 66.71.06 F. M. Branley, The Earth – Planet Number Three, New York, T. Y. Crowell Company, 1966, 151 pp, $4.50, Sky Tel. 31 464
 
 48 66.71.08 C. H. Cotter, The Astronomical and Mathematical Foundations of Geodesy, London, Hollis & Carter Ltd., 1966, 9+244 pp, 35 s, J. Inst. Navigation 20 216
  
-49 66.71.16 G. Gamow, Une Planète Nommée Terre, Paris, Dunod, 1966, 236 pp, F 13,  , translated from the English by G. Guéron
+49 66.71.16 G. Gamow, Une Planète Nommée Terre, Paris, Dunod, 1966, 236 pp, F 13,  , translated from English by G. Guéron;
 
 50 66.71.17 G. D. Garland, The Earth’s Shape and Gravity, Oxford, Pergamon Press, 1965, 183 pp, 17s 6d, Ann. Géophys. 22 326 and J ATP 28 796 and JBAA 77 219
 
 51 66.71.19 R. Gibrat, L’Energie des Marées, Paris, Presse Universitaires de France, 1966, 215 pp, F 18, Ann d’Astrophys 30 353
 
-52 66.71.35 W. M. Kaula, Kosmische Geodäsie, Moskau, <Nedra>>, 1966, 162 pp, 78 Kop., RJ UdSSR 1966 9.52.49, translated from English to Russian
+52 66.71.35 W. M. Kaula, Kosmische Geodäsie, Moskau, <Nedra>>, 1966, 162 pp, 78 Kop., RJ UdSSR 1966 9.52.49, translated from English into Russian;
 
 53 66.71.50 P. Melchior, The Earth’s Tides, New York-Oxford, Pergamon Press, 1966, 472 pp, $17.50 and £5 5s, Ann. Géophys. 22 649 and JBAA 76 371 and La Nature 94 279 and Österreich. Z. Vermessungswesen 55 88 and Science 154 1157
 
 54 66.71.74 H. Takeuchi, The Theory of the Earth’s Interior, Waltham MA, Blaisdell Publishing Company, 1966, 131 pp, $6.50, Geophys. J. RAS 13 462 and Narchr. Karten-Vermessungswesen (1) Heft Nr. 34 101
 
-55 66.71.91  , Handbook of Geophysics and Space Environments, New York, McGraw-Hill Book Company, 1966, 620 pp, $24.50, Geophys. J. RAS 12 225, from the Air Force Cambridge Research Laboratories
+55 66.71.91  , Handbook of Geophysics and Space Environments, New York, McGraw-Hill Book Company, 1966, 620 pp, $24.50, Geophys. J. RAS 12 225, other from the Air Force Cambridge Research Laboratories;
 
-56 66.72.06 R. D. Cadle, Particles in the Atmosphere and Space, New York, Reinhold Publishing Corporation, 1966, 8+226 pp, $10.00, Geochim. Cosmochim. Acta 31 911 and J ATP 29 905 and Nature 212 1010 and Sci. American 215 Nr. 5 155, also published London Chapman and Hall Ltd.
+56 66.72.06 R. D. Cadle, Particles in the Atmosphere and Space, New York, Reinhold Publishing Corporation, 1966, 8+226 pp, $10.00, Geochim. Cosmochim. Acta 31 911 and J ATP 29 905 and Nature 212 1010 and Sci. American 215 Nr. 5 155, also published London: Chapman & Hall Ltd.;
 
 57 66.72.56 E. Vassy, Physique de l’Atmosphère Tome III: Phénomènes d’Adsorption et de Diffusion dans l’Atmosphère, Paris, Gauthier-Villars, 1966, 287 pp,  , Space Sci. Rev. 7 135
 
 58 66.73(4).45 L. J. Battan, The Unclean Sky, New York, Doubleday & Co. Inc., 1966, 141 pp, $1.25, Sky Tel. 32 157
 
-59 66.74.75 G. W. Rosenberg, Twilight: A Study in Atmospheric Optics, New York, Plenum Press, 1966, 368 pp, $20.00, Nature 212 1299 and Phys. Abstr. 70 659 and Science 154 1160, translated from the Russian by R. B. Rodman
+59 66.74.75 G. W. Rosenberg, Twilight: A Study in Atmospheric Optics, New York, Plenum Press, 1966, 368 pp, $20.00, Nature 212 1299 and Phys. Abstr. 70 659 and Science 154 1160, translated from Russian by R. B. Rodman;
 
 60 66.75.18 K. Davies, Ionospheric Radio Propagation, New York, Dover Publications, 1966, 470 pp, $2.25, Phys. Today 20 Nr. 9 95/97
 
-61 66.75.114 J. Frihagen ed., Electron Density Profiles in Ionosphere and Exosphere, Amsterdam, North-Holland Publishing Company, 1966, 14+629 pp, $18.75, J ATP 29 903 and J RAS Canada 61 97 and Planet. Space Sci. 14 1375, also published New York Interscience Publishers
+61 66.75.114 J. Frihagen ed., Electron Density Profiles in Ionosphere and Exosphere, Amsterdam, North-Holland Publishing Company, 1966, 14+629 pp, $18.75, J ATP 29 903 and J RAS Canada 61 97 and Planet. Space Sci. 14 1375, also published New York: Interscience Publishers;
 
 62 66.78.06 A. Boischot, Le Soleil et la Terre, Paris, Presses Universitaries de France, 1066, 128 pp, F 3.00, Ann d’Astrophy 30 603 and Ciel et Terre 82 448 and Sky Tel. 33 172
 
@@ -147,19 +147,19 @@ For volume AJB 66 Index to the Literature of 1966
 
 67 66.61(4).36 N. Robinson ed., Solar Radiation, Amsterdam-New York, Elsevier Publishing Co., 1966, 347 pp, $24.50 and 135s, Applied Optics 5 1189 and Ciel et Terre 82 220 and Obs 86 249 and Science 154 639 and Sci. American 216 Nr. 3 147
 
-68 66.64.53 C. E. Moore and M. G. J. Minnaert and J. Houtgast, The Solar Spectrum 2935Å to 8770Å: Second Revisions of Rowland’s Preliminary Table of Solar Spectrum Wavelengths, Washington, U.S. Govt. Printing Office, 1966, 30+349 pp, $4.00, Sky Tel. 34 105, National Bureau of Standards Monograph 61
+68 66.64.53 C. E. Moore and M. G. J. Minnaert and J. Houtgast, The Solar Spectrum 2935Å to 8770Å: Second Revisions of Rowland’s Preliminary Table of Solar Spectrum Wavelengths, Washington, U.S. Govt. Printing Office, 1966, 30+349 pp, $4.00, Sky Tel. 34 105, other National Bureau of Standards Monograph 61;
 
 69 66.64.83 A. Title, Selected Spectroheliograms, Pasadena, California Institute of Technology, 1966, 19 pp + 50 tables, $59.50
 
 70 66.67.06 D. E. Billings, A Guide to the Solar Corona, New York-London, Academic Press Inc., 1966, 10+323 pp, $14.00, Nature 214 431 and Science 156 785 and ZfA 67 253
 
-71 66.51(0).34 S. A. Kaplan and F. D. Kahn ed., Interstellar Gas Dynamics, Oxford-London-New York, Pergamon Press, 1966, 12+126 pp, $6.50 and £2, Ann d’Astrophy 29 535 and BSAF 80 430 and JBAA 76 440 and J RAS Canada 60 249 and Obs 86 213 and Science 153 1093 and Sky Tel. 31 354 and ZfA 65 84, 2nd Edition
+71 66.51(0).34 S. A. Kaplan and F. D. Kahn ed., Interstellar Gas Dynamics, Oxford-London-New York, Pergamon Press, 1966, 12+126 pp, $6.50 and £2, Ann d’Astrophy 29 535 and BSAF 80 430 and JBAA 76 440 and J RAS Canada 60 249 and Obs 86 213 and Science 153 1093 and Sky Tel. 31 354 and ZfA 65 84, 2nd edition;
 
 72 66.51(2).51 J. A. Shercliff, A Textbook on Magnetohydrodynamics, Oxford, Pergamon Press Ltd., 1965, 265 pp, 21s, J. Fluid Mechanics 26 840
 
 73 66.51(2).53 A. Jeffrey and T. Taniuti ed., Magnetohydrodynamic Stability and Thermonuclear Containment, New York, Academic Press Inc., 1966, 222 pp, 60 s, J. Fluid Mechanics 26 845
 
-74 66.51(3).70 E. Hopf, Mathematical Problems of Radiative Equilibrium, New York, Stechert-Hafner Inc., 1964, 5+104 pp, $3.00, , reprint of AJB 36.35.17
+74 66.51(3).70 E. Hopf, Mathematical Problems of Radiative Equilibrium, New York, Stechert-Hafner Inc., 1964, 5+104 pp, $3.00, , reprint of AJB 36.35.17;
 
 75 66.51(3).94 K. S. Schifrin and I. L. Selmanowitsch, Tabellen zur Lichtstreuung; 1 Winkelfunktionen, Leningrad, Hydrometeorolog. Staatsverlag, 1966, 339 pp, 2 R. 77 Kop
 
@@ -167,11 +167,11 @@ For volume AJB 66 Index to the Literature of 1966
 
 77 66.55.18 H. Faul, Ages of Rocks comma Planets comma and Stars, New York, McGraw-Hill Company, 1966, 119 pp, $2.45, Sci. American 216 Nr. 6 152
 
-78 66.56.10 T. Page and L. W. Page ed., The Origin of the Solar System; Genesis of the Sun and Planets and Life on Other Worlds, New York, Macmillan Company, 1966, 8+336 p, $7.95 and 63 s, Science 152 1407 and Sky Tel. 31 297 and Sky Tel. 32 155, also published London Collier-Macmillan Ltd.
+78 66.56.10 T. Page and L. W. Page ed., The Origin of the Solar System; Genesis of the Sun and Planets and Life on Other Worlds, New York, Macmillan Company, 1966, 8+336 p, $7.95 and 63 s, Science 152 1407 and Sky Tel. 31 297 and Sky Tel. 32 155, also published London: Collier-Macmillan Ltd.;
 
-79 66.41.15 H. Bucerius, Vorlesungen über Himmelsmechanik Band I comma II, Mannheim, Bibliographisches Institut, 1966, 207 and 262 pp, DM 6.80 each,  , edited by M. Schneider
+79 66.41.15 H. Bucerius, Vorlesungen über Himmelsmechanik Band I comma II, Mannheim, Bibliographisches Institut, 1966, 207 and 262 pp, DM 6.80 each,  , edited by M. Schneider;
 
-80 66.41.18 C. Charlier, Himmelsmechanik, Moskau, <<Nauka>>, 1966, 627 pp, 2R. 82 Kop.,  , translated from German to Russian.
+80 66.41.18 C. Charlier, Himmelsmechanik, Moskau, <<Nauka>>, 1966, 627 pp, 2R. 82 Kop.,  , translated from German into Russian;
 
 81 66.41.101 H. Pollard, Mathematical Introduction to Celestial Mechanics, New York, Prentice-Hall Inc., 1966, 10+111 pp, 40s and $4.95, J RAS Canada 61 45 and Planet. Space Sci. 15 813
 
@@ -183,27 +183,27 @@ For volume AJB 66 Index to the Literature of 1966
 
 85 66.44(0).58 P. Jordan, Die Expansion der Erde; Folgerungen aus der Diracschen Gavitationshypothese, Braunschweig, F. Vieweg & Sohn, 1966, 14+182 pp, DM 26.80
 
-86 66.44(0).124 E. Schatzman, The Origin and Evolution of the Universe, London, Hutchinson & Co. Ltd., 1966, 288 pp, 84 s and $8.50, Endeavour 26 55 and JBAA 77 139 and La Nature 94 476 and Nature 211 1346 and Obs 87 45 and Sky Tel. 32 294 and Strolling Astr. 19 199, also published New York Basic Books translated from the French by B. Pagel and A. Pagel
+86 66.44(0).124 E. Schatzman, The Origin and Evolution of the Universe, London, Hutchinson & Co. Ltd., 1966, 288 pp, 84 s and $8.50, Endeavour 26 55 and JBAA 77 139 and La Nature 94 476 and Nature 211 1346 and Obs 87 45 and Sky Tel. 32 294 and Strolling Astr. 19 199, also published New York: Basic Books; translated from French by B. Pagel and A. Pagel;
 
-87 66.44(1).192 J. Greenstein and H. Chiu and J. Narlikar, Supersterne, Moskau, <<Mir>>, 1965, 80 pp, 27 Kop., AJ UdSSR 44 686, translated from English to Russian by W. A. Ugarow
+87 66.44(1).192 J. Greenstein and H. Chiu and J. Narlikar, Supersterne, Moskau, <<Mir>>, 1965, 80 pp, 27 Kop., AJ UdSSR 44 686, translated from English into Russian by W. A. Ugarow;
 
 88 66.31.03 H. P. Bhatt, Planetary Tables Vol 3 Tables for Mars, Ahmedabad, Gujarat Vidya Sabha; B. J. Institute for Learning and Research, 1965, 72 pp, 3 rupees 50 pice and $0.75, Sky Tel. 33 42
 
 89 66.31.46 E. W. Woodward and G. M. Clemence, Spherical Astronomy, New York-London, Academic Press, 1966, 13+453 pp, $18.00, BSAF 81 88 and Mem SA It (NS) 38 251 and Planet. Space Sci 15 813 and Sky Tel. 32 297 and Sky Tel. 33 37 and ZfA 66 341
 
-90 66.32.31  G. Felsmann ed., Gerschichte des Fixsternhimmels, Berlin, Academie Verlag, 1966, 238 pp, DM 80.00,  , Lots more to the title
+90 66.32.31  G. Felsmann ed., Gerschichte des Fixsternhimmels, Berlin, Academie Verlag, 1966, 238 pp, DM 80.00,  , other Lots more to the title;
 
-91 66.32(1).33  , Index der Sternörter 1925-1960 (Index II) Band IX: BD+51 bis BD+89, Berlin, Academie-Verlag, 1966, 35+391 pp, DM 55.00,  , edition from Deutschen Akademie der Wissenschaften zu Berlin besorgt von A. Kahrstedt
+91 66.32(1).33  , Index der Sternörter 1925-1960 (Index II) Band IX: BD+51 bis BD+89, Berlin, Academie-Verlag, 1966, 35+391 pp, DM 55.00,  , other edition from Deutschen Akademie der Wissenschaften zu Berlin besorgt von A. Kahrstedt;
 
 92 66.32(1).34 R.H. Stoy ed., Third Cape Catalogue for 1950. Preliminary Places for Stars in the Zone -40 to -52, Cape Town, Royal Observatory Cape of Good Hope, 1966, 8+84 pp
 
-93 66.32(1).35 R. H. Stoy ed., Cape Photographic Catalogue for 1950 Zones -64 to -80, London, Her Majesty’s Stationary Office, 1966, 50+367 pp, £4 7s 6d, same as Ann. Cape Obs. 21
+93 66.32(1).35 R. H. Stoy ed., Cape Photographic Catalogue for 1950 Zones -64 to -80, London, Her Majesty’s Stationary Office, 1966, 50+367 pp, £4 7s 6d, other same as Ann. Cape Obs. 21;
 
 94 66.32(1).36   , Smithsonian Astrophysical Observatory Star Catalog 4 parts, Washington D.C., Smithsonian Institution, 1966,  , $20.00, Nature 210 357 and Sky Tel. 31 337
 
 95 66.32(2).39 G. Roslund, Karta över stjärnhimmeln samt översiktskarta över Mânen och förteckning över intressanta stjärnor, Lund, Studentlitteratur, 1966,  , Kr 4:25, PAT 47 168
 
-96 66.32(2).41 H. Vehrenberg, Mein Messier-Buch, Düsseldorf, Tueugesell-Verlag, 1966, 215 pp, DM 62.00, HeD 65 105 and Orion Schaffhausen 12 25 and Sternenbote 9 171 and SuW 6 69 and VdS Nachr. 16 19, Unter Mitarbeit von U. Güntzel-Lingner
+96 66.32(2).41 H. Vehrenberg, Mein Messier-Buch, Düsseldorf, Tueugesell-Verlag, 1966, 215 pp, DM 62.00, HeD 65 105 and Orion Schaffhausen 12 25 and Sternenbote 9 171 and SuW 6 69 and VdS Nachr. 16 19, other Unter Mitarbeit von U. Güntzel-Lingner;
 
 97 66.35.04 J. Meeus and B. B. Grosjean and W. Vanderleen, Canon of Solar Eclipses, Oxford-New York, Pergamon Press, 1966, 8+749 pp, $32.00 and £10, Ann d’Astrophys 29 410 and Ciel et Terre 82 307 and HeD 64 214 and JBAA 77 373 and J RAS Canada 61 204 and Obs 86 250 and Science 154 255 and Sky Tel. 32 38 and Sky Tel. 32 292 and Spaceflight 8 410 and ZfA 65 86
 
@@ -211,7 +211,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 99 66.36.10 C. Broxmeyer, Inertial Navigation, London, McGraw-Hill Publishing Company, 1964, 254 pp, £5 4s 6d, Spaceflight 9 181
 
-100 66.36.13 L. Cichowicz, Méthodes d’Astronomie géodésique pour la zone intertropicale, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 260 pp, zł 40, , Publ. Abt. Höhere Geod.-Astr. Geod. Warschau Nr. 4A
+100 66.36.13 L. Cichowicz, Méthodes d’Astronomie géodésique pour la zone intertropicale, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 260 pp, zł 40, , other Publ. Abt. Höhere Geod.-Astr. Geod. Warschau Nr. 4A;
 
 101 66.36.27 H. Hellman, Navigation: Land comma Sea and Sky, Englewood Cliffs NJ-New York, Prentice-Hall Inc., 1966, 65 pp, $3.50, Sky Tel. 32 225 and Sky Tel. 33 106
 
@@ -223,7 +223,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 105 66.36.46 I. I. Mueller and J. D. Rockie, Gravimetric and Celestial Geodesy, New York, Ungar Publishing Company, 1966, 141 pp, $5.00, Sky Tel. 32 298
 
-106 66.36.69 L. M. Worobjew, Spacecraft Navigation, Jerusalem, Israel Program for Scientific Translation Ltd., 1966, 159 pp, $5.00, Sky Tel. 33 172, translated from Russian
+106 66.36.69 L. M. Worobjew, Spacecraft Navigation, Jerusalem, Israel Program for Scientific Translation Ltd., 1966, 159 pp, $5.00, Sky Tel. 33 172, translated from Russian;
 
 107 66.36.72  , Satellite Geodesy 1958-1964, Washington, U.S. Govt. Printing Office, 1966, 174 pp, $0.70, Sky Tel. 33 172
 
@@ -243,21 +243,21 @@ For volume AJB 66 Index to the Literature of 1966
 
 114 66.22(1).34 H. E. Paul, Telescopes for Skygazing, Cambridge MA, Sky Publishing Corp., 1965, 160 pp, $4.95, JBAA 77 64 and Sky Tel. 31 100 and Spaceflight 9 105
 
-115 66.22(1).59 T. Page and L. W. Page ed., Telescopes: How the Make Them and Use Them, New York, Macmillian Company, 1966, 14+338 pp, $7.95, Obs 87 178 and Publ. ASP 79 274 and Sky Tel 33 108 and Sky Tel. 33 238 and Sky Tel. 33 241, also published London Collier-Macmillan Limited.
+115 66.22(1).59 T. Page and L. W. Page ed., Telescopes: How the Make Them and Use Them, New York, Macmillian Company, 1966, 14+338 pp, $7.95, Obs 87 178 and Publ. ASP 79 274 and Sky Tel 33 108 and Sky Tel. 33 238 and Sky Tel. 33 241, also published London: Collier-Macmillan Limited.;
 
 116 66.22(1).60 G. D. Roth ed., Refraktor-Selbstbau, München, Uni-Druck, 1966, 70 pp, DM 18.50, NAT 1966 39 and Orion Schaffhausen 12 24 and Sterne 43 70 and Sternenbote 10 19 and SuW 6 95 and VdS Nachr. 15 57
 
-117 66.22(6).208 A. D. Kusmin and A. E. Salomonowitsch, Radioastronomical Methods of Antenna Measurements, New York, Academic Press, 1966, 182 pp, $8.50, Sky Tel. 34 167, translated from the Russian from AJB 64.22.193
+117 66.22(6).208 A. D. Kusmin and A. E. Salomonowitsch, Radioastronomical Methods of Antenna Measurements, New York, Academic Press, 1966, 182 pp, $8.50, Sky Tel. 34 167, translated from Russian; reprint of AJB 64.22.193;
 
 118 66.22(6).240 D. Taylor, Introduction to Radar and Radar Techniques, New York, Philosophical Library, 1966, 125 pp, $4.75, Sky Tel. 34 173
 
 119 66.22(6).246 E. A. Wolff, Antenna Analysis, New York, Wiley & Sons, 1966, 514 pp, 188 s, Spaceflight 8 446
 
-120 66.22(6).248 D. W. Skobelzyn ed., Radio Telescopes, New York, Plenum Press, 1966,  179 pp, $22.50, Ann d’Astrophys 30 351, translated from the Russian
+120 66.22(6).248 D. W. Skobelzyn ed., Radio Telescopes, New York, Plenum Press, 1966,  179 pp, $22.50, Ann d’Astrophys 30 351, translated from Russian;
 
 121 66.22(7).272 R. A. MacGowan and F. I. Ordway III, Intelligence in the Universe, Englewood Cliffs NJ-New York, Prentice Hall, 1966, 13+402 pp, $13.50, Phys. Today 20 Nr. 6 74 and Planet. Space Sci. 15 1095
 
-122 66.22(7).277 W. Sullivan, We are Not Alone: The Search for Intelligent Life on Other Worlds, New York, McGraw-Hill Book Company, 1966, 11+325 pp, $7.50 and $8.85, J RAS Canada 60 296, 2nd edition
+122 66.22(7).277 W. Sullivan, We are Not Alone: The Search for Intelligent Life on Other Worlds, New York, McGraw-Hill Book Company, 1966, 11+325 pp, $7.50 and $8.85, J RAS Canada 60 296, 2nd edition;
 
 123 66.22(7).278 W. Sullivan, Signale aus dem All, Düsseldorf-Wein, Econ-Verlag GmbH, 1966, 380 pp, DM 19.80, Phys. Blätter 23 44
 
@@ -267,9 +267,9 @@ For volume AJB 66 Index to the Literature of 1966
 
 126 66.24(1).59 H. Michel, Les Cadrans Solaires de Max Elskamp, Liège, Editions de la Vie Wallonne, 1966, 132 pp, Fb 300, BSAF 81 88 and Ciel et Terre 83 123 and La Nature 94 480
 
-127 66.25.26 T. H. James ed., The Theory of the Photographic Process, London, Collier-Macmillan Ltd., 1966, 591 pp, $25.00, Phys. Today 19 Nr. 10 95, 3rd edition
+127 66.25.26 T. H. James ed., The Theory of the Photographic Process, London, Collier-Macmillan Ltd., 1966, 591 pp, $25.00, Phys. Today 19 Nr. 10 95, 3rd edition;
  
-128 66.11.01 G. Abetti, Stars and Planets, New York, Elsevier Publishing Co., 1966, 341 pp, $12.50 and 63 s, Hed 64 297 and Irish AJ 7 227 and JBAA 77 63 and NAT 1966 120 and Obs 87 177 and Orion Schaffhausen 12 24 and Sky Tel. 33 109 and Sky Tel. 33 235 and Southern Stars 22 47 and Spaceflight 8 410 and Sterne 43 71, translated from the Italian by V. Barocas also published London Faber & Faber Ltd.
+128 66.11.01 G. Abetti, Stars and Planets, New York, Elsevier Publishing Co., 1966, 341 pp, $12.50 and 63 s, Hed 64 297 and Irish AJ 7 227 and JBAA 77 63 and NAT 1966 120 and Obs 87 177 and Orion Schaffhausen 12 24 and Sky Tel. 33 109 and Sky Tel. 33 235 and Southern Stars 22 47 and Spaceflight 8 410 and Sterne 43 71, translated from Italian by V. Barocas; also published London: Faber & Faber Ltd.;
 
 129 66.11.02 I. Asimov, From Earth to Heaven, Garden City NY, Doubleday & Co. Inc., 1966, 216 pp, $4.50, Sky Tel. 33 171
 
@@ -279,7 +279,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 132 66.11.05 P. I. Bakulin and E. W. Kononowitsch and W. I. Moros, Lehrgang für allgemeine Astronomie: Lehrbuch für physikalische und mechanisch-mathematische Fakultäten an Universitäten, Moskau, <<Nauka>>, 1966, 527 pp, 1 R. 30 Kop., RJ UdSSR 1967 6.51.31
 
-133 66.11.06 F. Becker, Einführung in die Astronomie: Methoden und Ergebnisse, Mannheim, Biblographisches Institut, 1966, 249 pp, DM 6.80, 5th edition
+133 66.11.06 F. Becker, Einführung in die Astronomie: Methoden und Ergebnisse, Mannheim, Biblographisches Institut, 1966, 249 pp, DM 6.80, 5th edition;
 
 134 66.11.07 W. Bixby, Den Nya Världsbilden comma Galilei och Newton, Malmö, Allhems Förlag AB., 1966, 153 pp, Kr 32:50
 
@@ -295,7 +295,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 140 66.11.13 B. Ernst an T. de Vries, Världsrymden; Astronomisk Uppslagsbok, Stockholm, Norstedt & Söner AB., 1966, 268 pp, Kr 60:-, PAT 48 83
 
-141 66.11.14 B. Ernst, Thieme’s Sterrenboek, Zutphen, Thieme & Cie. N. V. Uitgeverij W. J., 1966, 256 pp, f 16.50, HeD 64 295, difficulty in translating the publisher
+141 66.11.14 B. Ernst, Thieme’s Sterrenboek, Zutphen, Thieme & Cie. N. V. Uitgeverij W. J., 1966, 256 pp, f 16.50, HeD 64 295, other difficulty in translating the publisher;
 
 142 66.11.15 A. E. Fanning, Planets comma Stars and Galaxies: Descriptive Astronomy for Beginners, New York, Dover Publications Inc., 1966, 189 pp, $1.35, Sky Tel. 33 241 and Sky Tel. 33 304 and Sky Tel. 33 307 
 
@@ -307,15 +307,15 @@ For volume AJB 66 Index to the Literature of 1966
 
 146 66.11.19 H. H. Howe, Descriptive Astronomy,  , University of Colorado Press, 1966, 213 pp,  , Sky Tel.32 372
 
-147 66.11.20 F. Hoyle, Galaxies comma Nuclei and Quasars, New York, Harper and Row Publishers, 1965, 7+160 pp, $3.95 and 25 s, Applied Optics 5 1868 and HeD 65 287 and J. Astronaut. Sci. 14 50 and JBAA 76 438 and Nature 212 1300 and Phys. Ber. 45 5356 and Sky Tel. 32 222, also published London Heinemann Ltd. 1966
+147 66.11.20 F. Hoyle, Galaxies comma Nuclei and Quasars, New York, Harper and Row Publishers, 1965, 7+160 pp, $3.95 and 25 s, Applied Optics 5 1868 and HeD 65 287 and J. Astronaut. Sci. 14 50 and JBAA 76 438 and Nature 212 1300 and Phys. Ber. 45 5356 and Sky Tel. 32 222, also published London: Heinemann Ltd.;
 
 148 66.11.21 F. Hoyle, Galaxer comma Atomkärnor och Kvasarer, , Aldus/Bonniers, 1966, 119 pp, Kr 13:50
 
 149 66.11.22 S. H. Jar-Muchamedow, Russisch-kirgisisches Wörterbuch astronomischer Fachwörter, Frunse, Akad. Wiss, Kirgis SSR, 1965 281 pp, 70 Kop
 
-150 66.11.23 R. C. Jennison, Introduction to Radio Astronomy, New York, Philosophical Library, 1966, 160 pp, $4.75, Sky Tel. 34 105 and Sky Tel. 34 254, see also AJB 67.11.18
+150 66.11.23 R. C. Jennison, Introduction to Radio Astronomy, New York, Philosophical Library, 1966, 160 pp, $4.75, Sky Tel. 34 105 and Sky Tel. 34 254, other see also AJB 67.11.18;
 
-151 66.11.24 H. Spencer Jones, The Stars Above Us, Glasgow, Charles Frank Ltd., 1965, 86 pp, 8 s 6 d, Sky Tel. 33 109, reprint of the 1947 edition
+151 66.11.24 H. Spencer Jones, The Stars Above Us, Glasgow, Charles Frank Ltd., 1965, 86 pp, 8 s 6 d, Sky Tel. 33 109, reprint of 1947;
 
 152 66.11.25 S. A. Kaplan, Elementare radioastronomie, Moskau, <<Nauka>>, 1966, 275 pp, 59 Kop.
 
@@ -323,17 +323,17 @@ For volume AJB 66 Index to the Literature of 1966
 
 154 66.11.27 B. Kowatscheff, Das Sonnensystem, Sofia, <<Nauka I iskustwo>>, 1966, 138 pp, 0.38 Lw.
 
-155 66.11.28 J. D. Kraus, Radio Astronomy, New York, McGraw-Hill Book Company, 1966, 10+481 pp, $13.75, Ann d’Astrophys 30 122 and IEEE Spectrum 4 Nr. 3 201 and Nature 214 56 and Phys. Blätter 23 283 and Sci. American 217 Nr. 2 124 and Sky Tel. 33 42 and Sky Tel. 33 375 and VdS Nachr. 16 201, mit einem Beitrag von M. E. Tiuri
+155 66.11.28 J. D. Kraus, Radio Astronomy, New York, McGraw-Hill Book Company, 1966, 10+481 pp, $13.75, Ann d’Astrophys 30 122 and IEEE Spectrum 4 Nr. 3 201 and Nature 214 56 and Phys. Blätter 23 283 and Sci. American 217 Nr. 2 124 and Sky Tel. 33 42 and Sky Tel. 33 375 and VdS Nachr. 16 201, contributors M. E. Tiuri;
 
-156 66.11.29 G. Lindner, Physik im Kosmos, Moskau, <<Mir>>, 1966, 248 pp, 99 Kop., RJ UdSSR 1967 4.62.5 and RJ UdSSR 1967 5.51.59, translated from the German
+156 66.11.29 G. Lindner, Physik im Kosmos, Moskau, <<Mir>>, 1966, 248 pp, 99 Kop., RJ UdSSR 1967 4.62.5 and RJ UdSSR 1967 5.51.59, translated from German;
 
 157 66.11.30 J. Machowski, Paragrafy dla Kosmosu, Warszawa, Państwowe Wydawnictwo Naukowe, 1965, 151 pp, zł 10, Urania Kraków 37 188
 
 158 66.11.31 D. Mezel, A Field Guide to the Stars and Planets, London, Collins Sons & Co. Ltd., 1966, 397 pp, 36 s, Spaceflight 9 109
 
-159 66.11.32 P. Moore, Naked Eye Astronomy, London, Butterworth Press, 1966, 253 pp, 30s and $6.50, Irish AJ 7 228 and JBAA 76 437 and J RAS Canada 60 298 and Spaceflight 8 300, also published London Lutterworth Press was this a typo Butterworth/Lutterworth?
+159 66.11.32 P. Moore, Naked Eye Astronomy, London, Butterworth Press, 1966, 253 pp, 30s and $6.50, Irish AJ 7 228 and JBAA 76 437 and J RAS Canada 60 298 and Spaceflight 8 300, also published London: Lutterworth Press; other  was this a typo Butterworth/Lutterworth?;
 
-160 66.11.33 P. Moore, The New Look of the Universe, London, Hodder & Stoughton Ltd., 1966, 126 pp, $3.95 and 15 s, JBAA 76 212 and Sky Tel. 33 242, also published New York Norton & Company Ltd.
+160 66.11.33 P. Moore, The New Look of the Universe, London, Hodder & Stoughton Ltd., 1966, 126 pp, $3.95 and 15 s, JBAA 76 212 and Sky Tel. 33 242, also published New York: Norton & Company Ltd.;
 
 161 66.11.34 L. Motz and A Duveen, Essentials of Astronomy, Belmont CA, Wadsworth Publishing Co., 1966, 711 pp, $15.95, Sky Tel. 32 225 and Sky Tel. 32 367
 
@@ -345,7 +345,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 165 66.11.38 M. F. Riemer, The Telescope and the World of Astronomy, Woodside NY, Scope Instrument Corp., 1966, 299 pp, $3.95, Sky Tel. 32 225
 
-166 66.11.39 L. Rudaux and G. de Vaucouleurs, Larousse Encyclopedia of Astronomy, London, Paul Hamlyn Ltd., 1966, 7+506 pp, 30 s, Obs 87 87, revidiert durch C. A. Ronan and H. C. King, translated by M. Guest and J. D. Sidgwick
+166 66.11.39 L. Rudaux and G. de Vaucouleurs, Larousse Encyclopedia of Astronomy, London, Paul Hamlyn Ltd., 1966, 7+506 pp, 30 s, Obs 87 87, other revidiert durch C. A. Ronan and H. C. King; translated by M. Guest and J. D. Sidgwick;
 
 167 66.11.40 H. Siedentopf, Mensch und Weltall, Stuttgart, Wissenschaftliche Verlagsgesellschaft, 1966, 4+80 pp, DM 22.50, Blick in das Weltall 1967 14 and Orion Schaffhausen 12 121 and Sky Tel. 33 379 and Sternenbote 10 58 and Weltraumfahrt 18 61
 
@@ -359,9 +359,9 @@ For volume AJB 66 Index to the Literature of 1966
 
 171 66.11.45 Å. Wallenquist, Planeter comma Stjärnor och Kvasarer,  , Bokförlaget Prisma, 1966, 91 pp, Kr 7:50, PAT 47 72
 
-171 66.11.46 Å. Wallenquist, Dictionary of Astronomical Terms, Garden City NY, Natural History Press, 1966, 275 pp, $1.75, HeD 64 353 and Sky Tel. 31 297 and Sky Tel. 32 221, translated from the Swedish by S. Engelbrektson
+171 66.11.46 Å. Wallenquist, Dictionary of Astronomical Terms, Garden City NY, Natural History Press, 1966, 275 pp, $1.75, HeD 64 353 and Sky Tel. 31 297 and Sky Tel. 32 221, translated from Swedish by S. Engelbrektson;
 
-172 66.11.47 W. P. Wjasanizyn et al., Physics of the Solar System, Jerusalem, Israel Program for Scientific Translation Ltd., 1966, 398 pp, $7.80, Sky Tel. 33 172, translation from the Russian of AJB 64.11.48
+172 66.11.47 W. P. Wjasanizyn et al., Physics of the Solar System, Jerusalem, Israel Program for Scientific Translation Ltd., 1966, 398 pp, $7.80, Sky Tel. 33 172, translated from Russian; reprint of AJB 64.11.48;
 
 173 66.11.48 N. Wymer, The Time’s Guide to the Sky at Night, London, Hamish Hamilton Ltd., 1966, 96 pp, 12s 6d, JBAA 76 437
 
@@ -377,15 +377,15 @@ For volume AJB 66 Index to the Literature of 1966
 
 179 66.11.54 S. Flügge ed., Handbuch der Physik Band 49/1 Geophysik III Teil 1, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1966, 8+315 pp, DM 120.00, NAT 1966 83 and Naturwissenschaften 53 391 and Proc. Phys. Soc. 90 574
 
-180 66.11.55 I. K. Kowal ed., Physics of the Moon and the Planets, Jerusalem, Israel Program for Scientific Translations, 1966, 3+104 pp, £2 14s,  , AJB 64.11.63 translated from Russian by Z. Lerman
+180 66.11.55 I. K. Kowal ed., Physics of the Moon and the Planets, Jerusalem, Israel Program for Scientific Translations, 1966, 3+104 pp, £2 14s,  , reprint of AJB 64.11.63; translated from Russian by Z. Lerman;
 
 181 66.11.56  , Photography with your Telescope, Barrington NJ, Edmund Scientific Co., 1966, 35 pp, $0.75, Sky Tel. 32 225
 
-182 66.11.57 , Taschenführer Astronomie, Hannover, Fackelträger-Verlag, 1966, 222 pp, DM 8.80, Weltraumfahrt 18 62, translated from the English
+182 66.11.57 , Taschenführer Astronomie, Hannover, Fackelträger-Verlag, 1966, 222 pp, DM 8.80, Weltraumfahrt 18 62, translated from English;
 
-183 66.11.58   , Od Atomu do Galaktyk, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 402 pp, zł 35, , translated from the Russian
+183 66.11.58   , Od Atomu do Galaktyk, Warszawa, Państwowe Wydawnictwo Naukowe, 1966, 402 pp, zł 35, , translated from Russian;
 
-184 66.12.02 P. S. de Laplace, Celestial Mechanics Vol. 1-4, New York, Chelsea Publishing Company, 1966, 938 and 1008 and 940 and 1054 pp, $79.50, Nature 216 95 and Science 156 814, translated from the French by N. Bowditch reprint of the 1829-1839 edition
+184 66.12.02 P. S. de Laplace, Celestial Mechanics Vol. 1-4, New York, Chelsea Publishing Company, 1966, 938 and 1008 and 940 and 1054 pp, $79.50, Nature 216 95 and Science 156 814, translated from French by N. Bowditch; reprint of 1829;
 
 185 66.13.01  , Bewegungsprobleme der Kieinkörper des Sonnedsystems, Baku, Akad. Wiss. Aserbajdashan SSR, 1966, 167 pp, 1 R. 20 Kop
 
@@ -395,7 +395,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 188 66.13.04 R. F. Stein and A. G. W. Cameron ed., Stellar Evolution, New York, Plenum Press, 1966, 14+464 pp, $19.50, Nature 212 1410 and Science 154 190 and Space Sci. Rev. 6 273
 
-189 66.13.05 , Current Aspects of Exobiology, New York, Pergamon Press, 1965, 400 pp,  , Space Sci. Rev. 6 574, edited by Mamikumian-Briggs
+189 66.13.05 , Current Aspects of Exobiology, New York, Pergamon Press, 1965, 400 pp,  , Space Sci. Rev. 6 574, edited by Mamikumian-Briggs;
 
 190 66.13.06 B. G Marsden and A. G. W. Cameron ed., The Earth-Moon System,  , , , 14+288 pp, $12.50, JBAA 77 372 and Nature 214 57 and Sci. American 216 Nr. 3 145 and Sky Tel. 32 372
 
@@ -411,13 +411,13 @@ For volume AJB 66 Index to the Literature of 1966
 
 196 66.13.12 K. Lodén and L. O. Lodén and U. Sinnerstad ed., Spectral Classification and Multicolour Photometry IAU Nr. 24, London-New York, Academic Press, 1966, 10+383 pp, 120s
 
-197 66.13.13 M. Lunc and E. A. Brun and G. N. Duboschin and W. F. Hilton, Proceedings fo the XVth International Astronautical Congress Vol. 1-5, Paris, Gautheir-Villars, 1965, 830 and 376 and 652 and 335 and 136 pp, F160 and F70 and F130 and F60 and F30, Spaceflight 9 179 and Space Sci. Rev. 6 274 and Space Sci. Rev. 574, also published Warszawa Polish Science Publishers
+197 66.13.13 M. Lunc and E. A. Brun and G. N. Duboschin and W. F. Hilton, Proceedings fo the XVth International Astronautical Congress Vol. 1-5, Paris, Gautheir-Villars, 1965, 830 and 376 and 652 and 335 and 136 pp, F160 and F70 and F130 and F60 and F30, Spaceflight 9 179 and Space Sci. Rev. 6 274 and Space Sci. Rev. 574, also published Warsaw: Polish Science Publishers;
 
-198 66.13.14 G. Righini ed., Atti del Convegno Sulle Macchie Solarie, Firenze, G. Garbèra Editore, 1966, 266 pp, L 6000, Mem SA It (NS) 38 249 and ZfA 65 87, 4th Centenary of Galilel vol II part 2
+198 66.13.14 G. Righini ed., Atti del Convegno Sulle Macchie Solarie, Firenze, G. Garbèra Editore, 1966, 266 pp, L 6000, Mem SA It (NS) 38 249 and ZfA 65 87, other 4th Centenary of Galilel vol II part 2;
 
-199 66.13.15 , Atti del Convegno sue Campi Mangetici Solari et la Spettroscopia ad Alta Risoluzione, Firenze, G. Barbèra Editore, 1966, 345 pp, , , 4th Centeniary of Galilel vol II part 4
+199 66.13.15 , Atti del Convegno sue Campi Mangetici Solari et la Spettroscopia ad Alta Risoluzione, Firenze, G. Barbèra Editore, 1966, 345 pp, , , other 4th Centeniary of Galilel vol II part 4;
 
-200 66.13.16 , Atti del Convegno Sulla Cosmologia, Firenza, G. Barbèra Editore, 1966, , , Mem SA It (NS) 38 247, 4th Centeniary of Galilel vol II part 3
+200 66.13.16 , Atti del Convegno Sulla Cosmologia, Firenza, G. Barbèra Editore, 1966, , , Mem SA It (NS) 38 247, other 4th Centeniary of Galilel vol II part 3;
 
 201 66.13.17 W. T. Blackband ed., Radar Techniques for Detection comma Tracking and Navigation, New York-London, Gordon and Breach, 1966, 8+608 pp, $37.50, Nature 213 1072
 
@@ -433,7 +433,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 207 66.13.23 D. L. Crawford ed., The Construction of Large Telescopes IAU Nr. 27, London-New York, Academic Press, 1966, 12+234 pp, 70s
 
-208 66.13.24 W. N. Hess and D. H. Menzel and J. A. O’Keefe ed., The Nature of the Lunar Surface, Baltimore, Johns Hopkins Press, 1966, 8+320 pp, $13.50, AJ UdSSR 44 909 and J RAS Canada 61 205 and Nature 212 1526 and Obs 87 144 and Phys. Today 20 Nr. 1 137 and Planet. Space Sci. 15 814 and Science 154 998 and Spaceflight 9 217, also published London Oxford University Press
+208 66.13.24 W. N. Hess and D. H. Menzel and J. A. O’Keefe ed., The Nature of the Lunar Surface, Baltimore, Johns Hopkins Press, 1966, 8+320 pp, $13.50, AJ UdSSR 44 909 and J RAS Canada 61 205 and Nature 212 1526 and Obs 87 144 and Phys. Today 20 Nr. 1 137 and Planet. Space Sci. 15 814 and Science 154 998 and Spaceflight 9 217, also published London: Oxford University Press;
 
 209 66.13.25 J. Kovalevsky ed., Trajectories of Artificial Celestial Bodies as Determined from Observations, Berlin-Heidelburg-New York, Springer-Verlag, 1966, 16+265 pp, DM 59.50, Ann d’Astrophys 30 603 and BSAF 81 177 and Obs 87 180 and Orion Schaffhausen 12 91 and Planet. Space Sci. 15 1095 and SuW 6 119 and ZfA 66 430
 
@@ -451,7 +451,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 216 66.13.35 R. L. Duncombe and V. G. Szebehely ed., Methods in Astrodynamics and Celestial Mechanics, New York-London, Academic Press, 1966, 16+436 pp, $5.00, Science 153 1579 and Spaceflight 9 146
 
-217 66.13.36  , Proceedings of the Ninth International Conference on Cosmic Rays Vol 1 and 2, London, The Institute of Physics, 1966, 26+1113 pp, £21, J ATP 29 906 and Nature 211 1342 and Phys. Abstr. 69 2373 and Science 154 878 and ZfA 65 364, published in conjunction with The Physical Society
+217 66.13.36  , Proceedings of the Ninth International Conference on Cosmic Rays Vol 1 and 2, London, The Institute of Physics, 1966, 26+1113 pp, £21, J ATP 29 906 and Nature 211 1342 and Phys. Abstr. 69 2373 and Science 154 878 and ZfA 65 364, other published in conjunction with The Physical Society;
 
 218 66.13.41 K. O. Kiepenheurer ed., Die Feinstruktur der Sonnenatmosphäre, Wiesbaden, Franz Steiner Verlag, 1966, 149 pp,
 
@@ -459,11 +459,11 @@ For volume AJB 66 Index to the Literature of 1966
 
 220 66.14.05 V. Elznie, Tables trigonométriques dans la division de la circonférence en 400 grades comma en 360 degrés et en 24 heures, Prag, Editions de l’Académie des Sciences de Tchécoslovaquie, 1965, 476 pp, Kčs 79.00, Ciel et Terre 82 359
 
-221 66.14.12 K. Schütte, Index mathematischer Tafelwerke und Tabellen, München-Wien, Verlag R. Oldenbourg, 1966, 239 pp, DM 49.00, ZfA 66 268, 2nd edition
+221 66.14.12 K. Schütte, Index mathematischer Tafelwerke und Tabellen, München-Wien, Verlag R. Oldenbourg, 1966, 239 pp, DM 49.00, ZfA 66 268, 2nd edition;
 
-222 66.16(0).36 V. C. A. Ferraro and C. Plumpton, An Introduction to Magneto-Fluid Mechanics, Oxford, Claredon Press, 1966, 8+254 pp, £2 5s, Geophys. J. RAS 12 543 and nature 214 54 and Proc. Phys. Soc. 90 1171, 2nd edition also published London Oxford University Press
+222 66.16(0).36 V. C. A. Ferraro and C. Plumpton, An Introduction to Magneto-Fluid Mechanics, Oxford, Claredon Press, 1966, 8+254 pp, £2 5s, Geophys. J. RAS 12 543 and nature 214 54 and Proc. Phys. Soc. 90 1171, 2nd edition; also published London: Oxford University Press;
 
-223 66.16(0).57 E. Hermann, Physikalisches Taschenbuch, Braunschweig, G. Vieweg und Sohn, 1966, 8+706 pp, DM 48.00, ZfA 67 93, 4th edition
+223 66.16(0).57 E. Hermann, Physikalisches Taschenbuch, Braunschweig, G. Vieweg und Sohn, 1966, 8+706 pp, DM 48.00, ZfA 67 93, 4th edition;
 
 224 66.16(0).68 J. Junkes and E. W. Salpeter and G. Milazzo, Atomic Spectra in the Vacuum Ultraviolet from 2250Å to 1100Å Part One: Al comma C comma Cu comma Fe comma Ge comma Hg comma Si comma (H2), Rome, Specola Vaticana, 1965, 124 pp, $10.00, Applied Optics 5 147
 
@@ -471,7 +471,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 226 66.16(0).110 W. J. Poppy and L. L. Wilson, Exploring the Physical Sciences, Englewood Cliffs, Prentice-Hall Inc., 1965, 8+376 pp, $6.95, Phys. Today 19 Nr. 4 88 and Publ. ASP 78 182
 
-227 66.16(0).124 E. Segrè, Nuclei and Particles, New York-Amsterdam, W. A. Benjamin Inc., 1965, 741 pp, $16.50, ZfA 65 501, 2nd edition or 2nd printing?
+227 66.16(0).124 E. Segrè, Nuclei and Particles, New York-Amsterdam, W. A. Benjamin Inc., 1965, 741 pp, $16.50, ZfA 65 501, other 2nd edition or 2nd printing?;
 
 228 66.16(0).137 E. F. Taylor and J. A. Wheeler, Spacetime Physics, San Franscisco-London, W. H. Freeman and Company, 1966, 5+208 pp, £1 16s, J RAS Canada 61 98
 
@@ -525,13 +525,13 @@ For volume AJB 66 Index to the Literature of 1966
 
 253 66.17(0).32  , Die Erforschung des Weltraums mit Satelliten und Raumsonden; 1 Physikalische Grundlagen – Bauarten der Trägerraketen; 2 Steuerund – Prüfstände – Ortung, Düsseldorf, VDI-Verlag, 1966, 278 pp and 346 pp, DM 19.80 and DM 22.60, Weltraumfahrt 17 191 and Weltraumfahrt 18 93 
 
-254 66.17(0).33  , Space Research – Directions for the Future, Washington, National Research Council, 1966, 656 pp, $7.50, Space Sci. Rev. 6 575, Nat. Acad. Sci. Publ. 1403
+254 66.17(0).33  , Space Research – Directions for the Future, Washington, National Research Council, 1966, 656 pp, $7.50, Space Sci. Rev. 6 575, other Nat. Acad. Sci. Publ. 1403;
 
 255 66.17(0).34  , Astronautics and Aeronautics NASA Special Report 4006, Washington, U. S. Govt. Printing Office, 1966, 679 pp, $1.75, Spaceflight 9 218
 
 256 66.17(1).49 R. Lüst and K. O. Kiepenheuer, Weltraumfahrt in der Bundesrepublik Sonnenforschung, Köln-Opladen, Westdeutscher Verlag, 1966, 50 pp, DM 7.60, ZfA 66 431
 
-257 66.17(1).52 L. Maisak, Survival on the Moon, New York, Macmillan Company, 1966, 159 pp, $3.95, Sky Tel. 31 297 and Sky Tel. 33 236 and Spaceflight 8 408, also published Toronto Collier-Macmillan Canada Ltd.
+257 66.17(1).52 L. Maisak, Survival on the Moon, New York, Macmillan Company, 1966, 159 pp, $3.95, Sky Tel. 31 297 and Sky Tel. 33 236 and Spaceflight 8 408, also published Toronto: Collier-Macmillan Canada Ltd.;
 
 258 66.17(1).56 J. Strong, Flight to the Stars, New York, Hart Publishing Co. Inc., 1965, 178 pp, $4.95, Phys. Today 19 Nr. 4 95
 
@@ -549,19 +549,19 @@ For volume AJB 66 Index to the Literature of 1966
 
 265 66.18(0).01 A. Bester, The Life and Death of a Satellite, Boston, Little comma Brown & Co. Inc., 1966, 253 pp, $5.95
 
-266 66.18(0).02 A. Bohrmann, Bahnen Künstlicher Satelliten, Mannheim, Bibliographisches Institut, 1966, 163 pp, DM 6.80, 2nd edition
+266 66.18(0).02 A. Bohrmann, Bahnen Künstlicher Satelliten, Mannheim, Bibliographisches Institut, 1966, 163 pp, DM 6.80, 2nd edition;
 
 267 66.18(0).14 C. A. Lundquist, Space Science, New York, McGraw-Hill Book Company, 1966, 116 pp, $4.95 and $2.50, Sky Tel. 32 298 and Sky Tel. 33 164
 
-268 66.18(0).27 S. F. Singer, Probleme der Orientierung künstlicher Erdsatelliten, Moskau, <<Nauka>>, 1966, 452 pp, 1 R. 77 Kop., RJ UdSSR 1967 5.62.312, translated from the English
+268 66.18(0).27 S. F. Singer, Probleme der Orientierung künstlicher Erdsatelliten, Moskau, <<Nauka>>, 1966, 452 pp, 1 R. 77 Kop., RJ UdSSR 1967 5.62.312, translated from English;
 
 269 66.18(1).49 D. King-Hele, Observing Earth Satellites, London, Macmillan and Company Ltd.,  1966, 10+220 pp, 30 s, JBAA 77 295 and J ATP 29 1179 and Nature 214 56 and Planet. Space Sci. 15 814 and Sky Tel. 33 379 and Sky Tel. 34 100 and Spaceflight 9 107
 
 270 66.19(0).03 N. J. Berrill, Worlds Apart, London, Sidgwick and Jackson Ltd., 1966, 240 pp, 25 s, Spaceflight 9 35
 
-271 66.19(0).08 H. Haber, Stars comma Men and Atoms, New York, Washington Square Press: Simon & Schuster Inc., 1966, 159 pp, $0.75, Sky Tel. 32 372, 2nd edition
+271 66.19(0).08 H. Haber, Stars comma Men and Atoms, New York, Washington Square Press: Simon & Schuster Inc., 1966, 159 pp, $0.75, Sky Tel. 32 372, 2nd edition;
 
-272 66.19(0).09 F. Hoyle, La Cinquième Planète, Paris, Dunod, 1965, 12+207 pp, F 14, La Nature 94 40, translated from the English by C. de Richemont
+272 66.19(0).09 F. Hoyle, La Cinquième Planète, Paris, Dunod, 1965, 12+207 pp, F 14, La Nature 94 40, translated from English by C. de Richemont;
 
 273 66.19(0).22 L. Pešek, Die Mondexpedition, Recklinghausen, Paulus Verlag, 1966, 128 pp, DM 15.80, Weltraumfahrt 18 94
 
@@ -579,7 +579,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 280 66.19(1).59 C. Maxwell Cade, Other Worlds than Ours, London, Museum Press, 1966, 248 pp, 30 s
 
-281 66.19(1).63 I. S. Schlowskij and C. Sagan, Intelligent Life in the Universe, San Francisco, Holden-Day Inc., 1966, 16+509 pp, $8.95, J RAS Canada 61 99 and Obs 87 145 and Phys. Today 20 Nr. 6 74 and Science 154 686 and Sci. American 215 Nr. 4 144 and Sky Tel. 33 42 and Sky Tel. 33 307 and Southern Stars 22 39 and Spaceflight 9 105 and Strolling Astr. 20 92, translated from the Russian by P. Fern
+281 66.19(1).63 I. S. Schlowskij and C. Sagan, Intelligent Life in the Universe, San Francisco, Holden-Day Inc., 1966, 16+509 pp, $8.95, J RAS Canada 61 99 and Obs 87 145 and Phys. Today 20 Nr. 6 74 and Science 154 686 and Sci. American 215 Nr. 4 144 and Sky Tel. 33 42 and Sky Tel. 33 307 and Southern Stars 22 39 and Spaceflight 9 105 and Strolling Astr. 20 92, translated from Russian by P. Fern;
 
 282 66.19(1).67 C. C. Wunder, Life in Space, Oxford, Blackwell, 1966, 324 pp, 76 s, Spaceflight 8 445
 
@@ -597,11 +597,11 @@ For volume AJB 66 Index to the Literature of 1966
 
 289 66.02.43 J. Needham, Science and Civilization in China, Cambridge, University Press, 1965, 760 pp, £9 10s, Ciel et Terre 82 147
 
-290 66.02.44 O. Neugebauer and R. A. Parker, Egyptian astronomical texts 2; The Ramesside star clocks, Providence RI, Brown University Press, 1964, 10+78 pp, £7, ZfMG 121 4, also published London Lund Humphries & Co. Ltd.
+290 66.02.44 O. Neugebauer and R. A. Parker, Egyptian astronomical texts 2; The Ramesside star clocks, Providence RI, Brown University Press, 1964, 10+78 pp, £7, ZfMG 121 4, also published London: Lund Humphries & Co. Ltd.;
 
 291 66.02.65 B. L. van der Waerden, Die Anfänge der Astronomie, Groningen, P. Noordhoff Ltd., 1966, 12+315 pp, Dfl 47.00, Ciel et Terre 82 359 and HeD 64 296 and JBAA 77 143 and Obs 87 90 and Sky Tel. 32 39 and Sterne 43 71 and ZfA 66 80
 
-292 66.02.68 R. Wolf, Geschicte der Astronomie, München, R. Oldenbourg, 1963, 831 pp, DM 100.00,  , reprint of the 1877 book.
+292 66.02.68 R. Wolf, Geschicte der Astronomie, München, R. Oldenbourg, 1963, 831 pp, DM 100.00,  , reprint of 1877;
 
 293 66.02.70 H. Zins, W kręgu Mikołaja Kopernika, Lublin, Wydawnictwo Lubelskie, 1966, 335 pp, zł 35
 
@@ -621,7 +621,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 301 66.03(0).25 L. Koenigsberger, Herman von Helmholtz, New York, Dover Publications Inc., 1965, 440 pp, $2.25, Sky Tel. 32 224
 
-302 66.03(0).27 L. Kusnezowa, Der Jäger nach Meteoriten, Moskau, << Sow. Rossija>>, 1965, 152 pp, 27 Kop.,  Betrifft P. L. Drawert (1879-1945)
+302 66.03(0).27 L. Kusnezowa, Der Jäger nach Meteoriten, Moskau, << Sow. Rossija>>, 1965, 152 pp, 27 Kop., other Betrifft P. L. Drawert (1879-1945);
 
 303 66.03(0).41 R. J. Seeger, Galileo Galilei comma His Life and His Works, New York, Pergamon Press, 1966, 298 pp, $6.00, Sky Tel. 33 242
 
@@ -629,7 +629,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 305 66.03(0).45 E. G. R. Taylor, The Mathematical Practitioners of Hanoverian England 1714-1840, London-New York, Cambridge University Press, 1966, 15+503pp, 84 s, Obs 86 213
 
-306 66.03(0).46 B. Voronkovas, Galileo Galiléjus, Vilnius, <<Mintis>>, 1964, 120 pp, 25 Kop., in Lithuanian 
+306 66.03(0).46 B. Voronkovas, Galileo Galiléjus, Vilnius, <<Mintis>>, 1964, 120 pp, 25 Kop., in Lithuanian;
 
 307 66.03(0).49 H. Wright, Explorer of the Universe, New York, Dutton & Company Inc., 1966, 480 pp, $10.00 and $12.50, J RAS Canada 61 202 and NAT 1966 167 and Publ. ASP 79 375 and Sci. American 215 Nr. 5 153 and Science 153 966 and Sky Tel. 32 39 and Sky Tel. 32 223 and Southern Stars 22 20
 
@@ -653,7 +653,7 @@ For volume AJB 66 Index to the Literature of 1966
 
 317 66.08(2).27  , Wissenschaft und Menschheit, Leipzig-Jena-Berlin, Urania Verlag, 1966, 384 pp, DM 18.00, Blick in das Weltall 1967 14
 
-318 66.08(2).28  , Ground-Based Astronomy comma A Ten Year Program, Washington DC, NAS National Research Council, 1966, 106 pp, $4.00, 2nd revised edition
+318 66.08(2).28  , Ground-Based Astronomy comma A Ten Year Program, Washington DC, NAS National Research Council, 1966, 106 pp, $4.00, 2nd revised edition;
 
 319 66.08(2).29  , Significant Achievements in Space Astronomy 1958 – 1964 NASA SP-91, Washington DC, U.S. Govt. Printing Office, 1966, 73 pp, $0.45, Sky Tel. 33 42
 

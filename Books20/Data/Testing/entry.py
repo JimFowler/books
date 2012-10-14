@@ -33,6 +33,8 @@ class Entry(dict):
                                'volume': ''}
         self[ 'Authors'] =    []
         self[ 'Editors'] =    []
+        self[ 'Compilers'] =    []
+        self[ 'Contributors'] =    []
         self[ 'Translators']= []
         self[ 'Others'] =     []
         self[ 'Title'] =      ''
@@ -120,33 +122,34 @@ class AJBentry(Entry):
                 fieldNum += 1
                 field = field.strip()
                 field = field.replace(' comma ', ', ' )
-                if 0 == fieldNum:
+                if 0 == fieldNum:  # AJBnum and Authors
                     self.parseField0( field )
                     
-                elif 1 == fieldNum:
+                elif 1 == fieldNum:  # Title
                     self['Title'] =  field 
                     
-                elif 2 == fieldNum:
+                elif 2 == fieldNum:  # place of publication
                     Place = "" + field
                     
-                elif 3 == fieldNum:
+                elif 3 == fieldNum:  # Publisher
                     PublisherName = "" + field
                     self['Publishers'] = [ {'Place' : Place,
                                              'PublisherName' : PublisherName}]
                     
-                elif 4 == fieldNum:
+                elif 4 == fieldNum:   # Publication Year
                     self['Year'] = field
                     
-                elif 5 == fieldNum:
+                elif 5 == fieldNum:   # Page Count
                     self['Pagination'] = field 
                     
-                elif 6 == fieldNum:
+                elif 6 == fieldNum:   # Price
                     self['Price'] = field 
                     
-                elif 7 == fieldNum:
+                elif 7 == fieldNum:   # Reviews
                     self['Reviews'] = field.split(' and ') 
                     
-                elif 8 == fieldNum:
+                elif 8 == fieldNum:   # Comments and other material
+                    self['Comment'] = field
                     self.parseComments( field )
 
             self._Valid = True
@@ -244,14 +247,65 @@ class AJBentry(Entry):
 
     def parseComments( self, field ):
         
-
         cParser = Comment.parser()
         result = cParser.parse_string(field, reset=True)
         #
         # Look for translators, language, edition, and other publishers
         #
         if result:
-            self['Comments'] = 'Good  ' + field
+            while result:
+                grmName = result.elements[0].grammar_name
+                if 'Edition' ==  grmName:
+                    self['Edition'] = result.elements[0].edition_num
+
+                elif 'Reference' == grmName:
+                    self['Reference'] = str(result.find(AJBNum)).strip()
+
+                elif 'Reprint' == grmName:
+                    self['Reprint'] = str(result.find(AJBNum)).strip()
+
+                elif 'Editors' == grmName:
+                    line = str(result.find(NameList))
+                    self['Editors'].append( self.MakeNameList( line ) )
+
+                elif 'Contributors' == grmName:
+                    line = str(result.find(NameList))
+                    self['Contributors'].append( self.MakeNameList( line ) )
+
+                elif 'Compilers' == grmName:
+                    line = str(result.find(NameList))
+                    self['Compilers'].append( self.MakeNameList( line ) )
+
+                elif 'Translation' == grmName :
+                    tmp = result.find(FromLanguage)
+                    if tmp:
+                        self['TranslatedFrom'] = str(tmp).strip()
+
+                    tmp = result.find(ToLanguage)
+                    if tmp:
+                        self['Language'] = str(tmp).strip()
+
+                    tmp = result.find(NameList)
+                    if tmp:
+                        self['Translators'].append(self.MakeNameList(str(tmp)))
+
+                elif 'Publishers' == grmName:
+                    tmp = str(result.find(PublisherList))
+                    # the space chars in the split avoids problems with 
+                    # Rand McNally & Sons
+                    list = tmp.split(' and ')
+                    for l in list:
+                        p = l.split(':')
+                        self['Publishers'].append( {'Place' : p[0].strip(),
+                                                    'PublisherName': p[1].strip()})
+
+                elif 'Language' == grmName:
+                    self['Language'] = str(result.find(uWord)).strip()
+
+                elif 'Other' == grmName:
+                    self['Others'].append(str(result.find(uWords)).strip())
+
+                result = cParser.parse_string('')
 
 
 
@@ -274,14 +328,14 @@ class AJBentry(Entry):
 
 if __name__ == '__main__':
 
-    ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is a comment for item 4 AJBnumber 66.145(1).29;'
+    ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
 
-    authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, otherThis is a comment or item 4 AJBnumber 66.145(1).29;'
+    authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the authorstr;'
 
-    editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, This is a comment or item 4 AJBnumber 66.145(1).29'
+    editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
 
-    badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is a comment for bad item 4 AJBnumber 66.145(1).29;'
+    badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
 
     try:
         from pprint import pprint

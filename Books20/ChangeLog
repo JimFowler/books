@@ -1,8 +1,43 @@
+2012-10-14  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/AJBcomments.py (uWord): Added punctuation marks to
+	the definition of uWord. So now I no longer use uWord2 or uWord3
+	in the definition of uWords.  The Other grammar required too many
+	special characters.  May switch this grammar to Other and use a
+	smaller set of punctuation for uWord.  But I was able to
+	successfully parse ajb??_books.txt for volumes 60-68; after many
+	typo corrections.
+
+2012-10-06  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/BookEntry.py (BookEntry.showRecord): Modifed
+	forward and back buttons to wrap around the entry list.
+
+	* Data/Testing/AJBcomments.py (Section): Changed Section and
+	Item to accept 2 or 3 digit numbers.
+	(Name): Modified Name to accept Optional first initial. Had just a
+	last name in an 'edited by' entry.
+
+	* Data/Testing/entry.py (AJBentry.parseComments): added spaces
+	to the split(' and ') in the Publisher list. This avoids problems
+	with 'Rand McNally & Sons' in the 'also published' list.
+
+	* Data/Testing/AJBcomments.py (Contributors): Added compilers
+	and Contributors grammar
+
+2012-10-02  Jim Fowler  <jrf@Biblion>
+
+	* Data/Testing/AJBcomments.py (Comment): Figured out how to make
+	uWord and uAbrv work to created uWords.  All test case pass
+	successfully now. And after a number of rewrites, ajb68_books.txt
+	can now be fully parsed.
+
 2012-10-01  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/AJBcomments.py (Comment): found out how to use
-	regular expressions in modgrammar.  Now I just need to figure
-	out the grammar form of a uWord.
+	regular expressions in modgrammar.  Need to use
+	modgrammar.extras.RE. Now I just need to figure out the grammar
+	form of a uWord.
 
 2012-09-27  Jim Fowler  <jrf@Biblion>
 

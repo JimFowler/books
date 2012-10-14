@@ -11,13 +11,13 @@ Save as Unicode UTF-8 text encoding. Skip subsection 34 and 35 in Part 4
 For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished 2 Jan 2012, proofread 18 Feb 2012
 
 
-1 61.144(1).07 B. Bova, The Milky Way Galaxy, New York, Henry Holt & Co. Inc., 1961, 228 pp, $5.00, AJ 66 191 and Astronaut. Sci. Rev. 3 Nr. 2 21 and Sky Tel. 21 232 and Sky Tel. 22 226, also published New York Rinehart and Winston
+1 61.144(1).07 B. Bova, The Milky Way Galaxy, New York, Henry Holt & Co. Inc., 1961, 228 pp, $5.00, AJ 66 191 and Astronaut. Sci. Rev. 3 Nr. 2 21 and Sky Tel. 21 232 and Sky Tel. 22 226, also published New York: Rinehart & Winston;
 
-2 61.145(1).26 M. S. Eigenson, Aussergalaktische Astronomie comma Einführung in das Studium der Galaxien, Moskau, Phys.-Math. Staatsverlag, 1960, 414 pp, 1R. 26 Kop., AJ UdSSR 38 1003 and RH 42 243, in Russian
+2 61.145(1).26 M. S. Eigenson, Aussergalaktische Astronomie comma Einführung in das Studium der Galaxien, Moskau, Phys.-Math. Staatsverlag, 1960, 414 pp, 1R. 26 Kop., AJ UdSSR 38 1003 and RH 42 243, in Russian;
 
 3 61.145(1).65 A. Sandage, The Hubble Atlas of Galaxies, Washington DC, Carnegie Institution of Washington, 1961, 8+32 pp +50 plates, $10.00, AJ 67 232 and Ann d’Astrophys 24 428 and BSAF 76 74 and J RAS Canada 56 29 and Nature 192 838 and Publ ASP 74 172 and Science 134 464 and Sky Tel 22 161 and Sky Tel. 23 218 and SuW 1962 132 and ZfA 54 63
 
-4 61.145(1).72 H. Shapley, Galaxies, Cambridge MA, Harvard University Press, 1961, 10+186 pp, $5.00 and 40s, J RAS Canada 55 274 and Obs 81 253 and Proc. Phys. Soc. 79 451 and Publ ASP 73 470 and Science 134 275 and Sky Tel. 22 45 and Sky Tel. 22 285, revised edition also published London Oxford University Press
+4 61.145(1).72 H. Shapley, Galaxies, Cambridge MA, Harvard University Press, 1961, 10+186 pp, $5.00 and 40s, J RAS Canada 55 274 and Obs 81 253 and Proc. Phys. Soc. 79 451 and Publ ASP 73 470 and Science 134 275 and Sky Tel. 22 45 and Sky Tel. 22 285, other revised edition; also published London: Oxford University Press;
 
 5 61.145(1).78 H. Vogt, Aussergalaktische Sternsysteme und Struktur der Welt im Grossen, , , , , , RH 42 103 and Sterne 37 108 and Weltraumfahrt 13 90 and ZfMG 93 236, reference AJB 60.145.70
 
@@ -31,7 +31,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 10 61.93(0).57 D. W. R. McKinley, Meteor Science and Engineering, New York-Toronto-London, McGraw-Hill Book Co., 1961, 309 pp, $12.50 and 97s, AJ 67 327 and J RAS Canada 56 32 and Proc. IRE 50 104 and Proc. Phys. Soc. 79 869 and Sky Tel. 22 102 and Sky Tel. 23 160
 
-11 61.93(0).82 I. T. Sotkin, Anleitung zur Beobachtung von Meteoren, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 56 pp, 24 Kop., , in Russian
+11 61.93(0).82 I. T. Sotkin, Anleitung zur Beobachtung von Meteoren, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 56 pp, 24 Kop., , in Russian;
 
 12 61.94(0).53 L. LaPaz and J. LaPaz, Space Nomads comma Meteorites in the Sky comma Field and Laboratory, New York, Holiday House, 1961, 187 pp, $3.95, AJ 67 232 and JBAA 72 246 and Sky Tel. 23 45 and Sky Tel. 23 165 
 
@@ -39,23 +39,23 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 14 61.95.11 A. Dauvillier, La poussière cosmique comma Les milieux interplanétaire comma interstellaire et intergalactique, Paris, Masson et Cie, 1961, 212 pp, 25 NF, Ann d’Astrophys 25 122 and Ciel et Terre 78 292 and Phys. Abstr. (A) 65 688 and Planet. Space Sci. 9 353 and Sky Tel. 23 45
 
-15 61.95.42 , Fragen der Astrophysik und atmosphärischen Optik; Photometrische Beobachtungen des Zodiakallichts, Alma-Ata, Verlag Akad. Wiss. Kasach. SSR, 1961, 123 pp, 95 Kop.,  , in Russian same as Publ. Astrophys. Inst. Alma-Ata 2
+15 61.95.42 , Fragen der Astrophysik und atmosphärischen Optik; Photometrische Beobachtungen des Zodiakallichts, Alma-Ata, Verlag Akad. Wiss. Kasach. SSR, 1961, 123 pp, 95 Kop.,  , in Russian; other  same as Publ. Astrophys. Inst. Alma-Ata 2;
 
-16 61.81.05 W. A. Bronstein, Anleitung zur Beobachtung der Planeten, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 34 pp, 14 Kop., , in Russian
+16 61.81.05 W. A. Bronstein, Anleitung zur Beobachtung der Planeten, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 34 pp, 14 Kop., , in Russian;
 
 17 61.81.30 A. E. Nourse, Nine Planets, , , , , , Spaceflight 4 36, reference AJB 60.81.17
 
 18 61.81.34 J. S. Pickering, Captives of the Sun, , Dodd Mead, 1961, 326 pp, $4.95, Sky Tel. 23 106 and Sky Tel. 24 160
 
-19 61.81.41 S. K. Wsechswjatskij, Moderne Probleme der Erforschung der nächsten Planeten, Kiew, Ges. zur Verbreitung polit. wiss. Erkenntnisse Ukrain.SSR, 1961, 51 pp, 9 Kop., , in Russian
+19 61.81.41 S. K. Wsechswjatskij, Moderne Probleme der Erforschung der nächsten Planeten, Kiew, Ges. zur Verbreitung polit. wiss. Erkenntnisse Ukrain.SSR, 1961, 51 pp, 9 Kop., , in Russian;
 
-20 61.81.43 G. P. Kuiper and B. M. Middlehurst ed., The Solar System Vol. 3 Planets and Satellites, Chicago, University of Chicago Press, 1961, 20+601 pp, $12.50, AJ 67 328 and Ann d’Astrophys 25 50 and J RAS Canada 56 86 and Nature 194 48 and Science 134 1356 and Sky Tel. 23 106 and Sky Tel. 24 99, also published Toronto The University of Toronto Press
+20 61.81.43 G. P. Kuiper and B. M. Middlehurst ed., The Solar System Vol. 3 Planets and Satellites, Chicago, University of Chicago Press, 1961, 20+601 pp, $12.50, AJ 67 328 and Ann d’Astrophys 25 50 and J RAS Canada 56 86 and Nature 194 48 and Science 134 1356 and Sky Tel. 23 106 and Sky Tel. 24 99, also published Toronto: The University of Toronto Press;
 
 21 61.82(2).37 W. W. Kellogg and C. Sagan, The Atmosphere of Venus and Mars – A Report by the Ad Hoc Panel of Planetary Atmospheres of the Space Science Board, Washington DC, National Academy of Science – National Research Council, 1961, 151 pp, $5.00, ARS J 32 649
 
-22 61.82(2).51 P. Moore, The Planet Venus, London, Faber and Faber Ltd., 1961, 151 pp, 18s and $3.75, Sky Tel. 22 161 and Strolling Astr. 16 126, 3rd edition also published New York Macmillan
+22 61.82(2).51 P. Moore, The Planet Venus, London, Faber and Faber Ltd., 1961, 151 pp, 18s and $3.75, Sky Tel. 22 161 and Strolling Astr. 16 126, 3rd edition; also published New York: Macmillan;
 
-22 61.82(2).52 P. Moore, Der Planet Venus, Moskau, Verlag für Ausländische Literatur, 1961, 146 pp, 49 Kop., Priroda 51 Nr. 5 48, translated from English to Russian see also AJB 61.82.51
+22 61.82(2).52 P. Moore, Der Planet Venus, Moskau, Verlag für Ausländische Literatur, 1961, 146 pp, 49 Kop., Priroda 51 Nr. 5 48, translated from English into Russian; other see also AJB 61.82.51;
 
 23 61.83(0).14 E. W. Brown, An Introductory Treatise on the Lunar Theory, , , , , , La Nature 89 359, reference AJB 60.83.13
 
@@ -77,7 +77,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 32 61.83(4).127 J. Klepešta and J. Bouška and F. Fisher, Povrch Měsíce, Prag, Pädagog-Verlag, 1961, 8 pp with 16 tables, 7.20 Kčs
 
-33 61.83(4).129 S. M. Kosik, Table and Schematic Chart of Selected Lunar Objects, London-New York, Pergamon Press Ltd., 1961, 38 pp, 12s 6d and $2.00, AJ 67 152 and Ann d’Astrophys 25 54 and Publ ASP 74 262 and ZfA 54 223, translated to English from AJB 60.83.143
+33 61.83(4).129 S. M. Kosik, Table and Schematic Chart of Selected Lunar Objects, London-New York, Pergamon Press Ltd., 1961, 38 pp, 12s 6d and $2.00, AJ 67 152 and Ann d’Astrophys 25 54 and Publ ASP 74 262 and ZfA 54 223, translated into English; reprint of AJB 60.83.143;
 
 34 61.83(4).163 H. P. Wilkins, Moon Maps, , , , , , Obs 82 419 and Publ ASP 73 240, reference AJB 59.83.40
 
@@ -87,11 +87,11 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 37 61.83(4).168 G. P. Kuiper ed., Orthographic Atlas of the Moon Part 1, Tucson, University of Arizona Press, 1960, 34 pp, $9.00, Science 134 323 and Publ ASP 73 369 
 
-38 61.83(5).176 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, Atlas of the Other Side of the Moon, Oxford-London-New York-Paris, Pergamon Press, 1961, 143 pp, $7.00, Ciel et Terre 78 159 and J. Atmosph. Terr. Phys. 24 328 and JBAA 72 298 and Nature 192 839 and Obs 81 210 and Planet. Space Sci. 9 291 and Sky Tel. 22 228 and Sky Tel. 22 290 and Sky Tel. 23 40 and Sky Tel. 23 43 and Spaceflight 3 217, translated from the Russian by L. Ter-Oganian
+38 61.83(5).176 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, Atlas of the Other Side of the Moon, Oxford-London-New York-Paris, Pergamon Press, 1961, 143 pp, $7.00, Ciel et Terre 78 159 and J. Atmosph. Terr. Phys. 24 328 and JBAA 72 298 and Nature 192 839 and Obs 81 210 and Planet. Space Sci. 9 291 and Sky Tel. 22 228 and Sky Tel. 22 290 and Sky Tel. 23 40 and Sky Tel. 23 43 and Spaceflight 3 217, translated from Russian by L. Ter-Oganian;
 
-39 61.83(5).177 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, Atlas odwrotnej strony Księżyea, Warsawa, Państwowe Wydawnictwo Naukowe, 1961, 142 pp, 60 zł, , translated from Russian
+39 61.83(5).177 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, Atlas odwrotnej strony Księżyea, Warsawa, Państwowe Wydawnictwo Naukowe, 1961, 142 pp, 60 zł, , translated from Russian;
 
-40 61.83(5).178 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, An Atlas of the Moon’s Far Side comma The Lunik III Reconnaissance, Cambridge MA, Sky Publishing Corp., 1961, 147 pp, $7.00, J. Atmosph. Terr. Phys. 24 328 and Phys. Today 15 Nr. 4 64 and Planet. Space Sci. 9 291 and Strolling Astr. 16 80, translated from Russian by R. B. Rodman also published New York Interscience Publishers Inc. see also AJB 61.83.176 and AJB 61.83.177
+40 61.83(5).178 N. P. Barabasehow and A. A. Michajlow and J. N. Libskij, An Atlas of the Moon’s Far Side comma The Lunik III Reconnaissance, Cambridge MA, Sky Publishing Corp., 1961, 147 pp, $7.00, J. Atmosph. Terr. Phys. 24 328 and Phys. Today 15 Nr. 4 64 and Planet. Space Sci. 9 291 and Strolling Astr. 16 80, translated from Russian by R. B. Rodman; also published New York: Interscience Publishers Inc.; other see also AJB 61.83.176 and AJB 61.83.177;
 
 41 61.85.11 G. D. Rith, Die Planetioden, , , , , , Orion Schaffhausen 7 148, reference AJB 60.85.16
 
@@ -101,7 +101,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 44 61.71.33 P. M. Hurley, Hoe oud is de aarde?, , Elseviers Natuurwetenschappelijke Pockets, 1960,  , f 1.90, HeD 59 283
 
-45 61.71.56 M. S. Molodenskij and M. W. Kramer, Gezeiten und Nutation der Erde, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 40 pp, 20 Kop., , in Russian
+45 61.71.56 M. S. Molodenskij and M. W. Kramer, Gezeiten und Nutation der Erde, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 40 pp, 20 Kop., , in Russian;
 
 46 61.71.77 A. H. Cook and T. F. Gaskell ed., The Earth Today, Edinburgh, Oliver & Boyd, 1961, 11+404 pp, 80s, Planet. Space Sci. 9 289
 
@@ -121,17 +121,17 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 54 61.75.19 K. G. Budden, Radio Waves in the Ionosphere, New York, Cambridge University Press, 1961, 24+542 pp, $18.50, AJ 66 191 and Math. Rev. 23 1B460 and Physics Today 15 Nr. 2 44 and Physics Today 15 Nr. 2 46 and Proc. IRE 49 1347 and Proc. Phys. Soc. 79 872 and Publ ASP 73 468
 
-55 61.75.107 W. R. Piggott and K. Rawer ed., URSI Handbook of Ionogram Interpretation and Reduction, Amsterdam, Elsevier Publishing Company, 1961, 192 pp, , JBAA 72 245, also published London D. Van Nostrand Company
+55 61.75.107 W. R. Piggott and K. Rawer ed., URSI Handbook of Ionogram Interpretation and Reduction, Amsterdam, Elsevier Publishing Company, 1961, 192 pp, , JBAA 72 245, also published London: D. Van Nostrand Company;
 
 56 61.76(2).49 J. W. Chamberlain, Physics of the Aurora and Airglow, New York, Academic Press, 1961, 704 pp, $16.50, ARS J 32 790 and Geophys. J. RAS 6 407 and J. Atmosph. Terr. Phys. 24 327 and Obs 82 127 and Physic Today 15 Nr. 2 44 and Planet. Space Sci. 9 130 and Proc. IRE 50 236 and Sky Tel. 23 45
 
-57 61.76(2).113 , Spektroskopische comma elektrophotometrische und radarische Untersuchungen von Polarlichtern und des Nachthimmelsleuchtens, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 43 pp, , , in Russian
+57 61.76(2).113 , Spektroskopische comma elektrophotometrische und radarische Untersuchungen von Polarlichtern und des Nachthimmelsleuchtens, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 43 pp, , , in Russian;
 
 58 61.78(0).04 A. Dauvillier, Le Soleil et la Terre, Paris, Edition du Palais de la Découverte, 1960, 42 pp, NF 2.88, La Nature 89 180
 
 59 61.79.05 W. Sullivan, Assault on the Unkown, New York, McGraw-Hill, 1961, 460 pp, $7.95, J. Atmosph. Terr. Phys. 22 223 and Planet. Space Sci. 9 442
 
-60 61.61(0).05 E. Lalou, The Orion Book of the Sun, New York, Orion Press, 1960, 110 pp, $6.95, Science 133 1250, translated from French by W. D. O’Gorman jr.,
+60 61.61(0).05 E. Lalou, The Orion Book of the Sun, New York, Orion Press, 1960, 110 pp, $6.95, Science 133 1250, translated from French by W. D. O’Gorman jr.;
 
 61 61.61(0).09 H. A. Newton, Solens anskite, , Bokförlaget Prisma/Biblioteksförlaget, 1961, 217 pp, Kr. 6:50, PAT 43 74
 
@@ -143,7 +143,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 65 61.51(0).07 M Czerny and A. Walther, Tabellen der Bruchteilfunktionen zum Planckschen Strahlungsgesetz, Berlin, Springer-Verlag, 1961, 8+59 pp, DM 28.00, Ann d’Astrophys 25 50
 
-66 61.51(1).49 N. W. Puschkow, Magnetismus im Kosmos, Moskau, Verlag <<Das Wissen>>, 1961, 48 pp, 9 Kop., , in Russian
+66 61.51(1).49 N. W. Puschkow, Magnetismus im Kosmos, Moskau, Verlag <<Das Wissen>>, 1961, 48 pp, 9 Kop., , in Russian;
 
 67 61.51(2).57 I. W. Busbridge, The Mathematics of Radiative Transfer, , , , , , Ann d’Astrophys 24 429, reference AJB 60.51.72
 
@@ -155,19 +155,19 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 71 61.54.28 Z. Kopal, Figures of Equilibrium of Celestial Bodies, , , , , , ZFMG 93 238, reference AJB 60.54.29
 
-72 61.54.45 M. Schwarschild, Aufbau und Entwicklung der Sterne, Moskau, Verlag für Ausländische Literatur, 1961, 423 pp, 1R. 64 Kop., AJ UdSSR 39 775, translated from English to Russian by E. W. Kononowitsch
+72 61.54.45 M. Schwarschild, Aufbau und Entwicklung der Sterne, Moskau, Verlag für Ausländische Literatur, 1961, 423 pp, 1R. 64 Kop., AJ UdSSR 39 775, translated from English into Russian by E. W. Kononowitsch;
 
-73 61.55.34 S. K. Wsechswjatskij and W. Kasjutinskij, Das Werden der Welten comma Philosophische Probleme der modernen Kosmogonie, Moskau, Stastl. Polit. Verlag, 1961, 175 pp, 20 Kop., , in Russian
+73 61.55.34 S. K. Wsechswjatskij and W. Kasjutinskij, Das Werden der Welten comma Philosophische Probleme der modernen Kosmogonie, Moskau, Stastl. Polit. Verlag, 1961, 175 pp, 20 Kop., , in Russian;
 
-74 61.55.35 , Fragen der Kosmogonie Band 7, Moskau, Verlag Akad. Wiss. UdSSR, 1960, 383 pp, 1R. 70 Kop., RH 42 183, in Russian
+74 61.55.35 , Fragen der Kosmogonie Band 7, Moskau, Verlag Akad. Wiss. UdSSR, 1960, 383 pp, 1R. 70 Kop., RH 42 183, in Russian;
 
 75 61.41(0).10 R. M. L. Baker jr. and M. W. Makemson, An Introduction to Astrodynamics, , , , , , J. British Interplanetary Soc. 18 168 and J. RAS Canada 55 276 and La Nature 89 452 and Math. Rev. 22 1323 and Obs 82 36 and Proc. Phys. Soc. 78 634, reference AJB 60.41.04
 
 76 61.41(0).13 D. Brouwer and G. M. Clemence, Methods of Celestial Mechanics, New York-London, Academic Press Inc., 1961, 12+598 pp, $15.50 and 111s, AJ 66 276 and J. Astronaut. Sci 8 126 and J RAS Canada 56 31 and Math. Rev. 23 3B1544 and Obs 82 83 and Sky Tel. 22 102 and Sky Tel. 22 353
 
-77 61.41(0).18 H. F. Chilmi, Qualitative Methoden beim n-Körperproblem der Himmelsmechanik, Berlin, Akadamie-Verlag, 1961, 116 pp, DM 23.00, , translated from Russian to German by V. Abalakin edited by J. O. Fleckenstein see also 61.41.19
+77 61.41(0).18 H. F. Chilmi, Qualitative Methoden beim n-Körperproblem der Himmelsmechanik, Berlin, Akadamie-Verlag, 1961, 116 pp, DM 23.00, , translated from Russian into German by V. Abalakin; edited by J. O. Fleckenstein; other see also 61.41.19;
 
-78 61.41(0).19 H. F. Chilmi, Qualitative Methods in the Many Body Problem, New York, Gordon & Breach Science Publishers Inc., 1961, 117 pp, $6.50, ARS J 32 1120, translated from the Russian by B. D. Seckler, see also AJB 61.41.18
+78 61.41(0).19 H. F. Chilmi, Qualitative Methods in the Many Body Problem, New York, Gordon & Breach Science Publishers Inc., 1961, 117 pp, $6.50, ARS J 32 1120, translated from Russian by B. D. Seckler; other see also AJB 61.41.18;
 
 79 61.41(0).31 W. Gröbner, Die Lie-Reihen und ihre Anwendungen, Berlin, VEB Deutscher Verlag der Wissenschaften, 1960, 7+112 pp, DM 22.00
 
@@ -175,23 +175,23 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 81 61.41(0).75 J. Rjabow, An Elementary Survey of Celestial Mechanics, New York, Dover Publications, 1961, 164 pp, $1.25, Sky Tel. 22 43
 
-81 61.41(0).77 R. A. Saakjan, Über die Einfangwahrscheinlichkeit im Drei-körperproblem, Erewan, Verlag Akad. Wiss. Armen. SSR, 1961, 57 pp, 20 Kop., , in Russian also published Astrophys. Obs. Bjurakan
+81 61.41(0).77 R. A. Saakjan, Über die Einfangwahrscheinlichkeit im Drei-körperproblem, Erewan, Verlag Akad. Wiss. Armen. SSR, 1961, 57 pp, 20 Kop., , in Russian; also published Somewhere: Astrophys. Obs. Bjurakan;
 
 82 61.41(0).86 T. E. Sterne, An Introduction to Celestial Mechanics, , , , , , Nuovo Cimento (10) 21 1106 and Obs 82 84 and Planet. Space Sci. 8 122 and Proc. Phys. Soc. 78 780 and Sky Tel. 23 100 and ZfMG 93 235, reference AJB 60.41.58
 
 83 61.41(0).88 K. Stumpff, Himmelsmechanik Band 1, , , , , , Weltraumfahrt 13 89 and ZfMG 92 239, reference AJB 59.41.44
 
-84 61.42.02 A. D. Dubjago, The Determination of Orbits, New York, The Macmillan Company, 1961, 14+431 pp, $12.50, AJ 67 152 and Astronaut. Sci. Rev. 4 Nr. 1 19 and Planet. Space Sci. 9 517 and Sky Tel. 23 166, translated from Russian by R. D. Burke and G. Gordon and L. N. Rowell and F. T. Smith
+84 61.42.02 A. D. Dubjago, The Determination of Orbits, New York, The Macmillan Company, 1961, 14+431 pp, $12.50, AJ 67 152 and Astronaut. Sci. Rev. 4 Nr. 1 19 and Planet. Space Sci. 9 517 and Sky Tel. 23 166, translated from Russian by R. D. Burke and G. Gordon and L. N. Rowell and F. T. Smith;
 
 85 61.43.04 S. Chandrasekhar, Principles of Stellar Dynamics, , , , , , La Nature 89 406, reference AJB 60.43.07
 
-86 61.43.07 G. M. Idlis, Struktur und Dynamik von Sternsystemen, Alma-Ata, Verlag Akad. Wiss. Kasach. SSR, 1961, 314 pp, 2R. 17 Kop, in Russian same as Publ. Astrophys Inst. Alma-Ata 1
+86 61.43.07 G. M. Idlis, Struktur und Dynamik von Sternsystemen, Alma-Ata, Verlag Akad. Wiss. Kasach. SSR, 1961, 314 pp, 2R. 17 Kop, in Russian; other same as Publ. Astrophys Inst. Alma-Ata 1;
 
 87 61.44.07 H. Bondi, Cosmology, , , , , , AJ 67 327 and JBAA 72 89 and Publ ASP 74 175, reference AJB 60.44.03
 
 88 61.44.08 H. Bondi, The Universe at Large, New York, Doubleday, 1960, 154 pp, $0.95, Science 133 1231
 
-89 61.44.26 K. Dürr, Ein Nein zu Einstein, Badisch-Rheinfelden, Schritt-Verlag, 1961, 64 pp, DM 6.15, Sterne 37 215, 2nd edition
+89 61.44.26 K. Dürr, Ein Nein zu Einstein, Badisch-Rheinfelden, Schritt-Verlag, 1961, 64 pp, DM 6.15, Sterne 37 215, 2nd edition;
 
 90 61.44.30 V. Fock, Theorie von Raum comma Zeit und Gravitation, , , , , , Phys. Ber. 40 1415 and Phys Blätter 17 540, reference AJB 60.44.20
 
@@ -201,13 +201,13 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 93 61.44.45 F. Hoyle, The Nature of the Universe, , , , , , Science 133 1231, reference AJB 60.44.27
 
-94 61.44.46 F. Hoyle, Världalltets byggnad, , Bokförlaget Aldus/Bonniers, 1961, 92 pp, Kr 7:75, , revised edition of AJB 52.40.02
+94 61.44.46 F. Hoyle, Världalltets byggnad, , Bokförlaget Aldus/Bonniers, 1961, 92 pp, Kr 7:75, , other revised edition; reprint of AJB 52.40.02;
 
 95 61.44.56 R. O. Kapp, Towards a Unified Cosmology, , , , , , Science 133 1231, reference AJB 60.44.33
 
 96 61.44.67 G. C. McVittie, Fact and Theory in Cosmology, London, Eyre & Spottiswoode Ltd., 1961, 190 pp, 15s, Nature 194 48 and Spaceflight 4 137
 
-97 61.44.68 G. C. McVittie, Allgemeine Relativitätstheorie und Kosmologie, Moskau, Verlag für ausländische Literatur, 1961, 284 pp, 1R. 12 Kop., , translated from English to Russian
+97 61.44.68 G. C. McVittie, Allgemeine Relativitätstheorie und Kosmologie, Moskau, Verlag für ausländische Literatur, 1961, 284 pp, 1R. 12 Kop., , translated from English into Russian;
 
  98 61.44.93 J. L. Synge, Relativity: The General Theory, , , , , , Nuovo Cimento (10) 20 208 and Proc. Phys. Soc. 78 628 and ZfMG 90 185, reference AJB 60.44.53
 
@@ -221,13 +221,13 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 103 61.31.20 V. Kourganoff, Astronomie fondamentale élémentarie, Paris, Masson & Cie, 1961, 106 pp, NF 23.00, Ann d’Astrophys 25 218 and Sky Tel. 23 223
 
-104 61.31.21 K. A. Kulikow, Lehrbuch der sphärischen Astronomie, Moskau, Staatsverlag Phys.-Math. Literatur, 1961, 195 pp, 44 Kop., AJ UdSSR 39 172, in Russian
+104 61.31.21 K. A. Kulikow, Lehrbuch der sphärischen Astronomie, Moskau, Staatsverlag Phys.-Math. Literatur, 1961, 195 pp, 44 Kop., AJ UdSSR 39 172, in Russian;
 
-105 61.31.23 P. P. Loginow and B. J. Balshinowa and B. W. Jassewitsch, Theorie der Meridianinstrumente und Ergebnisse astrometrischer Beobachtungen, Taschkent, Verlag Akad. Wiss. Uskek. SSR, 1961, 124 pp, 98 Kop., in Russian same as Publ. Astr. Obs. Taschkent Nr. 8
+105 61.31.23 P. P. Loginow and B. J. Balshinowa and B. W. Jassewitsch, Theorie der Meridianinstrumente und Ergebnisse astrometrischer Beobachtungen, Taschkent, Verlag Akad. Wiss. Uskek. SSR, 1961, 124 pp, 98 Kop., in Russian; other same as Publ. Astr. Obs. Taschkent Nr. 8;
 
 106 61.31.36 W. M. Smart, Text-Book on Spherical Astronomy, , , , , , JBAA 72 50 and Math. Rev. 23 2B1005 and Publ ASP 73 375, reference AJB 60.31.39
 
-107 61.32(1).05 M. F. Bykow, Absoluter Katalog der Rektaszensionen von 623 schwachen Sternen des Fundamentakkatalogs Schwacher Sterne, Taschkent, Verlag Akad. Wiss. Usbek. SSR, 1961, 164 pp, 1R. 54 Kop., , in Russian
+107 61.32(1).05 M. F. Bykow, Absoluter Katalog der Rektaszensionen von 623 schwachen Sternen des Fundamentakkatalogs Schwacher Sterne, Taschkent, Verlag Akad. Wiss. Usbek. SSR, 1961, 164 pp, 1R. 54 Kop., , in Russian;
 
 108 61.32(1).17 A. Kahrstedt ed., Index Sternörter 1925—1960 Index II Band 1 Anonymae, Berlin, Akademie-Verlag, 1961, 28+195 pp, DM 30.00
 
@@ -241,27 +241,27 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 113 61.32(2).26 V. de Callataÿ, Goldmanns Himmelsatlas, , , , , , Weltraumfahrt 13 91, reference AJB 60.32.22
 
-114 61.32(2).27 J. Klepešta and A. Rükl, Sternkarten, Stuttgart, Franckh’sche Verlags-handlung, 1961, 2 charts, DM 7.80, Sternenbote 4 167, German edition of AJB 60.32.25
+114 61.32(2).27 J. Klepešta and A. Rükl, Sternkarten, Stuttgart, Franckh’sche Verlags-handlung, 1961, 2 charts, DM 7.80, Sternenbote 4 167, translated into German; reprint of AJB 60.32.25;
 
-115 61.32(2).28 , Harmonia Macrocosmica des Andreas Cellarius, , , , , , VdS Nachr. 10 59, new edition no ref
+115 61.32(2).28 , Harmonia Macrocosmica des Andreas Cellarius, , , , , , VdS Nachr. 10 59, other new edition no ref;
 
 116 61.32(2).29 , The Color Map of the Northern Heavens, Cambridge MA, Harvard College Observatory, , , $1.00, VdS Nachr. 10 59
 
-117 61.35.01 P. Ahnert, Astronomisch-chronologische Tafeln für Sonne comma Mond und Planeten, Leipzig, Johann Ambrosius Barth, 1961, 42+43 pp, DM 10.20, JBAA 72 245 and Sternenbote 5 76, 2nd edition 
+117 61.35.01 P. Ahnert, Astronomisch-chronologische Tafeln für Sonne comma Mond und Planeten, Leipzig, Johann Ambrosius Barth, 1961, 42+43 pp, DM 10.20, JBAA 72 245 and Sternenbote 5 76, 2nd edition;
 
 118 61.35.05 P. Coudere, Les éclipses, Paris, Presses Universitaires de France, 1961, 128 pp, 2.80 NF, Ann d’Astrophys 25 53 and BSAF 76 76 and Ciel et Terre 78 216 and Coelum 30 62 and Orion Schaffhausen 7 150 and Sky Tel. 23 223
 
-119 61.35.09 G. D. Mamedbejli, Synchronistische Tabellen zur Datenumwandlung, Baku, Verlag Akad. Wiss. Aserbajdshan. SSR, 1961, 45 pp, 15 Kop., , in aserbajdshan and Russian and usbek. and tajdshik. and fars.  and arab.
+119 61.35.09 G. D. Mamedbejli, Synchronistische Tabellen zur Datenumwandlung, Baku, Verlag Akad. Wiss. Aserbajdshan. SSR, 1961, 45 pp, 15 Kop., , in aserbajdshan and Russian and usbek. and tajdshik. and fars.  and arab.;
 
-120 61.35.13 I. A. Orbeli, Synchronistische Tabellen der Hedschra und der europäischen Jahreszählung, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1961, 286 pp, 50 Kop., , in Russian
+120 61.35.13 I. A. Orbeli, Synchronistische Tabellen der Hedschra und der europäischen Jahreszählung, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1961, 286 pp, 50 Kop., , in Russian;
 
 121 61.36.09 F. Debenham, Navigation with Alice,  , Hodder & Stoughton, 1961, 160 pp, 15s, J. Inst. Navigation 14 377
 
 122 61.36.40 C. J. Savant jr. and R. C. Howard and C. B. Solloway and C. A. Savant, Principles of Inertial Navigation, New York-Toronto-London, McGraw-Hill Book Co., 1961, , , Spaceflight 4 170
 
-123 61.36.63 , Arbeitsephemeriden Zingerscher Paare für die Breiten 30°-- 40° Epoche 1965.0 Tom 1, Moskau, Geod. Staatsverlag, 1961, 136 pp, 1R. 16 Kop., RJ UdSSR 1961 11A129, in Russian
+123 61.36.63 , Arbeitsephemeriden Zingerscher Paare für die Breiten 30°-- 40° Epoche 1965.0 Tom 1, Moskau, Geod. Staatsverlag, 1961, 136 pp, 1R. 16 Kop., RJ UdSSR 1961 11A129, in Russian;
 
-124 61.36.64 , Arbeitsephemeriden Zingerscher Paare für die Breiten 50°--60° Epoche 1965.0, Moskau, Geod. Staatsverlag, 1960, 139 pp, 11R. 60 Kop., , in Russian
+124 61.36.64 , Arbeitsephemeriden Zingerscher Paare für die Breiten 50°--60° Epoche 1965.0, Moskau, Geod. Staatsverlag, 1960, 139 pp, 11R. 60 Kop., , in Russian;
 
 125 61.38.16 W. H. Munk and G. J. F. MacDonald, The Rotation of the Earth, , , , , , Ann. Géophys. 17 151 and Math. Rev. 22 1566 and Obs 81 254 and Phys. Today 15 Nr.2 46 and Proc. Phys. Soc. 78 637 and Publ ASP 73 373 and Science 134 1683, reference AJB 60.38.18
 
@@ -273,33 +273,33 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 129 61.21.35 T. Wagnerowski, Optyka praktyczna, Warszawa, Państwowe Wydawnictwo Techniczne, 1959, 308 pp, 26 zł, Urania Kraków 32 216
 
-130 61.22(1).47 G. R. Miczaika and W. M. Sinton, Tools of the Astronomer, Cambridge MA, Harvard University Press, 1961, 8+294 pp, $7.75 and 62s, AJ 66 104 and J. Atmosph. Terr. Phys. 22 225 and JBAA 72 50 and J RAS Canada 56 30 and Obs 81 208 and Science 133 1416 and Sky Tel. 21 232 and Sky Tel. 21 287 and Sterne 37 216 and Strolling Astr. 16 81, also published London Oxford University Press
+130 61.22(1).47 G. R. Miczaika and W. M. Sinton, Tools of the Astronomer, Cambridge MA, Harvard University Press, 1961, 8+294 pp, $7.75 and 62s, AJ 66 104 and J. Atmosph. Terr. Phys. 22 225 and JBAA 72 50 and J RAS Canada 56 30 and Obs 81 208 and Science 133 1416 and Sky Tel. 21 232 and Sky Tel. 21 287 and Sterne 37 216 and Strolling Astr. 16 81, also published London: Oxford University Press;
 
 131 61.22(1).74 J. Texereau, La construction du télescope d’amateur, Paris, Société Astronomique de France, 1961, 280 pp, 24 NF, Ann d’Astrophys 25 122 and Ciel et Terre 78 216 and J. Astr. Soc Victoria 15 12 and Orion Schaffhausen 7 66 and Sky Tel. 23 106
 
 132 61.22(1).83 G. P. Kuiper and B. M. Middlehurst ed., Stars and Stellar Systems Vol 1 Telescopes, , , , , , AJ UdSSR 38 1118 and J RAS Canada 55 275 and Nature 193 715 and Obs 82 126 and Publ ASP 74 170 and Science 133 1416 and ZfA 54 60, reference AJB 60.22.91
 
-133 61.23(1).100 H. Rau, Sonnenenergie, Wiesbaden, Krausskopf-Verlag, 1960, 170 pp, DM 12.80, Weltraumfahrt 13 90, 2nd edition
+133 61.23(1).100 H. Rau, Sonnenenergie, Wiesbaden, Krausskopf-Verlag, 1960, 170 pp, DM 12.80, Weltraumfahrt 13 90, 2nd edition;
 
 134 61.23(1).104 , Solar Energy Technology 1954—1959, London, Library Association, 1961, 32 pp, 3s 6d, Nature 191 228
 
 133 61.24(0).16 J. Haag and R. Chaléat, Problémes de théorie générale des oscillations et de chronométrie, , , , , , Z. angew. Phys. 13 215 and Z. Intrumentenkunde 69 93, reference AJB 60.24.19
 
-134 61.24(0).25 F. le Lionnais, The Orion Book of Time, New York, Orion Press, 1960, 110 pp, $6.95, Science 133 1250, translated from French by W. D. O’Gorman jr.
+134 61.24(0).25 F. le Lionnais, The Orion Book of Time, New York, Orion Press, 1960, 110 pp, $6.95, Science 133 1250, translated from French by W. D. O’Gorman jr.;
 
-135 61.21.4(0).37 F. S. Sawelskij, Die Zeit und ihre Messung comma Von Billionstel Sekunden dis zu Milliarden von Jahren, Moskau, Phys.-Math. Staatsverlag, 1961, 218 pp, 34 Kop., , 2nd edition in Russian
+135 61.21.4(0).37 F. S. Sawelskij, Die Zeit und ihre Messung comma Von Billionstel Sekunden dis zu Milliarden von Jahren, Moskau, Phys.-Math. Staatsverlag, 1961, 218 pp, 34 Kop., , 2nd edition; in Russian;
 
 136 61.25.09 H. E. Paul, Outer Space Photography for the Amateur, New York, Amphoto, 1960, 124 pp, $2.50, Science 133 271
 
 137 61.25.10 T. Rackham, Astronomical Photography at the Telescope, , , , , , NAT 1961 35, reference AJB 59.25.12
 
-138 61.25.16 G. de Vaucouleurs, Astronomical Photography: From the Daguerreotype to the Electron Camera, London, Faber & Faber, 1961, 94 pp, 25s and $6.00, AJ 67 327 and Endeavour 21 Nr. 82 3. Umschlagseite and J. Astr. Soc. Victoria 15 12 and JBAA 72 93 and J RAS Canada 56 181 and MN ASSA 21 83 and Obs 82 83 and Planet. Space Sci. 9 290 and Sky Tel. 23 224 and Sky Tel. 24 39 and Southern Stars 19 146 and Spaceflight 4 104 and Strolling Astr. 16 81, translated by R. Wright also published New York Macmillan Co.
+138 61.25.16 G. de Vaucouleurs, Astronomical Photography: From the Daguerreotype to the Electron Camera, London, Faber & Faber, 1961, 94 pp, 25s and $6.00, AJ 67 327 and Endeavour 21 Nr. 82 3. Umschlagseite and J. Astr. Soc. Victoria 15 12 and JBAA 72 93 and J RAS Canada 56 181 and MN ASSA 21 83 and Obs 82 83 and Planet. Space Sci. 9 290 and Sky Tel. 23 224 and Sky Tel. 24 39 and Southern Stars 19 146 and Spaceflight 4 104 and Strolling Astr. 16 81, translated by R. Wright; also published New York: Macmillan Co.;
 
 139 61.11.01 P. Ahnert, Beobachtungsobjekte für Liebhaberastronomen, Leipzig, Verlag Johann Ambrosius Barth, 1961, 104 pp, DM 3.00, Gaz astr 42 75 and Mitt. Planetenbeobachter 14 33 and RH 42 142 and Sterne 37 179 and VdS Nachr. 10 72
 
 140 61.11.02 C. W. Allen, Astrophysical Quantities, , , , , , RH 42 142, reference AJB 60.11.02
 
-141 61.11.03 R. H. Baker, An Introduction to Astronomy, London, D. van Nostrand Co. Ltd., 1961, 8+364 pp, 41s 6d, Australian J. Sci. 22 91 and JBAA 72 153, 6th edition
+141 61.11.03 R. H. Baker, An Introduction to Astronomy, London, D. van Nostrand Co. Ltd., 1961, 8+364 pp, 41s 6d, Australian J. Sci. 22 91 and JBAA 72 153, 6th edition;
 
 142 61.11.04 E. Banaszczyk, Człowiek i niebo, Warszawa, Wydawnictwa Ministerstwa Obrony Narodowej, 1961, 160 pp, 10 zł, 
 
@@ -309,7 +309,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 145 61.11.07 A. Boischot, La Radioastronomie et son apport nouveau à la connaissance de l’Univers, , , , , , La Nature 89 222 and NAT 1961 70, reference AJB 60.11.07
 
-146 61.11.08 R. Brandt, Himmelswunder im Feldstecher, Leipzig, Verlag Johann Ambrosius Barth, 1961, 120 pp, DM 4.70, Coelum 30 22 and NAT 1961 109 and Sky Tel. 23 224 and Sterne 38 87 and Sternenbote 4 166, 6th edition
+146 61.11.08 R. Brandt, Himmelswunder im Feldstecher, Leipzig, Verlag Johann Ambrosius Barth, 1961, 120 pp, DM 4.70, Coelum 30 22 and NAT 1961 109 and Sky Tel. 23 224 and Sterne 38 87 and Sternenbote 4 166, 6th edition;
 
 147 61.11.09 W. Braunbek, Aufbruch ins Grenzenlose, Stuttgart, Franckh’sche Verlagshandlung, 1961, 220 pp, DM 16.80, VdS Nachr. 10 141
 
@@ -327,7 +327,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 151 61.11.16 J. Dufay, Introduction à l’astrophysique: Les étoiles, Paris, Librairie Armand Colin, 1961, 218 pp, NF 4.50, Ann d’Astrophys 24 264 and BSAF 75 324 and Ciel et Terre 77 447 and Coelum 29 90 and La Nature 89 549 and Nature 194 326 and Obs 82 126 and Sky Tel. 21 356
 
-152 61.11.17 K. E. Edgeworth, The Earth comma the Planets and the Stars comma Their Birth and Evolution, London, Chapman & Hall, 1961, 13+193 pp, 25s and $5.75, J. Atmosph. Terr. Phys. 24 328 and JBAA 72 155 and Phys. Today 15 Nr. 4 65 and Sky Tel. 22 228 and Sky Tel. 23 341 and Spaceflight 4 136, also published New York Macmillan Co.
+152 61.11.17 K. E. Edgeworth, The Earth comma the Planets and the Stars comma Their Birth and Evolution, London, Chapman & Hall, 1961, 13+193 pp, 25s and $5.75, J. Atmosph. Terr. Phys. 24 328 and JBAA 72 155 and Phys. Today 15 Nr. 4 65 and Sky Tel. 22 228 and Sky Tel. 23 341 and Spaceflight 4 136, also published New York: Macmillan Co.;
 
 153 61.11.18 G. Ehrensvärd, Expansion – liv i universum, , Bokförlaget Aldus/Donniers, 1961, 184 pp, Kr 7:50
 
@@ -347,7 +347,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 161 61.11.26 C. de Jager, Zon en sterren, Groningen, J. B. Wolters, 1961, , f 1.50, Hed 59 164
 
-162 61.11.27 H. Spencer Jones, General Astronomy, London, Edward Arnol, 1961, 470 pp, 60s, JBAA 72 297 and MN ASSA 21 92 and Obs 82 82, 4th edition
+162 61.11.27 H. Spencer Jones, General Astronomy, London, Edward Arnol, 1961, 470 pp, 60s, JBAA 72 297 and MN ASSA 21 92 and Obs 82 82, 4th edition;
 
 163 61.11.28 H. C. King, Astronomy, , , , , , Science 134 272, reference AJB 60.11.23
 
@@ -355,13 +355,13 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 165 61.11.30 A. Klenow, Unser Tagesgestirn (Die Sonne), Moskau, <<Snanije>>, 1961, 59 pp, 5 Kop.
 
-166 61.11.31 A. Krause, Astronomy, Edinburgh, Oliver and Boyd, 1961, 255 pp, 30s, JBAA 72 297 and Sky Tel. 23 106, translated from German by M. Seddon and H. Seddon
+166 61.11.31 A. Krause, Astronomy, Edinburgh, Oliver and Boyd, 1961, 255 pp, 30s, JBAA 72 297 and Sky Tel. 23 106, translated from German by M. Seddon and H. Seddon;
 
-167 61.11.32 P. G. Kulikowskij, Handbuch für den liebhaberastronomen, Moskau, Phys.-Math. Staatsverlag, 1961, 494 pp, 1R. 24 Kop., HeD 59 282 and RJ UdSSR 1962 1A59, 3rd edition
+167 61.11.32 P. G. Kulikowskij, Handbuch für den liebhaberastronomen, Moskau, Phys.-Math. Staatsverlag, 1961, 494 pp, 1R. 24 Kop., HeD 59 282 and RJ UdSSR 1962 1A59, 3rd edition;
 
 168 61.11.33 R. A. Lyttleton, Man’s View of the Universe, , Atlantic Little comma Brown, 1961, 108 pp, $3.95, Sky Tel. 22 43
 
-169 61.11.34 D. J. Martynow, Lehrbuch der praktischen Astrophysik, Moskau, Phys.-Math. Staatsverlag, 1960, 508 pp, 1R. 15 Kop., AJ UdSSR 38 1004 and RH 42 183, in Russian
+169 61.11.34 D. J. Martynow, Lehrbuch der praktischen Astrophysik, Moskau, Phys.-Math. Staatsverlag, 1960, 508 pp, 1R. 15 Kop., AJ UdSSR 38 1004 and RH 42 183, in Russian;
 
 170 61.11.35 N. Mayall and M. Mayall and J. Wyckoff, Amatörastronomens guide, Stockholm, Folket i Bilds Förlag, 1960, 125 pp, Kr. 16:75, PAT 42 168
 
@@ -377,23 +377,23 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 176 61.11.41 G. Murchie, Music of the Spheres, Boston, Houghton Mifflin, 1961, 644 pp, $6.95, Science 134 273
 
-177 61.11.42 E. R. Mustel, Sonne und Erdatmosphäre, Erewan, Armen. Staatsverlag, 1959, 129 pp, 1R. 75 Kop, ,in Armenian
+177 61.11.42 E. R. Mustel, Sonne und Erdatmosphäre, Erewan, Armen. Staatsverlag, 1959, 129 pp, 1R. 75 Kop, ,in Armenian;
 
-178 61.11.43 I. A. Parschin, In der Welt der Planeten, Leningrad, Ges. zur Verbreitung polit. wiss. Erkenntnisse Russ. SSR, 1961, 52 pp, 10 Kop., , in Russian
+178 61.11.43 I. A. Parschin, In der Welt der Planeten, Leningrad, Ges. zur Verbreitung polit. wiss. Erkenntnisse Russ. SSR, 1961, 52 pp, 10 Kop., , in Russian;
 
 179 61.11.44 J.-C. Pecker, Le Ciel, , , , , , La Nature 89 45, reference AJB 60.11.36
 
-180 61.11.45 J.-C. Pecker, The Orion Book of the Sky, New York, Orion Press, 1960, 113 pp, $6.95, Science 133 1250, translation of AJB 60.11.36 by W. D. O’Gorman jr.
+180 61.11.45 J.-C. Pecker, The Orion Book of the Sky, New York, Orion Press, 1960, 113 pp, $6.95, Science 133 1250, translated by W. D. O’Gorman jr.; reprint of AJB 60.11.36;
 
 181 61.11.46 E. Penkala, Wunder des Weltalls comma Ein Bildatlas des Kosmos, Stuttgart, Franckh’sche Verlaghandlung, 1961, 112 pp, DM 19.80, Sternenbote 4 167 and VdS Nachr. 10 130
 
 182 61.11.47 E. Penkala, Naar de grenzen van het heelal, Amsterdam, N.V. De Arbeiderspers, 1961, 120 pp,  , HeD 60 84
 
-183 61.11.48 J. I. Perelman, Unterhaltsame Astronomie, Moskau, Phys.-Math. Staatsverlag, 1961, 212 pp, 36 Kop., , in Russian
+183 61.11.48 J. I. Perelman, Unterhaltsame Astronomie, Moskau, Phys.-Math. Staatsverlag, 1961, 212 pp, 36 Kop., , in Russian;
 
 184 61.11.49 J. Pickering, 1001 Questions Answered About Astronomy, , , , , , JBAA 72 92, reference AJB 60.11.38
 
-185 61.11.50 J. H. Piddington, Radio Astronomy, London, Hutchinson & Co. Ltd., 1961, 128 pp, 12s 6d and $2.50, Planet. Space Sci. 9 131 and Sky Tel. 23 166 and Sky Tel. 24 39 and Sky Tel. 24 41, also published New York Harper & Brothers
+185 61.11.50 J. H. Piddington, Radio Astronomy, London, Hutchinson & Co. Ltd., 1961, 128 pp, 12s 6d and $2.50, Planet. Space Sci. 9 131 and Sky Tel. 23 166 and Sky Tel. 24 39 and Sky Tel. 24 41, also published New York: Harper & Brothers;
 
 186 61.11.51 H.-C. Plummer, An Introductory Treatise on Dynamical Astronomy, , , , , , Ciel et Terre 77 446 and La Nature 89 358, reference AJB 60.11.40
 
@@ -407,13 +407,13 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 191 61.11.56 H. Sebastian, Safari im Weltraum, Berlin, Safari-Verlag, 1961, 387 pp, DM 24.80, Sternenbote 5 76
  
-192 61.11.57 G. P. Serviss, Astronomy with an Opera Glass, New York-Montreal, Chatham Press, 1961, 6+147 pp, $3.95, J RAS Canada 55 277 and Sky Tel. 22 161 and Sky Tel. 23 161, revised edition by E. E. Bridgen
+192 61.11.57 G. P. Serviss, Astronomy with an Opera Glass, New York-Montreal, Chatham Press, 1961, 6+147 pp, $3.95, J RAS Canada 55 277 and Sky Tel. 22 161 and Sky Tel. 23 161, other revised edition; edited by E. E. Bridgen;
 
 193 61.11.58 W. Shepherd, The Universe,  , Longacre Press, 1960, 192 pp, 15s, JBAA 72 92
 
 194 61.11.59 W. Shepherd, The Universe, London, Ward Lock & Co., 1961, 128 pp, 12s 6d, JBAA 71 205
 
-195 61.11.60 F. J. Sigel, Die Sterne führen in die Unendlichkeit comma Bilder des Weltalls, Moskau, Phys.-Math. Staatsverlag, 1961, 196 pp, 31 Kop., , in Russian
+195 61.11.60 F. J. Sigel, Die Sterne führen in die Unendlichkeit comma Bilder des Weltalls, Moskau, Phys.-Math. Staatsverlag, 1961, 196 pp, 31 Kop., , in Russian;
 
 196 61.11.61 F. G. Smith, Radio Astronomy, , , , , , J. Inst. Navigation 14 505 and Obs 81 207, reference AJB 60.11.47
 
@@ -421,13 +421,13 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 198 61.11.63 O. Struve and B. Lynds and H. Pillans, Elementary Astronomy, , , , , , ZfMG 90 234, reference AJB 59.11.56
 
-199 61.11.64 A. D. Thackeray, Astronomical Spectroscopy, London, Eyre and Spottiswoode Ltd., 1961, 256 pp, 18s and $3.95, AJ 67 327 and Obs 82 37 and Sky Tel. 23 106 and Spaceflight 4 138 and Strolling Astr. 16 81 and Urania Köbenhavn 18 95, also published New York Macmillan Co.
+199 61.11.64 A. D. Thackeray, Astronomical Spectroscopy, London, Eyre and Spottiswoode Ltd., 1961, 256 pp, 18s and $3.95, AJ 67 327 and Obs 82 37 and Sky Tel. 23 106 and Spaceflight 4 138 and Strolling Astr. 16 81 and Urania Köbenhavn 18 95, also published New York: Macmillan Co.;
 
 200 61.11.65 F. E. Trinklein and C. M. Huffler, Modern Space Science, , Holt comma Rinehart & Winston, 1961, 550 pp, $4.96, Sky Tel. 21 290
 
-201 61.11.66 B. E. de Vries and T. de Vries, Atlas of the Universe, London, Nelson & Sons Ltd., 1961, , 42s, Geodézia és Kartográfia 14 213 and HeD 59 240, translated by D. R. Welsh edited by H. E. Butler
+201 61.11.66 B. E. de Vries and T. de Vries, Atlas of the Universe, London, Nelson & Sons Ltd., 1961, , 42s, Geodézia és Kartográfia 14 213 and HeD 59 240, translated by D. R. Welsh; edited by H. E. Butler;
 
-202 61.11.67 T. de Vries, A las découverte de l’Univers, Paris-Brüssel, Sequoia, 1960, 155 pp, NF 3.00, La Nature 89 358, translated from Netherlands A. Hendrickx
+202 61.11.67 T. de Vries, A las découverte de l’Univers, Paris-Brüssel, Sequoia, 1960, 155 pp, NF 3.00, La Nature 89 358, translated from Netherlands by A. Hendrickx;
 
 203 61.11.68 Å. Wallenquist, Introduktion till astronomin, Stockholm, Natur och Kultur, 1961, 227 pp, Kr. 15:50 and Kr. 19:50, PAT 42 169
 
@@ -447,7 +447,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 211 61.11.76 , Meyers Handbuch über das Weltall, , , , , , NAT 1961 72 and Veröff. Uraniasternw. Wien Nr. 4 53, reference AJB 60.11.62
 
-212 61.11.77 , Meyers Handbuch über das Weltall, Mannheim, Bibliographisches Institut, 1961, 452 pp with star atlas, DM 16.80, Sternenbote 5 104 and SuW 1962 70, 2nd edition edited by S. von Hoerner and K. Schaifers
+212 61.11.77 , Meyers Handbuch über das Weltall, Mannheim, Bibliographisches Institut, 1961, 452 pp with star atlas, DM 16.80, Sternenbote 5 104 and SuW 1962 70, 2nd edition; edited by S. von Hoerner and K. Schaifers
 
 213 61.11.78 H. Shapley ed., Source Book in Astronomy 1900—1950, , , , , , Obs 81 157 and Publ ASP 73 238 and Science 133  696 and Southern Stars 19 147, reference AJB 60.11.65
 
@@ -459,7 +459,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 217 61.11.82 , Handbuch für Sternfreunde comma Wegweiser für die praktische astronomische Arbeit, , , , , , AJ 67 232 and HeD 60 83 and Obs 82 38 and Optik 18 208 and Orion Schaffhausen 6 202 and Publ ASP 73 368 and SuW 1962 91 and Veröff. Uraniasternw. Wien Nr. 4 13 and Weltraumfahrt 13 31, reference AJB 60.11.64
 
-218 61.11.83 , Lesestoff zur Physik und Astronomie, Moskau, Lehr-Pädagog. Staatsverlag, 1961, 224 pp, 70 Kop., , in Russian zusammengestellt von S. A. Schorygin
+218 61.11.83 , Lesestoff zur Physik und Astronomie, Moskau, Lehr-Pädagog. Staatsverlag, 1961, 224 pp, 70 Kop., , in Russian; other zusammengestellt von (collected by?) S. A. Schorygin;
 
 219 61.11.84 , Taschenbuch für das wissenschatliche Leben 1961, Bonn, Festland-verlag, 1960, 600 pp, DM 14.00, Weltraumfahrt 13 59
 
@@ -471,11 +471,11 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 223 61.12.03 M. Schürer ed., Leonhardus Eulerus comma Opera Omnia comma Series secunda Vol. XXV, Zürich, Soc. Sci. Nat. Helveticae, 1960, 331 pp, , Math. Rev. 23 1A35
 
-224 61.12.04 , The Sidereal Messenger of Galileo Galilei, London, Dawsons of Pall Mall, 1961, 6+111 pp, 52s 6d, JBAA 72 296 and J RAS Canada 55 233 and Obs 81 255, translated by E. S. Carlos
+224 61.12.04 , The Sidereal Messenger of Galileo Galilei, London, Dawsons of Pall Mall, 1961, 6+111 pp, 52s 6d, JBAA 72 296 and J RAS Canada 55 233 and Obs 81 255, translated by E. S. Carlos;
 
-225 61.12.06 S. N. Axentjewa ed., A. J. Orlow comma Gesammelte Werke in drei Bänden Band 1, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1961, 355 pp, 2R. 25 Kop., , in Russian
+225 61.12.06 S. N. Axentjewa ed., A. J. Orlow comma Gesammelte Werke in drei Bänden Band 1, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1961, 355 pp, 2R. 25 Kop., , in Russian;
 
-226 61.12.07 S. N. Axentjewa ed., A. J. Orlow comma Gesammelte Werke in drei Bänden Band 2, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1961, 243 pp, 1R. 56 Kop., , in Russian
+226 61.12.07 S. N. Axentjewa ed., A. J. Orlow comma Gesammelte Werke in drei Bänden Band 2, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1961, 243 pp, 1R. 56 Kop., , in Russian;
 
 227 61.12.09 A. Pannekoek and E. Crone ed., The Principal Works of Simon Stevin Vol. III Astronomy; Navigation, Amsterdam, C. V. Swets & Zeitlinger, 1961, 5+632 pp, , HeD 60 25
 
@@ -491,19 +491,19 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 233 61.13(1).06  , Space Research, , , , , , Mem SA It (NS) 32 277 and Science 133 697 and Weltraumfahrt 13 59, reference AJB 60.13.30
 
-234 61.13(2).08 R. N. Bracewell ed., Radioastronomie, Moskau, Verlag für Ausländische Literatur, 1961, 594 pp, 3R. 20 Kop., , translated into Russian
+234 61.13(2).08 R. N. Bracewell ed., Radioastronomie, Moskau, Verlag für Ausländische Literatur, 1961, 594 pp, 3R. 20 Kop., , translated into Russian;
 
 235 61.13(2).09 , Solar Radioastronomy, Bologna, Zanichelli, 1960, 438 pp, L 5000, Phys. Abstr. (A) 64 1489
 
-236 61.13(2).10 , Publikationen der 6 Tagung über leuchtende Nachtwolken, Riga, Verlag Akad. Wiss. Lett. SSR, 1961, 200 pp, 1R. 3 Kop., , in Russian
+236 61.13(2).10 , Publikationen der 6 Tagung über leuchtende Nachtwolken, Riga, Verlag Akad. Wiss. Lett. SSR, 1961, 200 pp, 1R. 3 Kop., , in Russian;
 
 237 61.13(2).15 J. Neyman ed., Proceedings of the Fourth Berkeley Symposium on Mathematical Statistics and Probability comma Vol III Contributions to Astronomy comma Meteorology and Physics, Berkeley-Los Angeles, University of California Press, 1961, 335 pp, $7.00, Sky Tel. 23 244 and ZfA 55 220
 
 238 61.13(2).19 , Proceedings of the International Meeting on Problems of Astrometry and Celestial Mechanics,  , Astr. Obs. National Univ. La Plata, 1961, 92 pp, $2.50 and $4.00
 
-239 61.13(2).22 , Die wissenschaftliche Gesamtkonferenze der Uljanow-Lenin-Staatsuniversität Kasan im Jahre 1960, Kasan, Verlag Univ. Kasan, 1961, 91 pp, 26 Kop., , in Russian
+239 61.13(2).22 , Die wissenschaftliche Gesamtkonferenze der Uljanow-Lenin-Staatsuniversität Kasan im Jahre 1960, Kasan, Verlag Univ. Kasan, 1961, 91 pp, 26 Kop., , in Russian;
 
-240 61.13(3).28 W. J. G. Beynon ed., Some Ionispheric Results obtained during the International Geophysics Year, Amsterdam, Elsevier Publishing Company, 1960, 11+401 pp, 72s, J. Atmosph. Terr. Phy. 22 222 and JBAA 72 294 and Nature 192 840 and Obs 81 209 and Planet. Space Sci. 5 329 and Proc. Phys. Soc. 78 632, also published London D. Van Nostrand Company Ltd.
+240 61.13(3).28 W. J. G. Beynon ed., Some Ionispheric Results obtained during the International Geophysics Year, Amsterdam, Elsevier Publishing Company, 1960, 11+401 pp, 72s, J. Atmosph. Terr. Phy. 22 222 and JBAA 72 294 and Nature 192 840 and Obs 81 209 and Planet. Space Sci. 5 329 and Proc. Phys. Soc. 78 632, also published London: D. Van Nostrand Company Ltd.;
 
 241 61.13(4).34 , Space Trajectories, London-New York, Academic Press Inc., 1960, 10+298 pp, £4 6s and $12.00, Math. Rev. 23 2B628 and Nature 191 1334 and Spaceflight 4 104
 
@@ -513,7 +513,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 244 61.13(5).41 , Studies in Theoretical Physics Part 3, New Delhi, Ministry of Scientific Research and Cultural Affairs, 1959, 196 pp, , Math. Rev. 23 1B247
 
-245 61.13(5).42 , Berichtsbuch des VI Internationalen Kongresses für Chronometrie I and II, , , 1961, 979+94+98+88 pp, DM 109.00, , edited by the Deutschen Gesellschaft für Chrononmetrie e. V. Stuttgart
+245 61.13(5).42 , Berichtsbuch des VI Internationalen Kongresses für Chronometrie I and II, , , 1961, 979+94+98+88 pp, DM 109.00, , other edited by the Deutschen Gesellschaft für Chrononmetrie e. V. Stuttgart;
 
 246 61.14.03 J. W. Linnik, Method of Least Squares and Principles of the Theory of Observations, London-New York, Pergamon Press, 1961, 360 pp, $12.50, Sky Tel. 23 166
 
@@ -531,15 +531,15 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 253 61.16(1).79 J. F. Denisse and J. L. Deleroix, Théorie des ondes dans las plasmas, Paris, Dunod, 1961, 12+167 pp, NF 16.00, Ann d’Astrophys 24 428 and Proc. Phys. Soc. 78 1571
 
-254 61.16(1).83 W. L. Ginsburg, Propagation of Electromagnetic Waves in a Plasma, Moskau, Staatsverlag Phys.-Math. Literatur, 1960, 552 pp, 20R., Math. Rev. 24 1B309, in Russian
+254 61.16(1).83 W. L. Ginsburg, Propagation of Electromagnetic Waves in a Plasma, Moskau, Staatsverlag Phys.-Math. Literatur, 1960, 552 pp, 20R., Math. Rev. 24 1B309, in Russian;
 
-255 61.16(1).84 W. L. Ginsburg, Propagation of Electromagnetic Waves in a Plasma, Amsterdam, North Holland Publ. Co., 1961, 24+822 pp, 200s, Planet. Space Sci. 9 292, translated from Russian by Royer and Roger Inc. edited by W. L. Sadowski and D. M. Gallik see also AJB 61.16.83
+255 61.16(1).84 W. L. Ginsburg, Propagation of Electromagnetic Waves in a Plasma, Amsterdam, North Holland Publ. Co., 1961, 24+822 pp, 200s, Planet. Space Sci. 9 292, other translated from Russian by Royer and Roger Inc.; edited by W. L. Sadowski and D. M. Gallik; other see also AJB 61.16.83;
 
 256 61.16(1).97 C. Longmire and J. L. Tuck and W. B. Thompson ed., Plasma Physics and Thermonuclear Research comma Progress in Nuclear Energy Series XI Vol 1, London, Pergamon Press, 1959, 8+612 pp, $15.00, Publ ASP 73 370
 
 257 61.17(0).07 E. Bergaust and S. Hull, Rocket to the Moon, , , , , , Spaceflight 3 144
 
-258 61.17(0).08 G. van den Bergh, Aarde en wereld in ruimte en tijd, Amsterdam, E. Querido Uitgeversmaatschappij, 1960, 376 pp, f 7.90, HeD 59 240, 8th edition
+258 61.17(0).08 G. van den Bergh, Aarde en wereld in ruimte en tijd, Amsterdam, E. Querido Uitgeversmaatschappij, 1960, 376 pp, f 7.90, HeD 59 240, 8th edition;
 
 259 61.17(0).09 A. I Berman, The Physical Principles of Astrononautics, New York, John Wiley and Sons Inc., 1961, 15+350 pp, $9.25 and 74s, Ann d’Astrophys 25 52 and J. Atmosph. Terr. Phys. 24 328 and J. Astronaut. Sci. 8 127 and JBAA 72 200 and Phys. Today 15 Nr. 8 56 and Proc IRE 49 1348 and Publ ASP 74 259 and Sky Tel. 22 43 and Spaceflight 4 101 and ZfA 54 223
 
@@ -553,23 +553,23 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 264 61.17(0).24 C.-J. Clemedson, Människan i rymden, , Bokförlagt Aldus/Bonniers, 1961, 256 pp, Kr. 8:50
 
-265 61.17(0).31 A. Ducrocq, Sieg über den Raum – Erdsatelliten und Monderberung, Reinbek bei Hamburg, Rowohlt Taschenbuch Verlag G.m.b.H., 1961, 295 pp, DM 4.40,  Mitt. Planetenbeobachter 14 33 and SuW 1962 41 and Weltraumfahrt 12 158, translated into German by W. Dieckvoss
+265 61.17(0).31 A. Ducrocq, Sieg über den Raum – Erdsatelliten und Monderberung, Reinbek bei Hamburg, Rowohlt Taschenbuch Verlag G.m.b.H., 1961, 295 pp, DM 4.40,  Mitt. Planetenbeobachter 14 33 and SuW 1962 41 and Weltraumfahrt 12 158, translated into German by W. Dieckvoss;
 
 266 61.17(0).33 E. M. Emme, Aeronautics and Astronautics: An American Chronology of Science and Technology in the Exploration of Space 1915—1960, Washington DC, U.S. Government Printing Office, , ,$1.75, AJ 67 328
 
-267 61.17(0).40 H. Gartmann, Raketernas århundrade, , Hörstra Förlag, 1961, 228 pp, Kr. 34:50 and Kr. 39:50, , translated from German see also AJB 58.134.35
+267 61.17(0).40 H. Gartmann, Raketernas århundrade, , Hörstra Förlag, 1961, 228 pp, Kr. 34:50 and Kr. 39:50, , translated from German; other see also AJB 58.134.35;
 
 268 61.17(0).46 H. K. Kaiser, Zu fremden Gestirnen, , , , , , Sternenbote 4 168, reference AJB 59.17.26
 
-269 61.17(0).49 W. I. Lewanowski, Rakietą do Księżyca, Warszawa, Państwowe Wydawnictwo Naukowe, 1961, 449 pp, 36 zł, , translated into Russian
+269 61.17(0).49 W. I. Lewanowski, Rakietą do Księżyca, Warszawa, Państwowe Wydawnictwo Naukowe, 1961, 449 pp, 36 zł, , translated into Russian;
 
-270 61.17(0).50 W. Ley, Raketen und Raumflüge, , Verteidigungsverlag, 1961, 424 pp, 1R. 10 Kop., Priroda 50 Nr. 6 123, translated from English to Russian
+270 61.17(0).50 W. Ley, Raketen und Raumflüge, , Verteidigungsverlag, 1961, 424 pp, 1R. 10 Kop., Priroda 50 Nr. 6 123, translated from English into Russian;
 
 271 61.17(0).74 W. Schroeder, First Stop: The Moon, London, Odhams Press Ltd., 1959, 191, 18s, Spaceflight 3 217
 
-272 61.17(0).75 W. Schroeder, Der Sprung ins All comma Möglichkeiten und Gefahren der Raumfahrt, Wiesbaden, F. A. Brockhaus, 1961, 226 pp, DM 11.80, , translated from the English
+272 61.17(0).75 W. Schroeder, Der Sprung ins All comma Möglichkeiten und Gefahren der Raumfahrt, Wiesbaden, F. A. Brockhaus, 1961, 226 pp, DM 11.80, , translated from English;
 
-273 61.17(0).79 A. Sternfeld, Von künstlichen Erdsatelliten zu interplanetaren Flügan, Kasan Tatar. Verlag, 1959, 128 pp, 1R. 90 Kop., , in Tartar
+273 61.17(0).79 A. Sternfeld, Von künstlichen Erdsatelliten zu interplanetaren Flügan, Kasan Tatar. Verlag, 1959, 128 pp, 1R. 90 Kop., , in Tartar;
 
 274 61.17(0).83 W. T. Thomson, Introduction to Space Dynamics, London-New York, John Wiley and Sons Inc., 1961, 14+317 pp, 87s and $11.50, J RAS Canada 56 139 and Nature 195 6 and Sky Tel. 23 106 and Sky Tel. 24 159
 
@@ -597,11 +597,11 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 286 61.17(0).98 K. Schütte and H. K. Kaiser ed., Handbuck der Astronautik Band 1 Heft 7—8, Konstanz, Akademische Verlagsanstalt Athenaion, 1961, , DM 10.40, Phys. Abstr. (A) 64 1740 and Weltraumfahrt 12 191
 
-287 61.18(0).09 M. Butorec, Künstliche Satelliten und kosmiche Raketen, Zagreb, Verlag <<Das Wissen>>, 1960, , , Vasiona 9 57, in Serb.-Croat.
+287 61.18(0).09 M. Butorec, Künstliche Satelliten und kosmiche Raketen, Zagreb, Verlag <<Das Wissen>>, 1960, , , Vasiona 9 57, in Serb.-Croat.;
 
 288 61.18(0).10 A. Danjon and P. Muller, Satellites artificiels et engins extra-terrestres, Paris, Flammarion, 1960, 64 pp, NF 8.00, La Nature 89 141
 
-289 61.18(0).17 J. Gagarin, Moje cesta do vesmíru, Prag, Verlag Svét sov., 1961, 134 pp, 9.40 Kčs, RH 43 62, translated from Russian
+289 61.18(0).17 J. Gagarin, Moje cesta do vesmíru, Prag, Verlag Svét sov., 1961, 134 pp, 9.40 Kčs, RH 43 62, translated from Russian;
 
 290 61.18(0).29 D. King-Hele, Satellites and Scientific Research, , , , , , Obs 81 212, reference AJB 60.18.91
 
@@ -609,7 +609,7 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 292 61.18(0).43 M. W. Ovenden, Artificial Satellites, , , , , , JBAA 72 91, reference AJB 60.18.147
 
-293 61.18(0).66 J. van Allen ed., Scientific Uses of Earth Satellites, Ann Arbor, University of Michigan Press, 1958, 316 pp, 75s, Spaceflight 4 36, 2nd revised edition also published London Chapman and Hall Ltd.
+293 61.18(0).66 J. van Allen ed., Scientific Uses of Earth Satellites, Ann Arbor, University of Michigan Press, 1958, 316 pp, 75s, Spaceflight 4 36, 2nd revised edition; also published London: Chapman & Hall Ltd.;
 
 294 61.18(0).67 H. S. Siefert and K. Brown ed., Ballistic Missile and Space Vehicle Systems, New York, John Wiley & Sons Inc., 1961, 526 pp, $12.00, ARS J 32 117
 
@@ -617,23 +617,23 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 296 61.18(0).69 , Die wissenschaftliche Ausnutzung künstlicher, , , , , , RH 42 223, reference AJB 60.18.214
 
-297 61.18(0).70 , Die Ergebnisse der während des Fluges des zweiten und dritten Raumschiffs durchgeführten wissenschaftlichen Untersuchungen, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 108 pp, 53 Kop., , in Russian
+297 61.18(0).70 , Die Ergebnisse der während des Fluges des zweiten und dritten Raumschiffs durchgeführten wissenschaftlichen Untersuchungen, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 108 pp, 53 Kop., , in Russian;
 
 298 61.18(1).136 I. D. Shongolowitsch and W. M. Amelin, A Collection of Tables and Nomograms for the Processing of Observations made on Artificial Earth Satellites, London-New York, Pergamon Press, 1961,4+188 pp, 100s, Ciel et Terre 77 445 and JBAA 72 90 and Math Rev. 23 1B444 and Nature 191 1135 and Obs 81 157 and Planet. Space Sci.  9 131
 
 299 61.19(0).06 H. Faust, Woher wir kommen – Wohin wir gehen, Düsseldorf-Wien, Econ-Verlag GmbH, 1961, 267 pp, DM 14.80, VdS Nachr. 10 142
 
-300 61.19(0).07 G. A. Gurew, Die Kopernikanische Lehre und die Religion, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 189 pp, 28 Kop., , in Russian
+300 61.19(0).07 G. A. Gurew, Die Kopernikanische Lehre und die Religion, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 189 pp, 28 Kop., , in Russian;
 
 301 61.19(0).08 H. Heckert, Lunationsrythmen des menschlichen Organismus, Leipzig, Akad. Verlagsges. Geest & Portig KG, 1961, 126 pp, DM 16.00, VdS Nachr. 11 54
 
-302 61.19(0).11 I. E. Klimenko and P. M. Persidskow and S. I. Prigarina, Antworten auf einige Fragen über das Unversum, Moskau, Verlag zur Verbreitung polit. wiss. Kenntnisse Russ. SSR, 1960, 40 pp, 60 Kop., , in Russian
+302 61.19(0).11 I. E. Klimenko and P. M. Persidskow and S. I. Prigarina, Antworten auf einige Fragen über das Unversum, Moskau, Verlag zur Verbreitung polit. wiss. Kenntnisse Russ. SSR, 1960, 40 pp, 60 Kop., , in Russian;
 
 303 61.19(0).14 T. Maloney, The Story of the Stars, , Sterling, 1961, 48 pp, $2.50, Sky Tel. 22 228
 
 304 61.19(0).21 E. Sjöqvist, Vår bild av världen, , Sveriges Radio, 1961, 102 pp, Kr. 6:50
 
-305 61.19(0).25 R. Thiel, En er was licht, Amsterdam, J. M. Meulenhoff, 1958, 392 pp, f 18.50, HeD 59 242, translated from German by H. Groot
+305 61.19(0).25 R. Thiel, En er was licht, Amsterdam, J. M. Meulenhoff, 1958, 392 pp, f 18.50, HeD 59 242, translated from German by H. Groot;
 
 306 61.19(0).29 H. Winkler, Astronomie für Briefmarkensammler, Leipzig, VEB Verlag Enzyklopädie, 1961, 127 pp, DM 2.80, Sky Tel. 24 103 and Sterne 38 165 and VdS Nachr. 11 44
 
@@ -641,15 +641,15 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 308 61.01(2).178 W. Lohmann and F. Henn ed., Astronomischer Jahresbericht Band 59, Berlin, Walter de Gruyer & Co., 1961, 15+517 pp, DM 72.00
 
-309 61.02.09 G. J. Carmody, The Astronomical Works of Thabit B. Qurra, Berkeley-Los Angeles, University of California Press, 1960, 262 pp, 48s, JBAA 72 156 and Nature 194 49, also published London Cambridge University Press
+309 61.02.09 G. J. Carmody, The Astronomical Works of Thabit B. Qurra, Berkeley-Los Angeles, University of California Press, 1960, 262 pp, 48s, JBAA 72 156 and Nature 194 49, also published London: Cambridge University Press;
 
-310 61.02.14 P. M. d’Elia, Galileo in China, Cambridge MA, Harvard University Press, 1960, 15+115 pp, 32s, J RAS Canada 55 234 and Obs 81 225 and Sky Tel. 21 168, translated by R. Suter and M. Sciascia also published New York Oxford University Press
+310 61.02.14 P. M. d’Elia, Galileo in China, Cambridge MA, Harvard University Press, 1960, 15+115 pp, 32s, J RAS Canada 55 234 and Obs 81 225 and Sky Tel. 21 168, translated by R. Suter and M. Sciascia; also published New York: Oxford University Press;
 
 311 61.02.22 C. H. Kahn, Anaximander and the Origin of Greek cosmology, New York, Columbia University Press, 1960, 269 pp,
 
 312 61.02.23 A. Koestler, Die Nachtwandler, , , , , , Orion Schaffhausen 6 203, reference AJB 59.02.25
 
-313 61.02.26 P. G. Kulikowskij, Studies in the History of Astronomy, Moskua, State Publishing House for Physico-Mathematical Literature, 1961, 420 pp, 1R. 29 Kop., Sky Tel. 23 223, in Russian
+313 61.02.26 P. G. Kulikowskij, Studies in the History of Astronomy, Moskua, State Publishing House for Physico-Mathematical Literature, 1961, 420 pp, 1R. 29 Kop., Sky Tel. 23 223, in Russian;
 
 314 61.02.29 P. Kunitzsch, Untersuchungen zur Sternnomenklatur der Araber, Wiesbaden, Otto Harrassowitz, 1961, 125 pp, DM 16.00
 
@@ -659,25 +659,25 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 317 61.02.36 P. Moore, The Picture History of Astronomy, , Grosset & Dunlap, 1961, 253 pp, $5.95, Sky Tel. 23 344
 
-318 61.02.43 A. Pannekoek, A History of Astronomy, London, George Allen and Unwin, 1961, 521 pp, 65s and $9.75, AJ UdSSR 39 372 and AJ 67 232 and J. Inst. Navigation 15 353 and Nature 195 316 and Sky Tel. 23 106, also published New York Interscience Publishers
+318 61.02.43 A. Pannekoek, A History of Astronomy, London, George Allen and Unwin, 1961, 521 pp, 65s and $9.75, AJ UdSSR 39 372 and AJ 67 232 and J. Inst. Navigation 15 353 and Nature 195 316 and Sky Tel. 23 106, also published New York: Interscience Publishers;
 
 319 61.02.47 T. Przypkowski, Po drodze w kosmos, Warsawa, Ludowa Spóldzielnia Wydawnicza, 1961, 237 pp, 28 zł
 
-320 61.02.50 C. A. Ronan, Changing View of the Universe, London, Eyre & Spottiswoode, 1961, 206 pp, 15s and $3.95, AJ 67 327 and JBAA 71 254 and Obs 82 125 and Publ ASP 73 367 and Science 134 275 and Sky Tel. 22 102 and Sky Tel. 22 225 and Spaceflight 4 138, also published New York The Macmillan Company
+320 61.02.50 C. A. Ronan, Changing View of the Universe, London, Eyre & Spottiswoode, 1961, 206 pp, 15s and $3.95, AJ 67 327 and JBAA 71 254 and Obs 82 125 and Publ ASP 73 367 and Science 134 275 and Sky Tel. 22 102 and Sky Tel. 22 225 and Spaceflight 4 138, also published New York: The Macmillan Company;
 
 321 61.02.54 J. D. W. Staal, Patterns in the Sky, London, Hodder & Stoughton Ltd., 1961, 200 pp, 15s, JBAA 71 205 and Sky Tel. 22 228
 
-322 61.02.55 P. A. Starzew, Abriß der Geschichte der Astronomie in China, Moskau, Phys.-Math. Staatsverlag, 1961, 151 pp, 23 Kop., AJ UdSSR 39 775, in Russian
+322 61.02.55 P. A. Starzew, Abriß der Geschichte der Astronomie in China, Moskau, Phys.-Math. Staatsverlag, 1961, 151 pp, 23 Kop., AJ UdSSR 39 775, in Russian;
 
-323 61.02.60 S. Toulmin and J. Goodfield, The Fabric of the Heavens, London, Hutchinson & Co. Ltd., 1961, 285 pp, 25s and $5.00, AJ 67 232 and Astronaut. Sci. Rev. 4 Nr. 1 28 and Nature 191 840 and Sky Tel. 23 166 and Sky Tel. 24 102, also published New York Harper & Brothers
+323 61.02.60 S. Toulmin and J. Goodfield, The Fabric of the Heavens, London, Hutchinson & Co. Ltd., 1961, 285 pp, 25s and $5.00, AJ 67 232 and Astronaut. Sci. Rev. 4 Nr. 1 28 and Nature 191 840 and Sky Tel. 23 166 and Sky Tel. 24 102, also published New York: Harper & Brothers;
 
-324 61.02.68 B. A. Woronzow-Weljaminow, Abriß der Geschichte der Astronomie in der UdSSR, Moskau, Phys.-Math. Staatsverlag, 1960, 228 pp, 7R. 45 Kop., RJ UdSSR 1962 Nr. 5A18, in Russian
+324 61.02.68 B. A. Woronzow-Weljaminow, Abriß der Geschichte der Astronomie in der UdSSR, Moskau, Phys.-Math. Staatsverlag, 1960, 228 pp, 7R. 45 Kop., RJ UdSSR 1962 Nr. 5A18, in Russian;
 
 325 61.02.69 , The Controversy on the Comets of 1618, , , , , , JBAA 72 51 and Obs 81 211, reference AJB 60.02.97
 
 326 61.02.70 , The Planetary Equatorium of Jamshid Ghiyath al-Din al-Kashi, , , , , , Obs 82 211, reference AJB 60.02.99
 
-327 61.03(0).03 N. Antimonow, Fedor Semjonow – ein Kursker Astronom (1794—1860), Kursk, Buchverlag, 1961, 52 pp, 8 Kop., , in Russian
+327 61.03(0).03 N. Antimonow, Fedor Semjonow – ein Kursker Astronom (1794—1860), Kursk, Buchverlag, 1961, 52 pp, 8 Kop., , in Russian;
 
 328 61.03(0).08 G. Buttmann, Wilhelm Herschel – Leben und Werk, Stuttgart, Wisenshaftliche Verlagsgesellschaft mbH., 1961, 253 pp, DM 19.20, Coelum 29 52 and Planetbeobachter 14 33 and Sterne 37 214 and SuW 1962 90 and VdS Nachr. 10 48 and Weltraumfahrt 12 127
 
@@ -685,26 +685,27 @@ For volume AJB 61 Index to the Literature of 1961, started 19 Nov 2011, finished
 
 330 61.03(0).32 M. Johnsson, Knut Lundmark och världsrymdens erövring – and man’s march into space, , Värld och Vetande Forlag, 1961, 134 pp, Kr. 12:-
 
-331 61.03(0).34 H. Kesten, Kopernik i jego ezasy, Warszawa, Państwowy Instytut Wydowniczy, 1961, 551 pp, 50 zł, , translated into Polish from the book by H. Kesten <<Copernicus und seine Welt>>
+331 61.03(0).34 H. Kesten, Kopernik i jego ezasy, Warszawa, Państwowy Instytut Wydowniczy, 1961, 551 pp, 50 zł, , translated into Polish; other from the book by H. Kesten <<Copernicus und seine Welt>>;
 
-332 61.03(0).38 P. Kulikowskij, M. W. Lonomossow – Astronom und Astrophysiker, Moskau, Phys.-Math. Staatsverlag, 1961, 103 pp, 26 Kop., , 2nd edition in Russian
+332 61.03(0).38 P. Kulikowskij, M. W. Lonomossow – Astronom und Astrophysiker, Moskau, Phys.-Math. Staatsverlag, 1961, 103 pp, 26 Kop., , 2nd edition; in Russian;
 
-333 61.03(0).41 O. Lodge, Pioneers of Science, New York, Dover Publications Inc., 1960, 13+404 pp, $1.50, Math. Rev. 22 1129 and Publ ASP 73 471, reprint from the 1926 edition
+333 61.03(0).41 O. Lodge, Pioneers of Science, New York, Dover Publications Inc., 1960, 13+404 pp, $1.50, Math. Rev. 22 1129 and Publ ASP 73 471, reprint of 1926;
 
-334 61.03(0).81 J. C. Poggendorff, Biographisch-Literarisches Handwörterbuch der Exakten Naturwissenschaften Band VIIa Teil 4 S—Z comma vierte—siebente Lieferung, Berlin, Akademie-Verlag, 1961, 448 pp, DM 16.00, , edited by R. Zaunick and H. Salié
+334 61.03(0).81 J. C. Poggendorff, Biographisch-Literarisches Handwörterbuch der Exakten Naturwissenschaften Band VIIa Teil 4 S—Z comma vierte—siebente Lieferung, Berlin, Akademie-Verlag, 1961, 448 pp, DM 16.00, , edited by R. Zaunick and H. Salié;
 
 335 61.03(0).82 A. P. Juschkewitsch and E. Winter and P. Hoffmann and J. C. Kopeliwitsch ed., Die Berlinger und die Petersburger Akademie der Wissenschaften im Briefwechsel Leonhard Eulers Teil 2 Der Briefwechsel L. Eulers mit Nartov comma Razumovskij comma Schumacher comma Teplov und der Petersburger Akademie 1730—1763, Berlin, Akademie-Verlag, 1961, 11+463 pp, DM 44.00, Math. Ref. 23 3A1496
 
-336 61.03(0).83 L. Wörner and P. Nell and J. Deutsch and W. Tripmacker ed., Bruno H. Bürgel zum Gedenken, Leipzig, Verlag Joh. Ambrosius Barth, 1961, 88 pp, DM 3.60, RH 42 159 and Sterne 37 216 and VdS Nachr. 10 72, 3rd edition
+336 61.03(0).83 L. Wörner and P. Nell and J. Deutsch and W. Tripmacker ed., Bruno H. Bürgel zum Gedenken, Leipzig, Verlag Joh. Ambrosius Barth, 1961, 88 pp, DM 3.60, RH 42 159 and Sterne 37 216 and VdS Nachr. 10 72, 3rd edition;
 
-337 61.03(0).84 I. W. Kusnezow ed., Männer der russischen Wissenshaft, Moskau, Phys.-Math. Staatsverlag, 1961, 600 pp, 2R., , in Russian
+337 61.03(0).84 I. W. Kusnezow ed., Männer der russischen Wissenshaft, Moskau, Phys.-Math. Staatsverlag, 1961, 600 pp, 2R., , in Russian;
 
-338 61.03(0).85 O. W. Issakowa ed., Wassilij Grigorjewitsch Fessenkow Bibliographie, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 116 pp, 23 Kop., , in Russian
+338 61.03(0).85 O. W. Issakowa ed., Wassilij Grigorjewitsch Fessenkow Bibliographie, Moskau, Verlag Akad. Wiss. UdSSR, 1961, 116 pp, 23 Kop., , in Russian;
 
-339 61.05.03 P. A. Gubin, Das Leningrader Planetarium Kurzer Führer, Leningrad, Staatsverlag, 1961, 82 pp, 7 Kop., , in Russian
+339 61.05.03 P. A. Gubin, Das Leningrader Planetarium Kurzer Führer, Leningrad, Staatsverlag, 1961, 82 pp, 7 Kop., , in Russian;
 
 340 61.08(2).25 A. Beer ed., Vistas in Astronomy Vol. 3, , , , , , AJ UdSSR 38 777 and J. British Interplanetary Soc. 18 168 and Nature 192 838, reference AJB 60.08.37
 
 341 61.08(2).26 A. Beer ed., Vista in Astronomy Vol. 4, London-New York-Oxford-Paris, Pergamon Press, 1961, 6+194 pp, $10.00 and 75s, AJ 67 327 and Ann d’Astrophys 25 219 and Coelum 30 62 and J RAS Canada 56 182 and Mem SA It (NS) 33 191 and Phys. Today 15 Nr. 8 49 and Planet. Space Sci. 9 291 and Sky Tel. 23 284 and Sky Tel. 24 159 and ZfA 55 151
 
-342 61.08(3).38 , Die Astronomie in der UdSSR in den 40 Jahren von 1917 bis 1957, Moskau, Staatsverlag Phys.-Math. Literatur, 1960, , , AJ UdSSR 39 170, in Russian 
+342 61.08(3).38 , Die Astronomie in der UdSSR in den 40 Jahren von 1917 bis 1957, Moskau, Staatsverlag Phys.-Math. Literatur, 1960, , , AJ UdSSR 39 170, in Russian;
+ 

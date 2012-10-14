@@ -11,51 +11,51 @@ Save as Unicode UTF-8 text encoding. Skip subsection 34 and 35 in Part 4
 For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finished 25 Aug 2011, proofread 13 Nov 2011
 
 
-1 63.141.02 G. Alter and J. Ruprecht, The System of Open Star Clusters and Our Galaxy; Atlas of Open Star Clusters, Praha, Publishing House of the Czechoslovak Academy of Science, 1963, 53 pp + 36 Charts, $16.00, Kosmické roshledy 3 13 and RH 44 180 and Sky Tel. 26 290 and Sterne 40 46 and Vesmir 42 190, also published New York-London Academic Press
+1 63.141.02 G. Alter and J. Ruprecht, The System of Open Star Clusters and Our Galaxy; Atlas of Open Star Clusters, Praha, Publishing House of the Czechoslovak Academy of Science, 1963, 53 pp + 36 Charts, $16.00, Kosmické roshledy 3 13 and RH 44 180 and Sky Tel. 26 290 and Sterne 40 46 and Vesmir 42 190, also published New York-London: Academic Press;
 
 2 63.145(1).59 F. Zwicky and E. Herzog, Catalogue of Galaxies and Clusters of Galaxies; Vol. 2, Pasadena CA, California Institute of Technology, 1963, 8+371 pp, , Sterne 40 125
 
 3 63.145(2).121 A. R. Hogg and V. Hunt, Atlas of the Small Magellanic Clound, Canberra A. C. T., Mount Stromlo Observatory, 1963, 15 charts, £A 3.00, Sky Tel. 26 353
 
-4 63.135(1).09 T. E. Cranshaw, Cosmic Rays, Oxford, Clarendon Press, 1963, 125 pp, 18s and $2.90, Geophys. J. RAS 8 276 and Phil. Mag. (8) 8 1604 and Planet. Space Sci. 12 93 and Proc. Phys. Soc. 83 491 and ZfA 58 215, also published New York Oxford University Press
+4 63.135(1).09 T. E. Cranshaw, Cosmic Rays, Oxford, Clarendon Press, 1963, 125 pp, 18s and $2.90, Geophys. J. RAS 8 276 and Phil. Mag. (8) 8 1604 and Planet. Space Sci. 12 93 and Proc. Phys. Soc. 83 491 and ZfA 58 215, also published New York: Oxford University Press;
 
-5 63.135(1).56 A. W. Wolfendale, Cosmic Rays, London, George Newnes Ltd., 1963, 9+222 pp, 50s and $10.00, Phys. Today 16 Nr. 9 72 and Proc. Phys. Soc. 82 794 and Publ. ASP 75 297 and Sky Tel. 26 45 and Spaceflight 5 179 and Strolling Astr. 17 161 and ZfA 59 285, also published New York Philosophical Library Inc.
+5 63.135(1).56 A. W. Wolfendale, Cosmic Rays, London, George Newnes Ltd., 1963, 9+222 pp, 50s and $10.00, Phys. Today 16 Nr. 9 72 and Proc. Phys. Soc. 82 794 and Publ. ASP 75 297 and Sky Tel. 26 45 and Spaceflight 5 179 and Strolling Astr. 17 161 and ZfA 59 285, also published New York: Philosophical Library Inc.;
 
 6 63.135(1).57 J. G. Wilson and S. A. Wouthuysen ed., Progress in Elementary Particle and Cosmic Ray Physics Vol. VII, Amsterdam, North-Holland Publishing Company, 1963, 11+358 pp, hfl. 40.00, Proc. Phys. Soc. 84 450
 
-7 63.121.05 N. E. Kurotschkin, Anleitung zur Beobachtung Veränderlicher Sterne, Moskau, Akad. Wiss. UdSSR, 1963, 38 pp, 15 Kop.,  , in Russian
+7 63.121.05 N. E. Kurotschkin, Anleitung zur Beobachtung Veränderlicher Sterne, Moskau, Akad. Wiss. UdSSR, 1963, 38 pp, 15 Kop.,  , in Russian;
 
 8 63.121.16 E. Rybka ed., Rocznik Astronomiczny Obserwatorium Krakowskiego 1964 International Supplement Nr. 35, Kraków, Państwowe Naukowe, 1963, 120 pp, zł 48.00
  
 9 63.104(0).21 W. G. Gorbazkij and I. N. Minin, Instationäre Sterne, Moskau, Phys.-Math. Staatsverlag, 1963, 355 pp, 1 R. 12 Kop., AJ UdSSR 41 109
 
-10 63.91.24 N. B. Richter, The Nature of Comets, London, Methuen & Co. Ltd., 1963, 7+221 pp, 63s, Ann d’Astrophys 26 280 and Australian J. Sci. 26 27 and BSAF 77 411 and Nature 200 965 and Planet. Space Sci. 12 93 and Phys. Abstr. 66 1325 and RH 44 181 and Sky Tel. 27 240 and Spaceflight 5 174 and Sterne 40 46 and ZfA 58 295, translated from German by A. Beer
+10 63.91.24 N. B. Richter, The Nature of Comets, London, Methuen & Co. Ltd., 1963, 7+221 pp, 63s, Ann d’Astrophys 26 280 and Australian J. Sci. 26 27 and BSAF 77 411 and Nature 200 965 and Planet. Space Sci. 12 93 and Phys. Abstr. 66 1325 and RH 44 181 and Sky Tel. 27 240 and Spaceflight 5 174 and Sterne 40 46 and ZfA 58 295, translated from German by A. Beer;
 
 11 63.94(1).125 G. F. Plechanow ed., Das Problem des Tungusischen Meteoriten, Tomsk, Verlag Staatsuniv. Tomsk, 1963, 214 pp, , Priroda 53 Nr. 7 121
 
 12 63.94(4).176 J. A. O’Keefe ed., Tektites, Chicago, University of Chicago Press, 1963, 12+228 pp, $10.95, Phys. Today 17 Nr. 7 48 and Nature 202 1147 and Publ. ASP 76 65 and Science 142 1286 and Sky Tel. 26 352 and Sky Tel. 27 235
 
-13 63.95.07 A. Dauvillier, Cosmic Dust, London, George Newnes Ltd., 1963, 167 pp, 45s, , translation from the French version 1961
+13 63.95.07 A. Dauvillier, Cosmic Dust, London, George Newnes Ltd., 1963, 167 pp, 45s, , translated from French; reprint of 1961;
 
-14 63.81.36 E. N. Parker, Interplanetary Dynamical Processes, New York, Interscience Publishers Inc., 1963, 8+272 pp, $12.50 and 95s, AIAA J 1 2421 and AJ 69 220 and Ann d’Astrophys 27 61 and Phys. Today 17 Nr. 3 72 and Planet. Space Sci. 12 187 and Proc. Phys. Soc. 83 673 and Publ ASP 76 180 and Sky Tel. 26 228, also published London John Wiley & Sons
+14 63.81.36 E. N. Parker, Interplanetary Dynamical Processes, New York, Interscience Publishers Inc., 1963, 8+272 pp, $12.50 and 95s, AIAA J 1 2421 and AJ 69 220 and Ann d’Astrophys 27 61 and Phys. Today 17 Nr. 3 72 and Planet. Space Sci. 12 187 and Proc. Phys. Soc. 83 673 and Publ ASP 76 180 and Sky Tel. 26 228, also published London: John Wiley & Sons;
 
 15 63.81.40 J. Sadil and L. Pesek, Die Planten des Sonnensystems, Hanua/Main, Verlag Werner Dausien, 1963, 168 pp, DM 24.80, SuW 3 161 and VdS 13 74
 
 16 63.81.41 J. Sadil, Planety, Prag., Verlag Orbis, 1963, 392+20 pp, Kčs 16.50, Kosmisché rozhledy 1963 Nr. 3 14 and RH 44 198
 
-17 63.81.54 , Planten und Satelliten, Moskau, Verlag für ausländische Literatur, 1963, 520 pp, 3R. 10 Kop., AJ UdSSR 41 595, translated from English under the editorship of W. I. Moros
+17 63.81.54 , Planten und Satelliten, Moskau, Verlag für ausländische Literatur, 1963, 520 pp, 3R. 10 Kop., AJ UdSSR 41 595, translated from English; edited by W. I. Moros
 
-18 63.82(1).11 W. Sandner, The Planet Mercury, London, Faber & Faber, 1963,  , 21s, HeD 61 311 and Irish AJ 6 56 and NAT 1963 29 and Obs 83 265 and Sky Tel. 27 240 and Sky Tel. 28 89 and Southern Stars 20 79 and Strolling Astronomer 17 209 and SuW 2 284, translated by A. Helm also published New York Macmillian Co.
+18 63.82(1).11 W. Sandner, The Planet Mercury, London, Faber & Faber, 1963,  , 21s, HeD 61 311 and Irish AJ 6 56 and NAT 1963 29 and Obs 83 265 and Sky Tel. 27 240 and Sky Tel. 28 89 and Southern Stars 20 79 and Strolling Astronomer 17 209 and SuW 2 284, translated by A. Helm; also published New York: Macmillian Co.;
   
 19 63.82(2).75 I. Newlan, First to Venus, New York, McGraw-Hill Book Company, 1963, 64 pp, $3.25, Sky Tel. 26 353 and Sky Tel. 27 363
 
 20 63.83(0).02 R. B. Baldwin, The Measure of the Moon, Chicago, University of Chicago Press, 1963, 19+488 pp, $13.50, Ann d’Astrophys 26 391 and J. Astro. Soc. Victoria 17 13 and JBAA 74 217 and Science 140 374 and Sky Tel. 25 289 and Sky Tel. 26 286 and Spaceflight 6 105
 
-21 63.83(0).31 Z. Kopal, The Moon, London, Chapman and Hall, 1963, 150 pp, 39s, Ann d’Astrophys 27 60 and JBAA 74 215 and Nature 201 231 and Spaceflight 6 101, 2nd edition
+21 63.83(0).31 Z. Kopal, The Moon, London, Chapman and Hall, 1963, 150 pp, 39s, Ann d’Astrophys 27 60 and JBAA 74 215 and Nature 201 231 and Spaceflight 6 101, 2nd edition;
 
-22 63.83(0).32 Z. Kopal, Der Mond, Moskau, Verlag für ausländische Literatur, 1963, 137 pp, 29 Kop., AJ UdSSR 41 595, translated from English by T. W. Wodopjanowa, see 63.83.31
+22 63.83(0).32 Z. Kopal, Der Mond, Moskau, Verlag für ausländische Literatur, 1963, 137 pp, 29 Kop., AJ UdSSR 41 595, translated from English by T. W. Wodopjanowa, other see 63.83.31;
  
-23 63.83(0).52 P. Rousseau, La Lune comma terre d’avenir, Paris, Librairie Hachette, 1963, 240 pp, 15 NF, Ciel et Terre 79 470, 5th edition
+23 63.83(0).52 P. Rousseau, La Lune comma terre d’avenir, Paris, Librairie Hachette, 1963, 240 pp, 15 NF, Ciel et Terre 79 470, 5th edition;
 
 24 63.83(0).57 G. E. B. Stephenson, Table of B.C. Lunations, Harrogate Yorkshire England, , 1963, 14 pp, , Strolling Astr. 17 37
 
@@ -67,15 +67,15 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 28 63.83(4).84 D. Alter, Pictorial Guide to the Moon, New York, Crowell Company, 1963, 183 pp, $6.95, Publ ASP 76 127 and Sky Tel. 26 353 and Strolling Astr. 17 243
 
-29 63.83(4).134 P. Moore, A Survey of the Moon, London, Eyre & Spottiswoode, 1963, 16+333 pp, 25s and $6.95, J. Astr. Soc. Victoria 16 74 and Obs 83 266 and Science 141 1268 and Sky Tel 26 227 and Spaceflight 5 176 and Strolling Astr. 17 243, also published New York Norton & Company Inc.
+29 63.83(4).134 P. Moore, A Survey of the Moon, London, Eyre & Spottiswoode, 1963, 16+333 pp, 25s and $6.95, J. Astr. Soc. Victoria 16 74 and Obs 83 266 and Science 141 1268 and Sky Tel 26 227 and Spaceflight 5 176 and Strolling Astr. 17 243, also published New York: Norton & Company Inc.;
 
 30 63.83(4).164 E. A. Whitaker and G. P. Kuiper and W. K Hartmann and L. H. Spradley, Rectified Lunar Atlas Supplement Number Two to the Photographic Lunar Atlas, Tucson,  The University of Arizona Press, 1963, 2pp and 145 charts, , SuW 3 209
 
-31 63.83(4).165 Wilhelm Gotthelf Lohrmann, Mondkarte in 25 Sektionen, Leipzig, J. A. Barth, 1963, 30pp and 25 charts, DM 30.60, Blick in das Weltall 1964 22 and Orion Shaffhausen 9 127 and Sky Tel. 27 305 and Sterne 40 45 and Sternenbote 6 147 and SuW 3 66 and VdS Nachr. 13 12, edited by P. Ahnert
+31 63.83(4).165 Wilhelm Gotthelf Lohrmann, Mondkarte in 25 Sektionen, Leipzig, J. A. Barth, 1963, 30pp and 25 charts, DM 30.60, Blick in das Weltall 1964 22 and Orion Shaffhausen 9 127 and Sky Tel. 27 305 and Sterne 40 45 and Sternenbote 6 147 and SuW 3 66 and VdS Nachr. 13 12, edited by P. Ahnert;
 
 32 63.83(4).166 , Der Mond comma Kosmos-Karte in Hochrelief 54x54 cm, Stuttgart, Franckh’sche Verlagshandlung, 1962,  , DM 19.80, SuW 2 18
 
-33 63.84.24 W. W. Kellogg and C. Sagan, Die Atmosphären von Mars und Venus, Moskau, Verlag für ausländische Literatur, 1962, 267 pp, 92 Kop., , translated into Russian by W. I. Moros of AJB 61.82.37
+33 63.84.24 W. W. Kellogg and C. Sagan, Die Atmosphären von Mars und Venus, Moskau, Verlag für ausländische Literatur, 1962, 267 pp, 92 Kop., , translated into Russian by W. I. Moros; reprint of AJB 61.82.37;
 
 34 63.84.30 E. López and F. J. Escalante, El Planeta Marte 1907-1956, México, D. F. Imprenta Aldina Rosell y Sordo Noriega, 1963, 20+655 pp, , VdS Nachr. 13 118
 
@@ -87,9 +87,9 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 37 63.71.01 G. Ames and R. Wyler, Planet Earth, London, Golden Cockerel Press, 1963, 105 pp, $3.95, Sky Tel. 27 113
 
-38 63.71.06 W. W. Beloussow, Aufbau und Entwicklung der Erde, Moskau, Verlag Acad. Wiss. UdSSR, 1963, 152 pp, 23 Kop., Priroda 52 Nr. 12 79, in Russian
+38 63.71.06 W. W. Beloussow, Aufbau und Entwicklung der Erde, Moskau, Verlag Acad. Wiss. UdSSR, 1963, 152 pp, 23 Kop., Priroda 52 Nr. 12 79, in Russian;
 
-39 63.71.14 J. Coulomb and G. Jobert, The Physical Constitution of the Earth, Edinburgh-London, Oliver & Boyd Ltd., 1963, 11+328 pp, 50s, Geophys. J. RAS 8 470, translated by A. E. M. Nairn
+39 63.71.14 J. Coulomb and G. Jobert, The Physical Constitution of the Earth, Edinburgh-London, Oliver & Boyd Ltd., 1963, 11+328 pp, 50s, Geophys. J. RAS 8 470, translated by A. E. M. Nairn;
 
 40 63.71.24 S. C. Hirsch, The Globe for the Space Age, New York, Viking Press Inc., 1963, 88 pp, $3.75, Sky Tel. 27 174
 
@@ -97,41 +97,41 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 42 63.71.66 G. Schenk, Die Erde comma unser Planet im Weltall, Stuttgart, Belser Verlag, 1962, 256 pp, DM 9.20, Z. Geophys. 29 145
 
-43 63.71.80 J. Geiss and E. D. Goldberg ed., Earth Science and Meteoritics, Amsterdam, North-Holland Publishing Company, 1963, 16+312 pp, 65s and $10.50, Planet. Space Sci. 11 1503 and Science 142 658, also published New York Interscience Publishers Inc.
+43 63.71.80 J. Geiss and E. D. Goldberg ed., Earth Science and Meteoritics, Amsterdam, North-Holland Publishing Company, 1963, 16+312 pp, 65s and $10.50, Planet. Space Sci. 11 1503 and Science 142 658, also published New York: Interscience Publishers Inc.;
 
-44 63.71.81 C. DeWitt and J. Hieblot and A. Lebeau ed., Geophysics; The Earth’s Environment, London-New York, Gordon & Breach, 1963, 14+624 pp,  $10.50 and $8.50, Geophys. J. RAS 8 146 and Nature 200 1, and Planet. Space Sci. 11 1130, Lectures delivered at Les Houches during the 1962 summer school of theoretical physics.
+44 63.71.81 C. DeWitt and J. Hieblot and A. Lebeau ed., Geophysics; The Earth’s Environment, London-New York, Gordon & Breach, 1963, 14+624 pp,  $10.50 and $8.50, Geophys. J. RAS 8 146 and Nature 200 1 and Planet. Space Sci. 11 1130, other Lectures delivered at Les Houches during the 1962 summer school of theoretical physics.;
 
-45 63.72.07 G. M. B. Dobson, Exploring the Atmosphere, London, Oxford University Press, 1963, 11+188 pp, 21s, J. Astr. Soc. Victoria 16 52 and Nature 201 117 and Planet. Space Sci. 11 730, also published Oxford Clarendon Press
+45 63.72.07 G. M. B. Dobson, Exploring the Atmosphere, London, Oxford University Press, 1963, 11+188 pp, 21s, J. Astr. Soc. Victoria 16 52 and Nature 201 117 and Planet. Space Sci. 11 730, also published Oxford: Clarendon Press;
 
-46 63.72.42 B. Landmark ed., Advances in Upper Atmosphere Research, London, Pergamon Press, 1963, 348 pp, $12.25, Nature 202 70, also published New York Macmillan Company
+46 63.72.42 B. Landmark ed., Advances in Upper Atmosphere Research, London, Pergamon Press, 1963, 348 pp, $12.25, Nature 202 70, also published New York: Macmillan Company;
 
-47 63.72.43 J. A. Ratcliffe ed., Physik der Hochatmosphäre, Moskau, Phys.—Math. Staatsverlag, 1963, 504 pp, 2R. 33 Kop,  , translated from English to Russian of AJB 60.72.48
+47 63.72.43 J. A. Ratcliffe ed., Physik der Hochatmosphäre, Moskau, Phys.—Math. Staatsverlag, 1963, 504 pp, 2R. 33 Kop,  , translated from English into Russian; reprint of AJB 60.72.48
 
 48 63.76(1).07 J. Bartels, Collection of Geomagnetic Planetary Indices Kp and Derived Daily Indices Ap and Cp for the Years 1932 to 1961, Amsterdam, North Holland Publishing Company, 1962, 7+188 pp,  , J ATP 25 743
 
-49 63.76(2).129 W. Petrie, Keoeeit comma the Story of the Aurora Borealis, London, Pergamon Press, 1963, 12+134 pp, 35s and $5.00, J. Astr. Soc.Victoria 17 32 and Science 144 671, also published New York Macmillan
+49 63.76(2).129 W. Petrie, Keoeeit comma the Story of the Aurora Borealis, London, Pergamon Press, 1963, 12+134 pp, 35s and $5.00, J. Astr. Soc.Victoria 17 32 and Science 144 671, also published New York: Macmillan;
 
 50 63.76(2).147 , International Auroral Atlas, Chicago, Aldine Publishing Company, 1963, 18 pp  and 36 tables, $8.75, Science 144 706
 
-51 63.76(2).148 , Polarlichter und Leuchten des Nachhimmels; Sammlung von Aufsätzen Nr. 10, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 156 pp, , , in Russian
+51 63.76(2).148 , Polarlichter und Leuchten des Nachhimmels; Sammlung von Aufsätzen Nr. 10, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 156 pp, , , in Russian;
 
-52 63.61(2).13 G. Abetti, The Sun, London, Faber & Faber, 1963, 358 pp, 63s, Irish AJ 6 117 and JBAA 74 77 and Nature 199 840 and Southern Stars 20 156 and Spaceflight 5 220 and Sterne 40 46, 2nd edition translated by J. B. Sidgwick
+52 63.61(2).13 G. Abetti, The Sun, London, Faber & Faber, 1963, 358 pp, 63s, Irish AJ 6 117 and JBAA 74 77 and Nature 199 840 and Southern Stars 20 156 and Spaceflight 5 220 and Sterne 40 46, 2nd edition; translated by J. B. Sidgwick;
 
-53 63.61(2).14 G. Abetti, Solar Research, London, Eyre & Spottiswoode Ltd, 1962, 173 pp, 18s and $3.95, AJ 68 220 and Endeavour 22 151 and JBAA 74 78 and Sky Tel. 25 231 and Sky Tel. 27 41 and Strolling Astr. 17 76, also published New York Macmillan Co.
+53 63.61(2).14 G. Abetti, Solar Research, London, Eyre & Spottiswoode Ltd, 1962, 173 pp, 18s and $3.95, AJ 68 220 and Endeavour 22 151 and JBAA 74 78 and Sky Tel. 25 231 and Sky Tel. 27 41 and Strolling Astr. 17 76, also published New York: Macmillan Co.;
 
 54 63.61(2).21 W. M. Baxter, The Sun and the Amateur Astronomer, London, Lutterworth Press, 1963, 165 pp, 25s, J. Astr. Soc. Victoria 16 74 and JBAA 74 75 and Nature 199 840 and Sky Tel.27 176 and Spaceflight 6 143
 
 55 63.61(2).33 E. Lalou, The Sun, London, Prentice-Hall International Inc., 1963, 110 pp, 35s, Spaceflight 5 219
 
-56 63.66.90 H. J. Smith and E. v. P. Smith, Solar Flares, New York, Macmillan Company, 1963, 12+322 pp, $12.95, AJ 68 804 and Nature 202 429 and Phys. Today 17 Nr. 4 68 and Science 142 217, also published London Collier-Macmillan
+56 63.66.90 H. J. Smith and E. v. P. Smith, Solar Flares, New York, Macmillan Company, 1963, 12+322 pp, $12.95, AJ 68 804 and Nature 202 429 and Phys. Today 17 Nr. 4 68 and Science 142 217, also published London: Collier-Macmillan;
 
 57 63.68(3).89 W. P. Schabanskij ed., Solare Korpuskularströme und ihre Wechselwirkung mit dem Magnetfeld der Erde, Moskau, Staatverlag für ausländische Literatur, 1962, 438 pp, 1R. 91 Kop.
 
-58 63.51(0).01 H. Alfvén and C.-G. Fälthammar, Cosmical Electrodynamics comma Fundamental Principles, London, Oxford University Press, 1963, 11+228 pp, $9.00 and 60s, J ATP 26 535 and Phys. Today 17 Nr. 6 55 and Proc. IEEE 52 750 and Nature 201 1061 and Planet. Space Sci. 12 323 and Proc. Phys. Soc. 83 675 and ZfA 58 292, 2nd edition also published Oxford Clarendon Press
+58 63.51(0).01 H. Alfvén and C.-G. Fälthammar, Cosmical Electrodynamics comma Fundamental Principles, London, Oxford University Press, 1963, 11+228 pp, $9.00 and 60s, J ATP 26 535 and Phys. Today 17 Nr. 6 55 and Proc. IEEE 52 750 and Nature 201 1061 and Planet. Space Sci. 12 323 and Proc. Phys. Soc. 83 675 and ZfA 58 292, 2nd edition; also published Oxford: Clarendon Press;
 
-59 63.51(0).02 L. H. Aller, Astrophysics comma The Atmospheres of the Sun and Stars, New York, Ronald Press Company, 1963, 662 pp, $15.00, Phys. Today 17 Nr. 5 85 and Sky Tel. 26 352 and Sky Tel. 27 236, 2nd edition
+59 63.51(0).02 L. H. Aller, Astrophysics comma The Atmospheres of the Sun and Stars, New York, Ronald Press Company, 1963, 662 pp, $15.00, Phys. Today 17 Nr. 5 85 and Sky Tel. 26 352 and Sky Tel. 27 236, 2nd edition;
 
-60 63.51(0).03 L. H. Aller, Die Häufigkeit der chemischen Elemente, Moskau, Verlag für ausländische Literatur, 1963, 357 pp, 1R. 47 Kop., AJ UdSSR 41 595, translation from English to Russian of AJB 61.51.01
+60 63.51(0).03 L. H. Aller, Die Häufigkeit der chemischen Elemente, Moskau, Verlag für ausländische Literatur, 1963, 357 pp, 1R. 47 Kop., AJ UdSSR 41 595, translated from English into Russian; reprint of AJB 61.51.01;
 
 61 63.51(0).21 E. N. Parker and J. S. Goldstein and A. A. Maradudin and V. Ambegoakar, Astrophysics and the Many-Body Problem, New York-Amsterdam, W. A. Benjamin Inc., 1963, 438 pp, $9.90, Proc. Phys. Soc. 83 1070
 
@@ -141,19 +141,19 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 64 63.51(2).66 L. G. Napolitano and G. Contursi, Magneto—Fluid Dynamics, New York-Oxford, Pergamon Press Inc., 1962,  , 70s,  Ciel et Terre 79 347
 
-65 63.51(3).75 H. C. van de Hulst, Die Streuung des Lichts durch kleine Partikel, Moskau, Staatsverlag für ausländische Literatur, 1961, 536 pp, 2R. 81 Kop., , translation into Russian of AJB 57.50.09 by T. W. Worobjewa edited by W. W. Sobolew
+65 63.51(3).75 H. C. van de Hulst, Die Streuung des Lichts durch kleine Partikel, Moskau, Staatsverlag für ausländische Literatur, 1961, 536 pp, 2R. 81 Kop., , translated into Russian by T. W. Worobjewa; edited by W. W. Sobolew; reprint of AJB 57.50.09;
 
-66 63.51(3).89 W. W. Sobolew, A Treatise of Radiative Transfer, Princeton NJ, D. Van Nostrand Company Inc., 1963, 11+319 pp, $9.75, AJ 68 804 and AN 287 277 and Ann d’Astrophys 27 62 and Geophys. J. RAS 8 278 and J. Astronaut. Sci 10 100 and JBAA 74 217 and Nature 203 112 and Planet. Space Sci. 11 1254 and Proc. IEEE 51 967 and Sky Tel. 26 100 and ZfA 58 291, translation from Russian by S. I. Gaposhkin
+66 63.51(3).89 W. W. Sobolew, A Treatise of Radiative Transfer, Princeton NJ, D. Van Nostrand Company Inc., 1963, 11+319 pp, $9.75, AJ 68 804 and AN 287 277 and Ann d’Astrophys 27 62 and Geophys. J. RAS 8 278 and J. Astronaut. Sci 10 100 and JBAA 74 217 and Nature 203 112 and Planet. Space Sci. 11 1254 and Proc. IEEE 51 967 and Sky Tel. 26 100 and ZfA 58 291, translated from Russian by S. I. Gaposhkin;
 
 67 63.51(3).99 G. M. Wing, An Introduction to Transport Theory, New York, John Wiley and Sons, 1962, 19+169 pp, $7.95, Publ ASP 76 66
 
-68 63.53.57 J. Greenstein ed., Sternatmosphären, Moskau, Verlag für ausländische Literatur, 1963, 706 pp, 4R. 17 Kop., AJ UdSSR 41 595, translated and edited into Russian by W. W. Sobolew 
+68 63.53.57 J. Greenstein ed., Sternatmosphären, Moskau, Verlag für ausländische Literatur, 1963, 706 pp, 4R. 17 Kop., AJ UdSSR 41 595, translated into Russian by W. W. Sobolew; edited by W. W. Sobolew;
 
-69 63.54.30 D. Frank-Kamenezkij, Physical Processes in Stellar Interiors, London, Oldbourne Press, 1963, 11+337 pp, £5, Proc. Phys. Soc. 82 458 and ZfA 59 284, translated from the Russian
+69 63.54.30 D. Frank-Kamenezkij, Physical Processes in Stellar Interiors, London, Oldbourne Press, 1963, 11+337 pp, £5, Proc. Phys. Soc. 82 458 and ZfA 59 284, translated from Russian
 
-70 63.54.49 D. H. Menzel and P. L. Bhatnagar and H. K. Sen, Stellar Interiors, London, Chapman & Hall, 1963, 13+317 pp, 65s and $12.50, Ann d’Astrophys 27 118 and JBAA 74 216 and ZfA 59 214, also published New York John Wiley & Sons
+70 63.54.49 D. H. Menzel and P. L. Bhatnagar and H. K. Sen, Stellar Interiors, London, Chapman & Hall, 1963, 13+317 pp, 65s and $12.50, Ann d’Astrophys 27 118 and JBAA 74 216 and ZfA 59 214, also published New York: John Wiley & Sons;
 
-71 63.55.01 H. C. Arp and G. Burbidge and E. M. Burbidge and M. Scharzschild, Ursprung und Entwicklung der Sterne, Moskau, Verlag für ausländische Literatur, 1962, 366 pp, 1R. 79 Kop., AJ UdSSR 41 190, translated from English into Russian by A. S. Scharow and W. E. Kononowitsch edited by A. G. Massewitsch
+71 63.55.01 H. C. Arp and G. Burbidge and E. M. Burbidge and M. Scharzschild, Ursprung und Entwicklung der Sterne, Moskau, Verlag für ausländische Literatur, 1962, 366 pp, 1R. 79 Kop., AJ UdSSR 41 190, translated from English into Russian by A. S. Scharow and W. E. Kononowitsch; edited by A. G. Massewitsch;
 
 72 63.41.31 O. Dziobek, Mathematical Theories of Planetary Motions, New York, Dover Publications Inc., 1962, 6+294 pp, $2.00 and 16s, Ann d’Astrophys 26 391 and Math. Rev. 28 193 and Planet. Space Sci. 11 1254
 
@@ -171,11 +171,11 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 79 63.44.16 P. Coudere, La Relativité, Paris, Presses Universitaires de France, 1962, 136 pp,  f 2.50, La Nature 1963 477
 
-80 63.44.23 A. S. Eddington, The Mathematical Theory of Relativity, Cambridge, University Press, 1963, 9+270 pp, $2.95 and 16s,  , reprint of the 1924 2nd edition
+80 63.44.23 A. S. Eddington, The Mathematical Theory of Relativity, Cambridge, University Press, 1963, 9+270 pp, $2.95 and 16s,  , reprint of 1924; 2nd edition;
 
 81 63.44.29 M. Gardner, Relativity for the Million, New York, Macmillan Co., 1962, 182, $6.95, Sky Tel. 26 225
 
-82 63.44.44 F. Hoyle, Universets Opbygning, Kopenhagen, Gyldendals Uglebøger, 1963,  , Kr. 7.75, Urania København 20 46, translation of AJB 60.44.27 by P. Naur
+82 63.44.44 F. Hoyle, Universets Opbygning, Kopenhagen, Gyldendals Uglebøger, 1963,  , Kr. 7.75, Urania København 20 46, translated by P. Naur; reprint of AJB 60.44.27;
 
 83 63.44.97 J. Singh, Great Ideas and Theories of Modern Cosmology, London, Constable & Co. Ltd., 1963, 12+276 pp, 21s, JBAA 74 215 and Nature 198 72
 
@@ -183,13 +183,13 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 85 63.31.36 W. D. Stahlman and O. Gingerich, Solar and Planetary Longitudes for Years -2500 to +2000, Madison, University of Wisconsin Press, 1963, 30+566 pp, $10.00, Ciel et Terre 79 471 and HeD 61 292 and J RAS Canada 57 233 and Science 141 796 and Sky Tel. 26 45
 
-85a 63.32(1).05 A. S. Charin, Katalog der Deklinationen von Sternen der Zenitteleskopprogramme im FK4-System für die Beobachtungsepoche und das Äquinoktium 1950.0, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1963, 99 pp, 34 Kop.,  , in Russian
+85a 63.32(1).05 A. S. Charin, Katalog der Deklinationen von Sternen der Zenitteleskopprogramme im FK4-System für die Beobachtungsepoche und das Äquinoktium 1950.0, Kiew, Verlag Akad. Wiss. Ukrain. SSR, 1963, 99 pp, 34 Kop.,  , in Russian;
 
 86 63.32(1).16 A. Kahrstedt ed., Index der Sternörter 1925—1960 Index II Band V BD -0° bis BD +10°, Berlin, Akademie-Verlag, 1963, 27+323 pp, DM 52.00
 
 87 63.32(1).17 A. Kahrstedt ed., Index der Sternöorter 1925—1960 Index II Band VI BD +11° bis BD +20°, Berlin, Akademie-Verlag, 1963, 23+321 pp, DM 52.00
 
-88 63.32(2).20 J. Klepešta and A. Rükl, Otáčivá mapa severni oblohy, Prag, Verlag Hauptverwaltung Geodäsie Kartographie, 1963, , Kčs 9.50, RH 44 238, 2nd edition
+88 63.32(2).20 J. Klepešta and A. Rükl, Otáčivá mapa severni oblohy, Prag, Verlag Hauptverwaltung Geodäsie Kartographie, 1963, , Kčs 9.50, RH 44 238, 2nd edition;
 
 89 63.32(2).22 R. Sagot and J. Texereau, Revue des constellations, Paris, Société Astronomique de France, 1963, 3+334 and 41 charts, NF 48, Coelum 32 135 and HeD 62 151
 
@@ -197,7 +197,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 91 63.32(2).25  , Drehbare Schülersternkarte, Pössneck, Verlag Rudolf Forkel KG, 1963, , DM 4.30, Sterne 39 216
 
-92 63.33.04 E. P. Fedorow, Nutation and Forced Motion of the Earth’s Pole, Oxford-London-New York-Paris, Pergamon Press, 1963, 19+152 pp, 50s, Ann d’Astrophys 26 463 and Obs 84 39 and Phys. Ber. 43 338 and Proc. Phys. Soc 83 678 and ZfA 58 212, translated from Russian by B. S. Jeffreys
+92 63.33.04 E. P. Fedorow, Nutation and Forced Motion of the Earth’s Pole, Oxford-London-New York-Paris, Pergamon Press, 1963, 19+152 pp, 50s, Ann d’Astrophys 26 463 and Obs 84 39 and Phys. Ber. 43 338 and Proc. Phys. Soc 83 678 and ZfA 58 212, translated from Russian by B. S. Jeffreys;
 
 93 63.35.02 J. Bouška and V. Vanýsek, Zatmění a zákryty nebeských těles, Prag, Verlag Akad. Wiss., 1963, 143 pp, Kčs 9.20, Kosmické rozhledy 1963 Nr. 2 20 and Pokroky 8 297 and RH 44 119 and Vesmir 42 136
 
@@ -205,37 +205,37 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 95 63.36.10 H. Eichel, Ortsbestimmung nach Gestirnen Grundlagen und Methoden der astronomischen Navigation, Stuttgart, Franckh’sche Verlagshandlung, 1962, 116 pp, DM 12.80, SuW 3 114
 
-96 63.36.15 P. Kaltenbach and W. Stein and O. Steppes, Meldau-Steppes; Lehrbuch der Navigation, Bremen, Arthur Geist Verlag, 1963, 766 pp, , , 6th edition
+96 63.36.15 P. Kaltenbach and W. Stein and O. Steppes, Meldau-Steppes; Lehrbuch der Navigation, Bremen, Arthur Geist Verlag, 1963, 766 pp, , , 6th edition;
 
-97 63.36.36 P. S. Sakatow, A Course in Higher Geodesy; Spheriodal Geodesy and Fundamentals of Gravimetry and Practical Astronomy, Washington D.C., U.S. Department of Commerce, 1962, 400 pp, $4.00, , 2nd edition translated from the Russian
+97 63.36.36 P. S. Sakatow, A Course in Higher Geodesy; Spheriodal Geodesy and Fundamentals of Gravimetry and Practical Astronomy, Washington D.C., U.S. Department of Commerce, 1962, 400 pp, $4.00, , 2nd edition; translated from Russian;
 
 98 63.36.44 G. D. Smirnow, Navigationssatelliten, Moskau, Militär Verlag, 1963, 88 pp, 16 Kop.
 
 99 63.36.53 , Tabellen zur geodätischen Astronomie, Moskau, Geol.-Techn. Staatsverlag, 1963, 235 pp, 2R. 6 Kop.
 
-100 63.36.54 , Höhen und Asimute von Gestirnen Band 4 Für die Breiten 60° -- 80°, Moskau, Verwaltung Hydrograph. Dienst Kriegsmarine, 1963, 12+307 pp, 5R. 69 Kop.,  , 2nd edition
+100 63.36.54 , Höhen und Asimute von Gestirnen Band 4 Für die Breiten 60° -- 80°, Moskau, Verwaltung Hydrograph. Dienst Kriegsmarine, 1963, 12+307 pp, 5R. 69 Kop.,  , 2nd edition;
 
 101 63.36.55 W. Bauss ed., Radio Navigation Systems for Aviation and Maritime Use – A Comparative Study, New York-Oxford, Pergamon Press, 1963, 9+195 pp, 70s, J. Inst. Navigation 17 96
 
-102 63.38.03 E. Bullard, Theorie der Rotation der Erde um das Massenzentrum, Moskau, Phys.-Math. Staatsverlag, 1963, 143 pp, 68 Kop., , translated from English to Russian
+102 63.38.03 E. Bullard, Theorie der Rotation der Erde um das Massenzentrum, Moskau, Phys.-Math. Staatsverlag, 1963, 143 pp, 68 Kop., , translated from English into Russian;
 
-103 63.21.08 M. Cagnet and M. Françon and J.C. Thrierr, Atlas of Optical Phemomena, Berlin-Göttingen-Heidelberg, Springer Verlag, 1962, 91 pp, DM 74.00 and $24.00, Ann. Physique (13) 8 123 and J. Optical Soc. America 53 881 and NAT 1963 68 and Naturwissenshaften 50 580 and Phys. Today 16 Nr. 9 69 and Sky Tel. 27 240 and Z. Instrumentation 71 85, also published Englewood Cliffs NJ Prentice Hall
+103 63.21.08 M. Cagnet and M. Françon and J.C. Thrierr, Atlas of Optical Phemomena, Berlin-Göttingen-Heidelberg, Springer Verlag, 1962, 91 pp, DM 74.00 and $24.00, Ann. Physique (13) 8 123 and J. Optical Soc. America 53 881 and NAT 1963 68 and Naturwissenshaften 50 580 and Phys. Today 16 Nr. 9 69 and Sky Tel. 27 240 and Z. Instrumentation 71 85, also published Englewood Cliffs NJ: Prentice Hall;
 
 104 63.21.10 J. Dick, Praktische Astronomie an visuellen Instrumenten, Leipzig, Johann Ambrosius Barth Verlag, 1963, 227 pp, DM 30.20, Sky Tel. 28 93 and Sternenbote 7 118 and VdS Nachr. 13 92
 
 105 63.21.47 J. M. Stone, Radiation and Optics, New York, McGraw-Hill Company, 1963, 542 pp,  , Ann d’Astrophys 27 117
 
-106 63.21.57 W. P. Zessewitsch, Anleitung zur Organisation und Durchführung wissenshaftlichter Amateurbeobachtunen von Himmelskörpern, Moskau, Phys.-Math. Staatsverlag, 1963, 452 pp, 99 Kop., AJ UdSSR 41 595, in Russian
+106 63.21.57 W. P. Zessewitsch, Anleitung zur Organisation und Durchführung wissenshaftlichter Amateurbeobachtunen von Himmelskörpern, Moskau, Phys.-Math. Staatsverlag, 1963, 452 pp, 99 Kop., AJ UdSSR 41 595, in Russian;
 
 107 62.22(1).11 M. V. Brewington, Navigating Instruments comma Peabody Museum Collection, Portland ME, The Anthoensen Press, 1963,  , $12.50, J. Inst. Navigation 17 343
 
 108 62.22(1).25 V. Erhart and J. Erhart, Amatérské astronomické fotografické komory, Prag, Verlag Techn. Literatur, 1963, 200 pp, Kčs 9.00
 
-109 62.22(1).76 G. D. Roth, The Amateur Astronomer and his Telescope, London, Faber and Faber Ltd., 1963, 152 pp, 25s, J. Astr. Soc. Victoria 16 102 and MN ASSA 22 127 and NAT 1963 116 and Nature 202 69 and Obs 83 266 and Southern Stars 20 104 and Spaceflight 6 31, translated by A. Helm
+109 62.22(1).76 G. D. Roth, The Amateur Astronomer and his Telescope, London, Faber and Faber Ltd., 1963, 152 pp, 25s, J. Astr. Soc. Victoria 16 102 and MN ASSA 22 127 and NAT 1963 116 and Nature 202 69 and Obs 83 266 and Southern Stars 20 104 and Spaceflight 6 31, translated by A. Helm;
 
 110 63.22(1).86 K. R. Stehling and W. Beller, Skyhooks, New York, Doubleday & Co. Inc., 1962, 264 pp, $4.95, Spaceflight 5 220
 
-111 63.22(1).98 , Teleskope, Moskau, Verlag für ausländische Literatur, 1963, 316 pp, 1R. 90 Kop., , translated and edited from English to Russian by W. A. Krat and N. L. Kajdanowskij
+111 63.22(1).98 , Teleskope, Moskau, Verlag für ausländische Literatur, 1963, 316 pp, 1R. 90 Kop., , translated from English into Russian by W. A. Krat and N. L. Kajdanowskij; edited by W. A. Krat and N. L. Kajdanowskij;
 
 112 63.22(2).174 A. G. W. Cameron ed., Interstellar Communication: A Collection of Reprints and Original Contributions, New York-Amsterdam, W. A. Benjamin Inc., 1963, 12+320 pp, $8.50 and $10.45, Ann d’Astrophys 26 561 and Endeavour 23 107 and Phys. Abstr. 67 1428 and Phys. Today 17 Nr. 3 64 and Planet. Space Sci. 12 259 and Sky Tel. 26 227 and Spaceflight 6 32 and ZfA 59 77
 
@@ -247,7 +247,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 116 63.23(1).115 A. M. Zarem and D. D. Erdway ed., Introduction to the Utilization of Solar Energy, New York, McGraw-Hill Book Company Inc., 1963, 12+398 pp, $13.50, Science 141 1267
 
-117 63.24(0).44 L. F. Tschernijew, Der Zeitdienst auf Hochseeschiffen, Moskau, Hochseetransport, 1963, 55 pp, 16 Kop., , in Russian
+117 63.24(0).44 L. F. Tschernijew, Der Zeitdienst auf Hochseeschiffen, Moskau, Hochseetransport, 1963, 55 pp, 16 Kop., , in Russian;
 
 118 63.24(1).57 R. K. Marshall, Sundials, New York, The Macmillan Company, 1963, 126 pp, $2.95, Sky Tel. 26 100 and Sky Tel. 26 223
 
@@ -255,13 +255,13 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 120 63.25.11 H. E. Paul, Outer Space Photography for the Amateur,  , Amphoto, 1963, 124 pp, $2.50, Sky Tel. 27 240
 
-121 63.11.02 C. W. Allen, Astrophysical Quantities, London, Athlone Press of the University of London, 1963, 11+291 pp, 63s and $10.10, Ann d’Astrophys 26 285 and BSAF 77 286 and Ciel et Terre 79 469 and Geophys. J. RAS 8 272 and JBAA 74 173 and La Nature 1963 477 and Obs 84 38 and Phys. Today 17 Nr. 3 66 and Science 142 569 and Sky Tel. 26 45 and Sky Tel. 27 37 and Spaceflight 5 220 and ZfA 58 211, 2nd edition also published New York Oxford University Press
+121 63.11.02 C. W. Allen, Astrophysical Quantities, London, Athlone Press of the University of London, 1963, 11+291 pp, 63s and $10.10, Ann d’Astrophys 26 285 and BSAF 77 286 and Ciel et Terre 79 469 and Geophys. J. RAS 8 272 and JBAA 74 173 and La Nature 1963 477 and Obs 84 38 and Phys. Today 17 Nr. 3 66 and Science 142 569 and Sky Tel. 26 45 and Sky Tel. 27 37 and Spaceflight 5 220 and ZfA 58 211, 2nd edition; also published New York: Oxford University Press;
 
 122 63.11.03 D. Alter and C. H. Cleminshaw and J. G. Phillips, Pictorial Astronomy, New York, Crowell Company, 1963, 8+312 pp, $6.95, JBAA 74 73 and Publ. ASP 75 297 and Science 141 709 and Sky Tel. 26 100 and Sky Tel. 26 222 and Spaceflight 6 140
 
-123 63.11.04 W. Baade, Evolution of Stars and Galaxies, New York, Oxford University Press, 1963, 13+321 pp, $6.75, Ann d’Astrophys 26 562 and J. Astr. Soc. Victoria 16 90 and JBAA 74 74 and J. RAS Canada 57 233 and Publ. ASP 75 202 and Sky Tel. 25 231 and Sky Tel. 26 287 and Spaceflight 6 35, also published Cambridge MA Harvard University Press edited by C. Payne-Gaposchkin
+123 63.11.04 W. Baade, Evolution of Stars and Galaxies, New York, Oxford University Press, 1963, 13+321 pp, $6.75, Ann d’Astrophys 26 562 and J. Astr. Soc. Victoria 16 90 and JBAA 74 74 and J. RAS Canada 57 233 and Publ. ASP 75 202 and Sky Tel. 25 231 and Sky Tel. 26 287 and Spaceflight 6 35, also published Cambridge MA: Harvard University Press; edited by C. Payne-Gaposchkin;
 
-124 63.11.05 W. W. Basykin and I. F. Schewljakow, Methodik der Verwendung anschaulicher Lehrmittel in der Astonomie, Moskau, Verlag <<Snanike>>, 1963, 40 pp, 5 Kop., , in Russian
+124 63.11.05 W. W. Basykin and I. F. Schewljakow, Methodik der Verwendung anschaulicher Lehrmittel in der Astonomie, Moskau, Verlag <<Snanike>>, 1963, 40 pp, 5 Kop., , in Russian;
 
 125 63.11.06 W. Büdeler, Den Sternen auf der Spur, Gütersloh/Westf., C. Bertelsmann-Verlag, 1963, 190 pp, DM 5.80, Coelum 31 151 and Orion Schaffhausen 9 167 and Sky Tel. 26 228 and Sterne 40 47 and SuW 3 42 and VdS Nachr. 12 97
 
@@ -269,7 +269,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 127 63.11.08 K. Fea, The Young Astronomer’s Companion,  , Souvenir Press, 1962, 160 pp, 26 s 9d and 18s, J. Astr. Soc. Victoria 16 103 and Nature 201 5
 
-128 63.11.09 G. Gamow, De zwaartekracht die het heelal beheerst, Amsterdam, Elsevier, 1963, 160 pp, f 2.25, HeD 62 150, translated from English M. Kokama
+128 63.11.09 G. Gamow, De zwaartekracht die het heelal beheerst, Amsterdam, Elsevier, 1963, 160 pp, f 2.25, HeD 62 150, translated from English by M. Kokama;
 
 129 63.11.10 O. Günther, Astronomie für die Hand des Lehrers, Berlin, VEB Deutscher Verlag der Wissenschaften, 1960, 160 pp, DM 5.00
 
@@ -281,7 +281,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 133 63.11.14 F. Hoyle, L’Astronomia, Firenze, G. Sansoni, 1963, 320 pp, Lire 8000, Coelum 32 23
 
-134 63.11.15 F. Hoyle, Astronomi, Stockholm, Bokförlaget Forum, 1963, 320 pp, 87:-, PAT 45 80, translated from English by T. Larson
+134 63.11.15 F. Hoyle, Astronomi, Stockholm, Bokförlaget Forum, 1963, 320 pp, 87:-, PAT 45 80, translated from English by T. Larson;
 
 135 63.11.16 F. W. Hyde, Radio Astronomy for Amateurs, New York, W. W. Norton and Co. Inc., 1963, 236 pp, $5.00, Sky Tel. 27 361
 
@@ -289,15 +289,15 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 137 63.11.18 J. M. Joseph and S. L. Lippincott, Point to the Stars, New York, McGraw-Hill Co., 1963, 96 pp, $3.95, Science 140 800 and Sky Tel. 25 353 and Sky Tel. 26 96
 
-138 63.11.19 S. A. Kaplan, Fizyka gwiazd, Warszawa, Państwowe Wydawnictwo Naukowe, 1963, 205 pp, 20 zł, , translated from Russian
+138 63.11.19 S. A. Kaplan, Fizyka gwiazd, Warszawa, Państwowe Wydawnictwo Naukowe, 1963, 205 pp, 20 zł, , translated from Russian;
 
 139 63.11.20 H. Kienle, Einführung in die Astronomie, München, R. Piper & Co., 1963, 176 pp, DM 5.80 and DM 8.80, Sterne 40 86
 
 140 63.11.21 J. Kleczek and Z. Švestka, Astronomický a astronautický slovnik, Prag, Verlag Orbis, 1963, 509+42 pp, Kčs 37
 
-141 63.11.23 A. Krause, Himmelskunde für Jedermann, Stuttgart, Franckh’sche Verlagshandlung, 1963, 295 pp, DM 19.80, Sterne 40 124, 5th revised edition
+141 63.11.23 A. Krause, Himmelskunde für Jedermann, Stuttgart, Franckh’sche Verlagshandlung, 1963, 295 pp, DM 19.80, Sterne 40 124, 5th revised edition;
 
-142 63.11.25 R. Kühn, De wereld der oneindegheid, Den Haag, W. Gaade, 1962, 191 pp, f19.50, HeD 61 275, translated from German by E. H. Bunte
+142 63.11.25 R. Kühn, De wereld der oneindegheid, Den Haag, W. Gaade, 1962, 191 pp, f19.50, HeD 61 275, translated from German by E. H. Bunte;
 
 143 63.11.26 B. Lovell and J. Lovell, Discovering the Universe, London, Ernest Benn Ltd., 1963, 136 pp, 25s, J. Astr. Soc. Victoria 17 33 and Nature 201 754 and Spaceflight 6 107
 
@@ -307,33 +307,33 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 146 63.11.29 J. Muirden, Astronomy with Binoculars, London, Faber & Faber Ltd., 1963, 146 pp, 25s, Irish AJ 6 151 and J. Astr. Soc. Victoria 16 91 and JBAA 74 78 and Southern Stars 20 156 and Spaceflight 6 35
 
-147 63.11.30 B. N. Pankowkin, Radiosignale des Weltalls, Moskau, Verlag <<Snanije>>, 1963, 56 pp, 11 Kop., , in Russian
+147 63.11.30 B. N. Pankowkin, Radiosignale des Weltalls, Moskau, Verlag <<Snanije>>, 1963, 56 pp, 11 Kop., , in Russian;
 
 148 63.11.31 S. Pikelner, Soviet Science of Interstellar Space, New York, Philosophical Library Inc., 1963, 230 pp, $7.50, Science 140 659 and Sky Tel. 26 161 and Strolling Astr. 17 77
 
-149 63.11.32 I. F. Polak, Lehrbuch der allgemeinen Astronomie, Tiflis, Univ. Tiflis, 1961, 436 pp, 1R. 37 Kop., , written in Georgian
+149 63.11.32 I. F. Polak, Lehrbuch der allgemeinen Astronomie, Tiflis, Univ. Tiflis, 1961, 436 pp, 1R. 37 Kop., , in Georgian;
 
-150 63.11.33 P. Ravigneaux, Le ciel sans Télescope, Paris, Dunod, 1963, 40 pp and 3 sky charts, f 6.80, La Nature 1963 477, 2nd edition
+150 63.11.33 P. Ravigneaux, Le ciel sans Télescope, Paris, Dunod, 1963, 40 pp and 3 sky charts, f 6.80, La Nature 1963 477, 2nd edition;
 
-151 63.11.34 A. Schirakazi, Kosmographie, Erewan, Akad. Wiss. Armen. SSR, 1962, 128 pp, 52 Kop., , translated from <<Altarmenischen>>
+151 63.11.34 A. Schirakazi, Kosmographie, Erewan, Akad. Wiss. Armen. SSR, 1962, 128 pp, 52 Kop., , other translated from <<Altarmenischen>>;
 
 152 63.11.35 L. Schneider, Space Around Us, New York, The Macmillan and Co., 1963, 104 pp, 25s,
 
-153 63.11.36 W. K. Schtschukin, Das Vordringen in den Himmel, Kasan, , 1961, 67 pp, 10 Kop., , written in Tartar
+153 63.11.36 W. K. Schtschukin, Das Vordringen in den Himmel, Kasan, , 1961, 67 pp, 10 Kop., , in Tartar;
 
 154 63.11.37 H. Shapley, The View from a Distant Star, New York, Basic Books Inc., 1963, 212 pp, $4.95, Science 143 1160 and Sky Tel. 26 290 and Sky Tel. 27 109 and Spaceflight 6 70 and Space Sci. Rev. 2 872
 
-155 63.11.38 F. G. Smith, Radioastronomie, Moskau, Verlag für ausländische Literatur, 1962, 282 pp, 1R. 14 Kop., RH 44 79, translation of AJB 60.11.47 from English to Russian by M. W. Konjukow editied by W. W. Witkewitsch
+155 63.11.38 F. G. Smith, Radioastronomie, Moskau, Verlag für ausländische Literatur, 1962, 282 pp, 1R. 14 Kop., RH 44 79, translated from English into Russian by M. W. Konjukow; edited by W. W. Witkewitsch; reprint of AJB 60.11.47;
 
 156 63.11.39 J. D. W. Staal, Focus on Stars; Everyman’s Guide to Astronomy, London, George Newnes, 1963, 283 pp, 40s, J. Astr. Soc. Victoria 16 53 and JBAA 74 172 and Sky Tel. 28 93
 
-157 63.11.40 J. L. Steinberg and J. Lequeux, Radio Astronomy, New York, McGraw-Hill Book Company, 1963, 260 pp, $9.95, Ann d’Astrophys 27 117 and J RAS Canada 58 90 and Phys. Today 17 Nr. 6 58 and Sky Tel. 26 227 and Sky Tel. 28 33, translated from the French into English by R. N. Bracewell see also AJB 60.11.49 and AJB 63.11.41
+157 63.11.40 J. L. Steinberg and J. Lequeux, Radio Astronomy, New York, McGraw-Hill Book Company, 1963, 260 pp, $9.95, Ann d’Astrophys 27 117 and J RAS Canada 58 90 and Phys. Today 17 Nr. 6 58 and Sky Tel. 26 227 and Sky Tel. 28 33, translated from  French into English by R. N. Bracewell; other see also AJB 60.11.49 and AJB 63.11.41;
 
-158 63.11.41 J. L. Steinberg and J. Lequeux, Radioastronmie, Moskau, Verlag für äuslandische Literatur, 1963, 312 pp, 77 Kop., AJ UdSSR 41 190, translated from French into Russian by P. W. Schtscheglow see also AJB 60.11.49 and 63.11.40
+158 63.11.41 J. L. Steinberg and J. Lequeux, Radioastronmie, Moskau, Verlag für äuslandische Literatur, 1963, 312 pp, 77 Kop., AJ UdSSR 41 190, translated from French into Russian by P. W. Schtscheglow; other see also AJB 60.11.49 and 63.11.40;
 
-159 63.11.42 O. Struve and B. Lynds and H. Pillans, Astronomie, Berlin, Walter de Gruyter & Co., 1963, 468 pp, DM 28.00, Gerlands Beiträge Geophys. 72 386 and Sternenbote 7 19, 2nd edition translation of AJB 59.11.56
+159 63.11.42 O. Struve and B. Lynds and H. Pillans, Astronomie, Berlin, Walter de Gruyter & Co., 1963, 468 pp, DM 28.00, Gerlands Beiträge Geophys. 72 386 and Sternenbote 7 19, 2nd edition; reprint of AJB 59.11.56; other translated from AJB 59.11.56;
 
-160 63.11.43 K. Stumpff, Astronomía, Milano, G. Feltrinelli, 1963, 406 pp, L. 800, BSAF 78 32 and Coelum 31 123, translation of AJB 57.07.31 into Italian by M. Hack.
+160 63.11.43 K. Stumpff, Astronomía, Milano, G. Feltrinelli, 1963, 406 pp, L. 800, BSAF 78 32 and Coelum 31 123, translated into Italian by M. Hack; reprint of AJB 57.07.31;
 
 161 63.11.44 S. Toulmin and J. Goodfield, Universums byggnad, Stockholm, Natur och Kultur Bokförlaget, 1963, 259 pp, 25:50
 
@@ -347,61 +347,61 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 166 63.11.49 J. Wasiutyński, Universet comma Skapelse og Utvikling, Oslo, Universitetforlaget, 1963, 412 pp, n.kr. 12.50, PAT 44 182
 
-167 63.11.50 A. Weigert and H. Zimmermann, ABC der Astronomie, Leipzig, VEB Verlag Brockhaus, 1962, 416 pp, DM 14.80, Sternenbote 7 147, 2nd edition also published Hanau W. Dausien
+167 63.11.50 A. Weigert and H. Zimmermann, ABC der Astronomie, Leipzig, VEB Verlag Brockhaus, 1962, 416 pp, DM 14.80, Sternenbote 7 147, 2nd edition; also published Hanau: W. Dausien;
 
 168 63.11.51 F. L. Whipple, Earth comma Moon comma and Planets, Cambridge MA, Harvard University Press, 1963, 278 pp, $6.50 and 71s 6d, J. Astr. Soc. Victoria 17 33 and Sky Tel. 26 290 and Spaceflight 6 140
 
-169 63.11.52 B. A. Woronzow-Weljaminow, Sammlung von Aufgaben und Übungen aus der Astronomie (Für Universitäten und Pädagogische Institute), Moskau, Phys.-Math. Staatsverlag, 1963, 280 pp, 66 Kop., , 5th edition
+169 63.11.52 B. A. Woronzow-Weljaminow, Sammlung von Aufgaben und Übungen aus der Astronomie (Für Universitäten und Pädagogische Institute), Moskau, Phys.-Math. Staatsverlag, 1963, 280 pp, 66 Kop., , 5th edition;
 
-170 63.11.53 A. J. Zadde, Making Friends with the Stars, New York, Barnes and Noble, 1963, 162 pp, $1.25 and $3.50, Publ. ASP 75 539 and Sky Tel. 27 177, edited by T. A. Smits
+170 63.11.53 A. J. Zadde, Making Friends with the Stars, New York, Barnes and Noble, 1963, 162 pp, $1.25 and $3.50, Publ. ASP 75 539 and Sky Tel. 27 177, edited by T. A. Smits;
 
-171 63.11.54 H. S. Zim and R. H. Baker, Etoiles, Paris, Hachette, 1963, 160 pp,  , BSAF 78 243, from the French by R. Canavaggia and J. Ragnault, see also AJB 63.11.55
+171 63.11.54 H. S. Zim and R. H. Baker, Etoiles, Paris, Hachette, 1963, 160 pp,  , BSAF 78 243, translated from French by R. Canavaggia and J. Ragnault; other see also AJB 63.11.55;
 
-172 63.11.55 H. S. Zim and R. H Baker, Le stelle, Milano, Martello, 1963, 157 pp, , Coelum 32 53, see also AJB 63.11.54
+172 63.11.55 H. S. Zim and R. H Baker, Le stelle, Milano, Martello, 1963, 157 pp, , Coelum 32 53, other see also AJB 63.11.54;
 
 173 63.11.56 S. T. Butler and H. Messel ed., The Universe of Time and Space, New York, Macmillan Company, 1963, 291 pp, $2.95, Sky Tel. 28 38
 
 174 63.11.57 D. P. Le Galley ed., Space Science, New York, John Wiley & Sons, 1963, 18+670 pp, 135s, Ann d’Astrophy. 26 463 and Planet. Space Sci. 12 93 and Space Sci. Review 2 872 and ZfA 58 213
 
-175 63.11.58 A. A. Michajlow ed., Kurs für Astrophysik und Stellarastronomie, Moskau, Phys.-Math. Staatsverlag, 1962, 688 pp, 3R. 18 Kop., , in Russian
+175 63.11.58 A. A. Michajlow ed., Kurs für Astrophysik und Stellarastronomie, Moskau, Phys.-Math. Staatsverlag, 1962, 688 pp, 3R. 18 Kop., , in Russian;
 
 176 63.11.59 P. Moore ed., Practical Amateur Astronomy, London, Lutterworth Press, 1963, 254 pp, 30s, J. Astr. Soc. Victoria 17 12 and JBAA 74 263 and Spaceflight 6 107
 
-177 63.11.60 A. N. Nesmejanow ed., Mit den Augen eines Wissenschaftlers comma Von der Erde zu den Galaxien comma Zum Kern des Atoms comma Vom Atom zum Molekül comma Vom Molekül zum Organismus, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 739 pp, 3R. 80 Kop., , in Russian
+177 63.11.60 A. N. Nesmejanow ed., Mit den Augen eines Wissenschaftlers comma Von der Erde zu den Galaxien comma Zum Kern des Atoms comma Vom Atom zum Molekül comma Vom Molekül zum Organismus, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 739 pp, 3R. 80 Kop., , in Russian;
 
-178 63.11.61 H. P. Palmer and R. D. Davies and M. I. Large  ed., Radio Astronomy Today, Cambridge MA, Harvard University Press, 1963, 8+242 pp, $6.00 and 32s 6d, J. Astr. Soc. Victoria 17 33 and Nature 201 227 and Science 144 525 and Sky Tel. 26 353 and Sky Tel. 27 299 and ZfA 59 136, also published Manchester UK The University Press
+178 63.11.61 H. P. Palmer and R. D. Davies and M. I. Large  ed., Radio Astronomy Today, Cambridge MA, Harvard University Press, 1963, 8+242 pp, $6.00 and 32s 6d, J. Astr. Soc. Victoria 17 33 and Nature 201 227 and Science 144 525 and Sky Tel. 26 353 and Sky Tel. 27 299 and ZfA 59 136, also published Manchester UK: The University Press;
 
-179 63.11.62 W. B. Sill and N. Hoss ed., Encyclopedia of the Sciences, New York, Doubleday & Co., 1963, 762 pp, $9.95, Sky Tel. 26 100, also published New York Popular Science Publishing Co.
+179 63.11.62 W. B. Sill and N. Hoss ed., Encyclopedia of the Sciences, New York, Doubleday & Co., 1963, 762 pp, $9.95, Sky Tel. 26 100, also published New York: Popular Science Publishing Co.;
 
 180 63.11.63 K. A. Strand ed., Stars and Stellar Systems Vol. 3 Basic Astronomical Data, Chicago, University of Chicago Press, 1963, 18+495 pp, $12.50, AJ 68 804 and Orion Schaffhausen 9 128 and Science 142 217 and Sky Tel. 26 227 and Sky Tel. 27 299
 
 181 63.11.64 K. Stumpff ed., Jos. Joh. von Littrow comma Die Wunder des Himmels, Bonn-Hannover-Hamburg-Kiel-München, Fred. Dümmlers Verlag, 1963, 712 pp, DM 38.00, Coelum 31 122 and Orion Schaffhausen 9 49 and Phys. Ber. 42 2573 and Phys. Blätter 19 480 and Sky Tel. 26 288 and Sterne 39 175 and Sternenbote 6 146 and SuW 2 233 and Urania Københaven 19 80 and VdS Nachr. 12 95 and Veröff. Uraniasternw. Wien Nr. 6 113 and Weltraumfahrt 14 190
 
-182 63.11.65 M. Waldmeier ed., Sterne und Weltall, Bern, Verlag Hallwag, 1963, 44 pp, Fr. 5.80, Orion Schaffhausen 8 339, 1 Lieferung (1st delivery?)
+182 63.11.65 M. Waldmeier ed., Sterne und Weltall, Bern, Verlag Hallwag, 1963, 44 pp, Fr. 5.80, Orion Schaffhausen 8 339, other 1 Lieferung (1st delivery?);
 
 183 63.11.66 L. B. Young ed., Exploring the Universe, London-New York, McGraw-Hill Book Co., 1963, 30+457 pp, 75s 6d and $6.95, AJ 68 220 and J. Astr. Soc. Victoria 16 75 and Science 139 1194
 
-184 63.12.01 L. Courvoisier ed., Leonhardus Eulerus comma Opera Omnia comma Series Secunda comma Opera Mechanica et Astronomica  Vol. XXIX comma Commentationes astronomica ad praecessionem et nutationem pertinentes, Lausanne, Swiss Society of Natural Sciences, 1961, 86+420 pp, sfr. 100, Math. Rev. 27 268, also published Zürich Orell Füssli
+184 63.12.01 L. Courvoisier ed., Leonhardus Eulerus comma Opera Omnia comma Series Secunda comma Opera Mechanica et Astronomica  Vol. XXIX comma Commentationes astronomica ad praecessionem et nutationem pertinentes, Lausanne, Swiss Society of Natural Sciences, 1961, 86+420 pp, sfr. 100, Math. Rev. 27 268, also published Zürich: Orell Füssli;
 
-185 63.12.02  , K. F. Gauss comma Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections, New York, Dover Publications Inc., 1963, 374 pp, $2.95, Sky Tel. 27 177 and Sternenbote 7 70 and ZfA 59 283, translated into English by C. H .Davis
+185 63.12.02  , K. F. Gauss comma Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections, New York, Dover Publications Inc., 1963, 374 pp, $2.95, Sky Tel. 27 177 and Sternenbote 7 70 and ZfA 59 283, translated into English by C. H .Davis;
 
-186 63.12.03 , Galileo: Dialogue Concerning the Two Chief World Systems, Berkeley CA, University of California Press, 1962, 27+505 pp, $2.95, Obs 83 191, translated into English by S. Drake
+186 63.12.03 , Galileo: Dialogue Concerning the Two Chief World Systems, Berkeley CA, University of California Press, 1962, 27+505 pp, $2.95, Obs 83 191, translated into English by S. Drake;
 
-187 63.13.01 , Neues über den Mond, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1963, 427 pp, 2R. 88 Kop., , in Russian
+187 63.13.01 , Neues über den Mond, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1963, 427 pp, 2R. 88 Kop., , in Russian;
 
-188 63.13.02 M. S. Swerew ed., Pulikationen der 15 Astrometrischen Konferenz der UdSSR, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1963, 438 pp, 2R. 82 Kop., , in Russian
+188 63.13.02 M. S. Swerew ed., Pulikationen der 15 Astrometrischen Konferenz der UdSSR, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1963, 438 pp, 2R. 82 Kop., , in Russian;
 
 189 63.13.03  , Proceedings of the IGY Symposium Vol. I and II, New Delhi, Council of Scientific and Industrial Research, 1963 and 1962, 246 and 244 pp, $5.00 ea, Space Sci. Rev. 2 871
 
 190 63.13.05 J. W. Evans ed., The Solar Corona, London-New York, Academic Press, 1963, 11+344 pp, 100s and $14.00, AJ 68 804 and Endeavour 23 48 and J RAS Canada 57 268 and Geophys. J. RAS 8 343 and Phys. Today 17 Nr. 4 74 and Planet. Space Sci. 12 186 and Proc. Phys. Soc 82 798 and Sterne 39 176
 
-191 63.13.08 R. M. L. Baker jr. and M. W. Makemson ed., XIIth International Astronautical Congress Vol. I and II, London-New York, Academic Press, 1963, 36+998 pp, £15 15s, AIAA J 1 2420 and Spaceflight 6 101, also published Wien Springer-Verlag
+191 63.13.08 R. M. L. Baker jr. and M. W. Makemson ed., XIIth International Astronautical Congress Vol. I and II, London-New York, Academic Press, 1963, 36+998 pp, £15 15s, AIAA J 1 2420 and Spaceflight 6 101, also published Wien: Springer-Verlag;
 
-192 63.13.09 B. Landmark ed., Meterological and Astronomical Influences on Radio Wave Propagation, Oxford, Pergamon Press, 1963, 318 pp, 100s and $15.00, Ann. Physique (13) 8 722 and J ATP 25 745 and Phys. Blätter 20 288 and Proc IEEE 52 112, also published New York The Macmillan Co.
+192 63.13.09 B. Landmark ed., Meterological and Astronomical Influences on Radio Wave Propagation, Oxford, Pergamon Press, 1963, 318 pp, 100s and $15.00, Ann. Physique (13) 8 722 and J ATP 25 745 and Phys. Blätter 20 288 and Proc IEEE 52 112, also published New York: The Macmillan Co.;
 
 193 63.13.10 R. Jastrow and A. G. W. Cameron ed., Origin of the Solar System, London-New York, Academic Press, 1963, 13+176 pp, $8.00 and 64s, Nature 201 646 and Phys. Abstr. 67 702 and Proc. Phys. Soc. 83 322 and Sky Tel. 26 290 and Sky Tel. 28 34 and ZfA 58 294
 
-194 63.13.11 G. Veis ed., The Use of Artificial Satellites for Geodesy, Amsterdam, North-Holland Publishing Company, 1963, 11+424 pp, 86s, Nature 201 1254 and Österreich. Z. Vermessungswesen 52 101, Planet. Space Sci. 12 321 and Science 144 694
+194 63.13.11 G. Veis ed., The Use of Artificial Satellites for Geodesy, Amsterdam, North-Holland Publishing Company, 1963, 11+424 pp, 86s, Nature 201 1254 and Österreich. Z. Vermessungswesen 52 101 and Planet. Space Sci. 12 321 and Science 144 694
 
 195 63.13.13 W. Priester ed., Space Research III, Amsterdam, North-Holland Publishing Company, 1963, 16+1275 pp, Gld. 114.90 and 220s, Ann d’Astrophy 26 464 and J. Astronaut. Sci. 11 24 and J ATP 25 744 and Nature 199 630 and Phys. Today 17 Nr. 2 58 and Planet. Space Sci. 11 999 and Spaceflight 6 34 and ZfA 59 137
 
@@ -411,35 +411,35 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 198 63.13.17 , Die Entstehung des Lebens im Weltall, Moskau, Verlag Akad. Wiss. UdSSR, 1963, 96 pp, 44 Kop.
 
-199 63.13.18 J. Aarons ed., Radio Astronomical and Satellite Studies of the Atmosphere, Amsterdam, North-Holland Publishing Company, 1963, 8+561 pp, Gld. 54.00 and $17.50, Ann d’Astrophys 26 279 and Geophys J. RAS 7 605 and J ATP 25 551 and Nature 202 1045 and Planet. Space Sci. 11 996 and Proc. IEEE 52 335 and Proc. IEEE 52 880 and Science 144 1562 and Sky Tel. 26 290, also published New York Interscience Publishers
+199 63.13.18 J. Aarons ed., Radio Astronomical and Satellite Studies of the Atmosphere, Amsterdam, North-Holland Publishing Company, 1963, 8+561 pp, Gld. 54.00 and $17.50, Ann d’Astrophys 26 279 and Geophys J. RAS 7 605 and J ATP 25 551 and Nature 202 1045 and Planet. Space Sci. 11 996 and Proc. IEEE 52 335 and Proc. IEEE 52 880 and Science 144 1562 and Sky Tel. 26 290, also published New York: Interscience Publishers;
 
-200 63.13.19 D. R. Bates ed., Theoretical Interpretation of Upper Atmosphere Emissions, New York-Oxford-London-Paris, Pergamon Press, 1963, 264 pp, 70s, Geophys. J. RAS 8 275 and J ATP 26 535 and Proc. Phys. Soc. 84 165 and ZfA 58 293, same as Planet. Space Sci. volume 10
+200 63.13.19 D. R. Bates ed., Theoretical Interpretation of Upper Atmosphere Emissions, New York-Oxford-London-Paris, Pergamon Press, 1963, 264 pp, 70s, Geophys. J. RAS 8 275 and J ATP 26 535 and Proc. Phys. Soc. 84 165 and ZfA 58 293, other same as Planet. Space Sci. volume 10;
 
 201 63.13.20 A. C. Strickland, The Ionosphere, London, Chapman and Hall, 1963, 10+528 pp, £5 5s, Geophys. J. RAS 8 277 and J ATP 25 551 and Nature 199 728 and Science 140 1301 and ZfA 58 298
 
 202 63.13.24 M. Kerker ed., Proceedings of the Interplanetary Conference on Electromagnetic Scattering, Oxford-New York, Pergamon Press, 1963, 592 pp, £7, AJ 69 220 and Ann d’Astrophys 27 61
 
-203 63.13.27 , Radioactive Dating, London, H. M. Stationary Office, 1963, 8+440 pp, 51s and $8.50 and öS 178.50, Geophys. J. RAS 8 469 and Nature 201 750, also published Vienna International Atomic Energy Agency
+203 63.13.27 , Radioactive Dating, London, H. M. Stationary Office, 1963, 8+440 pp, 51s and $8.50 and öS 178.50, Geophys. J. RAS 8 469 and Nature 201 750, also published Vienna: International Atomic Energy Agency;
 
 204 63.13.29 S. M. Scala and A. C. Harrison and M. Rogers ed., Symposium on Dynamics of Manned Lifting Planetary Entry, New York, John Wiley & Sons, 1963, , $15.00
 
-205 63.13.30  , Probleme der Bewegung künstlicher Himmelskörper, Moskau, Akad. Wiss. UdSSR, 1963, 294 pp, 1R. 22 Kop., , in Russian
+205 63.13.30  , Probleme der Bewegung künstlicher Himmelskörper, Moskau, Akad. Wiss. UdSSR, 1963, 294 pp, 1R. 22 Kop., , in Russian;
 
-206 63.13.31 , Neue Technik in der Astronomie, Moskua-Leningrad, Akad. Wiss. UdSSR, 1963, 181 pp, 1R. 11 Kop., , in Russian
+206 63.13.31 , Neue Technik in der Astronomie, Moskua-Leningrad, Akad. Wiss. UdSSR, 1963, 181 pp, 1R. 11 Kop., , in Russian;
 
 207 63.16(1).61 C. L. Longmire and J. L. Tuck and W. B. Thompson ed., Plasma Physics and Thermonuclear Research Vol. 2, London-New York-Paris-Los Angeles, Pergamon Press, 1963, 367 pp, £5, ZfA 58 72
 
-208 63.16(1).62 , Plasmaphysik und Probleme der gelenkten thermonuklearen Synthese, Kiew, Akad. Wiss. Ukrain. SSR, 1963, 344 pp, 1R. 58 Kop., , in Russian
+208 63.16(1).62 , Plasmaphysik und Probleme der gelenkten thermonuklearen Synthese, Kiew, Akad. Wiss. Ukrain. SSR, 1963, 344 pp, 1R. 58 Kop., , in Russian;
 
-209 63.16(1).63 [L.  Spitzer?], Physics of Fully Ionized Gases, London, John Wiley & Sons, 1963, 164 pp, 36s, Ann d’Astrophys 26 283, 2nd edition
+209 63.16(1).63 [L.  Spitzer?], Physics of Fully Ionized Gases, London, John Wiley & Sons, 1963, 164 pp, 36s, Ann d’Astrophys 26 283, 2nd edition;
 
-210 63.17(0).04 A. Ducrocq, Der Mensch im Weltall, Reinbeck bei Hamburg, Rowohlt Taschenbuch Verlag GmbH., 1963, 283 pp, DM 4.80, SuW 3 114, translated in to German by W. Dieckvoss
+210 63.17(0).04 A. Ducrocq, Der Mensch im Weltall, Reinbeck bei Hamburg, Rowohlt Taschenbuch Verlag GmbH., 1963, 283 pp, DM 4.80, SuW 3 114, translated into German by W. Dieckvoss;
 
 211 63.17(0).10 M. M. Konarski, Russian-English Dictionary of Modern Terms in Aeronautics and Rocketry, Oxford, Pergamon Press, 1962, 11+515 pp, £10, Publ ASP 75 296
 
 212 63.17(0).12 I. M. Levitt and D. M. Cole, Exploring the Secrets of Space, Englewood Cliffs NJ, Prentice-Hall Inc., 1963, 306 pp, $5.95, Sky Tel. 26 227 and Sky Tel. 27 175
 
-213 63.17(0).13 B. Lovell, Den yttre rymden, Stockholm, Wahlström & Widstrand, 1963, 114 pp, kr. 6:50,  , translation of ??
+213 63.17(0).13 B. Lovell, Den yttre rymden, Stockholm, Wahlström & Widstrand, 1963, 114 pp, kr. 6:50,  , other of ??;
 
 214 63.17(0).14 A. F. Marfeld, Das Buch der Astronautik, Berlin, Safari-Verlag, 1963, 660 pp, DM 32.80, VdS Nachr 12 241 and Weltraumfahrt 15 63
 
@@ -449,17 +449,17 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 217 63.17(0).20 F. I. Ordway III and J. P. Gardner and M. R. Sharpe jr. and R. C. Wakeford, Applied Astronautics, New York, Prentice-Hall, 1963, 449 pp, $16.00, Sky Tel. 26 45
 
-218 63.17(0).22 R. Perelman, Perspektywy lotów galaktycznyeh, Warsawa, Państwowe Wydawnictwo Naukowe, 1963, 168 pp, zł 15, , translated from Russian
+218 63.17(0).22 R. Perelman, Perspektywy lotów galaktycznyeh, Warsawa, Państwowe Wydawnictwo Naukowe, 1963, 168 pp, zł 15, , translated from Russian;
 
 219 63.17(0).26 E. Sänger, Raumfahrt heute – morgen – übermorgen, Düsseldorf-Wien, Econ-Verlag Gmbh., 1963, 426 pp, DM 28.80, SuW 3 90
 
-220 63.17(0).28 G. Shdanow and I. Tindo, Space Laboratories, Moscow, Foreign Language Publishing House,  , 197 pp, , JBAA 73 53, see also AJB 63.17(0).29
+220 63.17(0).28 G. Shdanow and I. Tindo, Space Laboratories, Moscow, Foreign Language Publishing House,  , 197 pp, , JBAA 73 53, other see also AJB 63.17(0).29;
 
-221 63.17(0).29 G. Shdanow, I laboratory spaziali, Padova, Silva, 1963, 206 pp, L 1800, Coelum 31 177, see also AJB 63.17(0).28 translated from the Russian by I. Tindo
+221 63.17(0).29 G. Shdanow, I laboratory spaziali, Padova, Silva, 1963, 206 pp, L 1800, Coelum 31 177, other see also AJB 63.17(0).28; translated from Russian by I. Tindo;
 
 222 63.17(0).30 M. Smetana, Astronautické otazniky, Prag, Verlag Mladá fronta, 1963, 203+24 pp, Kčs 12.50, RH 44 143
 
-223 63.17(0).31 K. E. Ziolkowskij, Die Rakete im kosmischen Raum, Moskau, Akad. Wiss. UdSSR, 1963, 112 pp, 30 Kop., , in Russian
+223 63.17(0).31 K. E. Ziolkowskij, Die Rakete im kosmischen Raum, Moskau, Akad. Wiss. UdSSR, 1963, 112 pp, 30 Kop., , in Russian;
 
 224 63.17(0).32 K.W. Gatland ed., Spaceflight Today, London, Iliffe Books Ltd., 1963, 254 pp, 30s, Spaceflight 6 141
 
@@ -475,11 +475,11 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 230 63.17(0).38 , Universitas comma Sonderheft: Weltraumfahrt, Stuttgart, Wissenschaftliche Verlagsgesellschaft mbH, 1963, 127 pp, DM 3.00, SuW 3 42
 
-231 63.17(2).89 E. V. B. Stearns, Navigation and Guidance in Space, New York, Prentice-Hall Inc., 1962, 341 pp, $9.00 and $12.00, J. Astronaut. Sci. 10 125, also published Englewood Cliffs ??
+231 63.17(2).89 E. V. B. Stearns, Navigation and Guidance in Space, New York, Prentice-Hall Inc., 1962, 341 pp, $9.00 and $12.00, J. Astronaut. Sci. 10 125, other also published Englewood Cliffs ??;
 
 232 63.17(2).95 C. T. Leondes ed., Guidance and Control of Aerospace Vehicles, London, McGraw-Hill Publishing Co. Ltd., 1963, 610 pp, $19.50, Sky Tel. 26 352
 
-233 63.17(2).96 , Kosmische Flugbahnen, Moskau, Verlag für ausläische Literatur, 1963, 243 pp, 81 Kop., RJ UdSSR 1963 9.51.603, translated from English to Russian
+233 63.17(2).96 , Kosmische Flugbahnen, Moskau, Verlag für ausläische Literatur, 1963, 243 pp, 81 Kop., RJ UdSSR 1963 9.51.603, translated from English into Russian;
 
 234 63.17(3).100 W. B. Hendrickson jr., Reach for the Moon, London, Railway Publications Ltd., 1963, 251 pp, 25s, Spaceflight 6 69
 
@@ -501,7 +501,7 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 243 63.19(0).17 F. Hoyle and G. Hoyle, Fifth Planet, New York, Harper & Row, 1963, 218 pp, $3.50, Sky Tel. 26 353
 
-244 63.19(0).18 F. Hoyle, Le nuage noir, Paris, Editions Dunod, 1962, 223 pp, , BSAF 78 114, translated into French by J. Quéval
+244 63.19(0).18 F. Hoyle, Le nuage noir, Paris, Editions Dunod, 1962, 223 pp, , BSAF 78 114, translated into French by J. Quéval;
 
 245 63.19(0).19 H. C. van de Hulst, Middel ed doel in de Sterrekunde, Haarlem, Bohn N. V., 1963, 20 pp, f 0.90, HeD 62 137
 
@@ -511,9 +511,9 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 248 63.19(0).34 , Album für astronomisch-weltraumtechnische Briefmarken, Hamburg, Verlag Paul Koch, 1963, , , Sternenbote 6 162
 
-249 63.19(1).50 G. Ehrensvärd, Espansion: Liv i universet, Copenhagen, Gyldendalske Boghandel Nordisk Forlag, 1963, , Kr. 12.60, Urania København 20 31, translated into Danish by D. J. Adler
+249 63.19(1).50 G. Ehrensvärd, Espansion: Liv i universet, Copenhagen, Gyldendalske Boghandel Nordisk Forlag, 1963, , Kr. 12.60, Urania København 20 31, translated into Danish by D. J. Adler;
 
-250 63.19(1).51 V. A. Firsoff, Life Beyond the Earth, London, Hutchinson and Co. Ltd., 1963, 320 pp, 42s and $7.50, Sky Tel. 27 113 and Sky Tel. 28 92 and Strolling Astr. 18 34, also published New York Basic Books
+250 63.19(1).51 V. A. Firsoff, Life Beyond the Earth, London, Hutchinson and Co. Ltd., 1963, 320 pp, 42s and $7.50, Sky Tel. 27 113 and Sky Tel. 28 92 and Strolling Astr. 18 34, also published New York: Basic Books;
 
 251 63.19(1).54 J. Herrmann, Leben aug anderen Sternen?, Gütersloh, C. Bertelsmann Verlag, 1963, 192 pp, DM 5.80, BSAF 78 33 and HeD 62 89 and Sky Tel. 26 290 and Sternenbote 7 87 and Strolling Astr. 18 31 and Strolling Astr. 18 34 and SuW 3 42 and VdS Nachr. 12 185
 
@@ -525,9 +525,9 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 255 63.02.01 G. Abetti, Storia dell’Astronomia, Firenze, Vallecchi, 1963, 463 pp, L7000, Coelum 32 93
 
-256 63.02.02 A. G. Abramjan, Tafeln des Mondkreises von Ananija Schirakazi, Erewan, Univ. Erewan, 1962, 110 pp, 61 Kop.,  , in Armenian and Russian
+256 63.02.02 A. G. Abramjan, Tafeln des Mondkreises von Ananija Schirakazi, Erewan, Univ. Erewan, 1962, 110 pp, 61 Kop.,  , in Armenian and Russian;
 
-257 64.02.03 R. H. Allen, Star Names – Their Lore and Meaning, New York, Dover Publications Inc., 1963, 563 pp, $2.35, Sky Tel. 28 38, reprint of the 1899 edition
+257 64.02.03 R. H. Allen, Star Names – Their Lore and Meaning, New York, Dover Publications Inc., 1963, 563 pp, $2.35, Sky Tel. 28 38, reprint of 1899;
 
 258 63.02.05 H. von Bronsart, Lebensbeschreibung der Sternbilder, Stuttgart, Franchk’sche Verlagshandlung, 1963, 164 pp, DM 16.80, Orion Schafthausen 9 127 and PAT 45 83 and Sky Tel. 27 113 and Sterne 39 252 and Sternenbote 6 162 and SuW 3 90 and VdS Nachr. 12 97 and ZfA 57 298
 
@@ -535,19 +535,19 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 260 63.02.46 E. J. Pokorny, Tropiciele niebieskich szlaków: Sredniowiecze Odrodzenie, Warsawa, Książka i Wiedza, 1963, 248 pp, 10 zł
 
-261 63.02.49 C.-A. Reichen, Geschichte der Astronomie, Stuttgart, Verlag Basilius-Presse, 1963, 112 pp, DM 12.80, VdS Nachr. 12 122, see also AJB 63.02.50
+261 63.02.49 C.-A. Reichen, Geschichte der Astronomie, Stuttgart, Verlag Basilius-Presse, 1963, 112 pp, DM 12.80, VdS Nachr. 12 122, other see also AJB 63.02.50;
 
-261 63.02.50 C.-A. Reichen, A History of Astronomy, New York, Hawthorn Books Inc., 1963, 112 pp, $5.95, Sky Tel. 27 176 and Sky Tel. 27 361, see also AJB 63.02.49
+261 63.02.50 C.-A. Reichen, A History of Astronomy, New York, Hawthorn Books Inc., 1963, 112 pp, $5.95, Sky Tel. 27 176 and Sky Tel. 27 361, other see also AJB 63.02.49;
 
-262 63.02.53 W. Schadewaldt, Graeske Stjernesagn, Københaven, Gyldendals Uglebøger, 1963, , Kr. 11.50, Urania Københaven 20 61, translated into Danish by O. Foss
+262 63.02.53 W. Schadewaldt, Graeske Stjernesagn, Københaven, Gyldendals Uglebøger, 1963, , Kr. 11.50, Urania Københaven 20 61, translated into Danish by O. Foss;
 
-263 63.02.58 S. Toulmin and J. Goodfield, Les déchiffremets du Ciel, Paris, Buchet-Chastel, 1963, 334 pp, fr. 18.00, BSAF 78 33 and La Nature 1963 518, translated from English by C. Janssens of AJB 61.02.60
+263 63.02.58 S. Toulmin and J. Goodfield, Les déchiffremets du Ciel, Paris, Buchet-Chastel, 1963, 334 pp, fr. 18.00, BSAF 78 33 and La Nature 1963 518, translated from English by C. Janssens; reprint of AJB 61.02.60;
 
-264 63.02.63  , Fragen zur Geschichte der physikalisch-mathematischen Wissenshaften, Moskau, <<Hochschule>>, 1963, 523 pp, 1R. 67 Kop., RJ UdSSR 1963 11.51.12, in Russian
+264 63.02.63  , Fragen zur Geschichte der physikalisch-mathematischen Wissenshaften, Moskau, <<Hochschule>>, 1963, 523 pp, 1R. 67 Kop., RJ UdSSR 1963 11.51.12, in Russian;
 
 265 63.03.08 J. L. E. Dreyer, Tycho Brahe, New York, Dover Publications, 1963, 405 pp, $2.00, Nature 202 44 and Sky Tel. 27 43 and Sky Tel. 27 364
 
-266 63.03.19 M. A. Hoskin, William Herschel and the Construction of the Heavens, London, Oldbourne Book Co., 1963, 199 pp, 35s and $6.00, Nature 202 328 and Sky Tel. 28 94, also published New York Norton & Co.
+266 63.03.19 M. A. Hoskin, William Herschel and the Construction of the Heavens, London, Oldbourne Book Co., 1963, 199 pp, 35s and $6.00, Nature 202 328 and Sky Tel. 28 94, also published New York: Norton & Co.;
 
 267 63.03.31 W. Norlind, Tycho Brahe, Stockholm, Natur och Kultur, 1963, 112 pp, 9:75, PAT 45 82
 
@@ -567,9 +567,9 @@ For volume AJB 63 Index to the Literature of 1963, started 20 June 2011, finishe
 
 275 63.08.40 , The Changing Concept of the Universe, London, Asia Publishing House, 1963, , , BSAF 78 34
 
-276 63.08.67 S. S. Moissejew, Neue Anschauugnsmittel für die mathematische Geographie und Astronomie Für comma Lehrer und Studenten pädagogischer Institute, Misnk, Ministerium für Hochschul- comma Mittleschul- comma Spezialschul- und Berufsbildung Weissruss. SSR, 1963, 246 pp, 39 Kop., , in Russian
+276 63.08.67 S. S. Moissejew, Neue Anschauugnsmittel für die mathematische Geographie und Astronomie Für comma Lehrer und Studenten pädagogischer Institute, Misnk, Ministerium für Hochschul- comma Mittleschul- comma Spezialschul- und Berufsbildung Weissruss. SSR, 1963, 246 pp, 39 Kop., , in Russian;
 
-277 63.08.72  , Praktische Schülerbeobachtungen für den Astronomieunterricht, Berlin, VEB Verlag Volk und Wissen, 1962, 118 pp, ö.S. 40, Stenenbote 7 55, edited by Deutschen Pädagogischen Zentralinstitut
+277 63.08.72  , Praktische Schülerbeobachtungen für den Astronomieunterricht, Berlin, VEB Verlag Volk und Wissen, 1962, 118 pp, ö.S. 40, Stenenbote 7 55, other edited by Deutschen Pädagogischen Zentralinstitut;
 
 
 
