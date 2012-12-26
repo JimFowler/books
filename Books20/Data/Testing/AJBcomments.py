@@ -45,7 +45,7 @@ class uWord (Grammar):
     # Match a bunch of punctuation marks.
     # Punctuation marks are usually used in the Other grammar
     # but occasionally get used in the main entries.
-    grammar=(RE(r"[-,!()<>?$£&.'′’/\w]+"))
+    grammar=(RE(r"[-,!()+<>?$£&.°'′’/\w]+"))
 
 class uAbrv (Grammar):
     # unicode possessive, (Was abreviation)

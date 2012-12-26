@@ -1,0 +1,535 @@
+﻿Entry format
+
+Num AJB_ID Author [and author [and…]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip subsection 34 and 35 in Part 4
+
+For volume AJB 59 Index to the Literature of 1959, started 3 Nov 2012, finished 22 Nov 2012, proofread 26 Dec 2012
+
+
+1 59.145(1).22 E. Hubble, The Realm of the Nebulae, , , , , , La Nature 88 230 and Phys. Blätter 16 88 and Publ ASP 71 553, reference AJB 58.124.16
+
+2 59.145(1).40 H. Shapley, The Inner Metagalaxy, , , , , , Nature 186 109, reference AJB 57.123.21
+
+3 59.133.25 S. B. Pickelner, Physik des interstellaren Mediums, Moskau, Verlag Akad. Wiss. UdSSR, 1959, 216 pp, 3R. 40 Kop., , in Russian;
+
+4 59.121.15 H.Schneller, Die Geschichte und Literatur (GuL) des Lichtwechsels der Veränderlichen Sterne Band IV, , , , , , BAV Rundbrief 8 11, reference AJB 57.110.10
+
+5 59.121.18 , Rocznik Astronomiczny Obserwatorium Krakowskiego 1960 Supplemento Internationale Nr. 31, Kraków, , 1960, 179 pp, 90 zł
+
+6 59.121.19 , English version of the remarks to the second edition of the General Catalogue of Variable Stars, , , 1959, 74 pp, , , other edited by IAU;
+
+ 7 59.111.09 Z. Kopal, Close Binary Systems, London, Chapman & Hall Ltd., 1959, 14+558 pp, $16.75, Proc. Phys. Soc. 75 942 and Publ ASP 71 552 and RH 40 199 and Sky Tel. 18 699 and Sky Tel. 19 303, also published New York: John Wiley & Sons;
+
+8 59.93(0).40 A. C. B. Lovell, Meteor Astronomy, Moskau, Phys.-Math. Staatsverlag, 1958, , 17R. 80 Kop., , translated into Russian; reprint of AJB 54.82.38;
+
+9 59.93(0).57 E. J. Öpik, Physics of Meteor Flight in the Atmosphere, , , , , , BAC 11 166, reference AJB 58.82.54
+
+10 59.94(0).07 J. D. Buddhue, The Oxydation and Weathering of Meteorites, , , , , , Meteoritika Nr. 17 133, reference AJB 57.83.04
+
+11 59.94(0).31 H. H. Nininger, Out of the Sky: An Introduction to Meteoritics, New York, Dover Publications Inc., 1959, 8+336 pp, $1.85, Phys. Blätter 16 88 and Publ ASP 72 220 and ZfA 49 70
+
+12 59.82(1).04 W. Sandner, Die Welt des Merkur, Murnau-München-Innsbruck-Basel, Verlag Sebastian Lux, 1959, 66 pp,  , El Universo 14 160 and Gaz astr 41 52 and Mitt. Planetenbeobachter 12 46 and Orion Schaffhausen 5 867 and Sterne 36 47 and Sternenbote 2 135 and VdS Nachr. 8 98 and Veröff. Urania-Sternw. Wien Nr. 2 56
+
+13 59.82(2).15 P. Moore, The Planet Venus, London, Faber & Faber Ltd., 1959, 151 pp, 18s and $3.75, PAT 41 90 and Sky Tel. 19 370, also published New York: Macmillan Co.;
+
+14 59.83(0).01 R. de Azevedo, Selene, Säo Paulo, Edicoes Pincar Ltda., 1959, 144 pp, 150 cruzeiros, Sky Tel. 19 306
+
+15 59.83(0).03 N. P. Barabaschow, Der Mond, Moskau, <<Sowjetrußland>>, 1958, 68 pp, 1R. 20 Kop, , in Russian;
+
+16 59.83(0).08 V. A. Firsoff, Strange World of the Moon: An Enquiry into Lunar Physics, London, Hutchinson and Co. Ltd., 1959, 10+226 pp, 25s, JBAA 70 240 and Nature 185 718 and Sky Tel. 19 372
+
+17 59.83(0).18 J. Klepešta and L. Lukeš, Mondkarten, Prag, Institut für Kartographie und Reproduktion, 1959, , DM 5.50, Sterne 36 175 and VdS Nachr.  9 18, translated by A. Rais;
+
+18 59.83(0).28 W. A. Schischakow, Vyprávění o Měsící, Prag, Verlag Práce, 1959, 61 pp, 1.85 Kčs, RH 40 142, translated from Russian by W. Špinka; 
+
+19 59.83(0).32 N. N. Sytinskaja, Die Natur des Mondes, Moskau, Phys.-Math. Staatsverlag, 1959, 176 pp, 4R. 25 Kop, Priroda 49 Nr. 2 118, in Russian;
+
+20 59.83(0).40 H. P. Wilkins, Moon Maps, New York, Macmillan, 1959, 38 pp and 27 charts, $6.00, Sky Tel. 20 163
+
+21 59.84.21 D. L. Cyr, Mars Revisited, Philadelphia, Dorrance & Co. Inc., 1959, , $3.00, Strolling Astronomer 13 152
+
+22 59.84.38 N. I. Kutscherow, Die neuesten Ergebnisse über Lebel auf Mars, Moskau, Verlag <<Snanie>>, 1959, 44 pp, 85 Kop., Priroda 48 Nr. 8 122, in Russian;
+
+23 59.84.66 , Ergebnisse der Marsbeobachtungen während der Perihel-opposition 1956 in der UdSSR, Moskau, Verlag Akad. Wiss. UdSSR, 1959, 194 pp, 8R. 80 Kop., Priroda 49 Nr. 4 123, in Russian;
+
+24 59.71.11 A. Beiser, Our Earth, , Dutton, 1959, 123 pp, $3.25, Sky Tel. 18 699
+
+25 59.71.24 B. Gutenberg, Physics of the Earth’s Interior, New York, Academic Press, 1959, 240 pp, $8.50, Ann. Géophys. 16 297 and Ciel et Terre 76 143 and Geophys. J. RAS 3 283 and Phil. Mag. (8) 5 421 and Science 131 1216
+
+26 59.71.26 P. M. Hurley, How Old is the Earth?, New York, Doubleday & Company Inc., 1959, 160 pp, $0.95, Sky Tel. 19 48
+
+27 59.71.28 H. Jeffreys, The Earth comma Its Origin comma History and Physical Constitution, Cambridge, University Press, 1959, 16+420 pp, 75s, Ciel et Terre 75 268 and Geophys. J. RAS 3 282 and Nature 184 1007 and Naturwissenschaften 46 540, 4th edition;
+
+28 59.71.47 A. F. Spilhaus, Satellite of the Sun; The Science of the Earth and its Surroundings, New York, Viking Press, 1958, 119 pp, $3.50, 
+
+29 59.71.50 K. Stumpff, Planet Earth, Ann Arbor MI, University of Michigan Press, 1959, 191 pp, $5.00, Sky Tel. 18 402, translated from German into English; reprint of AJB 55.72.23;
+
+30 59.71.59 L. H. Ahrens and F. Press and K. Rankama and S. K. Runcorn ed., Physics and Chemistry of the Earth vol 3,  London, Pergamon Press, 1959, , , Ann. Géophys. 16 156
+
+31 59.71.60 A. C. Spectorsky ed., The Book of Earth: being a Collection of Writings about the Earth in all its Aspects, New York, Appleton-Century-Crofts, 1957, 497 pp, $12.50
+
+32 59.72.31 T. Loebsack, Our Atmosphere, New York, Pantheon, 1959, 256 pp, $5.00, Science 130 262, translated from German into English by E. L Rewald and D. Rewald;
+
+33 59.72.32 H. S. W. Massey and R. L. F. Boyd, The Upper Atmosphere, London, Hutchinson & Co. Ltd., 1958, 12+333 pp, 63s and $17.50, Endeavour 18 163 and Proc. IRE 47 1791 and Publ ASP 71 357 and Sky Tel. 18 462 and Sky Tel. 18 698, also published New York: Philosophical Library Inc.; other New York publication in 1959;
+
+34 59.75.32 P. G. Konjajew, Zu den höheren Schichten der Atmosphäre Die Schafflung künstlichter Erdsatelliten und die Untersuchung der Ionosphäre, Belgorod, Buchverlag, 1959, 60 pp, 95 Kop., , in Russian;
+
+35 59.75.50 J. A. Ratcliffe, The Magneto-Ionic Theory and its Application to the Ionosphere, New York-London, Cambridge University Press, 1959, 10+206 pp, $7.50 and 40s, Ciel et Terre 75 170 and Nature 187 810 and Publ ASP 71 354
+
+36 59.78(0).08 M. A. Ellison, The Sun and Its Influence: An Introduction to the Study of Solar-Terrestrial Relations, London, Routledge and Kegan Paul Ltd., 1959, 14+237 pp, 25s, Nature 186 69, 2nd revised edition; also published Moskau: Phys.-Math. Staatsverlag; other translated into Russian cost 7R. 10 Kop;
+
+40 59.79.04 S. Chapman, Year of Discovery – The Story of the International Geophysical Year, Ann Arbor, University of Michigan Press, 1959, 112 pp, $4.95 and 40s, Nature 187 185, also published London: The Mayflower Publishing Co. Ltd;
+
+41 59.79.11 W. Sullivan, The International Geophysical Year, , Carnegie Endowment for International Peace, 1959, 78 pp, $0.25, J. Atmosph. Terr. Phys. 16 397
+
+42 59.61.02 K. Kiepenheuer, The Sun, Ann Arbor, University of Michigan Press, 1959, 160 pp, $5.00, Sky Tel. 19 48 and Sky Tel. 19 176, translated into English; reprint of AJB 57.60.09;
+
+43 59.61.06 D. H. Menzel, Our Sun, Cambridge MA, Harvard University Press, 1959, 10+350 pp, $7.50, J RAS Canada 54 199 and J. Optical Soc. America 50 496 and Sky Tel. 19 119 and Sky Tel. 19 301, other revised edition;
+
+44 59.51(0).01 F. A. Baum and S. A. Kaplan and K. P. Stanjukowitsch, Einführung in die kosmische Gasdynamik, , , , , , Math. Rev 21 224 and ZfMG 84 239, reference AJB 58.50.04
+
+45 59.51(0).09 J. W. Dungey, Cosmic Electrodynamics, , , , , , ZfMG 82 236, reference AJB 58.50.09
+
+46 59.51(1).44 , Magethydrodynamik, Moskau, Atom-Verlag, 1958, 122 pp, 4R. 60 Kop, , translated into Russian; reprint of AJB 57.11.86; edited by D. A. Frank-Kamenezkij;
+
+47 59.52.08 S. A. Kaplan, Interstellare Gasdynamik, , , , , , AJ UdSSR 37 593, reference AJB 58.53.05
+
+48 59.54.13 A. S. Eddington, The Internal Constitution of Stars, New York, Dover, 1959, 16+407 pp, $2.25, Publ ASP 72 223 and Sky Tel. 19 434 and ZfA 50 77
+
+49 59.54.23 W. S. Jardetzky, Theories of Figures of Celestial Bodies, , , , , , Math. Rev. 20 1039 and Phil. Mag. (8) 4 784, reference AJB 58.43.01
+
+50 59.54.24 M. Johnson, Astronomy of Stellar Energy and Decay, New York, Dover Publications, 1959, 216 pp, $1.50, Publ ASP  72 223, reprint of AJB 51.50.09;
+
+51 59.54.36 E. Schatzman, White Dwarfs, , , , , , Naturwissenschaften 47 118, reference AJB 58.97.21
+
+52 59.56.12 O. Schmidt, A Theory of the Origin of the Earth: Four Lectures, Moskau, Foreign Language Publishing House, 1958, 139 pp, 4s 6d, Spaceflight 2 124, also published London: Lawrence & Wishart; translated from Russian; reprint of AJB 57.55.10;
+
+53 59.41.07 E. Finlay-Freundlich, Celestial Mechanics, , , , , , AJ UdSSR 37 188 and Math. Rev. 21 884 and Nature 186 60 and ZfMG 82 235, reference AJB 58.42.10
+
+54 59.41.11 Y. Hagihara, Stability in Celestial Mechanics, , , , , , Nature 186 60, reference AJB 57.42.10
+
+55 59.41.20 R. Kurth, Introduction to the Mechanics of the Solar System, London-New York-Paris-Los Angeles, Pergamon Press, 1959, 9+177 pp, £2 2s, Ciel et Terre 75 379 and Sky Tel. 19 306 and Sky Tel. 19 493
+
+56 59.43.10 R. Kurth, Introduction to the Mechanics of Stellar Systems, , , , , , ZfMG 84 238, reference AJB 57.44.10
+
+57 59.43.12 K. F. Ogorodnikow, Dynamik von Sternsystemen, , , , , , RH 40 104, reference AJB 58.44.18
+
+58 59.44.06 J. A. Coleman, Relativity for the Layman, New York, Macmillan, 1959, 10+127 pp, $3.50, J RAS Canada 53 239 and Science 131 822, also published Harmondsworth Middlesex: Penguin Books Ltd.; other see also 59.44.07;
+
+59 59.44.07 J. A. Coleman, Relativiteitstheorie voor de leek, Utrecht-Antwerpen, Het Spectrum, 1959, 162 pp, f 1.25, Hemel en Dampkring 58 184, translated from English; reprint of AJB 59.44.06;
+
+60 59.44.14 V. Fock, The Theory of Space comma Time and Gravitation, London-New York, Pergamon Press, 1959, 18+411 pp, 100s, Nature 187 4 and Phil. Mag. (8) 5 199, translated from Russian into English by N. Kemmer;
+
+61 59.44.38 W. Pauli, The Theory of Relativity, , , , , , La Nature 87 510 and Nature 187 4 and Publ ASP 71 354, reference AJB 58.41.56
+
+62 59.44.41 L. Riger, Einführung in die Kosmologie, Moskua, Verlag für Ausländische Literatur, 1959, 130 pp, 4R., , translated from Tschechischen into Russian;
+
+63 59.44.43 B. Russell, The ABC of Relativity, London, Allen and Unwin, 1959, 139 pp, $3.50, Science 131 822, also published Fair Lawn NJ: Essential Books;
+
+64 59.44.45 D. W. Sciama, The Unity of the Universe, Garden City NY, Doubleday Anchor Books, 1959, 228 pp, $3.95, Sky Tel. 19 119 and Sky Tel. 19 432
+
+65 59.44.49 G. J Whitrow, The Structure and Evolution of the Universe: An Introduction to Cosmology, London, Hutchinson & Co. Ltd., 1959, 11+212 pp, 21s, Endeavour 19 119 and Irish AJ 5 182 and Obs 79 191 and Proc. Phys. Soc. 74 384 and Publ ASP 71 553 and Sky Tel. 18 462 and Sky Tel. 18 697, 2nd edition;
+
+66 59.44.50 G. J. Whitrow, Le struttura dell’universo, Milano, Longanesi e C., 1958, 305 pp, 1800 L, , translated from English into Italian
+
+67 59.31.29 , Astronomical Results from Observations made at the Royal Observatory Greenwich in the Year 1953, London, Her Majesties Stationary Office, 1959, 7+A72 pp, £1 5s,
+
+68 59.32(0).22 , Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Katalog dew 18 und 19 Jahrhunderts, Berlin, Akademie-Verlag, , 15+188 pp, 
+
+69 59.32(1).26 A Bečvář, Atlas Eclipticalis 1950.0, , , , , , AJ UdSSSR 37 782 and J RAS Canada 54 90, reference AJB 58.91.39
+
+70 59.32(1).27 A Bečvář, Atlas Coeli II – Katalog 1950.0, Prag, Verlag Akad. Wiss., 1959, 368 pp, 41 Kčs, RH 41 100 and RJ UdSSR 1960 Nr. 7 48 
+
+71 59.32(1).28 A. Brun, Atlas des <<Selected Areas>> du Mont-Wilson, , , , , , Ann d’Astrophys 22 190, other no publishing info;
+
+72 59.32(1).29 V. de Callataÿ, Atlas of the Sky, , , , , , J. British Interplanetary Soc. 17 192, reference AJB 58.91.41
+
+73 59.32(1).31 J. Klepeštra and A. Rükl, Mapa severní hvězdné oblohy, Prag, Verlag USGK, 1958,  , 23 Kčs, RH 40 120 and Vesmír 38 285
+
+74 59.36.25 A. A. Michajlow, Tafeln zur genäherten Lösung des umgekehrten geodätischen Problems, Leningrad, Verlag Akad. Wiss. UdSSR, 1958, 100 pp, 14R. 10 Kop., AJ UdSSR 36 973, in Russian;
+
+75 59.36.29 T. Niethammer, Die genauen Methoden der astronomisch-geographischen Ortsbestimmung, Moskau, Geod. Staatsverlag, 1958, 192 pp, 10R. 55 Kop., RJ UdSSR 1959 Nr. 10 23, translated into Russian; reprint of AJB 47.21.03;
+
+76 59.36.39 A. Tárczy-Hornoch and W. K. Hristow, Tafeln für das Krassowsky-Ellipsoid, Budapest, Akadémiai Kiadó, 1959, 219 and 440 pp, , Gerlands Beiträge Geophys. 69 128
+
+77 59.36.42 P. V. H. Weems and C. V. Lee, Marine Navigation, , , , , , J. Inst. Navigation 12 113, other check reference may be 59.33.35; reference AJB 58.133.35 
+
+78 59.36.43 , Höhen und Azimute von Gestirnen Band 3 Für die Breiten 40° -- 59°, Moskau, Hydrograph. Dienst Hochseeflotte, 1959, 10+295 pp, 54R. 70 Kop., , in Russian;
+
+79 59.21.25 N. Mayall and M. Mayall and J. Wyckoff, The Sky Observer’s Guide, New York, Golden Press, 1959, 125 pp, $2.95, J RAS Canada 54 90 and Publ ASP 72 143 and Sky Tel. 19 119 and Sky Tel. 19 366 and Sky Tel. 19 369 and Strolling Astronomer 13 153
+
+80 59.22(0).16 N. E. Howard, Standard Handbook for Telescope Making, New York, T. Y. Crowell Company, 1959, 10+326 pp, $5.95, J RAS Canada 54 200 and Publ ASP 72 222 and Sky Tel. 19 181 and Sky Tel. 20 158 and Strolling Astronomer 14 94
+
+81 59.22(0).19 A. König and H. Köhler, Die Fernrohre und Entfernungsmesser, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1959, 8+475 pp, DM 88.00, Coelum 28 58 and Mitt. Planetenbeobachtur 13 16 and Optik 17 232 and Sky Tel. 19 434 and VdS Nachr.  9 Nr. 3 8 and Z. Instrumentenkunde 68 124, 3rd edition;
+
+82 59.22(0).37 H. Rohr, Das Fernrohr für Jedermann, Zürich-Stuttgart, Rascher Verlag, 1959, 186 pp, DM 9.80, Sterne 36 174
+
+83 59.22(0).39 A. Rybarski, Teleskop zwierciadlany w wykonaniu amatorskim, Warszawa, Państw. Zakl. Wydawn. Szkoln., 1958, 118 pp, 8 zł, RJ UdSSR 1960 Nr. 2 72
+
+84 59.22(0).46 A. Staus, Fernrohrmontierungen und ihre Schutzbauten, München, UNI-Druck, 1959, 67 pp, DM 8.00, Sky Tel. 19 306 and Sterne 35 208 and Sternenbote 3 23 and VdS Nachr. 8 61, 2nd edition;
+
+85 59.22(0).47 J. Texereau, Les télescopes du type Cassegrain, Paris, Société Astronomique de France, 1959, 42 pp, 400 fr., J. Astr. Soc. Victoria 12 69, other sammlung eineiger Aufsätze aus BSAF 70 comma 71 reference AJB 56.21.21 and AJB 57.21.28;
+
+86 59.23.57 J. S. Jensen ed., Applied Solar Energy Research, Phoenix AZ, Association for Applied Solar Energy, 1959, 21+275 pp, $7.50, Science 130 1651 and Sky Tel. 19 181
+
+87 59.24(0).02 H. J. Cowan, Time and its Measurement: from the Stone Age to the Nuclear Age, Cleveland, World Publ. Co., 1958, 159 pp, $4.95
+
+88 59.24(0).04 B Decaux, La mesure précise du temps en fonction des exigencies nouvelles de la science, Paris, Masson et Cie. Editeurs, 1959, 126 pp, 1300 F., Ann d’Astrophys 22 294 and Ann. Françaises Chronométrie (2) 13 265 and Ciel et Terre 75 324 and La Nature 87 509 and Mem SA It (NS) 30 347 and RJ UdSSR 1960 Nr. 2 14
+
+89 59.24(1).42 L. M. Loske, Die Sonnenuhren comma Kunstwerke der Zeitmessung und ihre Geheimnisse, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1959, 8+88 pp, DM 7.80, Mitt. Planetenbeobachter 12 30 and Phys. Blätter 15 332 and ZfA 48 302 
+
+90 59.25.08 S. A. Kaplan, Jak vidět comma slyšet a fotografovat umělé družice Země, Prag, Verlag techn. Literatur, 1959, 88 p, 3.25 Kčs, RH 40 159 and Vesmír 38 318, translated from Russian;
+
+91 59.25.12 T. Rackham, Astronomical Photography at the Telescope, New York, Macmillan, 1959, 232 pp, $7.50 and 36s, Nature 186 190 and Obs 79 224 and Publ ASP 72 221 and Sky Tel. 18 699 and Sky Tel. 19 241 and Spaceflight 2 252 and Urania København 16 64, also published London: Faber & Faber Ltd.;
+
+92 59.11.01 G. Abetti, Explorazione dell’Universo, Bari, Laterza, 1959, 332 pp, L 2000, Astronautica 8 120 and Coelum 27 127
+
+93 59.11.02 G. Abetti and M. Hack, Le nebulose e gli universi-isole, Torino, Ed. Sci. Einaudi, 1959, 10+354 pp, L 3000, Astronautica 8 205 and Coelum 28 180
+
+94 59.11.03 L. H. Aller, Astrophysics: Nuclear Transformations comma Stellar Interiors comma and Nebulae, Moskau, Verlag für Ausländische Literatur, 1957, 325 pp, 17R. 75 Kop, , translated into Russian; reprint of AJB 54.50.01;
+
+95 59.11.04 R. H. Baker, Astronomy: A Textbook for University and College Students, Princeton-Toronto-London-New York, D. van Nostrand Company Inc., 1959, 8+547 pp, 52s 6d, Nature 186 69 and Sky Tel. 18 344 and Sky Tel. 18 459, 7th edition;
+
+96 59.11.05 F. Barmwater, Astronomi, Købehavn, Gads Forlag, 1959, 115 pp, kr. 15, NAT 1959 146, , 10th revised edition;
+
+97 59.11.06 P. Bergsøe, Verdensrummet og Vi, København, Glydendal, 1959, 334 pp, 29.75 kr and 37 kr and 46 kr, NAT 1959 71 and PAT 40 157 and Urania København 16 40
+
+98 59.11.07 B. J. Bok, The Astronomer’s Universe, , , , , , J RAS Canada 54 234 and Obs 79 192 and ZfMG 84 239, reference AJB 58.05.08
+
+99 59.11.08 E. Broda, Sily wazechswiata o cloneach promieniach i atomach, Warszawa, <<Wiedza Powszechnaz>>, 1957, 258 pp, 13 zł, , translated from German;
+
+100 59.11.09 W. Brunner, Die Welt der Sterne, Würzburg, Physica-Verlag, 1959, 258 pp, DM 16.00, , 2nd edition;
+
+101 59.11.10 A. Danjon, Astronomie générale: Astronomie sphérique et éléments de mécanique celeste, Paris, J. & R. Sennac, 1959, 446 pp, NF 90, , 2nd edition;
+
+102 59.11.11 R. D. Davis and H. P. Palmer, Radio Studies of the Universe, London, Routledge and Kegan Paul Ltd., 1959, 11+200 pp, $5.00 and 25s, Nature 186 59 and Obs 79 191 and Sky Tel. 19 181 and Sky Tel. 19 366, also published New York-Toronto-London-Princeton: D. van Nostrand Ltd.;
+
+103 59.11.12 M. G. Frascastoro, Corso di Astronomia, Catania, Università degli Studi, 1959, 12+280 pp, L. 2000, Coelum 27 127
+
+104 59.11.13 J. Gadomski, Człowick tworsy własny firmament, Warszawa, Iskry, 1959, 120 pp, 6 zł, Urania Kraków 30 428
+
+105 59.11.14 J. Gadomski, Obrazy nieba, Warszawa, Nasza Ksjęgarnia, 1959, 192 pp, 65 zł, Urania Kraków 30 396
+
+106 59.11.15 G. Gamow, Matter comma Earth comma and Sky, London, Macmillan & Co. Ltd., 1959, 14+593 pp, 50s, ZfMG 83 393
+
+107 59.11.16 G. Gamow, Die Geburt des Alls, München, H. Reich Verlag, 1959, 158 pp, DM 9.80, Phys. Blätter 15 578 and VdS Nachr. 9 15 and ZfA 49 229, translated by W. Petri;
+
+108 59.11.17 F. Gaynor, Concise Dictionary of Science, New York, Philosophical Library, 1959, 6+546 pp, $10.00, Publ ASP 71 356 and Sky Tel. 18 699
+
+109 59.11.18 A. Gieß, Der Horizont, Kassel, , 1959, 95 pp,
+
+110 59.11.19 H. Haber, Legendiges Weltall, Hamburg, Blüchert Verlag, 1959, 271 pp, DM 13.80, VdS Nachr. 9 84
+
+111 59.11.20 T. Hatanaka, The Universe and Stars, Tokyo, , 1957, , , Heavens 41 105, in Japanese;
+
+112 59.11.21 F. Hoyle, De donkere wolk, Baarn, Hollandia, 1959, 227 pp, f 7.90, Hemel en Dampkring 57 301
+
+113 59.11.22 M. O. Hyde, Exploring Earth and Space, New York-Toronto-London, McGraw-Hill Book Co., 1959, 160 pp, $3.00, Sky Tel. 19 119
+
+114 59.11.23 J. Klepešta and J. Sadil, Vesmír, Prag, Verlag Orbis, 1959, 153 pp, 23 Kčs, RH 41 62
+
+115 59.11.24 P. Kunaver, Putovanje po nebu, Sarajevo, <<Svjetlost>>, 1958, 135 pp,
+
+116 59.11.25 R. W. Kinizkij, Der Bau des Weltalls, Moskau, Phys.-Math. Staatsverlag, 1959, 64 pp, 1R. 5 Kop.
+
+117 59.11.26 C. Lebossé and C. Hémery, Travaux pratiques d’arithmétique et d’astronomie; Classe de 6e programme de 1957, Paris, F. Nathan, 1958, 58 pp, 130 fr,
+
+118 59.11.27 I. M. Levitt, Target for Tomorrow, , Fleet, 1959, 328 pp, $4.95, Sky Tel. 18 699
+
+119 59.11.28 A. C. B. Lovell, The Individual and the Universe, London, Oxford University Press, 1959, 7+111 pp, 10s 6d and $3.00, AJ UdSSR 36 1139 and Ciel et Terre 75 267 and Endeavour 18 161 and J. Inst. Navigation 12 260 and J RAS Canada 53 237 and Mem SO It (NS) 30 145 and Nature 183 1624 and Obs 79 114 and Sky Tel. 18 699 and Sky Tel. 19 116, other translated into German by K. Rohlfs??; also published New York: Harper & Brothers;
+
+120 59.11.29 L. Mattersdorf, Insight into Astronomy, New York, Lantern Press, 1959, 247, $4.00, Sky Tel. 18 579
+
+121 59.11.30 T. G. Mehlin, Astronomy, New York, John Wiley & Sons Inc., 1959, 8+392 pp, $7.95 and 64s, El Universo 13 206 and J RAS Canada 54 145 and J. Atmosph. Terr. Phys. 16 400 and Proc. Phys. Soc. 75 813 and Publ ASP 72 65 and Sky Tel. 18 522 and Sky Tel. 19 115 and Spaceflight 2 252 and ZfA 49 229, also published London: Chapman & Hall;
+
+122 59.11.31 J. Mielants, De mens en de sterren, Antwerpen, De Sikkel N. V., 1959, 140 pp, f 3.75, Hemel en Dampkring 58 184
+
+123 59.11.32 P. Moore, L’Astronomie, Firenze, Sansoni, 1959, 375 pp, L. 1000, Coelum 28 87, translated from English into Italian by G. Cecchini; reprint of AJB 57.05.46;
+
+124 59.11.33 V. L. Nadolschi, Curs de astronomie generalǎ Part 1, Iaşi, Lit. Inv., 1957, 237 pp, 18.20 Lei,
+
+125 59.11.34 J. Nangle, Stars of the Southern Heavens, , Angus and Robertson Ltd., 1958, , 18.00,  MN ASSA 18 45, edited by H. Wood;
+
+126 59.11.35 C. Orr jr., Between Earth and Space, New York, Macmillan, 1959, 9+253 pp, $4.95, Science 129 1480 and Sky Tel. 18 462
+
+127 59.11.36 W. Oskanjan, Der Sternhimmel, Belgrad, <<Narodna Kniga>>, 1958, 92 pp, , , in Serbo-Croatian;
+
+128 59.11.37 L. W. Page, A Dipper Full of Stars, Chicago, Follett Publishing Co., 1959, 223 pp, $2.95, Sky Tel. 18 344 and Sky Tel. 18 578
+
+129 59.11.38 P. P. Parenago, Hvězdná astronomie, Prag, Verlag Akad. Wiss., 1959, 544 pp, 27.50 Kčs, RH 41 39, translated from Russian into Czechoslovakian;
+
+130 59.11.39 J. C. Pecker and E. Schatzman, Astrophysique Générale, Paris, Masson et Cie Editeurs, 1959, 10+756 pp, 13000 Fr., Ann d’Astrophys 23 302 and Ann. Géophys. 16 158 and BSAF 74 44 and Ciel et Terre 76 143 and Endeavour 19 171 and Mem SA It (NS) 30 345 and La Nature 88 221 and Orion Schaffhausen 5 800 and Phys. Blätter 16 441 and Sky Tel. 19 181 and Sky Tel. 19 495 and ZfA 50 76
+
+131 59.11.40 J. Perelman, Saistošā astronomija, Riga, , 1958, , , Zvaigžņotā Debess 1959 gada vasara S. 53, other spelling of journal;
+
+132 59.11.41 J. Pfieffer, From Galaxies to Man, New York, Random House, 1959, 184 pp, $3.95, Science 130 1105
+
+133 59.11.42 J. Pfieffer, Het nieuwe heelal; ontdekkingen der radio-astronomie, Utrecht-Antwerpen, Prisma-boeken, 1959, 231 pp, f 1.25, Hemel en Dampkring 57 300
+
+134 59.11.43 I. F. Polak, Zeit und Kalender, Moskau, Phys.-Math. Staatsverlag, 1959, 48 pp, 65 Kop., , 4th edition; in Russian;
+
+135 59.11.44 P. I. Popow and N. J. Bugoslawskaja, Praktikum zur Astronomie, Moskau, Lehr-pädagog Staatsverlag, 1959, 123 pp, 2R. 50Kop.,  , in Russian; 2nd edition;
+
+136 59.11.45 F. Rapf, Zagadnienia z astronimii elementarnej; Zbiór-zadań, Warsawa, Państw. Zakł. Wydawn. Szkoln., 1957, 84 pp, 3.55 zł
+
+137 59.11.46 M. Rigutti, Appunti di Astronomia, Firenze, Ed. Universitaria, 1959, 138 pp,
+
+138 59.11.47 P. Rousseau, Histoire de l’Avenir, Paris, Hachette, 1959, 342 pp , 990 FF, Ciel et Terre 75 267
+
+139 59.11.48 L. Rudaux and G. de Vaucouleurs, Larousse Encyclopedia of Astronomy, London, Putnam & Co., 1959, 506 pp, $15.00, J. Astr. Soc. Victoria 13 12 and Science 130 1704 and Sky Tel.19 181 and Sky Tel. 19 431, translated into English by M. Guest and J. B. Sidgwick; other proofread by Z. Kopal;
+
+140 59.11.49 K. Rudnicki, Astronomia, Warsawa, Państwowe Zakłady Wydawnictw Szkolnych, 1959, 191 pp, 5.50 zł, , other textbook for the 11th class of middle school;
+
+141 59.11.50 W. Schroeder, Praktische Astronomie für Sternfreunde, Stuttgart, Franckh, 1959, 180 pp, DM 16.80, , 2nd edition;
+
+142 59.11.51 H. Shapley, Of Stars and Men, , , , , , El Universo 13 207, reference AJB 58.06.52
+
+143 59.11.52 H. Shapley, Världsrymden och vi comma Människans plats i den nya världsbilden, , Natur och Kultur, 1959,  170 pp, 15:50 and 20:00;
+
+144 59.11.53 J. B. Sidgwick, Introducing Astronomy, London, Faber & Faber Ltd., 1959, 259 pp, 6s, Nature 185 131 and Spaceflight 2 124
+
+145 59.11.54 J. R Smith, Teaching a Unit in Astronomy, , , , , , Obs 79 224, reference AJB 58.05.66
+
+146 59.11.55 A. Spitz and F. Gaynor, Dictionary of Astronomy and Astronautics, New York, Philosophical Library Inc., 1959, 6+439 pp, $6.00, Publ ASP 71 356 and Sky Tel. 18 278 and Sky Tel. 18 579
+
+147 59.11.56 O. Struve and B. Lynds and H. Pillans, Elementary Astronomy, New York, Oxford University Press, 1959, 10+396 pp, $7.00, J RAS Canada 54 89 and Nature 185 130 and Publ ASP 71 550 and Science 130 1401 and Sky Tel. 18 462 and Sky Tel. 19 237 and Southern Stars 18 143
+   
+148 59.11.57 K. A. Thernøe , Universet omkring os, Kopenhagen, Ejnar Munksgaards Forlag, 1959, , Kr. 8.00, Urania København 16 87
+
+149 59.11.58 O. Thomas, Sternzeiger für die Rocktasche des Himmelsfreundes, Salzberg-Stuttgart, <<Das Bergland-Buch>>, 1959, , DM 1.90, Gaz astr 41 53 and RH 40 80
+
+150 59.11.59 G. A. Tichow, Sechzig Jahre am Fernrohr, Moskau, Staatlicher Jundenverlag, 1959, 160 pp, 4R. 20 Kop., Priroda 49 Nr. 6 117, in Russian;
+
+151 59.11.60 A. Wallenquist, Nytt ljus över kosmiska gåtor, Uppala, Lindblads, 1959, 100 pp, 8.50 sv. Kr., PAT 40 157 and Urania Köbenhavn 16 79
+
+152 59.11.61 E. Zehren, Stjärnornas testamente comma Stjärnornas inflytande påmänniskans religiösa och kulturella utveckling, , Almqvist & Wiksell/Gebers, 1959, 431 pp, 36:00
+
+153 59.11.62 K. E. Ziolkowskij, Träumereien über Erde und Himmel, Moskau, Verlag Akad. Wiss. UdSSR, 1959, 96 pp, 1R. 60 Kop., Priroda 48 Nr. 6 124, in Russian;
+
+154 59.11.63 W. Zonn and K. Runicki, Astronomia Gwiaszdowa, Moskau, Verlag für Ausländische Literatur, 1959, 448 pp, 21R. 10 Kop., , translated into Russian; reprint of AJB 57.05.72;
+
+155 59.11.64 V. A. Ambarzumjan ed., Theoretical Astrophysics, , , , , , ZfMG 83 234, reference AJB 58.50.21
+
+156 59.11.65 P. M. Branley ed., Earth comma Air and Space, New York, American Museum Hayden Planetarium, 1958, 6+37 pp, $2.00, Publ ASP 71 356,
+
+157 59.11.66  , The Universe, , , , , , Obs 79 192, reference AJB 57.05.76
+
+158 59.11.67 , Das Universum – Unser Bild vom Weltall, , , , , , VdS Nachr. 8 79, reference AJB 58.05.83
+
+159 59.11.68 , Modell der Himmelskugel comma Beschreibung und Übungen, Moskau, Lehr-Pädagogischer Verlag, 1959, 51 pp, , , in Russian; compiled by M. M. Dagajew;
+
+160 59.11.69 I. Emin ed., Russian-English Glossary of Optics and Spectroscopy, New York, Interlanguage Dictionaries Publishing Corp., 1959, 78 pp, $10.00, J RAS Canada 54 146
+
+161 59.11.70 S. Flügge ed., Handbuch der Physik Band 51 Astrophysik II: Sternaufbau, , , , , , JBAA 70 149 and Publ ASP 71 551, reference AJB 58.50.20
+
+162 59.11.71 S. Flügge ed., Handbuch der Physik Band 52 Astrophysik III: Das Sonnensystem, Berlin-Göttingen-Heidleberg, Springer-Verlag, 1959, 7+601 pp, DM 148.00, Ann d’Astrophys 23 300 and Gaz astr 41 28 and Naturwissenschaften 47 23 and Proc. Phys. Soc. 75 326 and Sky Tel. 18 637 and Sky Tel. 18 640 and Z. angew. Phys. 12 192 and ZfA 49 68 
+
+162 59.11.72 S. Flügge ed., Handbuch der Physik Band 53 Astrophysik IV: Sternsysteme, Berlin-Göttingen-Heidleberg, Springer-Verlag, 1959, 8+565 pp, DM 142.00, Ann d’Astrophys 23 301 and Gaz astr 41 29 and Publ ASP 72 139 and Proc. Phys. Soc. 75 324 and Naturwissenschaften 46 587 and Science 130 1400 and Sky Tel. 19 44 and ZfA 49 70 
+
+163 59.12.01 Nicolaus Copernicus, Über die Kreisbewegungen der Weltkörper (De Revolutionibus Orbium Caelestium) Buch 1, Berlin, Akademie-Verlag, 1959, 179 pp, DM 14.50, Mitt. Planetenbeobachter 13 17, edited by G. Klaus; other with notes by A. Birkenmajer;
+
+164 59.12.02 , Three Copernican Treatises, New York, Dover Publications Inc., 1959, 10+283 pp, $1.75, Ciel et Terre 76 207 and Sky Tel. 20 43, translated by E. Rosen; 2nd edition;
+
+165 59.12.03 R. Descartes, Il mondo comma ovvero trattato della luce, Torino, Boringhieri, 1959, 138 pp., L 800, Coelum 28 24, translated by G. Cantelli;
+
+166 59.12.04 G. Galilei, Dialoghi dei massimi sistemi, Milano, Rizzoli, 1959, 592 pp, L 420, Coelum 28 24
+
+167 59.12.05 , Johannes Kepler Gesammelte Werke Band XVIII Briefe 1620—1630, München, C. H. Beck’sche Verlags-buchhandlung, 1959, 592 pp, DM 40.00 and 48.00, Gaz astr 41 49, edited by M. Caspar; 
+
+168 59.12.06 I. Newton, Sistema del mondo, Torino, Boringhieri, 1959, 149 pp, L800, Coelum 27 151
+
+169 59.12.07 , Max-Planck-Festschrift 1958, Berlin, VEB Duetscher Verlag der Wissenschaften, 1959, 415 pp, DM 54.00, , edited by B. Kockel and W. Macke and A. Papapetrou and W. Frank;
+
+170 59.12.08 W. J. Struve, Der Meridianbogen comma Ausgerwählte Kapitel, Moskau, Verlag Geod. Literatur, 1957, 256 pp, 15R., AJ UdSSR 36 1135, edited by S. G. Sudakow; in Russian;
+
+171 59.12.09 , G. A. Tichow Haupwerke in 5 Bänden Band 4 Astrobotanik und Astrophysik 1912—1957, Alma-Ata, Akad. Wiss. Kasach. SSR, 1959, 257, 13R. 40 Kop., , in Russian;
+
+172 59.13.02 A. Blaauw and G. Larsson-Leander and N. G. Roman and A. Sandage and H. F. Weaver and A. D. Thackeray ed., Second Conference on Co-ordination of Galactic Research, Cambridge-New York, University Press, 1959, 93 pp, 15s and $3.00, Ann d’Astrophys 22 931 and Nature 185 801 and Obs 79 193 and Sky Tel. 18 552 and ZfA 48 78, other IAU symposium 7;
+
+173 59.13.04 R. N. Bracewell ed., Paris Symposium on Radio Astronomy, Stanford CA, Stanford University Press, 1959, 12+612 pp, $15.00, Ann d’Astrophys 22 929 and BSAF 73 337 and BSAF 74 94 and Math. Rev. 21 885 and Nature 184 1755 and Phys. Abstr. (A) 63 1036 and Publ ASP 72 141 and Sky Tel. 18 640 and Sky Tel. 19 175 and ZfA 19 231, other IAU Symposium 9 and USRI Symposium 1;
+
+174 59.13.09 F. Hecht ed., IX Internationaler Astronautischer Kongreß, Wien, Springer-Verlag, 1959, 12+506 and 2+463 pp, DM 208.00, Astronaut. Acta 5 381 and Coelum 27 180, other two volumes;
+
+175 59.13.13 B. Lehnert ed., Electromagnetic Phenomena in Cosmical Physics, , , , , , Nature 186 67 and RH 40 143, reference AJB 58.11.60
+
+176 59.13.21 , Probleme des Plasmas in Physik und Astronomie, , , , , , RH 40 120, reference AJB 58.11.63
+
+177 59.13.22 , Proceedings of the Nationwide Amateur Astronomers Convention, Golden CO, R. A. Spencer, 1959, 8+193 pp, $3.50, Publ ASP 72 67, other privately published by R. A. Spencer comma 4430 Gladiola Street comma Route 1 comma Golden CO;
+
+178 59.13.23 , Veröffentlichungen der Tagung über die Erforschung der Szintillation der Sterne, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1959, 263 pp, 10R., , in Russian;
+
+179 59.13.24 , Die Internationale Konferenze über kosmische Strahlung, Moskau, Verlag Akad. Wiss. UdSSR, 1959, 224 pp
+
+180 59.13.25 , Advances in Astronautical Sciences Volume 4, New York, Plenum Press Inc., 1959, 460 pp, 80s, Astronaut. Acta 5 380 and Nature 185 798, also published London: Chapman & Hall Ltd.;
+
+181 59.13.26  , Séminaire de mécanique analytique et de mécanique celeste comma dirigé par Maurice Janet: 1re année 1957/58, Paris, Secrétariat mathématique, 1958, 3+104 pp, , Math. Rev. 21 475,
+
+182 59.13.27 , Società Astronomica Italiana Atti dei Convegni Astronomici di Venezia e Napoli, Pavia, Industria Grafica Mario Ponzio, 1959, 128 pp,
+
+183 59.13.28 , Astronautics and Space Exploration: Hearings before the Select Committee on Astronautics and Space Exploration comma Eighty-fifth Congress comma Second Session on H.R. 11881, Washington DC, Government Printing Office, 1958, 8+1542 pp, $4.50, J. British Interplanetary Soc. 17 155
+
+184 59.14.04 , Mathematisches Wörterbuch Mathematical Dictionary Russisch-Deutsch-English, Berlin, VEB Deutscher Verlag der Wissenschaften, 1959, 244 pp, DM 9.80
+
+185 59.15.02 J. Jeenel, Programming for Digital Computers, New York-Tokyo-London, McGraw-Hill Book Company Inc., 1959, 8+517 pp, $12.00, Science 132 82
+
+186 59.15.05 E. M. McCormick, Digital Computer Primer, New York, McGraw-Hill Book Co., 1959, 10+214 pp, $7.50, Science 132 82
+
+187 59.15.06 D. D. McCracken and H. Weiss and T.-H. Lee, Programming Business Computers, New York, Wiley & Sons, 1959, 17+510 pp, $10.25, Science 132 82, also published London: Chapman & Hall;
+
+188 59.15.07 R. Nett and S. A. Helzler, An Introduction to Electronic Data Processing, Glencoe IL, Free Press, 1959, 287 pp, $6.75, Science 132 82
+
+189 59.15.12 C. V. L. Smith, Electronic Digital Computers, New York, McGraw-Hill Book Company Inc., 1959, 9+443 pp, $12.00, Rev. Sci. Instruments 30 1138
+
+190 59.15.13 B. Thüring, Einführung in die Methoden der Programmierung kaufmännischer und wissenschaftlicher Probleme für elektronische Rechenanlagen Teil 2: Automatische Programmierung dargestellt an der Univac Fac-Tronic, Baden-Baden, Robert Göller Verlag, 1958, 169 pp, DM 30.00, Math. Rev. 21 188
+
+191 59.15.15 R. Tomovic, Calculateurs analogiques répétitifs, , , , , , Math. Rev. 21 452, reference AJB 58.03.14
+
+192 59.15.16 S. R. Williams, Digital Computing Systems, New York, McGraw-Hill, 1959, 10+229 pp, $7.75, Science 132 82
+
+193 59.15.17 M. H. Wrubel, A Primer of Programming for Digital Computers, New York, McGraw-Hill Book Co., 1959, 15+230 pp, $7.50, Science 132 82
+
+194 59.16(0).25 H. C. van de Hulst, Light Scattering by Small Particles, , , , , ,  J RAS Canada 54 91, reference AJB 58.50.09
+
+195 59.16(0).42 J. G. Malkin, Theorie der Stabilität einer Bewegung, München, Verlag R. Oldenbourg, 1959, 8+402 pp, DM 47.00, Phys. Ber. 38 1830, translated from Russian by W. Hahn and R. Reissig; also published Berlin: Akademie Verlag;
+
+196 59.16(0).66 G. Traving, Über die Theorie der Druckverbreiterung von Spektrallien, Karlsruhe, Verlag G. Braun, 1959, 115 pp, DM 27.00, ZfA 49 231
+
+197 59.16(0).68 A. B. Underhill and J. H. Wadell, Stark Broadening Functions for the Hydrogen Lines, Washington DC, Government Printing Office, 1959, 8+94 pp, $0.65, J RAS Canada 53 238 and ZfA 49 230, other National Bureau of Standards Circular 603;
+
+198 59.17.08 R. W. Buchheim, Space Handbook: Astronautics and its Applications, New York, Random House, 1959, 16+330 pp, $3.95, Science 131 1215
+
+199 59.17.12 K. Cuypers, Op reis naar de maan, Antwerpen, De Sikkel N.V., 1959, 143 pp, Bfr 48, Hemel en Dampkring 57 301
+
+200 59.17.13 G. Depierre, Wat de kunstmanen beloven; Interplanetaire reizen, ‘s-Gravenhage, J. Philip Kruseman, 1958, 56 pp, 2.70 fl
+
+201 59.17.15 E. Franquinet, De sprong in de derde dimensie comma verleden comma heden ent toekomst van de ruimtevaart, , W. de Haan N.V. Zeist, 1959, 158 pp, f 2.95, Hemel en Dampkring 58 185
+
+202 59.18.18 R. A. Gallant, Man’s Reach into Space, , Garden City Books, 1959, 152 pp, $3.50, Sky Tel. 19 306
+
+203 59.17.19 M. Goodrich, Gravity and Interplanetary Travel, New York, Vantage Press, 1958, 72 pp, $2.50, J. Atmosph. Terr. Phys. 16 397
+
+204 59.17.22 W. B. Hendrickson jr., Handbook for Space Travellers, Indianapolis, Bobbs-Merrill Co. Inc., 1959, 256 pp, $3.95, Sky Tel. 19 372 and Sky Tel. 20 42
+
+205 59.17.26 H. K. Kaiser, Zu fremden Gestirnen: Die Weltraumfahrt in Gegenwart und Zukunft comma eine kurze Einführung in die Astronautik, Baden-Baden, Signal-Verlag, 1959, 148 pp, DM 8.50, Weltraumfahrt 11 29
+
+206 59.17.29 B. Ljapunow, Die Entdeckung der Welt, Moskau, <<Junge Garde>>, 1959, 208 pp, 4R. 80 Kop., , in Russian; 2nd edition;
+
+207 59.17.36 H. E. Newell jr., Sounding Rockets, New York-Toronto-London, McGraw-Hill Book Company Inc., 1959, 7+334 pp, $12.50, Rev. Sci. Instruments 30 1139 and Sky Tel. 18 579
+
+208 59.17.37 J. H. Oort, Ruimtevaart en haar betekenis voor de natuurwetenschap, Amsterdam, N.V. Noordhollandsche Uitgevers Maatschappij, 1959, 26 pp, f 2.50, Hemel en Dampkring 57 185
+
+209 59.17.43 R. Rothmayer, Rakets comma Sputnik comma Weltraumschiff, , , , , , Astronaut. Acta 5 385, reference AJB 58.134.309
+
+210 59.17.44 R. Rothmayer, La conquista dello spazia, Milano, Parenti, 1959, 20+349 pp, L 1800, Coelum 28 56, translated by G. Bonfanti; reprint of AJB 58.134.309;
+
+211 59.17.46 K. Schütte, La route du ciel est ouverte, Paris, Dunod, 1959, 224 pp, 960 F, La Nature 87 559, translated by C. Mamontoff;
+
+212 59.17.47 K. Schütte, Il future è nello spazio, Milano, Mondadori, 1959, 217 pp, L 350, Coelum  27 127, translated into Italian; reprint of AJB 58.134.78;
+
+213 59.17.50 A. Sternfeld, Soviet Space Science, New York, Basic Books Inc., 1959, 361 pp, $6.00, JBAA 70 239 and Nature 187 884 and Sky Tel. 18 462 and Sky Tel. 18 640 and Spaceflight 2 156, translated from Russian; other forward by W. Ley;
+
+214 59.17.53 C.-C. Troebst, Der Griff nach dem Mond; Amerika und Rußland im Kampf um den Weltraum, Düsseldorf, Econ-Verlag, 1959, 251 pp, DM 12.80, 
+
+215 59.17.54 C.-C. Troebst, Assalto alla Luna, Firenze, Sansoni, 1959, 265 pp, , Coelum 28 86, translated from German by M. Carlà;
+
+216 59.17.55 C.-C. Troebst, De greep naar de maan, Baarn, In den Toren, , 249 pp, f8.90, Hemel en Dampkring 58 186, translated from German; other check place/publisher;
+
+217 59.17.56 M. Vertregt, Grondbeginselen der ruimtevaart, Haarlem, E. F. Bohn, 1959, 16+208 pp, f 16.00, Hemel en Dampkring 58 130
+
+218 59.17.57 T. de Vries, Het heelal comma onderzoek naar het leven in de ruimte, Amsterdam-Brüssel, Elsevier, 1959, 152 pp, f1.50, Hemel en Dampkring 58 185
+
+219 59.17.59 K. Zarankiewicz, Astronautyka popularna, Warsawa, Państwowe Wydawnictwo Naukowe, 1959, 316 pp, 25 zł, 
+
+220 59.17.60 M. Alperin and M. Stern and H. Wooster ed., Vistas in Astronomy Vol 1, , , , , , Astronaut. Acta 5 381, reference AJB 58.143.100
+
+221 59.17.61 M. Alperin and H. F. Gregory ed., Vistas in Astronomy Vol 2, London, Pergamon Press, 1959, 318 pp, £5 5s, Ciel et Terre 75 268 and Nature 186 59 and Sky Tel. 19 434
+
+222 59.17.62 G. Merrill ed., Dictionary of Guided Missiles and Space Flight, New York-London-Toronto, D. Van Nostrand Company Inc., 1959, 6+668 pp, 31s 6d and $2.50, Spaceflight 2 125
+
+223 59.17.63 F. I. Ordway III, Advances in Space Science Vol 1, New York, Academic Press, 1959, 412 pp, $12.00, Science 131 1880
+
+224 59.17.64 K. Schütte ed., Handbuch der Astronautik Lfg. 1, , , , , , VdS Nachr. 9 84 and Weltraumfahrt 11 29, reference AJB 58.134.99 
+
+225 59.17.65 H. S. Seifert ed., Space Technology, New York, John Wiley & Sons Inc., 1959, 16+1231 pp, $22.50, Nature 187 884 and Sci. Instruments 31 355 and Science 131 1215 and Sky Tel. 19 48, also published London: Chapman & Hall;
+
+226 59.17.66 , Die Erforschung des Weltraums, Moskau, Phys.-Math. Staatsverlag, 1959, 272 pp, 8R. 30 Kop, Priroda 49 Nr. 2 118, translated from English into Russian;
+
+227 59.17.67 , ZMP un starpplanētu lidojumi, Riga, ZA izdevniecība, 1959, , , Zvaigžņotā Debess 1959 gada vasara 52
+
+228 59.17.68 , Space Handbook: Astronautics and Its Applications, Washington DC, Government Printing Office, 1959, 252 pp, $0.60, Sky Tel. 18 259
+
+229 58.18(0).03 S. G. Alexandrow and R. E. Fedorow, Sowjetische Erdsatelliten und die kosmische Rakete, Moskau, Verlag Akad. Wiss. UdSSR, 1959, 232 pp, 3R. 50 Kop., RH 40 183, in Russian;
+
+230 59.18(0).07 R. André, Les satellites artificiels et l’astronautique, Paris, Dunod, 1959, 134 pp, 780 fr, La Nature Nr. 3300 3 Umschlagseite
+
+231 59.18(0).35 K. Gilzin, Sputniks and After, London, Macdonald and Co. Ltd., 1959, 285 pp, 21 s, Nature 184 836 and Spaceflight 2 125, translated from Russian by P. Rose;
+
+232 59.18(0).62 W. I. Lewantowskij and W. A. Leschkowzew and I. I. Rachlin, Die sowjetische Rakete erforscht den Kosmos, Moskau, Phys.-Math. Staatsverlag, 1959, 128 pp, 2R. 10 Kop., , in Russian;
+
+233 59.18(0).63 W. I. Lewantowskij, Dagli sputnik al pianeta artificiale, , Ed. Ruiniti, 1959, 204 pp, L 1700
+
+234 59.18(0).69 L. Mallan, Space Satellites, London, Muller, 1958, 144 pp, 5s
+
+235 59.18(0).113 A. Sternfeld, Künstliche Satelliten, Leipzig, B. G. Teubner Verlagsgeschellschaft, 1959, 268 pp, DM 12.90, Glasnik Mat.-Fiz. Astr. (2) 14 307 and Sterne 36 48 and VdS Nachr. 9 41, translated from Russian by F. Bartels and R. Ziegenbein;
+
+236 59.18(0).114 A. Stoenescu, Racheta și satelitul artificial comma Elemente teoretice, București, Ed. tehn., 1958, 56 pp, 2 Lei,
+
+237 59.18(0).137 H. Reichardt and E. A. Niekisch ed., Künstliche Erdsatelliten, Berlin, Akademie-Verlag, 1959, 8+357 pp, DM 38.00, Gerlands Beiträge Geophys. 69 124 and Mitt. Planetenbeobachter 12 44 and VdS nachr. 9 17 and Weltraumfahrt 11 28 and Z. Geophys. 25 159, translated from Russian into German;
+
+238 59.18(0).138 , Soviet Writings on Earth Satellites and Space Travel, London, , 1959, , 18s, Urania København 16 52
+
+239 59.18(0).139 , Wissenshaftliche Probleme künstlicher Erdsatelliten, Moskau, Verlag für ausländiche Literatur, 1959, 527 pp, 20R. 55 Kop., Priroda 49 Nr. 1 123, in Russian;
+
+240 59.18(0).140 , High Altitude and Satellite Rockets, New York, Philosophical Library, 1959, 136 pp, $15.00, Sky Tel. 18 522
+
+241 59.18(0).141 , O první kosmické raketě (Sborník), Praha, SNTL, 1959, 64 pp, 2.50 Kčs
+
+242 59.19(0).15  W. Gundel, Sternglaube comma Sternreligion und Sternorakel, Heidelberg, Verlag Quelle & Meyer, 1959, 168 pp, DM 7.50, Mitt. Planatenbeobachter 12 29 and VdS Nachr. 9 16, 2nd edition;
+
+243 59.19(0).16 J. Hausen, Sterne comma Gene und Mesonen, Bremen, Carl Schünemann-Verlag, 1959, 314 pp, DM 14.80, VdS Nachr. 9 83
+
+244 59.19(0).28 R. Tomaschek, Kosmische Kraftfelder und astrale Einflüsse, Aalen Württ., Ebertin-Verlag, 1959, 93 pp, , Sterne 36 172
+
+245 59.19(0).29 J. Verne, Rejsen til Maanen, København, Gyldendal, 1959, , , Urania København 16 51, translated from French by T. Palsbo; other reprint of Journey to the Center of the Earth??;
+
+246 59.01(01).85 K. Heinemann and F. Henn and W. Lohmann ed., Astronomischer Jahresbericht Band 57, Berlin, Walter de Gruyer & Co., 1959, 38+525 pp, DM 60.00
+
+247 59.02.24 A. Koestler, The Sleepwalkers, New York, Macmillan Company, 1959, 624 pp, $6.50, J. Inst. Navigation 12 260 and Science 130 326 and Sky Tel. 18 522 and Sky Tel. 18 577
+
+248 59.02.25 A. Koestler, Die Nachtwandler, Bern-Stuttgart-Wien, Alfred Scherz Verlag, 1959, 590 pp, DM 24.80, , translated from English into German by W. M. Treichlinger;
+
+249 59.02.26 P. Kunitzsch, Arabische Sternamen in Europa, Wiesbaden, Otto Harrossowitz, 1959, 6+240 pp, DM 28.00, Naturwissenschaften 47 384 and Sky Tel. 19 306 and VdS Nachr. 9 67
+
+250 59.02.35 J. Needham and L. Wang, Science and Civilization in China vol 3 Mathematics and the Sciences of the Heavens and the Earth, London, Cambridge University Press, 1959, 47+877 pp, 150s, Endeavour 19 118
+
+251 59.02.36 O. Neugebauer, The Exact Sciences in Antiquity, , , , , , ZfMG 84 2, reference AJB 57.13.48
+
+252 59.02.39 N. V. E. Nordenmark, Astronomiens historia i Sverige intill år 1800, Uppsala, Almqvist & Wiksells Boktr., 1959, 16+295 pp, 42:00 and 54:00, PAT 40 155
+
+253 59.02.50 P. Rousseau, Man’s Conquest of the Stars, London, Jarrolds Publishers Ltd., 1959, 356 pp, 25s, Nature 186 69 and Publ ASP 72 66 and Sky Tel. 18 522 and Sky Tel. 18 698
+
+254 59.02.58 T. Ungerer and C. Ungerer and L. Leclere, L’horloge astronomique de la cathédrale de Strausboug comma historique comma description comma fonctionnement, Straßburg, Roux, 1958, 48 pp, 200 fr., , 10th edition;
+
+255 59.02.60 E. Whittaker, From Euclid to Eddington: A Study of Conceptions of the External World, New York, Dover Publications Inc., 1959, 9+212 pp, $1.35, ZfA 49 69, reprint of AJB 49.13.16;
+
+256 59.02.61 H. Woolf, The Transits of Venus: A Study of Eighteenth-Century Science, Princeton NJ, Princeton University Press, 1959, 13+258 pp, $6.00 and 48s, J RAS Canada 54 197 and Nature 187 636 and Publ ASP 72 219 and Science 131 723 and Sky Tel. 19 181 and Sky Tel. 19 431, also published London: Oxford University Press;
+
+257 59.02.63 P. G. Kulikowskij ed., Historische-astronomische Untersuchungen Band 3, , , , , , RJ UdSSR 1959 Nr. 10 3, reference AJB 57.13.90
+
+258 59.02.64 P. G. Kulikowskij ed., Historische-astronomische Untersuchungen Band 5, Moskau, Staatsverlag für physikalische-mathematische Literatur, 1959, 468 pp, 13R. 80 Kop., Priroda 48 Nr. 11 126 and RJ UdSSR 1960 Nr. 1 3, in Russian;
+
+259 59.02.65 , Al-Biruni on Transits, Beirut, American University, 1959, 201 pp, 6.25 Lebanese £, Sky Tel. 19 501 and Sky Tel. 20 99, translated into English by M. Saffouri and A. Ifram and E. S. Kennedy;
+
+260 59.03(0).03 M. Caspar, Kepler, New York, Abelard-Schuman, 1959, 401 pp, $7.50, J RAS Canada 54 198 and Science 131 1203 and Sky Tel. 19 434 and Sky Tel. 19 494, translated from German by C. D. Hellman; edited by C. D. Hellman;
+
+261 59.03(0).32 L. Wörner and P. Nell and J. Deutsch and W. Tripmacker ed., Bruno H. Bürgel zum Gedenken, Leipzig, Verlag Johann Ambrosius Barth, 1959, 92 pp, , RH 40 200 and Sternenbote 3 10
+
+262 59.03(0).33 J. C. Poggendorff, Biographische-Literarisches Hardwörterbuch der Exakten Naturwissenschaften Band VIIa Teil 3 L—R, Berlin, Akademie Verlag, 1959, 224 pp, , , edited by R. Zaunick and H. Salié;
+
+263 59.05.19 M. Jagger ed., Planetaria and their Use for Education, Bloomfield Hills MI, Cranbrook Institute of Science, 1959, 205 pp, $3.50, Sky Tel. 18 699 and Sky Tel. 19 180
+

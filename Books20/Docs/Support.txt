@@ -20,3 +20,7 @@
      javamail 1.4.2 -- jave mail interface -- java.sun.com
      jaf 1.1.1 -- java activation engine -- java.sun.com
   Jabraf 2.5  -- Jave program to deal with BibTeX databases -- Ubuntu
+  Python 3.2.3 -- object oriented programming language -- Ubuntu
+     modgrammer 0.8 -- grammer parser -- 3rd party
+     nameparser 0.2.0 -- human name parser -- 3rd party
+  Sphinx 1.1.3 -- documentation generator, good with python -- Ubuntu
