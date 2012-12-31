@@ -1,69 +1,24 @@
-""" An entry class based on dict
-"""
-
-class Entry(dict):
-    def __init__(self, _entrystr=None):
-        self._entryVersion = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
-        self._Valid = False
-
-        self.blankEntry()
-
-        if(_entrystr):
-            self.extract(_entrystr)
-
-    def isValid(self):
-        return self._Valid
-
-    def version(self):
-        return self._entryVersion
-
-    def blankEntry(self):
-        """Initialize a blank entry by setting known fields to
-        null values and deleting all other fields.
-        """
-        keys = list(self.keys())
-        for k in keys :
-            del(self[k])
-
-        self['Index'] =       -1
-        self['Num'] =         {'volNum':-1,
-                               'sectionNum':-1,
-                               'subsectionNum':-1,
-                               'entryNum':-1,
-                               'volume': ''}
-        self[ 'Authors'] =    []
-        self[ 'Editors'] =    []
-        self[ 'Compilers'] =    []
-        self[ 'Contributors'] =    []
-        self[ 'Translators']= []
-        self[ 'Others'] =     []
-        self[ 'Title'] =      ''
-        self[ 'Publishers'] = []
-        self[ 'Year'] =       -1
-        self[ 'Pagination'] = ''
-        self[ 'Price'] =      ''
-        self[ 'Reviews'] =    []
-        self[ 'Comments'] =   ''
-        self[ 'OrigStr'] =    ''
-
-    def extract(self, line):
-        assert 0, "extract() method required"
-
 
 import re
+
+from entry import *
 from AJBcomments import *
 from nameparser import HumanName
 
+
+__ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
+
 class AJBentry(Entry):
-    """Extract the information for a line in ajb??_books.txt and
-    put the data in the _EntryDict dictionary.
+    """Read the information from a line in ajb??_books.txt and
+    put the data in the AJBentry dictionary. The entry is valid
+    if there was a valid AJB number (vol.section.index) and a title.
 
     A line looks like:
 
     Index AJB_Num Author, Title, Place, Publisher, Year, \
     Pagination, Price, Reviews, Comments
     
-    No field need be present except Index and AJB_Num.
+    No field need be present except Index, AJB_Num, and Title.
     
     Field 1 Index AJB_Num Author has format
 
@@ -73,7 +28,7 @@ class AJBentry(Entry):
     Field 2 Title
        
     Field 3 Place
-        [name | name-name[-name[-...]] Name may contain spaces
+       [name | name-name[-name[-...]] Name may contain spaces
 
     Field 4 Publisher
 
@@ -83,25 +38,53 @@ class AJBentry(Entry):
 
     Field 7 Price
 
+       [n+nnn [and nn+nnn [and ...] pp]]
+
     Field 8 Reviews
 
-     [Journal vol page [and Journal vol page [and ...]]]
-
-     Need to pull the Journal and reference from here
+       [Journal vol page [and Journal vol page [and ...]]]
 
     Field 9 Comment
-
-     Need to do something with these. They contains editions, editors,
-      translators, and other people as well as references and language.
+     
+       See AJBcomments.py for a description of the comments grammer
 
     """
-    _ajbVersion = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 
     def version(self):
-        return self._ajbVersion + " " + self._entryVersion
+        return __ajbVersion__ + ": " + super(AJBentry, self).version()
 
+    def numStr(self):
+        """Return a stringfied version of the Num entry
+        """
+        a = self['Num']
+        if a:
+            st = str(a['volume'])
+            st = st + ' ' + str(a['volNum']) 
+            st = st + '.' + str(a['sectionNum'])
+            if a['subsectionNum'] > -1:
+                st = st + '(' + str(a['subsectionNum']) + ')'
+            st = st + '.' + str(a['entryNum'])
+            return st
+        else:
+            return None
 
-    def extract(self, line):
+    def isValid(self):
+        if self.isValidAjbNum() and self['Title'] != '':
+            return True
+        else:
+            return False
+
+    def write(self):
+        """Write an AJBentry back into the string format that it came from.
+        It should be the case that write(read(ajbstr)) == ajbstr up to
+        the order of the comments and that read(write(ajbent)) == ajbent."""
+
+        assert 0, 'still need to create AJBentry.write()'
+
+    def read(self, line):
+        """Parse a line with an AJB entry in it placing the values in the
+        Entry dictionary."""
+ 
         Place = ""
         PublisherName = ""
 
@@ -123,7 +106,7 @@ class AJBentry(Entry):
                 field = field.strip()
                 field = field.replace(' comma ', ', ' )
                 if 0 == fieldNum:  # AJBnum and Authors
-                    self.parseField0( field )
+                    self._parseField0( field )
                     
                 elif 1 == fieldNum:  # Title
                     self['Title'] =  field 
@@ -150,16 +133,41 @@ class AJBentry(Entry):
                     
                 elif 8 == fieldNum:   # Comments and other material
                     self['Comment'] = field
-                    self.parseComments( field )
+                    self._parseComments( field )
 
-            self._Valid = True
-            return
+        return
 
-        else:  # not a valid line
-            self._Valid = False
-            return
+    def isValidAjbNum(self):
+        """A valid AJB number has a volume number between 1-68
+        and a section number between 1-150
+        and an entry number > 0"""
+        num = self['Num']
+        if num['volNum'] > 0 and num['volNum'] < 69 \
+        and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
+        and num['entryNum'] > 0:
+            return True
+        else:
+            return False
+
+
+        
+    #
+    # Private functions
+    #
+    def _parseField0( self, line ) : 
+
+        fields = line.split( ' ', 2)
+        
+        self._parseFileIndex( fields[0] )
+
+        self['Num'] = self._parseAJBNum( fields[1] )
+
+        if len(fields) > 2 :
+            self._parseAuthors( fields[2].strip() )
+      
+
                     
-    def parseFileIndex(self, line ):
+    def _parseFileIndex(self, line ):
         """
         Get the file Index value (i.e. what number is this entry
         in the file.)
@@ -167,9 +175,8 @@ class AJBentry(Entry):
         self['Index'] = line.strip()
 
     
-    def parseAJBNum(self, line ):
-        """
-        Get the Volume, Section, any possible subSection and the
+    def _parseAJBNum(self, line ):
+        """Get the Volume, Section, any possible subSection, and the
         section entry number.  The subSection defaults to zero
         if no subSection value exists.
         """
@@ -186,28 +193,17 @@ class AJBentry(Entry):
         nums = r2.split(line.strip())
         
         if not nums[4]:
-            nums[4] = 0
+            nums[4] = 0 # or -1 for invalid???
             
         return {'volume':'AJB',
-                'volNum':nums[1],
-                'sectionNum':nums[2],
-                'subsectionNum':nums[4],
-                'entryNum':nums[5],
+                'volNum': int(nums[1]),
+                'sectionNum': int(nums[2]),
+                'subsectionNum': int(nums[4]),
+                'entryNum': int(nums[5]),
                 }
 
-    def parseField0( self, line ) : 
 
-        fields = line.split( ' ', 2)
-        
-        self.parseFileIndex( fields[0] )
-
-        self['Num'] = self.parseAJBNum( fields[1] )
-
-        if len(fields) > 2 :
-            self.parseAuthors( fields[2].strip() )
-      
-
-    def parseAuthors(self, line ) :
+    def _parseAuthors(self, line ) :
       """split out the authors/editors
       """
       ed = False
@@ -220,7 +216,7 @@ class AJBentry(Entry):
         comp = True
         line = line.replace('comp.', '    ')
 
-      names = self.MakeNameList( line )
+      names = self._makeNameList( line )
 
       if ed:
         self['Editors'] = names
@@ -231,7 +227,7 @@ class AJBentry(Entry):
 
 
 
-    def MakeNameList(self,  line ) :
+    def _makeNameList(self,  line ) :
         """Returns a list of object of class HumanName. See the package
         nameparser for full info. The names have the following possible keys
         "Title", "First", "Middle", "Last", and "Suffix"
@@ -245,7 +241,7 @@ class AJBentry(Entry):
 
         return name_list
 
-    def parseComments( self, field ):
+    def _parseComments( self, field ):
         
         cParser = Comment.parser()
         result = cParser.parse_string(field, reset=True)
@@ -266,15 +262,15 @@ class AJBentry(Entry):
 
                 elif 'Editors' == grmName:
                     line = str(result.find(NameList))
-                    self['Editors'].append( self.MakeNameList( line ) )
+                    self['Editors'].append( self._makeNameList( line ) )
 
                 elif 'Contributors' == grmName:
                     line = str(result.find(NameList))
-                    self['Contributors'].append( self.MakeNameList( line ) )
+                    self['Contributors'].append( self._makeNameList( line ) )
 
                 elif 'Compilers' == grmName:
                     line = str(result.find(NameList))
-                    self['Compilers'].append( self.MakeNameList( line ) )
+                    self['Compilers'].append( self._makeNameList( line ) )
 
                 elif 'Translation' == grmName :
                     tmp = result.find(FromLanguage)
@@ -287,7 +283,7 @@ class AJBentry(Entry):
 
                     tmp = result.find(NameList)
                     if tmp:
-                        self['Translators'].append(self.MakeNameList(str(tmp)))
+                        self['Translators'].append(self._makeNameList(str(tmp)))
 
                 elif 'Publishers' == grmName:
                     tmp = str(result.find(PublisherList))
@@ -309,18 +305,6 @@ class AJBentry(Entry):
 
 
 
-    def numStr(self):
-        """Return a stringfied version of the Num entry
-        """
-        a = self['Num']
-        if a:
-            st = '' + a['volume'] + ' ' + a['volNum'] + '.'  +a['sectionNum']
-            if a['subsectionNum']:
-                st = st + '(' + a['subsectionNum'] + ')'
-            st = st + '.' + a['entryNum']
-            return st
-        else:
-            return None
 
 
 
@@ -335,7 +319,9 @@ if __name__ == '__main__':
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
 
-    badajbstr = 'xxx 66.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
+    badajbstr = '27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
+
+    badtitlestr = '27 66.145(1).309 P. W. Hodge, , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
 
     try:
         from pprint import pprint
@@ -347,10 +333,10 @@ if __name__ == '__main__':
     try:
       badentry = Entry(ajbstr)
     except:
-      print("Entry() class fails properly with no extract method.")
+      print("Entry() class fails properly with no read() method.")
       
     ajb1 = AJBentry()
-    print("\najb.py version " + ajb1.version())
+    print("\najb.py version:: %s \n" % ajb1.version())
     print('The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid())
     pprint(ajb1)
 
@@ -363,6 +349,10 @@ if __name__ == '__main__':
     ajb3 = AJBentry(badajbstr)
     print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
     pprint(ajb3)
+
+    ajb4 = AJBentry(badtitlestr)
+    print('\nThe bad title ajb entry isValid() is %d and looks like:' % ajb4.isValid())
+    pprint(ajb4)
 
     authorajb = AJBentry(authorstr)
     print('\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid())

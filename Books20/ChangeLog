@@ -1,3 +1,20 @@
+2012-12-30  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/AJBentry.py (AJBentry): split the AJBentry class
+	out of entry.py. Wrote isValid() function as well as isValidAjbNum().
+	Converted extract() to read().  Converted parse*() functions to
+	private functions.
+
+	* Tools/src/entry.py (Entry): added write() and isValid()
+	definitions for sub-classes. Changed extract() to read().
+
+2012-12-28  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry (BookEntry): Began building a new version of
+	the BookEntry tools.  I was making too many mistakes with the
+	manual entry in Word.
+
+
 2012-10-14  Jim Fowler  <jrf@Biblion>
 
 	* Data/Testing/AJBcomments.py (uWord): Added punctuation marks to
