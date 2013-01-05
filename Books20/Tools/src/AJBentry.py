@@ -54,7 +54,8 @@ class AJBentry(Entry):
         return __ajbVersion__ + ": " + super(AJBentry, self).version()
 
     def numStr(self):
-        """Return a stringfied version of the Num entry
+        """Return a stringfied version of the Num entry,
+        ex. 'AJB 68.01(0).20'
         """
         a = self['Num']
         if a:
@@ -69,21 +70,154 @@ class AJBentry(Entry):
             return None
 
     def isValid(self):
+        """AJB entries are valid if they have a valid AJB num
+        and a Title."""
         if self.isValidAjbNum() and self['Title'] != '':
             return True
         else:
             return False
+
+    def notEmpty(self, key ):
+        """Return the truth value of, 'key' existing
+        in the entry and the key value is not empty."""
+        if self.__contains__(key) and self[key]:
+            return True
+        return False
 
     def write(self):
         """Write an AJBentry back into the string format that it came from.
         It should be the case that write(read(ajbstr)) == ajbstr up to
         the order of the comments and that read(write(ajbent)) == ajbent."""
 
-        assert 0, 'still need to create AJBentry.write()'
+        if not self.isValid():
+            return ''
+
+        entryStr = self.numStr()[4:] + ' '
+
+        if self.notEmpty('Authors'):
+            entryStr +=  self._makeNameStr(self['Authors'])
+        elif self.notEmpty('Editors'):
+            entryStr +=  self._makeNameStr(self['Editors'])
+            entryStr += ' ed.'
+
+        entryStr = entryStr + ', ' + self['Title'].replace(', ', ' comma ' )
+
+        if self.notEmpty('Publishers'):
+            entryStr += ', '
+            if self['Publishers'][0]['Place']:
+                entryStr += self['Publishers'][0]['Place']
+
+            entryStr += ', '
+            if self['Publishers'][0]['PublisherName']:
+                nm =  self['Publishers'][0]['PublisherName']
+                nm = nm.replace(', ', ' comma ' )
+                entryStr += nm
+        else:
+            entryStr += ', , '
+
+        entryStr += ', '
+        if self.notEmpty('Year'):
+            entryStr += self['Year']
+
+        entryStr += ', '
+        if self.notEmpty('Pagination'):
+            entryStr += self['Pagination']
+
+        entryStr += ', '
+        if self.notEmpty('Price'):
+            entryStr += self['Price']
+
+        entryStr += ', '
+        if self.notEmpty('Reviews'):
+            first = True
+            for r in self['Reviews']: 
+                if not first:
+                    entryStr += ' and '
+                first = False
+                entryStr += r
+
+        # comments
+        entryStr += ', '
+        if self.notEmpty('Edition'):
+            entryStr += self['Edition']
+            num = int(self['Edition'])
+            if  num == 1:
+                entryStr += 'st'
+            elif num == 2:
+                entryStr += 'nd'
+            elif num == 3:
+                entryStr += 'rd'
+            else:
+                entryStr += 'th'
+            entryStr += ' edition;'
+
+        if self.notEmpty('Reprint'):
+            entryStr += 'reprint of '
+            entryStr += self['Reprint']
+            entryStr += ';'
+
+        if self.notEmpty('Compilers'):
+            entryStr += 'compiled by '
+            entryStr += self._makeNameStr(self['Compilers'])
+            entryStr += ';'
+
+
+        if self.notEmpty('Contributors'):
+            entryStr += 'contributors '
+            entryStr += self._makeNameStr(self['Contributors'])
+            entryStr += ';'
+
+        # translated from by
+        if self.notEmpty('Translators') or self.notEmpty('TranslatedFrom'):
+            entryStr += 'translated '
+            if self.notEmpty('TranslatedFrom'):
+                entryStr += 'from '
+                entryStr += self['TranslatedFrom']
+            if self.notEmpty('Translators'):
+                entryStr += ' by '
+                entryStr += self._makeNameStr(self['Translators'])
+            entryStr += ';'
+
+        # additional editors
+        if self.notEmpty('Authors') and self.notEmpty('Editors'):
+            # need to include editors in comments
+            entryStr += 'edited by '
+            entryStr += self._makeNameStr(self['Editors'])
+            entryStr += ';'
+
+        # additional publishers
+        if self['Publishers'].__len__() > 1:
+            extraPubl = self['Publishers'][1:]
+            entryStr += 'also published '
+            first = True
+            for p in extraPubl:
+                entryStr += '%s: %s' % (p['Place'], p['PublisherName'])
+                if not first:
+                    entryStr += ' and '
+            entryStr += ';'
+
+        if self.notEmpty('Language'):
+            entryStr += 'in '
+            entryStr += self['Language']
+            entryStr += ';'
+
+        # others
+        if self.notEmpty('Others'):
+            for p in self['Others']:
+                entryStr += 'other %s' % str(p)
+                entryStr += '; '
+
+        if self.notEmpty('Reference'):
+            entryStr += 'reference '
+            entryStr += self['Reference']
+
+
+        return entryStr
 
     def read(self, line):
         """Parse a line with an AJB entry in it placing the values in the
-        Entry dictionary."""
+        Entry dictionary. Returns True if this is a parsable line and 
+        false if it is not."""
  
         Place = ""
         PublisherName = ""
@@ -135,7 +269,10 @@ class AJBentry(Entry):
                     self['Comment'] = field
                     self._parseComments( field )
 
-        return
+            return True
+
+        else:  # if line and r1.match(line)
+            return False
 
     def isValidAjbNum(self):
         """A valid AJB number has a volume number between 1-68
@@ -241,6 +378,25 @@ class AJBentry(Entry):
 
         return name_list
 
+    def _makeNameStr( self, namelist):
+        """Returns a string built from a list of HumanName objects.
+        See the package nameparser for details about HumanName.
+        """
+
+        nameStr = ''
+        if not namelist:
+            return nameStr
+
+        first = True
+        for nm in namelist:
+            if not first:
+                nameStr += ' and '
+            first = False
+            nameStr += nm.full_name
+
+        return nameStr
+
+
     def _parseComments( self, field ):
         
         cParser = Comment.parser()
@@ -258,32 +414,55 @@ class AJBentry(Entry):
                     self['Reference'] = str(result.find(AJBNum)).strip()
 
                 elif 'Reprint' == grmName:
-                    self['Reprint'] = str(result.find(AJBNum)).strip()
+                    tmp = result.find(AJBNum)
+                    if tmp:
+                        self['Reprint'] = str(tmp).strip()
+                    tmp = result.find(Year)
+                    if tmp:
+                        self['Reprint'] = str(tmp).strip()
 
                 elif 'Editors' == grmName:
                     line = str(result.find(NameList))
-                    self['Editors'].append( self._makeNameList( line ) )
+                    nm = self._makeNameList( line )
+                    if self.notEmpty('Editors'):
+                        self['Editors'].extend( nm )
+                    else:
+                        self['Editors'] = nm
 
                 elif 'Contributors' == grmName:
                     line = str(result.find(NameList))
-                    self['Contributors'].append( self._makeNameList( line ) )
+                    nm = self._makeNameList( line )
+                    if self.notEmpty('Contributors'):
+                        self['Contributors'].extend( nm )
+                    else:
+                        self['Contributors'] = nm
 
                 elif 'Compilers' == grmName:
                     line = str(result.find(NameList))
-                    self['Compilers'].append( self._makeNameList( line ) )
+                    nm = self._makeNameList( line )
+                    if self.notEmpty('Compilers'):
+                        self['Compilers'].extend( nm )
+                    else:
+                        self['Compilers'] = nm
 
                 elif 'Translation' == grmName :
                     tmp = result.find(FromLanguage)
                     if tmp:
+                        tmp = result.find(uWord)
                         self['TranslatedFrom'] = str(tmp).strip()
 
                     tmp = result.find(ToLanguage)
                     if tmp:
+                        tmp = result.find(uWord)
                         self['Language'] = str(tmp).strip()
 
                     tmp = result.find(NameList)
                     if tmp:
-                        self['Translators'].append(self._makeNameList(str(tmp)))
+                        nm = self._makeNameList(str(tmp))
+                        if self.notEmpty('Translators'):
+                            self['Translators'].extend( nm )
+                        else:
+                            self['Translators'] = nm 
 
                 elif 'Publishers' == grmName:
                     tmp = str(result.find(PublisherList))
@@ -299,7 +478,10 @@ class AJBentry(Entry):
                     self['Language'] = str(result.find(uWord)).strip()
 
                 elif 'Other' == grmName:
-                    self['Others'].append(str(result.find(uWords)).strip())
+                    nm = str(result.find(uWords)).strip()
+                    if not self.notEmpty('Others'):
+                        self['Others'] = []
+                    self['Others'].append( nm )
 
                 result = cParser.parse_string('')
 

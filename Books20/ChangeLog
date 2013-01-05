@@ -1,3 +1,34 @@
+2013-01-05  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/headerWindow.py (main): Converted headerWindow()
+	to a QDialog and give up for the time being on making it
+	expandable. Tested with BookEntry and it appears to work.
+
+2013-01-03  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/headerWindow.py (headerWindow): created headerWindow
+	class and gui that will expand with the window. Added some actions
+	and worked out how to link with the main BookEntry class.
+
+2013-01-01  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (BookEntry): Restored BookEntry.py
+	version from prior to 28 Dec.  Got it working with the bookfile
+	class. Also got all the Gui text boxes to update. I can now
+	display all but Translator, Compilers, Contributors, and Language.
+
+	* Tools/src/AJBentry.py (AJBentry.write): finished the write()
+	method. Corrected one problem in parseComments for 'reprint of'.
+	Wasn't getting the year, only the AJBnum.
+
+2012-12-31  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/AJBentry.py (AJBentry.write): added function
+	to write out the string version of an AJB entry.
+
+	* Tools/src/bookfile.py (BookFile): added BookFile class to
+	interface between disk entries and entry lists.
+
 2012-12-30  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/AJBentry.py (AJBentry): split the AJBentry class

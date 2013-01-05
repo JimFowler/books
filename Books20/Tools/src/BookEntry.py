@@ -15,8 +15,10 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
 import ui_BookEntry
-from entry import *
+from bookfile import *
 from menus import *
+from headerWindow import *
+
 
 __version__ = '0.1'
 
@@ -27,12 +29,18 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    def __init__( self, parent=None ):
       super(BookEntry, self).__init__(parent)
       self.setupUi(self)
+
       self.curRecord = 0
       self.maxRecord = 0
-      self.entList = []
+      self.bf = BookFile()
+      self.bf.setFileName('document1')
+      self.setWinTitle('document1')
+
       createMenus(self, self.menubar)
 
       self.connect(self.quitButton, SIGNAL('released()'), self.quit )
+
+
    #
    # Menu slots
    #
@@ -48,7 +56,18 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                           % QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         self.GetRecords(fname)
+         # check for dirty file before overwriting
+         if self.bf.isDirty():
+            self.statusbar.showMessage('WARNING: dirty file entry!')
+
+         self.maxRecord = self.bf.readFile(fname)
+         if self.maxRecord:
+            self.statusbar.clearMessage()
+            self.statusbar.showMessage('%d records found'%self.maxRecord, 6000)
+            self.ofnumLabel.setText('of %d'%self.maxRecord)
+            self.showRecord(0)
+         else:
+            self.statusbar.showMessage('No records found')
 
 
    def saveFile(self):
@@ -59,6 +78,17 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def printEntry(self):
       pass
+
+   def editHeader(self):
+      self.headerWindow = HeaderWindow(self)
+      self.headerWindow.setBookFile(self.bf)
+      self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
+                                  "Edit Headers - %s" % (self.bf.getFileName()),
+                                  None, QApplication.UnicodeUTF8))
+      self.headerWindow.setHeaderText(self.bf.getHeader())
+      self.headerWindow.show()
+
+      
 
    #
    # Methods to deal with various display aspects
@@ -71,51 +101,6 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                   "BookEntry v%s - %s" % (__version__, name),
                                   None, QApplication.UnicodeUTF8))
 
-   #
-   # Methods to deal with the records.
-   #
-   def GetRecords(self, fname=None):
-      """open the named file, get records into list
-      set maxRecords
-      if successful
-      show record 1
-
-      change current working file name to basename
-      """
-      if not os.path.isfile(fname):
-         self.statusbar.showMessage('Invalid file')
-         return
-
-      self.statusbar.clearMessage()
-
-      # if we have a good file, then clear the entlist
-      self.entList = []
-      entTemp = AJBentry()
-      count = 0
-
-      for line in fileinput.input([fname]):
-         line = line.strip()
-         try:
-            entTemp.extract(line)
-         except:
-            print(line + '\n')
-            traceback.print_exc()
-            print('\n\n')
-
-
-         if entTemp.isValid():
-            count += 1
-            self.entList.append(entTemp)
-            entTemp = AJBentry()
-      
-      self.maxRecord = count
-      tlist = os.path.basename(fname)
-      self.setWinTitle(tlist)
-      self.statusbar.showMessage(tlist)
-      if 0 != count:
-         self.showRecord(0)
-      else:
-         self.statusbar.showMessage('Invalid file: no entries')
 
    def on_prevButton_released(self):
       self.showRecord(self.curRecord - 1)
@@ -140,34 +125,151 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       else:
          self.curRecord = recnum
 
+     # Display the actual entry data
+      displayEnt = self.bf.getEntry(self.curRecord)
+
+      if not displayEnt:
+         return
+
       # Display record count
-      #self.lblRecordCount.setText( 'Record %d of %d' % (self.curRecord + 1, self.maxRecord))
-
-      # Display the actual entry data
-      displayEnt = self.entList[self.curRecord]
-
       self.indexLabel.setText('Index - %s' % str(self.curRecord+1))
-      #self.lblAJBnum.setText(displayEnt.numStr())
 
-      a = displayEnt['Authors']
-      if a:
-         self.authorEntry.setText(a[0].full_name)
+      self.displayRecord(displayEnt)
+
+
+
+   def displayRecord(self, displayEnt):
+
+      # AJB number
+      a = displayEnt['Num']
+      self.volNum.setText(str(a['volNum']))
+      self.secNum.setText(str(a['sectionNum']))
+      if int(a['subsectionNum']) > -1:
+         self.subSecNum.setText(str(a['subsectionNum']))
       else:
-         self.authorEntry.setText(" ")
+         self.subSecNum.setText('0')
+      self.itemNum.setText(str(a['entryNum']))
 
-      self.titleEntry.setText(displayEnt['Title'])
-      self.yearEntry.setText(displayEnt['Year'])
-      self.placeEntry.setText(displayEnt['Publishers'][0]['Place'])
-      self.publEntry.setText(displayEnt['Publishers'][0]['PublisherName'])
-      self.pageEntry.setText(displayEnt['Pagination'])
-      self.priceEntry.setText(displayEnt['Price'])
-      rev = displayEnt['Reviews']
-      revstr = ''
-      if rev:
-         for item in rev:
-            revstr = revstr + item + '\n'
-         self.reviewsEntry.setPlainText(revstr)
-      self.commentsEntry.setPlainText(displayEnt['Comments'])
+      # Authors
+      astr = ''
+      if displayEnt.notEmpty('Authors'):
+         a = displayEnt['Authors']
+         if a:
+            first = True
+            for b in a:
+               if not first:
+                  astr += '\n'
+               first = False
+               astr += b.full_name
+      self.authorEntry.setText(astr)
+
+      # Title
+      astr = ''
+      if displayEnt.notEmpty('Title'):
+         astr += displayEnt['Title']
+      self.titleEntry.setText(astr)
+
+      # Publishers
+      astr = ''
+      if displayEnt.notEmpty('Publishers'):
+         first = True
+         for a in displayEnt['Publishers']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += a['Place'] + ' : ' + a['PublisherName']
+      self.publEntry.setText(astr)
+
+      # Year
+      astr = ''
+      if displayEnt.notEmpty('Year'):
+         astr += displayEnt['Year']
+      self.yearEntry.setText(astr)
+
+      # Pagination
+      astr = ''
+      if displayEnt.notEmpty('Pagination'):
+         astr += displayEnt['Pagination']
+      self.pageEntry.setText(astr)
+
+      # Price
+      astr = ''
+      if displayEnt.notEmpty('Price'):
+         astr += displayEnt['Price']
+      self.priceEntry.setText(astr)
+
+      # Review
+      astr = ''
+      if displayEnt.notEmpty('Reviews'):
+         rev = displayEnt['Reviews']
+         if rev:
+            for item in rev:
+               astr += item + '\n'
+      self.reviewsEntry.setPlainText(astr)
+
+      # Language
+      astr = ''
+      if displayEnt.notEmpty('Language'):
+         astr += displayEnt['Language']
+      self.tolangEntry.setText(astr)
+
+      # fromLanguage
+      astr = ''
+      if displayEnt.notEmpty('TranslatedFrom'):
+         astr += displayEnt['TranslatedFrom']
+      self.fromlangEntry.setText(astr)
+
+      # Translators
+      astr = ''
+      if displayEnt.notEmpty('Translators'):
+         a = displayEnt['Translators']
+         if a:
+            first = True
+            for b in a:
+               if not first:
+                  astr += '\n'
+               first = False
+               astr += b.full_name
+      self.translatorEntry.setText(astr)
+
+      # Compilers
+      astr = ''
+      if displayEnt.notEmpty('Compilers'):
+         a = displayEnt['Compilers']
+         if a:
+            first = True
+            for b in a:
+               if not first:
+                  astr += '\n'
+               first = False
+               astr += b.full_name
+      self.compilersEntry.setText(astr)
+
+      # Contributors
+      astr = ''
+      if displayEnt.notEmpty('Contributors'):
+         a = displayEnt['Contributors']
+         if a:
+            first = True
+            for b in a:
+               if not first:
+                  astr += '\n'
+               first = False
+               astr += b.full_name
+      self.contribEntry.setText(astr)
+
+
+      # Others
+      astr = ''
+      if displayEnt.notEmpty('Others'):
+         a = displayEnt['Others']
+         first = True
+         for b in a:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += b
+      self.commentsEntry.setPlainText(astr)
 
 
    def helpAbout(self):

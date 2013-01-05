@@ -1,22 +1,74 @@
 Classes
 *******
 
-Basic Classes
--------------
-
-BookEntry
-_________
-
-.. automodule:: BookEntry
-    :members:
-    :show-inheritance:
-
 Entry
 _____
+
+Entry provides the basic class for any book entry.  Specific sub-classes
+should be created for each type of entry, AJB or AAA.
+
+Entry is a sub-class of dict so keyword:values may be accessed
+directly.  Some entry items are pre-defined but there is nothing to
+prevent an object from deleting an item so objects should check for
+existence before appending or extending. A blank Entry objects look
+like:
+
+
+['Index'] =       -1            # file index number
+
+['Num'] =         {'volNum':-1,       # bibliography entry num
+
+                   'sectionNum':-1,
+
+                   'subsectionNum':-1,
+
+                   'entryNum':-1,
+
+                   'volume': ''}
+
+[ 'Authors'] =    []   # list of nameparser::HumanName objects
+
+[ 'Editors'] =    []   # list of nameparser::HumanName objects
+
+[ 'Compilers'] =  []   # list of nameparser::HumanName objects
+
+[ 'Contributors'] = [] # list of nameparser::HumanName objects
+
+[ 'Translators']= []   # list of nameparser::HumanName objects
+
+[ 'Others' ] =    []   # list strings from the comments that we can't parse
+
+[ 'Title'] =      ''   # the title of the work
+
+[ 'Publishers'] = []   # list of tuples (Place, PublisherName)
+
+[ 'Year'] =       ''   # year of publication, if known
+
+[ 'Pagination'] = ''   # page count, if known
+
+[ 'Price'] =      ''   # publishers price, if known
+
+[ 'Reviews'] =    []   # bibliographic list of reviews, strings
+
+[ 'Comments'] =   ''   # the original comment string
+
+[ 'OrigStr'] =    ''   # the original book entry string if read from a string
+
 
 .. automodule:: entry
     :members:
     :show-inheritance:
+
+AJBentry
+________
+
+The AJBentry class provides the specific methods for read and write
+entries from the Astronomische Jaherbericht.
+
+.. automodule:: AJBentry
+    :members:
+    :show-inheritance:
+
 
 AJB Comments
 ____________
@@ -65,6 +117,18 @@ one to put anything in the field.  The grammer is defined as:
 
 
 .. automodule:: AJBcomments
+    :members:
+    :show-inheritance:
+
+BookFile
+________ 
+
+BookFile object provides a link between a disk file and the entry
+list.  The class provides methods to read/write diskfile, change the
+name of the file, and get/set the file header. With repect to the
+entry list we can get/replace entries, and add a new entry.
+
+.. automodule:: bookfile
     :members:
     :show-inheritance:
 

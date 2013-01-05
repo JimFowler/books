@@ -38,10 +38,12 @@ def createMenus( self, menuBar):
         openFileAction = createAction( self, '&Open',
                                        self.openFile, 'Ctrl+O' )
         saveAction = createAction( self, '&Save', self.saveFile, 'Ctrl-S')
-        saveAsAction = createAction( self, 'Save &As...', self.saveFileAs, '')
-        printAction = createAction( self, '&Print Entry...', self.printEntry, 'Ctrl+P')
-        exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q', 'filequit',
-                     'Close the Application')
+        saveAsAction = createAction( self, 'Save &As...', self.saveFileAs, 
+                                     'Ctrl+A')
+        printAction = createAction( self, '&Print Entry...', self.printEntry,
+                                    'Ctrl+P')
+        exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q',
+                                  'filequit', 'Close the Application')
 
         fileMenu.addAction(newFileAction)
         fileMenu.addAction(openFileAction)
@@ -58,8 +60,11 @@ def createMenus( self, menuBar):
         copyAction = createAction(self, '&Copy', None, 'Ctrl+C') 
         pasteAction = createAction(self, '&Paste', None, 'Ctrl+V')
         deleteAction = createAction(self, '&Delete', None, 'Del')
+        addInfoAction = createAction(self, 'Additional &Info...',
+                                     None, 'Ctrl+T')
         symbolAction = createAction(self, '&Insert Symbol...', None, 'Ctrl+I')
-        headerAction = createAction(self, 'Edit &Header', None, 'Ctrl+H')
+        headerAction = createAction(self, 'Edit &Header',
+                                    self.editHeader, 'Ctrl+H')
 
         editMenu = menuBar.addMenu('&Edit')
         editMenu.addAction( cutAction)
@@ -67,6 +72,7 @@ def createMenus( self, menuBar):
         editMenu.addAction( pasteAction )
         editMenu.addAction( deleteAction)
         editMenu.addSeparator()
+        #editMenu.addAction( addInfoAction)
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
 
