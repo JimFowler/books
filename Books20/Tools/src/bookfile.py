@@ -69,6 +69,8 @@ class BookFile():
         """Return the current value of the fileName."""
         return self._fileName
 
+    def getBaseName(self):
+        return self._baseName
 
     # header
     def setHeader(self, headerStr):

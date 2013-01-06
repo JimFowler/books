@@ -51,15 +51,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
        pass
 
    def openFile(self):
+      # check for dirty file before overwriting
+      if self.bf.isDirty():
+         self.statusbar.showMessage('WARNING: dirty file entry!')
+      
+
       fname = QFileDialog.getOpenFileName(self,
-                                          "%s -- Choose new file" \
-                                          % QApplication.applicationName(),
+          "%s -- Choose new file"%QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         # check for dirty file before overwriting
-         if self.bf.isDirty():
-            self.statusbar.showMessage('WARNING: dirty file entry!')
-
          self.maxRecord = self.bf.readFile(fname)
          if self.maxRecord:
             self.statusbar.clearMessage()
@@ -68,6 +68,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             self.showRecord(0)
          else:
             self.statusbar.showMessage('No records found')
+         self.setWinTitle(self.bf.getBaseName())
 
 
    def saveFile(self):
@@ -83,7 +84,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow = HeaderWindow(self)
       self.headerWindow.setBookFile(self.bf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                                  "Edit Headers - %s" % (self.bf.getFileName()),
+                                  "Edit Headers - %s" % (self.bf.getBaseName()),
                                   None, QApplication.UnicodeUTF8))
       self.headerWindow.setHeaderText(self.bf.getHeader())
       self.headerWindow.show()
