@@ -14,826 +14,582 @@
    <string>document1 - BookEntry</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="indexLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>91</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Index number with in the file</string>
-    </property>
-    <property name="text">
-     <string>Index -</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="volLabel">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>50</y>
-      <width>91</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>AJB  volume</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="volNum">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>40</y>
-      <width>31</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>AJB Volume number</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-    <property name="readOnly">
-     <bool>false</bool>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="secLabel">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>50</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>§</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="secNum">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>40</y>
-      <width>41</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>AJB Section number</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="subSecLabel">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>50</y>
-      <width>21</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>§§</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="subSecNum">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>40</y>
-      <width>31</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>AJB subsection number if applicable</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="itemLabel">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>50</y>
-      <width>31</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Item</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="itemNum">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>40</y>
-      <width>41</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>AJB item number in the section</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="authorLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Authors:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="titleLabel">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>190</y>
-      <width>41</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Title:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="titleEntry">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>190</y>
-      <width>521</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Title of the book</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="authorEntry">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>90</y>
-      <width>521</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Author list, one line per author</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="publLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>270</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Publisher:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="yearLabel">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>340</y>
-      <width>41</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Year:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="yearEntry">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>340</y>
-      <width>81</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Year published</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pageLabel">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>340</y>
-      <width>51</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Pages:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="pageEntry">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>340</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Page count</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="priceLabel">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>340</y>
-      <width>41</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Price:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="priceEntry">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>340</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Cost at time of review</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="reviewsLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>380</y>
-      <width>71</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Reviews:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="reviewsEntry">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>380</y>
-      <width>521</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Reviews, one per line</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="commentsLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>600</y>
-      <width>81</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Comments:</string>
-    </property>
-   </widget>
-   <widget class="QToolButton" name="prevButton">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>24</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="toolTip">
-     <string>Previous record</string>
-    </property>
-    <property name="text">
-     <string>...</string>
-    </property>
-    <property name="arrowType">
-     <enum>Qt::LeftArrow</enum>
-    </property>
-   </widget>
-   <widget class="QToolButton" name="nextButton">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>40</y>
-      <width>24</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="toolTip">
-     <string>Next record</string>
-    </property>
-    <property name="text">
-     <string>...</string>
-    </property>
-    <property name="arrowType">
-     <enum>Qt::RightArrow</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="acceptButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>70</y>
-      <width>101</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="toolTip">
-     <string>Click to test and accecpt the record</string>
-    </property>
-    <property name="text">
-     <string>Save Record</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="quitButton">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>680</y>
-      <width>101</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="toolTip">
-     <string>Quit the application</string>
-    </property>
-    <property name="text">
-     <string>Quit</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="commentsEntry">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>620</y>
-      <width>591</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Comments, one per line</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>150</y>
-      <width>101</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="text">
-     <string>New Entry</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="publEntry">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>270</y>
-      <width>521</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="translatorEntry">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>500</y>
-      <width>281</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Translator's names</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="compilersEntry">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>480</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Compiler's names</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="compilersLabel">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>460</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Compilers</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="contribLabel">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>540</y>
-      <width>101</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Contributors</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="contribEntry">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>560</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Contributor's names</string>
-    </property>
-    <property name="tabChangesFocus">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="translateLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>460</y>
-      <width>141</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="midLineWidth">
-     <number>2</number>
-    </property>
-    <property name="text">
-     <string>Translated:  from:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="fromlangEntry">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>460</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>The original language of the work.</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="intoLabel">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>460</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>into:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tolangEntry">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>460</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>The language of this work.</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="translatebyLabel">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>500</y>
-      <width>21</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>By:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ofnumLabel">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>20</y>
-      <width>70</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>of</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="9">
+     <widget class="QLabel" name="volLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>AJB  volume</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="indexLabel">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Index number with in the file</string>
+      </property>
+      <property name="text">
+       <string>Index -</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QToolButton" name="prevButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Previous record</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::LeftArrow</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3" colspan="2">
+     <widget class="QLabel" name="ofnumLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>of</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" rowspan="2" colspan="17">
+     <widget class="QTextEdit" name="authorEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Author list, one line per author</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="12" colspan="5">
+     <widget class="QLabel" name="contribLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Contributors</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2" colspan="2">
+     <widget class="QToolButton" name="nextButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Next record</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::RightArrow</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="9" rowspan="2">
+     <widget class="QLineEdit" name="volNum">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>AJB Volume number</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="4">
+     <widget class="QLabel" name="translateLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>Translated:  from:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="authorLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Authors:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" colspan="17">
+     <widget class="QTextEdit" name="publEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="18">
+     <widget class="QPushButton" name="acceptButton">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Click to test and accecpt the record</string>
+      </property>
+      <property name="text">
+       <string>Save Record</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="18">
+     <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="text">
+       <string>New Entry</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Title:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" colspan="17">
+     <widget class="QTextEdit" name="titleEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Title of the book</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="publLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Publisher:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0" colspan="2">
+     <widget class="QLabel" name="commentsLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Comments:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="12" colspan="6">
+     <widget class="QTextEdit" name="contribEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Contributor's names</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="yearLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Year:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1" colspan="4">
+     <widget class="QLineEdit" name="yearEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Year published</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="QLabel" name="pageLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pages:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="6" colspan="3">
+     <widget class="QLineEdit" name="pageEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Page count</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="9" colspan="3">
+     <widget class="QLabel" name="priceLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Price:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="12" colspan="5">
+     <widget class="QLineEdit" name="priceEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Cost at time of review</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="reviewsLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Reviews:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1" colspan="17">
+     <widget class="QTextEdit" name="reviewsEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Reviews, one per line</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4" rowspan="2" colspan="3">
+     <widget class="QLineEdit" name="fromlangEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>The original language of the work.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="7">
+     <widget class="QLabel" name="intoLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>into:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="8" rowspan="2" colspan="4">
+     <widget class="QLineEdit" name="tolangEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>The language of this work.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="12" colspan="4">
+     <widget class="QLabel" name="compilersLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Compilers</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="12" rowspan="2" colspan="6">
+     <widget class="QTextEdit" name="compilersEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Compiler's names</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="2" colspan="2">
+     <widget class="QLabel" name="translatebyLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>By:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="4" rowspan="3" colspan="7">
+     <widget class="QTextEdit" name="translatorEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Translator's names</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0" colspan="18">
+     <widget class="QTextEdit" name="commentsEntry">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Comments, one per line</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="18">
+     <widget class="QPushButton" name="quitButton">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Quit the application</string>
+      </property>
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="12">
+     <widget class="QLabel" name="secLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>§</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="12">
+     <widget class="QLineEdit" name="secNum">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>AJB Section number</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="13">
+     <widget class="QLineEdit" name="subSecNum">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>AJB subsection number if applicable</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="13">
+     <widget class="QLabel" name="subSecLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>§§</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="15">
+     <widget class="QLineEdit" name="itemNum">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>AJB item number in the section</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="15">
+     <widget class="QLabel" name="itemLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Item</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -849,9 +605,6 @@
  </widget>
  <tabstops>
   <tabstop>volNum</tabstop>
-  <tabstop>secNum</tabstop>
-  <tabstop>subSecNum</tabstop>
-  <tabstop>itemNum</tabstop>
   <tabstop>authorEntry</tabstop>
   <tabstop>titleEntry</tabstop>
   <tabstop>publEntry</tabstop>

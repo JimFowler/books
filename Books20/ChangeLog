@@ -1,3 +1,14 @@
+2013-01-13  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/symbol.py: Began writing the symbol table code.
+	Adapted the character_picker code from Rich Griswold's package.
+	Switched to branch insert_symbol
+
+	* Tools/src/headerWindow.py (main): Learned how to make dialog
+	windows expand with the help of Walter Moriera in Austin.
+	Converted the headerWindow.py file to us a designer gui
+	rather than the handcrafted one.  All seems to work well.
+
 2013-01-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/headerWindow.py (main): Converted headerWindow()
