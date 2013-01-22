@@ -44,7 +44,7 @@ class Entry(dict):
         self[ 'Others']=      []
         self[ 'Title'] =      ''
         self[ 'Publishers'] = []
-        self[ 'Year'] =       -1
+        self[ 'Year'] =       ''
         self[ 'Pagination'] = ''
         self[ 'Price'] =      ''
         self[ 'Reviews'] =    []
@@ -61,11 +61,13 @@ class Entry(dict):
 
     def read(self, line):
         """Read string and parse entry items out of it. Should return
-        a boolean indicating whether the line was actually read correctly."""
+        a boolean indicating whether the line was actually read correctly.
+        The sub-class must provide this function."""
         assert 0, 'Entry.read() method required'
 
     def write(self):
         """Returns a string with the  entry items. This string should one
         that could be parsed by the read method. It is the responsiblity
-        of the sub-class to implement this funtion."""
+        of the sub-class to implement this funtion. The sub-class must 
+        provide this function."""
         assert 0, 'Entry.write() method required'

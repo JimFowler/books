@@ -37,6 +37,7 @@ class BookFile():
         self._volumeNumber = -1
         self._fileName = ''
         self._baseName = ''
+        self.curEntryNumber = -1  # 0 <= curEntryNumber < len(self._entryList)
         self._dirty = False
         self._header = __defaultHeader__
         self.setFileName('document1')
@@ -70,7 +71,9 @@ class BookFile():
         return self._fileName
 
     def getBaseName(self):
+        """Returns the basename() of the current filename."""
         return self._baseName
+
 
     # header
     def setHeader(self, headerStr):
@@ -86,21 +89,49 @@ class BookFile():
     # current entry
     def getEntry(self, count=-1):
         """Returns the entry at position count. If count is less than 0
-        or greater than the number of entries, 'None' is returned.
+        or greater than the number of entries, 'None' is returned. Note
+        that 1 <= count <= len(self._entryList)
         """
-        if count < 0 or count >= self._entryList.__len__():
+        if count < 1 or count > len(self._entryList):
             return None
 
-        self.curEntryNumber = count
+        self.curEntryNumber = count - 1
         return self._entryList[count]
 
-
     def setEntry(self, entry, count=-1):
-        self._dirty = True
-        pass
 
-    def addEntry(self, entry):
-        pass
+        """Write over the current entry or the entry at position
+        'count' if given.  Note that 1 <= count <= len(self._entryList.
+        The dirty flag is set for the file."""
+
+        if not entry.isValid():
+            return False
+    
+        if count < 1 or count > len(self._entryList):
+            return False
+
+        self.curEntryNum = count - 1
+        self._entryList[self.curEntryNum] = entry
+        self._dirty = True
+        return True
+
+    def setNewEntry(self, entry, count=-1):
+        """Append an entry to the list or insert before entry 'count' 
+        if that value is given. Note that 1 <= count <= len(self._entryList.
+        The dirty flag is set for the file.
+        """
+
+        if not entry.isValid():
+            return False
+
+        if count < 1 or count > len(self._entryList):
+            self._entryList.append(entry)
+        else:
+            self.curEntryNumber = count - 1
+            self._entryList.insert(self.curEntryNumber, entry)
+
+        self._dirty = True
+        return True
 
 
     # file I/O
@@ -108,17 +139,17 @@ class BookFile():
         """Open and read the header stuff into _header and the entries
         into the entry list. The header is defined as everything
         before the first valid entry. If filename is not given, we use
-        the value set in BookFile.setFileName().
+        the value set in BookFile.setFileName() if valid. Note that we
+        do not care if the entries or header have been modified; that is
+        the job of the calling routine.
 
         Return value is the number of record entries read."""
 
         if filename:
             self.setFileName(filename)
 
-        if not os.path.isfile(self._fileName):
-            # error dialog ?
-            printf('Invalid file')
-            return 0
+        if not self._fileName == '' or not os.path.isfile(self._fileName):
+            return 0 # no records read
 
         # if we have a good file, then clear the entryList and header
         self._entryList = []
@@ -143,9 +174,11 @@ class BookFile():
                 self._entryList.append(entTemp)
                 entTemp = AJBentry()
          
+        self.curEntryNumber = 0
         self.maxRecord = count
 
         return count
+
 
     def writeFile(self, filename=None):
         """Write the entry list and header to a disk file.
@@ -186,7 +219,16 @@ if __name__ == "__main__":
     print( bf.getHeader() )
 
     bf.writeFile("testfile.txt")
-    # run diff ajb58_books.txt and testfile.txt after we get AJBentry.write()
 
     bf.readFile('testfile.txt')
     bf.writeFile('testfile2.txt')
+    # run 'diff testfile2.txt testfile.txt'
+
+    ent = AJBentry('500 58.04.05 , An Amazing Book')
+    ent2 = AJBentry('500 58.04.06 , An Amazing Book Too')
+    bf.setNewEntry(ent) # append
+    bf.setNewEntry(ent2, 0) # append
+    bf.setNewEntry(ent, 1) # insert as entry 1
+    bf.setNewEntry(ent2, 5) # insert as entry 5
+    bf.setEntry(ent, 4) # replace entry 4
+    bf.writeFile('testfile3.txt')

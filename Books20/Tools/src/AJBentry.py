@@ -1,4 +1,3 @@
-
 import re
 
 from entry import *
@@ -9,9 +8,10 @@ from nameparser import HumanName
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 
 class AJBentry(Entry):
-    """Read the information from a line in ajb??_books.txt and
-    put the data in the AJBentry dictionary. The entry is valid
-    if there was a valid AJB number (vol.section.index) and a title.
+
+    """Read the information from a string and put the data in the
+    AJBentry dictionary. The entry is valid if there was a valid AJB
+    number (vol.section.index) and a title.
 
     A line looks like:
 
@@ -28,6 +28,7 @@ class AJBentry(Entry):
     Field 2 Title
        
     Field 3 Place
+
        [name | name-name[-name[-...]] Name may contain spaces
 
     Field 4 Publisher
@@ -117,15 +118,15 @@ class AJBentry(Entry):
 
         entryStr += ', '
         if self.notEmpty('Year'):
-            entryStr += self['Year']
+            entryStr += str(self['Year'])
 
         entryStr += ', '
         if self.notEmpty('Pagination'):
-            entryStr += self['Pagination']
+            entryStr += str(self['Pagination'])
 
         entryStr += ', '
         if self.notEmpty('Price'):
-            entryStr += self['Price']
+            entryStr += str(self['Price'])
 
         entryStr += ', '
         if self.notEmpty('Reviews'):

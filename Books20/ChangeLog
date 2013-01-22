@@ -1,3 +1,11 @@
+2013-01-21  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/headerWindow.py (main): changed getDirty() to
+	isDirty()
+
+	* Tools/src/bookfile.py (BookFile.setEntry): added setEntry and
+	setNewEntry functions.
+
 2013-01-13  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/symbol.py: Began writing the symbol table code.
