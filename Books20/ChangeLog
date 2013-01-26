@@ -1,3 +1,8 @@
+2013-01-26  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/bookfile.py (BookFile.readFile): corrected an error
+	in readFile.
+
 2013-01-21  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/headerWindow.py (main): changed getDirty() to

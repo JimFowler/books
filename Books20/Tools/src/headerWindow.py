@@ -39,7 +39,7 @@ class HeaderWindow(QDialog, ui_HeaderEntry.Ui_HeaderEdit):
             self.clearDirty()
 
     def AskAndClose(self):
-        if self.getDirty() == True:
+        if self.isDirty() == True:
             resp = QMessageBox.warning(self, "Warning",
              '''The header has been modified\n
                 Do you want to save your changes?''',
@@ -74,7 +74,7 @@ class HeaderWindow(QDialog, ui_HeaderEntry.Ui_HeaderEdit):
         self.saveButton.enable = False
         self.dirty = False
 
-    def getDirty(self):
+    def isDirty(self):
         return self.dirty
 
     def setHeaderText(self, textstr):
@@ -100,7 +100,7 @@ def main():
     ex.show()
     app.exec_()
 
-    print('The Header is:')
+    print('The Header is:\n')
     print(bf.getHeader())
 
 if __name__ == '__main__':

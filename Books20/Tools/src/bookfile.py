@@ -1,5 +1,5 @@
-"""Defines the class that handles disk files and entry lists
-"""
+"""Defines the class that handles disk files and entry lists"""
+# -*- coding: UTF-8 -*-
 # -*- mode: Python;-*-
 
 import fileinput
@@ -12,7 +12,7 @@ __version__ = 0.1
 
 __defaultHeader__ = """Entry format
 
-Num AJB_ID Author [and author [and…]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
 
 AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
 
@@ -65,6 +65,7 @@ class BookFile():
         is done at this stage."""
         self._fileName = filename
         self._baseName = os.path.basename(filename)
+        self._dirty = True
 
     def getFileName(self):
         """Return the current value of the fileName."""
@@ -90,18 +91,18 @@ class BookFile():
     def getEntry(self, count=-1):
         """Returns the entry at position count. If count is less than 0
         or greater than the number of entries, 'None' is returned. Note
-        that 1 <= count <= len(self._entryList)
+        that 1 <= count <= len(self._entryList).
         """
         if count < 1 or count > len(self._entryList):
             return None
 
         self.curEntryNumber = count - 1
-        return self._entryList[count]
+        return self._entryList[self.curEntryNumber]
 
     def setEntry(self, entry, count=-1):
 
         """Write over the current entry or the entry at position
-        'count' if given.  Note that 1 <= count <= len(self._entryList.
+        'count' if given.  Note that 1 <= count <= len(self._entryList).
         The dirty flag is set for the file."""
 
         if not entry.isValid():
@@ -117,7 +118,7 @@ class BookFile():
 
     def setNewEntry(self, entry, count=-1):
         """Append an entry to the list or insert before entry 'count' 
-        if that value is given. Note that 1 <= count <= len(self._entryList.
+        if that value is given. Note that 1 <= count <= len(self._entryList).
         The dirty flag is set for the file.
         """
 
@@ -148,7 +149,7 @@ class BookFile():
         if filename:
             self.setFileName(filename)
 
-        if not self._fileName == '' or not os.path.isfile(self._fileName):
+        if self._fileName == '' or not os.path.isfile(self._fileName):
             return 0 # no records read
 
         # if we have a good file, then clear the entryList and header
@@ -174,7 +175,7 @@ class BookFile():
                 self._entryList.append(entTemp)
                 entTemp = AJBentry()
          
-        self.curEntryNumber = 0
+        self.curEntryNumber = 1
         self.maxRecord = count
 
         return count
@@ -185,7 +186,7 @@ class BookFile():
         if filename is not given, we use BookEntry._fileName instead.
 
         Returns True if the file could be written or False otherwise."""
- 
+
         if filename:
             self.setFileName(filename)
 
@@ -213,7 +214,7 @@ class BookFile():
 if __name__ == "__main__":
 
     bf = BookFile()
-    print( "%d entries found\n" % bf.readFile("ajb58_books.txt"))
+    print( "%d entries found\n" % bf.readFile("./ajb58_books.txt"))
 
     print( 'The header for %s' % bf.getFileName())
     print( bf.getHeader() )

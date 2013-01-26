@@ -18,10 +18,11 @@ import ui_BookEntry
 from bookfile import *
 from menus import *
 from headerWindow import *
-
+from AJBentry import *
 
 __version__ = '0.1'
 
+
 class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    """BookEntry is the class which handles the BookEntry form
    for display of entries from the text files.
@@ -30,9 +31,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       super(BookEntry, self).__init__(parent)
       self.setupUi(self)
 
-      self.curRecord = 0
-      self.maxRecord = 0
+      self.curEntryNum = 0
+      self.maxEntryNum = 0
       self.bf = BookFile()
+      self.curEntry = AJBentry()
       self.bf.setFileName('document1')
       self.setWinTitle('document1')
 
@@ -42,13 +44,17 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
    #
-   # Menu slots
+   # Menu and button slots
    #
    def quit(self):
        self.close()
 
    def openNew(self):
-       pass
+      # check if entry or bookFile is dirty
+      # save if neccessary
+      # create empty bookFile
+      # create new entry
+      pass
 
    def openFile(self):
       # check for dirty file before overwriting
@@ -60,24 +66,33 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
           "%s -- Choose new file"%QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         self.maxRecord = self.bf.readFile(fname)
-         if self.maxRecord:
+         self.maxEntryNum = self.bf.readFile(fname)
+         if self.maxEntryNum:
             self.statusbar.clearMessage()
-            self.statusbar.showMessage('%d records found'%self.maxRecord, 6000)
-            self.ofnumLabel.setText('of %d'%self.maxRecord)
-            self.showRecord(0)
+            self.statusbar.showMessage('%d records found'%self.maxEntryNum, 6000)
+            self.ofnumLabel.setText('of %d'%self.maxEntryNum)
+            self.showEntry(1)
          else:
             self.statusbar.showMessage('No records found')
          self.setWinTitle(self.bf.getBaseName())
 
 
    def saveFile(self):
+      # check if entry is dirty
+      # call bf.writeFile
       pass
 
    def saveFileAs(self):
+      # check if entry is dirty
+      # get new filename
+      # bf.setFileName
+      # bf.writeFile
       pass
 
    def printEntry(self):
+      pass
+
+   def openSymbol(self):
       pass
 
    def editHeader(self):
@@ -90,6 +105,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow.show()
 
       
+   def on_prevButton_released(self):
+      self.showEntry(self.curEntryNum - 1)
+
+   def on_nextButton_released(self):
+      self.showEntry(self.curEntryNum + 1)
+
 
    #
    # Methods to deal with various display aspects
@@ -103,14 +124,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                   None, QApplication.UnicodeUTF8))
 
 
-   def on_prevButton_released(self):
-      self.showRecord(self.curRecord - 1)
-
-   def on_nextButton_released(self):
-      self.showRecord(self.curRecord + 1)
-
-   def showRecord(self, recnum=0):
-      """showRecord(recnum) where 0 <= recnum < maxRecords.
+   def showEntry(self, recnum=1):
+      """showEntry(recnum) where 0 <= recnum < maxEntryNums.
       recnum is the index into the entry list, the displayed
       value will be (recnum + 1).  The buttons will wrap around
       the index values.
@@ -118,28 +133,29 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.prevButton.setEnabled(True)
       self.nextButton.setEnabled(True)
 
-      if recnum < 0:
-         # We add here because recnum is negative already
-         self.curRecord = self.maxRecord + recnum
-      elif recnum >= self.maxRecord:
-         self.curRecord = recnum - self.maxRecord
+      if recnum < 1:
+         # We add here because recnum is zero or negative already
+         self.curEntryNum = self.maxEntryNum + recnum
+      elif recnum > self.maxEntryNum:
+         self.curEntryNum = recnum - self.maxEntryNum
       else:
-         self.curRecord = recnum
+         self.curEntryNum = recnum
 
-     # Display the actual entry data
-      displayEnt = self.bf.getEntry(self.curRecord)
+      # Display the actual entry data
+      self.curEntry = self.bf.getEntry(self.curEntryNum)
 
-      if not displayEnt:
+      if not self.curEntry:
          return
 
       # Display record count
-      self.indexLabel.setText('Index - %s' % str(self.curRecord+1))
+      self.indexEntry.setText(str(self.curEntryNum))
 
-      self.displayRecord(displayEnt)
+      self.EntryToDisplay(self.curEntry)
 
 
 
-   def displayRecord(self, displayEnt):
+   def EntryToDisplay(self, displayEnt):
+      """Given an entry, display the parts on the GUI display."""
 
       # AJB number
       a = displayEnt['Num']
@@ -272,6 +288,17 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             astr += b
       self.commentsEntry.setPlainText(astr)
 
+   def DisplayToEntry(self):
+      """Copy the display into the curEntry"""
+      pass
+
+
+   def saveEntry(self):
+      # save the curEntry to the bookFile
+      pass
+
+   def insertChar(self, char):
+      pass
 
    def helpAbout(self):
       QMessageBox.about(self, 'About BookEntry',

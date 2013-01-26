@@ -132,3 +132,35 @@ entry list we can get/replace entries, and add a new entry.
     :members:
     :show-inheritance:
 
+
+HeaderEntry
+___________
+
+The HeaderEntry object provides a graphical text entry window for the
+bookfile header information.
+
+.. automodule:: headerWindow
+    :members:
+    :show-inheritance:
+
+Symbol Table
+____________
+
+The Symbol table provides a small dialog window that allows one to insert
+special charactors into the current text/line edit object.  This is primarily
+used to insert unicode non-ascii charactor encodings.
+
+.. automodule:: symbol
+    :members:
+    :show-inheritance:
+
+BookEntry
+________
+
+The BookEntry object is the main user interface to the entries in a file.
+It contains a bookfile, header entry, and symbol table objects.
+
+.. automodule:: BookEntry
+    :members:
+    :show-inheritance:
+

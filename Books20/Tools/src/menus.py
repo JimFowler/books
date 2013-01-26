@@ -62,7 +62,7 @@ def createMenus( self, menuBar):
         deleteAction = createAction(self, '&Delete', None, 'Del')
         addInfoAction = createAction(self, 'Additional &Info...',
                                      None, 'Ctrl+T')
-        symbolAction = createAction(self, '&Insert Symbol...', None, 'Ctrl+I')
+        symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
         headerAction = createAction(self, 'Edit &Header',
                                     self.editHeader, 'Ctrl+H')
 
