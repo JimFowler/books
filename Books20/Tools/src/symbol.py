@@ -2,9 +2,13 @@
 any of the text fields.
 
 The basic code for the button and the window were taken from the
-character_picker package developed by Rich Griswold.  They were
-modified for the BookEntry package.
+character_picker package developed by Rich Griswold and described
+in his blog
+http://richgriswold.wordpress.com/2009/10/17/character-picker/
+
+The packaged was modified for BookEntry.
 """
+# -*- mode: Python; -*-
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
@@ -12,33 +16,33 @@ from PyQt4.QtGui  import *
 import codecs
 
 class MyButton( QToolButton ):
-	def __init__( self, parent=None ):
-		QToolButton.__init__( self, parent )
-		QObject.connect( self, SIGNAL("clicked()"), self.slotClicked )
+    """Create a button with a associated text string,
+    in our case a character. When the button is clicked
+    it emits the text string."""
+    def __init__( self, parent=None ):
+        QToolButton.__init__( self, parent )
+        QObject.connect( self, SIGNAL("clicked()"), self.slotClicked )
 
-	def slotClicked( self ):
-		self.emit( SIGNAL( "sigClicked" ), ( self.text(), ) )
+    def slotClicked( self ):
+        self.emit( SIGNAL( "sigClicked" ), ( self.text(), )) 
 
-class SymbolForm( QMainWindow ):
-    def __init__( self, file_name, icon_name, font_family, font_size, parent=None ):
+class SymbolForm( QDialog ):
+    """Create a table of buttons which emit their character
+    when pressed."""
+
+    def __init__( self, file_name, font_family, font_size, parent=None ):
         QWidget.__init__( self, parent )
-
+        
         try:
             file = codecs.open( file_name, 'r', 'utf-8' )
         except IOError as ex:
             print(ex)
             exit( 1 )
             
-        self.icon = QIcon()
-        self.icon.addPixmap( QPixmap( os.path.join( sys.path[0], 'character_picker.png' ) ), QIcon.Normal, QIcon.Off )
-        self.setWindowIcon( self.icon )
         self.setWindowTitle( 'Insert Symbol...' )
-
+        
         self.clicked = False
         self.font = QFont( font_family, int( font_size ) )
-        self.clipboard = QApplication.clipboard()
-        QObject.connect( self.clipboard, SIGNAL("dataChanged()"), self.clipboardChanged )
-        QObject.connect( self.clipboard, SIGNAL("selectionChanged()"), self.clipboardChanged )
         
         self.scrollArea = QScrollArea( self )
         self.scrollArea.setWidgetResizable( True )
@@ -77,15 +81,7 @@ class SymbolForm( QMainWindow ):
         self.gridLayout.addItem( spacerItem, 0, col_max, 1, 1 )
         spacerItem = QSpacerItem( 20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding )
         self.gridLayout.addItem( spacerItem, row, 0, 1, 1 )
-        self.setCentralWidget( self.scrollArea )
-
-    def clipboardChanged( self ):
-        if self.clicked is False:
-            button = self.buttonGroup.checkedButton()
-            if button is not None:
-                self.buttonGroup.setExclusive( False )
-                button.setChecked( False )
-                self.buttonGroup.setExclusive( True )
+        self.setLayout(self.gridLayout)
 
     def keyPressEvent( self, event ):
         if type( event ) == QKeyEvent:
@@ -95,51 +91,18 @@ class SymbolForm( QMainWindow ):
             event.ignore()
 
     def slotClicked( self, obj ):
-        char = unicode( obj[0] )
+        char =  obj[0]
         self.clicked = True
-        self.clipboard.setText( char, QClipboard.Selection )
-        self.clipboard.setText( char, QClipboard.Clipboard )
+        self.emit( SIGNAL( "sigClicked" ), ( char, ) )
         self.clicked = False
-
-
-def get_settings():
-    prog_name = 'character_picker'
-    settings = QSettings( QSettings.IniFormat, QSettings.UserScope, 'RichGriswold', prog_name )
-
-    original_font_name = 'FreeSans'
-    original_font_size = 12
-    font_name = str( settings.value( 'font_name', original_font_name ) )
-    font_size = int( settings.value( 'font_size',  original_font_size ) )
-    
-    settings_dir = os.path.split( str( settings.fileName() ) )[0]
-    file_name = os.path.join( settings_dir, prog_name + '.txt' )
-    icon_name = os.path.join( settings_dir, prog_name + '.png' )
-    
-    vals = dict()
-    vals['original_font_name'] = original_font_name
-    vals['original_font_size'] = original_font_size
-    vals['file_name'] = file_name
-    vals['font_name'] = font_name
-    vals['font_size'] = font_size
-    vals['icon_name'] = icon_name
-    vals['prog_name'] = prog_name
-    vals['settings_dir'] = settings_dir
-    vals['settings'] = settings
-    return vals
 
 
 
 if __name__ == "__main__":
-    import os
-    import signal
     import sys
     
-    signal.signal( signal.SIGINT, signal.SIG_DFL )
-    
-    settings = get_settings()
-    
     app = QApplication( sys.argv )
-    myapp = SymbolForm( settings['file_name'], settings['icon_name'], settings['font_name'], settings['font_size'] )
+    myapp = SymbolForm( 'symbols.txt', 'FreeSans', 12 )
     myapp.show()
     sys.exit( app.exec_() )
                     

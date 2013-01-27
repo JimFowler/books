@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 # -*- mode: Python;-*-
 
-"""AJB/AAA dialog to review books entries
+"""AJB/AAA dialog to review and edit books entries
 """
 
 import traceback
@@ -19,6 +19,7 @@ from bookfile import *
 from menus import *
 from headerWindow import *
 from AJBentry import *
+from symbol import *
 
 __version__ = '0.1'
 
@@ -31,17 +32,40 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       super(BookEntry, self).__init__(parent)
       self.setupUi(self)
 
+      self.tmpEntry = AJBentry()
+      self.tmpEntryDirty = False
+
       self.curEntryNum = 0
       self.maxEntryNum = 0
       self.bf = BookFile()
-      self.curEntry = AJBentry()
       self.bf.setFileName('document1')
       self.setWinTitle('document1')
 
       createMenus(self, self.menubar)
 
       self.connect(self.quitButton, SIGNAL('released()'), self.quit )
+      self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
+      self.connect(self.acceptButton, SIGNAL('released()'), self.clearEntryDirty )
 
+
+      self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.secNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.subSecNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.itemNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.authorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.editorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.titleEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.publEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.yearEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.pageEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.priceEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.reviewsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.fromlangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.tolangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.translatorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.compilersEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.contribEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.commentsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
 
    #
    # Menu and button slots
@@ -54,7 +78,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # save if neccessary
       # create empty bookFile
       # create new entry
-      pass
+      if self.tmpEntryDirty:
+         print('entry dirty')
 
    def openFile(self):
       # check for dirty file before overwriting
@@ -93,7 +118,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       pass
 
    def openSymbol(self):
-      pass
+      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 12)
+      self.symbolTable.show()
+      self.connect(self.symbolTable, SIGNAL('sigClicked'),
+                   self.insertChar )
 
    def editHeader(self):
       self.headerWindow = HeaderWindow(self)
@@ -104,12 +132,24 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow.setHeaderText(self.bf.getHeader())
       self.headerWindow.show()
 
-      
    def on_prevButton_released(self):
       self.showEntry(self.curEntryNum - 1)
 
    def on_nextButton_released(self):
       self.showEntry(self.curEntryNum + 1)
+
+   def saveEntry(self):
+      pass
+
+   def newEntry(self):
+      if self.tmpEntryDirty:
+         print('entry dirty')
+
+   def setEntryDirty(self):
+      self.tmpEntryDirty = True
+
+   def clearEntryDirty(self):
+      self.tmpEntryDirty = False
 
 
    #
@@ -142,15 +182,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          self.curEntryNum = recnum
 
       # Display the actual entry data
-      self.curEntry = self.bf.getEntry(self.curEntryNum)
+      self.tmpEntry = self.bf.getEntry(self.curEntryNum)
 
-      if not self.curEntry:
+      if not self.tmpEntry:
          return
 
       # Display record count
       self.indexEntry.setText(str(self.curEntryNum))
 
-      self.EntryToDisplay(self.curEntry)
+      self.EntryToDisplay(self.tmpEntry)
 
 
 
@@ -289,16 +329,17 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.commentsEntry.setPlainText(astr)
 
    def DisplayToEntry(self):
-      """Copy the display into the curEntry"""
+      """Copy the display into the tmpEntry"""
       pass
 
 
    def saveEntry(self):
-      # save the curEntry to the bookFile
+      # save the tmpEntry to the bookFile
       pass
 
-   def insertChar(self, char):
-      pass
+   def insertChar(self, obj):
+      char = obj[0]
+      print('BookEntry insertChar got %s'% (char))
 
    def helpAbout(self):
       QMessageBox.about(self, 'About BookEntry',
