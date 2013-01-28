@@ -73,6 +73,10 @@ entries from the Astronomische Jaherbericht.
 AJB Comments
 ____________
 
+.. automodule:: AJBcomments
+    :members:
+    :show-inheritance:
+
 
 AJB entries have much common information however there are entries
 that have additional information that is not common enough to have an
@@ -116,10 +120,6 @@ one to put anything in the field.  The grammer is defined as:
   Initial       : ? <RE> ?, '.';
 
 
-.. automodule:: AJBcomments
-    :members:
-    :show-inheritance:
-
 BookFile
 ________ 
 
@@ -148,14 +148,15 @@ ____________
 
 The Symbol table provides a small dialog window that allows one to insert
 special charactors into the current text/line edit object.  This is primarily
-used to insert unicode non-ascii charactor encodings.
+used to insert unicode non-ascii charactor encodings. The default table is
+./symbols.txt.
 
 .. automodule:: symbol
     :members:
     :show-inheritance:
 
 BookEntry
-________
+_________
 
 The BookEntry object is the main user interface to the entries in a file.
 It contains a bookfile, header entry, and symbol table objects.

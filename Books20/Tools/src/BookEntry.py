@@ -38,14 +38,14 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.curEntryNum = 0
       self.maxEntryNum = 0
       self.bf = BookFile()
-      self.bf.setFileName('document1')
       self.setWinTitle('document1')
 
       createMenus(self, self.menubar)
 
       self.connect(self.quitButton, SIGNAL('released()'), self.quit )
       self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
-      self.connect(self.acceptButton, SIGNAL('released()'), self.clearEntryDirty )
+      self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
+      self.acceptButton.setEnabled(False)
 
 
       self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
@@ -71,98 +71,74 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    # Menu and button slots
    #
    def quit(self):
-       self.close()
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
 
-   def openNew(self):
-      # check if entry or bookFile is dirty
-      # save if neccessary
-      # create empty bookFile
-      # create new entry
-      if self.tmpEntryDirty:
-         print('entry dirty')
+      if self.askSaveFile() == QMessageBox.Cancel:
+         return
 
-   def openFile(self):
-      # check for dirty file before overwriting
-      if self.bf.isDirty():
-         self.statusbar.showMessage('WARNING: dirty file entry!')
-      
+      self.close()
 
-      fname = QFileDialog.getOpenFileName(self,
-          "%s -- Choose new file"%QApplication.applicationName(),
-                                          ".", "*.txt")
-      if fname:
-         self.maxEntryNum = self.bf.readFile(fname)
-         if self.maxEntryNum:
-            self.statusbar.clearMessage()
-            self.statusbar.showMessage('%d records found'%self.maxEntryNum, 6000)
-            self.ofnumLabel.setText('of %d'%self.maxEntryNum)
-            self.showEntry(1)
-         else:
-            self.statusbar.showMessage('No records found')
-         self.setWinTitle(self.bf.getBaseName())
+   #
+   # Menu and button slots for File actions
+   #
+   def openNewFile(self):
+      """Create a new bookfile saving the old one if it is dirty."""
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
+      if self.askSaveFile() == QMessageBox.Cancel:
+         return
+
+      self.bf = BookFile()
+
+   def openFile(self, name=None):
+      self.maxEntryNum = self.bf.readFile(name)
+      if self.maxEntryNum:
+         self.statusbar.clearMessage()
+         self.statusbar.showMessage('%d records found'%self.maxEntryNum, 6000)
+         self.ofnumLabel.setText('of %d'%self.maxEntryNum)
+         self.showEntry(1)
+         self.clearEntryDirty()
+      else:
+         self.statusbar.showMessage('No records found in file %s' % name)
+      self.setWinTitle(self.bf.getBaseName())
 
 
    def saveFile(self):
-      # check if entry is dirty
-      # call bf.writeFile
-      pass
+      """Ignores dirty entries and just save the file."""
+      if self.bf.getFileName() == None:
+         self.saveFileAs()
+      else:
+         self.bf.writeFile()
+
 
    def saveFileAs(self):
-      # check if entry is dirty
-      # get new filename
-      # bf.setFileName
-      # bf.writeFile
-      pass
+      """Ignore dirty entries and save the file as..."""
+      fname = QFileDialog.getSaveFileName(self,
+          "%s -- Choose file"%QApplication.applicationName(),
+                                          ".", "*.txt")
+      if fname:
+         self.bf.writefile(fname)
 
-   def printEntry(self):
-      pass
-
-   def openSymbol(self):
-      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 12)
-      self.symbolTable.show()
-      self.connect(self.symbolTable, SIGNAL('sigClicked'),
-                   self.insertChar )
-
-   def editHeader(self):
-      self.headerWindow = HeaderWindow(self)
-      self.headerWindow.setBookFile(self.bf)
-      self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                                  "Edit Headers - %s" % (self.bf.getBaseName()),
-                                  None, QApplication.UnicodeUTF8))
-      self.headerWindow.setHeaderText(self.bf.getHeader())
-      self.headerWindow.show()
-
-   def on_prevButton_released(self):
-      self.showEntry(self.curEntryNum - 1)
-
-   def on_nextButton_released(self):
-      self.showEntry(self.curEntryNum + 1)
-
+   #
+   # Menu and button slots for Entry Actions
+   #
    def saveEntry(self):
-      pass
+      """Save the entry to the current entry number in the bookfile."""
+      self.DisplayToEntry(self.tmpEntry)
+      self.bf.setEntry(self.tmpEntry, self.curEntryNumber)
+      self.clearEntryDirty()
 
    def newEntry(self):
-      if self.tmpEntryDirty:
-         print('entry dirty')
+      """Create a new entry, save the old one if it has been modified."""
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
 
-   def setEntryDirty(self):
-      self.tmpEntryDirty = True
-
-   def clearEntryDirty(self):
-      self.tmpEntryDirty = False
-
-
-   #
-   # Methods to deal with various display aspects
-   #
-   def setWinTitle( self, name ):
-      """Creates the string 'BookEntry vx.x - name' and
-      places it into the window title.
-      """
-      self.setWindowTitle(QApplication.translate("MainWindow", 
-                                  "BookEntry v%s - %s" % (__version__, name),
-                                  None, QApplication.UnicodeUTF8))
-
+      self.tmpEntry = AJBentry()
+      self.curEntryNum = self.maxEntryNum + 1
+      self.EntryToDisplay(self.tmpEntry)
+      self.clearEntryDirty()
 
    def showEntry(self, recnum=1):
       """showEntry(recnum) where 0 <= recnum < maxEntryNums.
@@ -171,6 +147,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       the index values.
       """
       self.prevButton.setEnabled(True)
+
       self.nextButton.setEnabled(True)
 
       if recnum < 1:
@@ -192,13 +169,139 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       self.EntryToDisplay(self.tmpEntry)
 
+   def printEntry(self):
+      """Print a postscript file of the current display."""
+      pr = QPrinter()
+      pr.setOutputFileName('BookEntry.pdf')
+      pr.setFullPage(True)
+      pr.setPaperSize(QPrinter.Letter)
+      
+      pt = QPainter(pr)
+      self.render(pt)
+      del pt
+
+   #
+   # Set/Clear flags for Entry
+   def setEntryDirty(self):
+      """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
+      self.tmpEntryDirty = True
+      self.acceptButton.setEnabled(True)
+
+   def clearEntryDirty(self):
+      """Set the tmpEntryDirty flag to False and disable the Save Entry button."""
+      self.tmpEntryDirty = False
+      self.acceptButton.setEnabled(False)
 
 
-   def EntryToDisplay(self, displayEnt):
+   def printPrinter(self):
+      pr = QPrinter()
+      pr.setOutputFileName('BookEntry.pdf')
+      pr.setFullPage(True)
+      pr.setPaperSize(QPrinter.Letter)
+      
+      prt = QPrintDialog(pr, self)
+      if prt.exec_():
+         pt = QPainter(pr)
+         self.render(pt)
+         del pt
+
+   #
+   # Edit menu functions
+   #
+   def openSymbol(self):
+      """Open the symbol dialog form."""
+      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 12)
+      self.symbolTable.show()
+      self.connect(self.symbolTable, SIGNAL('sigClicked'),
+                   self.insertChar )
+
+   def editHeader(self):
+      """Open the edit header form."""
+      self.headerWindow = HeaderWindow(self)
+      self.headerWindow.setBookFile(self.bf)
+      self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
+                                  "Edit Headers - %s" % (self.bf.getBaseName()),
+                                  None, QApplication.UnicodeUTF8))
+      self.headerWindow.setHeaderText(self.bf.getHeader())
+      self.headerWindow.show()
+
+   #
+   # Button slots
+   #
+   def on_prevButton_released(self):
+      self.showEntry(self.curEntryNum - 1)
+
+   def on_nextButton_released(self):
+      self.showEntry(self.curEntryNum + 1)
+
+   #
+   # Various useful dialogs
+   #
+   def askSaveEntry(self):
+      """Ask if we should save the dirty entry."""
+      if self.tmpEntryDirty:
+         ans = QMessageBox.warning( self, 'Save Entry?',
+                                    'Entry has changed. Do you want to save it?',
+                                    QMessageBox.Save,
+                                    QMessageBox.Ignore,
+                                    QMessageBox.Cancel )
+
+         if ans == QMessageBox.Save:
+            self.saveEntry()
+
+         return ans
+      return None
+
+   def askSaveFile(self):
+      """Ask if we should save the dirty file."""
+      if self.bf.isDirty():
+         ans = QMessageBox.warning( self, 'Save file?',
+                                    'The File has changed. Do you want to save it?',
+                                    QMessageBox.Save,
+                                    QMessageBox.Ignore,
+                                    QMessageBox.Cancel )
+
+         if ans == QMessageBox.Save:
+            self.saveFile()
+
+         return ans
+      return None
+
+   def askOpenFile(self):
+      """Open an existing file saving the old one if it is dirty."""
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
+      if self.askSaveFile() == QMessageBox.Cancel:
+         return
+
+      # else get a file name 
+      fname = QFileDialog.getOpenFileName(self,
+          "%s -- Choose new file"%QApplication.applicationName(),
+                                          ".", "*.txt")
+      if fname:
+         self.openFile(fname)
+
+
+   #
+   # Methods to deal with various display aspects
+   #
+   def setWinTitle( self, name ):
+      """Creates the string 'BookEntry vx.x - name' and
+      places it into the window title.
+      """
+      self.setWindowTitle(QApplication.translate("MainWindow", 
+                                  "BookEntry v%s - %s" % (__version__, name),
+                                  None, QApplication.UnicodeUTF8))
+
+
+
+
+   def EntryToDisplay(self, entry):
       """Given an entry, display the parts on the GUI display."""
 
       # AJB number
-      a = displayEnt['Num']
+      a = entry['Num']
       self.volNum.setText(str(a['volNum']))
       self.secNum.setText(str(a['sectionNum']))
       if int(a['subsectionNum']) > -1:
@@ -209,8 +312,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Authors
       astr = ''
-      if displayEnt.notEmpty('Authors'):
-         a = displayEnt['Authors']
+      if entry.notEmpty('Authors'):
+         a = entry['Authors']
          if a:
             first = True
             for b in a:
@@ -222,15 +325,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Title
       astr = ''
-      if displayEnt.notEmpty('Title'):
-         astr += displayEnt['Title']
+      if entry.notEmpty('Title'):
+         astr += entry['Title']
       self.titleEntry.setText(astr)
 
       # Publishers
       astr = ''
-      if displayEnt.notEmpty('Publishers'):
+      if entry.notEmpty('Publishers'):
          first = True
-         for a in displayEnt['Publishers']:
+         for a in entry['Publishers']:
             if not first:
                astr += '\n'
             first = False
@@ -239,26 +342,26 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Year
       astr = ''
-      if displayEnt.notEmpty('Year'):
-         astr += displayEnt['Year']
+      if entry.notEmpty('Year'):
+         astr += entry['Year']
       self.yearEntry.setText(astr)
 
       # Pagination
       astr = ''
-      if displayEnt.notEmpty('Pagination'):
-         astr += displayEnt['Pagination']
+      if entry.notEmpty('Pagination'):
+         astr += entry['Pagination']
       self.pageEntry.setText(astr)
 
       # Price
       astr = ''
-      if displayEnt.notEmpty('Price'):
-         astr += displayEnt['Price']
+      if entry.notEmpty('Price'):
+         astr += entry['Price']
       self.priceEntry.setText(astr)
 
       # Review
       astr = ''
-      if displayEnt.notEmpty('Reviews'):
-         rev = displayEnt['Reviews']
+      if entry.notEmpty('Reviews'):
+         rev = entry['Reviews']
          if rev:
             for item in rev:
                astr += item + '\n'
@@ -266,20 +369,20 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Language
       astr = ''
-      if displayEnt.notEmpty('Language'):
-         astr += displayEnt['Language']
+      if entry.notEmpty('Language'):
+         astr += entry['Language']
       self.tolangEntry.setText(astr)
 
       # fromLanguage
       astr = ''
-      if displayEnt.notEmpty('TranslatedFrom'):
-         astr += displayEnt['TranslatedFrom']
+      if entry.notEmpty('TranslatedFrom'):
+         astr += entry['TranslatedFrom']
       self.fromlangEntry.setText(astr)
 
       # Translators
       astr = ''
-      if displayEnt.notEmpty('Translators'):
-         a = displayEnt['Translators']
+      if entry.notEmpty('Translators'):
+         a = entry['Translators']
          if a:
             first = True
             for b in a:
@@ -291,8 +394,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Compilers
       astr = ''
-      if displayEnt.notEmpty('Compilers'):
-         a = displayEnt['Compilers']
+      if entry.notEmpty('Compilers'):
+         a = entry['Compilers']
          if a:
             first = True
             for b in a:
@@ -304,8 +407,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Contributors
       astr = ''
-      if displayEnt.notEmpty('Contributors'):
-         a = displayEnt['Contributors']
+      if entry.notEmpty('Contributors'):
+         a = entry['Contributors']
          if a:
             first = True
             for b in a:
@@ -318,8 +421,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Others
       astr = ''
-      if displayEnt.notEmpty('Others'):
-         a = displayEnt['Others']
+      if entry.notEmpty('Others'):
+         a = entry['Others']
          first = True
          for b in a:
             if not first:
@@ -328,19 +431,18 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             astr += b
       self.commentsEntry.setPlainText(astr)
 
-   def DisplayToEntry(self):
-      """Copy the display into the tmpEntry"""
+   def DisplayToEntry(self, entry):
+      """Copy the display into entry"""
       pass
 
-
-   def saveEntry(self):
-      # save the tmpEntry to the bookFile
-      pass
 
    def insertChar(self, obj):
       char = obj[0]
       print('BookEntry insertChar got %s'% (char))
 
+   #
+   # Help menu functions
+   #
    def helpAbout(self):
       QMessageBox.about(self, 'About BookEntry',
                 """<b>AJB Book Entry</b> v {0}
@@ -357,42 +459,48 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
 
-if __name__ == '__main__':
-   app = QApplication(sys.argv)
-   app.setApplicationName('Book Entry')
-   form = BookEntry()
-   form.show()
-   sys.exit(app.exec_())
-   
+
 #
 # Parse the command line arguments
 #
-parser = argparse.ArgumentParser(description='Reduce a rho mount model data file\
- and provide a correction file suitable for adding to Tcs.')
+def getargs():
+   parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
 
-parser.add_argument('-v', '--verbose', help='provide verbose output,', action='store_true')
-parser.add_argument('-p', '--plot',
-                    help='plot the output, theta vs phi and theta/phi vs rho when done,',
-                    action='store_true')
-parser.add_argument( '-t', '--title', type=str,
-                     help='the name of the file to process.',
-                     action='append')
-parser.add_argument( '-o', '--output', type=str,
-                     help='write the model to file name, instead of stdout',
-                     action='append')
-parser.add_argument( 'filename', type=str, help='the name of the file to process.')
+   parser.add_argument('-v', '--verbose',
+                       help='provide verbose output,',
+                       action='store_true')
+   #parser.add_argument('-p', '--plot',
+   #                    help='plot the output, theta vs phi and theta/phi vs rho when done,',
+   #                    action='store_true')
+   #parser.add_argument( '-t', '--title', type=str,
+   #                     help='the name of the file to process.',
+   #                     action='append')
+   parser.add_argument( '-i', '--input', type=str,
+                        help='read the file INPUT for entries',
+                        action='append')
+   #parser.add_argument( 'filename', type=str,
+   #                     help='the name of the file to process.',
+   #                     action='append')
 
-args = parser.parse_args()
+   args = parser.parse_args()
 
-if args.title != None:
-    title = args.title[0]
-else:
-    title = args.filename
+   return args
 
-if args.output != None:
-    fp = open(args.output[0], 'w')
-else:
-    fp = sys.stdout
+
+#
+# The main body
+#
+
+if __name__ == '__main__':
+
+   args = getargs()
+
+   app = QApplication(sys.argv)
+   app.setApplicationName('Book Entry')
+   form = BookEntry()
+   form.openFile(args.input[0])
+   form.show()
+   sys.exit(app.exec_())
 
 
 
