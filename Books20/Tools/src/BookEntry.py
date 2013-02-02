@@ -39,6 +39,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.maxEntryNum = 0
       self.bf = BookFile()
       self.setWinTitle('document1')
+      self.insertFunc = None
+
+      self.noEntryList = ['volNum', 'secNum', 'subSecNum', 'itemNum',
+                          'yearEntry', 'pageEntry', 'indexEntry']
+      self.setTextEntryList = ['authorEntry', 'editorEntry', 'titleEntry',
+                               'publEntry', 'reviewsEntry',  'translatorEntry',
+                               'compilersEntry', 'contribEntry', 'commentsEntry',
+                               'headerEntry' ]
+      self.setLineEntryList = ['fromlangEntry', 'tolangEntry', 'priceEntry']
 
       createMenus(self, self.menubar)
 
@@ -107,7 +116,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def saveFile(self):
       """Ignores dirty entries and just save the file."""
-      if self.bf.getFileName() == None:
+      if self.bf.getFileName() is not None:
          self.saveFileAs()
       else:
          self.bf.writeFile()
@@ -437,8 +446,29 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
    def insertChar(self, obj):
+      """Insert the charactor in obj[0] with self.insertFunc
+      if insertFunc is not None."""
+
       char = obj[0]
-      print('BookEntry insertChar got %s'% (char))
+      # invoke self.insertFunc(char)
+      if self.insertFunc is not None:
+         self.insertFunc(char)
+
+      #print('BookEntry insertChar got %s'% (char))
+
+   def setInsertFunc(self, oldWidget, nowWidget ):
+      """For items in setTextEntryList and setLineEntryList
+      set insertFunc to be either insertPlainText or insert."""
+
+      if nowWidget is None:
+         pass
+      elif self.setTextEntryList.count(nowWidget.objectName()):
+         self.insertFunc = nowWidget.insertPlainText
+      elif self.setLineEntryList.count(nowWidget.objectName()):
+         self.insertFunc = nowWidget.insert
+      elif self.noEntryList.count(nowWidget.objectName()):
+         self.insertFunc = None
+
 
    #
    # Help menu functions
@@ -469,15 +499,15 @@ def getargs():
    parser.add_argument('-v', '--verbose',
                        help='provide verbose output,',
                        action='store_true')
+   parser.add_argument( '-i', '--input', type=str,
+                        help='read the file INPUT for entries',
+                        action='append')
    #parser.add_argument('-p', '--plot',
    #                    help='plot the output, theta vs phi and theta/phi vs rho when done,',
    #                    action='store_true')
    #parser.add_argument( '-t', '--title', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
-   parser.add_argument( '-i', '--input', type=str,
-                        help='read the file INPUT for entries',
-                        action='append')
    #parser.add_argument( 'filename', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
@@ -498,7 +528,10 @@ if __name__ == '__main__':
    app = QApplication(sys.argv)
    app.setApplicationName('Book Entry')
    form = BookEntry()
-   form.openFile(args.input[0])
+   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
+                   form.setInsertFunc)
+   if args.input is not None:
+      form.openFile(args.input[0])
    form.show()
    sys.exit(app.exec_())
 

@@ -32,6 +32,7 @@ class SymbolForm( QDialog ):
 
     def __init__( self, file_name, font_family, font_size, parent=None ):
         QWidget.__init__( self, parent )
+        self.setObjectName('symbolForm')
         
         try:
             file = codecs.open( file_name, 'r', 'utf-8' )
@@ -67,6 +68,7 @@ class SymbolForm( QDialog ):
                     button.setFont( self.font )
                     button.setSizePolicy( QSizePolicy.Expanding, QSizePolicy.Expanding )
                     button.setText( char )
+                    button.setObjectName('%03d%03dButton'%(row,col))
                     self.gridLayout.addWidget( button, row, col, 1, 1 )
                     self.buttonGroup.addButton( button, id )
                     QObject.connect( button, SIGNAL("sigClicked"), self.slotClicked )
