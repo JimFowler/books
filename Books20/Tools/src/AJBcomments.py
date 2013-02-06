@@ -30,6 +30,8 @@ class Year (Grammar):
 class Item (Grammar):
     grammar = (RE(r'[0-9]{2,3}'))
 
+# Note that no subsection is needed
+
 class Section (Grammar):
     grammar = (RE(r'[0-9]{2,3}'))
 
@@ -121,7 +123,7 @@ class Reprint (Grammar):
     grammar = (L('reprint of'), OR(AJBNum, Year), L(';'))
 
 class Reference (Grammar):
-    grammar = (L('reference'), AJBNum)
+    grammar = (L('reference'), AJBNum, L(';'))
   
 class Edition (Grammar):
     grammar = (OR(Digit, TwoDigit),
@@ -139,9 +141,6 @@ class Language (Grammar):
                OPTIONAL( L('with'), uWords, L('references')),  L(';'))
 
 class Other (Grammar):
-    """match string with any unicode character except whitespace
-    and a semi-colon"""
-    #grammar = (L('other'), REPEAT(RE(r"[0-9()?'\w]+")), L(';'))
     grammar = (L('other'), uWords, L(';'))
 
 class Comment (Grammar):
@@ -161,7 +160,7 @@ if __name__ == '__main__':
                'reprint of 1956;',
                'reprint of AJB 34.56.23;',
                
-               'reference AJB 66.54.32 ',
+               'reference AJB 66.54.32;',
     
                'edited by A. J. Reader;',
                'edited by A.-B. J. Reader;',

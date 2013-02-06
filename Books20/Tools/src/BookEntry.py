@@ -14,6 +14,7 @@ import argparse
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
+from nameparser import HumanName
 import ui_BookEntry
 from bookfile import *
 from menus import *
@@ -35,14 +36,23 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.tmpEntry = AJBentry()
       self.tmpEntryDirty = False
 
-      self.curEntryNum = 0
-      self.maxEntryNum = 0
+      self.curEntryNumber = 0
+      self.maxEntryNumber = 0
       self.bf = BookFile()
       self.setWinTitle('document1')
       self.insertFunc = None
 
+      self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
+                               'Publishers', 'Edition', 'Year',
+                               'Pagination', 'Price', 'Reviews',
+                               'Compilers', 'Contributors', 'Translators',
+                               'Language', 'TranslatedFrom', 'Reference',
+                               'Reprint', 'Others', 'OrigStr', 'Comments', ]
+
+      # lists of which display fields may or may not have symbol entry allowed
       self.noEntryList = ['volNum', 'secNum', 'subSecNum', 'itemNum',
-                          'yearEntry', 'pageEntry', 'indexEntry']
+                          'yearEntry', 'pageEntry', 'indexEntry',
+                          'editionEntry']
       self.setTextEntryList = ['authorEntry', 'editorEntry', 'titleEntry',
                                'publEntry', 'reviewsEntry',  'translatorEntry',
                                'compilersEntry', 'contribEntry', 'commentsEntry',
@@ -56,6 +66,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
       self.acceptButton.setEnabled(False)
 
+      self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
       self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.secNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
@@ -65,10 +76,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.connect(self.editorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.titleEntry, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.publEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.editionEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.yearEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.pageEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.priceEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.reviewsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.reprintEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.referenceEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.fromlangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.tolangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.translatorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
@@ -102,11 +116,14 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.bf = BookFile()
 
    def openFile(self, name=None):
-      self.maxEntryNum = self.bf.readFile(name)
-      if self.maxEntryNum:
+      """Open an existing file, get the count of entries,
+      and display the first entry."""
+
+      self.maxEntryNumber = self.bf.readFile(name)
+      if self.maxEntryNumber:
          self.statusbar.clearMessage()
-         self.statusbar.showMessage('%d records found'%self.maxEntryNum, 6000)
-         self.ofnumLabel.setText('of %d'%self.maxEntryNum)
+         self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
+         self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
          self.showEntry(1)
          self.clearEntryDirty()
       else:
@@ -128,7 +145,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
           "%s -- Choose file"%QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         self.bf.writefile(fname)
+         self.bf.writeFile(fname)
 
    #
    # Menu and button slots for Entry Actions
@@ -145,12 +162,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          return
 
       self.tmpEntry = AJBentry()
-      self.curEntryNum = self.maxEntryNum + 1
+      self.curEntryNumber = self.maxEntryNumber + 1
       self.EntryToDisplay(self.tmpEntry)
       self.clearEntryDirty()
 
    def showEntry(self, recnum=1):
-      """showEntry(recnum) where 0 <= recnum < maxEntryNums.
+      """showEntry(recnum) where 0 <= recnum < maxEntryNumber.
       recnum is the index into the entry list, the displayed
       value will be (recnum + 1).  The buttons will wrap around
       the index values.
@@ -161,22 +178,23 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       if recnum < 1:
          # We add here because recnum is zero or negative already
-         self.curEntryNum = self.maxEntryNum + recnum
-      elif recnum > self.maxEntryNum:
-         self.curEntryNum = recnum - self.maxEntryNum
+         self.curEntryNumber = self.maxEntryNumber + recnum
+      elif recnum > self.maxEntryNumber:
+         self.curEntryNumber = recnum - self.maxEntryNumber
       else:
-         self.curEntryNum = recnum
+         self.curEntryNumber = recnum
 
       # Display the actual entry data
-      self.tmpEntry = self.bf.getEntry(self.curEntryNum)
+      self.tmpEntry = self.bf.getEntry(self.curEntryNumber)
 
       if not self.tmpEntry:
          return
 
       # Display record count
-      self.indexEntry.setText(str(self.curEntryNum))
+      self.indexEntry.setText(str(self.curEntryNumber))
 
       self.EntryToDisplay(self.tmpEntry)
+      self.tmpEntryDirty = False
 
    def printEntry(self):
       """Print a postscript file of the current display."""
@@ -218,7 +236,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    # Edit menu functions
    #
    def openSymbol(self):
-      """Open the symbol dialog form."""
+      """Open the symbol entry form."""
       self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 12)
       self.symbolTable.show()
       self.connect(self.symbolTable, SIGNAL('sigClicked'),
@@ -235,13 +253,20 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow.show()
 
    #
-   # Button slots
+   # Button slots and Signals
    #
    def on_prevButton_released(self):
-      self.showEntry(self.curEntryNum - 1)
+      self.showEntry(self.curEntryNumber - 1)
 
    def on_nextButton_released(self):
-      self.showEntry(self.curEntryNum + 1)
+      self.showEntry(self.curEntryNumber + 1)
+
+   def indexChanged(self):
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
+      enum = int(self.indexEntry.text())
+      self.showEntry(enum)
 
    #
    # Various useful dialogs
@@ -332,6 +357,19 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                astr += b.full_name
       self.authorEntry.setText(astr)
 
+      # Editors
+      astr = ''
+      if entry.notEmpty('Editors'):
+         a = entry['Editors']
+         if a:
+            first = True
+            for b in a:
+               if not first:
+                  astr += '\n'
+               first = False
+               astr += b.full_name
+      self.editorEntry.setText(astr)
+
       # Title
       astr = ''
       if entry.notEmpty('Title'):
@@ -348,6 +386,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             first = False
             astr += a['Place'] + ' : ' + a['PublisherName']
       self.publEntry.setText(astr)
+
+      # Edition
+      astr = ''
+      if entry.notEmpty('Edition'):
+         astr += entry['Edition']
+      self.editionEntry.setText(astr)
 
       # Year
       astr = ''
@@ -427,6 +471,18 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                astr += b.full_name
       self.contribEntry.setText(astr)
 
+      # Reprint
+      astr = ''
+      if entry.notEmpty('Reprint'):
+         astr += entry['Reprint']
+      self.reprintEntry.setText(astr)
+
+      # Reference
+      astr = ''
+      if entry.notEmpty('Reference'):
+         astr += entry['Reference']
+      self.yearEntry.setText(astr)
+
 
       # Others
       astr = ''
@@ -440,9 +496,154 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             astr += b
       self.commentsEntry.setPlainText(astr)
 
+
+      for field in entry.keys():
+         if self.knownEntryFields.count(field) == 0:
+            QMessageBox.warning( self, 'Unknown Entry Field',
+                                 'Unknown field "%s:  %s"\n in entry %s\n "'%
+                                 (field, entry[field], entry['Index']),
+                                 QMessageBox.Ok)
+         
    def DisplayToEntry(self, entry):
       """Copy the display into entry"""
-      pass
+
+      # AJB number
+      num = entry['Num']
+      num['volNum'] = int(self.volNum.text())
+      num['sectionNum'] = int(self.secNum.text())
+      num['subsectionNum'] = int(self.subSecNum.text())
+      num['entryNum'] = int(self.itemNum.text())
+
+      # Authors
+      entrya = entry['Authors']
+      entrya = []
+      a = self.authorEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            nm = HumanName(line)
+            entrya.append(nm)
+
+      # Editors
+      entrya = entry['Editors']
+      entrya = []
+      a = self.editorEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            nm = HumanName(line)
+            entrya.append(nm)
+
+      # Title
+      a = self.titleEntry.toPlainText()
+      if len(a) != 0:
+         entry['Title'] = a
+      else:
+         #warn that there is no title
+         pass
+
+      # Publishers
+      entrya = entry['Publishers']
+      entrya = []
+      a = self.publEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         nm = {}
+         for line in alist:
+            place, publisher = line.split(':')
+            nm['Place'] = place
+            nm['Publishername'] = publisher
+            entrya.append(nm )
+
+      # Edition
+      a = self.editionEntry.text()
+      if len(a) != 0:
+         entry['Edition'] = int(a)
+
+      # Year
+      a = self.yearEntry.text()
+      if len(a) != 0:
+         entry['Year'] = a
+
+      # Pagination
+      a = self.pageEntry.text()
+      if len(a) != 0:
+         entry['Pagination'] = a
+
+      # Price
+      a = self.priceEntry.text()
+      if len(a) != 0:
+         entry['Price'] = a
+
+      # Review
+      entrya = entry['Reviews']
+      entrya = []
+      a = self.reviewsEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            entrya.append(line)
+
+      # Language
+      a = self.tolangEntry.text()
+      if len(a) != 0:
+         entry['Language'] = a 
+
+      # fromLanguage
+      a = self.fromlangEntry.text()
+      if len(a) != 0:
+         entry['TranslatedFrom'] = a
+
+      # Translators
+      entrya = entry['Translators']
+      entrya = []
+      a = self.translatorEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            nm = HumanName(line)
+            entrya.append(nm)
+
+      # Compilers
+      entrya = entry['Compilers']
+      entrya = []
+      a = self.compilersEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            nm = HumanName(line)
+            entrya.append(nm)
+
+      # Contributors
+      entrya = entry['Contributors']
+      entrya = []
+      a = self.contribEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            nm = HumanName(line)
+            entrya.append(nm)
+
+      # Reprint
+      a = self.reprintEntry.text()
+      if len(a) != 0:
+         entry['Reprint'] = a
+
+      # Reference
+      a = self.referenceEntry.text()
+      if len(a) != 0:
+         entry['Reference'] = a
+
+      # Others
+      entrya = entry['Others']
+      entrya = []
+      a = self.commentsEntry.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            entrya.append(line)
+
+         
 
 
    def insertChar(self, obj):

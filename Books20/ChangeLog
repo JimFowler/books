@@ -1,7 +1,35 @@
+2013-02-05  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py: Added Edition, Reprint and Reference
+	fields to user interface.
+	(BookEntry.indexChanged): added function to jump to an entry
+	if the index number is edited.
+
+	* Tools/src/AJBcomments.py (Reference): require semi-colon to
+	termintate a Reference comment. Will have to change all the
+	ajb??_books.doc/txt files. AJBcomments.py just could not handle
+	Reference at the end of a line with out some sort of termination
+	characters.
+
+2013-02-02  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (BookEntry.setInsertFunc): got the
+	insertFunc to work today. I can now insert special characters or
+	symbols from the symbolTable.
+	(BookEntry.DisplayToEntry): began writing function. Having trouble
+	using isEmpty().
+
+2013-02-01  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (getargs): Figured out how to find out
+	which Entry window has the focus.  Need to use
+	QApplication.focusChanged()
+
 2013-01-27  Jim Fowler  <jrf@Biblion>
 
-	* Tools/src/BookEntry.py (BookEntry): added saveEntry, newEntry, saveFile,
-	saveFileAs, newFile, openFile, askSaveEntry, and askSaveFile.
+	* Tools/src/BookEntry.py (BookEntry): added saveEntry, newEntry,
+	saveFile, saveFileAs, newFile, openFile, askSaveEntry, and
+	askSaveFile.
 
 	* Tools/src/bookfile.py (BookFile): set default name in __init__.
 

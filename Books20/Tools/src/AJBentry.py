@@ -238,8 +238,8 @@ class AJBentry(Entry):
             for field in fields :
                 
                 fieldNum += 1
-                field = field.strip()
                 field = field.replace(' comma ', ', ' )
+                field = field.strip()
                 if 0 == fieldNum:  # AJBnum and Authors
                     self._parseField0( field )
                     
@@ -267,12 +267,13 @@ class AJBentry(Entry):
                     self['Reviews'] = field.split(' and ') 
                     
                 elif 8 == fieldNum:   # Comments and other material
-                    self['Comment'] = field
+                    self['Comments'] = field
                     self._parseComments( field )
+                    continue
 
             return True
 
-        else:  # if line and r1.match(line)
+        else:  # not if line and r1.match(line)
             return False
 
     def isValidAjbNum(self):
@@ -412,6 +413,7 @@ class AJBentry(Entry):
                     self['Edition'] = result.elements[0].edition_num
 
                 elif 'Reference' == grmName:
+                    print('FOUND REFERENCE')
                     self['Reference'] = str(result.find(AJBNum)).strip()
 
                 elif 'Reprint' == grmName:
@@ -468,7 +470,7 @@ class AJBentry(Entry):
                 elif 'Publishers' == grmName:
                     tmp = str(result.find(PublisherList))
                     # the space chars in the split avoids problems with 
-                    # Rand McNally & Sons
+                    # e.g. Rand McNally & Sons
                     list = tmp.split(' and ')
                     for l in list:
                         p = l.split(':')
@@ -483,6 +485,9 @@ class AJBentry(Entry):
                     if not self.notEmpty('Others'):
                         self['Others'] = []
                     self['Others'].append( nm )
+
+                else:
+                    print('Unknown grammer name %s' % grmName)
 
                 result = cParser.parse_string('')
 
@@ -501,6 +506,10 @@ if __name__ == '__main__':
 
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
+    allfieldsstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in Frenchh; reprint of AJB 59.03.05; reprint of 1956; reference AJB 59.144.55;'
+
+    allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
+
 
     badajbstr = '27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
 
@@ -518,11 +527,17 @@ if __name__ == '__main__':
     except:
       print("Entry() class fails properly with no read() method.")
       
+    allfieldajb = AJBentry(allfieldsstr)
+    print('\nThe all fields ajb entry isValid() is %d and looks like:' % allfieldajb.isValid())
+    pprint(allfieldajb)
+
+
+
+def notest():
     ajb1 = AJBentry()
     print("\najb.py version:: %s \n" % ajb1.version())
     print('The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid())
     pprint(ajb1)
-
 
     ajb2 = AJBentry(ajbstr)
     print("\najb.py version " + ajb2.version())
@@ -545,8 +560,8 @@ if __name__ == '__main__':
     print('\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid())
     pprint(editorajb)
 
-    print(editorajb.numStr())
-    eds = editorajb['Editors']
-    print(eds[0].full_name)
+    #print(editorajb.numStr())
+    #eds = editorajb['Editors']
+    #print(eds[0].full_name)
 
 
