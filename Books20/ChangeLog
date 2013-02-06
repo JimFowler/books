@@ -1,3 +1,13 @@
+2013-02-06  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/AJBentry.py (AJBentry.write): added semi-colon
+	when printing reference in comments.
+
+	* Tools/src/BookEntry.py (BookEntry.setFocusChanged): added test
+	to set indexEntry to current entry number if indexEntry lost focus.
+	Then, if you change the indexEntry but do not hit return and you tab
+	out of the field, the number returns to the current index number.
+
 2013-02-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/BookEntry.py: Added Edition, Reprint and Reference

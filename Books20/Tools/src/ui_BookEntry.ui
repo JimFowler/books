@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>861</width>
-    <height>837</height>
+    <width>868</width>
+    <height>847</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -790,7 +790,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>861</width>
+     <width>868</width>
      <height>25</height>
     </rect>
    </property>
@@ -806,6 +806,9 @@
   <tabstop>editorEntry</tabstop>
   <tabstop>titleEntry</tabstop>
   <tabstop>publEntry</tabstop>
+  <tabstop>editionEntry</tabstop>
+  <tabstop>yearEntry</tabstop>
+  <tabstop>pageEntry</tabstop>
   <tabstop>priceEntry</tabstop>
   <tabstop>reviewsEntry</tabstop>
   <tabstop>fromlangEntry</tabstop>
@@ -813,6 +816,8 @@
   <tabstop>translatorEntry</tabstop>
   <tabstop>compilersEntry</tabstop>
   <tabstop>contribEntry</tabstop>
+  <tabstop>reprintEntry</tabstop>
+  <tabstop>referenceEntry</tabstop>
   <tabstop>commentsEntry</tabstop>
   <tabstop>indexEntry</tabstop>
  </tabstops>

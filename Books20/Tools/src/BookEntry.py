@@ -42,6 +42,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.setWinTitle('document1')
       self.insertFunc = None
 
+      # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
                                'Publishers', 'Edition', 'Year',
                                'Pagination', 'Price', 'Reviews',
@@ -481,7 +482,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       astr = ''
       if entry.notEmpty('Reference'):
          astr += entry['Reference']
-      self.yearEntry.setText(astr)
+      self.referenceEntry.setText(astr)
 
 
       # Others
@@ -657,9 +658,14 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       #print('BookEntry insertChar got %s'% (char))
 
-   def setInsertFunc(self, oldWidget, nowWidget ):
+   def setFocusChanged(self, oldWidget, nowWidget ):
       """For items in setTextEntryList and setLineEntryList
       set insertFunc to be either insertPlainText or insert."""
+
+      if oldWidget is None:
+         pass
+      elif oldWidget.objectName() == 'indexEntry':
+         self.indexEntry.setText(str(self.curEntryNumber))
 
       if nowWidget is None:
          pass
@@ -730,7 +736,7 @@ if __name__ == '__main__':
    app.setApplicationName('Book Entry')
    form = BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-                   form.setInsertFunc)
+                   form.setFocusChanged)
    if args.input is not None:
       form.openFile(args.input[0])
    form.show()

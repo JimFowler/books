@@ -223,7 +223,7 @@ if __name__ == "__main__":
 
     bf.readFile('testfile.txt')
     bf.writeFile('testfile2.txt')
-    # run 'diff testfile2.txt testfile.txt'
+    print(' run "diff testfile2.txt testfile.txt"')
 
     ent = AJBentry('500 58.04.05 , An Amazing Book')
     ent2 = AJBentry('500 58.04.06 , An Amazing Book Too')
@@ -233,3 +233,4 @@ if __name__ == "__main__":
     bf.setNewEntry(ent2, 5) # insert as entry 5
     bf.setEntry(ent, 4) # replace entry 4
     bf.writeFile('testfile3.txt')
+    print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')

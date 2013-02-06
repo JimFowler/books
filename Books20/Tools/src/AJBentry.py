@@ -61,11 +61,11 @@ class AJBentry(Entry):
         a = self['Num']
         if a:
             st = str(a['volume'])
-            st = st + ' ' + str(a['volNum']) 
-            st = st + '.' + str(a['sectionNum'])
+            st = st + ' ' + '%02d'%a['volNum']
+            st = st + '.' + '%02d'%a['sectionNum']
             if a['subsectionNum'] > -1:
                 st = st + '(' + str(a['subsectionNum']) + ')'
-            st = st + '.' + str(a['entryNum'])
+            st = st + '.' + '%02d'%a['entryNum']
             return st
         else:
             return None
@@ -211,6 +211,7 @@ class AJBentry(Entry):
         if self.notEmpty('Reference'):
             entryStr += 'reference '
             entryStr += self['Reference']
+            entryStr += ';'
 
 
         return entryStr
@@ -413,7 +414,6 @@ class AJBentry(Entry):
                     self['Edition'] = result.elements[0].edition_num
 
                 elif 'Reference' == grmName:
-                    print('FOUND REFERENCE')
                     self['Reference'] = str(result.find(AJBNum)).strip()
 
                 elif 'Reprint' == grmName:
