@@ -53,7 +53,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # lists of which display fields may or may not have symbol entry allowed
       self.noEntryList = ['volNum', 'secNum', 'subSecNum', 'itemNum',
                           'yearEntry', 'pageEntry', 'indexEntry',
-                          'editionEntry']
+                          'editionEntry', 'referenceEntry', 'reprintEntry']
       self.setTextEntryList = ['authorEntry', 'editorEntry', 'titleEntry',
                                'publEntry', 'reviewsEntry',  'translatorEntry',
                                'compilersEntry', 'contribEntry', 'commentsEntry',
@@ -238,7 +238,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def openSymbol(self):
       """Open the symbol entry form."""
-      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 12)
+      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 14)
       self.symbolTable.show()
       self.connect(self.symbolTable, SIGNAL('sigClicked'),
                    self.insertChar )

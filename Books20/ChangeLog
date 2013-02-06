@@ -1,5 +1,14 @@
 2013-02-06  Jim Fowler  <jrf@Biblion>
 
+	* Tools/src/symbol.py (SymbolForm.__init__): Modified to include
+	toolTips and comments in the symbol table file.
+
+	* Tools/src/symbols.txt: Built first symbol table with the
+	characters that I remember using.
+
+	* Tools/src/BookEntry.py (BookEntry.__init__): Added reprintEntry
+	and referenceEntry to noEntryList.
+
 	* Tools/src/AJBentry.py (AJBentry.write): added semi-colon
 	when printing reference in comments.
 

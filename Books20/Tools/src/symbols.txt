@@ -1,8 +1,109 @@
-﻿ÄäËëÖöÜüÿßͪ
-ÅåàáâҪçčèéěęìíî
-łñøôřŠšŜŝťůýżž
-£°ʰ¥$&
-ΑΒΓΔΕΖΗΘΙΚΛΜ
-ΝΞΟΠΡΣΤΥΦΧΨΩ
-αβγδεζηθκλμ
-νξοπρςστυφχψω
+﻿Ä, Capital letter A with diaeresis
+ä, Small letter a with diaeresis
+Ë, Capital letter E with diaeresis
+ë, Small letter e with diaeresis
+Ö, Capital letter O with diaeresis
+ö, Small letter o with diaeresis
+Ü, Capital letter U with diaeresis
+ü, Small letter u with diaeresis
+ÿ, Small letter y with diaeresis
+ß, Small letter sharp s
+
+Å, Capital letter A with ring above
+å, Small letter a with ring above
+à, small letter a with grave
+á, small letter a with acute
+â, Small letter a with cirumflex
+Ҫ, Capital letter C with cedilla
+ç, Small letter c with cedilla
+č, Small letter c with circumflex
+è, Small letter e with grave
+é, Small letter e with acute
+ě, Small letter e with caron
+ę, Small letter e with cedilla
+ì, Small letter i with grave
+í, Small letter i with acute
+î, Small letter I with caron
+
+ł, Small letter l with stoke
+ñ, Small letter n with tilde
+ø, Small letter o with stroke
+ô, Small letter o with circumflex
+ř, Small letter r with caron
+Š, Captial letter S with caron
+š, Small letter s with caron
+Ŝ, Capital letter s with circumflex
+ŝ, Small letter s with circumflex
+ť, Small letter t with acute
+ů, Small letter u with ring above
+ý, Small letter y with acute
+ż, Small letter z with dot above
+ž, Small letter z with caron
+
+£, British pound sign
+°, Degree symbol
+ʰ, Right ascension hours
+¥, Japan Yen sign
+$, US Dollar sign
+&, Ampersand sign
+
+# Greek alphabet
+Α, Greek capital letter Alpha
+Β, Greek capital letter Beta
+Γ, Greek capital letter Gamma
+Δ, Greek capital letter Delta
+Ε, Greek capital letter Epsilon
+Ζ, Greek capital letter Zeta
+Η, Greek capital letter Eta
+Θ, Greek capital letter Theta
+Ι, Greek capital letter Iota
+Κ, Greek capital letter Kappa
+Λ, Greek capital letter Lambda
+Μ, Greek capital letter Mu
+
+Ν, Greek capital letter Nu
+Ξ, Greek capital letter Xi
+Ο, Greek capital letter Omicron
+Π, Greek capital letter Pi
+Ρ, Greek capital letter Rho
+Σ, Greek capital letter Sigma
+Τ, Greek capital letter Tau
+Υ, Greek capital letter Upsilon
+Φ, Greek capital letter Phi
+Χ, Greek capital letter Chi
+Ψ, Greek capital letter Psi
+Ω, Greek capital letter Omega
+
+α, Greek small letter alpha
+β, Greek small letter beta
+γ, Greek small letter gamma
+δ, Greek small letter delta
+ε, Greek small letter epsilon
+ζ, Gree small letter zeta
+η, Greek small letter eta
+θ, Greek small letter theta
+ι, Greek small letter iota
+κ, Greek small letter kappa
+λ, Greek small letter lambda
+μ, Greek small letter mu
+
+ν, Greek small letter nu
+ξ, Greek small letter xi
+ο, Greek small letter omicron
+π, Greek small letter pi
+ρ, Greek small letter rho
+ς, Greek small letter final sigma
+σ, Greek small letter sigma
+τ, Greek small letter tau
+υ, Greek small letter micron
+φ, Greek small letter phi
+χ, Greek small letter chi
+ψ, Greek small letter phi
+ω, Greek small letter theta
+#
+#
+# symbols.txt
+#  A symbol table for the symbol.py package under the BookEntry program
+#  6 Feb 2013 James R Fowler
+#
+#

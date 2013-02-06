@@ -59,25 +59,41 @@ class SymbolForm( QDialog ):
         row = 0
         col_max = 0
         id = 0
+        col = 0
         for line in file:
-            col = 0
-            for char in line:
-                if '\n' != char:
-                    button = MyButton( self.scrollAreaWidgetContents )
-                    button.setCheckable( True )
-                    button.setFont( self.font )
-                    button.setSizePolicy( QSizePolicy.Expanding, QSizePolicy.Expanding )
-                    button.setText( char )
-                    button.setObjectName('%03d%03dButton'%(row,col))
-                    self.gridLayout.addWidget( button, row, col, 1, 1 )
-                    self.buttonGroup.addButton( button, id )
-                    QObject.connect( button, SIGNAL("sigClicked"), self.slotClicked )
-                    self.buttons[row, col] = button
-                    col += 1
-                    id += 1
+            line = line.strip()
+
+            # start new row if line is empty
+            if len(line) < 1:
+                row += 1
+                col = 0
+                continue
+
+            # ignore comment line
+            if line[0] == '#':
+                continue
+
+            try:
+                char, tip = line.split(',')
+            except:
+                print('Symbol Table Error: "%s"' % line)
+                continue
+
+            button = MyButton( self.scrollAreaWidgetContents )
+            button.setCheckable( True )
+            button.setFont( self.font )
+            button.setSizePolicy( QSizePolicy.Expanding, QSizePolicy.Expanding )
+            button.setText( char )
+            button.setToolTip(tip)
+            button.setObjectName('%03d%03dButton'%(row,col))
+            self.gridLayout.addWidget( button, row, col, 1, 1 )
+            self.buttonGroup.addButton( button, id )
+            QObject.connect( button, SIGNAL("sigClicked"), self.slotClicked )
+            self.buttons[row, col] = button
+            col += 1
+            id += 1
             if col > col_max:
                 col_max = col
-            row += 1
 
         spacerItem = QSpacerItem( 40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum )
         self.gridLayout.addItem( spacerItem, 0, col_max, 1, 1 )
@@ -104,7 +120,7 @@ if __name__ == "__main__":
     import sys
     
     app = QApplication( sys.argv )
-    myapp = SymbolForm( 'symbols.txt', 'FreeSans', 12 )
+    myapp = SymbolForm( 'symbols.txt', 'FreeSans', 14 )
     myapp.show()
     sys.exit( app.exec_() )
                     
