@@ -1,3 +1,26 @@
+2013-02-09  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/origstrWindow.py: added dialog to view original
+	string if there was one.
+
+	* Tools/src/AJBentry.py (AJBentry._parseComments): Fixed bug in
+	parsing of Translation. Use tmp.elements[1] instead of
+	results.find(uWord). The later case was finding the first uWord in
+	'translated from Russian into English' when looking for the
+	ToLanguage 'English'.
+
+2013-02-08  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/symbol.py (SymbolForm.__init__): switched from
+	codecs.open() to open() since python3 and Ubuntu are Unicode be
+	default.
+
+	* Tools/src/symbols.txt: removed the BOM (byte order mark) that
+	Microsoft Office inserted into the text file. Now I can read
+	comments at the begining of the file with out error. Note that all
+	the ajb??_books.txt files also have BOM at the beginning. Use
+	'vim -b <filename>' to edit <filename> as a binary file.
+
 2013-02-06  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/symbol.py (SymbolForm.__init__): Modified to include
@@ -9,20 +32,21 @@
 	* Tools/src/BookEntry.py (BookEntry.__init__): Added reprintEntry
 	and referenceEntry to noEntryList.
 
-	* Tools/src/AJBentry.py (AJBentry.write): added semi-colon
-	when printing reference in comments.
+	* Tools/src/AJBentry.py (AJBentry.write): added semi-colon when
+	printing reference in comments.
 
 	* Tools/src/BookEntry.py (BookEntry.setFocusChanged): added test
-	to set indexEntry to current entry number if indexEntry lost focus.
-	Then, if you change the indexEntry but do not hit return and you tab
-	out of the field, the number returns to the current index number.
+	to set indexEntry to current entry number if indexEntry lost
+	focus.  Then, if you change the indexEntry but do not hit return
+	and you tab out of the field, the number returns to the current
+	index number.
 
 2013-02-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/BookEntry.py: Added Edition, Reprint and Reference
 	fields to user interface.
-	(BookEntry.indexChanged): added function to jump to an entry
-	if the index number is edited.
+	(BookEntry.indexChanged): added function to jump to an entry if
+	the index number is edited.
 
 	* Tools/src/AJBcomments.py (Reference): require semi-colon to
 	termintate a Reference comment. Will have to change all the

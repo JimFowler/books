@@ -1,22 +1,27 @@
-﻿Ä, Capital letter A with diaeresis
-ä, Small letter a with diaeresis
-Ë, Capital letter E with diaeresis
-ë, Small letter e with diaeresis
-Ö, Capital letter O with diaeresis
-ö, Small letter o with diaeresis
-Ü, Capital letter U with diaeresis
-ü, Small letter u with diaeresis
-ÿ, Small letter y with diaeresis
-ß, Small letter sharp s
+#
+#
+# symbols.txt
+#  A symbol table for the symbol.py package under the BookEntry program
+#  6 Feb 2013 James R Fowler
+#
+#
 
+Ä, Capital letter A with diaeresis
+ä, Small letter a with diaeresis
 Å, Capital letter A with ring above
 å, Small letter a with ring above
 à, small letter a with grave
 á, small letter a with acute
 â, Small letter a with cirumflex
+ă, Small letter a with breve
+ã, Small letter a with tilde
 Ҫ, Capital letter C with cedilla
 ç, Small letter c with cedilla
-č, Small letter c with circumflex
+č, Small letter c with caron
+ć, Small letter c with acute
+
+Ë, Capital letter E with diaeresis
+ë, Small letter e with diaeresis
 è, Small letter e with grave
 é, Small letter e with acute
 ě, Small letter e with caron
@@ -27,15 +32,28 @@
 
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
+ń, Small letter n with acute
+Ö, Capital letter O with diaeresis
+ö, Small letter o with diaeresis
 ø, Small letter o with stroke
 ô, Small letter o with circumflex
+ò, Small letter o with grave
+ó, Small letter o with acute
 ř, Small letter r with caron
 Š, Captial letter S with caron
 š, Small letter s with caron
 Ŝ, Capital letter s with circumflex
 ŝ, Small letter s with circumflex
+Ş, Capital letter S with cedilla
+Ş, Small letter s with cedilla
+ß, Small letter sharp s
+
+ţ, Small letter t with cedilla
 ť, Small letter t with acute
+Ü, Capital letter U with diaeresis
+ü, Small letter u with diaeresis
 ů, Small letter u with ring above
+ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
 ż, Small letter z with dot above
 ž, Small letter z with caron
@@ -44,8 +62,7 @@
 °, Degree symbol
 ʰ, Right ascension hours
 ¥, Japan Yen sign
-$, US Dollar sign
-&, Ampersand sign
+—, Em dash
 
 # Greek alphabet
 Α, Greek capital letter Alpha
@@ -101,9 +118,6 @@ $, US Dollar sign
 ψ, Greek small letter phi
 ω, Greek small letter theta
 #
+# The End
 #
-# symbols.txt
-#  A symbol table for the symbol.py package under the BookEntry program
-#  6 Feb 2013 James R Fowler
-#
-#
+

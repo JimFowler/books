@@ -13,7 +13,6 @@ The packaged was modified for BookEntry.
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
-import codecs
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,
@@ -34,8 +33,8 @@ class SymbolForm( QDialog ):
         QWidget.__init__( self, parent )
         self.setObjectName('symbolForm')
         
-        try:
-            file = codecs.open( file_name, 'r', 'utf-8' )
+        try: 
+            file = open( file_name, 'r' )
         except IOError as ex:
             print(ex)
             exit( 1 )

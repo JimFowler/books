@@ -43,7 +43,8 @@ def createMenus( self, menuBar):
                                      self.saveFileAs, 'Ctrl+A')
         newEntAction = createAction( self, 'New &Entry',
                                      self.newEntry, 'Ctrl+E')
-        saveEntAction = createAction( self, 'Save Entry', None, None )
+        saveEntAction = createAction( self, 'Save Ent&ry', 
+                                      self.saveEntry, 'Ctrl+R' )
         printAction = createAction( self, '&Print Entry', self.printEntry,
                                     'Ctrl+P')
         exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q',
@@ -77,6 +78,8 @@ def createMenus( self, menuBar):
         symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
         headerAction = createAction(self, 'Edit &Header',
                                     self.editHeader, 'Ctrl+H')
+        origstrAction = createAction(self, 'Show Original String',
+                                    self.showOrigStr)
 
         editMenu = menuBar.addMenu('&Edit')
         editMenu.addAction( cutAction)
@@ -84,9 +87,9 @@ def createMenus( self, menuBar):
         editMenu.addAction( pasteAction )
         editMenu.addAction( deleteAction)
         editMenu.addSeparator()
-        #editMenu.addAction( addInfoAction)
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
+        editMenu.addAction( origstrAction)
 
 
 

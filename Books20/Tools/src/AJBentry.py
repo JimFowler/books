@@ -140,7 +140,7 @@ class AJBentry(Entry):
         # comments
         entryStr += ', '
         if self.notEmpty('Edition'):
-            entryStr += self['Edition']
+            entryStr += str(self['Edition'])
             num = int(self['Edition'])
             if  num == 1:
                 entryStr += 'st'
@@ -154,7 +154,7 @@ class AJBentry(Entry):
 
         if self.notEmpty('Reprint'):
             entryStr += 'reprint of '
-            entryStr += self['Reprint']
+            entryStr += str(self['Reprint'])
             entryStr += ';'
 
         if self.notEmpty('Compilers'):
@@ -451,13 +451,11 @@ class AJBentry(Entry):
                 elif 'Translation' == grmName :
                     tmp = result.find(FromLanguage)
                     if tmp:
-                        tmp = result.find(uWord)
-                        self['TranslatedFrom'] = str(tmp).strip()
+                        self['TranslatedFrom'] = str(tmp.elements[1]).strip()
 
                     tmp = result.find(ToLanguage)
                     if tmp:
-                        tmp = result.find(uWord)
-                        self['Language'] = str(tmp).strip()
+                        self['Language'] = str(tmp.elements[1]).strip()
 
                     tmp = result.find(NameList)
                     if tmp:

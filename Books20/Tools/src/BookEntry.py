@@ -21,6 +21,7 @@ from menus import *
 from headerWindow import *
 from AJBentry import *
 from symbol import *
+from origstrWindow import *
 
 __version__ = '0.1'
 
@@ -41,6 +42,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.bf = BookFile()
       self.setWinTitle('document1')
       self.insertFunc = None
+      self.defaultVolumeNumber = None
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -133,8 +135,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
    def saveFile(self):
-      """Ignores dirty entries and just save the file."""
-      if self.bf.getFileName() is not None:
+      """Ignore dirty entries and just save the file."""
+      print("saving file %s"%self.bf.getFileName())
+      if self.bf.getFileName() is None:
          self.saveFileAs()
       else:
          self.bf.writeFile()
@@ -147,6 +150,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                           ".", "*.txt")
       if fname:
          self.bf.writeFile(fname)
+         self.setWinTitle(self.bf.getBaseName())
 
    #
    # Menu and button slots for Entry Actions
@@ -154,7 +158,20 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    def saveEntry(self):
       """Save the entry to the current entry number in the bookfile."""
       self.DisplayToEntry(self.tmpEntry)
-      self.bf.setEntry(self.tmpEntry, self.curEntryNumber)
+
+      if self.curEntryNumber > self.maxEntryNumber:
+         ret = self.bf.setNewEntry(self.tmpEntry, self.curEntryNumber)
+      else:
+         ret = self.bf.setEntry(self.tmpEntry, self.curEntryNumber)
+
+      if not ret:
+         QMessageBox.information(self, "Entry Invalid", 
+                                 "Entry invalid!  Not saved in bookfile!" )
+         return
+
+      if self.curEntryNumber > self.maxEntryNumber:
+         self.maxEntryNumber = self.curEntryNumber
+         self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
       self.clearEntryDirty()
 
    def newEntry(self):
@@ -164,7 +181,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       self.tmpEntry = AJBentry()
       self.curEntryNumber = self.maxEntryNumber + 1
+      self.tmpEntry['Index'] = self.curEntryNumber
       self.EntryToDisplay(self.tmpEntry)
+      self.indexEntry.setText(str(self.curEntryNumber))
+      if self.defaultVolumeNumber is not None:
+         self.volNum.setText(self.defaultVolumeNumber)
+      self.volNum.setFocus()
       self.clearEntryDirty()
 
    def showEntry(self, recnum=1):
@@ -253,13 +275,34 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow.setHeaderText(self.bf.getHeader())
       self.headerWindow.show()
 
+   def showOrigStr(self):
+      """Open a dialog box with the original string entry."""
+      self.origstrWindow = OrigStrWindow()
+
+      if self.tmpEntry.notEmpty('Index'):
+         self.origstrWindow.setFileName(self.tmpEntry['Index'])
+      else:
+         self.origstrWindow.setFileName(-1)
+         
+      if self.tmpEntry.notEmpty('OrigStr'):
+         self.origstrWindow.setOrigStrText(self.tmpEntry['OrigStr'])
+      else:
+         self.origstrWindow.setOrigStrText('Entry does not have the original string defined.')
+      self.origstrWindow.show()
+
    #
    # Button slots and Signals
    #
    def on_prevButton_released(self):
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
       self.showEntry(self.curEntryNumber - 1)
 
    def on_nextButton_released(self):
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
       self.showEntry(self.curEntryNumber + 1)
 
    def indexChanged(self):
@@ -329,7 +372,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                   "BookEntry v%s - %s" % (__version__, name),
                                   None, QApplication.UnicodeUTF8))
 
-
+   def setDefaultVolumeNumber(self, num):
+      """Sets the default volume number for new entries."""
+      self.defaultVolumeNumber = num
 
 
    def EntryToDisplay(self, entry):
@@ -510,10 +555,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # AJB number
       num = entry['Num']
+      num['volume'] = 'AJB'
       num['volNum'] = int(self.volNum.text())
       num['sectionNum'] = int(self.secNum.text())
       num['subsectionNum'] = int(self.subSecNum.text())
       num['entryNum'] = int(self.itemNum.text())
+      print("BookEntry", num)
 
       # Authors
       entrya = entry['Authors']
@@ -709,9 +756,9 @@ def getargs():
    parser.add_argument( '-i', '--input', type=str,
                         help='read the file INPUT for entries',
                         action='append')
-   #parser.add_argument('-p', '--plot',
-   #                    help='plot the output, theta vs phi and theta/phi vs rho when done,',
-   #                    action='store_true')
+   parser.add_argument('-V', '--volume', type=str,
+                       help='default volume number,',
+                       action='append')
    #parser.add_argument( '-t', '--title', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
@@ -737,8 +784,14 @@ if __name__ == '__main__':
    form = BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)
+
+   if args.volume is not None:
+      form.setDefaultVolumeNumber(args.volume[0])
+      form.newEntry()
+
    if args.input is not None:
       form.openFile(args.input[0])
+
    form.show()
    sys.exit(app.exec_())
 

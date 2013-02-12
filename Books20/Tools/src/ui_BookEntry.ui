@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>868</width>
-    <height>847</height>
+    <width>873</width>
+    <height>851</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <widget class="QTextEdit" name="titleEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -34,7 +34,7 @@
      <widget class="QTextEdit" name="authorEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -59,20 +59,6 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="3" colspan="2">
-     <widget class="QLabel" name="ofnumLabel">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>of</string>
-      </property>
-     </widget>
-    </item>
     <item row="15" column="15" colspan="5">
      <widget class="QLabel" name="contribLabel">
       <property name="font">
@@ -85,22 +71,8 @@
       <property name="text">
        <string>Contributors</string>
       </property>
-     </widget>
-    </item>
-    <item row="12" column="0" colspan="4">
-     <widget class="QLabel" name="translateLabel">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="midLineWidth">
-       <number>2</number>
-      </property>
-      <property name="text">
-       <string>Translated:  from:</string>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
     </item>
@@ -108,7 +80,7 @@
      <widget class="QTextEdit" name="publEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -167,13 +139,6 @@
       </property>
      </widget>
     </item>
-    <item row="12" column="5">
-     <widget class="QLineEdit" name="fromlangEntry">
-      <property name="toolTip">
-       <string>Language the work as translated out of</string>
-      </property>
-     </widget>
-    </item>
     <item row="16" column="0" colspan="2">
      <widget class="QLabel" name="commentsLabel">
       <property name="font">
@@ -195,7 +160,7 @@
      <widget class="QTextEdit" name="contribEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -219,21 +184,22 @@
        <string>Index number with in the file</string>
       </property>
       <property name="text">
-       <string>Index -</string>
+       <string>Index</string>
       </property>
      </widget>
     </item>
-    <item row="10" column="12" colspan="3" alignment="Qt::AlignRight">
-     <widget class="QLabel" name="priceLabel">
+    <item row="11" column="1" colspan="20">
+     <widget class="QTextEdit" name="reviewsEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <pointsize>14</pointsize>
        </font>
       </property>
-      <property name="text">
-       <string>Price:</string>
+      <property name="toolTip">
+       <string>Reviews, one per line</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -254,32 +220,21 @@
       </property>
      </widget>
     </item>
-    <item row="11" column="1" colspan="20">
-     <widget class="QTextEdit" name="reviewsEntry">
+    <item row="1" column="15">
+     <widget class="QLineEdit" name="secNum">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
-       <string>Reviews, one per line</string>
-      </property>
-      <property name="tabChangesFocus">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="15" colspan="4">
-     <widget class="QLabel" name="compilersLabel">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <string>AJB Section number</string>
       </property>
       <property name="text">
-       <string>Compilers</string>
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
       </property>
      </widget>
     </item>
@@ -287,7 +242,7 @@
      <widget class="QTextEdit" name="compilersEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -302,7 +257,7 @@
      <widget class="QTextEdit" name="commentsEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -354,18 +309,6 @@
       </property>
      </widget>
     </item>
-    <item row="12" column="12">
-     <widget class="QLineEdit" name="tolangEntry">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>The language of this work.</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="18">
      <widget class="QLabel" name="itemLabel">
       <property name="font">
@@ -411,26 +354,11 @@
       </property>
      </widget>
     </item>
-    <item row="10" column="15" colspan="6">
-     <widget class="QLineEdit" name="priceEntry">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>Cost at time of review</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-      </property>
-     </widget>
-    </item>
     <item row="6" column="12" rowspan="2" colspan="9">
      <widget class="QTextEdit" name="editorEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -458,64 +386,6 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="0" alignment="Qt::AlignRight">
-     <widget class="QToolButton" name="prevButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="toolTip">
-       <string>Previous record</string>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-      <property name="arrowType">
-       <enum>Qt::LeftArrow</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QToolButton" name="nextButton">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="focusPolicy">
-       <enum>Qt::ClickFocus</enum>
-      </property>
-      <property name="toolTip">
-       <string>Next record</string>
-      </property>
-      <property name="text">
-       <string>...</string>
-      </property>
-      <property name="arrowType">
-       <enum>Qt::RightArrow</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="indexEntry">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>Index number of the current entry</string>
-      </property>
-      <property name="maxLength">
-       <number>3</number>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
     <item row="13" column="3">
      <widget class="QLabel" name="translatebyLabel">
       <property name="font">
@@ -537,7 +407,7 @@
      <widget class="QTextEdit" name="translatorEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -552,7 +422,7 @@
      <widget class="QLineEdit" name="volNum">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -569,29 +439,11 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="15">
-     <widget class="QLineEdit" name="secNum">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>AJB Section number</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="16">
      <widget class="QLineEdit" name="subSecNum">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -609,7 +461,7 @@
      <widget class="QLineEdit" name="itemNum">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -640,21 +492,6 @@
       </property>
      </widget>
     </item>
-    <item row="10" column="11">
-     <widget class="QLineEdit" name="pageEntry">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>Page count</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-      </property>
-     </widget>
-    </item>
     <item row="10" column="8">
      <widget class="QLabel" name="pageLabel">
       <property name="font">
@@ -673,7 +510,7 @@
      <widget class="QLineEdit" name="yearEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="toolTip">
@@ -686,6 +523,11 @@
     </item>
     <item row="10" column="1">
      <widget class="QLineEdit" name="editionEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
       </property>
@@ -748,6 +590,15 @@
       </property>
      </widget>
     </item>
+    <item row="15" column="1" colspan="3">
+     <widget class="QLineEdit" name="referenceEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
     <item row="15" column="0">
      <widget class="QLabel" name="referenceLabel">
       <property name="font">
@@ -769,17 +620,185 @@
      <widget class="QLineEdit" name="reprintEntry">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
      </widget>
     </item>
-    <item row="15" column="1" colspan="3">
-     <widget class="QLineEdit" name="referenceEntry">
+    <item row="1" column="3">
+     <widget class="QToolButton" name="nextButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Next record</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::RightArrow</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" alignment="Qt::AlignRight">
+     <widget class="QToolButton" name="prevButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>Previous record</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::LeftArrow</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="indexEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Index number of the current entry</string>
+      </property>
+      <property name="maxLength">
+       <number>3</number>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QLabel" name="ofnumLabel">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
+      </property>
+      <property name="text">
+       <string>of</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="17" colspan="4">
+     <widget class="QLineEdit" name="priceEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Cost at time of review</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="16">
+     <widget class="QLabel" name="priceLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Price:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="11" colspan="5">
+     <widget class="QLineEdit" name="pageEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Page count</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="3">
+     <widget class="QLabel" name="translateLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>Translated:  from:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="3" colspan="3">
+     <widget class="QLineEdit" name="fromlangEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Language the work as translated out of</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="16" colspan="3">
+     <widget class="QLabel" name="compilersLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Compilers</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="12" colspan="4">
+     <widget class="QLineEdit" name="tolangEntry">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>The language of this work.</string>
       </property>
      </widget>
     </item>
@@ -790,7 +809,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>868</width>
+     <width>873</width>
      <height>25</height>
     </rect>
    </property>
@@ -819,7 +838,6 @@
   <tabstop>reprintEntry</tabstop>
   <tabstop>referenceEntry</tabstop>
   <tabstop>commentsEntry</tabstop>
-  <tabstop>indexEntry</tabstop>
  </tabstops>
  <resources/>
  <connections/>

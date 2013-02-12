@@ -106,6 +106,8 @@ class BookFile():
         The dirty flag is set for the file."""
 
         if not entry.isValid():
+            print('bookfile().setEntry count %d entry:'%count)
+            print(entry)
             return False
     
         if count < 1 or count > len(self._entryList):
@@ -125,6 +127,7 @@ class BookFile():
         if not entry.isValid():
             return False
 
+        #print('bookfile', count, entry['Num'] )
         if count < 1 or count > len(self._entryList):
             self._entryList.append(entry)
         else:
