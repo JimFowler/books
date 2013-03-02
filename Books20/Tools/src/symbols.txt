@@ -49,7 +49,7 @@
 ß, Small letter sharp s
 
 ţ, Small letter t with cedilla
-ť, Small letter t with acute
+ť, Small letter t with caron
 Ü, Capital letter U with diaeresis
 ü, Small letter u with diaeresis
 ů, Small letter u with ring above

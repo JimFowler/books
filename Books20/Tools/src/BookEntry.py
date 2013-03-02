@@ -11,6 +11,10 @@ import platform
 import fileinput
 import argparse
 
+# Trouble shooting assistance
+from pprint import *
+pp = PrettyPrinter()
+
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
@@ -136,7 +140,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def saveFile(self):
       """Ignore dirty entries and just save the file."""
-      print("saving file %s"%self.bf.getFileName())
+      #print("saving file %s"%self.bf.getFileName())
       if self.bf.getFileName() is None:
          self.saveFileAs()
       else:
@@ -157,7 +161,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def saveEntry(self):
       """Save the entry to the current entry number in the bookfile."""
-      self.DisplayToEntry(self.tmpEntry)
+      self.tmpEntry = self.DisplayToEntry()
+      if not self.tmpEntry:
+         QMessageBox.information(self, "Entry Invalid", 
+                                 "Entry invalid!  Not saved in bookfile!" )
+         return
+
+      #pp.pprint(self.tmpEntry)
 
       if self.curEntryNumber > self.maxEntryNumber:
          ret = self.bf.setNewEntry(self.tmpEntry, self.curEntryNumber)
@@ -217,7 +227,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.indexEntry.setText(str(self.curEntryNumber))
 
       self.EntryToDisplay(self.tmpEntry)
-      self.tmpEntryDirty = False
+      self.clearEntryDirty()
 
    def printEntry(self):
       """Print a postscript file of the current display."""
@@ -306,10 +316,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.showEntry(self.curEntryNumber + 1)
 
    def indexChanged(self):
+      enum = int(self.indexEntry.text())
+
       if self.askSaveEntry() == QMessageBox.Cancel:
          return
 
-      enum = int(self.indexEntry.text())
       self.showEntry(enum)
 
    #
@@ -317,6 +328,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def askSaveEntry(self):
       """Ask if we should save the dirty entry."""
+      ans = None
       if self.tmpEntryDirty:
          ans = QMessageBox.warning( self, 'Save Entry?',
                                     'Entry has changed. Do you want to save it?',
@@ -327,11 +339,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          if ans == QMessageBox.Save:
             self.saveEntry()
 
-         return ans
-      return None
+      return ans
 
    def askSaveFile(self):
       """Ask if we should save the dirty file."""
+      ans = None
       if self.bf.isDirty():
          ans = QMessageBox.warning( self, 'Save file?',
                                     'The File has changed. Do you want to save it?',
@@ -342,8 +354,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          if ans == QMessageBox.Save:
             self.saveFile()
 
-         return ans
-      return None
+      return ans
 
    def askOpenFile(self):
       """Open an existing file saving the old one if it is dirty."""
@@ -461,9 +472,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       astr = ''
       if entry.notEmpty('Reviews'):
          rev = entry['Reviews']
+         first = True
          if rev:
             for item in rev:
-               astr += item + '\n'
+               if not first:
+                  astr += '\n' 
+               astr += item 
+               first = False
       self.reviewsEntry.setPlainText(astr)
 
       # Language
@@ -550,20 +565,31 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                  (field, entry[field], entry['Index']),
                                  QMessageBox.Ok)
          
-   def DisplayToEntry(self, entry):
-      """Copy the display into entry"""
+   def DisplayToEntry(self):
+      """Copy the display into a new entry and
+      return the entry."""
+
+      entry = AJBentry()
+
+      # Index
+      index = int(self.indexEntry.text())
+      entry['Index'] = str(index - 1)
 
       # AJB number
-      num = entry['Num']
+      num = {}
       num['volume'] = 'AJB'
       num['volNum'] = int(self.volNum.text())
       num['sectionNum'] = int(self.secNum.text())
       num['subsectionNum'] = int(self.subSecNum.text())
       num['entryNum'] = int(self.itemNum.text())
-      print("BookEntry", num)
+      entry['Num'] = num
+      if not entry.isValidAjbNum():
+         QMessageBox.warning(self, 'Invalid number',
+                             'Entry must havea valid AJB num  in order to be valid',
+                             QMessageBox.Ok)
+         return None
 
       # Authors
-      entrya = entry['Authors']
       entrya = []
       a = self.authorEntry.toPlainText()
       if len(a) != 0:
@@ -571,9 +597,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          for line in alist:
             nm = HumanName(line)
             entrya.append(nm)
+      entry['Authors'] = entrya
 
       # Editors
-      entrya = entry['Editors']
       entrya = []
       a = self.editorEntry.toPlainText()
       if len(a) != 0:
@@ -581,6 +607,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          for line in alist:
             nm = HumanName(line)
             entrya.append(nm)
+      entry['Editors'] = entrya
 
       # Title
       a = self.titleEntry.toPlainText()
@@ -588,25 +615,32 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          entry['Title'] = a
       else:
          #warn that there is no title
-         pass
+         QMessageBox.warning( self, 'No Title',
+                              'Entry must have a title in order to be valid',
+                              QMessageBox.Ok)
+         return None
 
       # Publishers
-      entrya = entry['Publishers']
       entrya = []
       a = self.publEntry.toPlainText()
       if len(a) != 0:
          alist = a.split('\n')
-         nm = {}
          for line in alist:
+            nm = {}
             place, publisher = line.split(':')
-            nm['Place'] = place
-            nm['Publishername'] = publisher
+            if not place:
+               place = ''
+            if not publisher:
+               publisher = ''
+            nm['Place'] = place.strip()
+            nm['PublisherName'] = publisher.strip()
             entrya.append(nm )
+      entry['Publishers'] = entrya
 
       # Edition
       a = self.editionEntry.text()
       if len(a) != 0:
-         entry['Edition'] = int(a)
+         entry['Edition'] = a
 
       # Year
       a = self.yearEntry.text()
@@ -624,13 +658,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          entry['Price'] = a
 
       # Review
-      entrya = entry['Reviews']
       entrya = []
       a = self.reviewsEntry.toPlainText()
       if len(a) != 0:
          alist = a.split('\n')
          for line in alist:
             entrya.append(line)
+      entry['Reviews'] = entrya
 
       # Language
       a = self.tolangEntry.text()
@@ -643,7 +677,6 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          entry['TranslatedFrom'] = a
 
       # Translators
-      entrya = entry['Translators']
       entrya = []
       a = self.translatorEntry.toPlainText()
       if len(a) != 0:
@@ -651,9 +684,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          for line in alist:
             nm = HumanName(line)
             entrya.append(nm)
+      entry['Translators'] = entrya
 
       # Compilers
-      entrya = entry['Compilers']
       entrya = []
       a = self.compilersEntry.toPlainText()
       if len(a) != 0:
@@ -661,9 +694,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          for line in alist:
             nm = HumanName(line)
             entrya.append(nm)
+      entry['Compilers'] = entrya
 
       # Contributors
-      entrya = entry['Contributors']
       entrya = []
       a = self.contribEntry.toPlainText()
       if len(a) != 0:
@@ -671,6 +704,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          for line in alist:
             nm = HumanName(line)
             entrya.append(nm)
+      entry['Contributors'] = entrya
 
       # Reprint
       a = self.reprintEntry.text()
@@ -683,15 +717,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          entry['Reference'] = a
 
       # Others
-      entrya = entry['Others']
       entrya = []
       a = self.commentsEntry.toPlainText()
       if len(a) != 0:
          alist = a.split('\n')
          for line in alist:
             entrya.append(line)
+      entry['Others'] = entrya
 
-         
+      return entry   
 
 
    def insertChar(self, obj):

@@ -266,7 +266,7 @@ class AJBentry(Entry):
                     
                 elif 7 == fieldNum:   # Reviews
                     self['Reviews'] = field.split(' and ') 
-                    
+
                 elif 8 == fieldNum:   # Comments and other material
                     self['Comments'] = field
                     self._parseComments( field )

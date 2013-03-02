@@ -1,7 +1,32 @@
+2013-03-01  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py: Successfully proofread ajb58_books.txt.
+	Committed current changes.
+
+2013-02-26  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (BookEntry.indexChanged): small change to
+	function. If in new entry and we change the index number and type
+	return, a Save Dialog would pop up and the old index number would
+	return. Thus you would not go on to the index you wanted. Move the
+	read of the new index number to before the askSaveEntry() dialog.
+
+2013-02-17  Jim Fowler  <jrf@Biblion>
+
+	* Tools/doc/introduction.rst: added more to the introduction in
+	order to explain the layout of the BookEntry program.
+
+	* Tools/src/BookEntry.py (BookEntry.DisplayToEntry): Spent an hour
+	and a half last night proofreading the first 99 entries in
+	ajb58_books.txt only to find out that Save Record was not working
+	correctly.  Changed DisplayToEntry() to return an entry value
+	rather than trying to manipulate the entry through a passed in
+	argument.
+
 2013-02-09  Jim Fowler  <jrf@Biblion>
 
-	* Tools/src/origstrWindow.py: added dialog to view original
-	string if there was one.
+	* Tools/src/origstrWindow.py: added dialog to view original string
+	if there was one.
 
 	* Tools/src/AJBentry.py (AJBentry._parseComments): Fixed bug in
 	parsing of Translation. Use tmp.elements[1] instead of

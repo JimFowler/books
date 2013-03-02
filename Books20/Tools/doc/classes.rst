@@ -93,7 +93,7 @@ one to put anything in the field.  The grammer is defined as:
                 : 'facsimile' | 'revised' )], 'edition', ';';
   Compilers     : 'compiled by', NameList, ';';
   Contributors  : 'contributors', NameList, ';';
-  Reference     : 'reference', AJBNum;
+  Reference     : 'reference', AJBNum, ';';
   Reprint       : 'reprint of', ( AJBNum | Year ), ';';
   Editors       : 'edited by', NameList, ';';
   Translation   : 'translated', [FromLanguage], [ToLanguage], ['by', NameList], ';';
@@ -154,6 +154,17 @@ used to insert unicode non-ascii charactor encodings. The default table is
 .. automodule:: symbol
     :members:
     :show-inheritance:
+
+
+Original String 
+_______________
+
+Displays the original file string if the entry came from an existing file.
+
+.. automodule:: origstrWindow
+    :members:
+    :show-inheritance:
+
 
 BookEntry
 _________
