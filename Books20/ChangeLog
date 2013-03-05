@@ -1,7 +1,15 @@
 2013-03-01  Jim Fowler  <jrf@Biblion>
 
+	* Tools/src/menus.py (createMenus): Added Set Font... and Set Font Size...
+	to menu structure as place holders for future actions.
+
+	* Tools/src/ui_BookEntry.ui: Reordered locations of some items
+	based on the proofreading efforts.  Added "Insert Record"
+	amd "Delete Record" buttons. Added keyboard shortcuts for the
+	next and previous buttons as Ctrl-F (forward) and Ctrl-B (back).
+
 	* Tools/src/BookEntry.py: Successfully proofread ajb58_books.txt.
-	Committed current changes.
+	Commited current changes.
 
 2013-02-26  Jim Fowler  <jrf@Biblion>
 
