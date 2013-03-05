@@ -27,7 +27,7 @@ from AJBentry import *
 from symbol import *
 from origstrWindow import *
 
-__version__ = '0.1'
+__version__ = '1.0'
 
 
 class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
@@ -333,7 +333,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          ans = QMessageBox.warning( self, 'Save Entry?',
                                     'Entry has changed. Do you want to save it?',
                                     QMessageBox.Save,
-                                    QMessageBox.Ignore,
+                                    QMessageBox.No,
                                     QMessageBox.Cancel )
 
          if ans == QMessageBox.Save:
@@ -348,7 +348,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          ans = QMessageBox.warning( self, 'Save file?',
                                     'The File has changed. Do you want to save it?',
                                     QMessageBox.Save,
-                                    QMessageBox.Ignore,
+                                    QMessageBox.Discard,
                                     QMessageBox.Cancel )
 
          if ans == QMessageBox.Save:
@@ -784,13 +784,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 def getargs():
    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
 
-   parser.add_argument('-v', '--verbose',
+   parser.add_argument('-V', '--verbose',
                        help='provide verbose output,',
                        action='store_true')
    parser.add_argument( '-i', '--input', type=str,
                         help='read the file INPUT for entries',
                         action='append')
-   parser.add_argument('-V', '--volume', type=str,
+   parser.add_argument('-v', '--volume', type=str,
                        help='default volume number,',
                        action='append')
    #parser.add_argument( '-t', '--title', type=str,

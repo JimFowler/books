@@ -81,6 +81,13 @@ def createMenus( self, menuBar):
         origstrAction = createAction(self, 'Show Original String',
                                     self.showOrigStr)
 
+        fontsizeAction = createAction(self, 'Set font size...', None, None)
+        fontsizeAction.setEnabled(False)
+
+        fonttypeAction = createAction(self, 'Set font...', None, None)
+        fonttypeAction.setEnabled(False)
+
+
         editMenu = menuBar.addMenu('&Edit')
         editMenu.addAction( cutAction)
         editMenu.addAction( copyAction ) 
@@ -90,6 +97,8 @@ def createMenus( self, menuBar):
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
         editMenu.addAction( origstrAction)
+        editMenu.addAction( fontsizeAction)
+        editMenu.addAction( fonttypeAction)
 
 
 
