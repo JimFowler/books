@@ -11,7 +11,7 @@ Save as Unicode UTF-8 text encoding. Skip subsection 34 and 35 in Part 4
 For volume AJB 62 Index to the Literature of 1962, started 28 Aug 2011, finished 11 Nov 2011, proofread 18 Nov 2011, BookEntry 3 Mar 2013
 
 
-1 62.133(0).22 S. Pikelner, Physics of Interstellar Space, London, Central Books, 1962, 230 pp, 6s 6d and $7.50, Planet. Space Sci. 9 994 and Proc. Phys. Soc. 80 1376 and Sky Tel. 25 353, translated from Russian by M. Zirin;also published Moskau: Foreign Languages Publishing HouseNew York: Philosophical Library;
+1 62.133(0).22 S. Pikelner, Physics of Interstellar Space, London, Central Books, 1962, 230 pp, 6s 6d and $7.50, Planet. Space Sci. 9 994 and Proc. Phys. Soc. 80 1376 and Sky Tel. 25 353, translated from Russian by M. Zirin;also published Moskau: Foreign Languages Publishing House and New York: Philosophical Library;
 
 2 62.135(1).64 S. Flügge ed., Handbuch der Physik Band 46/1, , , , , , Publ ASP 74 341, reference AJB 61.135.64;
 

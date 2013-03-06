@@ -192,9 +192,10 @@ class AJBentry(Entry):
             entryStr += 'also published '
             first = True
             for p in extraPubl:
-                entryStr += '%s: %s' % (p['Place'], p['PublisherName'])
                 if not first:
                     entryStr += ' and '
+                first = False
+                entryStr += '%s: %s' % (p['Place'].replace(', ', ' comma '), p['PublisherName'].replace(', ', ' comma '))
             entryStr += ';'
 
         if self.notEmpty('Language'):
@@ -205,7 +206,7 @@ class AJBentry(Entry):
         # others
         if self.notEmpty('Others'):
             for p in self['Others']:
-                entryStr += 'other %s' % str(p)
+                entryStr += 'other %s' % str(p).replace(', ', ' comma ')
                 entryStr += '; '
 
         if self.notEmpty('Reference'):
