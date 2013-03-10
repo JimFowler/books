@@ -367,7 +367,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # else get a file name 
       fname = QFileDialog.getOpenFileName(self,
           "%s -- Choose new file"%QApplication.applicationName(),
-                                          ".", "*.txt")
+                            self.bf.getDirName(), "*.txt")
       if fname:
          self.openFile(fname)
 

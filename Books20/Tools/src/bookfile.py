@@ -36,6 +36,7 @@ class BookFile():
         self._entryList = []
         self._volumeNumber = -1
         self._fileName = 'document1'
+        self._dirName = './'
         self._baseName = './'
         self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
         self._header = __defaultHeader__
@@ -64,7 +65,7 @@ class BookFile():
         set a new file name, and save the file. No validity checking
         is done at this stage."""
         self._fileName = filename
-        self._baseName = os.path.basename(filename)
+        self._dirName, self._baseName = os.path.split(filename)
         self._dirty = True
 
     def getFileName(self):
@@ -74,6 +75,10 @@ class BookFile():
     def getBaseName(self):
         """Returns the basename() of the current filename."""
         return self._baseName
+
+    def getDirName(self):
+        """Returns the dirname() of the current filename."""
+        return self._dirName
 
 
     # header

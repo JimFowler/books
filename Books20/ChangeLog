@@ -1,20 +1,28 @@
+2013-03-08  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (BookEntry.askOpenFile): Added call
+	to self.bf.getDirName() so that I don't have to keep changing
+	directories every time I open a file.
+
+	* Tools/src/bookfile.py (BookFile): Added getDirName() method.
+
 2013-03-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/AJBentry.py (AJBentry.write): Corrected problem with
-	additional publishers. Was not placing the 'and' between publishers
-	since 'first' was never being set to False. This was a problem
-	only if there were more than one additional publisher.
+	additional publishers. Was not placing the 'and' between
+	publishers since 'first' was never being set to False. This was a
+	problem only if there were more than one additional publisher.
 	(AJBentry.write): Added comma replacement in other strings.
 
 2013-03-01  Jim Fowler  <jrf@Biblion>
 
-	* Tools/src/menus.py (createMenus): Added Set Font... and Set Font Size...
-	to menu structure as place holders for future actions.
+	* Tools/src/menus.py (createMenus): Added Set Font... and Set Font
+	Size...  to menu structure as place holders for future actions.
 
 	* Tools/src/ui_BookEntry.ui: Reordered locations of some items
-	based on the proofreading efforts.  Added "Insert Record"
-	amd "Delete Record" buttons. Added keyboard shortcuts for the
-	next and previous buttons as Ctrl-F (forward) and Ctrl-B (back).
+	based on the proofreading efforts.  Added "Insert Record" amd
+	"Delete Record" buttons. Added keyboard shortcuts for the next and
+	previous buttons as Ctrl-F (forward) and Ctrl-B (back).
 
 	* Tools/src/BookEntry.py: Successfully proofread ajb58_books.txt.
 	Commited current changes.
