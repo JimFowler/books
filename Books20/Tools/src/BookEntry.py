@@ -47,6 +47,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
+      self.symbolTableName = './symbols.txt'
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -270,10 +271,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def openSymbol(self):
       """Open the symbol entry form."""
-      self.symbolTable = SymbolForm('./symbols.txt', 'FreeSans', 14)
+      self.symbolTable = SymbolForm(self.symbolTableName, 'FreeSans', 14)
       self.symbolTable.show()
       self.connect(self.symbolTable, SIGNAL('sigClicked'),
                    self.insertChar )
+
+   def setSymbolTableName(self, name):
+      """Set the name of the symbol table to use in place of the
+      default table."""
+      self.symbolTableName = name
 
    def editHeader(self):
       """Open the edit header form."""
@@ -793,9 +799,9 @@ def getargs():
    parser.add_argument('-v', '--volume', type=str,
                        help='default volume number,',
                        action='append')
-   #parser.add_argument( '-t', '--title', type=str,
-   #                     help='the name of the file to process.',
-   #                     action='append')
+   parser.add_argument( '-s', '--symbols', type=str,
+                        help='use alternate symbol table.',
+                        action='append')
    #parser.add_argument( 'filename', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
@@ -822,6 +828,9 @@ if __name__ == '__main__':
    if args.volume is not None:
       form.setDefaultVolumeNumber(args.volume[0])
       form.newEntry()
+
+   if args.symbols is not None:
+      form.setSymbolTableName(args.symbols[0])
 
    if args.input is not None:
       form.openFile(args.input[0])

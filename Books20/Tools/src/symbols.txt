@@ -5,7 +5,6 @@
 #  6 Feb 2013 James R Fowler
 #
 #
-
 Ä, Capital letter A with diaeresis
 ä, Small letter a with diaeresis
 Å, Capital letter A with ring above

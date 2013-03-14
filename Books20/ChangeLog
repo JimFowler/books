@@ -1,3 +1,12 @@
+2013-03-13  Jim Fowler  <jrf@Biblion>
+
+	* Tools/setup.py: added setup.py and began defining installation
+	process.
+
+	* Tools/src/BookEntry.py (BookEntry.openSymbol): added '-s' flag
+	to use altername symbol table. Added setSymbolTableName() method
+	as well.
+
 2013-03-08  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/BookEntry.py (BookEntry.askOpenFile): Added call
