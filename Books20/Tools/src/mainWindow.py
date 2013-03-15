@@ -5,11 +5,8 @@
 """
 
 import traceback
-import sys
-import os
 import platform
 import fileinput
-import argparse
 
 # Trouble shooting assistance
 from pprint import *
@@ -784,56 +781,18 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
 
-#
-# Parse the command line arguments
-#
-def getargs():
-   parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
-
-   parser.add_argument('-V', '--verbose',
-                       help='provide verbose output,',
-                       action='store_true')
-   parser.add_argument( '-i', '--input', type=str,
-                        help='read the file INPUT for entries',
-                        action='append')
-   parser.add_argument('-v', '--volume', type=str,
-                       help='default volume number,',
-                       action='append')
-   parser.add_argument( '-s', '--symbols', type=str,
-                        help='use alternate symbol table.',
-                        action='append')
-   #parser.add_argument( 'filename', type=str,
-   #                     help='the name of the file to process.',
-   #                     action='append')
-
-   args = parser.parse_args()
-
-   return args
-
 
 #
-# The main body
+# Test routine
 #
 
 if __name__ == '__main__':
-
-   args = getargs()
 
    app = QApplication(sys.argv)
    app.setApplicationName('Book Entry')
    form = BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)
-
-   if args.volume is not None:
-      form.setDefaultVolumeNumber(args.volume[0])
-      form.newEntry()
-
-   if args.symbols is not None:
-      form.setSymbolTableName(args.symbols[0])
-
-   if args.input is not None:
-      form.openFile(args.input[0])
 
    form.show()
    sys.exit(app.exec_())

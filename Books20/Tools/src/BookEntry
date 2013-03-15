@@ -1,0 +1,75 @@
+#! /usr/bin/env python3
+# -*- mode: Python;-*-
+
+"""AJB/AAA dialog to review and edit books entries
+"""
+
+import sys
+import argparse
+
+# Trouble shooting assistance
+from pprint import *
+pp = PrettyPrinter()
+
+from mainWindow import *
+
+
+__version__ = '1.0'
+
+#
+# Parse the command line arguments
+#
+def getargs():
+   parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
+
+   parser.add_argument('-V', '--verbose',
+                       help='provide verbose output,',
+                       action='store_true')
+   parser.add_argument( '-i', '--input', type=str,
+                        help='read the file INPUT for entries',
+                        action='append')
+   parser.add_argument('-v', '--volume', type=str,
+                       help='default volume number,',
+                       action='append')
+   parser.add_argument( '-s', '--symbols', type=str,
+                        help='use alternate symbol table.',
+                        action='append')
+   #parser.add_argument( 'filename', type=str,
+   #                     help='the name of the file to process.',
+   #                     action='append')
+
+   args = parser.parse_args()
+
+   return args
+
+
+#
+# The main body
+#
+
+def main():
+
+   args = getargs()
+
+   app = QApplication(sys.argv)
+   app.setApplicationName('Book Entry')
+   form = BookEntry()
+   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
+                   form.setFocusChanged)
+
+   if args.volume is not None:
+      form.setDefaultVolumeNumber(args.volume[0])
+      form.newEntry()
+
+   if args.symbols is not None:
+      form.setSymbolTableName(args.symbols[0])
+
+   if args.input is not None:
+      form.openFile(args.input[0])
+
+   form.show()
+   sys.exit(app.exec_())
+
+
+
+main()

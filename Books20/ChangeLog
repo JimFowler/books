@@ -1,3 +1,9 @@
+2013-03-14  Jim Fowler  <jrf@Biblion>
+
+	* Tools/src/BookEntry.py (getargs): split BookEntry.py into
+	mainWindow.py and BookEntry which is now a script that just
+	runs the main program.  The gui is now in mainWindow.py.
+
 2013-03-13  Jim Fowler  <jrf@Biblion>
 
 	* Tools/setup.py: added setup.py and began defining installation
