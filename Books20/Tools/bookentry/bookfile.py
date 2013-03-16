@@ -6,7 +6,7 @@ import fileinput
 import os
 import traceback
 
-from bookentry.AJBentry import *
+import bookentry.AJBentry as AJBentry
 
 __version__ = 0.1
 
@@ -165,7 +165,7 @@ class BookFile():
         self._header = ''
         self._dirty = False
 
-        entTemp = AJBentry()
+        entTemp = AJBentry.AJBentry()
         count = 0
         
         for line in fileinput.input([self._fileName]):
@@ -181,7 +181,7 @@ class BookFile():
             if entTemp.isValid():
                 count += 1
                 self._entryList.append(entTemp)
-                entTemp = AJBentry()
+                entTemp = AJBentry.AJBentry()
          
         self.curEntryNumber = 1
         self.maxRecord = count
@@ -233,8 +233,8 @@ if __name__ == "__main__":
     bf.writeFile('testfile2.txt')
     print(' run "diff testfile2.txt testfile.txt"')
 
-    ent = AJBentry('500 58.04.05 , An Amazing Book')
-    ent2 = AJBentry('500 58.04.06 , An Amazing Book Too')
+    ent = AJBentry.AJBentry('500 58.04.05 , An Amazing Book')
+    ent2 = AJBentry.AJBentry('500 58.04.06 , An Amazing Book Too')
     bf.setNewEntry(ent) # append
     bf.setNewEntry(ent2, 0) # append
     bf.setNewEntry(ent, 1) # insert as entry 1

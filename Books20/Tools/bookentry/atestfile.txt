@@ -1,0 +1,23 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB ?? Index to the Literature of ????, started, finished, proofread
+
+
+1 55.04(0).01 , A First book Entry, , , 1955, 12+234 pp, $2.95, , 1st edition;translated from Italian;in Russian;
+
+2 55.04(0).02 , A Second Book Entry, , , 1955, 256 pp, £4 10s, , 2nd edition;
+
+3 55.04(0).03 , A Third Book Entry, , , 1954, 234 pp, $ 6.45, , 3rd edition;reprint of AJB 52.11.02;translated from english;in French;
+
+4 55.04(0).04 , A Forth Book, , , , , , , reference AJB 54.04.04;
+
+5 55.05(0).01 , A Fifth Book Entry, , , 1955, , , , 1st edition;
+

@@ -2,13 +2,13 @@ import re
 
 from nameparser import HumanName
 
-from bookentry.entry import *
+import bookentry.entry as entry
 from bookentry.AJBcomments import *
 
 
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 
-class AJBentry(Entry):
+class AJBentry(entry.Entry):
 
     """Read the information from a string and put the data in the
     AJBentry dictionary. The entry is valid if there was a valid AJB

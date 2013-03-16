@@ -17,16 +17,18 @@ from PyQt4.QtGui  import *
 
 from nameparser import HumanName
 import bookentry.ui_BookEntry as ui_BookEntry
-from bookentry.bookfile import *
-from bookentry.menus import *
-from bookentry.headerWindow import *
-from bookentry.AJBentry import *
-from bookentry.symbol import *
-from bookentry.origstrWindow import *
+import bookentry.bookfile as bf
+import bookentry.menus as menus
+import bookentry.headerWindow as hw
+import bookentry.AJBentry as AJBentry
+import bookentry.symbol as symbol
+import bookentry.origstrWindow as origstr
 
 import os
-__dirName, __basename  = os.path.split(ui_BookEntry.__file__)
+__dirName, __basename  = os.path.split(symbol.__file__)
 __DefaultSymbolTableName__ = __dirName + '/symbols.txt'
+del __dirName
+del __basename
 
 __version__ = '1.0'
 
@@ -39,12 +41,16 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       super(BookEntry, self).__init__(parent)
       self.setupUi(self)
 
-      self.tmpEntry = AJBentry()
+      self.tmpEntry = AJBentry.AJBentry()
+      # This boolean indicates that the window entries
+      # have been modified and that we should not change the
+      # window contents without asking the user if they should
+      # be saved.
       self.tmpEntryDirty = False
 
       self.curEntryNumber = 0
       self.maxEntryNumber = 0
-      self.bf = BookFile()
+      self.bf = bf.BookFile()
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
@@ -68,13 +74,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                'headerEntry' ]
       self.setLineEntryList = ['fromlangEntry', 'tolangEntry', 'priceEntry']
 
-      createMenus(self, self.menubar)
+      menus.createMenus(self, self.menubar)
 
       self.connect(self.quitButton, SIGNAL('released()'), self.quit )
       self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
       self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
+      self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry )
+      #self.deleteButton.setEnabled(True)
       self.acceptButton.setEnabled(False)
-
+      
       self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
       self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
@@ -191,7 +199,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if self.askSaveEntry() == QMessageBox.Cancel:
          return
 
-      self.tmpEntry = AJBentry()
+      self.tmpEntry = AJBentry.AJBentry()
       self.curEntryNumber = self.maxEntryNumber + 1
       self.tmpEntry['Index'] = self.curEntryNumber
       self.EntryToDisplay(self.tmpEntry)
@@ -201,11 +209,23 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.volNum.setFocus()
       self.clearEntryDirty()
 
+   def deleteEntry(self):
+      """Delete the entry at the curEntryNumber but
+      ask the user first."""
+      ans = QMessageBox.warning( self, 'Delete Entry?',
+                                 'Are you sure you want to delete this entry? This action can not be undone!',
+                                 QMessageBox.Ok,
+                                 QMessageBox.Cancel )
+      if ans == QMessageBox.Cancel:
+         return
+      print('Deleting entry number %d' % self.curEntryNumber)
+      #self.maxEntryNumber = self.bf.deleteEntry(self.curEntryNumber)
+      #self.showEntry(self.curEntryNumber)
+
    def showEntry(self, recnum=1):
-      """showEntry(recnum) where 0 <= recnum < maxEntryNumber.
-      recnum is the index into the entry list, the displayed
-      value will be (recnum + 1).  The buttons will wrap around
-      the index values.
+      """showEntry(recnum) where 1 <= recnum <= maxEntryNumber.
+      recnum is the index into the entry list.  The buttons will
+      wrap around the index values.
       """
       self.prevButton.setEnabled(True)
 
@@ -272,7 +292,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def openSymbol(self):
       """Open the symbol entry form."""
-      self.symbolTable = SymbolForm(self.symbolTableName, 'FreeSans', 14)
+      self.symbolTable = symbol.SymbolForm(self.symbolTableName, 'FreeSans', 14)
       self.symbolTable.show()
       self.connect(self.symbolTable, SIGNAL('sigClicked'),
                    self.insertChar )
@@ -284,7 +304,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def editHeader(self):
       """Open the edit header form."""
-      self.headerWindow = HeaderWindow(self)
+      self.headerWindow = hw.HeaderWindow(self)
       self.headerWindow.setBookFile(self.bf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
                                   "Edit Headers - %s" % (self.bf.getBaseName()),
@@ -294,7 +314,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def showOrigStr(self):
       """Open a dialog box with the original string entry."""
-      self.origstrWindow = OrigStrWindow()
+      self.origstrWindow = origstr.OrigStrWindow()
 
       if self.tmpEntry.notEmpty('Index'):
          self.origstrWindow.setFileName(self.tmpEntry['Index'])
@@ -576,7 +596,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Copy the display into a new entry and
       return the entry."""
 
-      entry = AJBentry()
+      entry = AJBentry.AJBentry()
 
       # Index
       index = int(self.indexEntry.text())
