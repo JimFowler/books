@@ -6,13 +6,15 @@
 
 import sys
 import argparse
+from PyQt4.QtCore import *
+from PyQt4.QtGui  import *
 
 # Trouble shooting assistance
 from pprint import *
 pp = PrettyPrinter()
 
-from mainWindow import *
-
+from bookentry.mainWindow import *
+#import bookentry
 
 __version__ = '1.0'
 

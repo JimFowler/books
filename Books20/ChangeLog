@@ -1,3 +1,8 @@
+2013-03-16  Jim Fowler  <jrf@Biblion>
+
+	* Tools/setup.py: modified system to support both an installed
+	environment and a development environment.
+
 2013-03-14  Jim Fowler  <jrf@Biblion>
 
 	* Tools/src/BookEntry.py (getargs): split BookEntry.py into

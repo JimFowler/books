@@ -1,8 +1,9 @@
 import re
 
-from entry import *
-from AJBcomments import *
 from nameparser import HumanName
+
+from bookentry.entry import *
+from bookentry.AJBcomments import *
 
 
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'

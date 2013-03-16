@@ -16,13 +16,13 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
 from nameparser import HumanName
-import ui_BookEntry
-from bookfile import *
-from menus import *
-from headerWindow import *
-from AJBentry import *
-from symbol import *
-from origstrWindow import *
+import bookentry.ui_BookEntry as ui_BookEntry
+from bookentry.bookfile import *
+from bookentry.menus import *
+from bookentry.headerWindow import *
+from bookentry.AJBentry import *
+from bookentry.symbol import *
+from bookentry.origstrWindow import *
 
 __version__ = '1.0'
 
@@ -44,7 +44,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
-      self.symbolTableName = './symbols.txt'
+      # This default needs to be changed to the installation directory!!!
+      self.symbolTableName = '/home/jrf/lib/python/bookentry/symbols.txt'
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',

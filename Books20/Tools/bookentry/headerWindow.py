@@ -12,7 +12,7 @@ to save your changed permenantly
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
-import ui_HeaderEntry
+import bookentry.ui_HeaderEntry as ui_HeaderEntry
 
 class HeaderWindow(QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     def __init__(self, bf=None):
