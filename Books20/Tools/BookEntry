@@ -13,8 +13,8 @@ from PyQt4.QtGui  import *
 from pprint import *
 pp = PrettyPrinter()
 
-from bookentry.mainWindow import *
-#import bookentry
+#from bookentry.mainWindow import BookEntry
+import bookentry.mainWindow
 
 __version__ = '1.0'
 
@@ -55,7 +55,7 @@ def main():
 
    app = QApplication(sys.argv)
    app.setApplicationName('Book Entry')
-   form = BookEntry()
+   form = bookentry.mainWindow.BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)
 

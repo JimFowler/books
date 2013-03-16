@@ -24,6 +24,10 @@ from bookentry.AJBentry import *
 from bookentry.symbol import *
 from bookentry.origstrWindow import *
 
+import os
+__dirName, __basename  = os.path.split(ui_BookEntry.__file__)
+__DefaultSymbolTableName__ = __dirName + '/symbols.txt'
+
 __version__ = '1.0'
 
 
@@ -44,8 +48,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
-      # This default needs to be changed to the installation directory!!!
-      self.symbolTableName = '/home/jrf/lib/python/bookentry/symbols.txt'
+      self.symbolTableName = __DefaultSymbolTableName__
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',

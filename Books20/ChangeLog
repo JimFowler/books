@@ -1,5 +1,8 @@
 2013-03-16  Jim Fowler  <jrf@Biblion>
 
+	* Tools/bookentry/mainWindow.py: worked out method for
+	default symbols.txt file.
+
 	* Tools/setup.py: modified system to support both an installed
 	environment and a development environment.
 
