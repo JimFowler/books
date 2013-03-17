@@ -47,10 +47,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # window contents without asking the user if they should
       # be saved.
       self.tmpEntryDirty = False
-
+      self.bf = None
       self.curEntryNumber = 0
       self.maxEntryNumber = 0
-      self.bf = bf.BookFile()
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
@@ -80,9 +79,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
       self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
       self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry )
-      #self.deleteButton.setEnabled(True)
+      self.connect(self.insertButton, SIGNAL('released()'), self.insertEntry )
       self.acceptButton.setEnabled(False)
-      
+      self.deleteButton.setEnabled(False)
+      self.insertButton.setEnabled(True)
+
       self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
       self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
@@ -107,6 +108,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.connect(self.contribEntry, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.commentsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
 
+      self.openNewFile()
+
    #
    # Menu and button slots
    #
@@ -124,13 +127,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def openNewFile(self):
       """Create a new bookfile saving the old one if it is dirty."""
-      if self.askSaveEntry() == QMessageBox.Cancel:
-         return
+      if self.bf is not None:
+         if self.askSaveEntry() == QMessageBox.Cancel:
+            return
 
-      if self.askSaveFile() == QMessageBox.Cancel:
-         return
+         if self.askSaveFile() == QMessageBox.Cancel:
+            return
 
-      self.bf = BookFile()
+      self.bf = bf.BookFile()
+      self.newEntry()
 
    def openFile(self, name=None):
       """Open an existing file, get the count of entries,
@@ -192,6 +197,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if self.curEntryNumber > self.maxEntryNumber:
          self.maxEntryNumber = self.curEntryNumber
          self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+      self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
 
    def newEntry(self):
@@ -207,7 +213,31 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if self.defaultVolumeNumber is not None:
          self.volNum.setText(self.defaultVolumeNumber)
       self.volNum.setFocus()
+      self.deleteButton.setEnabled(False)
       self.clearEntryDirty()
+
+   def insertEntry(self):
+      '''Insert the current entry somewhere else in the entry list.'''
+      self.tmpEntry = self.DisplayToEntry()
+      if not self.tmpEntry or not self.tmpEntry.isValid():
+         QMessageBox.information(self, "Entry Invalid", 
+                                 "Entry invalid!  Not saved in bookfile!" )
+         return
+
+      num = -1
+      # get entrynum to insert before
+      # booklist = self.bf.shortList()
+      # dialog box with booklist
+      #
+      if num < 1 or num > self.maxEntryNumber:
+         return
+
+      self.bf.setNewEntry(self.tmpEntry, num)
+      self.curEntryNumber = num
+      self.maxEntryNumber += 1
+      self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+      self.showEntry(self.curEntryNumber)
+      pass
 
    def deleteEntry(self):
       """Delete the entry at the curEntryNumber but
@@ -218,9 +248,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                  QMessageBox.Cancel )
       if ans == QMessageBox.Cancel:
          return
-      print('Deleting entry number %d' % self.curEntryNumber)
-      #self.maxEntryNumber = self.bf.deleteEntry(self.curEntryNumber)
-      #self.showEntry(self.curEntryNumber)
+
+      self.maxEntryNumber = self.bf.deleteEntry(self.curEntryNumber)
+      self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+      self.showEntry(self.curEntryNumber)
 
    def showEntry(self, recnum=1):
       """showEntry(recnum) where 1 <= recnum <= maxEntryNumber.
@@ -249,6 +280,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.indexEntry.setText(str(self.curEntryNumber))
 
       self.EntryToDisplay(self.tmpEntry)
+      self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
 
    def printEntry(self):
@@ -612,7 +644,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       entry['Num'] = num
       if not entry.isValidAjbNum():
          QMessageBox.warning(self, 'Invalid number',
-                             'Entry must havea valid AJB num  in order to be valid',
+                             'Entry must have a valid AJB num  in order to be valid',
                              QMessageBox.Ok)
          return None
 

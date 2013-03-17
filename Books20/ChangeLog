@@ -2,6 +2,10 @@
 
 	* Tools/bookentry/mainWindow.py: worked out method for
 	default symbols.txt file.
+	(BookEntry.deleteEntry): added function for Delete Button
+	(BookEntry.insertEntry): added initial function for Insert Button
+
+	* Tools/bookentry/*.py: cleaned up import calls
 
 	* Tools/setup.py: modified system to support both an installed
 	environment and a development environment.

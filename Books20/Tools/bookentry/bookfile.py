@@ -38,7 +38,7 @@ class BookFile():
         self._fileName = 'document1'
         self._dirName = './'
         self._baseName = './'
-        self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
+        self.curEntryNumber = -1  # 0 <= curEntryNumber < len(self._entryList)
         self._header = __defaultHeader__
         self.setFileName('document1')
         self._dirty = False
@@ -142,6 +142,14 @@ class BookFile():
         self._dirty = True
         return True
 
+    def deleteEntry(self, entryNum):
+        '''Delete the (entryNum - 1) record in the list, if such exists.
+        Return the length of the remaining list.'''
+        if entryNum > 0 and entryNum <= len(self._entryList):
+            self._entryList.pop(entryNum - 1)
+            self._dirty = True
+
+        return len(self._entryList)
 
     # file I/O
     def readFile(self, filename=None ):
@@ -184,7 +192,6 @@ class BookFile():
                 entTemp = AJBentry.AJBentry()
          
         self.curEntryNumber = 1
-        self.maxRecord = count
 
         return count
 
@@ -241,4 +248,9 @@ if __name__ == "__main__":
     bf.setNewEntry(ent2, 5) # insert as entry 5
     bf.setEntry(ent, 4) # replace entry 4
     bf.writeFile('testfile3.txt')
+    bf.setNewEntry(ent, 5)
+    bf.deleteEntry(22)
+    bf.deleteEntry(0)
+    bf.deleteEntry(5)
     print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
+    
