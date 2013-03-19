@@ -151,6 +151,19 @@ class BookFile():
 
         return len(self._entryList)
 
+    def mkShortTitleList(self):
+        '''Create a string of short titles from all entries in the list.
+        A short title is "count AJBnum Title" and is used to look quickly
+        at the list of titles.'''
+
+        shortTitleList = ''
+        count = 1
+        for e in self._entryList:
+            shortTitleList = shortTitleList + str(count) + ' ' + e.shortTitle()
+            count += 1
+
+        return shortTitleList
+            
     # file I/O
     def readFile(self, filename=None ):
         """Open and read the header stuff into _header and the entries

@@ -23,6 +23,8 @@ import bookentry.headerWindow as hw
 import bookentry.AJBentry as AJBentry
 import bookentry.symbol as symbol
 import bookentry.origstrWindow as origstr
+import bookentry.entryselect as es
+
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -79,10 +81,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
       self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
       self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry )
-      self.connect(self.insertButton, SIGNAL('released()'), self.insertEntry )
+      self.connect(self.insertButton, SIGNAL('released()'), self.askInsertEntry )
       self.acceptButton.setEnabled(False)
       self.deleteButton.setEnabled(False)
-      self.insertButton.setEnabled(True)
+      self.insertButton.setEnabled(False)
 
       self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
@@ -138,8 +140,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.newEntry()
 
    def openFile(self, name=None):
-      """Open an existing file, get the count of entries,
-      and display the first entry."""
+      """Open an existing file, get the count of entries, and display
+      the first entry. If no records are found we assume that this is
+      a new file and we automatically generate a new entry."""
 
       self.maxEntryNumber = self.bf.readFile(name)
       if self.maxEntryNumber:
@@ -147,9 +150,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
          self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
          self.showEntry(1)
+         self.insertButton.setEnabled(True)
          self.clearEntryDirty()
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
+         self.newEntry()
       self.setWinTitle(self.bf.getBaseName())
 
 
@@ -216,20 +221,31 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.deleteButton.setEnabled(False)
       self.clearEntryDirty()
 
-   def insertEntry(self):
-      '''Insert the current entry somewhere else in the entry list.'''
+   def askInsertEntry(self):
+      """Open the entrySelect form if we have a valid entry to insert.
+      If the user selects an insertion location, then we execute the 
+      method insertEntry()"""
       self.tmpEntry = self.DisplayToEntry()
       if not self.tmpEntry or not self.tmpEntry.isValid():
          QMessageBox.information(self, "Entry Invalid", 
                                  "Entry invalid!  Not saved in bookfile!" )
          return
 
-      num = -1
-      # get entrynum to insert before
-      # booklist = self.bf.shortList()
-      # dialog box with booklist
-      #
-      if num < 1 or num > self.maxEntryNumber:
+      self.entrySelect= es.EntrySelect()
+      self.entrySelect.setText( self.bf.mkShortTitleList() )
+
+      self.entrySelect.show()
+      self.connect(self.entrySelect, SIGNAL('lineEmit'),
+                   self.insertEntry )
+
+   def insertEntry(self, line):
+      """Parse the short title line, get the index number and insert
+      the current display entry in front of this entry in the booklist."""
+
+      words = line[0].split(' ')
+
+      num = int(words[0])
+      if not num or num < 1 or num > self.maxEntryNumber:
          return
 
       self.bf.setNewEntry(self.tmpEntry, num)
@@ -251,7 +267,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       self.maxEntryNumber = self.bf.deleteEntry(self.curEntryNumber)
       self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
-      self.showEntry(self.curEntryNumber)
+      if self.maxEntryNumber < 1:
+         self.insertButton.setEnable(False)
+         self.newEntry()
+      else:
+         self.showEntry(self.curEntryNumber)
 
    def showEntry(self, recnum=1):
       """showEntry(recnum) where 1 <= recnum <= maxEntryNumber.

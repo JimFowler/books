@@ -5,6 +5,7 @@
 """
 
 import sys
+import os
 import argparse
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
@@ -24,18 +25,18 @@ __version__ = '1.0'
 def getargs():
    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
 
-   parser.add_argument('-V', '--verbose',
-                       help='provide verbose output,',
-                       action='store_true')
+   #parser.add_argument('-V', '--verbose',
+   #                    help='provide verbose output,',
+   #                    action='store_true')
    parser.add_argument( '-i', '--input', type=str,
                         help='read the file INPUT for entries',
                         action='append')
-   parser.add_argument('-v', '--volume', type=str,
-                       help='default volume number,',
-                       action='append')
    parser.add_argument( '-s', '--symbols', type=str,
-                        help='use alternate symbol table.',
+                        help='use alternate symbol table,',
                         action='append')
+   parser.add_argument('-v', '--volume', type=str,
+                       help='default volume number.',
+                       action='append')
    #parser.add_argument( 'filename', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
@@ -67,7 +68,11 @@ def main():
       form.setSymbolTableName(args.symbols[0])
 
    if args.input is not None:
-      form.openFile(args.input[0])
+      fname = args.input[0]
+      if os.path.isfile(fname):
+         form.openFile(fname)
+      else:
+         form.openNewFile(fname)
 
    form.show()
    sys.exit(app.exec_())

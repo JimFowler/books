@@ -1,7 +1,7 @@
 Installation
 ************
 
-The BookEntry package may be installed from the Tools dir with the command
+BookEntry uses the python library *distutils* to install and distribute thepackages. The BookEntry package may be installed from the Tools directory with the command
 
 ``python3 setup.py install``
 

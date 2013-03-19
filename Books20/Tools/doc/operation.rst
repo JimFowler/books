@@ -9,20 +9,21 @@ the ``BookEntry.py`` command. The main display window looks like:
 The main features are the top line with the Index number and the AJB
 number along with the buttons to switch between existing records, the
 main entry information from Authors to Comments, as well as the ``Save
-Record`` and ``New Entry`` buttons on the right hand side.
+Record``, ``New Entry``, ``Insert Entry``, and ``Delete Entry``
+buttons on the right hand side.
 
 Command Line Arguments
 ======================
 
-BookEntry [-h] [-v] [filename]
+BookEntry [-h] [-i filename] [-s filename] [-v integer]
 
   -h --help -- print this usage message and then exit
 
-  -v --version -- print the current version and then exits
-
   -i --input filename -- open an existing file and reads the entries
 
-  -V --volume volnum -- default volume number for new entries
+  -s --symbols filename -- open an alternate symbol table
+
+  -v --volume volnum -- default volume number for new entries
 
 
 Menus
@@ -109,4 +110,31 @@ Help
 
 **About BookEntry**: brings up a dialog box with basic information
 about the program, the author, and the run-time environment.
+
+
+
+Buttons
+=======
+
+
+Save Record
+-----------
+
+
+New Entry
+---------
+
+
+Insert Record
+-------------
+
+
+Delete Record
+-------------
+
+
+Quit
+----
+
+
 

@@ -1,3 +1,18 @@
+2013-03-19  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.saveEntry): added EntrySelect
+	window to insertButton actions.
+
+2013-03-18  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/entryselect.py (EntrySelect): began work on
+	EntrySelect window.  Trouble with highlighting and unhighlighting.
+
+2013-03-17  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.shortTitle): added
+	shortTitle() method.
+
 2013-03-16  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/mainWindow.py: worked out method for

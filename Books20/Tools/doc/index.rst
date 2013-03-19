@@ -2,11 +2,11 @@
    BookEntry documentation master file, created by
    sphinx-quickstart on Thu Dec 27 17:25:29 2012.
 
+:copyright: 2012 James R. Fowler
+
 
 Welcome to BookEntry's documentation!
 ============================================
-
-:copyright: 2012 James R. Fowler
 
 
 .. toctree::

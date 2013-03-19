@@ -71,6 +71,20 @@ class AJBentry(entry.Entry):
         else:
             return None
 
+    def shortTitle(self):
+        '''Create a short title string for the entry. A short title
+        is "AJBnum 1stAuthor_lastname Title\n".'''
+        st = self.numStr() + ' '
+        if self.notEmpty('Authors'):
+            name = self['Authors'][0].last
+        elif self.notEmpty('Editors'):
+            name = self['Editors'][0].last
+        else:
+            name = 'noAuthor'
+        st = st + name + ', ' + self['Title'] + '\n'
+        return st
+
+            
     def isValid(self):
         """AJB entries are valid if they have a valid AJB num
         and a Title."""
@@ -531,9 +545,6 @@ if __name__ == '__main__':
     print('\nThe all fields ajb entry isValid() is %d and looks like:' % allfieldajb.isValid())
     pprint(allfieldajb)
 
-
-
-def notest():
     ajb1 = AJBentry()
     print("\najb.py version:: %s \n" % ajb1.version())
     print('The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid())
@@ -555,10 +566,12 @@ def notest():
     authorajb = AJBentry(authorstr)
     print('\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid())
     pprint(authorajb)
+    print(authorajb.shortTitle())
 
     editorajb = AJBentry(editorstr)
     print('\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid())
     pprint(editorajb)
+    print(editorajb.shortTitle())
 
     #print(editorajb.numStr())
     #eds = editorajb['Editors']
