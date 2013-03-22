@@ -219,6 +219,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          self.volNum.setText(self.defaultVolumeNumber)
       self.volNum.setFocus()
       self.deleteButton.setEnabled(False)
+      if self.maxEntryNumber > 0:
+         self.insertButton.setEnabled(True)
       self.clearEntryDirty()
 
    def askInsertEntry(self):
@@ -815,8 +817,6 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # invoke self.insertFunc(char)
       if self.insertFunc is not None:
          self.insertFunc(char)
-
-      #print('BookEntry insertChar got %s'% (char))
 
    def setFocusChanged(self, oldWidget, nowWidget ):
       """For items in setTextEntryList and setLineEntryList

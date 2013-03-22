@@ -72,7 +72,10 @@ def main():
       if os.path.isfile(fname):
          form.openFile(fname)
       else:
-         form.openNewFile(fname)
+         form.openNewFile()
+         form.bf.setFileName(fname)
+         form.setWinTitle(form.bf.getBaseName())
+
 
    form.show()
    sys.exit(app.exec_())

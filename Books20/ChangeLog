@@ -1,12 +1,17 @@
 2013-03-19  Jim Fowler  <jrf@Biblion>
 
-	* Tools/bookentry/mainWindow.py (BookEntry.saveEntry): added EntrySelect
-	window to insertButton actions.
+	* Tools/BookEntry (main): setFileName and setWinTitle if we open a
+	named new file.  This was based on experience trying to start a
+	new file with a name passed through the -i flag.
+
+	* Tools/bookentry/mainWindow.py (BookEntry.saveEntry): added
+	EntrySelect window to insertButton actions.
 
 2013-03-18  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/entryselect.py (EntrySelect): began work on
 	EntrySelect window.  Trouble with highlighting and unhighlighting.
+	Solved highlighting problem.
 
 2013-03-17  Jim Fowler  <jrf@Biblion>
 

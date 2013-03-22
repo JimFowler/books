@@ -533,8 +533,7 @@ if __name__ == '__main__':
         from pprint import pprint
     except:
         print('Pretty Print module unavailable')
-        pprint = print
-
+        sys.exit(0)
 
     try:
       badentry = Entry(ajbstr)

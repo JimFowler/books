@@ -15,8 +15,9 @@ Welcome to BookEntry's documentation!
    introduction
    installation
    operation
+   theory
    classes
-
+   
 
 
 Indices and tables
