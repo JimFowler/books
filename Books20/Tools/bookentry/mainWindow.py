@@ -346,7 +346,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def openSymbol(self):
       """Open the symbol entry form."""
-      self.symbolTable = symbol.SymbolForm(self.symbolTableName, 'FreeSans', 14)
+      self.symbolTable = symbol.SymbolForm(self.symbolTableName, 'FreeSans', 14, self)
       self.symbolTable.show()
       self.connect(self.symbolTable, SIGNAL('sigClicked'),
                    self.insertChar )

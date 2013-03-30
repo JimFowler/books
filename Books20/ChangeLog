@@ -1,3 +1,9 @@
+2013-03-23  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbol.py (SymbolForm): deleted method
+	keyPressedEvent() so window does disappear it I forget to switch
+	back to the main window.
+
 2013-03-19  Jim Fowler  <jrf@Biblion>
 
 	* Tools/BookEntry (main): setFileName and setWinTitle if we open a

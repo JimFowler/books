@@ -100,12 +100,12 @@ class SymbolForm( QDialog ):
         self.gridLayout.addItem( spacerItem, row, 0, 1, 1 )
         self.setLayout(self.gridLayout)
 
-    def keyPressEvent( self, event ):
-        if type( event ) == QKeyEvent:
-            self.close()
-            event.accept()
-        else:
-            event.ignore()
+        #def keyPressEvent( self, event ):
+        #if type( event ) == QKeyEvent:
+        #    self.close()
+        #    event.accept()
+        #else:
+        #    event.ignore()
 
     def slotClicked( self, obj ):
         char =  obj[0]

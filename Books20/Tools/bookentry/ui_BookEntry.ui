@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>909</width>
+    <width>911</width>
     <height>866</height>
    </rect>
   </property>
@@ -276,7 +276,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>Plase: Publisher, one per line</string>
+       <string>Place : Publisher, one per line</string>
       </property>
       <property name="tabChangesFocus">
        <bool>true</bool>
@@ -880,7 +880,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>909</width>
+     <width>911</width>
      <height>25</height>
     </rect>
    </property>

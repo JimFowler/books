@@ -24,6 +24,7 @@
 è, Small letter e with grave
 é, Small letter e with acute
 ě, Small letter e with caron
+ê, Small letter e with circumflex
 ę, Small letter e with cedilla
 ì, Small letter i with grave
 í, Small letter i with acute
@@ -52,9 +53,13 @@
 Ü, Capital letter U with diaeresis
 ü, Small letter u with diaeresis
 ů, Small letter u with ring above
+ù, Small letter u with grave
+ú, Small letter u with accent
 ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
+Ż, Large letter z with dot above
 ż, Small letter z with dot above
+Ž, Small letter z with caron
 ž, Small letter z with caron
 
 £, British pound sign
