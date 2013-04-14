@@ -455,3 +455,23 @@ For volume AJB 57 Index to the Literature of 1957, started 19 Mar 2013, finished
 
 222 57.55(0).11 A. W. Titherley, Origin of the Solar System, Winchester Hampshire UK, Warren & Son, 1957, 9+100 pp, 21s, , other the publisher is currently an office supply store at the same location; 
 
+223 57.60(0).02 G. Abetti, The Sun, London, Faber & Faber, 1957, 336 pp, 63s and $12.00, Ann d'Astrophys 2053 and BSAF 71 493 and Ciel et Terre 73 408 and Endeavour 16 172 and J. British Interplanetary Soc. 16 258 and J. Optical Soc. America 47 1137 and Mem SA It (NS) 28 240 and Obs 77 77 and Publ ASP 69 190 and Sky Tel. 16 234 and Sky Tel. 16 385 and Strolling Astronomer 11 56 and ZfA 43 87, translated from Italien by J. B. Sidgwick;also published New York: The Macmillan Company;
+
+224 57.60(0).09 K. O. Kiepenheuer, Die Sonne, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1957, 8+150 pp, DM 7.80, BSAF 72 185 and Coelum 25 185 and Phys. Blätter 9 422 and Mitt. Planetenbeobachtunger 10 62 and Sky Tel. 17 306 and Sternenbote 8 99 and ZfA 45 82, other Verständliche Wissenschaft 68 Band; 
+
+225 57.60(0).17 W. W. Scharonow, Soarele si observarea lui, Bucureşti, Ed. tech., 1955, 196 pp, , , translated from Russian;
+
+226 57.60(0).22 W. A. Krat ed., Das Sonnesystem comma Band 1 comma Die Sonne, Moskau, Verlag für ausländische Literatur, 1957, 609 pp, 42R. 15 Kop., RJ 1958 Nr. 9 37, reprint of AJB 53.60.15;translated from English;
+
+227 57.65(0).06 K. J. Kondratjew, Die Strahlungsenergie der Sonne, Leningrad, Hydrometeorologischer Verlag, 1954, 600 pp, 24R. 20 Kop., RJ 1957 Nr. 11 83, in Russian;
+
+228 57.67(0).38 M. Waldmeier, Die Sonnenkorona II comma Stuktur und Variationen der monochromatischen Korona, Basel-Stuttgart, Birkhäuser Verlag, 1957, 353 pp, DM 68.50, AN 284 239 and Ann d'Astrophys 21 229 and Ann. Géophys. 13 326 and Ciel et Terre 73 471 and Obs 77 246 and Sky Tel. 17 97 and Sterne 34 128 and ZfA 45 242, 
+
+229 57.68(0).03 H. Berg, Solar-Terrestrische Beziehungen in Meteorologie und Biologie, Leipzig, Akademische Verlagsgesellschaft Geest & Portig K.-G., 1957, 6+172 pp, DM 23.00, Sky Tel. 17 364, 
+
+230 57.68(0).09 M. S. Eigenson, Abriß der physikalisch-geographischen Erscheinungen der Sonnentätigkeit, Lwow, Verlag der Universität, 1957, 230 pp, 10R. 75 Kop., Priroda 46 Nr. 12 123, in Russian;
+
+231 57.68(0).10 M. A. Ellison, The Sun and Its Influence, , , , , , RJ 1957 Nr. 10 68 and ZfMG 72 240, reference AJB 55.68.17;
+
+232 57.68(0).27 E. R. Mustel, Sonne und Erdatmosphäre, Moskau, Techn. Staatsverlag, 1957, 103 pp, 1R. 65 Kop., , in Russian;
+

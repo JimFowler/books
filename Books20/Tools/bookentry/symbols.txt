@@ -47,7 +47,7 @@
 Ŝ, Capital letter s with circumflex
 ŝ, Small letter s with circumflex
 Ş, Capital letter S with cedilla
-Ş, Small letter s with cedilla
+ş, Small letter s with cedilla
 ß, Small letter sharp s
 
 ţ, Small letter t with cedilla

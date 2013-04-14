@@ -51,7 +51,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.tmpEntryDirty = False
       self.bf = None
       self.curEntryNumber = 0
-      self.maxEntryNumber = 0
+      self.setMaxEntryNumber(0)
       self.setWinTitle('document1')
       self.insertFunc = None
       self.defaultVolumeNumber = None
@@ -112,6 +112,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       self.openNewFile()
 
+   def setMaxEntryNumber(self, n):
+      if n < 0:
+         n = 0
+      self.maxEntryNumber = n
+      self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+
    #
    # Menu and button slots
    #
@@ -137,6 +143,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             return
 
       self.bf = bf.BookFile()
+      self.setMaxEntryNumber(0)
       self.newEntry()
 
    def openFile(self, name=None):
@@ -144,11 +151,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       the first entry. If no records are found we assume that this is
       a new file and we automatically generate a new entry."""
 
-      self.maxEntryNumber = self.bf.readFile(name)
+      self.setMaxEntryNumber(self.bf.readFile(name))
       if self.maxEntryNumber:
          self.statusbar.clearMessage()
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
-         self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
          self.showEntry(1)
          self.insertButton.setEnabled(True)
          self.clearEntryDirty()
@@ -200,8 +206,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          return
 
       if self.curEntryNumber > self.maxEntryNumber:
-         self.maxEntryNumber = self.curEntryNumber
-         self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+         self.setMaxEntryNumber(self.curEntryNumber)
       self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
 
@@ -252,8 +257,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       self.bf.setNewEntry(self.tmpEntry, num)
       self.curEntryNumber = num
-      self.maxEntryNumber += 1
-      self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+      self.setMaxEntryNumber(self.maxEntryNumber + 1)
       self.showEntry(self.curEntryNumber)
       pass
 
@@ -267,8 +271,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if ans == QMessageBox.Cancel:
          return
 
-      self.maxEntryNumber = self.bf.deleteEntry(self.curEntryNumber)
-      self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
+      self.setMaxEntryNumber(self.bf.deleteEntry(self.curEntryNumber))
       if self.maxEntryNumber < 1:
          self.insertButton.setEnable(False)
          self.newEntry()
