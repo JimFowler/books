@@ -1,0 +1,457 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 57 Index to the Literature of 1957, started 19 Mar 2013, finished, proofread
+
+
+1 57.01(0).03 H. Athen, Nomographie comma Schriftenreihe zur Mathematik Heft 6, Frankfurt am Main-Pinneberg, Otto Salle Verlag, 1956, 2+56 pp, DM 4.80, Math. Rev. 19 687, 
+
+2 57.01(0).10 F. Kießler, Nomographisches Rechnen, Essen, Verlag Girardet, 1956, 190 pp, DM 9.80, Österreich Z. Vermessungswesen 45 187, 
+
+3 57.02(0).33 D. R. Hartree, The Calculation of Atomic Structure, New York, John Wiley & Sons Inc., 1957, 13+181 pp, $5.00, Ann d'Astrophys 20 141 and Obs 78 88, also published London: Chapman & Hall;
+
+4 57.02(0).73 A. B. Pippard, The Elements of Classical Thermodynamics, Cambridge, University Press, 1957, 7+165 pp, 15s, Proc. Phys. Soc. 72 485, 
+
+5 57.02(1).119 T. G Cowling, Magnetohydrodynamics, New York-London, Interscience Publishers Inc., 1957, 8+115 pp, $2.25, J. appl. Phys. 28 637 and Nature 180 935, 
+
+6 57.03(0).01 A. W. Lebedew and R. M. Fedorowa, Reference Book on Mathematical Tables, Moskau, Verlag Akad. Wiss. UdSSR, 1956, 46+552 pp, 29.20R., Math. Rev. 18 828, 
+
+7 57.03(0).02 L. S. Tschrenow, Fünfstellige Tafeln der trignometrischen Funktionen mit Argument in Zeit, Moskau, Staatsverlag für Techn.-Theoretische Literatur, 1954, 172 pp, 7R. 70 Kop., Math. Tables and Other Aids to Computation 11 206, 2nd edition;in Russian;
+
+8 57.03(0).03 H. Wittke, Ultragon—Fünfstellige Tafeln für: Sinus- Cosinus- Tangens- Cotangens für Maschinenrechnen, Hamburg, Hanseatische Verlagsanstalt GmbH., 1957, 240 pp, DM 39.50, Össterreich. Z. Vermessungswesen 46 28, 
+
+9 57.03(0).04 , Interpolation and Allied Tables, , , , , , JBAA 68 114, reference AJB 56.03.08;
+
+10 57.03(1).06 A. D. Booth and K. H. V. Booth, Automatic Digital Calculators, , , , , , Rev. Sci. Instruments 28 43, reference AJB 56.03.11;
+
+11 57.03(1).07 G. F. Forbes, Digital Differential Analysis: An Applications Manual for Digital and Bush Type Differential Analyzers, Pacoima CA., G. F. Forbes, 1957, 14+154+38 pp, $5.00, J. British Interplanetary Society 16 387, 4th edition;other self published; 
+
+12 57.03(1).10 D. D. McDracken, Digital Computer Programming, New York, John Wiley & Sons, 1957, 7+253 pp, , , also published London: Chapman & Hall Ltd.;
+
+13 57.05(0).01 G. Abetti, Le stelle e i pianeti, , , , , , Obs 78 36, reference AJB 56.05.01;
+
+14 57.05(0).02 C. W. Allen, Astrophysical Quantities, , , , , , RJ 1957 Nr. 8 32, reference AJB 55.05.02;
+
+15 57.05(0).03 R. M Aller, Introducción a la Astronomia, Madrid, Consejo Superior de Investigaciones Cientificas, 1957, 613 pp, , BSAF 72 88 and Urania Barcelona 42 264, 2nd edition;
+
+16 57.05(0).04 K. L Bajew and W. A. Schischakow, Einfürung in die Astronomie, , , , , , , other Auch in weiteren Landessprachen der UdSSR erschienen; reference AJB 55.05.06;
+
+17 57.05(0).05 R. H. Baker, An Instroduction to Astronomy, New York-London-Toronto, D. Van Nostrand Ltd., 1957, 8+333 pp, $4.85, J. appl. Phys. 28 825 and Sky Tel. 16 387 and Sky Tel. 17 195, 5th edition;
+
+18 57.05(0).06 L. Barnett, Ce monde où nous vivons, Paris, Hachette, 1957, 312 pp, ffrs 4900, La Nature 85 501, reprint of AJB 56.05.10;translated  by M. Levi-Strauss;
+
+19 57.05(0).07 W. P. Batjuk, Astronomiestunden in der zehnten Klasse, Kiew, <<Rad Schkola>>, 1957, 117 pp, 1R. 75 Kop., , 
+
+20 57.05(0).08 H. P. Berlage, Het onstaan van het zonnestelsel, Haarlem, Volks-universiteit Biblioteck Bohn, 1956, 208 pp, hfl. 3.90, Hemel en Dampkring 55 218, 
+
+21 57.05(0).09 K. Bocke, Cosmic View: The Universe in 40 Jumps, New York, The John Day Company, 1958, 48 pp, $3.25, Sky Tel. 17 197 and Sky Tel. 17 363, 
+
+22 57.05(0).10 N. Boneff, Astronphysik, Sofia, Wissenschaft un Kunst, 1956, 180 pp, , , 2nd edition;
+
+23 57.05(0).11 R. Brandt, Himmelswunder im Feldstecher, , , , , , Gaz astr. 38-39 91, reference AJB 56.05.18;
+
+24 57.05(0).12 F. Bauchet and J. Durmarqué and P. Condere, Cosmographie, Paris, Delgrave, 1957, 192 pp, , , 2nd edition;
+
+25 57.05(0).13 F. A. Bubleinikow, 4000 Jahre Kampf um das Weltbild comma Die Entwicklung der Vorstellung von der Erde, Leipzig, Urania-Verlag, , 200 pp, DM 7.80, VDS Nachr. 7 43, translated from Russian;
+
+26 57.05(0).14 W. Büdeler, Teleskopi comma Rakete comma Zvijezde, Zagrab, Izdanje <<Tehnička knjiga>>, 1957, 292 pp, 600 Din., , translated from German;
+
+27 57.05(0).15 R. Cartier, Die Welt—woher sie kommt—wohin sie geht, Hamburg, Blüchert Verlag, 1957, 156 pp, DM 16.80, Mitt. Planetenbeobachter 10 61, translated from French by P. W. Tügel and S. Groueff;edited by P. Jordan;
+
+28 57.05(0).16 J. M. Chamberlain and T. D. Nicholson, Planets comma Stars and Space, Mankato MI, Creative Educational Society, 1957, 223 pp, $7.50, Sky Tel. 17 419 and Sky Tel. 18 40, 
+
+29 57.05(0).17 E. K. Charadse, Was sagt die Wissenschaft über den Bau des Universums, Tiflis, Staatsverlag Georg. Sowjetrepublik, 1956, 80 pp, 80 Kop., , in Georgian;
+
+30 57.05(0).18 E. K. Charadse, Astronomie: Lehrbuch für die 10 und 11 Klasse, Tiflis, Staatsvelag Georg. Sowjetrepublik, 1956, 227 pp, 3R., , 8th edition;in Georgian;
+
+31 57.05(0).19 A. Croome, Wonderama: a Book of Modern Marvels, London, Adprint, 1957, , , Spaceflight 1 263, edited by E. Andrews;
+
+32 57.05(0).20 A. Dauvillier, Cosmologie et chimie, , , , , , Obs 78 37 and Scientia 92 167, reference AJB 55.05.12;
+
+33 57.05(0).21 J. Dommanget, Exploration du ciel, Namur, Ed. du Soleil Levant, , 8+56 pp, 30F. and 20 belg. Fr., Ciel et Terre 73 573 and Gaz astr. 40 16, 2nd edition;
+
+34 57.05(0).22 A. van Dooren, Kosmografie, Maaseik (Belgium), College van het H. Kruis, , 76 pp, hfl. 2.20, Hemel en Dampkring 56 69, 
+
+35 57.05(0).23 J. Eugster, Sterne strahlen dich an, Bern-Stuttgart, Hans Huber, 1957, 74 pp, , Sterne 34 157 and Urania København 15 4 and Weltrumfahrt 1957 99, 
+
+36 57.05(0).24 W. G. Fessenkow, ABC do sistema solar, Rio de Janeiro, Ed. Vitoria, 1957, 184 pp, 100 Cruz., , translated from Russian;
+
+37 57.05(0).25 K. Faldt and H. Seitz, Astronomie, Stuttgart, Ernst Klett Verlag, 1957, 8+200 pp, DM 15.80, Mitt. Plantenbeobachtungen 10 49 and Naturwiss. Rundschau 10 395 and Phys. Ber. 37 1309 and Phys. Blätter 14 92 and ZfA 45 81, 
+
+38 57.05(0).26 K. W. Batland and D. D. Dempster, The Inhabited Universe, , Allan Wingate, 1957, , 21s, Spaceflight 1 263, 
+
+39 57.05(0).27 J. Gauzit, Les grands problèmes d l'astronomie, Paris, Dunod, 1957, 184 pp, ffrs. 680, Ann d'Astrophys 19 338 and BSAF 71 314 and Ciel et Terre 73 353 and La Nature 85 459 and RJ 1957 Nr. 9 11, 2nd edition;
+
+40 57.05(0).28 G. A. Gurew, Was ist das Weltall?, Moskau, Techn. Staatsverlag, 1957, 200 pp, 3R. 15 Kop., , in Russian;
+
+41 57.05(0).29 F. Hoyle, Aux frontières de l'Astronomie, Paris, Corréa, 1956, 385 pp, ffrs 1800, La Nature 85 78, reprint of AJB 55.05.23;
+
+42 57.05(0).30 F. Hoyle, Das grenzenlose All: Der Vorstoß der modernen Astrophysik in den Weltraum, Köln-Berlin, Kiepenheuer & Witsch, 1957, 423 pp, DM 18.50, Naturewiss. Rundschau 10 395 and Phys. Blätter 13 579 and Sterne 34 207 and Sternenbote 8 84 and Waltraumfahrt 1957 98 and ZfA 46 279, reprint of AJB 55.05.23;translated from English by K. O. Kiepenheuer and H. Siebler-Ferry;
+
+43 57.05(0).31 F. Hoyle, Planeten comma sterren comma melkwegen, Den Haag, Heinemann, , 335 pp, hfl. 1.90, Hemel en Dampkring 55 190, reprint of AJB 55.05.23;translated from English;in H.;
+
+44 57.05(0).32 G. M. Idliss, Kosmische materie, Moskau, Verlag Akad. Wiss. UdSSR, 1957, 126 pp, 2R., Priroda 46 Nr. 6 120, in Russian;
+
+45 57.05(0).34 K. Kaltschwjew, Die Welt der Sterne, Aschshabad, , 1956, 26 pp, 80 Kop., , in Turkmen.;
+
+46 57.05(0).35 H. C. King, The Background of Astronomy, London, C. A. Watts % Co. Ltd., 1957, 6+254 pp, 18s, JBAA 68 70 and J RAS Canada 52 190 and Obs 78 35, 
+
+47 57.05(0).36 J. Kleczek, Nitro hvězd, Prag, Verlag Akad. Wiss., , 226 pp, Kčs 10.50, RH 38 143, 
+
+48 57.05(0).37 I. G. Koltschinskij, Methodische Hinweise auf die Lektionen <<Ungewöhnliche Himmelserscheinungen>>, Kiew, Zentrales Lektionsbüro, 1956, 35 pp, , , in Ukrainian;
+
+49 57.05(0).38 W. N. Komarow, Die Bewegung der Sterne, Moskau, Staatsverlag für technisch-theoretische Literatur, 1957, 66 pp, 1R. 10 Kop., Priroda 47 Nr. 3 121, in Russian;
+
+50 57.05(0).39 W. S. Krogdahl, The Astronomical Universe, New York, The Macmillan Company, 1957, 17+599 pp, , , 2nd edition;reprint of AJB 52.05.31;
+
+51 57.05(0).40 W. Kruse and W. Diekvoss, The Stars, Ann Arbor MI, University of Michigan Press, 1957, 202 pp, $5.00, JBAA 68 223 and Sky Tel. 17 306 and Sky Tel. 17 363, 
+
+52 57.05(0).41 F. Linnk, Co víme o hvězdách, Prag, Verlag Akad. Wiss., , 144 pp, Kčs 5.74, RH 38 143, 2nd edition;
+
+53 57.05(0).42 R. A. Lyttleton, The Modern Universe, , , , , , El Universo Nr. 43 99 and Nature 179 505, reference AJB 56.05.47;
+
+54 57.05(0).43 T. Maloney, Other Worlds in Space, London, Acorn Press, 1957, 128 pp, 12s 6d and $2.95, Sky Tel. 17 525 and Spaceflight 1 226, also published London: Sterling;other Sterling edition published in 1958; 
+
+55 57.05(0).44 A. Masani, Questioni di Astronomia I comma II, Genova, Libreria Mario Bozzi, 1957, v1 418 pp and v2 176 pp, , Mem SA It (NS) 29 159, 
+
+56 57.05(0).45 M. Montygierd, Zjawiska niebieskie, Warsawa, <<Wiedza Powszechna>>, 1957, 56 pp, 2 zł, , 
+
+57 57.05(0).46 P. Moore, The Amateur Astronomer, London, Lutterworth Press, 1957, 337 pp, 25s and $4.50, El Universo Nr 44 155 and JBAA 68 192 and J. British Interplanetary Soc. 16 386 and Sky Tel. 16 596 and Sky Tel. 17 141 and Strolling Astronomer 11 115 and Urania København 15 5, also published New York: W. W. Norton & Co. Inc;
+
+58 57.05(0).47 P. Moore, Venus, Murnau, Verlag Seb. Lux, 1957, 74 pp, , Planetenbeobachter 10 48, translated  by G. D. Roth;in German;
+
+59 57.05(0).48 K. F. Ogorodnikow, Woran sich die Erde hält, , , , , , , other Auch in weiteren Landessprachen der UdSSR enschienen; reference AJB 50.05.37;
+
+60 57.05(0).50 K. F. Ogorodnikow, Wieviel Sterne stehen am Himmel?, Tiflis, , 1956, 44 pp, 65 Kop., , reprint of AJB 56.05.54;in Georgian;
+
+61 57.05(0).50 M. W. Ovenden, Looking at the Stars, London, Phoenix House, 1957, 192 pp, 10s  6d, JBAA 68 274 and Publ ASP 70 336 and Sky Tel. 17 306 and Spaceflight 1 262, 
+
+62 57.05(0).51 P. P. Parenago, In der Welt der Sterne, Moskau, Tech. Staatsverlag, 1957, 96 pp, 1R. 55 Kop., , in Russian;
+
+63 57.05(0).52 P. I. Popow, Słonce i Ziema, Warsawa, Min. Obrony Narod., 1955, , 1.90 zł, , reprint of AJB 49.05.44;translated from Russian;
+
+64 57.05(0).53 H. A. Rey, The Stars, Boston, Houghton Miffin Co., 1956, 144 pp, $6.00, J RAS Canada 52 191, 4th edition;
+
+65 57.05(0).54 L. Rosino, Fisica delle stelle, , , , , , Scientia 92 197, reference AJB 56.05.63;
+
+66 57.05(0).54 P. Rousseau, A la conquête des étioles, , , , , , BSAF 71 448 and La Nature 85 157, reference AJB 56.05.66;
+
+67 57.05(0).56 P. Rosseau, Le monde des étoiles, Paris, Hachette, 1956, 248 pp, 500 fr., , 
+
+68 57.05(0).57 L. Rudaux and G. de Vaucouleurs, Astronomie: Les astres comma l'univers, Paris, Librairie Laruousse, 1956, 8+503 pp, , RJ 1958 Nr. 1 7, 
+
+69 57.05(0).58 E. Rybka, Astronomia dla Klasy XI, Warsawa, Państwowe Zaklady Wydawnictwo Szkolnych, 1957, 163 pp, 5.50 zł, , 8th edition;other Lehrbuch der Astronomie für Mittleschulen; 
+
+70 57.05(0).59 P. Rybka, Astronomia ogólna, Warsawa, Państwowe Wydawnictwo Naukowe, 1957, 490 pp, 43.50 zł, , 2nd edition;other Lehrbuch der Astronomie für hölhere Lehranstalten; 
+
+71 57.05(0).60 W. Schroeder, Practical Astronomy, New York, Philosophical Library, 1957, 206 pp, $6.00, Publ ASP 69 591 and Sky Tel. 17 93 and Sky Tel. 17 195 and Spaceflight 1 262, 
+
+72 57.05(0).61 J. B. Sidgwick, Introducing Astronomy, New York, The Macmillan Co., 1957, 259 pp, $3.50, Publ ASP 69 279 and Sky Tel. 16 337 and Sky Tel. 17 141 and Sky Tel. 17 143, 
+
+73 57.05(0).62 O. Thomas, Astronomie comma Tatsachen und Probleme, , , , , , El Universo Nr. 42 45 and J RAS Canada 52 35 and NAT 1957 35 and Orion Schafthausen 5 489 and Sterne 34 45 and Sternenbote 1 18 and VdS Nachr. 7 14, reference AJB 56.05.76;
+
+74 57.05(0).63 G. de Vaucouleurs, Discovery of the Universe: An Outline of the History of Astronomy from the Origins to 1956, London, Faber & Faber Ltd., 1957, 328 pp, 30s and $6.00, AJ UdSSR 35 677 and El Universo 12 99 and Endeavour 17 48 and J. Astr. Soc Victoria 10 61  and JBAA 67 325 and La Nature 85 459 and MN ASSA 16 61 and Obs 77 157 and Publ ASP 69 588 and Rev. Astr. Nr. 143 92 and Sky Tel. 16 596 and Sky Tel. 17 87 and Southern Stars 17 98 and Spaceflight 1 225 and Strolling Astronomer 12 27, also published New York: The Macmillan Co.;
+
+75 57.05(0).64 S. Waldhard, Unterhaltungen über das Weltall, Moskau, Verlag <<Moskauer Arbeiter>>, 1957, 176 pp, 2R. 15 Kop., Priroda 46 Nr. 9 125, in Russian;
+
+76 57.05(0).65 W. Widmann and K. Schütte, Welcher Stern ist das?, Stuttgart, Kosmos-Verlag, 1957, 156 pp, DM 7.50, , also published Stuttgart: Fanckhsche Verlaghandlung;other Check name and location of publishers; 
+
+77 57.05(0).66 W. Widmann and K. Schütte, Guide to the Stars, , Thames & Hudson, , 224 pp, 21s, Obs 77 212, reprint of AJB 52.05.67;translated  by A. Beer;in English;other is this the same as AJB 57.05.65?; 
+
+78 57.05(0).67 H. P. Wilkins, Les mystères de l'Espace et du Temps, Paris, Payot, 1956, 206 pp, ffrs. 900, La Nature 85 157, reprint of AJB 56.05.82;translated  by J. Leguèbe;
+
+79 57.05(0).68 H. P Wilkins, Introductions to Young Astronomers, London, Museum Press, 1957, 128 pp, 10s 6d, Spaceflight 1 227, 
+
+80 57.05(0).69 R. v. d. R. Woolley, A Key to the Stars, London, Blackie & Sons, 1957, 144 PP, 10s 6d, J. Optical Soc. America 47 1137 and Obs 77 245 and Publ ASP 69 483 and Sky Tel. 16 596 and Sky Tel. 17 196 and Strolling Astronomer 11 60, 3rd edition;also published New York: Philosophical Society;
+
+81 57.05(0).70 B. A. Woronzow-Weljaminow, Sammlung von Aufgaben und Übungen zur Astronomie, Moskau, Techn. Staatsverlag, 1957, 271 pp, 6R. 30 Kop., , 4th edition;in Russian;
+
+82 57.05(0).71 R. Wyler and G. Ames, Lebendige Astronomie: Das große bunte Buch von Sonne comma Mond und Sterne, Ravensburg, Otto Maier Verlag, 1957, 88 pp, DM 16.50, Sterne 34 95 and VdS Nachr. 7 43, translated  by H. Bühler;edited by H. Bühler;other Bilder (illustrated?) von J. Polgreen; 
+
+83 57.05(0).72 W. Zonn and K. Rudnicki, Astronomia gwiazdowa, Warsawa, PWN, 1957, 441 pp, 48 zł, , other textbook; 
+
+84 57.05(0).73 A. Danjon and P. Pruvost and J. Blanche ed., Le Ciel et la Terre, , , , , , BSAF 71 261 and La Nature 85 501 and Nature 180 59 and Sky Tel. 17 90, reference AJB 56.05.91;
+
+85 57.05(0).74 , New Horizons in Astronomy, , , , , , BSAF 71 448 and Obs 78 38, reference AJB 56.05.92;
+
+86 57.05(0).75 , Astronomy and Geophysics: A Selection of Recent Literature, Stockholm, , 1957, , , Urania København 14 88, 
+
+87 57.05(0).76 , The Universe, New York, Simon & Schuster, 1957, 142 pp, $1.45, Sky Tel. 17 197, other edited by Scientific American; 
+
+88 57.05(0).77 M. Zelikoff ed., The Threshold of Space, London-New York, Pergamon Press, 1957, 342 pp, $15.00, Sky Tel. 17 306, 
+
+89 57.06(0).05 D. Burger, Bolland: Een roman van gekromde ruimten en uitdijend heelal, 's-Gravenhage, C. Blommendaal N. V., 1957, 120 pp, hfl. 9.50, Hemel en Dampkring 55 217, 
+
+90 57.06(0).06 C. Clerici, Il sistema solare e proposta di aggiornamento del modello o descrizione data dal Copernico: Il sole comma le radiazioni comma la luce comma la visione, Milano, Tip. Figli della provvidenza, 1956, 29 pp, , , 
+
+91 57.06(0).13 M. Gardner, Fad and Fallacies, New York, Dover Publications, 1957, 10+363 P, $1.50, Publ ASP 69 589, 
+
+92 57.06(0).15 F. Gruber, Two kinds of matter in the universe: New cosmogony, Wien, F. Gruber, 1957, 24 pp, , , other Self published by the author; 
+
+93 57.06(0).16 H. Spencer Jones, Život na drugim svetovime, Beograd, Isdavač Nolit, 1957, 184 pp, , Vasiona 5 52, translated from English by L. Mitić;
+
+94 57.06(0).17 R. Kühn, Himmel voller Wunder, München, Hanns Reich Verlag, 1957, 46 pp, DM 9.80, Mitt. Planetenbeobachter 11 13 and Sterne 34 206, 
+
+95 57.06(0).18 K. A. Kulilow, Die Astronomie im Dienste der Volkswirtschaft, Moskau, Techn. Staatsverlag, 1957, 79 pp, 1R. 15 Kop., , in Russian;
+
+96 57.06(0).20 A. G. Miller, Sonne comma Mond und Sterne: Der Roman der Astronomie, Hamburg, Zsolnay-Verlag, 1957, 392 pp, DM 1950, Orion Schafthausen 5 471, 
+
+97 57.06(0).24 A. I. Oparin and W. G. Fessenkow, Život ve vesmíru, Prag, Verlag Naše vojsko, , 168 pp, Kčs 8.30, RH 38 287, reprint of AJB 56.06.29;translated from Russian;
+
+98 57.06(0).25 S. A. Pachuta, Wissenschaft und religion über den Bau des Weltalls, Minsk, Ges. zur Verbreitung polit. und wiss. Kenntnisse der Weißruss Sowjetrepublik, 1955, 40 p, 70 Kop., , in Russian;
+
+99 57.06(0).30 J. H. Rush, The Dawn of Life, New York-Garden City, Hanover House, 1957, 262 pp, $4.50, Sky Tel. 17 364 and Sky Tel. 17 469, 
+
+100 57.06(0).32 W. Schadewaldt, Die Sternsagen der Griechen, Frankfurt/M., S. Fischer Verlag, 1956, , DM 2.30, Orion Schafthausen 5 359, 
+
+101 57.06(0).33 A. Schmid, Traktat über das Licht, Bonn, Athenäum-Verlag, 1957, 283 pp, DM 14.80, Sterne 34 93, 
+
+102 57.06(0).43 R. Thiel, Und es ward Licht, , , , , , AN 284 239 and Naturwiss. Rundschau 10 395 and Weltraumfahrt 1957 33, reference AJB 56.06.39;
+
+103 57.06(0).44 R. Thiel, And There Was Light, New York, Alfred A. Knopf Inc., 1957, 415 pp, $6.95, Sky Tel. 17 197 and Sky Tel. 17 246, reprint of AJB 56.06.39;translated from German by R. Winston and C. Winston;other Check reprint?; 
+
+104 57.06(0).45 R. Thiel, Universets erobring: Himmelgåder og stjerneforskning gennem årtusinder, København, Skrifola, 1957, 380 pp, Dan Kr. 36.50, ANT 1958 33 and PAT 38 159, translated  by C. Luplau Janssen;in Danish;
+
+105 57.06(0).46 R. Thiel, Das kleine Planetarium: Mit Sternbildern comma die man am Himmel wirklich sicht, Hamburg, Rowohlt-Verlag, 1957, 16 pp, DM 10.80, Sterne 34 47, 
+
+106 57.06(0).51 I. Velikovsky, Les grands bouleversements terrestres, Paris, Libraire Stock, 1957, 320 pp, 960 fr., Ann d'Astrophys 21 164, translated from English;
+
+107 57.06(0).53 E. Zehren, Das Testament der Sterne: Der Einfluß der sterne auf die religiöse und kulturelle Entwicklung des Menschen, Berlin, F. A. Herbig Verlagsbuchhandlung, 1957, 416 pp, DM 19.80, Mitt. Planetenbeobachter 11 11 and VdS Nachr. 7 35, 
+
+108 57.06(0).54 E. Zinner, The Stars Above Us, London, Allen & Unwin Ltd., 1957, 141+14 PP, 16s and $3.00, JBAA 68 70 and Obs 77 213 and Sky Tel. 17 197 and Sky Tel. 17 361, translated from German by W. H. Johnston;also published New York: Scribner's;
+
+109 57.06(0).57 H. E. Landsberg ed., Advances in Geophysics vol. 2, , , , , , J. app. Phys. 28 637 and J. Atmos. Terr. Phys. 10 347 and Nature 180 258, reference AJB 55.06.39;
+
+110 57.07(0).01 K. Heinemann and F.Henn and W. Lohmann ed., Astronomische Jahresbericht Band 55, Berlin, W. de Gruyter & Co., 1957, 33+542 pp, DM 50.00, , 
+
+111 57.07(0).13 , Radio Astronomy Bibliography 1954—1956, Sydney, Commonwealth Sci. Industrial Res. Organization, 1957, 37+292 p, , , 
+
+112 57.07(0).17 G. Reichardt ed., Sowjetische Literatur zur Naturwissenschaft und Technik Bibliographischer Wegweiser, Wiesbaden, Franz Steiner Verlag GmbH, 1957, 6+181 pp, , , 
+
+113 57.07(0).18 , Worldwide Bibliography for Amateur Telescope Makers, St. Louis, , 1957, , $0.25, , 2nd edition;compiled by K. Masson;
+
+114 57.07(0).19 , A Bibliography for the International Geophysical Year, Washington DC, Government Printing Office, 1957, 6+51 pp, $0.25, Nature 180 1155, 
+
+115 57.07(0).22 H. H. Koelle and H. J. Kaeppeler ed., Literaturverzeichnis der Astronautik, , , , , , J. British Interplanetary Soc. 16 132, reference AJB 54.07.16;
+
+116 57.07(0).23 , The Space Encyclopedia; A Guide to Astronomy and Space Research, London, The Artemis Press, 1957, 287 pp, 35s and DM 21.50 and $6.95, JBAA 67 328 and Spaceflight 1 226 and Sky Tel. 17 306, 
+
+117 57.07(0).27 J. B. Porta, Natural Magic, New York, Basic Books Inc., 1957, 16+416 pp, $7.50, Ciel et Terre 73 572, edited by D. J. Price;
+
+118 57.07(0).28 M. Reichel, Die fortlaufenden astronomischen Veröffentlichungen in ihrer geschichtlichen Entwicklung, Köln, Greven Verlag, 1957, 124 pp, DM 9.20, , 
+
+119 57.07(0).31 K. Stumpff, Das Fischer Lexikon: Astronomie, Frankfurt/M, Fischer Bücherei KG, 1957, 345 pp, DM 3.30, Orion Schafthausen 5 422 and VdS Nachr. 5 61, 
+
+120 57.07(0).35 , Discoveries and Opinions of Galileo, Garden City-New York, Doubleday Anchor Books, 1957, 30 pp, $1.25, Publ ASP 69 280 and Sky Tel. 16 337 and Sky Tel. 17 31, translated  by S. Drake;
+
+121 57.07(0).36 Galileo Galilei, Dialogue on the Great World Systems, Chicago, University of Chicago Press, 1957, 58+506 pp, 94s, Nature 180 450 and Obs 78 38, also published London: Cambridge University Press;other the Salusbury translation; 
+
+122 57.07(0).37 G. Petiau ed., Oeuvres de Henri Poincaré Tome XI, Paris, Gautheir-Villars, 1956, 305 pp, , Math Rev. 19 109, 
+
+123 57.07(0).38 M. I. Ussanowitsch ed., G. A. Tichow comma Hauptwerke Band 3, Almo-Alta, Akad. Wiss. Kasach. Sowjetrepublik, 1957, 235 pp, 15R 90 Kop., , in Russian;other volume 3 of 5; 
+
+124 57.07(0).39 , Vistas in Astronomy comma vols 1 and 2, , , , , , AJ UdSSR 35 496 and La Nature 85 243 and Nature 180 1308 and Naturewiss. Rundschau 10 116 and Naturwiss. Rundschau 10 317 and Obs 78 86 and Publ ASP 70 225, 
+
+125 57.10(3).05 M. S. Arlasorow, Konstantin Eduardowitsch Ziolkowskij; Sein Leben and Werk, Moskau, Techn. Staatsverlag, 1957, 144 pp, 2R. 25 Kop., , 2nd edition;in Russian;
+
+126 57.10(3).06 A. Armitage, Niccolo Copernico e l'astronomia moderna, , , , , , Scientia 92 74, reference AJB 56.10.90;
+
+127 57.10(3).07 A. Armitage, Copernicus; The founder of modern astronomy, New York-London, , 1957, , , Urania København 15 15, 
+
+128 57.10(3).14 A. V. Douglas, The Life of Arthur Stanley Eddington, , , , , , Nature 179 3 and Phil. Mag. (8) 2 425 and Sky Tel. 17 32, reference AJB 56.10.13;
+
+129 57.10(3).20 H. C. Freiesleben, Galileo Galilei, , , , , , Phys. Blätter 14 136 and Scientia 92 74, 
+
+130 57.10(3).23 G. Gamow, Den nya astronomin, Stockholm, Natur och Kultur, 1957, 260 pp, Kr. 22.50, PAT 38 158, 
+
+131 57.10(3).24 L. Geymonat, Galileo Galilei, Torino, Einaudi, 1957, 382 pp, L. 900, Scientia 92 291, 
+
+132 57.10(3).26 T. Herczeg, Kopernikusz, Budapest, Müvelt, 1954, 91 pp, 6.50 Ft., , in Hungarian;
+
+133 57.10(3).31 L. Infeld, Albert Einstein; Sein Werk and sein Einfluß auf unsere Welt, Berlin, Akademie-Verlag, 1957, 174 pp, DM 9.50, , 
+
+134 57.10(3).43 C. U. Sadykow, Biruni und seine Arbeiten zur Astronomie und mathematischen Geographie, Stalinabad, Naschrdawtotsch, 1956, 68 pp, 95 Kop., , in tadshik.;
+
+135 57.10(3).47 W. G. Selichanowitsch, Alexej Nikolajewitsch Sawitsch; Mathematiker Astronom. Pädagoge 1810—1883 comma Leben und Werk, Moskau, Geodät. Verlag, 1957, 77 pp, 3 R., , in Russian;
+
+136 57.10(3).49 J. B. Sidgwick, William Herschel, London, Faber & Faber Ltd., 1956, , 12s 6d, Urania København 14 30, 
+
+137 57.10(3).50 F. J. Sigel, Fjodor Alexandrowitsch Bredichin comma Sein Leben und Werk, Moskau, Techn. Staatsverlag, 1957, 152 pp, 2R. 20 Kop., , in Russian;
+
+138 57.10(3).59 H. Reichardt ed., C. F. Gauss; Gedenkband anläßich des 100, Leipzig, B. G. Teubner Verlagsgesellschaft, 1957, 260 PP, DM 25.80, Math. Rev. 19 518 and Phys. Blätter 14 90, 
+
+139 57.10(3).60 L. Wörner and P. Nell and J. Deutsch and W. Tripmacker ed., Bruno H. Bügel zum Gedenken, Potsdam, , 1957, 91 pp, DM 3.45, Sterne 34 249 and VdS Nachr. 7 35, 
+
+140 57.10(3).61 S. G. Lindberg ed., Bengt Ferrner comma Resa i Europa; En astronom comma industrispion och teaterhabitué genom Danmark comma Tyskland comma Holland comma England comma Frankrike oct Italien 1758—1762, Uppsala, Lärdomshistoriska samfundet, 1957, 87+572 pp, Kr. 79.50, PAT 38 80, 
+
+141 57.10(3).70 J. C. Poggendorff, Biographisch-Literarisches Handwörterbuch der exakten Naturwissenschaften Band VIIa Teil 2: F-K, Berlin, Akademie-Verlag, , , , , other five volumes; 
+
+142 57.11(3).63 , Unterlagen der vom Sektor für Astrobotanik und der Leningrader Abteilung der Astronomisch-Geodätischen Gesellschaft vom 23—25 Februar 1953 durchgeführten Konferenz über Fragen der Möglichkeit des Lebens aug anderen Planeten, Alma-Alta, , 1955, 161 pp, 7R. 80 Kop., , in Russian;other also Publ. Sektor Astrobotanik Akad. Wiss Kasach. Sowjetrepublik 4; 
+
+143 57.11(3).64 A. G. Massewitsch ed., Kernprozesse in Sternen, Moskau, Verlag für ausländische Literatur, 1957, 423 pp, 17R., Priroda 46 Nr. 10 122, in Russian;
+
+144 57.11(3).65 , Meteors: A symposium on meteor physics, , , , , , Astronaut. Acta 3 224 and Naturwissenschaften 44 455, reference AJB 55.11.68;
+
+145 57.11(3).66 , Proceedings of the Third Berkeley Symposium on Mathematical Statistics and Probability vol III, , , , , , La Nature 85 334 and ZfMG 72 240, reference AJB 56.11.53;
+
+146 57.01(3).67 , Fünfzig Jahre Relativitätstheorie, , , , , , Math. Rev. 19 506 and Phys. Ber. 37 9 and RJ 1958 Nr. 5 54, reference AJB 56.11.63;
+
+147 57.11(3).68 , Proceedings of a Symposium on Astronomical Optics and Related Subjects, , , , , , J. appl. Phys. 28 282 and Nuovo Cimento (10) 5 1377 and Rev. Sci. Instruments 28 731 and Ric. Sci. 27 1698 and Science 126 1122 and ZfMG 70 453, reference AJB 56.11.72;
+
+148 57.11(3).69 H. C. van de Hulst ed., Radio Astronomy, Cambridge, At the University Press, 1957, 11+409 pp, 50 s, JBAA 68 275 and Obs 78 133 and Publ ASP 70 330 and Sky Tel. 17 93 and ZfA 46 282, other IAU Symposium Nr. 4; 
+
+149 57.11(3).70 , Solar Eclipses and the Ionosphere, , , , , , J. British Interplanetary Soc. 16 322 and J RAS Canada 52 189 and La Nature 85 334 and Nature 179 711, reference AJB 56.11.67;
+
+150 57.11(3).71 G. H. Herbig ed., Non-stable Stars, London, Cambridge University Press, 1957, 8+198 pp, 30s, Ann d'Astrophys 20 139 and Ciel et Terre 73 570 and Obs 78 130 and Publ ASP 70 226 and Sky Tel.  17 34 and ZfA 45 149, other IAU Symposium Nr. 3; 
+
+151 57.11(3).72 E. B. Armstrong and A. Dalgarno ed., The Airglow and the Aurorae, , , , , , Ciel et Terre 74 289 and La Nature 85 335 and Nature 179 647 and Obs  77 212, reference AJB 56.11.66;
+
+152 57.11(3).73 S. M . Poloskow ed., Publikationen der Konferenz der Kommission für Sonnenforschung vom 22—24 November 1955; Physik der solaren Korpuskularströme und ihr Einfluß auf die obere Erdatmosphäre, Moskau, Akad. Wiss. UdSSR, 1957, 290 pp, 17R. 45 Kop., RJ 1958 Nr. 4 4, in Russian;
+
+153 57.11(3).74 M. S. Swerew ed., Publikationen der zwölften astronometrichen Konfrenz der UdSSR, Leningrad, Verlag Astr. Hauptobs. Pulkowo, 1957, 440 pp, , , in Russian;
+
+154 57.11(3).78 K. Weekes and L. Harang ed., Polar Atmosphere Symposium II Ionospheric Section, London-New York-Paris-Los Angeles, Pergamon Press, 1957, 212 pp, 60s, Ciel et Terre 74 254 and ZfA 45 153, 
+
+155 57.11(3).83 , Symposium on radio astronomy, Melbourne, , 1957, 85 pp, , , other conference held at CSIRO Radiophysics Laboratory; 
+
+156 57.11(3).85 M. A. Arakeljan ed., The Non-stable Stars, Erewan, Publishing House of the Academy of Sciences, 1957, 188 pp, 7R. 80 Kop., , in Russian;
+
+157 57.11(3).86 R. K. Landshoff ed., Review of Magneto-Hydrodynamics (A Symposium), Oxford, University Press, 1957, 8+115 pp, 32s, J. appl. Phys. 28 367 and Proc. Phys. Soc. 72 487, 
+
+158 57.13(0).08 L. Barnett, The Universe and Dr. Einstein, , Cillens Comet Books, 1957, 124 pp, 2s 6d, Spaceflight 1 226, 
+
+159 57.13(0).13 A. C. Clarke, The Making of a Moon: The Story of the Earth Satellite Program, New York, Harper, 1957, 205 pp, $3.50, Science 126 1070, 
+
+160 57.13(0).33 H. C. King, The Making of the Telescope, , , , , , Isis 48 357 and J. Optical Soc. America 47 191 and NAT 1957 149, reference AJB 55.13.34;
+
+161 57.13(0).37 T. S. Kuhn, The Copernican Revolution: Planetary Astronomy in the Development of Western Thought, Cambridge MA, Harvard University Press, 1957, 18+297 pp, $5.50 and 45s and Can $7.25, Ciel et Terre 73 406 and J. appl. Phys 28 925 and J RAS Canada 53 34 and Obs 78 172 and Publ ASP 69 482 and Sky Tel. 16 596, also published London: Oxford University Press and Toronto: S. J. Redinald Saunders & Co.;
+
+162 57.13(0).38 H. Kühnert, Briefe und Documente zur Geschichte des VEB Jenaer Galswerk Schott und Genossen II, Jena, VEB Gustav Fischer Verlag, 1957, 106+388 pp, DM 45, Sterne 34 48, other Thüringischen Historischen Kommisi0n Band VI; 
+
+163 57.13(0).39 G. Lampariello, Von Galilei zu Einstein, Köln-Opladen, Westdeutscher Verlag, 1956, 92 pp, DM 4.20, , 
+
+164 57.13(0).45 M. K. Munitz, Space comma Time comma and Creation, Glencoe IL, Free Press, 1957, 182 pp, $3.75, Obs 77 247 and Sky Tel. 16 337, 
+
+165 57.13(0).48 O. Neugebauer, The Exact Sciences in Antiquity, Providence, Brown University Press, 1957, 16+240 pp, $6.00, Math. Rev. 19 825 and Obs 78 173, 2nd edition;
+
+166 57.13(0).64 R. Riekher, Fernohre und ihre Meister: Eine Entwicklungsgeschichte der Fernrohrtechnik, Berlin, VEB Technik Verlag, 1957, 448 pp, DM 36, Astr. Nachr. Berlin-Treptow 9 84 and Deutsche Literaturzeitung 78 Heft 12 and Optik 14 562 and Sky Tel. 17 93 and Sterne 34 128 and VdS Nachr. 6 79, 
+
+167 57.13(0).69 G. Sarton, Six Wings: Men of Science in the Renaissance, Bloomington, Indiana University Press, 1957, 14+318 pp, $6.75, Endeavour 17 54, 
+
+168 57.13(0).74 H. Slouka, Astronomie v Ceskoslovensku od dob nejstarsich do dneska—Astronomie in der Tschechoslowakei von den ersten Anfägen bis zur Gegenwart in Bildern, , , , , , Sterne 34 88, other is this a book?; 
+
+169 57.13(0).80 E. G. R. Taylor, The Haven finding art: A History of navigation from Odysseus to Captain Cook, London, , 1956, 295 pp, , , 
+
+170 57.13(0).86 Z. Žába, L'orientation astronomique dans l'ancienne Egypte comma et la précession de l'axe du monde, Prag, Editions de l'Académe Tchécoslovaque dex Sciences, 1953, 74 pp, Kčs 40, Archiv Orientální 24 486, other Archiv Orientální Suppl II; other is this a book or a journal supplement?; 
+
+171 57.13(0).89 M. K. Munitz ed., Theories of the Universe:  From Babylon Myth to Modern Science, Glencoe IL, Free Press, 1957, 10+437 pp, $6.50, Endeavour 16 179 and JBAA 68 192 and Obs 77 249 and Sky Tel. 16 387 and Sky Tel. 17 89, 
+
+172 57.13(0).90 P. G. Kulikowskij ed., Historische-astronomische Untersuchungen Band III, Moskau, Staatsverlag für technisch-theoretische Literatur, 1957, 707 pp, 21R. 5 Kop., , in Russian;
+
+173 57.13(0).91 N. A. Figurowskij and W. P. Subow and S. R. Mikulinskij ed., Geschichte der Naturwissenschaften in Rußland Bd. I Teil I comma II, Moskau, Verlag Akad. Wiss. UdSSR, 1957, 496 and 380 pp, 30r 60 Kop. and 24R. 65 Kop., ZfMG 77 5, in Russian;
+
+174 57.20(0).02 A. E. Conrady, Applied Optics and Optical Design, New York, Dover Publications, 1957, 518 pp, $2.95, Publ ASP 70 227 and Sky Tel. 17 419, 
+
+175 57.20(0).03 M. Daisomont, Optique astronomique, Gembloux Belgium, Ed. J. Duculot, 1957, 82 pp, 65F., Ciel et Terre 73 104 and Gaz astr. 38/39 NR. 433—435 20 and La Nature 85 334 and Orion Schafthausen 5 394 and Sky Tel. 16 387, 
+
+176 57.20(0).05 H. J. Gramatzki, Probleme der konstruktiven Optik, Berlin, Akademie-Verlag, 1957, 140 pp, DM 21, VdS Nachr. 7 34, 2nd edition;
+
+177 57.20(0).12 F. A. Jenkins and H. E. White, Fundamentals of Optics, New York, McGraw-Hill Book Co., 1957, 7+637 pp, $8.50, Strolling Astronomer 11 116, 3rd edition;
+
+178 57.20(0).24 G. Matthewson, Constructing an Astronomical Telescope, New York, Philosophical Library, 1957, 100 pp, $3.00, J. appl. Phys. 28 1367 and Sky Tel. 17 197, 
+
+179 57.20(0).26 J. Meurers, Astronomische Experimente, , , , , , RJ 1958 Nr. 3 2, reference AJB 56.20.22;
+
+180 57.20(0).30 I. D. Nowikow and W. A. Schischakow, Selbstgebaute astronomische Geräte und Instrumente, Moskau, Lehrpädagog Verlag, 1956, 56 pp, 90 Kop., , in Russian;
+
+181 57.20(0).35 V. Ronchi, Optics: The Science of Vision, New York, University Press, 1957, 360 pp, $10.00, Publ ASP 69 281 and Science 126 363 and Sky Tel. 17 33, reprint of AJB 55.20.42;translated from Italian by E. Rosen;
+
+182 57.20(0).37 B. Rossi, Optics, Reading MA, Addison-Wesley Publishing Co. Inc., 1957, 510 pp, $8.50, Sky Tel. 17 93 and Sky Tel. 17 585 and Sky Tel. 17 587, 
+
+183 57.20(0).40 H. Schober, Das Schen: Band 1, Leipzig, Fachbuchverlag, 1957, 376 pp, , Deutsche Hydrograph. Z. 10 204, 2nd edition;other see also AJB 51.20.28; 
+
+184 57.20(0).42 A. Sonnefeld, Die Hohlspiegel, Berlin, Verlag Technik, 1957, 202 pp, DM 22, Sterne 34 205, 2nd edition;also published Stuttgart: Berliner Union;
+
+185 57.20(0).45 J. Texereau, How to Make a Telescope, New York, Interscience Publishers Inc., 1957, 13+191 pp, $3.50 and 45s, BSAF 72 40 and J. Astr. Soc. Victoria 11 11 and Publ ASP 70 335 and Sky Tel. 17 197 and Sky Tel. 17 361 and Sky Tel. 17 363 and Strolling Astronomer 11 141, reprint of AJB 52.21.37;translated from French by H. Strickler;
+
+186 57.20(1).51 W. A. Bronstein, Die Planeten und ihre Beobachtung, Moskau, Techn. Staatsverlag, 1957, 207 pp, 4R. 60 Kop., RJ 1958 Nr. 8 51, in Russian;
+
+187 57.20(1).57 M. W. Mayall, Manual for observing variable stars, Cambridge MA, AAVSO, 1957, 38 pp, , JBAA 68 326, other revised edition; 
+
+188 57.20(1).61 N. I. Grischin ed., Anleitung zur Beobachtung Leuchtender Nachtwolken, Moskau, Verlag Akad. Wiss. UdSSR, 1957, 23 pp, , RJ 1958 Nr. 9 51, 
+
+189 57.20(2).67 F. Argyrakos, Etude de <<l'Astrolabe de Synesius Cyrène >> (4ème Siècle), Athens, , 1957, 14 pp, , , translated from Greek;
+
+190 57.20(2).76 E. Zinner, Deutsche und Niederländische Astronomische Instrumente des 11—18 Jahrhunderts, , , , , , Deutsche Literaturseitung 78 Nr. 10 1 and Gaz astr. 38-39 67, 
+
+191 57.21(1).47 I. A. Davidson, Receiving Aerial Systems, New York, Philosophical Library, 1957, 152 pp, $4.75, Sky Tel. 17 144, 
+
+192 57.22(2).110 G. A. Jones, Modern Applied Photography, , Philosophical Library, 1957, 162 pp, $4.75, Sky Tel. 16 488, 
+
+193 57.23(0).59 T. Ungerer and C. Ungerer and L. Leclere, L'horloge astronomique de la cathédrale de Strasbourg comma historique comma description comma fonctionnement, Strasbourg, Le Roux, 1956, 48 pp, 150 fr., , 9th edition;
+
+194 57.23(1).76 G. C. Shephard, Queen's College dial: a short description of a sun-dial in Queen's College Cambridge, Birmingham, G. S. Shepard, 1957, 62 pp, , , 2nd edition;other self published?; 
+
+195 57.30(0).02 J. F. Duarte, Notas de astronomia de campo, Rio de Janeiro, Ed. a Noite, 1955, 14+291 pp, 110 cruz., , 
+
+196 57.30(0).03 B. Dzikiewicz, Zarys astronomii sferycznej i praktyeznej dla topgrafów i geodetów, , , , , , Postępy Astr. 5 111, reference AJB 56.30.03;
+
+197 57.31(0).12 K. A. Kulikow, Die fundamentalkonstanten der Astronomie, Moskau, Techn. Staatsverlag, 1956, 340 pp, 10R. 85 Kop., RJ UdSSR Nr. 5 10, 
+
+198 57.32(0).09 F. Link, Die Mondfinsternisse, , , , , , BSAF 72 87 and El Universo Nr. 39 82 and Gaz astr. 38—39 88 and Weltraumfahrt 1957 100, reference AJB 56.32.04;
+
+199 57.33(0).02 A. F. L. Beston, Epigraphic South Arabian calendars and dating, London, Luzac, 1956, 47 pp, 12s 6d, , 
+
+200 57.40(0).05 L. I. Sedow, Similarity and dimensional methods in mechanics, Moskau, Staatsverlag für Tech.-Theoret. Literatur, 1957, 375 pp, 13R. 65 Kop., Math rev. 19 898, 4th edition;in Russian;
+
+201 57.41(0).58 G. O. Jones and J. Rotblatt and G. J. Whitrow, Atoms and the Universe, New York, Charles Scribner's Sons, 1957, 254 pp, $4.50, J. appl. Phys. 28 517, 
+
+202 57.41(0).72 G. C. McVittie, General Relativity and Cosmology, , , , , , BSAF 71 314 and J. appl. Phys. 28 142 and J. Atmosph. Terr. Phys. 10 346 and JBAA 68 191 and Math. Rev. 19 370 and Nature 179 169, reference AJB 56.41.57;
+
+203 57.41(0).103 E. Schrödinger, Expanding Universe, , , , , , Nature 179 169, reference AJB 56.41.81;
+
+204 57.41(0).112 J. L. Synge, Relativity: The Special Theory, , , , , , Phil. Mag. (8) 2 288, reference AJB 56.41.86;
+
+205 57.41(0).116 J. Vanovič, Teòria relativity, Bratislava, SPN, 1956, 135 pp, 10.80 Kčs, , 
+
+206 57.41(0).117 W. H. Westphal, Die Relativitätstheorie, Stuttgart, Franckh'sche Verlagshandlungen, 1955, 72 pp, DM 2.80, , 
+
+207 57.42(0).10 Y. Hagihara, Stability in celestial mechanics, Tokyo, , 1957, 10+106 pp, , , other Jubilee Publication in Commemeration of the Sixtieth Birthday of Professor Yusuke Hagihara by his Friends and Pupils; 
+
+208 57.42(0).22 H. Poincaré, Les méthodes nouvelles de la Mécanique Céleste, New York, Dover Publications, 1957, , $2.75, Ciel et Terre 74 290 and Math. Rev. 19 414 and Phys. Blätter 9 421 and Publ ASP 70 520, other 3 volumes; 
+
+209 57.42(0).33 C. L. Siegel, Vorlesungen über Himmelsmechanik, , , , , , Nouvo Cimento (10) 6 408 and ZfMG 70 454, reference AJB 56.42.26;
+
+210 57.42(0).40 F. V. A. da Veiga de Oliveira, Soluções homográficas no probleme generalizado dos n corpos, Lisboa, Faculdade de Ciências, 1956, 82 pp, , , 
+
+211 57.44(0).09 B. W. Kukarkin, Erforschung der Struktur und Entwicklung der Sternsysteme auf der Grundlage des Studiums veränderlicher Sterne, , , , , , Sterne 34 90, reference AJB 54.44.03;
+
+212 57.44(0).10 R. Kurth, Introduction to the Mechanics of Stellar Systems, London-New York-Paris, Pergamon Press, 1957, 10+174 pp, $9.00 and 55s, Ann d'Astrophys 21 69 and Coelum 25 184 and J RAS Canada 52 281 and Sky Tel. 17 197 and ZfA 45 151, 
+
+213 57.50(0).02 W. A. Ambarsumjan and E. R. Mastel and A. B. Sewerny and W. A. Sobolew, Theoretische Astrophysik, Berlin, VEB Deutscher Verlag der Wissenschaften, 1957, 12+644 pp, DM 46.40, , reprint of AJB 52.50.16;translated from Russian by I. Heller and E. A. Gußmann;
+
+214 57.50(0).09 H. C. van de Hulst, Light Scattering by Small Particles, New York, John Wiley & Sons, 1957, 13+470 pp, $12.00 and 96s, Ann d'Astr                                                                                         ophys 20 141 and J. appl. Phys. 28 924 and JBAA 68 273 and Math. Rev. 19 359 and Obs 78 132 and Proc. Phys. Soc. 72 154 and Rev. Sci. Instruments 28 972 and Sky Tel. 16 596 and Sky Tel. 17 31 and ZfA 45 149, also published London: Chapman & Hall Ltd.;
+
+215 57.51(0).39 W. W. Sobolow, Der Strahlungstransport in Stern- und Planeten-atmosphären, Moskau, Technischer Staatsverlag, 1956, 391 pp, 11R. 20 Kop., RJ 1957 Nr. 8 46, in Russian;
+
+216 57.52(0).06 S. Chandrasekhar, An Introduction to the Study of Stellar Structure, New York, Dover Publications, 1957, 509 pp, $2.75, Ciel et Terre 74 379 and Phys. Blätter 9 421 and Publ ASP 70 337 and Sky Tel. 17 419, 2nd edition;
+
+217 57.52(0).29 H. Vogt, Aufbau und Entwicklung der Sterne, Leipzig, Akademische Verlagsgesellschaft Geest & Portig K.-G., 1957, 7+171 pp, DM 16.00, Ann d'Astrophys 20 176 and Ciel et Terre 73 470 and Coelum 25 184 and Mitt. AG 1957 70 and Obs 78 174 and Sky Tel. 17 144 and Sterne 34 94 and Sternenbote 8 98 and ZfA 46 66, 2nd edition;
+
+218 57.54(0).16 C. de Jager, Onstaan en levensloop van sterren en planeten, , , , , , Meteoor 12 29, reference AJB 55.54.11;
+
+219 57.54(0).24 E. Schatzman, Origine et évolution des mondes, Paris, Albin Michel, 1957, 404 pp, 1500 F., Ann d'Astrophys 20 140 and Gaz astr 40 15 and Hemel en Dampkring 55 218 and Urania København 14 53, 
+
+220 57.55(0).03 A. Dauvillier, L'origine des planètes, , , , , , BSAF 71 171 and Nuovo Cimento (10) 5 1824 and Obs 78 37 and Ric. Sci. 27 1695, reference AJB 55.55.09;
+
+221 57.55(0).10 O. J. Schmidt, Vier Lektionen über die Theorie der Entstehung der Erde, Moskau, Verlag Akad. Wiss. UdSSR, 1957, 140 pp, , Priroda 47 Nr. 2 121, 3rd edition;in Russian;
+
+222 57.55(0).11 A. W. Titherley, Origin of the Solar System, Winchester Hampshire UK, Warren & Son, 1957, 9+100 pp, 21s, , other the publisher is currently an office supply store at the same location; 
+

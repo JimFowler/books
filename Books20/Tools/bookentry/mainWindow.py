@@ -847,8 +847,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                 <p>Copyright &copy; 2012
                 <p>All rights reserved.
                 <p>This application is used to create and visualize
-                the text files with the books found in
-                the annual bibliographies of <b>Astronomische Jahrberichts</b>.
+                the text files with the books found in the annual
+                bibliographies of <b>Astronomischer Jahresbericht</b>.
                 <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
             __version__, platform.python_version(),
             QT_VERSION_STR, PYQT_VERSION_STR,

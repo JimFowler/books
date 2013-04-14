@@ -1,8 +1,18 @@
+2013-04-13  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: added en-dash and the letter 'o'
+	with a tilde. Rearranged some of the lines.
+
+2013-04-07  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.helpAbout): Corrected
+	spelling of Astronomischer Jahresbericht
+
 2013-03-23  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/symbol.py (SymbolForm): deleted method
-	keyPressedEvent() so window does disappear it I forget to switch
-	back to the main window.
+	keyPressedEvent() so window does not disappear it I forget to
+	switch back to the main window.
 
 2013-03-19  Jim Fowler  <jrf@Biblion>
 

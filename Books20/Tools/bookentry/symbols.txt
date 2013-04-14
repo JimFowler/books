@@ -29,18 +29,20 @@
 ì, Small letter i with grave
 í, Small letter i with acute
 î, Small letter I with caron
-
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
 ń, Small letter n with acute
+
 Ö, Capital letter O with diaeresis
 ö, Small letter o with diaeresis
 ø, Small letter o with stroke
 ô, Small letter o with circumflex
 ò, Small letter o with grave
 ó, Small letter o with acute
+Õ, Capital letter o with tilde
+õ, Small letter o with tilde
 ř, Small letter r with caron
-Š, Captial letter S with caron
+Š, Capital letter S with caron
 š, Small letter s with caron
 Ŝ, Capital letter s with circumflex
 ŝ, Small letter s with circumflex
@@ -66,6 +68,7 @@
 °, Degree symbol
 ʰ, Right ascension hours
 ¥, Japan Yen sign
+–, En dash
 —, Em dash
 
 # Greek alphabet
