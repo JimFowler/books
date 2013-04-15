@@ -11,6 +11,7 @@
        Book Hunters Holiday</a>
   <br><a href="http://oakknollbooks.wordpress.com/">Oak Knoll Book Blog</a>
   <br><a href="http://bookmanslog.blogspot.com/">Bookmans Log</a>
+  <br><a href="http://library-cafe.org">Library Cafe</a>
 </td>
 
 

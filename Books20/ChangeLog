@@ -1,5 +1,7 @@
 2013-04-14  Jim Fowler  <jrf@Biblion>
 
+	* WebPages/BlogLists.txt: Added library-cafe.org
+
 	* Tools/bookentry/mainWindow.py (BookEntry.setMaxEntryNumber):
 	added function to set and display the maxEntryNumber.  I was doing
 	this inconsistently in the program.
