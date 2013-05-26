@@ -14,6 +14,7 @@
 â, Small letter a with cirumflex
 ă, Small letter a with breve
 ã, Small letter a with tilde
+ā, Small letter a with macron
 Ҫ, Capital letter C with cedilla
 ç, Small letter c with cedilla
 č, Small letter c with caron
@@ -26,9 +27,13 @@
 ě, Small letter e with caron
 ê, Small letter e with circumflex
 ę, Small letter e with cedilla
+ē, Small letter e with macron
+Ï, Capital letter I with diaresis
+ï, Small letter i with diaresis
 ì, Small letter i with grave
 í, Small letter i with acute
-î, Small letter I with caron
+î, Small letter i with caron
+ī, Small letter i with macron
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
 ń, Small letter n with acute
