@@ -1,3 +1,8 @@
+2013-05-25  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: added a, e, i with macron and
+	I/i with diaresis
+
 2013-04-14  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/BlogLists.txt: Added library-cafe.org

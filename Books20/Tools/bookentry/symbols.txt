@@ -70,9 +70,11 @@
 ž, Small letter z with caron
 
 £, British pound sign
+¥, Japan Yen sign
 °, Degree symbol
 ʰ, Right ascension hours
-¥, Japan Yen sign
+ᵐ, Right ascension minutes
+ˢ, Right ascension seconds
 –, En dash
 —, Em dash
 

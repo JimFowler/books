@@ -8,7 +8,7 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 
-For volume AJB 57 Index to the Literature of 1957, started 19 Mar 2013, finished, proofread
+For volume AJB 57 Index to the Literature of 1957, started 19 Mar 2013, finished 27 May 2013, proofread
 
 
 1 57.01(0).03 H. Athen, Nomographie comma Schriftenreihe zur Mathematik Heft 6, Frankfurt am Main-Pinneberg, Otto Salle Verlag, 1956, 2+56 pp, DM 4.80, Math. Rev. 19 687, 
@@ -556,4 +556,142 @@ For volume AJB 57 Index to the Literature of 1957, started 19 Mar 2013, finished
 272 57.83(0).51 R. Schulz, Steine comma die vom Himmel fallen, Wittenberg Lutherstadt, A. Ziemsen Verlag, 1956, 101 pp, DM 4.60, Meteoor 13 39, 
 
 273 57.83(2).94 H. H. Nininger, Arizona's Meteorite Crater, , , , , , American J. Sci. 255 524 and J RAS Canada 52 36 and Naturwiss. Rundschau 10 350, reference AJB 56.83.76;
+
+274 57.91(0).18 W. J. Luyten, A catalogue of 9867 stars in the southern hemisphere with proper motions exceeding 0".2 annually, Minneapolis MI, The Lund Press, 1957, , , , 
+
+275 57.91(0).36 J. Haas ed., Geschicte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 Jahrhunderts; Abteilung II Der südliche Sternhimmel. Band 11 10ʰ 5ᵐ—10ʰ 59ᵐ Rektaszension, Karlsruhe, Kommisionverlag G. Braun, 1957, 12+464 pp, DM 30, , 
+
+276 57.91(0).37 J. Dick ed., Geschicte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 Jahrhunderts; Abteilung II Der südliche Sternhimmel. Band 23 22ʰ 0ᵐ—25ᵐ 59ˢ Rektaszension, Berlin, Akademie-Verlag, 1957, 14+146 pp, , , 
+
+277 57.91(0).37 G. Felsmann ed., Geschicte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 Jahrhunderts; Abteilung II Der südliche Sternhimmel. Band 22 21ʰ 0ᵐ—25ᵐ 59ˢ Rektaszension, Berlin, Akademie-Verlag, 1957, 14+165 pp, , , 
+
+278 57.91(1).39 A. Bečvář, Atlas Coeli 1950.0, , , , , , Gaz astr. 40 13 and Nature 179 751 and Naturwiss. Rundschau 10 468 and Sterne 34 47, reference AJB 56.91.23;
+
+279 57.91(1).40 V. de Callataÿ, Atlas du Ciel, , , , , , Naturwiss. Rundschau 10 78, reference AJB 55.91.29;
+
+280 57.91(1).45 O. Kohl and G. Felsmann, Atlas des gestirnten Himmels für das Äquinoktium 1950, , , , , , Sterne 34 48, reference AJB 56.91.28;
+
+281 57.91(1).46 S. M. Kotlarić, Identifikator Zvijezda, Split, Hydrographic Institute, 1956, 28 pp, , J. Inst. Navigation 11 426, 
+
+282 57.91(1).47 A. A. Michajlow, Sternatlas comma enthaltend für beide Halbkugeln alle Sterne bis zur 8.25ten Größe mit Bezeichnung der Veränderlichen und Doppelsterne comma der Sternhaufen und Nebel, Moskau, Techn. Staatsverlag, 1957, 60 pp, 15R, , 2nd edition;in Russian;
+
+283 57.91(1).51 W. Widmann, Nachtleuchtende Sternkarte für jedermann, Stuttgart, Kosmos-Verlag Franckh'sche Verlagshandlung, 1957, 16 pp, DM 3.80, Mitt. Planetenbeobachter 10 62, 
+
+284 57.91(1).52 W. Widmann, Neue Kosmos-Sternkarte mit durchscheinendem Deckblatt und verstellbarem Zeiger zum Ermitteln der Planetenstände, Stuttgart, Kosmos-Verlag Franckh'sche Verlagshandlung, 1956, 16 pp, DM 6.50, , 
+
+285 57.91(1).53 E. O. Tancock ed., Philip's Chart of the Stars, London, G. Philip, 1957, , 6s, Obs 78 175, 
+
+286 57.110(0).10 H. Schneller, Geschichte und Literatur des Lichtwechsels der veränderlichen Sterne, Berlin, Akademie-Verlag, 1957, 12+549 pp, DM 96.00, Ann d'Astrophys 21  163, 
+
+287 57.113(0).06 C. Payne-Gaposchkin, The Galactic Novae, Amsterdam, North-Holland Publishing Co, 1957, 10+336 pp, hfl 30.50 and $8.50 and 61s, BSAF 72 184 and Endeavour 17 48 and Irish AJ 4 200 and J RAS Canada 52 93 and Mem SA It (NS) 29 345 and NAT 1958 32 and Obs 77 243 and Phys. Blätter 14 91 and Proc. Phys. Soc. 72 160 and Publ ASP 70 331 and Science 126 1350 and Sky Tel. 17 93 and Sky Tel. 17 245, also published New York: Interscience Publishers;
+
+288 57.113(0).10 B. A. Woronzow-Weljaminow, Novae und Supernovae, Tashkent, <<Kisil Usbekiston>>, 1954, 39 pp, 40 Kop., , in Usbek.;
+
+289 57.120(0).04 F. Zwicky, Morphological Astronomy, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1957, 4+299 pp, DM 49.60, Ann d'Astrophys 20 175 and Phys. Blätter 14 136 and ZfA 44 64, 
+
+290 57.122(0).02 L. H. Aller, Gaseous Nebulae, , , , , , American J. Phys. 25 123 and J. Atmosph. Terr. Phys. 10 184 and J. British Interplanetary Soc. 16 195 and PAT 39 83 and RJ 1957 Nr. 8 50, reference AJB 56.122.01;
+
+291 57.122(0).04 J. Dufay, Gaseous Nebulae and Interstellar Material, London, Hutchinson's Scientific and Technical Publications, 1957, 352 pp, 60s and $15.00, Endeavour 17 48 and J. appl Phys. 28 925 and JBAA 67 326 and Nature 179 838 and Publ ASP 69 480 and Science 126 565 and Sky Tel. 17 90, translated from French by A. J. Pomerans;also published New York: Philosophical Library;in English;
+
+292 57.123(1).03 B. J. Bok and P. F. Bok, The Milky Way, Cambridge MA, Harvard University Press, 1957, 6+269 pp, $5.50, Ann d'Astrophys 19 337 and BSAF 71 494 and Hemel en Dampkring 55 105 and JBAA 68 327 and Publ ASP 69 479 and Sky Tel. 16 234 and Sky Tel. 16 435 and ZfA 43 309, 3rd edition;
+
+293 57.123(1).21 H. Shapley, The Inner Metagalaxy, London, Oxford University Press, 1957, 13+204, $6.75, J RAS Canada 52 92 and Publ ASP 70 224 and Sky Tel. 17 144 and Sky Tel. 17 303 and Sky Tel. 17 305 and Urania København 15 39, also published New Haven: Yale University Press;
+
+294 57.125(0).04 F. Hoyle, The Black Cloud, New York, Harper & Brothers, 1957, 251 pp, $2.95, Sky Tel. 18 43, other a science fiction story but it got reviewed in an astronomy journal; 
+
+295 57.126(1).09 R. Hanbury-Brown and A. C. B. Lovell, The Exploration of Space by Radio, London, Chapman & Hall Ltd., , 12+207 pp, 35s and $6.50, Endeavour 17 223 and Obs 78 129 and Phys. Abstracts (A) 61 434 and Proc. Phys. Soc. 72 484, also published New York: John Wiley & Sons;other London edition published in 1957; other New York edition published in 1958; 
+
+296 57.126(1).10 R. Coutrez, Radioastronomie, , , , , , Ciel et Terre 74 255 and La Nature 85 197 and Naturewissenschaften 44 476 and Obs 78 87 and Sky Tel. 17 93, reference AJB 56.126.08;
+
+297 57.126(1).26 W. Iwanowska, Radioastronomia, Warsawa, Państwowe Wydawnictwo Naukowe, , 160 pp, 16 zł, , 
+
+298 57.126(1).34 G. M. Nikolskij, Radioastronomie, Kiew, Ges. zur Verbreitung polit. und wiss. Kenntnisse, 1957, 27 pp, 60 Kop., , in ukranian;
+
+299 57.126(1).36 J. L Pawsey and R. N. Bracewell, Radio Astronomy, , , , , , Naturewissenschaften 44 476, reference AJB 55.126.27;
+
+300 57.126(1).38 J. Pfeiffer, The Changing Universe, , , , , , Hemel en Dampkring 56 217 and Obs 77 242 and Spaceflight 1 262, reference AJB 56.126.30;
+
+301 57.126(1).42 I. S. Schklowskij, Radioastronomie, , , , , , Priroda 47 Nr. 4 118 and , reference AJB 55.126.28;
+
+302 57.126(1).43 I. S. Schklowskij, Die kosmische Radiostrahlung, Moskau, Verlag <<Snanije>>, 1957, 494 pp, 15R. 75 Kop., RJ 1958 Nr. 8 35, in Russian;
+
+303 57.126(1).04 I. S. Schklowskij, Neues in der Radioastronomie, Moskau, Verlag <<Snanije>>, 1957, , , Priroda 47 Nr. 4 118, in Russian;
+
+304 57.126(1).48 P. Wellman, Radioastronomie, München, Leo Lehnen GmbH. Verlag, 1957, 140 pp, DM 2.80, PAT 39 83 and ZfA 46 282, also published Bern: A. Francke AG. Verlag;other Dalp-Taschenbücher Band 240; 
+
+305 57.127(0).06 A. Cachon and L. Jauneau and A. Daudin, Les rayons cosmiques, Paris, Presses Universitaires de France, 1957, 116 pp, 157 frs, Ann d'Astrophys 19 338 and BSAF 72 185 and Obs 77 249 and Sky Tel. 16 436, 
+
+306 57.130(0).01 W. Filchner and E. Przybyliok and T. Hagen, Route-Mapping and Position-Locating in Unexplored Regions, Basel, Birkhäuser Verlag, 1957, 288 pp, Schw. Fr. 32 and $9.00, Österreich Z. Vermessungswesen 46 29 and Sky Tel. 17 34, also published New York: Academic Press;
+
+307 57.130(0).03 W. K. Hristow, Die Gaußschen und geographischen Koordinaten auf dem Ellipsoid von Krassowsky, Berlin, VEB Velag Technik, 1955, 254 pp, , Bull. géod. Nr. 46 83, 
+
+308 57.130(0).06 P. Tardi and G. Laclvère, Traité de Géodésie, , , , , , Scientia 92 39, reference AJB 55.130.06;
+
+309 57.132(0).19 A. W. Petrow, Azimuttabellen des Polarsterns und der Sonne für 1956—1960, Moskau, Militärverlag, 1956, 75 pp, 3R. , RJ 1957 Nr. 12 17, in Russian;
+
+310 57.133(0).04 S. M. Burton, The Art of Astronomical Navigation, , , , , , RJ 1957 Nr. 10 20, reference AJB 55.133.06;
+
+311 57.133(0).10 F. Flora, Astronomia nautica, Milano, U. Hoepli, 1957, 16+519 pp, L. 1800, Coelum 25 118, 4th edition;
+
+312 57.133(0).11 J. C. Freiesleben and R. Höpfner and G. Roediger, Navigation, Lübeck-Hamburg, Matthiesen-Verlag, 1957, 299 pp, , J. Inst. Navigation 11 112, 
+
+313 57.133(0).25 J. C. Lieuwen, Record Tables, Rotterdam, N. V. Observator, 1957, 8+112 pp, , J. Inst. Navigation 11 115, 
+
+314 57.133(0).27 N. N Matussewitsch, Grundlagen der nautischen Astronomie, Leningrad, Hydrographischer Dienst der Hochseeflotte, 1956, 548 pp, 34R. 50 Kop., , in Russian;
+
+315 57.133(0).30 A. A. Ratschkow, Grundlagen der nautischen Astronomie, Leningrad, Verlag Seetransport, 1957, 314 pp, 9R. 30 Kop., , 2nd edition;in Russian;
+
+316 57.133(0).33 G. Severino, Astronomia nautica I comma II, Genova, I. Briano, 1957, 8+476 pp, L. 2900, , 
+
+317 57.133(0).40 , Astrograpische Karten für die nördlichen Breiten 80° bis 90°, Moskau-Leningrad, Akad. Wiss. UdSSR, 1957, 31 pp, 13R. 20 Kop., , in Russian;
+
+318 57.134(0).01 R. B. Beard and A. C. Rotherham, Space Flight and Satellite Vehicles, London, George Newnes, 1957, 150 pp, 15s, Spaceflight 1 262, 
+
+319 57.134(0).04 F. M. Branly, Toward Outer Space, Ghent NY, Home Education Council, 1957, 16 pp, $0.25, Sky Tel. 16 337, 
+
+320 57.134(0).06 A. C. Clarke, Ostajem na Marsu, Zagreb, Izdanje <<Epoha>>, 1957, 197 pp, 380 Din., , translated from English;
+
+321 57.134(0).10 R. Faukner and V. Šrobár, Družice vo vesmíre, , Verlag Osveta, , 174 pp, Kčs 13.80, RH 39 94, 
+
+322 57.134(0).12 R. L. Green, Into other Worlds, London, Abelard-Schuman Ltd., 1957, 190 pp, 16s, Spaceflight 1 332, 
+
+323 57.134(0).20 I. M. Levitt, A Space Traveller's Guide to Mars, London, Victor Gollancz, 1957, 164 pp, 16s, Obs 78 39, 
+
+324 57.134(0).31 W. Ley, Rockets comma Missiles comma and Space Travel, New York, The Viking Press, 1957, 528 pp, $6.75, J. British Interplanetary Soc. 16 388 and J RAS Canada 52 191 and Sky Tel. 16 595 and Sky Tel. 17 144, other revised edition; 
+
+325 57.134(0).24 J. Louvière, L'astronautique, Paris, Fernand Nathan, 1957, 144 pp, 980 ffrs., La Nature 85 501, 
+
+326 57.134(0).25 H. Oberth, Man into Space; New projects for rockets and space travel, New York, Harper, 1957, , $4.50 and 25s, Science 126 457 and Spaceflight 1 263, translated  by G. P. H. De Freville;also published London: Weiden & Nicolson;other New York edition has 14+232 pp; other London edition has 226 pp; 
+
+327 57.134(0).27 E. Rjabtschikow, So flieght man zu den Sternen (Interplanetare Flüge), Moskau, <<Sowjetrußland>>, 1957, 87 pp, 1R.  55 Kop., , in Russian;
+
+328 57.134(0).35 L. J. Carter ed., Realities of Space Travel, London, Putnam & Co. Ltd., 1957, 431 pp, £1 15s, Hemel en Dampkring 55 104 and J RAS Canada 51 313 and Nature 180 453 and Sky Tel. 16 387 and Sky Tel. 16 594, 
+
+329 57.134(0).36 D. R. Bates and P. Moore ed., Space Research and Exploration, London, Eyre & Spottiswoode, 1957, 224 pp, 25s, Irish AJ 4 193 and Obs 78 87, 
+
+330 57.134(1).43 I. S. Astapowitsch and S. A. Kaplan, Visuelle Beobachtungen künstlicher Erdsatelliten, Moskau, Techn.-Theoret. Staatsverlag, 1957, 82 pp, 1R. 20 Kop., Priroda 47 Nr. 6 122, in Russian;
+
+331 57.134(1).45 E. Bergaust and W. Beller, Satellite!, New York, Hannover House, , 239 pp, $3.95 and 17s 6d, J. British Interplanetary Soc. 16 323, also published London: Lutterworth Press;other New York edition published 1956; other London edition published 1957; 
+
+332 57.134(1).53 W. von Braun and K. Gatland and H. E. Ross and A. V. Cleaver, Project Satellite, , Wingate Press, , , 21s, Spaceflight 1 261, edited by K. Gatland;
+
+333 57.134(1).54 E. Burgess, Satellites and Spaceflight, New York, The Macmillan Co., 1957, 7+159 pp, $3.95, Publ ASP 70 227 and Sky Tel. 17 364, 
+
+334 57.134(1).58 A. C. Clarke, The Making of a Moon; The Story of the Earth Satellite Program, New York, Harper & Brothers, 1957, 205 pp, $3.50, El Universo  12 98 and British Interplanetary Soc. 16 322 and PAT 38 159, also published London: Frederick Muller Ltd.;
+
+335 57.134(1).71 W. Geisler, Wschodza Nowe Ksiezyce (O sztucznych satellitach Zieme), Warsawa, Biedza Powszechna, 1957, 189 pp, 10 zł, J. British Interplanetary Soc. 16 499, 
+
+336 57.134(1).104 J. Krylow and W. M. Rasumejew, Der zweite Mond (Künstlichen Erdsatellit), Moskau, Verlag <<Junge Garde>>, 1957, 46 pp, 60 Kop., , in Russian;
+
+337 57.134(1).106 W. I. Lewantowskij, Erzählung über künstliche Satelliten, Moskau, Techn. Staatsverlag, 1957, 96 pp, 1R. 55 Kop, , in Russian;
+
+338 57.134(1).114 C. Mennella, Missili e satelliti: prime tappe dell'astronautica, Firenze, Sansoni, 1957, 343 pp, L. 1200, Coelum 26 55, 
+
+339 57.134(1).140 P. Rousseau, Satellites artificiels, Paris, Hachette, 1957, 192 pp, ffrs. 600, Ciel et Terre 73 569 and La Nature 85 501 , 
+
+340 57.134(1).141 E. J. Ruppelt, The report on Unidentified Flying Objects, New York, Doubleday and Co., 1956, 315 pp, $4.50, Strolling Astronomer 11 60, 
+
+341 57.134(1).157 G. H. Stine, Earth Satellites and the Race for Space Superiority, New York, Ace Books, 1957, 191 pp, $0.35, Strolling Astronomer 12 25, 
+
+342 57.134(1).178 J. A. van Allen ed., Scientific Uses of Earth Satellites, , , , , , American J. Phys. 25 396 and J. appl. Phys. 28 281 and J. British Interplanetary Soc. 16 496 and Phil. Mag. (8) 2 940 and Weltraumfahrt 1957 98, reference AJB 56.134.100;
 
