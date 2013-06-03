@@ -5,6 +5,7 @@ The basic code for the button and the window were taken from the
 character_picker package developed by Rich Griswold and described
 in his blog
 http://richgriswold.wordpress.com/2009/10/17/character-picker/
+(last accessed Mar 2013)
 
 The packaged was modified for BookEntry.
 """

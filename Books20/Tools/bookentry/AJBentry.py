@@ -1,8 +1,6 @@
 from nameparser import HumanName
 import re
 
-from nameparser import HumanName
-
 import bookentry.entry as entry
 from bookentry.AJBcomments import *
 import bookentry.utils as utils
