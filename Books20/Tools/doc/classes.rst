@@ -9,50 +9,35 @@ should be created for each type of entry, AJB or AAA.
 
 Entry is a sub-class of dict so keyword:values may be accessed
 directly.  Some entry items are pre-defined but there is nothing to
-prevent an object from deleting an item so objects should check for
-existence before appending or extending. A blank Entry objects look
-like:
+prevent the program from deleting an item so programs should check for
+existence of a list item before appending or extending. A blank Entry
+objects look like:
 
+.. code-block:: python
+   :linenos:
 
-['Index'] =       -1            # file index number
-
-['Num'] =         {'volNum':-1,       # bibliography entry num
-
-                   'sectionNum':-1,
-
-                   'subsectionNum':-1,
-
-                   'entryNum':-1,
-
-                   'volume': ''}
-
-[ 'Authors'] =    []   # list of nameparser::HumanName objects
-
-[ 'Editors'] =    []   # list of nameparser::HumanName objects
-
-[ 'Compilers'] =  []   # list of nameparser::HumanName objects
-
-[ 'Contributors'] = [] # list of nameparser::HumanName objects
-
-[ 'Translators']= []   # list of nameparser::HumanName objects
-
-[ 'Others' ] =    []   # list strings from the comments that we can't parse
-
-[ 'Title'] =      ''   # the title of the work
-
-[ 'Publishers'] = []   # list of tuples (Place, PublisherName)
-
-[ 'Year'] =       ''   # year of publication, if known
-
-[ 'Pagination'] = ''   # page count, if known
-
-[ 'Price'] =      ''   # publishers price, if known
-
-[ 'Reviews'] =    []   # bibliographic list of reviews, strings
-
-[ 'Comments'] =   ''   # the original comment string
-
-[ 'OrigStr'] =    ''   # the original book entry string if read from a string
+   entry = {
+	'Index' :     -1            # file index number
+	'Num' :       {'volNum':-1,       # bibliography entry num
+                       'sectionNum':-1,
+                       'subsectionNum':-1,
+                       'entryNum':-1,
+                      'volume': ''}
+        'Authors' :   []   # list of nameparser::HumanName objects
+	'Editors' :   []   # list of nameparser::HumanName objects
+	'Compilers' : []   # list of nameparser::HumanName objects
+	'Contributors' : [] # list of nameparser::HumanName objects
+	'Translators'] : []   # list of nameparser::HumanName objects
+	'Others' ] :  []   # list strings from the comments that we can't parse
+	'Title' :      ''   # the title of the work
+	'Publishers' : []   # list of tuples (Place, PublisherName)
+	'Year' :       ''   # year of publication, if known
+	'Pagination' : ''   # page count, if known
+	'Price' :      ''   # publishers price, if known
+	'Reviews'] :   []   # bibliographic list of reviews, strings
+	'Comments' :   ''   # the original comment string
+	'OrigStr' :    ''   # the original book entry string if read from a string
+	}
 
 
 .. automodule:: entry
@@ -63,7 +48,7 @@ AJBentry
 ________
 
 The AJBentry class provides the specific methods for read and write
-entries from the Astronomische Jaherbericht.
+entries from the Astronomische Jahresbericht.
 
 .. automodule:: AJBentry
     :members:
@@ -172,7 +157,7 @@ _________
 The BookEntry object is the main user interface to the entries in a file.
 It contains a bookfile, header entry, and symbol table objects.
 
-.. automodule:: BookEntry
+.. automodule:: mainWindow
     :members:
     :show-inheritance:
 
