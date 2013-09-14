@@ -55,7 +55,7 @@ def main():
    args = getargs()
 
    app = QApplication(sys.argv)
-   app.setApplicationName('Book Entry')
+   app.setApplicationName('AJB Book Entry')
    form = mw.BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)

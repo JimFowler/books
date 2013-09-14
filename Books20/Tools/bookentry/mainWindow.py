@@ -464,12 +464,22 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       places it into the window title.
       """
       self.setWindowTitle(QApplication.translate("MainWindow", 
-                                  "BookEntry v%s - %s" % (__version__, name),
+                                  "AJB Book Entry  v %s   -   %s" % (__version__, name),
                                   None, QApplication.UnicodeUTF8))
 
    def setDefaultVolumeNumber(self, num):
       """Sets the default volume number for new entries."""
       self.defaultVolumeNumber = num
+
+   def setVolumeNumberInteractive(self):
+      """Provides an interactive dialog to set the default
+      volume number for new entries."""
+      curVal = self.defaultVolumeNumber
+      numVal, ok = QInputDialog.getText(self, 'Volume Number',
+                                   'Enter New Volume Number\n(next new entry will use this value)',
+                                   text=curVal )
+      if ok:
+         self.defaultVolumeNumber = numVal
 
 
    def EntryToDisplay(self, entry):

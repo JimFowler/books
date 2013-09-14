@@ -80,6 +80,8 @@ def createMenus( self, menuBar):
                                     self.editHeader, 'Ctrl+H')
         origstrAction = createAction(self, 'Show Original String',
                                     self.showOrigStr)
+        origstrAction = createAction(self, 'Set Volume Number...',
+                                    self.setVolumeNumberInteractive)
 
         fontsizeAction = createAction(self, 'Set font size...', None, None)
         fontsizeAction.setEnabled(False)
