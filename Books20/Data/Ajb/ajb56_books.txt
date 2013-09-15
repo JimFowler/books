@@ -1,0 +1,59 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 56 Index to the Literature of 1956, started 14 Sept 2013, finished, proofread
+
+
+1 56.01(0).08 A. Giet, Abacs of Nomograms, London, Iliffe, 1956, 9+225 pp, 35s, Proc. Phys. Soc. (B) 70 714, translated  by J. W. Head and H. D. Phippen;also published New York: Philosophical Library;
+
+2 56.01(0).09 A. S. Householder, Principles of numerical analysis, New York-Toronto-London, McGraw-Hill Book Co. Inc., 1953, 10+274 pp, $6.00, Math. Rev. 15 470, 
+
+3 56.01(0).10 Z. Kopal, Numerical Analysis, , , , , , JBAA 67 328 and Proc. Phys. Soc (B) 70 333, reference AJB 55.01.17;
+
+4 56.01(0).20 J. Topping, Errors of Observations and their Treatment, , , , , , Proc. Phys. Soc. (B) 70 261, reference AJB 55.01.27;
+
+5 56.02(0).42 A. W. Keen, Electronics, New York, Philosophical Library Inc., 1956, 256 pp, $7.50, Sky Tel. 15 458, 
+
+6 56.02(0).51 J. J. G. McGee, The World of Atoms, New York, Ronald Press, 1956, 659 pp, $6.50, Sky Tel. 15 556, 
+
+7 56.02(0).52 P. W. Merrill, Lines of the Chemical Elements in Astronomical Spectra, Washington D. C., Carnegie Institution of Washington, 1956, 7+167 pp, $1.60, J RAS Canada 50 185 and Obs 77 159 and Publ ASP 68 468 and Sky Tel. 15 508 and ZfA 40 217, other Carnegie Institution of Washington Publication 610; other Papers Mt. Wilson Obs. 9; 
+
+8 56.02(0).77 A. A. Townsend, The Structure of Tubulent Shear Flow, New York, Cambridge University Press, 1956, 315 pp, $7.50, Publ ASP 68 558 and Sky Tel. 15 556, 
+
+9 56.02(0).80 S. Flügge ed., Handbuch der Physik Bd. 36, Berlin-Göttingen-Heidelberg, Springer, 1956, 424 pp, DM 88, Publ ASP 69 189, 
+
+10 56.02(3).119 , Handbuch der Physik Bd. 24, Berlin-Göttingen-Heidelberg, Springer, 1956, 8+656 pp, , , other Determination of the velocity of light pp 1-43; 
+
+11 56.03(0).02 H. Küstner, Fünfstellige Logarithmen der natürlichen Zahlen und der Winkelfunktionen für sexagesimalgeteilten Altgrad, Berlin, Verlag Volk und Wissen, 1954/1956, 166 pp, DM 2.85, Sterne 32 213, 
+
+12 56.03(0).03 H. Küstner, Fünfstellige Logarithmen der natürlichen Zahlen und der Winkelfunktionen für Neugradteilung, Berlin, Verlag Volk und Wissen, 1954/1956, 122 pp, DM 3.50, , 2nd edition;
+
+13 56.03(0).04 M. Schuler and H. Gebelein, Acht- und neunstellige Tafeln zu den elliptischen Funktionen, , , , , , Math. Tables and other Aids to Computation 10 246, reference AJB 55.03.06;
+
+14 56.03(0).05 K. Schütte, Index mathematischer Tafelwerke und Tabellen aus allen Gebieten der Naturwissenschaften, , , , , , Astronaut. Acta 2 114 and Nature 177 767 and Obs 77 76 and Phys. Blätter 1957 479 and ZfA 43 87, reference AJB 55.03.07;
+
+15 56.03(0).07 , Table of secants and cosecants to nine significant figures at hundreths of a degree, , , , , , Math. Tables and other Aids to Computation 10 169, reference AJB 54.03.09;
+
+16 56.03(0).08 , Interpolation and Allied Tables, London, Her Majesty's Stationary Office, 1956, 80 pp, 5s, Obs 77 158, 
+
+17 56.03(1).11 A. D. Booth and K. H. V. Booth, Automatic Digital Calculators, London, Butterworths Scientific Publications, 1956, 9+261 pp, 32s, Proc. Phys. Soc. (B) 70 716, reprint of AJB 53.03.07;
+
+18 56.03(1).12 W. J. Eckert and R. Jones, Faster comma faster, New York-Toronto-London, McGraw-Hill Book Co. Inc., 1955, 7+160 pp, $3.75, J. Association for Computing Machinery 3 376, 
+
+19 56.03(1).13 C. L. Johnson, Analog Computer Techniques, New York-Toronto-London, McGraw-Hill Book Co., 1956, 264 pp, $6.00, Phys. Blätter 13 333, 
+
+20 56.03(1).15 G. A. Korn and T. M. Korn, Electronic Analog Computers, New York-Toronto-London, McGraw-Hill Book Co., 1956, 452 pp, $7.50, Phys. Blätter 13 333, 2nd edition;
+
+21 56.03(1).17 S. A. Lebedew, Elektronische Rechenmaschinen, Moskau, Verlag Akad. Wiss. UdSSR, 1956, 48 pp, 65 kop., , in Russian;
+
+22 56.03(1).18 G. A. Montgomerie, Digital Calculating Machines and Their Application to Scientific and Engineering Work, London-Glasgow, Blackie & Son Ltd., 1956, 6+262 pp, 30s, Proc. Phys. Soc. (B) 70 1022, 
+
+23 56.03(1).22 M. V. Wilkes, Automatic Digital Computers, London, Methuen & Co. Ltd., 1956, 10+305 pp, 42s, Proc. Phys. Soc. (B) 70 637, 
+
