@@ -15,6 +15,8 @@
 ă, Small letter a with breve
 ã, Small letter a with tilde
 ā, Small letter a with macron
+Ą, Capital letter A with cedilla
+ą, Small letter a with cedilla
 Ҫ, Capital letter C with cedilla
 ç, Small letter c with cedilla
 č, Small letter c with caron
@@ -37,6 +39,8 @@
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
 ń, Small letter n with acute
+Ň, Captial letter N with caron
+ň, Small letter n with caron
 
 Ö, Capital letter O with diaeresis
 ö, Small letter o with diaeresis
