@@ -11,6 +11,7 @@
 å, Small letter a with ring above
 à, small letter a with grave
 á, small letter a with acute
+ǎ, Small letter a with caron
 â, Small letter a with cirumflex
 ă, Small letter a with breve
 ã, Small letter a with tilde
@@ -51,6 +52,8 @@
 Õ, Capital letter o with tilde
 õ, Small letter o with tilde
 ř, Small letter r with caron
+Ś, Capital letter S with acute
+ś, Small letter s with acute
 Š, Capital letter S with caron
 š, Small letter s with caron
 Ŝ, Capital letter s with circumflex

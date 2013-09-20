@@ -11,7 +11,7 @@ Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 For volume AJB 56 Index to the Literature of 1956, started 14 Sept 2013, finished, proofread
 
 
-1 56.01(0).08 A. Giet, Abacs of Nomograms, London, Iliffe, 1956, 9+225 pp, 35s, Proc. Phys. Soc. (B) 70 714, translated  by J. W. Head and H. D. Phippen;also published New York: Philosophical Library;
+1 56.01(0).08 A. Giet, Abacs or Nomograms, London, Iliffe, 1956, 9+225 pp, 35s, Proc. Phys. Soc. (B) 70 714, translated  by J. W. Head and H. D. Phippen;also published New York: Philosophical Library;
 
 2 56.01(0).09 A. S. Householder, Principles of numerical analysis, New York-Toronto-London, McGraw-Hill Book Co. Inc., 1953, 10+274 pp, $6.00, Math. Rev. 15 470, 
 
@@ -56,4 +56,188 @@ For volume AJB 56 Index to the Literature of 1956, started 14 Sept 2013, finishe
 22 56.03(1).18 G. A. Montgomerie, Digital Calculating Machines and Their Application to Scientific and Engineering Work, London-Glasgow, Blackie & Son Ltd., 1956, 6+262 pp, 30s, Proc. Phys. Soc. (B) 70 1022, 
 
 23 56.03(1).22 M. V. Wilkes, Automatic Digital Computers, London, Methuen & Co. Ltd., 1956, 10+305 pp, 42s, Proc. Phys. Soc. (B) 70 637, 
+
+24 56.05(0).01 G. Abetti, Le stelle e i pianeti, Torino, Ed. Scient. Einaudi, 1956, 16+383 pp, L2500, Ann d'Astrophys 19 336 and Ciel et Terre 73 405 and Coelum 25 57 and Mem SA It (NS) 28 240, 2nd edition;
+
+25 56.05(0).02 G. Abetti, Astronomia e astrofisica, Torino, Ed. Radio ital, 1956, 103 pp, L150, , 
+
+26 56.05(0).03 I. Adler, The Stars: Steppingstones into Space, New York, John Day, 1956, 128 pp, $2.95, Sky Tel. 16 234, 
+
+27 56.05(0).04 C. W. Allen, Astrophysical Quantities, , , , , , Phys. Blätter 13 517 and Ric. Sci. 26 986 and Science 123 735, reference AJB 55.05.02;
+
+28 56.05(0).05 M. F. Allward, The World of Space, London, Collins, 1956, 191 pp, 2s 9d, , 
+
+29 56.05(0).06 I. S. Astapowitsch, <<Ungewöhnliche>> Erscheinungen am Himmel, Aschchabad, Akad. Wiss. Turkmen. Sowjetrepublik, 1956, 41 pp, 80 kop., , in Russian;
+
+30 56.05(0).07 R. S. Ball, A Popular Guide to the Heavens, London, G. Philip, 1955, 12+85 pp, 30s, , 5th edition;
+
+31 56.05(0).08 V. Barić, Kako se izmjerila undaljenost mjeseca comma słonca i zvijezda, Zagreb, Hrvatsko prirodoslovno društvo, 1955, 32 pp, 40 Din., , 
+
+32 56.05(0).09 S. Barlowe, Les étoiles, Paris, A. Colin, 1955, 28 pp, 210 Frs., , 
+
+33 56.05(0).10 L. Barnett, The World We Live In, , Simon & Schuster, 1956, 216 pp, $4.95, Sky Tel. 16 29, 
+
+34 56.05(0).11 F. Bartošek and S. Kupča, Astronomické krúžky. Sb. metoc. statí o popularizácii astronómie, Bratislava, Osvetové ústredie, 1954, 132 pp, , , 
+
+35 56.05(0).12 E. A. Beet, Teaching Astronomy in Schools, New York, Cambridge University Press, 1956, 11+72 pp, $1.50 and 7s 6d, Ciel et Terre 73 408 and JBAA 67 266 and Obs 77 158 and Sky Tel. 16 234, 
+
+36 56.05(0).13 F. Běhounek, Od atomu k vesmiru, Praha, Orbis, 1954, 213 pp, 25.40 Kčs, , 2nd edition;
+
+37 56.05(0).14 F. Benario, New Discoveries — Wonders in our Planetary World, Flushing N.Y., Hillcrest Publishing Corporation, 1956, 68 pp, 20s, JBAA 66 279, 
+
+38 56.05(0).15 H. J. Bernhard and D. A. Bennett and H. S. Pice, New Handbook of the Heavens, New York, New. Amer. Libr., 1955, 272 pp, 3s 6d, , also published London: Muller;other new edition; 
+
+39 56.05(0).16 N. Boneff, Astronomie, Sofia, Wissenschaft und Kunst, 1954, 411 pp, 15-5 Lw., , in Bulgarian;
+
+40 56.05(0).17 J. Bouška and J. Klepešta, Hvězdy kolem nás, Prag, Pädagog. Verlag, 1956, 104 pp, Kčs 20.15, RH 38 23, 
+
+41 56.05(0).18 R. Brandt, Himmelswunder im Feldstecher, Liepzig, Johann Ambrosius Barth, 1956, 123 pp, DM 3.75, Astr. Nachr. Berlin-Treptow 8 29 and JBAA 66 231 and RH 37 95 and Vereinigung der Sternfreunde Nachrichtenblatt 5 41, 5th edition;
+
+42 56.05(0).119 E. Broda, Kräfte des Weltalls: Von Strahlen comma Sonnen und Atomen, Leipzig-Jena, Urania-Verlag, 1955, 263 pp, DM 8, , 
+
+43 56.05(0).20 H. von Bronsart, Astronomie für Lieberhaber, Freiburg/Br., Verlag Herder, 1956, 195 pp, DM 10.80, Sternenbote 8 26 and Vereinigung der Sternfreunde Nachrichtenblatt 6 17, 
+
+44 56.05(0).21 F. Brown, Lights in the Sky are Stars, , Dutton, 1953, 254 pp, $3.00, , 
+
+45 56.05(0).22 M. Caidin, Worlds in Space, , Holt, 1954, 212 pp, $4.95, , 
+
+46 56.05(0).23 E. Charadse, Astronomie: Handbuch für Lehrer der 11 Mittelschulklasse, Tiflis, Staatsverlag Georg. Sowjetrepublik, 1955, 232 pp, 3R, , in Georgian;
+
+47 56.05(0).24 J. Comas Sola, Astronomia, Barcelona, Labor, 1953, 232 pp, 45 pts., , 5th edition;
+
+48 56.05(0).25 C. I. Coombs, Celestial Space, , Ryerson Press, 1954, 190 pp, $3.25, , 
+
+49 56.05(0).26 P. Coudere, L'Univers, , , , , , Gaz astr 37 83 and La Nature 84 78, reference AJB 55.05.11;
+
+50 56.05(0).28 A. Dauvillier, Cosmologie et chimie, , , , , , Geochim. Cosmochim. Acta 10 324 and La Nature 84 204, reference AJB 55.05.12;
+
+51 56.05(0).29 C. Flammarion, Astronomie Populaire, , , , , , La Nature 84 204 and RJ 1957 Nr. 7 13, reference AJB 55.05.17;
+
+52 56.05(0).30 G. Gamow, Eins comma Zwei comma Drei ... Unendlichkeit, Hannover, Fackelträger-Verlag, 1956, 286 pp, DM 12.80, Phys. Blätter 13 140, 
+
+53 56.05(0).31 J. Fraňo and Škvarček, Základy matematického (astronomického) zemepisu a materialistickej kozmogónie pre poslucháčov Vyš a Vys: pedago školy, Bratislava, SPN, 1954, 116 pp, 19.90 Kčs, , 
+
+54 56.05(0).32 B. Hacar, Astronomie, Praha, SPN, 1954, 3+137 pp, 12.75 Kčs, , 
+
+55 56.05(0).33 M. Hack, Corso di fisica stellare; Interpretazione degli spettri stellari, , , , , , Ric. Sci. 26 685 and Scientia 91 104, reference AJB 55.05.21;
+
+56 56.05(0).34 F. Hoyle, Frontiers of Astronomy, , , , , , Science 123 512, reference AJB 55.05.23;
+
+57 56.05(0).35 F. Hoyle, Nytt ljus över universum, , Bonniers, 1956, 352 pp, Kr. 39.50, PAT 38 76, reprint of AJB 55.05.23;translated from English;
+
+58 56.05(0).36 F. Hoyle, Verdensrumment; Astronomi for alle, , Hasselbalch, 1956, 232 pp, kr. 26.50, NAT 1956 142, reprint of AJB 55.05.23;translated from English by C. Luplau Janssen;
+
+59 56.05(0).38 E. O. Hurst, The Big Book of Space, London, World Distributors, 1956, 26 pp, 5s, , 
+
+60 56.05(0).39 M. Ivanovskij, Solen och hennes familj, Stockholm, Arbetarkulturs förlag, 1956, 420 pp, Kr. 21, PAT 38 76, 
+
+61 56.05(0).40 T. Jarzębowski, O zjawiskach niebieskich, Warsawa, <<Wiezda Powszechna>> Państw. Wydawn. Popul.-Nauk, 1954, 107 pp, 2.50 zł, , 
+
+62 56.05(0).41 G. O. Jones and J. Rotblat and G. J. Whitrow, Atoms and the Universe, London, Eyre & Spottiswoode, 1956, 254 pp, 25s, Irish AJ 4 31 and JBAA 67 327 and Publ ASP 69 370 and Proc. Phys. Soc. (B) 70 340 and Sky Tel. 16 234 and Sky Tel. 16 335, 
+
+63 56.05(0).42 F. Kahn, Design of the Universe: the Heavens and the Earth, London, Arco Publs., 1956, 10+373 pp, 35s, , 
+
+64 56.05(0).43 G. Kepps, Adventures in Space, London, Ward Lock, 1955, 44 pp, 6s, , other verify publisher; 
+
+65 56.05(0).44 W. N. Komarow, Wie die Astronomen die Himmelskörpor untersuchen, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1956, 96 pp, 2R., Priroda 45 Nr. 7 122, in Russian;
+
+66 56.05(0).45 A. Krause, Himmelskunde für Jedermann, Stuttgart, Franckh, 1954, 282 pp, DM 14.80, , 3rd edition;reprint of AJB 43.08.36;other also AJB 48.05.29a; 
+
+67 56.05(0).46 J. Kubikowski, Z czego zbundowane są ciała niebieskie, Warsawa, Towarzystwo Wiedzy Powszechnej, 1954, 17 pp, , , 
+
+68 56.05(0).47 R. A. Lyttleton, The Modern Universe, London, Hodder & Stoughton, 1956, 207 pp, 16s and $3.50, JBAA 67 172 and Obs 77 158 and Sky Tel. 16 387 and Sky Tel. 16 593 and Spaceflight 1 156, also published New York: Harper & Bros.;
+
+69 56.05(0).48 W. Milczarek and M. Bielicki, Opowiadania o niebie i Zieme, Warsawa, <<Wiedza Powszechna>> Państw. Wydawn. Popular.-Nauk, 1954, 22 pp, 2.80 zł, , 
+
+70 56.05(0).49 P. Moore, Wir im Weltall, , , , , , Linzer Sternenbote 10 59, reference AJB 55.05.34;
+
+71 56.05(0).50 P. Moore, Route des astres, Tours, Mame, 1955, 255 pp, 690 fr., , translated from English;
+
+72 56.05(0).51 M. E. Mabkow, Die Methodik des Astronomieunterrichts an Mittelschulen, Moskau, Lehr-pädagogischer Staatsverlag, 1955, 215 pp, 5R. 45 kop., , 2nd edition;in Russian;
+
+73 56.05(0).52 P. Naur and B. Strömgen, Strövtåg i universum, Stockholm, Almqvist & Wiksell/Gebers, 1956, 95 pp, kr. 15, PAT 37 164, 
+
+74 56.05(0).53 H. M. Neely, The Stars by Clock and Fist, , Viking, 1956, 192 pp, $4.00, Sky Tel. 15 556 and Sky Tel. 16 27, 
+
+75 56.05(0).54 K. F. Ogorodnikow, Wieviel Sterne gibt es am Himmel, Moskau, Technischer Staatsverlag, 1954, 40 pp, 60 kop., , 2nd edition;in Russian;
+
+76 56.05(0).55 P. P. Parenago, Die Sternenwelt, , , , , , Sternenbote 7 23, reference AJB 55.05.36;
+
+77 56.05(0).56 G. W. Parker, Elements of Astronomy, India, Patna 4. Scientific Book Co., 1953, 260 pp, , , 
+
+78 56.05(0).57 C. Payne-Gaposchkin, Introduction to Astronomy, London, Eyre & Spottiswoode, 1956, , , Astronomia Popular 1 Nr. 2 36 and Endeavour 16 54 and Irish AJ 4 75 and JBAA 66 329 and RJ 1957 Nr. 7 12 and Spaceflight 1 154/156, reprint of AJB 54.05.27;other First UK publication of AJB 54.05.27; 
+
+79 56.05(0).59 J. I. Perelman, Unterhaltende Astronomie, Moskau, Technischer Staatsverlag, 1954, 212 pp, 3R. 60 kop., , 7th edition;reprint of AJB 49.05.40;other See also item 80; 
+
+80 56.05(0).59 J. I. Perelman, Unterhaltende Astronomie, Moskau, Technischer Staatsverlag, 1956, 212 pp, 3R. 60 kop., , 8th edition;reprint of AJB 49.05.40;other See also item 79; 
+
+81 56.05(0).60 L. Picart, Astronomie générale, Paris, A. Colin, 1953, 6+200 pp, 260 fr., , 5th edition;
+
+82 56.05(0).61 I. F. Polok, Lehrbuch der Astronomie, Moskau, Technischer Staatsverlag, 1955, 371 pp, 8R. 75 kop., , 7th edition;in Russian;
+
+83 56.05(0).62 R. S. Richardson, Second Satellites, New York, Whittlesey House McGraw-Hill Book Co., 1956, , $2.75, J. Astronautics 4 15, 
+
+84 56.05(0).63 L. Rosino, Fisica delle stelle, Milano, Vallardi, 1956, 10+323 pp, L2400, Coelum 25 57 and Mem SA It. (NS) 28 239, 
+
+85 56.05(0).64 P. Rousseau, Vom Atom zu den Sternen, Sarajevo, <<Narodna procvjeta>>, 1954, 118 pp, , , in Serbian;
+
+86 56.05(0).65 P. Rousseau, De l'atome à l'ettoile, Paris, Presses univ. France, 1956, 128 pp, 153 fr., , 9th edition;
+
+87 56.05(0).66 P. Rousseau, A la conquête des étoiles, Paris, Hachette, 1956, 352 pp, ffrs 875, Ciel et Terre 72 728, 
+
+88 56.05(0).67 P. Rousseau, Astronomia zenza telescopio, Milano, A. Garzanti, 1956, 120 pp, 180 l, , translated from French;
+
+89 56.05(0).68 S. Rozgaj, Obitelj našeg Sunca, Zagreb, <<Seljačka sloga>>, 1956, 54 pp, , , 2nd edition;
+
+90 56.05(0).69 S. Rozgaj, Zemlja u svemiru, Zagreb, <<Seljačka sloga>>, 1956, 40 pp, , , 2nd edition;
+
+91 56.05(0).70 E. Rybka, Astronomia; Dla kl. 11, Warsawa, Panstw. Zakł. Wydawn. Szkol., 1956, 168 pp, 3.75 zł, , 7th edition;
+
+92 56.05(0).71 W. W. Schischakow, Na pomoc učiteli astronomie, Prag, Pädagog. Verlag, 1956, 130 pp, Kčs 9.30, RH 37 190, translated from Russian;
+
+93 56.05(0).72 W. Schroeder, Practical Astronomy, London, Werner Laurie, 1956, 206 pp, 25s, JBAA 66 279, 
+
+94 56.05(0).73 N. K. Semakin, Aus der Erfahrung des Astronomieunterrichts, Moskau, Lehrpädagogischer Verlag, 1956, 86 pp, 1R. 15 Kop., , 
+
+95 56.05(0).84 O. Thomas, Himmel und Weltall, Wien-Berlin-Stuttgart, Paul Neff Verlag, , 319 pp, DM 14, , 5th edition;reprint of AJB 51.05.56;
+
+96 56.05(0).75 O. Thomas, Hemel en Heelal, Den Haag, H. P. Leopolds Uitgevers Maatschappij N. V., 1956, 304 pp, f 8.90, Hemel en Dampkring 54 190, reprint of AJB 51.05.56;translated  by J. J. Raimond jr.;in Niederländische;
+
+97 56.05(0).76 O. Thomas, Astronomie — Tatsachen und Probleme, Salzburg-Stuttgart, Verlag <<Das Bergland-Buchs>>, 1956, 1011 pp, DM 48.00, Coelum 25 23 and Gaz astr 38/39 Nr. 433-435 18 and Irish AJ 4 200 and JBAA 67 329 and Obs 77 161 and Sky Tel. 16 285 and Sternenbote 8 29, 7th edition;
+
+98 56.05(0).77 P. G. Viola, Ad Urania, Milano, Selbstverlag, , 200 pp, L 1200, Coelum 24 155, 
+
+99 56.05(0).78 M. Wagenschein, Die Erde unter den Sternen, , , , , , Sternenbote 7 22, reference AJB 55.05.48;
+
+100 56.05(0).79 G. Walusinski, Aide Mémoire de cosmograhie, Paris, Librairie Delagrave, 1956, 68 pp, , BSAF 70 305, 
+
+101 56.05(0).80 F. G. Watson, Between the Planets, Cambridge MA, Harvard University Press, 1956, 8+188 pp, $5.00 and 30s, Ann d'Astrophys 19 44 and BSAF 70 352 and J. Astronautics 3 72 and J. Astronautics 3 82 and J. Atmosph. Terr. Phys.  9 355 and Meteoritics 1 500 and Obs 77 111 and Sky Tel. 15 364 and Sky Tel. 16 25 and Spaceflight 1 88, 2nd edition;also published London: Geoffrey Cumberlege and London: Oxford University Press;other The Harvard Books on Astronomy; 
+
+102 56.05(0).81 S. I. Wawilow, Auge und Sonne, Moskau, Verlag Akad. Wiss. UdSSR, 1956, 128 pp, , Priroda 46 Nr. 3 118, 7th edition;in Russian;
+
+103 56.05(0).82 H. P. Wilkins, Mysteries of Space and Time, London, Frederick Muller Ltd., 1955, 208 pp, 15s, Weltraumfahrt 1956 59, 
+
+104 56.05(0).83 H. P. Wilkins, Guide to the Heavens, London, Frederick Muller Ltd., 1956, 5+107 pp, 10s 6d, Spaceflight 1 123, 
+
+105 56.05(0).84 B. A. Woronzow-Weljaminow, Świat gwiazd, Warszawa, Wydawn. Min. Obrony Narod, 1954, 87 pp, 2.35 zł, , reprint of AJB 52.05.70;translated from Russian;
+
+106 56.05(0).85 B. A. Woronzow-Weljaminow, Astronomie; Lehrbuch für Schüler der 10 Mittelschulklasse, Moskau, Lehr-pädagogischer Staatsverlag, 1955, 176 pp, 2R. 65 Kop., , 9th edition;in Russian;
+
+107 56.05(0).85 B. A. Woronzow-Weljaminow, Astronomie; Lehrbuch für Schüler der 10 Mittelschulklasse, Moskau, Lehr-pädagogischer Staatsverlag, 1956, , , , 10th edition;in Russian;
+
+108 56.05(0).85 B. A. Woronzow-Weljaminow, Astronomie; Lehrbuch für Schüler der 10 Mittelschulklasse, Moskau, Lehr-pädagogischer Staatsverlag, 1957, 144 pp, 1R. 80 Kop, , 11th edition;in Russian;
+
+109 56.05(0).86 , Modern Science Illustrated: Astronomy comma Biology comma Chemistry comma Physics comma Geology, , Odhams Press, 1954, 448 pp, 25s, , 
+
+110 56.05(0).87 , Astronomia comma Manual pentru clasa z X-a, Bucureşti, Editura de stat didacticǎ şi pedagogicǎ, 1954, 217 pp, , , 
+
+111 56.05(0).88 , Csillagászattan; Tankönyv z X osztály számára, Budapest, Allami Tanügyi és Pedagogiai, 1954, 216 pp, , , 
+
+112 56.05(0).89 , Von Erde und Weltall, , , , , , Phys Blätter 13 143, reference AJB 55.05.61;
+
+113 56.05(0).90 , Das Universum, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1955, 408 pp, 13R. 10 Kop., , in Russian;
+
+114 56.05(0).91 A. Danjon and P. Pruvost and J. Blache ed., Le Ciel et la Terre, Paris, Société Nouvelle d l'Encyclopédie Française Libararie Larousse, 1956, 452 pp, 7450 frs, Ann d'Astrophys 19 337 and Ciel et Terre 73 226 and Endeavour 16 230 and RJ 1957 Nr. 7 12 and J RAS Canada 51 258 and Obs 77 156 and Sky Tel. 16 337 and Sky Tel. 17 90, other Encyclopédie Française Tome 3; 
+
+115 56.05(0).92 F. L. Whipple ed., New Horizons in Astronomy, Washington DC, Government Printing Office, 1956, 181 pp, $1.50, J RAS Canada 51 257 and Mem SA It (NS) 28 147 and Publ ASP 69 278 and Sky Tel. 16 234 and Sky Tel. 16 436, 
 
