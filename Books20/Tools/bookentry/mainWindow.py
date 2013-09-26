@@ -325,12 +325,14 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
       self.tmpEntryDirty = True
       self.acceptButton.setEnabled(True)
+      # set menu item enable to True as well
 
    def clearEntryDirty(self):
       """Set the tmpEntryDirty flag to False and disable the Save Entry button."""
       self.tmpEntryDirty = False
       self.acceptButton.setEnabled(False)
-
+      # set menu item enable False as well.
+      # set Save File menu True
 
    def printPrinter(self):
       pr = QPrinter()
@@ -437,6 +439,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
          if ans == QMessageBox.Save:
             self.saveFile()
+            # set save file menu enable to False
 
       return ans
 

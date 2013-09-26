@@ -70,7 +70,7 @@
        <string>Delete current record</string>
       </property>
       <property name="text">
-       <string>Delete record</string>
+       <string>Delete Entry</string>
       </property>
      </widget>
     </item>
@@ -297,7 +297,7 @@
        <string>Click to test and accecpt the record</string>
       </property>
       <property name="text">
-       <string>Save Record</string>
+       <string>Save Entry</string>
       </property>
      </widget>
     </item>
@@ -761,7 +761,7 @@
        <string>Insert current record</string>
       </property>
       <property name="text">
-       <string>Insert Record</string>
+       <string>Insert Entry</string>
       </property>
      </widget>
     </item>
