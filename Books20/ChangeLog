@@ -1,3 +1,32 @@
+2013-10-05  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.EntryToDisplay): modified
+	to support entry suffix.
+
+	* Tools/bookentry/AJBentry.py (AJBentry): modified numStr(),
+	isValidAjbEntry(), and parseAJBEntry() to support the suffix field
+	in the AJB number. Added new tests.
+
+	* Tools/bookentry/entry.py (Entry.blankEntry): Added 'entrySuf' to
+	Num field of entry dictionary.  This allows AJB numbers of the
+	form 55.66.77a which is required in a few cases.
+
+	* Tools/bookentry/AJBcomments.py (Item): Added option to have a
+	letter in the reference or reprint portion of a comment. Added new
+	tests as well.
+
+	* Tools/bookentry/symbols.txt: Added capital C with caron
+
+2013-09-30  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: added small and capital
+	Z with acute accent.
+
+2013-09-28  Jim Fowler  <jrf@Biblion>
+
+	* Tools/ajbbooks (main): Added icon to ajbbooks program.
+	Need to set up resource file.
+
 2013-09-14  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/mainWindow.py

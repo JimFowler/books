@@ -12,7 +12,6 @@ See the test comments in the unit tests for an example
 of how comments are written.
 """
 
-import sys
 from modgrammar import *
 from modgrammar.extras import *
 
@@ -28,7 +27,7 @@ class Year (Grammar):
     grammar = (WORD('0-9', count=4))
 
 class Item (Grammar):
-    grammar = (RE(r'[0-9]{2,3}'))
+    grammar = (RE(r'[0-9]{2,3}[a-c]*'))
 
 # Note that no subsection is needed
 
@@ -152,6 +151,8 @@ class Comment (Grammar):
 
 if __name__ == '__main__':
 
+    import sys
+
     teststr = ['2nd edition;',
                '3rd edition;',
                '7th revised edition;',
@@ -160,6 +161,9 @@ if __name__ == '__main__':
                'reprint of 1956;',
                'reprint of AJB 34.56.23;',
                
+               'reference AJB 66.54.32;',
+               'reference AJB 66.54.32a;',
+               'reference AJB 66.54.32c;',
                'reference AJB 66.54.32;',
     
                'edited by A. J. Reader;',

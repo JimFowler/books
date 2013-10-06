@@ -35,6 +35,7 @@ class Entry(dict):
                                'sectionNum':-1,
                                'subsectionNum':-1,
                                'entryNum':-1,
+                               'entrySuf':'',
                                'volume': ''}
         self[ 'Authors'] =    []
         self[ 'Editors'] =    []

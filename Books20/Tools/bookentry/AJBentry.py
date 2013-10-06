@@ -1,3 +1,8 @@
+"""AJBentry provides a class which can convert between a unicode text
+entry and a representation in python, typically a dictionary entry of
+the form Entry.py.entry()."""
+
+
 from nameparser import HumanName
 import re
 
@@ -66,6 +71,7 @@ class AJBentry(entry.Entry):
             if a['subsectionNum'] > -1:
                 st = st + '(' + str(a['subsectionNum']) + ')'
             st = st + '.' + '%02d'%a['entryNum']
+            st = st + '%1s'%a['entrySuf']
             return st
         else:
             return None
@@ -299,7 +305,9 @@ class AJBentry(entry.Entry):
         num = self['Num']
         if num['volNum'] > 0 and num['volNum'] < 69 \
         and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
-        and num['entryNum'] > 0:
+        and num['entryNum'] > 0 \
+        and (num['entrySuf'] == '' or num['entrySuf'] == 'a' \
+                 or num['entrySuf'] == 'b' or num['entrySuf'] == 'c'):
             return True
         else:
             return False
@@ -337,24 +345,31 @@ class AJBentry(entry.Entry):
         """
         #
         # This regular expression is used to parse the AJB number
-        # which is  of the form volNum.sectionNum[(subsectionNum)].entryNum,
-        # where the subseectionNum is optional e.g. 66.18(1).25. It returns the list
-        # [empty, volNum, sectionNum, string, subsectionNum, itemNum, empty].
-        # Note that the subsectionNum may not be there in which case both 
-        # item 3 and 4 will be NONE and the subsection number defaults to zero.
+        # which is of the form
+        # volNum.sectionNum[(subsectionNum)].entryNum[entrySuf], where
+        # the subsectionNum and entrySuf are optional
+        # e.g. 66.18(1).25a. It returns the list [empty, volNum,
+        # sectionNum, string, subsectionNum, itemNum, entrySuf, empty].  Note
+        # that the subsectionNum may not be there in which case both
+        # item 3 and 4 will be None and the subsection number defaults
+        # to zero.
         #
-        r2 = re.compile(r'(\d+)\.(\d+)(\((\d+)\))*\.(\d+)', re.UNICODE)
+        r2 = re.compile(r'(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
         nums = r2.split(line.strip())
         
         if not nums[4]:
             nums[4] = 0 # or -1 for invalid???
             
+        if not nums[6]:
+            nums[6] = ''
+
         return {'volume':'AJB',
                 'volNum': int(nums[1]),
                 'sectionNum': int(nums[2]),
                 'subsectionNum': int(nums[4]),
                 'entryNum': int(nums[5]),
+                'entrySuf': nums[6],
                 }
 
 
@@ -484,6 +499,12 @@ if __name__ == '__main__':
 
     ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
 
+    ajbstra = '4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+
+    ajbstra1 = '4 66.145.29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+
+    badajbstrd = '4 66.145.29d P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+
     authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the authorstr;'
 
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
@@ -491,7 +512,6 @@ if __name__ == '__main__':
     allfieldsstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in Frenchh; reprint of AJB 59.03.05; reprint of 1956; reference AJB 59.144.55;'
 
     allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
-
 
     badajbstr = '27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
 
@@ -522,9 +542,22 @@ if __name__ == '__main__':
     print('The good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
     pprint(ajb2)
 
+
+    ajb2 = AJBentry(ajbstra)
+    print('\nThe good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    pprint(ajb2)
+
+    ajb2 = AJBentry(ajbstra1)
+    print('\nThe good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    pprint(ajb2)
+
     ajb3 = AJBentry(badajbstr)
     print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
-    pprint(ajb3)
+    
+    # This currently throws an error.
+    #ajb3 = AJBentry(badajbstrd)
+    #print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
+    #pprint(ajb3)
 
     ajb4 = AJBentry(badtitlestr)
     print('\nThe bad title ajb entry isValid() is %d and looks like:' % ajb4.isValid())
@@ -540,8 +573,8 @@ if __name__ == '__main__':
     pprint(editorajb)
     print(editorajb.shortTitle())
 
-    #print(editorajb.numStr())
-    #eds = editorajb['Editors']
-    #print(eds[0].full_name)
+    print(editorajb.numStr())
+    eds = editorajb['Editors']
+    print(eds[0].full_name)
 
 

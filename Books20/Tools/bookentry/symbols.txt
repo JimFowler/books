@@ -20,6 +20,7 @@
 ą, Small letter a with cedilla
 Ҫ, Capital letter C with cedilla
 ç, Small letter c with cedilla
+Č, Capital letter C with caron
 č, Small letter c with caron
 ć, Small letter c with acute
 
@@ -71,6 +72,8 @@
 ú, Small letter u with accent
 ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
+Ź, Capital letter Z with acute
+ź, small letter z with acute
 Ż, Large letter z with dot above
 ż, Small letter z with dot above
 Ž, Small letter z with caron

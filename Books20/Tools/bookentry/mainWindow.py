@@ -7,6 +7,7 @@
 import traceback
 import platform
 import fileinput
+import re
 
 # Trouble shooting assistance
 from pprint import *
@@ -496,7 +497,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          self.subSecNum.setText(str(a['subsectionNum']))
       else:
          self.subSecNum.setText('0')
-      self.itemNum.setText(str(a['entryNum']))
+      self.itemNum.setText(str(a['entryNum']) + a['entrySuf'])
 
       # Authors
       astr = ''
@@ -666,6 +667,11 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Copy the display into a new entry and
       return the entry."""
 
+      # Note: that this regex will silently reject a suffix
+      #     that is not '' or [a-c].
+      r2 = re.compile(r'(\d+)([a-c]{0,1})', re.UNICODE)
+      items = r2.split(self.itemNum.text().strip())
+
       entry = AJBentry.AJBentry()
 
       # Index
@@ -678,7 +684,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       num['volNum'] = int(self.volNum.text())
       num['sectionNum'] = int(self.secNum.text())
       num['subsectionNum'] = int(self.subSecNum.text())
-      num['entryNum'] = int(self.itemNum.text())
+      num['entryNum'] = int(items[1])
+      num['entrySuf'] = items[2]
       entry['Num'] = num
       if not entry.isValidAjbNum():
          QMessageBox.warning(self, 'Invalid number',
