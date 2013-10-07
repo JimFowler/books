@@ -29,7 +29,7 @@ import bookentry.entryselect as es
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
-__DefaultSymbolTableName__ = __dirName + '/symbols.txt'
+__DefaultSymbolTableName__ = __dirName + '/Resources/symbols.txt'
 del __dirName
 del __basename
 

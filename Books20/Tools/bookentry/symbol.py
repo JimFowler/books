@@ -14,6 +14,7 @@ The packaged was modified for BookEntry.
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
+import bookentry.ajb_rc
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,
@@ -35,7 +36,9 @@ class SymbolForm( QDialog ):
         self.setObjectName('symbolForm')
         
         try: 
-            file = open( file_name, 'r' )
+            # would like to use resource here ':/Resources/symbols.txt'
+            #ile = open( './bookentry/Resources/symbols.txt', 'r' )
+            symfile = open( file_name, 'r')
         except IOError as ex:
             print(ex)
             exit( 1 )
@@ -60,7 +63,8 @@ class SymbolForm( QDialog ):
         col_max = 0
         id = 0
         col = 0
-        for line in file:
+
+        for line in symfile:
             line = line.strip()
 
             # start new row if line is empty

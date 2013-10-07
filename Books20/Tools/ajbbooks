@@ -15,6 +15,7 @@ from pprint import *
 pp = PrettyPrinter()
 
 #from bookentry.mainWindow import BookEntry
+import bookentry.ajb_rc
 import bookentry.mainWindow as mw
 
 __version__ = '1.0'
@@ -56,6 +57,8 @@ def main():
 
    app = QApplication(sys.argv)
    app.setApplicationName('AJB Book Entry')
+   app.setWindowIcon(QIcon(':/Resources/icon_ajb.svg'))
+   
    form = mw.BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)

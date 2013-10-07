@@ -1,0 +1,6 @@
+<RCC>
+  <qresource>
+    <file>Resources/icon_ajb.svg</file>
+    <file>Resources/symbols.txt</file>
+  </qresource>
+</RCC>
