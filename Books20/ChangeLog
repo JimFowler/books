@@ -1,3 +1,14 @@
+2013-10-10  Jim Fowler  <jrf@Biblion>
+
+	* Tools/doc: Updated installation.rst and operations.rst
+	documentation as well fix as a mistake in menus.py. Added ./images
+	directory and moved all documentation images into it.
+
+2013-10-06  Jim Fowler  <jrf@Biblion>
+
+	* Tools/ajbbooks (main): Added resources files and designed icon
+	for ajbbooks program.  Used inkscape program to build icon.
+
 2013-10-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/mainWindow.py (BookEntry.EntryToDisplay): modified
@@ -19,13 +30,13 @@
 
 2013-09-30  Jim Fowler  <jrf@Biblion>
 
-	* Tools/bookentry/symbols.txt: added small and capital
-	Z with acute accent.
+	* Tools/bookentry/symbols.txt: added small and capital Z with
+	acute accent.
 
 2013-09-28  Jim Fowler  <jrf@Biblion>
 
-	* Tools/ajbbooks (main): Added icon to ajbbooks program.
-	Need to set up resource file.
+	* Tools/ajbbooks (main): Added icon to ajbbooks program.  Need to
+	set up resource file.
 
 2013-09-14  Jim Fowler  <jrf@Biblion>
 

@@ -76,11 +76,11 @@ def createMenus( self, menuBar):
         addInfoAction = createAction(self, 'Additional &Info...',
                                      None, 'Ctrl+T')
         symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
-        headerAction = createAction(self, 'Edit &Header',
+        headerAction = createAction(self, 'Edit &Header...',
                                     self.editHeader, 'Ctrl+H')
         origstrAction = createAction(self, 'Show Original String',
                                     self.showOrigStr)
-        origstrAction = createAction(self, 'Set Volume Number...',
+        setvolnumAction = createAction(self, 'Set Volume Number...',
                                     self.setVolumeNumberInteractive)
 
         fontsizeAction = createAction(self, 'Set font size...', None, None)
@@ -99,6 +99,7 @@ def createMenus( self, menuBar):
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
         editMenu.addAction( origstrAction)
+        editMenu.addAction( setvolnumAction)
         editMenu.addAction( fontsizeAction)
         editMenu.addAction( fonttypeAction)
 
