@@ -37,7 +37,7 @@ class SymbolForm( QDialog ):
         
         try: 
             # would like to use resource here ':/Resources/symbols.txt'
-            #ile = open( './bookentry/Resources/symbols.txt', 'r' )
+            #file = open( './bookentry/Resources/symbols.txt', 'r' )
             symfile = open( file_name, 'r')
         except IOError as ex:
             print(ex)

@@ -840,6 +840,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       # invoke self.insertFunc(char)
       if self.insertFunc is not None:
          self.insertFunc(char)
+      # take back focus somehow??
 
    def setFocusChanged(self, oldWidget, nowWidget ):
       """For items in setTextEntryList and setLineEntryList

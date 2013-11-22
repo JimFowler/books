@@ -1,3 +1,8 @@
+2013-11-15  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/Resources/symbols.txt: Added u with circunflex
+	and raised letter e.
+
 2013-10-10  Jim Fowler  <jrf@Biblion>
 
 	* Tools/doc: Updated installation.rst and operations.rst

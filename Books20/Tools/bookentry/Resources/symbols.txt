@@ -70,6 +70,7 @@
 ů, Small letter u with ring above
 ù, Small letter u with grave
 ú, Small letter u with accent
+û, Small letter u wit circumflex
 ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
 Ź, Capital letter Z with acute
@@ -85,6 +86,7 @@
 ʰ, Right ascension hours
 ᵐ, Right ascension minutes
 ˢ, Right ascension seconds
+ᵉ, French raised letter e
 –, En dash
 —, Em dash
 

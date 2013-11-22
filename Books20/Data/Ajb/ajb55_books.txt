@@ -1,0 +1,381 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 55 Index to the Literature of 1955, started 4 Nov 2013, finished, proofread
+
+
+1 55.01(0).05  A. D. Booth, Numerical Methods, New York, Academic Press Inc., 1955, 7+195 pp, $6.00, Math. Rev. 16 861, also published London: Butterworths Scientific Publications;
+
+2 55.01(0).17  Z. Kopal, Numerical Analysis, London, Chapman & Hall Ltd., 1955, 14+556 pp, 63s, Ann d'Astrophys 19 44 and Obs 76 76 and Proc. Phys. Soc. (A) 69 721 and ZfA 39 269, 
+
+3 55.01(0).21  M. W. Pentkowski, Nomographie, Berlin, Akademie-Verlag, 1953, 15+268 pp, DM 15.00, AN 283 189, 
+
+4 55.01(0).27  J. Topping, Errors of Observation and their Treatment, London, Institute of Physics, 1955, 119 pp, 5s, Proc. Phys. Soc. (A) 69 720, other Monographs for Students; 
+
+5 55.02(0).19  A. von Engel, Ionized Gases, New York, Oxford University Press, 1955, 281 pp, $6.75, Sky Tel. 15 408, 
+
+6 55.02(0).75  S. Tolansky, An Introduction to Interferometry, London, Longmans Green & Co., 1955, 8+223 pp, 21s, Obs 76 32, 
+
+7 55.03(0).01  J. Eberwein, Sienbenstellige Werte der trigonometrischen Funktionen von Zehntel zu Zehentel des Neugrades, Wien, , 1955, , , Österreichische Z. Vermessungswesen 44 93, 
+
+8 55.03(0).02  W. Flügge, Four-place tables of transcendental functions, , , , , , J. Atmosph. Terr. Phys. 6 290 and Nature 175 789, reference AJB 54.03.01;
+
+9 55.03(0).04  H. Küstner, Fünfstellige Logarithmen der natürlichen Zahlen und der Winkelfunktionen für dezimalgeteilten Altgrad, Berlin, Verlag Volk und Wissen, 1954, 158 pp, DM 4.00, Sterne 32 213, 5th edition;
+
+10 55.03(0).05  F. Lösch, Siebenstellige Tafeln der elementaren transzendenten Funktionen, , , , , , J. Atmosph. Terr. Phys. 6 290, reference AJB 54.03.02;
+
+11 55.03(0).06  M. Schuler and H. Gebelein, Acht- und neunstellige Tabellen zu den elliptischen Functionen: Dargestellt mittels des Jacobischen Parameters q, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1955, 24+296 pp, DM 58.00, Mitt. AG 1955 139, 
+
+12 55.03(0).07  K. Shütte, Index mathematischer Tafelwerke und Tabellen aus allen Gebieten der Naturwissenschaften, München, Verlag R. Oldenbourg, 1955, 143 pp, DM 14.50, Deutsche Hydrogr. Z. 8 207 and Phys. Ber. 35 893, 
+
+13 55.03(0).08  B. Sticker, Fünfstellige Tafel der Trigonometrischen Funktionen Ausgabe A für Altgradteilung, , , , , , Optik 12 200, reference AJB 54.03.04;
+
+14 55.03(0).09  , A Million Random Digits with 100000 normal deviates, Glencoe IL, The Free Press, 1955, 25+200 pp, $10.00, Math. Rev. 16 749, 
+
+15 55.03(0).10  , Table of Sine and Cosine Integral for Arguments from 10 to 100, Washington DC, U.S. Government Printing Office, 1954, 15+186 pp, $3.00, J RAS Canada 50 128, other National Bureau of Standards Applied Mathematics Series Nr. 32; other Reissue of Mathematical Tables13; 
+
+16 55.03(0).11  , Tables of the Error Function and its Derivatives, , , , , , J RAS Canada 50 128, reference AJB 54.03.10;
+
+17 55.03(0).12  , Tables of Sines and Cosines for Radian Arguments, Washington DC, U.S. Government Printing Office, 1955, 13+278 pp, $3.00, Math. Rev. 16 628, 
+
+18 55.03(0).13  , Tables of Hyperbolic Sines and Cosines comma x=2 to x=10, Washington DC, U.S. Government Printing Office, 1955, 5+81 pp, $0.55, Math. Rev.  17 541, other National Bureau of Standards Applied Mathematics Series Nr. 45; 
+
+19 55.03(0).14  , Table of the Descending Exponential x=2.5 to x=10, Washington DC, U.S. Government Printing Office, 1955, 5+76 pp, $0.50, Math. Rev. 17 541, other National Bureau of Standards Applied Mathematics Series Nr. 46; 
+
+20 55.03(1).16  A. D. Booth and K. H. V. Booth, Automatic Digital Calculators, , , , , , Nature 175 485, reference AJB 53.03.07;
+
+21 55.03(1).18  L. Couffignal, Denkmaschinen, Stuttgart, Gustav Klipper Verlag, 1955, 186 pp, DM 10.80, , reprint of AJB 52.03.07;other translation; 
+
+22 55.03(0).20  G. F. Forbes, Digital Differential Analyzers I.Elements, Pacoima CA, , 1955, 5+54 pp, $2.50, Math. Rev. 17 415, 2nd edition;
+
+23 55.03(1).21  C. Hastings jr. and J. T. Hayward and J. P. Wong jr., Approximations for Digital Computers, Princeton NJ, Princeton University Press, 1955, 8+201 pp, $4.00, Math. Rev. 16 693, 
+
+24 55.03(1).25  R. K. Richards, Arithmetic Operations in Digital Computers, Toronto-New York-London, D. Van Nostrand Company Inc., 1955, 5+397 pp, , , 
+
+25 55.03(1).27  , Computer Development (SEAC and DYSEAC) at the National Bureau of Standards, Washington DC, U.S. Government Printing Office, 1955, 4+146 pp, $2.00, Math. Rev. 17 673, 
+
+26 55.05(0).01  T. A. Agekjan, Das Sternenall, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 235 pp, 4R. 40 Kop., Priroda 45 Nr. 5 120, in Russian;
+
+27 55.05(0).02  C. W. Allen, Astrophysical Quantities, London, The Athlone Press, 1955, 11+263 pp, 55s and $10.00, Ciel et Terre 72 728 and J RAS Canada 50 42 and La Nature 83 500 and Mem SA It (NS) 27 412 and Obs 75 264 and Proc. Phys. Soc. 69 72 and Publ ASP 68 80 and Sky Tel. 15 130 and Sky Tel. 15 360 and Sternenbote 7 84 and ZfA 39 61, also published New York: John de Graff;
+
+28 55.05(0).03  J. Alter, Astronomická paradoxa, Prag, Verlag Akad. Wiss., , 98 pp, Kčs 5.80, RH 36 118, 
+
+29 55.05(0).04  G. Aristow, Das Weltall ist unendlich, Moskau, Verlag <<Moskauer Arbeiter>>, 1955, 112 pp, 1R. 70 Kop., , in Russian;
+
+30 55.05(0).05  F. Armerter de Monasterio, Panorama del Universo, Barcelona, Aymá, 1955, 398 pp, , Urania Barcelona 40 258, 
+
+31 55.05(0).06  K. L. Bajew and W. A. Schischakow, Einführung in die Astronomie, Moskau, Technischer Staatsverlag, 1954, 124 pp, 1R. 85 Kop., RJ Astr. Geod. UdSSR 1956 Nr. 1 15, 4th edition;in Russian;
+
+32 55.05(0).07  R. H. Baker, Astronomy, Toronto, D. Van Nostrand, 1955, 8+528 pp, $6.00, J RAS Canada 50 127 and Sky Tel. 14 381, 6th edition;
+
+33 55.05(0).08  A. Bečvář, První cesta ke hvězdám, Prag, Verlag SNDK, , 100 pp, Kčs 6.00, RH 37 47, 
+
+34 55.05(0).09  J. Bordet, Eléments d'Astronomie destinés aux visiteurs du Planetarium, Brüssel, Ed. de l'Alberteum, , , frs. 100, Ciel et Terre 72 197, 
+
+35 55.05(0).10  W. Büdler, To Other Worlds, , , , , , Weltraumfahrt 6 27, reference AJB 54.05.07;
+
+36 55.05(0).11  P. Coudere, L'Univers, Paris, Presses Universitaires de France, 1955, 135 pp, , Ann d'Astrophys 18 378 and BSAF 69 443 and Ciel et Terre 72 311 and Coelum 24 28 and J RAS Canada 50 216 and Mem SA It (NS) 27 239 and Obs 76 113, 
+
+37 55.05(0).12  A. Dauvillier, Cosmologie et Chimie, Paris, Presses Universitaires de France, 1955, 215 pp, 900 frs., Ann d'Astrophys 18 454 and BSAF 70 304, 
+
+38 55.05(0).13  M. H. Degani, Astronomy Made Simple, New York, Made Simple Books Inc., 1955, 192 pp, $1.00, Strolling Astronomer 10 17, 
+
+39 55.05(0).14  J. C. Duncan, Astronomy, New York, Harper & Brother, 1955, 500 pp, $5.50, Publ ASP 67 190 and Sky Tel. 14 244 and Sky Tel. 14 421, 5th edition;
+
+40 55.05(0).15  A. S. Eddington, Sterne und Atome, Göttingen, Verlag Vandenhoeck & Ruprecht, 1955, 92 pp, DM 2.40, Sternenbote 7 110, 
+
+41 55.05(0).16  E. A. Fath, The Elements of Astronomy, New York, McGraw-Hill Book Co., 1955, 369 pp, $5.50, JBAA 66 332 and J RAS Canada 50 125 and Publ ASP 67 364 and Sky Tel. 14 425, 5th edition;
+
+42 55.05(0).17  C. Flammarion, Astronomie Populaire, Paris, , 1955, 609 pp, $15.00, Ann d'Astrophys 18 378 and Ciel et Terre 72 85 and Sky Tel. 15 508 and Sky Tel. 15 553, edited by G. C. Flammarion and A. Danjon;
+
+43 55.05(0).18  G. Gamow, Un comma Deux comma Trois... l'Infini, Paris, Dunod, 1955, 282 pp, , BSAF 69 400, translated from English by J. Gauzit;in French;
+
+44 55.05(0).19  U. Güntzel-Lingner, Wie schwer sind die Himmelskörper, Leipzig-Jena, Urania-Verlag, 1955, 243 pp, DM 9.00, Ciel et Terre 72 198 and Sterne 31 200 and Sternenbote 7 24 and Urania København 13 28 and VdS Nachr. 5 22, 
+
+45 55.05(0).20  G. A. Gurew, Was ist das Weltall?, Moskau, Staatsverlag für technish.-theoretische Literatur, 1955, 200 pp, 3R. 15 Kop., Priroda 45 Nr. 4 122, 2nd edition;in Russian;
+
+46 55.05(0).21  M. Hack, Corso di fisica stellare; Interpretazione degli spettri stellari, Firenze, Editrice Universitarie, 1955, 227 pp, L. 1500, Coelum 24 Nr. 1-2 and Mem SA It (NS) 26 557, other Coelum Unschlag-Rückseite; 
+
+47 55.05(0).22  H. Hatschek, Wann comma Wo comma Warum comma Wieso, , , , , , Coelum 24 Nr. 5-6, reference AJB 48.05.25;
+
+48 55.05(0).23  F. Hoyle, Frontiers of Astronomy, New York, Harper Bros., 1955, 16+360 pp, $5.00 and 25s, Endeavour 15 103 and La Nature 83 500 and PAT 36 159 and Proc. Phys. Soc. (B) 69 264 and Sky Tel. 15 31 and Sky Tel. 15 219, also published London: William Heinemann Ltd.;
+
+49 55.05(0).24  J. Kleczek, Nitro Slunce a život na Zemi, Prag, Verlag Orbis, , 68 pp, Kčs 8.70, RH 36 238, 
+
+50 55.05(0).25  J. Klepešta, Fotographie hvězdné oblohy, Prag, Jednota Československich matematiku a fizyku, 1955, 245 pp, , Urania Kraków 27 153, 
+
+51 55.05(0).26  W. S. Krogdahl, The Astronomical Universe, , , , , , Astronomia Popular 1 Nr. 2 35, reference AJB 51.05.31;
+
+52 55.05(0).27  H. Macpherson, Guide to the Stars, New York, Philosophical Library, 1955, 144 pp, $2.75, Publ ASP 68 175 and Sky Tel. 15 176 and Strolling Astronomer 9 136, 
+
+53 55.05(0).28  C. N. Martin, Heeft het uur H voor de wereld geslagen?, Haarlem-Antwerpen, J. H. Gottmer, 1955, 216 pp, fl. 3.95, Hemel en Dampkring 54 207, 
+
+54 55.05(0).29  C. Mennella, Stellato comma visione panoramica delle meraviglie celesti, Torino, Società Editrice Internazionale, 1955, 341 pp, Lire 1000, Coelum 23 57, 2nd edition;
+
+55 55.05(0).30  C. Mennella, L'astronomia dell'invisible comma fascino e misteri dei mondi invisibile negle spazi siderei, Torino, Società Editrice Internazionale, 1955, 8+204 pp, Lire 1000, Coelum 24 59 and Mem SA It (NS) 27 240, 
+
+56 55.05(0).31  F. D. Miller, Vocational and Professional Monographs: Astronomy, Cambridge MA, Bellman Publishing Co., 1955, 32 pp, $1.00, Publ ASP 67 427 and Sky Tel. 14 425, 
+
+57 55.05(0).32  P. Moore, Suns comma Myths and Men, , , , , , Urania Barcelona 40 255, reference AJB 54.05.24;
+
+58 55.05(0).33  P. Moore, The True Book about Worlds Around Us, London, Frederick Nuller Ltd., 1954, 144 pp, 6s and $1.50, JBAA 66 232 and Stolling Astronomer 9 136 and Urania Barcelona 40 256, 
+
+59 55.05(0).34  P. Moore, Wir im Weltall, Ebenhausen, Verlag Langenwiesche-Brandt, 1955, 192 pp, DM 6.80, VdS Nachr. 5 10, 
+
+60 55.05(0).35  T. Moreux, Atlas céleste, Paris, G. Doin & Cie., 1955, 12 charts, ffr. 400, La Nature 83 415, 
+
+61 55.05(0).36  P. P. Parenago, Die Sternenwelt, Leipzig-Jena, Urania-Verlag, 1955, 138 pp, , , 
+
+62 55.05(0).37  J. I. Perelman, Zajímavá astronomie, Prag, Verlag Mladá fronta, , 200 pp, Kčs 14.60, RH 35 71, reprint of AJB 49.05.40;translated from Russian;other also see AJB 54.05.28; 
+
+63 55.05(0).38  S. Plakidis, Einführung in die Mathematische Astronomie Band A Sphärische Astronomie, Athen, , 1954, 115 pp, , Astr. Nachr. Athen 6 32, in Greek;
+
+64 55.05(0).39  S. Plakidis, Einführung in die Astronomie Teil A, Athen, , 1954, 560 pp, , Astr. Nachr. Athen 6 32, in Greek;
+
+65 55.05(0).39  S. Plakidis, Einführung in die Astronomie Teil B, Athen, , 1955, 230 pp, , Astr. Nachr. Athen 6 32, in Greek;
+
+66 55.05(0).40  P. I. Popow, Sonne und erde, Leipzig, Urania-Verlag, 1954, 80 pp, DM 1.00, Astr. Nachr. Berlin-Treptow 7 95, 
+
+67 55.05(0).41  P. I. Popow, Slunce a Zeme, Prag, Verlag-Orbis, , 46 pp, Kčs 3, RH 36 95, reprint of AJB 49.05.44;translated from Russian;
+
+68 55.05(0).42  L. L. Rice, Amateur Astronomer's Manual, Lebanon TN, Cumberland University Press, 1955, 58 pp, $0.65, Sky Tel. 15 222, 
+
+69 55.05(0).43  E. Rybka, Astronomia—dla kl. XI, Warsawa, P. Z. W. S., 1955, 179 pp, 3 zł 75 gr., RJ Astr. Geod. UdSSR 1956 Nr. 4 9, 
+
+70 55.05(0).44  W. T. Skilling and R. S. Richardson, A Brief Text in Astronomy, , , , , , Astronomia Popular 1 Nr. 2 36 and JBAA 66 330, reference AJB 54.05.33;
+
+71 55.05(0).45  H. Slouka, Poznejte souhvězdí, Prag, Verlag-Orbis, , 121 pp, Kčs 22, RH 37 46, 
+
+72 55.05(0).46  B. Strömgren, Universets udforskning, København, Hirschsprungs forlag, 1955, 207 pp, 16.50 kr. and 23.00 kr., NAT 1956 108 and Urania København 13 91, 2nd edition;
+
+73 55.05(0).47  H. Vogt, Das astronomische Wiltbild der Gegenwart, Berlin-Dahlem, Morus-Verlag, 1955, 104 pp, DM 7.40, VdS Nachrichtenblatt 4 62 and, 
+
+74 55.05(0).48  M. Wagenschein, Die Erde unter den Sternen, München, Verlag R. Oldenbourg, 1955, 59 pp, DM 3.40, Mitt. Planetenbeobachter 9 13 and Urania København 13 20 and VdS Nachr. 5 42, 
+
+75 55.05(0).49  E. Whittaker, Der Anfang und das Ende der Welt: Die Dogmen und die Naturgesetze, Stuttgart, H. E. Günther Verlag, 1955, 117 pp, DM 6.50, , reprint of AJB 46.08.59;translated from English by J. Streller;
+
+76 55.05(0).50  H. P. Wilkins, The True Book About the Stars, , , , , , Urania Barcelona 40 256, reference AJB 54.05.41;
+
+77 55.05(0).51  H. P. Wilkins, Mysteries of Space and Time, London, Frederick Muller Ltd., 1955, 208 pp, 15s, JBAA 66 179 and J. British Interplanetary Soc. 14 243 and Orion Schaffhausen 4 450, 
+
+78 55.05(0).52  B. A. Woronzow-Weljaminow, Skizzen über das Weltall, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 536 pp, 9R. 85 kop., Priroda 45 Nr. 4 122, 3rd edition;in Russian;
+
+79 55.05(0).53  S. K. Wsechswjatskij, Wie das Weltall erforscht wurde, Moskau, Techn. Staatsverlag, 1955, 48 pp, 75 kop., , 2nd edition;in Russian;
+
+80 55.05(0).54  R. Wyler and G. Ames, The Golden Book of Astronomy, New York, Simon & Schuster, 1955, 97 pp, $3.95, Sky Tel. 15 83 and Sky Tel. 15 129 and Strolling Astronomer 9 118, 
+
+81 55.05(0).55  J. Xanthakis, Astronomie Band IIIa Erde—Mond—Sonne, Thessaloniki, , 1954, 371 pp, , Astr. Nachr. Athen 6 32, in Greek;
+
+82 55.05(0).56  J. Xanthakis, Astronomie Band I, Thessaloniki, Universitätsverlag, 1955, 7+286 pp, , , in Greek;
+
+83 55.05(0).57  W. Zonn, Astrofizyka ogólna, Warsawa, Państwowe Wydawnictwo Naukowe, 1955, 398 pp, zł 31.90, Postepy Astr.  4 42 and Uranai Kraków 26 206, 
+
+84 55.05(0).58  R. N. Mayall and N. W. Mayall ed., Olcott's Field Book of the Skies, , , , , , Astronomie Popular 1 Nr. 2 35, reference AJB 54.05.45;
+
+85 55.05(0).59  E. A. Beet ed., Ball's Popular Guide to the Heavens, London, G. Philip & Son Ltd., 1955, 12+84 pp, 30s, JBAA 65 314 and Obs 75 267 and Sky Tel. 15 130 and Sky Tel. 15 407, 5th edition;
+
+86 55.05(0).60  , The New Astronomy, New York, Simon & Schuster, 1955, 243 pp, $1.00, J. Astronautics 3 48 and Orion Schaffhausen 5 171 and Sky Tel. 15 270, other editors Scientific American; 
+
+87 55.05(0).61  , Von erde und Weltall, Stuttgart, Alfred Kröner Verlag, 1955, 164 pp, DM 6.00, Sternenbote 7 110, 
+
+88 55.06(0).06  R. Boxus, La Météorologie et l'Astronomie en Wallonie, Lessines, Ed. du Postillon, , 240 pp, , Ciel et Terre 71 353, 
+
+89 55.06(0).08  M. Gerstenberger, Sterne: Mythos und Wissenschaft, Stuttgart, Verlag Kurt Haslsteiner, , 24 pp, , Sterne 30 31, 
+
+90 55.06(0).10  O. Höfling, Wetterkunde und Astronomie, Bonn, F. Dümmlers Verlag, 1955, 48 pp, DM 1.50, Sternenbote 8 22, 
+
+91 55.06(0).11  R. Janiczek, Atlas mikro a makrokosmu, Warschau, Państw. Przeda. Wydawn. Kartograficzne, 1954, 12 charts, 11 Zloty, , 
+
+92 55.06(0).12  H. Spencer Jones, Life on Other Worlds, , , , , , Astronomia Popular 1 Nr. 2 34, reference AJB 52.06.15;
+
+93 55.06(0).21  W. Mesenzew, Weltall und Atom, , Verlag <<Junge Garde>>, 1954, 333 pp, , Priroda 45 Nr. 2 119, in Russian;
+
+94 55.06(0).23  P. Moore, The Story of Man and the Stars, New York, W. W. Norton & Co., 1954, 239 pp, $3.95, Strolling Astronomer 9 135, 
+
+95 55.06(0).34  K. Stumpff, Astronomie gegen Astrologie; Eine naturwissenschaftliche und erkenntnistheoretische Kritik der Sterndeutekunst, Baden-Baden, Verlag für angewandte Wissenschaften, 1955, 80 pp, DM 4.80, Hemel en dampkring 54 106 and Sterne 31 151, 
+
+96 55.06(0).38  C. F. von Weizsäcker, Die Geschichte der Natur, Göttingen, Vandenhoeck & Ruprecht, 1954, 133 pp, DM 2.40, Phys. Blätter 12 46, 
+
+97 55.06(0).39  H. E. Landsberg ed., Advances in Geophysics Vol. 2, New York, Academic Press Inc., 1955, 10+286 pp, $7.50, Nature 176 943, also published London: Academic Books Ltd.;
+
+98 55.06(0).42  , Sternenströme im Kosmos, München, Verlag Th. Knaur Nachf., 1955, 8+304 pp, DM 39.50, , translated from English;other from the book <<Die Welt comma in der wir leben>>; 
+
+99 55.07(0).01  K. Heinemann and W. Lohmann ed., Astronomischer Jahresbericht Band 52, Berlin, W. de Gruyter & Co., 1955, 58+454 pp, DM 40.00, , 
+
+100 55.07(0).01  K. Heinemann and F. Henn and W. Lohmann ed., Astronomischer Jahresbericht Band 53, Berlin, W. de Gruyter & Co., 1955, 62+468 pp, DM 40.00, , 
+
+101 55.07(0).13  H. Brown ed., A Bibliography on Meteorites, , , , , , Astronomia Popular 1 Nr. 1 27 and Naturwissenschaften 42 163, reference AJB 53.07.13;
+
+102 55.07(0).18  , Polska bibliografia analityczna Rok 1 Zeszyt 1, Warsawa, Verlag Poln. Akad. Wiss., 1955, 56 pp, , RJ Astr. Geod. UdSSR 1956 Nr 9 9, 
+
+103 55.07(0).24  A. A. Belopolskij, Astronomische Werke, Moskau, Technischer Staatsverlag, 1954, 320 pp, 6R. 90 Kop., AJ UdSSR 33 448 and RJ Astro. Geod. UdSSR 1956 Nr. 4 3, 
+
+104 55.07(0).25  , F. A. Bredichin comma Studien über Meteore, Moskau, Verlag Akad. Wiss. UdSSR, 1954, 608 pp, 24R. 90 kop., RJ Astr. Geod. UdSSR 1956 Nr. 4 77, in Russian;
+
+105 55.07(0).26  T. P. Krawez and W. L. Tschenakal ed., M. W. Lomonossow comma Gesammelte Werke Band 4 Arbeiten zur Physik comma Astronomie und zum Gerätebau, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1955, 831 pp, 25R., RJ Astr. Geod. UdSSR 1956 Nr. 7 2, in Russian;
+
+106 55.07(0).28  , W. K. Zeraskij comma Ausgewählte Arbeiten über Astronomie, Moskau, Techn. Staatsverlag, 1953, 196 pp, 7R., RJ Astr. Geod. UdSSR 1956 Nr. 4 3, in Russian;
+
+107 55.07(0).29  , Abhandlungen aus der sowjetsichen Astronomie Folge 2, , , , , , Astronomia Popular 1 Nr. 1 27, reference AJB 51.07.24;
+
+108 55.07(0).30  , Galileo Galilei comma Dialogue on the Great World Systems, Chicago, University of Chicago Press, 1955, 131 pp, $1.75, Sky Tel. 14 425, 
+
+109 55.07(0).32  A. Beer ed., Vistas in Astronomy Volume 1, London-New York, Pergamon Press, 1955, 16+776, $28.00, Ann d'Astrophys 19 114 and J RAS Canada 50 215 and Nature 176 378 and Sky Tel. 15 176 and Sky Tel. 15 316 and ZfA 39 272, also published London-New York: Sky Publishing Corp.;other Special Supplement J. Atmosph. Terr. Phys. Nr. 3; 
+
+110 55.07(0).33  , Geodätisches Wörtbuch in fünf Sprachen, Warschau, Staatl. Unternehmen kartographischer Herausgaben, 1954, , , Õsterreichische Z. f. Vermessungswesen 44 93, other workbook in five languages Polish comma Russian comma German comma English comma & French; 
+
+111 55.10(4).12  R. Courant and R. W. Pohl, Carl Friedrich Gauss; Zwei Vorträge, Göttingen, Musterschmidt-Verlag, 1955, 27 pp, DM 1.50, Sternenbote 7 85, 
+
+112 55.10(4).14  G. W. Dunnington, Carl Friedrich Gauss: Titan of Science comma A Study of his LIfe and Works, New York, Exposition Press, 1955, 16+ 479 pp, $6.00, , 
+
+113 55.10(4).23  E. Worbs, Carl Friedrich Gauss comma Ein Lebensbild, Leipzig, Kochler & Amelung, 1955, 236 pp, DM 7.50 and $1.79, , 
+
+114 55.10(4).26  , Carl Friedrich Gauss (1777—1855), Göttingen, Musterschmidt-Verlag, 1955, 31 pp, DM 2.50, Sternenbote 7 86, 
+
+115 55.10(5).31  K. L. Bajew, Die Begründer der neuen Astronomie: Kopernikus comma Bruno comma Kepler comma Galilei, Moskau, Lehr-Pädagog. Staatsverlag, 1955, 125 pp, 1R. 65 kop., , in Russian;
+
+116 55.10(5).32  K. Górski, Domostwa Mikołaja Kopernika, Toruń (Thorn), Towarzystwo Bibliofilów im. Lelewela, 1955, 34 pp, , Urania Kraków 26 342, 
+
+117 55.10(5).34  A. Nowicki, Kopernik — człowiek Odrodzenia, , Państwowe Wydawnictwo Popularno-Naukowe, , 171 pp, , Urania Kraków 26 376, 
+
+118 55.10(5).36  T. Przypkowski, O Mikołaju Koperniku, Warszawa, Państwowe Wydawnictwo Naukowe, , 134 pp, , Urania Kraków 26 218, 
+
+119 55.10(5).37  E. Rybka and P. Rybka, Mikołaj Kopernik i jego nauka, , , , , , Urania Kraków 26 246, 
+
+120 55.10(6).39  E. N. da C. Andrade, Sir Isaac Newton, , , , , , Nature 176 616, reference AJB 54.10.03;
+
+121 55.10(6).56  P. S. Kudrjawzew, Isaac Newton, Moskau, Pädagog. Staatsverlag, 1955, 127 pp, 1R. 85 Kop., Priroda 45 Nr. 3 123, in Russian;
+
+122 55.10(6).60  G. H. Melin, Maria Mitchell; Girl Astronomer, Indianapolis IN, Bobbs-Merrill Co., 1954, 192 pp, $1.75, Sky Tel. 15 221 and Sky Tel. 15 407, 
+
+123 55.10(6).74  G. de Santillana, The Crime of Galileo, Chicago, University of Chicago Press, 1955, 339 pp, $5.75, Astronomia Popular 1 Nr. 2 36 and Sky Tel. 14 292 and Sky Tel. 14 467, 
+
+124 55.10(6).76  J. b. Sidgwick, William Herschel, New York, Macmillian, 1955, 228 pp, $2.50, Sky Tel. 15 31 and Sky Tel. 15 129, 
+
+125 55.10(6).94  J. C. Poggendorff, Biographisch-Literarisches Handwörterbuch der exakten Naturewissenschaften Band VIIa Teil 1 A—E, Berlin, Akademie-Verlag, 1955, 128 pp, DM 16.00, , 
+
+126 55.11(3).63  A. Blaauw ed., Co-ordination of Galactic Research, New York, Cambridge University Press, 1955, 8+59 pp, 7s 6d and $1.75, Ann d'Astrophys 18 234 and JBAA 66 113 and J RAS Canada 50 41 and Nature 176 847 and Obs 76 31 and Sky Tel. 14 425 and ZfA 38 217, other IAU Symposium Nr. 1; 
+
+127 55.11(3).64  , Principes fondamentaux de classification stellarie, Paris, Services des Publications, 1955, 190 pp, ffr. 1200, Ann d'Astrophys 18 320 and Ciel et Terre 72 87 and J RAS Canada 50 184 and Obs 76 113 and Phys. Ber. 35 1290 and Publ ASP 67 364 and Sky Tel. 15 31 and Sterne 32 36 and, other Colloques Internationaux du Centre National de la Recherche Scientifique 55; 
+
+128 55.11(3).65  J. M. Burgers and H. C. van de Hulst ed., Gas Dynamic in Cosmic Clouds, Amsterdam, North Holland Publishing Company, 1955, 12+247 pp, fl. 19 and $5.75, AN 282 284 and Ann d'Astrophys 18 235 and BSAF 69 356 and ZfA 38 71, other IAU Symposium Series Nr. 2; 
+
+129 55.11(3).66  J. B. Irwin ed., Proceedings of the National Science Foundation Astronomical Photoelectric Conference, , , , 6+122 pp, , AJ 60 17 and RJ Astr. Geod. UdSSR 1956 Nr. 11 16, 
+
+130 55.11(3).67  , Publikationen (Trudy) der elften astrometrischen Konferenz der UdSSR, Leningrad, , 1955, 269 pp, , , 
+
+131 55.11(3).68  T. R. Kaiser ed., Meteors, London-New York, Pergamon Press, 1955, 7+204 pp, 55s and $8.50, J RAS Canada 50 266 and Obs 76 35 and Phys. Blätter 12 281 and Proc. Phys. Soc. (B) 69 1067 and Sky Tel. 15 130 and Sky Tel. 16 26 and Weltraumfahrt 6 128 and Z. Naturforschung 11a 885, 
+
+132 55.11(3).70  , Mixed Commission on the Ionosphere, Brüssel, Secrétariat Général de l'U.R.S.I., 1955, 238 pp, $6.00, J RAS Canada 50 186, 
+
+133 55.11(3).71  R. Fleischer ed., Berkeley Conference Notes 1954, , Observatory of Rensselaer Polytechnic Institute, 1955, 265 pp, , Sky Tel. 14 341, 
+
+134 55.11(3).72  , International Scientific Radio Union Vol 10. part 3, Brüssel, Secrétariat Général de l'U.R.S.I., 1954, 194 pp, $4.00, J RAS Canada 50 186, 
+
+135 55.11(3).72  , International Scientific Radio Union Vol 10. part 5, Brüssel, Secrétariat Général de l'U.R.S.I., 1954, 114 pp, $2.50, J RAS Canada 50 186, 
+
+136 55.11(3).73  , The Physics of the Ionosphere, London, The Physical Society, 1955, 4+406 pp, 40s, J. British Interplanetary Soc. 14 17 and Nature 176 731 and Phys. Abstracts (A) 58 740, 
+
+137 55.11(3).74  M. H. Wrubel ed., Proceedings of the National Science Foundation Conference on Stellar Atmospheres, , , , 6+183 pp, , , other Not sure what this is; 
+
+138 55.11(3).75  , Vᵉ Congrés International de Chronométrie Vol. 1, Besançon, Observatoire National, 1955, 426 pp, , Ann. Françaises Chronométrie (2) 25 51 and CR 241 1435 and J. Phys. Radium 16 68 and Phys . Blätter 11 128, 
+
+139 55.11(3).81  R. Compte Porta, Memoria de la I Exposición Balear de Astronomía y Ciencias Afines comma seguida de un trabajo sobre Radioastronomía, Palma de Mallorca, , 1955, 38 pp, , Urania Barcelona 40 257, 
+
+140 55.12(1).95  H. Letsch, Das Zeiss-Planetarium, Jena, G. Fischer Verlag, 1955, 136 pp, DM 4.00, Sky Tel. 15 556 and Sterenenbote 7 85, 4th edition;
+
+141 55.13(0).01  G. Abetti, The History of Astronomy, , , , , , Nature 176 323, reference AJB 52.13.02;
+
+142 55.13(0).02  Abû Nasr Mansûr ibn' Irâq, Lehrbriefe an Al-Bîrûnî, Hyderabad, Osmania Oriental Publications Bureau, 1948, 372 pp, , ZfMG 54 1, in Arabic;other 15 Abhandlungen aus der mathematisch-astronomischen Sammelhandschrift Bankipore Nr. 2468; 
+
+143 55.13(0).03  Al-Bîrûnî, Lehrbriefe, Hyderabad, Osmania Oriental Publications Bureau, 1948, 594 pp, , ZfMG 54 2, in Arabic;other Vier Abhandlungen aus der mathematisch-astronomischen Sammelhandschrift Bankipore Nr. 2468; 
+
+144 55.13(0).08  F. Becker, Histoire de l'Astronomie, Paris, Lamarre, 1955, 174 pp, ffr 450, BSAF 69 167 and La Nature 83 118, translated from German by F. Cusset;
+
+145 55.13(0).20  J. L. E. Dreyer, A History of Astronomy from Thales to Kepler, , , , , , Scientia 90 372, reference AJB 53.13.08;
+
+146 55.13(0).25  E. Guyot, Historie de la détermination des Longitudes, , , , 254 pp, , BSAF 70 80, other editing by Chambre Suisse de l'Horologerie; 
+
+147 55.13(0).34  H. C. King, The History of the Telescope, London, Charles Griffin & Co. Ltd., 1955, 16+456 pp, 50s and $12.50, BSAF 70 351 and Ciel et Terre 72 198 and Coelum 24 28 and Endeavour 15 166 and Irish AJ 3 260 and J. Astr. Soc. Victoria 9 13 and JBAA 66 148 and J RAS Canada 50 129 and Obs 75 266 and Publ ASP 68 79 and Sky Tel. 15 83 and Sky Tel. 15 218 and Urania København 13 49, also published Cambridge MA: Sky Publishing Corporation;
+
+148 55.13(0).53  A. I. Slastenow, Die Astronomie an der Universität Charkow während der letzten 150 Jahre (1850—1955), Charkow, Verlag Gorkij-Staatsuniv., 1955, 184 pp, 5R. 50 Kop., AJ UdSSR 33 275, in Russian;
+
+149 55.13(0).67  , Vermischte Abhandlungen über Astronomie und verwandte gebiete von Vorgängern und Zeitgenossen von Al-Bîrûnî aus der mathematisch-astronomischen Sammelhandschrift Bankipore Nr. 2468, Hyderabad, Osmania Oriental Publiscations Bureau, 1948, 294 pp, , ZfMG 54 1, in Arabic;
+
+150 55.13(0).68  H. Slouka ed., Astronomy in Czechoslovakia from its early beginning to present times, Prag, , 1952, 343 pp, , ZfA 40 283, 
+
+151 55.13(0).69  O. Neugabauer ed., Astronomical Cuneiform Texts comma Babylonian Ephemerides of the Seleucid Period for the Motion of the Sun comma the Moon comma and the Planets, London, Percy Lund Humphries & Co. Ltd., 1955, , 105s and $15.00, Nature 176 569 and Obs 76 34 and Publ ASP 67 427 and Sky Tel. 14 425, other three volumes; other vol 1 Introduction The Moon 16+278 pp; other vol 2 The Planets Indices 12+234 pp; other vol 3 Plates 5+255 pp; 
+
+152 55.13(0).70  P. G. Kulikowskij ed., Historisch-astronomische Untersuchungen Band 1, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 368 pp, , Coelum 24 118, 
+
+153 55.13(0).71  A. J. Sachs and J. Schaumberger ed., Late Babylonian Astronomical and Related Texts, Providence RI, Brown University Press, 1955, 56+271 pp, , , 
+
+154 55.13(0).72  D. J. Price ed., The Equatorie of the Planetis, London, Cambridge University Press, 1955, 16+214 pp, 52s and $10.00, Ciel et Terre 71 352 and Endeavour 14 160 and JBAA 65 172 and J. Inst. Navigation 8 344 and Sky Tel. 14 292, 
+
+155 55.13(1).89  P. P. Parenago, Arbeiten zur Stellarastronomie in der UdSSR, Moskau, Verlag Akad. Wiss. UdSSR, 1955, 87 pp, , RJ Astr. Geod. UdSSR 1956 Nr. 8 39, in Russian;
+
+156 55.20(0).01  L. E. W. Albada, Graphical Design of Optical Systems, London, Sir Isaac Pitman, 1955, 153 pp, 21s, JBAA 66 75, 
+
+157 55.20(0).03  Y. Arvola, Zur Theorie der Fernrohr-Okulare: Bildfehler comma optische Eigenschaften, Helsingfors, , 1954, , , Optik 13 239, other Helsingfors is Swedish for Helsinki Finland; 
+
+158 55.20(0).11  C. Dévé, Optical Workshop Principles, London, Hilger & Watts Ltd, 1954, 24+436 pp, 42s, JBAA 66 74 and Sky Tel. 15 81, 2nd edition;other This is the second english edition; 
+
+159 55.20(0).12  V. Erhart and J. Erhart, Prakticá astronomická optika, Prag, Verlag SNTL, , 156 pp, Kčs 8.50, RH 36 283, 
+
+160 55.20(0).13  J. Flügge, Die wissenschaftliche und angewandte Photographie I Das photographische Objectiv, Wien, Springer-Verlag, 1955, 13+373 pp, DM 69.00, ZfA 40 78 and Z. Naturforschung 11a 524, edited by K. Michel;
+
+161 55.20(0).22  A. G. Ingalls, Amateur Telescope Making, New York, Edition Scientific American, 1955, 12+497 pp, , Coelum 24 154, other see also AJB 55.20.53 are these the same?; 
+
+162 55.20(0).29  E. H. Linfoot, Recent Advances in Optics, Oxford, The Clarendon Press, 1955, 286 pp, 50s and $8.00, La Nature 83 500 and Sky Tel. 15 506, also published New York: Oxford University Press;
+
+163 55.20(0).32  G. Matthewson, Constructing an Astronomical Telescope, London, Blackie & Sons Ltd., , , 7s 6d, Astronomia Popular 1 Nr. 2 34, 2nd edition;
+
+164 55.20(0).33  D. D. Maxutow, Technologie der astronomischen Optik, , , , , , RH 36 191, reference AJB 54.20.16;
+
+165 55.20(0).40  J. K. Robertson, Introduction to Optics comma Geometrical and Physical, New York, D. Van Nostrand Co., 1954, 16+416 pp, $6.00, American J. Phys 23 76 and Rev. Sci. Instruments 26 389, 
+
+166 55.20(0).41  H. Rohr, Das Fernrohr für jedermann: Eine gründliche Anleitung zum Selbstbau eines leistungsfähigen Spiegel-Teleskops, Zürich, Rascher-Verlag, 1055, 16+182 pp, sfr 8.50, AN 283 189 and Optik 13 236 and Orion Schafthausen 4 496 and Sky Tel. 15 176 and Sterne 32 38, 2nd edition;
+
+167 55.20(0).42  V. Ronchi, L'Ottica Scienza della Visione, Bologna, N. Zanichelle Editore, 1955, 370 pp, , Optik 13 192, 
+
+168 55.20(0).47  J. Terrien, L'Optique astronomique, Paris, Presses Universitaires de France, 1954, 128 pp, ffr 153, La Nature 83 415, 
+
+169 55.20(0).49  F. Twyman, Optical Glassworking, London, Hilger & Watts Ltd., 1955, 275 pp, 24s, JBAA 66 36, 
+
+170 55.20(0).52  F. B. Wood ed., Astronomical Photoelectric Photometry, , , , , , JBAA 66 76 and J. Atmosph. Terr. Phys. 6 227, reference AJB 53.20.34;
+
+171 55.20(0).53  A. G. Ingalls ed., Amateur Telescope Making — Book One, New York, Scientific American, 1955, 497 pp, $5.00, Sky Tel. 15 31 and Sky Tel. 15 317, 4th edition;other see also AJB 55.20.22 are these the same?; 
+
+172 55.20(1).68  R. N. Mayall and M. L. Mayall, Skyshooting: Hunting the stars with your camera, New York, The Ronald Press Co., , 170 pp, $3.75, Orion Schafthausen 4 450, other ajb calls the title 'Skyhooting'; 
+
+173 55.20(1).72  J. B. Sidgwick, Amateur Astronomer's Handbook, London, Faber & Faber Ltd., 1955, 580 pp, 63s and $12.50, Endeavour 15 49 and Irish AJ 3 160 and J. Astr. Soc. Victoria 8 22 and JBAA 65 251 and J. British Interplanetary Soc. 14 228 and NAT 1955 149 and Obs 75 128 and Sky Tel. 15 31 and Sky Tel. 15 504, also published New York: The Macmillan Co.;
+
+174 55.20(1).73  J. B. Sidgwick, Observational Astronomy for Amateurs, London, Faber & Faber Ltd., 1955, 358 pp, 50s and $12.50, Endeavour 15 49 and Hemel en Dampkring 54 64 and Irish AJ 3 227 and JBAA 66 37 and J. British Interplanetary Soc. 15 56 and J RAS Canada 50 267 and Obs 76 77 and Sky Tel. 15 176 and Sky Tel. 15 504 and Strolling Astronomer 9 115, also published New York: The Macmillan Co.;
+
+175 55.20(1).74  J. Texereau, Notes pratiques pour les observateurs débutants, Paris, Société astronomique de France, 1955, 64 pp, ffr 340, BSAF 69 394 and La Nature 83 500, 
+
+176 55.21(0).09  T. Henson, Binoculars comma Telescopes and Telescopic Sights, New York, Greenberg Publishers, 1955, 515 pp, $9.50, Astronomia Popular 1 Nr. 2 35 and Sky Tel. 14 292 and Sky Tel. 15 82, 
+
+177 55.21(1).47  J. van Bladel, Les applications du radar à l'astronomie et à la météorologie, Paris, Gauthier-Villars, 1955, 6+147 pp, , Phys. Abstracts (A) 59 90, 
+
+178 55.22(2).90  E. J. Burda ed., Applied Solar Energy Research comma A Directory of World Activity and Bibliography of Significant Literature, Stanford CA, Stanford Research Institute, 1955, 9+298 pp, , Nature 176 804, 
+
+179 55.22(2).91  F. Daniels and J. A. Duffie ed., Solar Energy Research, Madison WI, University of Wisconsin Press, 1955, 290 pp, $4.00, Sky Tel. 15 31 and Sky Tel. 15 174, 
+
+180 55.22(3).105  C. E. K. Mees, The Theory of Photographic Process, New York, The Macmillan Company, 1954, 1133 pp, $21.50, J. Optical Soc. America 45 777, other this is a revised edition; 
+
+181 55.22(3).112  J. Texarau and G. de Vaucouleurs, Astrophotographie d'amateur, , , , , , J. Phys. Radium 16 240, reference AJB 54.22.90;
+
+182 55.22(3).114  , Progress in Photography (1951—54) II, London, The Focal Press, 1955, 335 pp, $10.00, J. Optical Soc. America 45 585, also published New York: American Photographic Book Publishing Co.;
+
+183 55.23(0).30  P. Hood, How Time is Measured, New York, Oxford University Press, 1955, 63 pp, 8s 6d, JBAA 66 36 and Obs 75 266, 
+
+184 55.23(0).80  J. W. Player ed., Britten's Watch and Clockmakers' Handbook comma Dictionary and Guide, , E. & F. Shon Ltd, , , 63s, JBAA 66 152, 15th edition;
+
