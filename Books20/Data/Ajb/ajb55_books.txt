@@ -379,3 +379,221 @@ For volume AJB 55 Index to the Literature of 1955, started 4 Nov 2013, finished,
 
 184 55.23(0).80  J. W. Player ed., Britten's Watch and Clockmakers' Handbook comma Dictionary and Guide, , E. & F. Shon Ltd, , , 63s, JBAA 66 152, 15th edition;
 
+185 55.30(0).01  S. N. Blashko, Lehrbuch der sphärischen Astronomie, Moskau, Technischer Staatsverlag, 1954, 332 pp, 8R., RH 36 239 and RJ Astr. Geod. UdSSR 1956 Nr. 7 9, 2nd edition;in Russian;
+
+186 55.30(0).07  J. Madar, Základy matematického zeměpisu, Prag, Pädagogischer Verlag, , 116 pp, Kčs 10.20, RH 36 282, 
+
+187 55.31(0).19  K. Stumpff, Geographische Ortsbestimmungen; Die Methoden der Orts- und Zeitbestimmung durch Beobachtung der Gestirne, Berlin, VEB Deutscher Verlag der Wissenschaften, 1955, 12+232 pp, DM 20.60, , other Hochschulbücher für Physik Band 18; 
+
+188 55.32(0).01  G. van den Bergh, Periodicity and variations of solar (and lunar) eclipses, Haarlem, H. D. Tjeenk Willink & Zonn N.V., 1955, 263 pp, 110 Gulden and $30.00, Coelum 24 154 and Hemel en Dampkring 53 209 and J RAS Canada 50 44 and Sterne 32 214 and Sky Tel. 15 31 and Sky Tel. 15 266, other in 2 volumes; 
+
+189 55.32(0).08  A. A. Michajlow, Theorie der Finsternisse, Moskau, Techn. Staatsverlag, 1954, 272 pp, 14R. 95 Kop., RH 36 191 and RJ Astr. Geod. UdSSR 1956 Nr. 6 9, 2nd edition;
+
+190 55.33(0).01  A. Achelis, Of Time and the Calendar, , Hermitage House, 1955, 132 pp, $2.75, Sky Tel. 14 292, 
+
+191 55.33(0).11  , Report of the Calendar Reform Committee (Govt. of India), New Delhi, Council of Scientific and Industrial Research, 1955, 12+280 pp, , Obs 76 113, 
+
+192 55.40(0).01  E. G. Barter, Relativity and Reality, , , , , , Strolling Astronomer 10 19, reference AJB 53.40.01;
+
+193 55.40(0).07  E. López, Cosmodynamical Theory; Introducing a new concept of universal gravitation, Havana, , 1955, 120 pp, , , translated  by A. J. Albagli;
+
+194 55.41(0).04  D. Blanuša, Teorija relativnosti, Zagrab, Skolska knjiga, 1955, 201 pp, Din. 200, Glasnik Mat.-Fiz. Astr. (2) 10 118, 
+
+195 55.41(0).24  W. A. Fok, Theorie des Raums comma der Zeit und der Schwerkraft, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 504 pp, 16R. 85 Kop., Priroda 45 Nr. 5 120, in Russian;
+
+196 55.41(0).25  G. Gamow, L création de l'Univers, Paris, Dunod, 1954, 166 pp, ffr. 540, Scientia 90 143, reprint of AJB 53.41.24;translated from English by G. Guéron;
+
+197 55.41(0).39  P. Jordan, Schwerkraft und Weltall, , , , , , Sterne 32 37 and ZfA 40 278 and ZfMG 65 207, reference AJB 52.41.16;
+
+198 55.41(0).54  A. Lichnerowicz, Théories relativistes de la gravitation et de l'électromagnétisme, Paris, Masson, 1955, 12+298 pp, fr. 2800, Proc. Pys. Soc. (A) 68 1205 and Proc. Pys. Soc. (B) 68 979, 
+
+199 55.42(0).09  J. Chazy, Mécanique céleste, , , , , , Math. Rev. 16 1159, reference AJB 53.42.07;
+
+200 55.42(0).34  W. M. Smart, Celestial Mechanics, , , , , , La Nature 83 78 and Urania København 13 75, reference AJB 53.42.41;
+
+201 55.43(0).06  R. A. Lyttleton, The Stability of Rotating Liquid Masses, , , , , , Publ ASP 68 81, reference AJB 53.43.04;
+
+202 55.50(0).04  L. H. Aller, Astrophysics; Nuclear Transformations comma Stellar Interiors and Nebulea, , , , , , Astronomia Popular 1 Nr. 2 36 and Mem SA It (NS) 27 411, reference AJB 54.50.01;
+
+203 55.51(0).01  L. H. Aller, Astrophysics — The Atmospheres of the Sun and Stars, , , , , , Astronomia Popular 1 Nr. 2 36 and Mem SA It (NS) 27 411, reference AJB 53.51.01;
+
+204 55.51(0).44  A. Unsöld, Physik der Sternatmosphären comma mit besonderer Berücksichigung der Sonne, Berlin-Göttingen-Heidelburg, Springer-Verlag, 1855, 9+866 pp, DM 168, Ann d'Astrophys 18 453 and Phys. Blätter 12 474 and Ric. Sci. 25 2976 and Ríše hvězd 36 282 and ZfA 39 137 and Z. Naturforschung 11 a 886, 2nd edition;
+
+205 55.51(0).46  R. v. d. R. Wooley and D. W. N. Stibbs, The Outer Layers of a Star, , , , , , ZfMG 53 190, reference AJB 53.51.40;
+
+206 55.54(0).11  C. de Jager, Ontstaan en levensloop van sterren en planeten, Zutphen, W. H. Thieme, 1955, 154 pp, fl 5.50, Hemel en Dampkring 54 42, 
+
+207 55.54(0).26  O. Struve, Die Entwicklung der Sterne, Moskau, Verlag für ausländische Literatur, 1954, 286 pp, 15R. 20 Kop., RJ Astr. Geod. UdSSR 1956 Nr. 1 131, reprint of AJB 50.54.27;in Russian;other republication of Stellar Evolution; 
+
+208 55.54(0).30  G. J. Whitrow, La structure de l'univers, Paris, Gallimard, 1955, 253 pp, ffr. 650, La Nature 83 374, translated  by G. de Vaucouleurs;
+
+209 55.54(0).31  , Fragen de Kosmogonie Band 4, Moskau, Verlag Akad. Wiss. UdSSR, 1955, 304 pp, 13R. 75 Kop., , in Russian;
+
+210 55.55(0).01  H. Alfvén, On the Origin of the Solar System, , , , , , J RAS Canada 50 124 and Nature 176 274, reference AJB 54.55.01;
+
+211 55.55(0).03  N. P. Barabaschow, Über die Entstehung der Erde und der anderen Himmelskörper, Moskau, Staatsverlag für Kultur und Erziehung, 1955, 107 pp, 1R. 80 Kop., Priroda 45 Nr. 5 120, in Russian;
+
+212 55.60(0).02  G. A. Aristow, Die Sonne, Moskau, Staatl. techn. Verlag, 1954, 40 pp, 60 Kop., , 3rd edition;in Russian;
+
+213 55.60(0).14  A. Massewitsch, Die Geschichte der Sonne, , Verlag <<Junge Garde>>, 1955, 183 pp, 1R. 45 Kop., Priroda 45 Nr. 2 123, in Russian;
+
+214 55.60(0).15  A. G. Massewitsch, Aufbau und Entwicklung der Sonne, Leipzig, Urania-Verlag, 1955, 39 pp, DM 0.40, Astr. Nachr. Berlin-Treptow 7 83, 
+
+215 55.60(0).19  J. M. Šifrinová, Slunce zdroj přírodni energie, Prag, Verlag Naše vojsko, , 116 pp, Kčs 6.40, RH 36 263, translated from Russian;
+
+216 55.60(0).20  M. Waldmeier, Ergebnisse und Probleme der Sonnenforschung, Leipzig, Akademische Verlagsgesellschaft Geest & Portig K.-G., 1955, 11+389 pp, DM 38.00, AN 282 284 and Orion Schaffhausen 5 126 and RH 37 47 and Sky Tel. 15 556 and Sterne 31 251 and Weltraumfahrt 6 127, 2nd edition;
+
+217 55.60(0).23  G. P. Kuiper ed., The Solar System Vol 1 The Sun, , , , , , J. Atmosph. Terr. Phys. 6 229 and Nature 176 5 and Naturwissenschaften 42 135, reference AJB 53.60.15;
+
+218 55.64(0).19  O. C. Mohler, A table of Solar Spectrum Wave Lengths 11984Å to 25578Å, Ann Arbor MI, The University of Michigan Press, 1955, 83 pp, , Obs 76 112 and ZfA 39 63, 
+
+219 55.68(0).17  M. A. Ellison, The Sun and Its Influence, London, Routledge & Kegan Paul Ltd., 1955, 12+235 pp, 21s and $4.50, BSAF 70 251 and Irish AJ 3 227 and JBAA 66 278 and Obs 76 33 and Sky Tel. 15 270 and Sky Tel. 15 405 and Strolling Astronomer 10 18 and Urania København 13 49, also published New York: Macmillan Co.;
+
+220 55.68(0).24  O. Hachenberg, Sonnentätigkeit und Ausbreitung der elektrischen Wellen in der Erdatmosphäre, Leipzig, Urania-Verlag, 1955, 28 pp, DM 0.40, Astr. Nachr. Berlin-Treptow 7 83, 
+
+221 55.70(0).11  G. P. Kuiper, The Atmospheres of the Earth and Planets, , , , , , Naturwissenschaften 42 24, reference AJB 52.70.12;
+
+222 55.70(0).18  P. Moore, Guide to the Planets, London, Eyre & Spottiswoode, 1955, 222 pp, 21s, Astronomia Popular 1 Nr. 2 35 and BSAF 69 400 and Endeavour 14 160 and Irish AJ 3 159 and JBAA 65 313 and Urania Barcelona 40 254 and Wltraumfahrt 6 64, 
+
+223 55.70(0).24  J. Weenen, Gesleept door de Zon, Baarn, Bosch en Keuning, 1953, , , Meteoor 11 8, reprint of AJB 53.05.49;
+
+224 55.71(0).02  H. P. Bhatt, Planetary Tables I comma Tables of Mercury, Ahmedabad, B. J. Institute of Learning & Research, , , 2R., JBAA 65 120, other price in rupees or rubles?; 
+
+225 55.72(0).09  W. I. Gromow, Aus der Vergangenheit der Erde, Moskau, Militärverlag, 1955, 72 pp, 1R. 10 Kop., , in Russian;
+
+226 55.72(0).14  H. Jeffreys, The Earth comma its Origin comma History and Physical Constitution, , , , , , Naturwissenschaften  42 24, reference AJB 53.72.11;
+
+227 55.72(0).23  K. Stumpff, Die Erde als Planet, Berlin-Göttingen-Heildelberg, Springer-Verlag, 1955, 4+176 pp, DM 7.80, , 2nd edition;other Verständliche Wissenschaft Band 42; 
+
+228 55.72(0).25  J. G. Varth, 200 Miles Up, , Ronald Press, , 261 pp, $5.00, Sky Tel. 15 176, 2nd edition;
+
+229 55.72(0).27  G. P. Kuiper ed., The Solar System Vol II comma The Earth as a Planet, , , , , , La Nature 83 246 and Proc. Phys. Soc. (B) 69 1062, 
+
+230 55.72(7).115  K. Rawer, Die Ionosphäre, , , , , , Naturwissenschaft 42 544, reference AJB 52.72.89;
+
+231 55.72(10).207  C. Störmer, The Polar Aurora, Oxford, The Clarendon Press, 1955, 17+403 pp, 55s and $8.80, JBAA 66 113 and NAT 1955 145 and Obs 76 201 and PAT 37 78 and Phys. Abstracts (A) 59 363 and Phys. Blätter 12 86 and Sky Tel. 15 221 and Sky Tel. 15 363, also published New York: Oxford University Press;
+
+232 55.73(2).02  E. C. Abendanon, De buitenkant van de maan III comma De buitenkanten van de aarde en de maan, 's-Gravenhage, C. Blommendaal N.V., 1953, 14+635 pp, , Hemel en Dampkring 54 151, reprint of AJB 53.73.02;other vol 3 of the series; 
+
+233 55.73(2).11  R. A. Gallant, Exploring the Moon, Garden City, , 1955, 63 pp, $2.00, Sky Tel. 15 83, 
+
+234 55.73(2).14  J. Klepešta and F. Fischer, Povrch Měsíce, Prag, Pädagogischer Verlag, , 4 pp, Kčs 7.40, RH 36 282, 
+
+235 55.73(2).18  P. Moore, A Guide to the Moon, , , , , , Urania Barcelona 40 255 and Weltraumfahrt 6 62, reference AJB 53.73.21;
+
+236 55.73(2).34  H. P. Wilkins, Our Moon, , , , , , Sky Tel. 15 129 and Urania Barcelona 40 255 and Wletraumfahrt 6 26, reference AJB 54.73.18;
+
+237 55.73(5).01  H. P. Wilkins and P. Moore, The Moon: A Complete Description of the Surface of the Moon comma containing the 300-inch Wilkins Lunar Map, London, Faber & Faber Ltd, 1955, 388 pp, 63s and $12.00, Irish AJ 4 32 and JBAA 66 177 and J. British Interplanetary Soc. 15 124 and Mem SA It (NS) 27 413 and Sky Tel. 15 176 and Sky Tel. 15 265 and Sternenbote 8 24 and Urania Barcelona 41 71 and Urania København 13 20, also published New York: Macmillan Co.;
+
+238 55.74(0).05  W. Büdeler, Mars, Murnau, Verlag Sebastian Lux, 1954, 56 pp, , Weltraumfahrt 6 65, 
+
+239 55.74(0).06  M. Daisomont, Que savons nous des Martiens?, Ostende, Selbstverlag, 1955, 12 pp, bfr 12, Ciel et Terre 71 111 and Gaz astr 37 14 and Orion Schaffhausen 4 368, 
+
+240 55.74(0).25  Noname Nelson, There is Life on Mars, London, Werner Laurie, 1955, , 12s 6d, Spaceflight 1 43, 
+
+241 55.74(0).35  G. de Vaucouleurs, Physics of the Planet Mars, , , , , , Astronomia Popular 1 Nr. 2 35 and Endeavour 15 103 and Hemel en Dampkring 54 207 and Obs 76 30 and Strolling Astronomer 9 113, reference AJB 54.74.39;
+
+242 55.74(0).36  A. Wallenquist, Planeten Mars, Stockholm, Almqvist & Wiksell, 1955, 104 pp, Schw. Kr. 13, NAT 1955 146 and PAT 35 79 and Urania Köbenhavn 13 20, 
+
+243 55.80(0).14  J. G. Porter, Comets and Meteor Streams, , , , , , J. Optical Soc. America 45 231, reference AJB 52.80.12;
+
+244 55.80(0).16  N. B. Rchter, Statistik und Physik der Kometen, , , , , , JBAA 66 182 and Meteoor 11 8 and Říše hvězd 36 144 and ZfA 40 79, reference AJB 54.80.24;
+
+245 55.80(0).17  F. J. Sigel, Die Kometen, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 71 pp, 1R. 5 Kop., Priroda 45 Nr. 4 122, 2nd edition;in Russian;
+
+246 55.80(0).20  K. Wurm, Die Kometen, , , , , , La Nature 83 293 and Meteoor 11 8, reference AJB 54.80.31;
+
+247 55.82(0).21  V. Guth, Katalog fotografovaných stop meteorů, Prag, Akademie-Verlag, 1954, 38 pp, Kčs 7.20, , 
+
+248 55.82(0).45  A. C. B. Lovell, Meteor Astronomy, , , , , , J. Atmosph. Terr. Phys. 7 109 and J RAS Canada 50 126 and Nature 176 135, reference AJB 54.82.38;
+
+249 55.83(0).18  E. L. Krinow, Himmelssteine, Leipzig, Urania-Verlag, 1954, 14 pp, DM 1.00, Astr. Nachr. Berlin-Treptow 7 95, 
+
+250 55.83(0).19  E. L. Krinow, Grundlagen der Meteoritik, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 392 pp, 14R. 80 Kop., Priroda 45 Nr. 2 122, in Russian;
+
+251 55.91(0).22  J. Larink and A. Bohrman and H. Kox and I. Groeneveld and H. Klauder ed., Katolog von 3356 schwachen Sternen für das Äquinoktium 1950 comma beobachtet an den Meridiankreisen der Sternwarten Hamburg-Bergedorf und Heidelberg-Königstuhl, Hamburg-Bergedorf, Verlag der Sternwarte, 1955, 21+69 pp, , , 
+
+252 55.91(0).22  J. M. Baldwin ed., Meobourne Astrographic Catalog 1900 comma Zones -71° and -72°, Paris, International Astronomical Union, 1955, 15+257 pp, , , 
+
+253 55.91(0).25  J. Hass ed., Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 jahrhunderts Abteilung II comma Der südliche Sternhimmel Band 13 comma 12ʰ Rektaszension, Karlsruhe, Kommisionverlag G. Braun, 1955, 11+441 pp, DM 30.0, , 
+
+254 55.91(1).28  A. Bečvář, Altas Coeli Skalnaté Pleso 1950.0, , , , , , Sterne 32 80, reference AJB 51.91.23;
+
+255 55.91(1).29  V. de Callataÿ, Atlas du Ciel, Bruxelles, Les Editions de Visscher, 1955, 160 pp, bfrs. 450, Coelum 24 60 and Endeavour 15 222 and Gaz astr 37 52 and Hemel en Dampkring 54 207 and Obs 76 112 and Sky Tel. 15 364 and Sterne 32 250, other forward by E. Delporte; 
+
+256 55.91(1).31  , Drehbare Sternkarte <<Sirius>>, Bern, Verlag der Schweizersischen Astronomischen Gesellschaft, 1955, , Sfr. 33.00, Orion Schaffhausen 4 497 and Sternenbote 7 108, other price for a small model is Sfr. 7.50; 
+
+257 55.98(0).07  A. Dauvillier, Le magnétisme des corps céleste Tome 1, , , , , , La Nature 83 165 and Scientia 90 269, reference AJB 54.98.05;
+
+258 55.110(0).03  B. W. Kukarkin and P. P. Parenago and J. I. Jefremow and P. N. Cholopow, Siebenter Nachtrag zur ersten Ausgaabe des Generalkatalogs Veränderlicher Sterne, Moskau, Verlag Akad. Wiss. UdSSR, 1955, 72 pp, , , in Russian;
+
+259 55.111(3).98  L. Campbell, Studies of Long-Period Variables, Cambridge MA, American Association of Variable Star Observers, 1955, 247 pp, $6.00, J RAS Canada 50 185 and Publ ASP 69 174 and Sky Tel. 15 221 and Sky Tel. 15 269, 
+
+260 55.122(1).39  G. A. Gursadjan, Fragen der Dynamik der planetarischen Nebel, Erewan, Verlag Akad. Wiss. Armen. Sowjetrepublik, 1954, 212 pp, 7R. 50 Kop., RJ Astr. Geod. UdSSR 1956 Nr. 3 55, in Russian;
+
+261 55.126(1).08  S. E. Chajkin, Radioastronomie, Moskau, Verlag <<Snanije>>, 1954, 64 pp, 1R. 20 Kop., RJ Astr. Geod. UdSSR 1956 Nr. 4 54, in Russian;
+
+262 55.126(1).27  J. L. Pawsey and R. N. Bracewell, Radio Astronomy, Oxford, Clarendon Press, 1955, 10+361 pp, 55s and $8.80, Ann d'Astrophys 18 453 and Endeavour 15 48 and La Nature 83 500 and Obs 76 35 and Proc. Phys. Soc (B) 69 414 and Publ ASP 68 173 and Sky Tel. 15 31 and Sky Tel. 15 173, also published New York: Oxford University Press;
+
+263 55.126(1).28  I. S. Schklowskij, Radioastronomie, Moskau, Staatsverlag für technisch-theoretische Literatur, 1955, 296 pp, 5R. 45 Kop., Priroda 45 Nr. 2 122 and RH 37 71 and Urania Kraków 27 120, 2nd edition;in Russian;
+
+264 55.127(0).01  A. Dauvillier, Les rayons cosmiques dans leurs rapports avec l'électricité atmosphérique comma la météorologie comma le géomagnétisme et l'astronomie, , , , , , La Nature 83 204 and J. Atmosph. Terr. Phys. 7 296 and J. Phys. Radium 16 736, reference AJB 54.127.07;
+
+265 55.127(0).40  W. Heisenberg ed., Kosmische Strahlung, , , , , , ZfA 40 141, reference AJB 53.127.32;
+
+266 55.127(0).41  J. G. Wilson ed., Progress in Cosmic Ray Physics II, Amsterdam, North-Holland Publishing Co., 1954, 11+322 pp, 45 fl., Nature 176 1138, also published New York: Interscience Publishers Inc.;other corrected entry for AJB 54.127.55; 
+
+267 55.127(0).42  W. A. Ambarzumjan ed., Publikationen der dritten Konferenz über Fragen der Kosmogonie vom 14—15 Mai 1953 comma Die Entstehung der kosmischen Strahlung, Moskau, Verlag Akad. Wiss. UdSSR, 1954, 319 pp, 15R., RJ Astr. Geod. UdSSR 1956 Nr. 1 10, in Russian;
+
+268 55.130(0).06  P. Tardi and B Laclavère, Traité de Géodésie Tome II Astronomie Géodésique de Positions, Paris, Gautier-Villars, 1954, 366 pp, fr. 3000, Ciel et Terre 71 114 and Deutsche Hydrogr. Z. 8 77 and ZfMG 65 454, other tome 1 Triangulations was AJB 54.130.10; 
+
+269 55.133(0).04  M. Blewitt, Celestial Navigation for Yachtsmen, , Iliffe, 1955, 64 pp, 6s, J. Inst. Navigation 9 245 and Obs 75 225, 
+
+270 55.133(0).06  S. M. Burton, The Art of Astronomical Navigation, , Burton's Navigational Publications Ltd., 1955, 7+146 pp, 18s 6d, Deutsche Hydrogr. Z. 8 257 and J. Inst. Navigation 9 241, 
+
+271 55.133(0).08  I.. Capasso, Problemi e complementi di navigazione, Milano, Hoepli, 1955, 12+283 pp, L. 2200, Coelum 23 90, 
+
+272 55.133(0).10  C. H. Cotter, The Elements of Navigation, London, Isaac Pitman, , 545 pp, , , 
+
+273 55.133(0).13  G. E. Earl and C. C. Boylan, Munro's Modern Navigational Aids, , James Munro & Co., 1955, 177 pp, 15s, J. Inst. Navigation 9 244, 
+
+274 55.133(0).25  , Diagrams for Arctic Polar Navigation, , French Navy Hydrographic Office, 1955, 4 tables, , J. Inst. Navigation 9 242, 
+
+275 55.133(0).26  , Admiralty Manual of Navigation III, London, H.M. Stationary Office, 1955, 438 pp, 20s, J. Inst. Navigation 9 468, 
+
+276 55.134(0).01  E. Białoborski, Sztuczny ksieżyc, Warshau, Iskry, 1955, 164 pp, , AJ UdSSR 33 364, 
+
+277 55.134(0).03  F. M. Branley, Experiments in the Principles of Space Travel, New York, Thomas Y. Crowell Co., 1955, 119 pp, $2.00, Sky Tel. 15 221 and Sky Tel. 15 361, 
+
+278 55.134(0).04  W. von Braun and W. Ley and F. L. Whipple, Die Eroberung des Mondes, Frankfurt/Main, S. Fischer Verlag, 1954, 124 pp, DM 13.80, Phys. Blätter 12 281 and Weltraumfahrt 6 25, other illustrations by C. Bonestall comma F. Reeman comma R. Klep; 
+
+279 55.134(0).06  E. Burgess, Frontier to Space, London, Chapman & Hall, 1955, 190 pp, 21s and 4.50, Astronautics 2 132 and Weltraumfahrt 6 92, 2nd edition;also published New York: Macmillan Co.;
+
+280 55.134(0).07  M. Caidin, Wir stoßen in den Weltraum vor, Berlin, Lothar Blanvalet Verlag, 1955, 283 pp, DM 14.80, J. Astronautics 3 48, 
+
+281 55.134(0).08  A. C. Clarke, Going into Space, New York, Harper & Brothers, 1955, , , J. Astronautics 3 48, 
+
+282 55.134(0).09  P. E. Cleator, Into Space, , George Allen & Unwin, , 159 pp, 15s, Spaceflight 1 44, 
+
+283 55.134(0).10  P. E. Cleator, Aufbruch in den Weltraum, Braunschweig, Friedr. Vieweg & Sohn, 1955, 155 pp, DM 12.80, Phys. Blätter, edited by H. Gartmann;other compare to AJB 55.134.09; 
+
+284 55.134(0).16  G. Eichler, Zum Problem der Weltraumfahrt — Utopie und Wirklichkeit, Meißen-Siebeneichen, Wissenschaftliche und Methodische Abteilung für kulturelle Aufklärung, 1955, 66 pp, , Astr. Nachr Berlin-Treptow 7 81, 
+
+285 55.134(0).20  H. Haber, Menschen comma Raketen und Planeten, Hamburg, Blüchert Verlag, 1955, 312 pp, DM 14.80, Sternenbote 7 84, 
+
+286 55.134(0).30  H. E. Newell jr., High Altitude Rocket Research, , , , , , Archiv Meteorol. Geophys. Bioklimatol (A) 8 139, reference AJB 53.134.19;
+
+287 55.134(0).31  H. Oberth, Menschen im Weltraum, , , , , , Weltraumfahrt 6 28, reference AJB 54.134.28;
+
+288 55.134(0).33  H. Oberth, Mensen in het Wereldruim, Amsterdam, C. de Boer jr., 1955, 238 pp, f 8.50, Hemel en Dampkring 54 63, 
+
+289 55.134(0).39  M. W. Rosen, The Viking Rocket Story, New York, Harper & Brothers, 1955, 242 pp, $3.75, Astronomia Popular 1 Nr. 2 36 and Sky Tel. 14 425 and Sky Tel. 14 505, 
+
+290 55.134(0).46  A. A. Sternfeld, Interplanetare Flüge, Moskau, Techn. Staatsverlag, 1955, 56 pp, 90 Kop., , in Russian;
+
+291 55.134(0).47  G. V. E. Thompson, Naar Maan en Mars, Amsterdam, Uitgeverij De Kern, 1955, 135 pp, f 4.25, Hemel en Dampkring 54 63, 
+
+292 55.134(0).48  H. P. Wilkins, Clouds comma Rings and Crocodiles: By Spaceship round the Planets, London, George G. Harrap & Co., 1955, 127 pp, 7s 6d, JBAA 65 253, 
+
+293 55.134(0).49  R. L. F. Boyd and M. J. Seaton and H. S. W. Massey ed., Rocket Exploration of the Upper Atmosphere, , , , , , Arch. Meteorol. Geophys. Klimatol. (A) 8 524 and BSAF 69 444 and J. Atmosph. Terr. Phys. 6 227 and Phil. Mag. (7) 46 109 and Phys. Blätter 12 189 and Weltraumfahrt 6 25, reference AJB 54.134.46;
+

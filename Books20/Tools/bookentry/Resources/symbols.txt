@@ -52,6 +52,7 @@
 ó, Small letter o with acute
 Õ, Capital letter o with tilde
 õ, Small letter o with tilde
+Ř, Capital letter r with caron
 ř, Small letter r with caron
 Ś, Capital letter S with acute
 ś, Small letter s with acute
