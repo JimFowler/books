@@ -173,6 +173,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       else:
          self.bf.writeFile()
 
+      self.statusbar.showMessage('Saving file ' + self.bf.getBaseName())
+      QTimer.singleShot(10000, self.statusbar.clearMessage  )
+
 
    def saveFileAs(self):
       """Ignore dirty entries and save the file as..."""

@@ -1,3 +1,14 @@
+2013-12-15  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/entryselect.py (EntrySelect.mouseDoubleClick):
+	Added ability to double click on an insert entry instead of
+	clicking the OK button.
+
+2013-12-03  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.saveFile): Added status
+	bar message on save file command.
+
 2013-11-30  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Collecting.txt: Added www.collectorsfolio.com

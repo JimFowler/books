@@ -25,7 +25,12 @@ class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
         self.okButton.released.connect(self.returnEntry)
         self.cancelButton.released.connect(self.returnNone)
         self.textWindow.cursorPositionChanged.connect(self.highlight)
-
+        self.textWindow.mouseDoubleClickEvent = self.mouseDoubleClick
+        
+    def mouseDoubleClick(self, mouseEvent):
+        """Override the textBrowser's mouseDoubleClickEvent() function
+        so we can choose the entry by double clicking."""
+        self.returnEntry()
 
     def setText(self, text):
         self.textWindow.setText(text)
