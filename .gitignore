@@ -1,7 +1,6 @@
 *~
 .*~
 *.pyc
-ui_*.py
 Makefile.in
 Makefile.orig
 config.status

@@ -1,2 +1,4 @@
 build
 MANIFEST
+bookentry/ajb_rc.py
+bookentry/ui_*.py
