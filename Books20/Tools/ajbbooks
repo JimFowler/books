@@ -57,7 +57,7 @@ def main():
 
    app = QApplication(sys.argv)
    app.setApplicationName('AJB Book Entry')
-   app.setWindowIcon(QIcon(':/Resources/icon_ajb.svg'))
+   app.setWindowIcon(QIcon(':/icon_ajb.svg'))
    
    form = mw.BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 

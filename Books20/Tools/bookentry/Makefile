@@ -1,5 +1,5 @@
 #
-# Makefile for bookenty user interfaces and resources files
+# Makefile for bookentry user interfaces and resources files
 #
 #  J. R. Fowler 2013
 #
@@ -24,24 +24,24 @@ all: $(USER_INTERFACES) $(RESOURCE_FILES)
 #
 # Convert the XML designer files to Python files
 #
-ui_BookEntry.py: ui_BookEntry.ui
-	$(PYUIC) -o ui_BookEntry.py ui_BookEntry.ui
+ui_BookEntry.py: designer/ui_BookEntry.ui
+	$(PYUIC) -o ui_BookEntry.py designer/ui_BookEntry.ui
 
-ui_HeaderEntry.py: ui_HeaderEntry.ui
-	$(PYUIC) -o ui_HeaderEntry.py ui_HeaderEntry.ui
+ui_HeaderEntry.py: designer/ui_HeaderEntry.ui
+	$(PYUIC) -o ui_HeaderEntry.py designer/ui_HeaderEntry.ui
 
-ui_OrigStr.py: ui_OrigStr.ui
-	$(PYUIC) -o ui_OrigStr.py ui_OrigStr.ui
+ui_OrigStr.py: designer/ui_OrigStr.ui
+	$(PYUIC) -o ui_OrigStr.py designer/ui_OrigStr.ui
 
-ui_EntrySelect.py: ui_EntrySelect.ui
-	$(PYUIC) -o ui_EntrySelect.py ui_EntrySelect.ui
+ui_EntrySelect.py: designer/ui_EntrySelect.ui
+	$(PYUIC) -o ui_EntrySelect.py designer/ui_EntrySelect.ui
 
 
 #
 # Convert the XML resource files to Python files
 #
-ajb_rc.py: ajb_rc.qrc
-	$(PYRCC) -o ajb_rc.py ajb_rc.qrc
+ajb_rc.py: Resources/ajb_rc.qrc
+	$(PYRCC) -o ajb_rc.py Resources/ajb_rc.qrc
 
 
 #

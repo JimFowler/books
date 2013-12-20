@@ -1,3 +1,10 @@
+2013-12-19  Jim Fowler  <jrf@Biblion>
+
+	* Tools/setup.py: Modified setup for new names.  Had to move
+	symbols.txt out of Resources. Moved designer-qt4 files to a
+	subdirectory called designer. Tested installation and source
+	distribution.
+
 2013-12-15  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/entryselect.py (EntrySelect.mouseDoubleClick):

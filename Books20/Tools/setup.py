@@ -8,7 +8,7 @@ setup( name='BookEntry',
        url='http://het.as.utexas.edu/jrf/20thCentury.html',
        platforms=['Ubuntu 12.04'],
        packages=['bookentry'],
-       scripts=['BookEntry'],
+       scripts=['ajbbooks'],
        package_data={'bookentry': ['symbols.txt']},
        )
 
