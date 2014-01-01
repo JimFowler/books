@@ -1,3 +1,29 @@
+2014-01-01  Jim Fowler  <jrf@Biblion>
+
+	* Docs/world_history_notes.tex: added to Notes.tex inorder
+	to keep some notes about world history.
+
+2013-12-24  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: Added H with dot below.
+
+2013-12-23  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.setMaxEntryNumber):
+	When entries are added to a new file, the prev/next buttons
+	become active.
+
+	* Tools/ajbbooks: added version flag
+
+2013-12-22  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: Added 'power X', arcseconds,
+	and arcminutes.
+
+2013-12-21  Jim Fowler  <jrf@Biblion>
+
+	* Tools/ajbbooks (getargs): Added version flag to ajbbooks.
+
 2013-12-19  Jim Fowler  <jrf@Biblion>
 
 	* Tools/setup.py: Modified setup for new names.  Had to move
