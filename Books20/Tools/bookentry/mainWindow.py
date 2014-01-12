@@ -117,6 +117,14 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if n < 0:
          n = 0
       self.maxEntryNumber = n
+
+      if self.maxEntryNumber == 0:
+         self.prevButton.setEnabled(False)
+         self.nextButton.setEnabled(False)
+      else :
+         self.prevButton.setEnabled(True)
+         self.nextButton.setEnabled(True)
+
       self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
 
    #
@@ -311,6 +319,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.EntryToDisplay(self.tmpEntry)
       self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
+
+   def newprintEntry(self):
+      """Print a postscript file of the current display."""
+      pp.pprint(self.bf.getEntry(self.curEntryNumber))
 
    def printEntry(self):
       """Print a postscript file of the current display."""
@@ -867,19 +879,24 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    # Help menu functions
    #
+   def helpString(self):
+      helpStr = """<b>AJB Book Entry</b> v {0}
+      <p>Author: J. R. Fowler
+      <p>Copyright &copy; 2012
+      <p>All rights reserved.
+      <p>This application is used to create and visualize
+      the text files with the books found in the annual
+      bibliographies of <b>Astronomischer Jahresbericht</b>.
+      <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
+         __version__, platform.python_version(),
+         QT_VERSION_STR, PYQT_VERSION_STR,
+         platform.system())
+
+      return helpStr
+      
    def helpAbout(self):
-      QMessageBox.about(self, 'About BookEntry',
-                """<b>AJB Book Entry</b> v {0}
-                <p>Author: J. R. Fowler
-                <p>Copyright &copy; 2012
-                <p>All rights reserved.
-                <p>This application is used to create and visualize
-                the text files with the books found in the annual
-                bibliographies of <b>Astronomischer Jahresbericht</b>.
-                <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
-            __version__, platform.python_version(),
-            QT_VERSION_STR, PYQT_VERSION_STR,
-            platform.system()))
+      hstr = self.helpString()
+      QMessageBox.about(self, 'About BookEntry', hstr )
 
 
 

@@ -26,9 +26,9 @@ __version__ = '1.0'
 def getargs():
    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
 
-   #parser.add_argument('-V', '--verbose',
-   #                    help='provide verbose output,',
-   #                    action='store_true')
+   parser.add_argument('-V', '--version',
+                       help='provide version info,',
+                       action='store_true')
    parser.add_argument( '-i', '--input', type=str,
                         help='read the file INPUT for entries',
                         action='append')
@@ -62,6 +62,11 @@ def main():
    form = mw.BookEntry()
    QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
                    form.setFocusChanged)
+
+   if args.version:
+      hstr = form.helpString()
+      form.helpAbout()
+      sys.exit(0)
 
    if args.volume is not None:
       form.setDefaultVolumeNumber(args.volume[0])
