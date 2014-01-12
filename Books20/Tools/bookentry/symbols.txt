@@ -32,6 +32,8 @@
 ê, Small letter e with circumflex
 ę, Small letter e with cedilla
 ē, Small letter e with macron
+Ḥ, Capilal letter H with dot below
+ḥ, small letter h with dot below
 Ï, Capital letter I with diaresis
 ï, Small letter i with diaresis
 ì, Small letter i with grave
@@ -84,10 +86,13 @@
 £, British pound sign
 ¥, Japan Yen sign
 °, Degree symbol
+ˊ, Single acute accent
+˝, Double acute accent
 ʰ, Right ascension hours
 ᵐ, Right ascension minutes
 ˢ, Right ascension seconds
 ᵉ, French raised letter e
+ˣ, power x
 –, En dash
 —, Em dash
 
