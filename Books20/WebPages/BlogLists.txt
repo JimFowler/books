@@ -48,6 +48,7 @@
   <br><a href="http://thebooker.tumblr.com">The Booker</a>
   <br><a href="http://booksandtea.tumblr.com">Books and Tea</a>
   <br><a href="http://adventuresofnuu.tumblr.com">Adventures of Nuu</a>
+  <br><a href="http://bookmania.me/">Book Mania!</a>
 
 
 </td>
