@@ -1,0 +1,571 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 52 Index to the Literature of 1952, started 1 Feb 2014, finished 28 Mar 2014, proofread 4 April 2014
+
+
+1 52.01(0).09  D. R. Hartree, Numerical Analysis, Oxford, Clarendon Press, 1952, 14+287 pp, $6.00, Math. Rev. 14 690, 
+
+2 52.01(0).20  H. Mineur, Techniques de cacul numérique à l'usage des mathématiciens comma astronomes comma physiciens et ingénieurs, Paris-Liège, Librairie Polytechnique Ch. Béranger, 1952, 22+605 pp, fr. 7300, Math. Rev. 15 557, 
+
+3 52.02(0).25  L. Landau and E. Lifshitz, The Classical Theory of Fields, Cambridge MA, Addison-Wesley Press, 1951, 354 pp, $7.50, J RAS Canada 47 96, translated from Russian by M. Hammermesh;
+
+4 52.02(0).31  C. E. Moore, Atomic Energy Levels as derived from the analyses of optical spectra: Vol 2 The Spectra of Chromium comma  Manganese comma Iron comma Cobalt comma Nickel comma Copper comma Zinc comma Gallium comma Germanium comma Arsenic comma Selenium comma Bromine comma Krypton comma Rubidium comma Strontium comma Yttrium comma Zirconium comma and Niobium, Washington DC, , 1952, 31+230 pp, , , other Circ. National Bureau of Standards 467; 
+
+5 52.02(0).32  C. E. Moore, An Ultraviolet Multiplet Table: The Spectra of Chromium comma  Manganese comma Iron comma Cobalt comma Nickel comma Copper comma Zinc comma Gallium comma Germanium comma Arsenic comma Selenium comma Bromine comma Krypton comma Rubidium comma Strontium comma Yttrium comma Zirconium comma and Niobium, Washington DC, , 1952, 5+115 pp, , J. Optical Soc. America 42 861, other Circ. National Bureau of Standards 488 section 2; 
+
+6 52.02(0).38  V. Ronchi, Storia della Luce, Bologna, Fondazione <<Giorgio Ronchi>> Zaninchelli, 1952, , , Mem SA It (NS) 23 247, 2nd edition;
+
+7 52.02(0).40  A. N. Saidel and W. K. Prokofjew and S. M. Rajskij, Tafeln der Spektrallinien, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1952, 560 pp, 24R. 40 Kop., , in Russian;
+
+8 52.03(0).01  C. Attwood, Advanced Five-Figure Mathematical Tables, London, Macmillan & Co. Ltd., 1951, 5+69 pp, 4s 6d, Nature 170 641 and Proc. Phys. Soc. (A) 65 678, 
+
+9 52.03(0).02  P. Hustinx, Logarithmentafels, Haarlem, H. Stam, 1950, , f. 1.50, Hemel en Dampkring 50 113, 
+
+10 52.03(0).03  A. J. Thompson, Logarithmetica Brittannica comma being a standard table of logarithms to twenty decimal places: Part II Numbers 20000 to 30000 together with a general introduction, Cambridge, University Press, 1952, 213 pp, , Math. Rev. 14 798, 
+
+11 52.03(1).07  L. Couffignal, Les machines à penser, Paris, Les Editions de Minuit, 1952, 158 pp, , Math. Rev. 14 1021, 
+
+12 52.03(1).12  G. A. Korn and T. M. Korn, Electronic Analog Computers, New York-London, McGraw-Hill, 1952, 378 pp, $7.00 and 59s 6d, Proc. Phys. Soc. (B) 66 340 and Science 116 371, 
+
+13 52.03(1).20  F. A. Willers, Mathematische Maschinen und Instrumente, Berlin, Akademie-Verlag, 1951, 318 pp, DM 34.00, Österreichische Z. f. Vermessungswesen 40 156 and Phys. Blätter 8 189, 
+
+14 52.03(0).25  , Review of Electronic Digital Computers comma joint AIEE-IRE Computer Conference, New York, American Institute of Electrical Engineers, 1952, 114 pp, $3.50, , 
+
+15 52.05(0).01  T. A. Agekjan, Das Sternenall, Leningrad, Verlag Shdanow-Staatsuniv., 1952, 175 pp, 3R. 45 Kop., , in Russian;
+
+16 52.05(0).02  D. Alter and C. H. Cleminshaw, Pictorial Astronomy, New York, Thomas Y. Crowell Co., 1952, 292 pp, $4.50, Sky Tel. 11 280 and Sky Tel. 12 76 and Strolling Astronomer 6 146, 
+
+17 52.05(0).03  G. Armellini, I fondamenti scientifici della Astronomia, Milano, Ulrico Hoepli, 1952, 15+345 pp, Lire 2000, Coelum 20 89 and Mem SA It (NS) 23 248, 2nd edition;
+
+18 52.05(0).04  R. H. Baker, An Introduction to Astronomy, New York, D. Van Nostrand, 1952, 306 pp, $4.00, Sky Tel. 11 280 and Sky Tel. 12 132, 4th edition;
+
+19 52.05(0).05  E. A. Beet, The Sky and its Mysteries, London, G. Bell & Sons, 1952, 238 pp, 15s, JBAA 63 154 and J. British Interplanetary Soc. 12 96, 
+
+20 52.05(0).06  R. Brandt, Himmelswunder im Feldstecher, Leipzig, J. A. Barth, 1952, 4+108 pp, DM 3.60, Hemel en Dampkring 51 126 and JBAA 63 81 and Sterne 29 31 and Sternenwelt 5 35, 3rd edition;
+
+21 52.05(0).07  G. Cecchini, Il Cielo; Lucie e Ombre nell'Universo, Torino, Unione Tipografico Editrice Torinese, 1952, 20+16+1148 pp, Lire 13500, Coelum 21 58 and Mem SA It (NS) 24 97, other 2 volumes; 
+
+22 52.05(0).08  C. A. Chant, Notre Univers Merveilleux, Quebec, Le Société Royale d'Astronomie du Canada, 1952, 281 pp, $3.00, J RAS Canada 46 110, translated  by P.-H. Nadeau;
+
+23 52.05(0).09  U. Clarke, The Heavens are Telling, New York, Acorn House, 1951, 128 pp, $2.95, Sky Tel. 12 18, other revised entry; reference AJB 51.05.09;
+
+24 52.05(0).10  P. Collinder, Världar i rymden, , , , , , NAT 1952 37, reference AJB 51.05.10;
+
+25 52.05(0).12  A. Dauvillier, La physique cosmique, Paris, E. Flammarion, , 246 pp, , BSAF 66 84, 
+
+26 52.05(0).13  M. Davidson, From Atoms to Stars, London, Hutchinson's Scientific and Technical Publications, 1952, 280 pp, 18s, Irish AJ 2 30 and JBAA 62 208 and Nature 170 596 and Sky Tel. 11 147 and Sky Tel. 11 307, 3rd edition;also published New York: Macmillan Co.;
+
+27 52.05(0).14  E. J. Dijksterhuis, De mechanisering van het wereldbeeld, Amsterdam, J. M. Meulenhoff, 1950, 590 pp, f. 16.50, Hemel en Dampkring 50 138, 
+
+28 52.05(0).15  D. S. Evans, Teach Yourself Astronomy, London, English Universities Press Ltd., 1952, 9+182 pp, 6s, JBAA 64 408 and Obs 74 87, 
+
+29 52.05(0).16  K. Ferrari d'Occhieppo, Kunde vom Wetall, Wunen, Verlag Herold, 1952, 272 pp, DM 17.00, Hemel en Dampkring 50 155 and Obs 73 31 and Sternenwelt 4 236, 
+
+30 52.05(0).17  A. Ferretti-Torricelli, Dalla Terra alla Galassia, Brescia, <<La Scuola>>, 1951, 72 pp, Lire 130, Coelum 20 28 and Heelal 8 51, 
+
+31 52.05(0).18  A. Ferretti-Torricelli, Guardare il cielo quale si mostra, Milano, U. Hoepli, 1952, 32 pp, Lire 200, Coelum 20 58, 
+
+32 52.05(0).19  W. G. Fessenkow, Dnešní představy o vesmíru, Prag, Osvěta, , 316 pp, 80 Kčs, , reprint of AJB 49.05.19;translated from Russian;
+
+33 52.05(0).20  V. A. Firsoff, Our Neighbour Worlds, London, Hutchinson's Scientific and Technical Publications, 1952, 336 pp, 25s, JBAA 63 153 and J. British Interplanetary Soc. 12 94 and Mitt. Planetenbeobachter 6 30 and Sky Tel. 12 76 and Sky Tel. 12 216 and Sky Tel. 12 296 and Strolling Astronomer 8 72 and Vega Nr. 4 16, also published New York: Philosophical Library;
+
+34 52.05(0).21  J. Gauzit, Les grands problèmes de l'Astronomie, Paris, Dunod, 1951, 174 pp, , Ann. Guébhard-Séverine 29 140 and Heelal 8 50, 
+
+35 52.05(0).22  J. C. Hickey, Introducing the Universe, London, Eyre & Spottiswoode, 1952, 159 pp, 10s 6d, JBAA 63 43, 
+
+36 52.05(0).23  J. A. Hynek, Astrophysics — A Topical Symposium, , , , , , Coelum 20 149 and Phys. Blätter 10 90 and Proc. Phys. Soc. (B) 66 343 and Sternenwelt 5 33, reference AJB 51.05.17;
+
+37 52.05(0).24  M. Iwanowskij, Die Erforschung ferner Welten, Moskau-Leningrad, Staatsverlag für Jugendliteratur, 1951, 416 pp, , AJ UdSSR 29 231, in Russian;
+
+38 52.05(0).25  M. Iwanowskij, Cesty ke hvězdám, Prag, Mladá fronta, , 220 pp, 64 Kčs, , reprint of AJB 50.05.23;translated from Russian;
+
+39 52.05(0).26  H. Spencer Jones, General Astronomy, , , , , , Heelal 8 49 and Proc. Phys. Soc. (B) 65 392 and Sky Tel. 12 17, reference AJB 51.05.18;
+
+40 52.05(0).27  P. van de Kamp, Basic Astronomy, New York, Random House, 1952, 15+400 pp, $3.75, BSAF 66 405 and JBAA 63 44 and J RAS Canada 47 34 and Obs 72 247 and Publ ASP 65 56 and Sky Tel. 11 227 and Sky Tel. 12 16, 
+
+41 52.05(0).29  H. Kienle, Der gestirnte Himmel über dir: Aufsätze und Vortäge vom Wesen astronomischer Forschung, Wiesbaden, Verlag für angewandte Wissenschaften, 1952, 252 pp, DM 9.80, Coelum 20 124 and Sternenwelt 4 155, 2nd edition;
+
+42 52.05(0).30  H. Kienle, Atome comma Sterne comma Weltsysteme, Wiesbaden, Verlag für angewandte Wissenschaften, 1952, 51 pp, DM 4.80, Sternenwelt 4 195 and Weltraumfahrt 1952 129, 
+
+43 52.05(0).31  W. S. Krogdahl, The Astronomical Universe, New York, The Macmillan Co., 1952, 17+599 pp, $6.25, J RAS Canada 46 170 and Publ ASP 64 327 and Sky Tel. 11 174 and Sky Tel. 11 306, 
+
+44 52.05(0).32  P. J. M. Lenz, Die Himmel rühmen... comma Bilder vom Weltall, Insbruck-Wien, Tyrolia-Verlag, 1950, 662 pp, , Sternenwelt 4 75, 7th edition;other list as 6th - 7th edition; 
+
+45 52.05(0).33  W. Malsch, Astronomische Abende, Karlsruhe, Verlag Malsch & Vogel, 1952, 205 pp, , , 
+
+46 52.05(0).32  L. Mattersdorf, Insight into Astronomy, New York, Lantern Press Inc., 1952, 223 pp, $3.50, JBAA 63 81 and J RAS Canada 47 35 and Sky Tel. 12 18 and Sky Tel. 12 104 and Strolling Astronomer 6 176, also published Cambridge MA: Sky Publishing Corporation;
+
+47 52.05(0).35  C. S. Mundt, Looking at the Stars, Dubuque IA, W. C. Brown Co., 1952, 57 pp, $1.50, Publ ASP 64 146 and Sky Tel. 11 147 and Sky Tel. 11 199, 
+
+48 52.05(0).36  A. A. Nijland, De bouw van het Heelal, , , , , , Heelal 8 32, reference AJB 50.05.35;
+
+49 52.05(0).37  A. Niklitschek, In den Tiefen des Weltenraumes, Linz a. d. Donau, Brücken-Verlag, 1950, 136 pp, DM 6.50, Sternenwelt 4 34, 
+
+50 52.05(0).38  N. G. Nowikowa, <<Ungewöhnliche>> Himmelserscheinungen, Moskau, Technischer Staatsverlag, 1952, 64 pp, 1R., , 3rd edition;in Russian;
+
+51 52.05(0).39  N. G. Nowikowa, Neobvyklé úkazy na obloze, Prag, Naše vojsko, , 55 pp, 9 Kčs, , reprint of AJB 52.05.38;translated from Russian;
+
+52 52.05(0).40  C. Payne-Gaposchkin, Stars in the Making, Cambridge MA, Harvard University Press, 1952, 12+160 pp, $4.25, J RAS Canada 48 28 and Publ ASP 65 54 and Sky Tel 12 76 and Sky Tel. 12 161, 
+
+53 52.05(0).41  J. I. Perelman, Unterhaltende Astronomie, , , , , , , other Auch in weiteren regionalen Ausgaben und Landessprachen der UdSSR erschienen; other what ever that means; reference AJB 49.05.40;
+
+54 52.05(0).42  I. F. Polak, Lehrbuch der allgemeinen Astronomie, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1951, 387 pp, , AJ UdSSR 29 103, 6th edition;in Russian;
+
+55 52.05(0).43  P. I. Popow, Astronomie, Moskau, Lehr-pädagogischer Staatsverlag des Ministeriums für Bildungswesen der Russ. Sowjetrepublik, 1952, 120 pp, 2R. 40 Kop., , in Russian;
+
+56 52.05(0).44  P. I. Popow, Allgemein zugängliche praktische Astronomie, Erwan, Ajpetrat, 1952, 208 pp, 3R. 80 Kop., , in Armenian;
+
+57 52.05(0).45  P. I. Popow, Kontrollarbeiten zur Astronomie, Moskau, Lehr-pädagogischer Verlag, 1952, , 35 Kop., , in Russian;
+
+58 52.05(0).46  J. C. Rademaker, Geheimen tussen hemel en aarde (sterrekunde voor iedereen), Leiden, L. Stafleu, , 161 pp, f 5.50, Hemel en Dampkring 50 218, 
+
+59 52.05(0).47  H. A. Rey, The Stars: A New Way to See Them, Boston, Houghton Mifflin, 1952, 143 pp, $4.00, Sky Tel. 11 147 and Sky Tel. 11 256, 
+
+60 52.05(0).48  J. Robinson, The Universe We Live In, New York, Thomas Y. Crowell Co., 1952, 252 pp, $4.50, Publ ASP 65 55 and Southern Stars 15 139 and Sky Tel. 12 76 and Sky Tel. 12 189 and Strolling Astronomer 7 35, also published New York: Ward & Lock;
+
+61 52.05(0).49  I. Ruud, Stjernerne og Universet; Populaer astronomi, Oslo, J. W. Cappelens Forlag, 1951, , Kr. 17.80, Urania Kopenhagen 9 10, 
+
+62 52.05(0).50  E. Rybka, Astronomia dla Klasy XI, Warsawa, Panstwowe Zakłady Wydawnictw Szkolnych, 1951, , , AJ UdSSR 29 233, 
+
+63 52.05(0).51  W. A. Schischakow, Methodische Hilfsmittel für den Lehrer der Astronomie an der Mittelschule, Moskau, Lehr-pädagogischer Staatsverlag des Ministeriums für Bildungswesen der Russ. Sowjetrepublik, 1952, 152 pp, 2R. 50 Kop., , in Russian;
+
+64 52.05(0).52  H. Schmeiser, Das ABC des Weltbaues, Graz, Verlag Ulrich Moser, , 8+80 pp, DM 1.80, Sternenwelt 4 196, 
+
+65 52.05(0).53  G. B. Shadanow, Strahlen aus den Tiefen des Weltraumes, Kiew, Technischer Staatsverlag Ukrain. Sowjetrepublik, 1952, 116 pp, 1R. 85 Kop., , in Ukranian;
+
+66 52.05(0).54  H. Siedentopf, Die physikalische Erforschung des Weltalls, Köln-Opladen, Westdeutscher Verlag (Friedrich Middelhauve), , 38 pp, DM 2.75, Sternenwelt 4 76, 
+
+67 52.05(0).55  N. W. Siukajew, Der Bau des Weltalls, Dsaudshkau, Staatsverlag nord-ossetischen autonomen Sowjetrepublik, 1952, 280 pp, 6R. 60 Kop., , in ossetisch;
+
+68 52.05(0).56  E. F. Skworzow, Astronomie, Miskau, Lehr-pädagogischer Verlag, 1952, 302 pp, 8R. 20 Kop., , in Russian;
+
+69 52.05(0).57  W. M. Smart, Astronomy, Oxford, University Press, 1952, 160 pp, 9s 6d, JBAA 63 43 and Obs 72 246, 2nd edition;
+
+70 52.05(0).58  W. Stein, Das kleine Sternenbuch für Sternfreunde comma Segler und Seeleute, , , , , , Nachrichtenblatt VdS 3 26, reference AJB 49.05.61;
+
+71 52.05(0).59  K. Stumpff, Das Uhrwerk des Himmels, Stuttgart, Franckh'sche Verlagshandlung, 1952, 134 pp, DM 4.90, , other in Halbleinen DM 5.80 (half linen?); 
+
+72 52.05(0).60  Z. Švesta and M. Kopercký and F. Link and V. Valníček and J. Kleczek, O vesmíru, Praf, Osvěta, , 80 pp, Kčs 15, , 
+
+73 52.05(0).61  O. Thomas, Himmel und Weltall, , , , , , Coelum 20 151 and Gaz astr 35 76 and Irish AJ 2 30 and Orion Schaffhausen 4 155 and Z. Naturforschung 8a 220, reference AJB 51.05.56;
+
+74 52.06(0).62  F. Trommsdorff, Erde und Weltall; Eine kleine Astrophysik für jedermann, Hildesheim, Fredrich M. Hörbold-Verlag K. G., 1951, 92 pp, DM 0.45, Sternenwelt 5 36, other Miniature-Bibliothek; 
+
+75 52.05(0).63  Å. Wallenquist, Den moderna astronomin och dess världsbild, Stockholm, Forum, 1951, , , PAT 33 76, 
+
+76 52.05(0).64  M. A. Waschakidse, Sterne and Nebel, Tiflis, Verlag Akad. Wiss. Georg. Sowjetrepublik, 1952, 54 pp, 75 Kop., , in Georgian;
+
+77 52.05(0).65  H. Werner, Orientierung im Gelände nach Gestirnen, Stuttgart, Piscator Verlag, 1952, 80 pp, DM 6.00, Naturwiss. Rundschau 5 172 and Optik 9 46 and Sternenwelt 4 116, 4th edition;
+
+78 52.05(0).66  W. Widmann, Astronomie comma leicht wie noch nie, Stuttgart, Franckh'sche Verlagshandlung, 1951, 84 pp, DM 1.80, Sterne 29 120 and Sternenwelt 4 196, 
+
+79 52.05(0).67  W. Widmann and K. Schütte, Welcher Stern ist das?, Stuttgart, Franckh'sche Verlagshandlung, 1951, 154 pp, DM 5.80, Heelal 8 51 and Sternenwelt 4 154, 
+
+80 52.05(0).68  P. W. Wojnilowitsch and I. F. Schewljakow, Erde und Sonne, Moskau, Staatlicher Kultur- und Volksbildungsverlag, 1952, 80 pp, 1R. 25 Kop., , in Russian;
+
+81 52.05(0).69  B. A. Woronzow-Weljaminow, Skizzen über das Weltall, Moskau, Techischer Staatsverlag, 1952, 528 pp, 9R. 45 Kop., , 2nd edition;in Russian;
+
+82 52.05(0).70  B. A. Woronzow-Weljaminow, Die Welt der Sterne, Moskau, Kriegsverlag, 1952, 86 pp, 1R. 45 Kop., , in Russian;
+
+83 52.05(0).71  H. S. Zim and R. H. Baker, Stars, New York, Simon & Schuster, , 155 pp, $1.00, Strolling Astronomer 6 59, 
+
+84 52.06(0).02  G. A. Aristow, Um die materialistische Weltanschauung in der Astronomie, Moskau, Verlag <<Snanie>>, 1952, 32 pp, 60 Kop., , in Russian;
+
+85 52.06(0).03  E. Ayres and C. A. Scarlott, Energy Sources — The Wealth of the World, New York, McGraw-Hill Book Co. Inc., 1952, 344 pp, $5.00, Sky Tel. 11 200, 
+
+86 52.06(0).04  N. P. Barabaschew, Der Kampf mit dem Idealismus auf dem Gebiet der kosmogonischen und kosmologischen Hypothesen, Charkow, Verlag der Gorkij-Staatsuniversität, 1952, 120 pp, 3R., , in Russian;
+
+87 52.06(0).08  P. Coudere, L'Astrogolie, , , , , , Ann d'Astrophys 15 71 and BSAF 66 172 and Coelum 20 27 and Gaz astr 34 35 and JBAA 63 45 and Orion Schaffhausen 3 374, reference AJB 51.06.10;
+
+88 52.06(0).09  R. Ebertin, Astrologie; I Bändchen, Hildesheim, Fredrich M. Höbold-Verlag K. G., 1951, 58 pp, DM 0.45, Sternenwelt 5 36, other miniature book; 
+
+89 52.06(0).10  G. F. Hartlaub, Bewußtsein auf anderen Sternen?, , , , , , Sternenwelt 4 116, reference AJB 51.06.22;
+
+90 52.06(0).13  J. Jeans, Het Heelal comma zijn bouw en zijn vraagstukken, 's Gravenhage, H. P. Leopolds U. M., , 287 pp, f. 11.50, Hemel en Dampkring 50 114, 
+
+91 52.06(0).15  H. Spencer Jones, Life on Other Worlds, London, English Universities Press Ltd., 1952, 8+259 pp, 12s 6d, Heelal 8 49 and JBAA 62 237 and Obs 72 161, 2nd edition;
+
+92 52.06(0).19  H. E. Landsburg, Advances in Geophysics I, New York, Academic Press Inc., 1952, 362 pp, $7.80, Sky Tel. 12 217, 
+
+93 52.06(0).23  W. A. Mesenzew, Rätsel der Natur (atmosphärische und Himmels-Erscheinungen), Moskau, <<Moskowskij Rabotschij>>, 1952, 104 pp, 1R. 55 Kop., , in Russian;
+
+94 52.06(0).25  E. Nadjoshdin, Wissenschaft und Religion über den Bau des Weltalls, Gorno-Altajsk, , , , , , in altajisch.;
+
+95 52.06(0).26  M. Neurath, Let's Look at the Sky, London, Max Parrish, 1952, 36 pp, 7s 6d, JBAA 63 46, 
+
+96 52.06(0).34  L. Reiners, Steht es in den Sternen?, , , , , , Orion Schaffhausen 3 409, reference AJB 51.06.48;
+
+97 52.06(0).36  W. W. Scharanow, Gibt es leben auf den Planeten?, Moskau, Kriegsverlag, 1952, 47 pp, 60 Kop., , in Russian;
+
+98 52.06(0).37  G. I. Sherechow, Wissenschaft und religion über den Bau des Weltalls, Ufa, Baschkirischer Staatsverlag, 1952, 44 pp, 1R. 30 Kop., , in baschkirisch.;
+
+99 52.06(0).41  E. Strogowa, Wie Entdeckungen gemacht werden, Moskau-Leningrad, Staatsverlag für Jugendliteratur, 1952, 238 pp, , AJ UdSSR 29 742, in Russian;
+
+100 52.06(0).42  N. N. Sytinskaja, Gibt es Leben auf andern Planeten?, Moskau, Staatlicher Kultur- und Volksbildungsverlag, 1952, 64 pp, 1R., , in Russian;
+
+101 52.06(0).43  N. N. Sytinskaja, Gibt es leben auf den Himmelskörpern?, Tiflis, , 1952, 112 pp, 1R. 25 Kop., , in Georgian;
+
+102 52.06(0).44  O. Thomas, Atlas der Sternbilder, Salzburg, <<Das Bergland-Buchs>>, 1952, 155 pp, , Coelum 21 22 and Irish AJ 2 152 and Orion Schaffhausen 4 154 and Sternenwelt 5 155, 2nd edition;
+
+103 52.06(0).47  I. Velikovsky, Welten in Zusammenstoß, Stuttgart, W. Kohlhammer, , 403 pp, DM 15.60, Sternenwelt 4 35, reprint of AJB 51.06.65;translated from English;
+
+104 52.06(0).48  E. J. Webb, The Names of the Stars, London, Nisbet & Co. Ltd., 1952, 206 pp, 15s, Sky Tel. 12 188 and Sky Tel. 12 268, 
+
+105 52.06(0).52  L. Mallan ed., The Mystery of Other Worlds Revealed, New York, Fawcett Publications Inc., 1952, 144 pp, $0.75, J. British Interplanetary Soc. 12 141, 
+
+106 52.07(0).01  K. Heinemann and W. Lohmann ed., Astronomischer Jahresbericht; Band 49, Berlin, Walter de. Gruyter & Co., 1952, 50+420 pp, DM 56.00, , 
+
+107 52.07(0).26  , Aristoteles: Vom Himmel comma Von der Seele comma Von der Dichjunst, Zürich, Artemis-Verlag, 1950, 440 pp, , Sternenwelt 5 116, translated  by O. Gigon;
+
+108 52.07(0).27  , N. Kopernikus comma De revolutionibus orbium caelestium, München, R. Oldenbourg, 1949, 476 pp, DM 38.50, Phys. Blätter 8 43, other revised entry; reference AJB 49.07.15;
+
+109 52.07(0).30  , Johannes Kepler comma Gesammelte Werke Band 13—15, , , , , , Coelum 20 152 and Gaz astr 35 30 and Sterne 28 78, other also AJB 49.07.19; other also AJB 51.07.19; reference AJB 49.07.18;
+
+110 52.07(0).32  M. Caspar, Bibliographia Kepleriana, München, C. H. Beck'sche Verlagshandlung, 1936, 158 pp, DM 27.00, Gaz astr 34 14, 
+
+111 52.07(0).33  F. J. Carmody ed., Al-Bitruni comma De Motibus Celorum, Berkeley, University of California Press, 1952, 180 pp, $2.75, Sky Tel. 12 242, 
+
+112 52.07(0).36  J. Bartels and P. ten Bruggencate ed., Landolt-Börnstein comma Zahlenwerte und Funktionen aus Physik comma Chemie comma Astronomie comma Geophysik und Technik comma Band III Astronomie und Geophysik, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1952, 18+795 pp, DM 248.00, AN 281 45 and Ann d'Astrophys 15 199 and Mitt. AG 1951 68, 
+
+113 52.07(0).37  W. H. Westphal ed., Physikalisches Wörterbuch, Berlin-Göttingen-Heildelberg, Springer-Verlag, 1952, 6+833+795 pp, , , other two volumes?; 
+
+114 52.10(1).03  G. Abetti, Keplero, , , , , , Ciel et Terre 68 292 and Coelum 20 56, reference AJB 51.10.03;
+
+115 52.10(1).05  A. Alberti-Poja, La meridiana della Chiesa di S. Maria degli Angeli a Roma comma l'astronomo Bianchini e la Pasqua, Rome, F. Ili Palombi, 1948, 169 pp, Lire 2000, Coelum 20 124, 
+
+116 52.10(1).08  C. Baumgardt, Johannes Kepler: Life and Letters, London, Victor Gollanz Ltd., 1952, 209 pp, 12s 6d, JBAA 63 46, 
+
+117 52.10(1).09  W. Brunner, Pioniere der Weltallforschung, , , , , , Orion Schaffhausen 3 371, reference AJB 51.10.14;
+
+118 52.10(1).10  M. Caspar, Johannes Kepler, , , , , , Gaz astr 35 75 and PAT 33 79, reference AJB 48.10.08;
+
+119 52.10(1).12  E. Ehrlich Levinger, Galileo: First Observer of Marvellous Things, New York, Julian Messner, 1952, 180 pp, $2.75, Sky Tel. 12 242 and Sky Tel. 12 269, 
+
+120 52.10(1).14  W. Federau, Nikolaus Kopernikus, Nürnburg, Olympia-Verlag, 1949, 180 pp, DM 0.70, Sternenwelt 4 156, 
+
+121 52.10(1).16  Z. Harsany, Und sie bewegt sich doch; Ein Roman um Galileo Galile, Wien-Stuttgart-Berlin, Paul Neff Verlag, 1951, 760 pp, DM 19.80, Sternenwelt 4 156, translated from Hungarian by J. P. Toth and A. Luther;edited by J. P. Toth and A. Luther;
+
+122 52.10(1).20  E. J. Holmyard, British Scientists, New York, Philosophical Library, 1951, 88 pp, $2.75, Sky Tel. 11 93, 
+
+123 52.10(1).28  K. Lundmark, Astronomiska upptäckter I, , Harriers bokförlag, 1950, 223 pp, 8.75 Schwed Kr., NAT 1952 36, 
+
+124 52.10(1).29  K. Lundmark, Astronomiska upptäckter II, , Harriers bokförlag, 1951, 190 pp, 8.75 Schwed Kr., NAT 1952 36, 
+
+125 52.10(1).32  E. A. Milne, Sir James Jeans, Cambridge, University Press, 1952, 16+176 pp, $4.00 and 21s, Irish AJ 2 152 and JBAA 63 191 and Obs 73 29 and Proc. Phys. Soc. (A) 66 417 and Proc. Phys. Soc. (B) 66 336 and Publ ASP 65 97 and Sky Tel. 12 134 and Sky Tel. 13 20, 
+
+126 52.10(1).33  A. Morosow, Michail Wassiljewitsch Lomonossow, Leningrad, Verlag für Zeitungen comma Zietschriften und Bücher, 1952, 856 pp, , Priroda 43 Nr. 1 118, 2nd edition;in Russian;
+
+127 52.10(1).37  W. Norlind, Tycho Brahe, , , , , , BSAF 66 406 and Ciel et Terre 68 90 and PAT 33 78, reference AJB 51.10.40;
+
+128 52.10(1).38  J. G. Perel, Hervorragende russische Astronomen, Moskau-Leningrad, GTTI, 1951, 216 pp, , AJ UdSSR 29 106, in Russian;
+
+129 52.10(1).41  G. Revzin, Mikuláš Koperník, Prag, Osvěta, , 256 pp, Kčs 86, , 
+
+130 52.10(1).45  J. Sponsel, Kopernikus — Kampf und Sieg, Schloß Bleckede a. d. Elbe, Otto Meißners Verlag, , , DM 4.80, Sternenwelt 4 156, 
+
+131 52.10(1).51  S. I. Wawilow, Isaac Newton, , , , , , Phys Blätter 10 475, reference AJB 51.10.57;
+
+132 52.10(1).54  , Les inventeurs célèbres, Paris, Editions d'Art Lucien Mazenot, , , , BSAF 66 407, other La Galerie des nommes célèbres; 
+
+133 52.13(0).02  G. Abetti, The History of Astronomy, New York, Schuman, 1952, 338 pp, $6.00 and 25s, J. British Interplanetary Soc. 13 361 and Math. Rev. 14 343 and Sky Tel. 12 76 and Sky Tel. 12 132, translated from Italian by B. B. Abetti;also published London: Sidgwick & Jackson;
+
+134 52.13(0).04  F. Becker, Gechichte der Astronomie, Bonn, E. Rothacker, 1951, 95 pp, DM 4.50, Phys. Blätter 8 285, also published Bonn: Athenäum-Verlag;other verify publisher (are they one or two); 
+
+135 52.11(0).05  F. Boll, Kleine Schriften zur Sternkunde des Altertums, Leipzig, Koehler & Amelang, 1950, 28+450+39 pp, DM 22.50, Deutsche Literaturzeitung 73 50, edited by V. Stegemann;other revised entry; reference AJB 51.13.03;
+
+136 52.13(0).06  H. A. Calahan, The Sky and the Sailor; A History of Celestial Navigation, New York, , 1952, 262 pp, , , 
+
+137 52.13(0).08  H. Dingle, The Scientific Adventure; Essays in the History and Philosophy of Science, London, Pitman, 1952, 9+373 pp, 30s, Obs 73 120, 
+
+138 52.13(0).09  G. A. Gurew, Das Weltsystem von den ältesten Zeiten bis zu unseren Tagen, , Moskowskij Rabotschij, 1950, 393 pp, , AJ UdSSR 29 495, in Russian;
+
+139 52.13(0).10  R. W. Kunizkij, Die Entwicklung der Anschauungen über den Bau des Sonnensystems; Kurzer historischer Überblick, Moskau, Technischer Staatsverlag, 1952, 80 pp, 1R. 20 Kop., AJ UdSSR 30 368, 5th edition;in Russian;
+
+140 52.13(0).11  A. v. Mörl, Die große Weltordnung; Band III Die Wiedergeburt der Wissenschaft, Innsbruck, Universitätsverlag Wagner, 1952, 471 pp, , Sternenwelt 5 116, 
+
+141 52.13(0).12  O. Neugebauer, The Exact Sciences in Antiquity, Kopenhagen, Ejnar Munksgaard, 1952, 9+191 pp, $5.00, J. Hist. Med. Allied Sci. 8 97 and Sky Tel. 11 174 and Sky Tel. 11 227, also published Oxford: University Press and Princeton: Princeton University Press;
+
+142 52.13(0).16  H. Slouka u. a., Astronomie v Československu od nejstarších dob do dneška, Prag, Osvěta, , 346 pp, Kčs 198, Coelum 21 91, 
+
+143 52.13(0).17  G. de Vaucouleurs, L'esprit de l'homme à la conquête de l'Univers comma ou l'Astronomie des Pyramides au Mont Palomar, , , , , , BSAF 66 316 and Ciel et Terre 68 53 and Gaz astr 34 62 and Orion Schaffhausen 3 373, reference AJB 51.06.64;
+
+144 52.13(0).19  E. Zinner, Astronomie comma Geschicte ihrer Probleme, , , , , , Coelum 21 23 and Mitt. AG 1951 68 and NAT 1952 35 and Orion Schaffhausen 4 113 and PAT 33 78 and Sterne 29 126 and Sternenwelt 4 115, reference AJB 51.13.27;
+
+145 52.13(1).24  N. P. Barabaschew, Die Errungenschaften der sowjetischen Astronomie auf dem Gebiet der Erforschung der Natur der Planeten, Kiew, Ges. zur Verbreitung politischer und wiss. Kenntnisse, 1952, 43 pp, 80 Kop., , in Ukranian;
+
+146 52.20(0).01  J. C. Adlers, Bouv je eigen sterrenkijker, Zutphen, W. J. Thieme & Cie, 1951, 228 pp, , Hemel en Dampkring 51 14, 
+
+147 52.20(0).11  M. Daisomont, Mémoire final relatif au polissage du verre sur papeir, , , , , , Ciel et Terre 68 53 and Coelum 20 57, reference AJB 51.20.07;
+
+148 52.20(0).16  A. Elliot and J. H. Dickson, Laboratory Instruments: their design and application, London, Chapman & Hall, 1953, 414 pp, 32s and $7.50, JBAA 62 179 and J RAS Canada 48 157 and Obs 72 81, also published New York: The Chemical Publishing Company Inc.;
+
+149 52.20(0).21  M. G. Fracastoro, Misure di energia raggiante, Firenze, Soc. Editrice Universitaria, 1952, 222 pp, Lire 1500, Mem SA It (NS) 23 82, 
+
+150 52.20(0).26  P. Husnot, Construction facile et économique d'un puissant télescope d'amateur, St. Brieue (C-d-N. France), , , 48 pp, , Ciel et Terre 69 174 and Gaz astr 34 35, other self published; 
+
+151 52.20(0).39  F. Twyman, Prism and Lens Making, London, Hilger & Watts Ltd., 1952, 7+629 pp, 58s, Apj 117 240 and BSAF 66 84 and Coelum 20 151 and Heelal 8 50 and JBAA 62 208 and Obs 72 120, 2nd edition;
+
+152 52.20(1).46  N. J. Bugoslawskaja and W. A. Bronstein and B. J. Lewin, Anleitungen zur Beobachtung der Sonnen- und Mondfinsternisse, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1952, 31 pp, 1R. 50 Kop., , in Russian;
+
+153 52.20(1).48  F. Gianni, La fotografia degli astri, Genua, Dott. I. Briano, 1949, 72 pp, Lire 500, Heelal 8 51, 
+
+154 52.20(1).50  E. Haase, Der Sternhimmel, Hildesheim, Fredrich M. Hörbold-Verlag K. G., 1950, 16 pp, DM 0.45, Sternenwelt 5 36, other a miniature book; 
+
+155 52.20(2).65  J. van der Bilt, De grote spiegelkijkers van Roelofs en Rienks, , , , , , Gaz astr 34 87, reference AJB 51.20.61;
+
+156 52.21(0).37  J. Texereau, La Construction du Télescope d'Amateur, Paris, Société Astronomique de France, 1951, 12+136 pp, fr. 600, Ciel et Terre 68 89 and Coelum 20 57 and Heelal 8 50, 
+
+157 52.22(1).52  J. Saget, La photographie astronomique, Paris, Editions Prisma, 1952, 48 pp, , Sky Tel. 14 26, 
+
+158 52.23(0).24  K. Novák, O astronomických kyvadlových časoměrech, Prag, Naturwiss. Verlag, , 116 pp, , , in tschechisch;
+
+159 52.30(0).04  A. Gras, La résolution graphique des triangles sphériques, Paris, Service de la Navigation aérienne, 1951, 48 pp, , BSAF 67 250, 
+
+160 52.30(0).06  K. S. Jurjew, Tafeln für Sonne- und Sternpeilungen zwischen 70° und 80° nördlicher Breite, Moskau-Leningrad, Verlag <<Seetransport>>, 1952, 6 pp, 12R. 40 Kop., , in Russian;
+
+161 52.30(0).08  R. W. Kunizkij, Den a noc: roční období, Prag, Naše vojsko, , 40 pp, 7 Kčs, , reprint of AJB 48.30.08;translated from Russian;
+
+162 52.30(0).12  M. K. Wentzel, Sphärische Astronomie, Moskau, Geodätischer Staatsverlag, 1952, 335 pp, 11R. 30 Kop., , in Russian;
+
+163 52.30(0).14  , Ephemerides for the determination of time corrections by equal altitudes (Zinger's method) for 1947, Moskau-Leningrad, , 1947, 100 pp, , , other Inst. Theoret. Astr. Leningrad editors; 
+
+164 52.30(0).15  , Rising and Setting Diagrams for High Northern Latitudes, London, H. M. Nautical Almanac Office, 1952, 11 pp, 10s 6d, , 
+
+165 52.30(0).16  , Sight Reduction Tables for Air Navigation: Vol 1 Selected stars epoch 1955.0, London, Her Majesty's Stationary Office, 1952, 11+325 pp, , JBAA 63 155 and Sky Tel. 12 134, 
+
+166 52.31(0).04  P. N. Dolgow, Die Bestimmung der Zeit mit dem Passageninstrument im Meridian, Moskau, Technischer Staatsverlag, 1952, 396 pp, 14R. 20 Kop., , in Russian;
+
+167 52.31(0).09  K. Graff, Grundriß der geographischen Ortsbestimmung aus astronomischen Beobachtungen, Berlin, Walter de Gruyter & Co., 1944, 9+227 pp, DM 8.80, Coelum 20 56 and Mem SA It (NS) 23 81 and Sterne 28 80 and Sternenwelt 5 115 and Weltraumfahrt 1952 63, 3rd edition;
+
+168 52.32(0).03  I. G. Koltschinskij, Sonnenfinsternisse, Kiew, Verlag Akad. Wiss. ukrian. Sowjetrepublik, 1952, 24 pp, 75 Kop., , in Ukranian;
+
+169 52.32(0).05  S. A. Mitchell, Eclipses of the Sun, London, Geoffrey Cumberlege, 1951, , 42s, NAT 1953 78, also published New York: Columbia University Press;other revised entry; reference AJB 51.32.11;
+
+170 52.32(0).11  W. T. ter-Oganesow, Sonnen- und Mondfinsternisse, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1952, 84 pp, 2R., , in Russian;
+
+171 52.33(0).06  E. Nadjoshdin, Zeit und Kalender, Gorno-Altajsk, , 1952, 20 pp, , , in altajisch;
+
+172 52.40(0).01  F. Hoyle, La Nature de l'Univers, Paris, Presses Universitaires de France, 1952, 132 pp, fr. 360, NAT 1953 39, reprint of AJB 50.40.03;translated from English by R. H. Busso and J. Papy;in French;
+
+173 52.40(0).02  F. Hoyle, Världsalltets byggnad, Stockholm, Bonniers, 1951, , , PAT 33 77, reprint of AJB 50.40.03;translated from English;
+
+174 52.40(0).03  A. March, Der Weg des Universums, Bern, A. Francke AG, 1948, , DM 8.60, Sterne 28 45, also published München: Leo Lehnen;other revised entry; reference AJB 50.40.06;
+
+175 52.40(0).04  E. Whittaker, A History of the Theories of Aether and Electricity — The Classical Theories, New York, Philosophical Library, 1951, 434 pp, $12.00, Sky Tel. 11 21, other revised entry; reference AJB 51.02.63;
+
+176 52.41(0).01  H. Bondi, Cosmology, Cambridge, At the University Press, 1952, 9+179 pp, 22s 6d and $4.50, JBAA 63 121 and Math. Rev. 14 912 and Nature 170 768 and Obs 72 160 and Proc. Phys. Soc. (A) 66 124 and Sky Tel. 11 227 and Sky Tel. 12 46 and ZfMG 46 208, 
+
+177 52.41(0).03  P. Coudere, The Expansion of the Universe, New York, The Macmillan Company, 1952, 231 pp, $6.00 and 30s, JBAA 63 152 and J RAS Canada 47 212 and Obs 74 134 and Sky Tel. 12 134, translated from French by J. B. Sidgwick;also published London: Faber & Faber Ltd.;in English;
+
+178 52.41(0).05  H. Dingle, The Special Theory of Relativity, New York, John Wiley & Sons, 1950, 7+94 pp, $1.25, Rev. Sci. Instruments 23 45, 
+
+179 52.41(0).14  P. Javet, La Figure de l'Univers, , , , , , Coelum 20 26, reference AJB 50.40.04;
+
+180 52.41(0).15  M. Johnson, Time and Universe for Scientific Conscience, Cambridge, University Press, 1952, , $0.42, Sky Tel. 12 134, 
+
+181 52.41(0).16  P. Jordan, Schwerkraft und Weltall: Grundlagen der theoretischen Kosmologie, Braunschweig, F. Vieweg & Sohn, 1952, 8+207 pp, DM 15.80, Hemel en Dampkring 51 15 and J RAS Canada 48 157 and Math. Rev. 14 1022 and Mem SA It (NS) 24 198 and Naturwiss. Rundschau 5 480 and Proc. Phys. Soc. (A) 66 667 and Sternenwelt 4 195 and SfMG 48 216, other Die Wissenschaft comma Einzeldarstellungen aus der Naturewissenschaft und der Technik band 107; 
+
+182 52.41(0).22  M. v. Laue, Die Relativitätstheorie Band I Die spezielle Relativitätstheorie, Braunschwieg, F. Vieweg & Sohn, 1952, 7+198 pp, DM 16.80, Math. Rev. 14 98 and Optik 9 95 and Phys. Blätter 8 380 and ZfA 31 194 and ZfMG 47 444, 5th edition;other Die Wissenschaft comma Einzeldarstellungen aus der Naturewissenschaft und der Technik band 138; 
+
+183 52.41(0).26  E. A. Milne, Modern Cosmology and the Christian Idea of God, Oxford, Clarendon Press, 1952, 160 pp, 21s, JBAA 62 295 and Obs 73 30, also published Oxford: The University Press;
+
+184 52.41(0).27  C. Møller, The Theory of Relativity, Oxford, Clarendon Press, 1952, 12+386 pp, 35s and $7.00, Math. Rev. 14 212 and Proc. Phys. Soc. (A) 65 1071 and ZfMG 47 206, also published Oxfod: The University Press;
+
+185 52.41(0).33  E. Rüchardt, Sichtbares und unsichtbares Licht, Berlin-Göttingen-Heidelberg, Springer-Verlag, 1952, 168 pp, DM 7.80, Sternenwelt 5 115, 2nd edition;other Verständliche Wissenschaft Band 35; 
+
+186 52.41(0).44  , The Principle of Relativity, , Dover, 1952, 216 pp, $3.50, Sky Tel. 11 121, 
+
+187 52.50(0).01  H. Alfvén, Cosmical Electrodynamics, Moskau, Verlag für ausländische Literatur, 1952, 290 pp, 14R. 90 Kop., , reprint of AJB 50.50.01;translated  by S. B. Pikelner;edited by S. B. Pikelner;in Russian;
+
+188 52.50(0).06  M. Johnson, Astronomy of Stellar Energy and Decay, , , , , , Orion Schaffhausen 4 78, reference AJB 51.50.09;
+
+189 52.50(0).16  W. A. Ambarzumjan ed., Theoretische Astrophysik, Moskau, Technischer Staatsverlag, 1952, 636 pp, 15 R, Math. Rev. 14 803, in Russian;
+
+190 52.51(0).02  D. Barbier, Les atmosphères stellaires, Paris, E. Flammarion, 1952, 238 pp, ffrs. 625, Ann d'Astrophys 15 71 and BSAF 66 260 and Ciel et Terre 68 225 and J. Physique 13 496 and J RAS Canada 46 110 and Mem SA It (NS) 23 350 and Sky Tel. 11 174, 
+
+191 52.51(0).20  V. Kourganoff and I. W. Busbridge, Basic Methods in Transfer Problems; Radiative Equilibrium and Neutron Diffusion, Oxford, At the Clarendon Press, 1952, 11+281 pp, 35s, Ciel et Terre 69 215 and Mem SA It (NS) 25 188 and Obs 73 85 and Phys. Abstracts (A) 56 389 and ZfA 32 133, 
+
+192 52.54(0).15  M. Iwanowskij, Die Entstehung der Welten, , Verlag <<Junge Garde>>, 1951, 375 pp, , Priroda 41 Nr. 9 125, in Russian;
+
+193 52.54(0).27  H. Schmeiser, Weltentstehung und Weltuntergang, Graz, Verlag Ulrich Moser, , 8+84 pp, DM 1.80, Sternenwelt 4 196, 
+
+194 52.54(0).33  , Fragen der Kosmogonie comma Band I, Moskau, Verlag Akad. Wiss. UdSSR, 1952, 287 pp, 13R. 70 Kop., , in Russian;
+
+195 52.55(0).14  G. Mamedbejli, Entwicklung im Weltall, Baku, Verlag Aserneschr, 1952, 86 pp, 1R. 50 kop., , in aserbajdsanisch;
+
+196 52.55(0).21  W. M. Smart, The Origin of the Earth, , , , , , Southern Stars 15 83, reference AJB 51.55.29;
+
+197 52.60(0).02  G. Abetti, Il Sole, Milano, Hoepli, 1952, 20+562 pp, Lire 2500, Coelum 19 180 and Mem SA It (NS) 23 84 and Obs 71 121 and Sky Tel. 11 94 and Urania Kopenhagen 9 73, 2nd edition;
+
+198 52.60(0).03  G. Abetti, Il Sole comma fonte di vita, Brescia, La Scuola Editrice, 1952, 64 pp, Lire 140, Gaz astr 35 53, 
+
+199 52.60(0).05  G. A. Aristow, Slunce, Prag, Naše vojsko, , 56 pp, 9 Kčs, , reprint of AJB 50.60.02;translated from Russian;
+
+200 52.60(0).09  G. Bruhat, Le Soleil, , , , , , BSAF 66 129, reference AJB 51.60.03;
+
+201 52.63(0).06  W. Gleissberg, Die Häufigkeit der Sonneflecken, Berlin, Akademie-Verlag, 1952, 11+91 pp, DM 14.00, Mitt. AG 1952 71 and Sterne 29 173 and Sternenwelt 5 75, other volume 2 of Scientia Astronomica comma Monographien aus dem Gesamtbereich der Astronomie und kosmischen Physik; 
+
+202 52.63(0).08  A. Hess, Über einen engen Zusammenhang zwischen den Bewegungen der vier größten Planeten und der Sonnenfleckentätigkeit, Trier, Selbstverlag, 1952, 7 pp, , , 
+
+203 52.63(0).15  K. G. Meldahl, Tidal Forces in the Sun's Corona due to Planets, Kopenhagen, Berlingske Forlag, 1952, 14 pp, , Nature 170 482, other Tiel 3; 
+
+204 52.64(0).22  O. C. Mohler and A. K. Pierce and R. R. McMath and L. Goldberg, Photometric Atlas of the Near Infra-red Solar Spectrum, , , , , , ApJ 115 335, reference AJB 51.64.13;
+
+205 52.66(0).04  M. d'Azambuja and L. d'Azambuja, Etude d'ensemble des protubérances solaires..., , , , , , Obs 72 143, reference AJB 48.66.03;
+
+206 52.67(0).19  M. Waldmeier, Die Sonnenkorona, , , , , , Ciel et Terre 68 145 and NAT 1953 38 and Naturwissenschaften 39 434 and Orion Schaffhausen 3 409, reference AJB 51.67.22;
+
+207 52.70(0).02  N. P. Barabaschew, Untersuchung der physischen Bedingungen auf dem Mond und den Planeten, Charkow, Verlag Gorkij-Staatsuniv., 1952, 272 pp, 8R. 40 Kop., , in Russian;
+
+208 52.70(0).04  G. Bruhat and E. Schatzman, Les Planètes, Paris, Presses Universitaires de France, 1952, 303 pp, frs. 1200, Ann d'Astrophys 15 404 and BSAF 66 317 and Heelal 8 50 and Mem SA It (NS) 23 349 and Urania Kopenhagen 9 73, 
+
+209 52.70(0).08  W. Eckert and D. Brouwer and G. M. Clemence, Co-ordinates of the five outer planets comma 1653—2060, , , , , , NAT 1952 77, reference AJB 51.76.04;
+
+210 52.70(0).12  G. P. Kuiper, The Atmospheres of the Earth and Planets, Chicago, University of Chicago Press, 1952, 8+434 pp, $8.50, Hemel en Dampkring 50 112 and J RAS Canada 47 122 and Sky Tel. 11 227, 2nd edition;
+
+211 52.70(0).14  R. K. Marshall, Sun comma Moon comma and Planets, New York, Henry Holt & Co., 1952, 129 pp, $2.50, Sky Tel. 12 76 and Sky Tel. 12 77, 
+
+212 52.70(0).30  H. C. Urey, The Planets: Their Origin and Development, London, Geoffrey Cumberlege, 1952, 17+245 pp, $5.00, NAT 1953 78 and PAT 33 157 and Phys. Blätter 9 286 and Sky Tel. 11 147 and Sky Tel. 11 279 and Urania Kopenhagen 9 88, also published Oxford: Oxford University Press and New Haven: Yale University Press;
+
+213 52.72(1).02  K. L. Bajew, Die Erde als Himmelskörper, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1952, 64 pp, 75 Kop., , in Russian;
+
+214 52.72(1).04  H. Berg, Einführung in die Physik der festen Erde, , , , , , Sterne 28 78, reference AJB 49.72.01;
+
+215 52.72(1).05  A. F. Bondarenko, Die Erde im Weltraum, Strawropol, Verlag der <<Strawropolskaja Prawda>>, 1952, 20 pp, , , in Russian;
+
+216 52.72(1).06  F. D. Bublejnikow, Der Planet erde, Tashkent, Verlag <<Prawda Wostoka>>, 1952, 198 pp, , , in ujgursich/arabische;
+
+217 52.72(1).07  S. Chapman, The Earth's Magnetism, London, Methuen, 1951, 11+127 pp, 6s, Proc. Phys. Soc. (B) 65 83, 2nd edition;
+
+218 52.72(1).08  J. Coulomb, La Constitution physique de la Terre, Paris, Albin Michel, 1952, 284 pp, , BSAF 66 452, 
+
+219 52.72(1).11  W. W. Lunkewitsch, Die erde im Weltraum, Taschkent, Verlag <<Ksyl Usbekistan>>, 1952, 80 pp, , , in ujgurisch;
+
+220 52.72(2).36  P. Hood, The Atmosphere, London, Oxford University Press, 1952, 64 pp, 8s 6d, JBAA 62 209, 
+
+221 52.72(2).44  W. E. K. Middleton, Vision Through the Atmosphere, Toronto, University of Toronto Press, 1952, 14+250 pp, 68s, Proc. Phys. Soc. (B) 67 166, also published London: Oxford University Press;
+
+222 52.72(5).89  K. Rawer, Die Ionosphäre; Ihre Bedeutung für Geophysik und Radioverkehr, Groningen, Verlag P. Noordhoff N. V., 1952, 189 pp, fl. 14.50, Ann d'Astrophys 15 404 and Z. Naturforschung 8a 275, 
+
+223 52.72(7).128  L. Harang, The Aurorae, London, Chapman & Hall, 1951, 7+157 pp, $5.00, BSAF 66 85 and Irish AJ 2 30 and J RAS Canada 47 122 and Proc. Phys. Soc. (B) 65 391, also published Toronto: British Book Service;other revised entry or additional printings; other this entry has a different page count than the former; reference AJB 51.72.124;
+
+224 52.73(2).07  A. Fresa, La Luna comma movimenti comma configurazioni comma influenze e culto, Milano, Ulrico Hoepli, 1952, 24+560 pp, Lire 2500, Coelum 20 153 and Mem SA It (NS) 24 99, 3rd edition;
+
+225 52.73(5).56  D. W. G. Arthur, The Diameter of Lunar Craters, , , , , , Sky Tel. 11 100, reference AJB 51.73.45;
+
+226 52.74(0).10  I. M. Ischtschenko, Gibt es Leben auf dem Mars?, Taschkent, Staatsverlag der Usbek. Sowjetrepublik, 1952, 24 pp, 80 Kop., , in Uzbeck;
+
+227 52.74(0).16  F. Sigel, Das Rätsel des Mars, Moskau-Leningrad, Staatsverlag für Jugenliteratur, 1952, 95 pp, 3R. 5 Kop., , in Russian;
+
+228 52.74(0).17  H. Strughold, Life on Mars in View of Physiological Principles, Randolf Field TX, USAF School of Aviation Medicine (Department of Space Medicine), 1951, , , Weltraumfahrt 1952 32, 
+
+229 52.74(0).20  G. de Vaucouleurs, The Planet Mars, , , , , , Southern Stars 15 85, reference AJB 50.74.27;
+
+230 52.74(0).21  G. de Vaucouleurs, Physique de la planète Mars, , , , , , Strolling Astronomer 6 114, reference AJB 51.74.20;
+
+231 52.80(0).06  M. Gerstenberger, Kometen-Außenseiter am Himmelszelt, Stuttgart, Franckh'sche Verlagsbuchhandlung, 1951, 80 pp, , Sterne 30 75 and Sternenwelt 4 195, 
+
+232 52.80(0).07  H. Groot, Kometen en vallende sterren, , , , , , Hemel en Dampkring 50 98, reference AJB 50.80.05;
+
+233 52.80(0).12  J. G. Porter, Comets and Meteor Streams, London, Chapman & Hall, 1952, 8+123 pp, 28s and $5.50, BSAF 66 361 and JBAA 63 77 and J RAS Canada 47 172 and Meteoor 9 32 and Nature 172 883 and Obs 73 163 and Proc. Phys. Soc. (B) 65 1011 and Sky Tel. 11 280 and Sky Tel. 12 105 and Sterne 29 248, also published New York: John Wiley & Sons;
+
+234 52.83(0).09  E. L. Krinow, Himmelssteine (Meteore und Meteorite), Moskau, Kriegsverlag, 1952, 116 pp, 1R. 85 Kop., , in Russian;
+
+235 52.83(0).10  R. J. Lewin, Meteorite, Moskau, <<Snanie>>, 1952, 32 pp, 60 Kop., , in Russian;
+
+236 52.83(0).12  H. H. Nininger, Out of the Sky: An Introduction to Meteorites, Denver CO, University of Denver Press, 1952, 10+336 pp, $5.00, J. British Interplanetary Soc. 11 243 and Sky Tel. 11 199 and Sky Tel. 12 16, other should this be the University of Colorado Press; 
+
+237 52.83(0).14  A. N. Sawarizkij and L. G. Kwascha, Die Meteorite der UdSSR: Die Kollektion der Akademie der Wissenschaften der UdSSR, Moskau, Verlag Akad. Wiss. UdSSR, 1952, 248 pp, 18R., , in Russian;
+
+238 52.90(0).03  N. P. Imnadse, Die Sternbilder, Tiflis, , 1952, 52 pp, 80 Kop., , in Georgian;
+
+239 52.91(0).07  W. W. Konin, Katalog der Delinationen von 319 Sternen des Pulkower Zenitteleskop-Programms für die Epoche und das Äquinoktium 1950.0, Kiew, Astr. Hauptobs. Akad. Wiss. Ukrain. Sowjetrepublik, 1952, 12 pp, , , in Russian;
+
+240 52.91(0).16  P. J. van Rhijn, Durchmusterung of selected areas of the special plan comma Volume 1 containing areas 1 to 29, , Kapteyn Astronomical Laboratory, , 28+309 pp, , , other see also AJB 52.91.17; 
+
+241 52.91(0).17  P. J. van Rhijn, Durchmusterung of selected areas of the special plan comma Volume 2 containing areas 30 to 46, , Kapteyn Astronomical Laboratory, , 2+273 pp, , , other see also AJB 52.91.16; 
+
+242 52.91(0).19  M. S. Swerew, Le catalogue des étoiles faibles en tant que problème astrométrique; Communication à la VIII assemblée générale de l'Union Astronomique Internationale Rome, Moskau, Verlag Akad. Wiss. UdSSR, 1952, 81 pp, , , in Russian;other also Italian with French; 
+
+243 52.91(0).23  , Astrographic Catalogue 1900.0; Perth Section Dec. -31° to -41° comma Vol. 3 Measures of rectangular co-ordinates and diameters of 68284 star images on plates with centres in Dec. -38°, Paris, International Astronomical Union, 1952, 13+343 pp, , , 
+
+244 52.91(0).24  , Astrographic Catalogue 1900.0; Sydney Section Dec -51° to -65°; Vol. 30 RA 6ʰ to 12ʰ comma Dec. -58° to -60°, Sydney, , 1952, 3+127 pp, , , 
+
+245 52.91(0).25  , Bonner Durchmusterung comma Nordlicher Teil; Sternverzeichnis (Mikrobuch), Bonn, F. Dümmlers Verlag, 1951, 150 pp, DM 56.00, , 3rd edition;
+
+246 52.91(0).26  J. Haas ed., Geschichte des Fixsternhimmels; Abteilung II comma Der südliche Sternhimmel Band 10 Erste Leiferung 9ʰ 0ᵐ — 9ʰ 25ᵐ Rektaszension, Karlsruhe, Kommisionsverlag G. Braum, 1952, 96 pp, DM 30.00, , 
+
+247 52.91(0).27  J. Dick ed., Geschichte des Fixsternhimmels; Abteilung II comma Der südliche Sternhimmel; Band 24 comma 23ʰ Rektaszension erste Leiferung 0ᵐ — 21ᵐ, Berlin, Akademie-Verlag, 1952, 56 pp, , , 
+
+248 52.91(0).28  , Zwieter Katalog der Astronomischen Gesellschaft für  das Äquinoktium 1950.0; Band 5 Deklination +45° bis +50°, Hamburg-Bergedorf, Verlag der Sternwarte, 1952, 239 pp, , , 
+
+249 52.91(1).31  A. Brun, Atlas photométrique at spectroscopique des constellations australes de -30° à -90°, Le Breuil (Allier), Selbstverlag, , , fr. 2000, BSAF 66 316, 
+
+250 52.91(1).34  J. Klepešta and L. Lukeš, Hvězdná mapa severní oblohy, Prag, Landesvermmessungsamt, , , 50 Kčs, , other chart of the northern stars with ten pages of text; 
+
+251 52.91(1).35  A. A. Michajlow, Sternatlas comma enthaltend für beide Halbkugeln die Sterne bis zur 8.25 Größe mit Bezeichnung der Veräderlichen und Doppelsterne comma der Sternhaufen und Nebel, Moskau, Technischer Staatsverlag, 1952, 60 pp, 15R. 10 Kop., , in Russian;
+
+252 52.91(1).36  A. P. Norton, A Star Atlas, London, Gall & Inglis, , 16 pp, 135 bg. fr., Heelal 8 2/4, other originally published in 1910 11th edition in 1950; 
+
+253 52.91(1).38  , Stern-Atlas comma enthaltend alle Sterne bis zur neunten Größe sowie die helleren Sternhaufen und Nebel zwischen dem Nordpol und 23° südlicher Deklination für 1850.0, , , , , , Hemel en Dampkring 50 155 and Orion Schaffhausen 3 372, reference AJB 50.91.44;
+
+254 52.91(1).39  , Norton's Star Atlas and Reference Handbook, London, Galls & Inglis, 1950, , 17s 6d, Vega Nr. 6 24, 11th edition;other originally published in 1910 11th edition in 1950 see also AJB 52.91.36; 
+
+255 52.92(0).11  , Observatoire de l'Université de Toulouse: Mouvements propres des ètoiles des Catalogues Photographiques de Toulouse, Paris, Centre National Rech. Sci., 1952, 144 pp, , , 
+
+256 52.93(0).02  L. F. Jenkins, General Catalogue of Trignometric Stellar Parallaxes, New Haven, Yale University Observatory, 1952, 9+253 pp, , Sky Tel. 11 117, 
+
+257 52.96(0).06  , Observations of the colour temperatures of stars made at the Royal Observatory Greenwich in the years 1926 — 1938 under the direction of Sir F. Dyson and H. S. Jones, London, Her Majesties Stationary Office, 1952, 4+155 pp, , Phys. Abstracts (A) 56 182, other Volume 2 Relative Gradients; 
+
+258 52.110(0).03  B. W. Kukarkin and P. P. Parenago and J. I. Jefremow and P. N. Cholopow, Vierter Nachtrag zur ersten Ausgabe des Generalkatalogs Veränderlicher Sterne, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1952, 87 pp, , , 4th edition;in Russian;
+
+259 52.110(0).05  H. Schneller, Geschichte und Literatur des Lichtwechsels der Veränderlichen Sterne; Zwiete Ausgabe enthaltend die Literatur der Jahre 1916—1950 Band 3: Orion–Vulpecula, Berlin, Akademie-Verlag, 1952, 15+360 pp, DM 37.00, Ann d'Astrophys 15 360 and Mem SA It (NS) 23 248 and Mitt. AG 1952 70 and NAT 1952 114, 
+
+260 52.111(2).67  S. Rosseland, The Pulsation Theory of Variable Stars, Moskau, Verlag für ausländische Literatur, 1952, 168 pp, 9R., , reprint of AJB 49.111.69;translated from English by W. P. Zessewitsch;in Russian;
+
+261 52.120(0).01  W. Becker, Sterne und Sternsysteme, Dresden-Leipzig, Verlag Theodor Steinkoff, 1951, , , Hemel en Dampkring  50 36 and Orion Schaffhausen 3 373 and PAT 33 159, 2nd edition;
+
+262 52.122(0).37  K. Wurm, Die planetarischen Nebel, , , , , , PAT 34 75 and Sternenwelt 4 236 and Urania Kopenhagen 9 43 and ZfA 35 135 and Z. Naturforschung 8a 219, reference AJB 51.122.27;
+
+263 52.123(1).38  B. E. Tumanjan, Die Milchstraße, Erewan, Verlag der Staatsuniversität, 1952, 28 pp, 50 Kop., , in Armenian;
+
+264 52.126(0).18  B. Lovell and J. A. Clegg, Radio Astronomy, London, Chapman & Hall Ltd., 1952, 238 pp, 16s and $4.00, ApJ 117 240 and Endeavour 11 Nr. 44 219 and Heelal 8 51 and Irish AJ 2 58 and JBAA 62 294 and J RAS Canada 47 123 and J. British Interplanentary Soc. 11 140 and Obs 72 162 and Phys. Blätter 9 521 and Proc. Phs. Soc. (B) 65 827 and Publ ASP 64 210 and Sky Tel. 11 174 and Sky Tel. 11  226 and Sky Tel. 12 18 and Urania Kopenhagen 9 89, also published New York: John Wiley & Sons;
+
+265 52.130(0).04  R. Roelofs, Astronomy applied to land surveying, , , , , , Österreichische Z. f. Vermessungswesen 39 182, reference AJB 51.130.08;
+
+266 52.130(0).07  P. Tardi and G. Laclavère, Traité de Géodésie; Band 1 Triangulation, Paris, Gauthier-Villars, 1951, 17+387 pp, , Österreichische Z. f. Vermessungswesen 40 90, 2nd edition;
+
+267 52.131(0).07  H. Haalck, Gegenwärtige Probleme und Aufgaben der Physik des festen Erdkörpers, Berlin-Nikolassee, Verlag Gebr. Borntraeger, 1952, 84 pp, DM 8.80, Z. Naturforschung 7a 825, 
+
+268 52.133(0).02  B. J. Bok and F. W. Wright, Basic Marine Navigation, Boston, Houghton Mifflin Co., 1952, 424 pp, $6.00, Sky Tel. 11 94, 2nd edition;
+
+269 52.133(0).04  I. Capasso, Navigazione comma ad uso degl'Istituti Nautici e del Naviganti Vol 1, Milano, Hoepli, 1952, 20+513 pp, Lire 2000, Coelum 20 89, 2nd edition;
+
+270 52.133(0).12  F. Flora, Astronomica Nautica, Milano, Ulrico Hoepli, 1952, 507 pp, Lire 1200, Mem SA It (NS) 24 100, 
+
+271 52.133(0).19  N. J. Kondratjew, Astronomie in der Luftfahrt, Moskau, Kriegsverlag, 1952, 128 pp, 4R. 60 Kop., , in Russian;
+
+272 52.133(0).22  M. J. Rantzen, Little Ship Astro-Navigation, New York, Philosophical Library, 1952, 160 pp, $4.75, Sky Tel. 11 307, 
+
+273 52.134(0).01  W. von Braun, Das Marsprojekt, Frankfurt am Main, Umschau-Verlag, 1952, 82 pp, DM 5, J. British Interplanetary Soc. 12 88 and Phys. Blätter 9 571 and Weltraumfahrt 1952 128, 
+
+274 52.134(0).05  A. C. Clarke, Il volo interplanetario, Milano, Verlag Sperling & Kupfer, 1952, 152 pp, Lire 1200, Coelum 20 58, translated from English;in Italian;
+
+275 52.134(0).18  W. Ley and C. Bonestell, Die Eroberung des Weltalls, Stuttgart, Franckh'sche Verlagsbuchhandlung, 1952, 118 pp, DM 12.80, Phys. Blätter 9 47 and Sterne 29 174, translated from English by F. L. Neher;in German;
+
+276 52.134(0).20  J. J. Maluquer, A la Conquista del Espacio, Barcelona, Editorial Seix Barral S.A., 1946, 82 pp, , Weltraumfahrt 1952 29, 
+
+277 52.134(0).35  L. J. Carter ed., The Artificial Satellite, , , , , , Hemel en Dampkring 50 114 and Nature 170 486 and Sky Tel. 11 227 and Weltraumfahrt 1952 95, reference AJB 51.134.27;
+
+278 52.134(0).36  C. Ryan ed., Across the Space Frontier, New York, The Viking Press, 1952, 14+147 pp, $3.95 and 21s, JBAA 63 123 and J RAS Canada 47 33 and Publ ASP 64 324 and Sky Tel. 11 307 and Sky Tel. 12 161, also published England: Sidgwick & Jackson;
+
+279 52.134(0).37  H. Gartmann ed., Raumfahrtforschung, München, Verlag R. Oldenbourg, 1952, 199 pp, DM 16.50, J. British Interplanetary Soc. 12 92 and Mitt. AG 1952 70 and Phys. Blätter 8 573 and Sterne 29 30, 
+
