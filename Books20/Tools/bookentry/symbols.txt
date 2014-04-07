@@ -26,6 +26,8 @@
 
 Ë, Capital letter E with diaeresis
 ë, Small letter e with diaeresis
+È, Capital letter E with grave
+É, Captial letter E with acute
 è, Small letter e with grave
 é, Small letter e with acute
 ě, Small letter e with caron
@@ -43,9 +45,9 @@
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
 ń, Small letter n with acute
+
 Ň, Captial letter N with caron
 ň, Small letter n with caron
-
 Ö, Capital letter O with diaeresis
 ö, Small letter o with diaeresis
 ø, Small letter o with stroke

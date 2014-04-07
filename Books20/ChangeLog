@@ -1,3 +1,11 @@
+2014-04-06  Jim Fowler  <jrf@Biblion>
+
+	* Docs/socsci_notes.tex: Added section to Notes.tex for
+	notes about the sociology of science.
+
+	* Tools/bookentry/symbols.txt: added capital E with grave and
+	acute accents.
+
 2014-04-04  Jim Fowler  <jrf@Biblion>
 
 	* Data/Ajb: finished proofreading ajb52_books.txt
