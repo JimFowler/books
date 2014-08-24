@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>document1 - BookEntry</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../Resources/ajb_rc.qrc">
+    <normaloff>:/icon_ajb.svg</normaloff>:/icon_ajb.svg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="15" column="14">
@@ -911,6 +915,8 @@
   <tabstop>commentsEntry</tabstop>
   <tabstop>indexEntry</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="../Resources/ajb_rc.qrc"/>
+ </resources>
  <connections/>
 </ui>
