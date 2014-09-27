@@ -1,7 +1,13 @@
+2014-09-27  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/utils.py: Updated Suffix addition to support
+	nameparser_0.3.3.  The new version of nameparser was installed
+	today.
+
 2014-09-17  Jim Fowler  <jrf@Biblion>
 
-	* WebPages/BlogLists.txt: added Books and Buildings
-	page from tumblr.com.
+	* WebPages/BlogLists.txt: added Books and Buildings page from
+	tumblr.com.
 
 2014-09-16  Jim Fowler  <jrf@Biblion>
 
@@ -9,13 +15,13 @@
 
 2014-06-27  Jim Fowler  <jrf@Biblion>
 
-	* Docs/history_notes.tex: Added history_notes to the
-	general Notes.tex.
+	* Docs/history_notes.tex: Added history_notes to the general
+	Notes.tex.
 
 2014-04-06  Jim Fowler  <jrf@Biblion>
 
-	* Docs/socsci_notes.tex: Added section to Notes.tex for
-	notes about the sociology of science.
+	* Docs/socsci_notes.tex: Added section to Notes.tex for notes
+	about the sociology of science.
 
 	* Tools/bookentry/symbols.txt: added capital E with grave and
 	acute accents.
