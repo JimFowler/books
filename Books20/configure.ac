@@ -15,8 +15,8 @@ dnl   photocopying, recording, or otherwise, without prior written
 dnl   permission of the author.
 dnl
 
-AC_INIT()
-AM_INIT_AUTOMAKE(Books, 1.0)
+AC_INIT([Books], [1.0])
+AM_INIT_AUTOMAKE()
 
 AC_PROG_INSTALL()
 
