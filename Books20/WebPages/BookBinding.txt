@@ -1,0 +1,56 @@
+<tr valign="Top">
+<td width=250 height=250 valign="Top">
+  <h3>History</h3>
+
+  <br><br>Something will appear here...
+</td>
+
+
+<td valign="Top">
+  <h3>Resources</h3>
+
+  <a href="http://www.bookbindersworkshop.com/">Book Binders Workshop</a>
+  <br><a href="http://www.talasonline.com/">Talas supplies</a>
+  <br><a href="http://www.shopbrodart.com/library-supplies-school-supplies/book-care/">Brodart</a>
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>How To</h3>
+
+  <a href="http://www.sagereynolds.com/">Sage Reynolds Workshop</a>
+  <font size="2">
+  <br>Videos
+  <ul>
+    <li> <a href="https://www.youtube.com/watch?v=bJ9DumXLvd4&list=UUVrw-tSHwbBADzIncCILN1A">A Short Tour of the Bindery</a>
+    <li> <a href="https://www.youtube.com/watch?v=8gc9wnUCfIk&list=UUVrw-tSHwbBADzIncCILN1A">Sewing Printed Signatures Part 1</a>
+    <li> <a href="https://www.youtube.com/watch?v=556AnIdBFyU&list=UUVrw-tSHwbBADzIncCILN1A">Sewing Printed Signatures Part 2</a>
+    <li> <a href="https://www.youtube.com/watch?v=kuoldYdzzzE&list=UUVrw-tSHwbBADzIncCILN1A">Glue and Roller Basics</a>
+    <li> <a href="https://www.youtube.com/watch?v=vB5xsWS98BQ&list=UUVrw-tSHwbBADzIncCILN1A">Tipping in Endpapers</a>
+    <li> <a href="https://www.youtube.com/watch?v=VtdhVncAPZw&list=UUVrw-tSHwbBADzIncCILN1A">Making Headbands and Rounding the Spine</a>
+    <li> <a href="https://www.youtube.com/watch?v=9spV9n6N_mw&list=UUVrw-tSHwbBADzIncCILN1A">Lining the Spine Part 1</a>
+    <li> <a href="https://www.youtube.com/watch?v=BL7CaBLUKRM&list=UUVrw-tSHwbBADzIncCILN1A">Lining the Spine Part 2</a>
+    <li> <a href="https://www.youtube.com/watch?v=xI0pcRd_qdw&list=UUVrw-tSHwbBADzIncCILN1A">Making a Case Part 1</a>
+    <li> <a href="https://www.youtube.com/watch?v=glbe_fDpCiU&list=UUVrw-tSHwbBADzIncCILN1A">Making a Case Part 2</a>
+  </font>
+</td>
+</tr>
+
+
+<tr valign="Top">
+
+<td width=250 height=250 valign="Top">
+  <h3></h3>
+
+  <br><br>Soon to be more...
+
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3></h3>
+
+</td>
+
+<td>
+</td>
+</tr>
+
