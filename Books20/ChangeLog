@@ -1,3 +1,13 @@
+2014-10-04  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/BookBinding.php: Added Book Binding web page
+	to store information and history of book binding.
+
+2014-09-28  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: added less than or equal and
+	greater than or equal signs.
+
 2014-09-27  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/utils.py: Updated Suffix addition to support

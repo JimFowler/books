@@ -95,6 +95,8 @@
 ˢ, Right ascension seconds
 ᵉ, French raised letter e
 ˣ, power x
+≤, less than or equal to
+≥, greater than or equal to
 –, En dash
 —, Em dash
 
