@@ -8,7 +8,7 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 
-For volume AJB 51 Index to the Literature of 1951, started 6 April 2014, finished, proofread
+For volume AJB 51 Index to the Literature of 1951, started 6 April 2014, finished 19 Aur 2014, proofread 24 Aug 2014
 
 
 1 51.01(0).04  V. Happach, Ausgleichungsrechnung; Ein Lehrbuch der Fehlerausgleichung nach der Methode der Kleinsten Quadrate in Wissenschaft und Technik, Leipzig, B. G. Teubner, 1950, 104 pp, DM 6.20, Phys. Blätter 7 89, 2nd edition;other Teubners Mathematische Leitfäden Band 18; 
