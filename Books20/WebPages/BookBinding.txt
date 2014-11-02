@@ -12,12 +12,16 @@
   <a href="http://www.bookbindersworkshop.com/">Book Binders Workshop</a>
   <br><a href="http://www.talasonline.com/">Talas supplies</a>
   <br><a href="http://www.shopbrodart.com/library-supplies-school-supplies/book-care/">Brodart</a>
+  <br><a href="http://www.affordablebindingequipment.com/">Affordable Binding Equipment</a>
 </td>
 
 <td width=250 height=250 valign="Top">
   <h3>How To</h3>
 
-  <a href="http://www.sagereynolds.com/">Sage Reynolds Workshop</a>
+  <a href="https://www.youtube.com/channel/UCUaayO0NgrA4--4LU3fDL8w"> Bookbinders Chronicle</a>
+  <br><a href="https://www.youtube.com/channel/UCTCkA8YbXGh6xqh9sVuF6eA">Amanda Buck - Fine Bindings</a>
+
+  <br><a href="http://www.sagereynolds.com/">Sage Reynolds Workshop</a>
   <font size="2">
   <br>Videos
   <ul>
