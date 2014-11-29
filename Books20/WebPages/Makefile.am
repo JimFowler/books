@@ -19,15 +19,20 @@
 #             The php5 distribution no longer allows php scripts in 
 #             user directories.  Move my public pages to /var/www/jrf.
 #
+#     29 Nov 2014 changed location of public html pages from ${htmldir}
+#                 to ${PUBLICHTML}. Added target 'all'.
+#
 #
 
 PRINTER = lp -Phome
 
+# Installation locations and directories
 PUBLICHTML = $(prefix)/public_html
 PUBLICWEB = /var/www/jrf
 
 PRIVATEWEB = $(prefix)/private_html
 
+# Installation files to go in those directories
 PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
 	Bibliographies.php BlogLists.php Auction.php BookBinding.php \
 	robots.txt
@@ -42,6 +47,19 @@ PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 PRIVATEPHP = phpBooks.inc
 
 SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}
+
+all:
+	@echo "Available targets for Webpages"
+	@echo "  install_html -- install HTML version of the web pages"
+	@echo "                  in ${htmldir}"
+	@echo "  install_private -- install private PHP and text files"
+	@echo "                     in ${PRIVATEWEB}"
+	@echo "  install_public -- install public PHP files"
+	@echo "                    in ${htmldir}"
+	@echo "  install_images -- step into the Images directory and run make"
+	@echo "                    to install images in ${htmldir}/Images"
+	@echo "  install -- run install_private, install_images, and install_public"
+
 
 #
 # HTML
@@ -97,6 +115,11 @@ install_images:
 	@echo "Installing Images"
 	@(cd Images; make install)
 
+#
+# Misc targets
+#
+clean:
+	${RM} *~
 #
 # end of Makefile
 #

@@ -6,9 +6,10 @@ various installation targets:
   PRIVATEFILES and PRIVATEPHP -> ${prefix}/private_html
   *.html -> ${htmldir}
      (?? change to PUBLICHTML == ${prefix}/public_html  ??)
+  *.php -> ${htmldir}
 
   WebPages/Images
-  PUBLICIMAGES -> ${htmldir}/Images
+  PUBLICIMAGES -> ${PUBLICHTML}/Images
 
   Docs
   DatabaseDesign.pdf -> ${htmldir)
@@ -18,7 +19,7 @@ Commands to do installation:
 
  on Biblion
     automake           # if changes to any Makefile.am
-    ./configure --htmldir=/home/jrf/public_html
+    ./configure --orefix=/home/jrf --htmldir=/home/jrf/public_html
     cd Webpages
     make install_html
 
@@ -32,10 +33,9 @@ Commands to do installation:
 
 on JRF Mac
    aclocal
-   automake --add-missing
-   automake
    autoconf
-
+   automake --add-missing
+   (or use 'bootstrap')
 
 Generic Installation Instructions
 *************************

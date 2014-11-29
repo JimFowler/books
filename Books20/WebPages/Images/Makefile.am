@@ -17,7 +17,7 @@
 #
 PUBLICIMAGES = bookrow.jpg
 
-PUBLICWEB = $(prefix)/public_html
+PUBLICHTML = $(prefix)/public_html
 
 install: install_images
 
