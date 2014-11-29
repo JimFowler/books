@@ -19,7 +19,7 @@ Commands to do installation:
 
  on Biblion
     automake           # if changes to any Makefile.am
-    ./configure --orefix=/home/jrf --htmldir=/home/jrf/public_html
+    ./configure --prefix=/home/jrf --htmldir=/home/jrf/public_html
     cd Webpages
     make install_html
 

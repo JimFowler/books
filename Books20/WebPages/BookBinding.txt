@@ -13,7 +13,7 @@
   <br><a href="http://www.talasonline.com/">Talas supplies</a>
   <br><a href="http://www.shopbrodart.com/library-supplies-school-supplies/book-care/">Brodart</a>
   <br><a href="http://www.affordablebindingequipment.com/">Affordable Binding Equipment</a>
-  <br><a href="http://www.hollanders.com/index.php/">Hollanders</a>
+  <br><a href="http://www.hollanders.com/">Hollanders</a>
   <br><a href="http://bookbinding.com/">BookBinding.com</a>
   <br><a href="https://guildofbookworkers.org/content/us-supplies-services">List of Suppliers</a>
 </td>
@@ -46,7 +46,7 @@
 <tr valign="Top">
 
 <td width=250 height=250 valign="Top">
-  <h3>Binders</h3>
+  <h3>Binders and Courses</h3>
 
   <a href="http://www.cattailrun.com/">Cat Tail Run</a>
   <br><a href="http://bookbindingacademy.org/">Amer. Acad. Bookbinding</a>
