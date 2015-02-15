@@ -1,0 +1,55 @@
+<tr valign="Top">
+<td width=250 height=250 valign="Top">
+  <h3>Semantic Web Info</h3>
+
+    <a href="http://linkeddatadeveloper.com/">Linked Data Developer (various publications)</a>
+    <br><a href="http://linkeddata.org/">Linked Data Cloud
+
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Formal Specifications</h3>
+    <a href="http://www.w3.org/RDF">RDF</a>
+    <br>RDF Schema
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Useful Vocabularies</h3>
+
+    rdf:&nbsp;&nbsp;http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    <br>rdfs:&nbsp;&nbsp;http://www.w3.org/2001/01/rdf-schema#
+    <br>dc:&nbsp;&nbsp;http://purl.org/dc/elements/1.1
+    <br>foaf:&nbsp;&nbsp;http://xmlns.com/foaf/0.1
+    <br>vcard:&nbsp;&nbsp;http://www.w3.org/2006/vard/ns#
+    <br><br>These are almost certainly obsolete...
+</td>
+</tr>
+
+<tr>
+<td width=250 height=250 valign="Top">
+  <h3>Vocabulary Tools</h3>
+
+  <a href="http://sindice.com/">Sindice Semantic Search</a>
+  <br><a href="http://github.com/specgen/specgen">Specgen</a>
+  <br><a href="http://sameas.org/">Owl:sameAs database</a>
+  <br><a href="http://richard.cyganiak.de/blog/2011/03/creating-an-rdf-vocabulary">Richard Cyganiak</a>
+  <br><a href="http://microformats.org/">Microformats</a>
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Data Discovery</h3>
+
+  <a href="http://sindice.com/">Sindice Semantic Search</a>
+  <br><a href="http://sameas.org/">Owl:sameAs database</a>
+  <br><a href="http://thedatahub.org">The Data Hub</a>
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Build Tools</h3>
+
+  <a href="http://protege.stanford.edu/">Protege Ontology Editor</a>
+  <br><a href="http://protegewiki.stanford.edu/wiki/Main_Page">Protege Wiki</a>
+  <br><a href="http://callimachusproject.org/">Callimachus - Linked Data</a>
+</td>
+
+</tr>

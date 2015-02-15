@@ -35,7 +35,7 @@ PRIVATEWEB = $(prefix)/private_html
 # Installation files to go in those directories
 PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
 	Bibliographies.php BlogLists.php Auction.php BookBinding.php \
-	Writing.php robots.txt
+	Writing.php SemanticWeb.php robots.txt
 
 PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	BookStores.txt Collecting.txt HistoryAstronomy.txt \
@@ -43,7 +43,7 @@ PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt \
 	Resources.txt SociologyScience.txt ToDoList.txt Tools.txt \
 	BibSources.txt BibTools.txt BibRefs.txt BlogLists.txt Auctions.txt \
-	BookBinding.txt Writing.txt
+	BookBinding.txt Writing.txt SemanticWeb.txt
 PRIVATEPHP = phpBooks.inc
 
 SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}
@@ -81,7 +81,7 @@ install_html: install_private install_images
 	@for page in ${PUBLICWEBPAGES}; do \
 	    if `echo $${page} | grep --silent php`; then \
 		basepage=`basename $${page} \.php` ; \
-		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
+		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.htmlq ; \
 		install -m 0444 -p ./.tmp/$${basepage}.html ${htmldir} ; \
 	    else \
 		install -m 0444 -p $${page} ${htmldir} ; \
