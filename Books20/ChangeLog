@@ -1,3 +1,14 @@
+2015-02-15  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/SemanticWeb.txt: Added Build Tools to Semantic
+	Web.  Linked to Protege and Callimachus Projects. Downloaded
+	tarball of Protege.
+
+2015-01-19  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/SemanticWeb.php: Added information regarding
+	the Semantic Web.
+
 2014-11-29  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/BookBinding.txt: added Hollanders supplies.
