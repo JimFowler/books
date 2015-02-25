@@ -8,12 +8,12 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 
-For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 15 Feb 2015, proofread
+For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 15 Feb 2015, proofread 23 Feb 2015
 
 
 1 49.01(0).07  G. Boaga, Calcolo numerico, Milano, Editoriale Fasani, 1948, 472 pp, , , 
 
-2 49.01(0).13  J. Jeffreys, Theory of Probability, Oxford, Clarendon Press, 1948, 8+412 pp, 30s, Nature 163 464, 2nd edition;also published London: Oxford University Press;other International Series of Monographs on Physics; 
+2 49.01(0).13  H. Jeffreys, Theory of Probability, Oxford, Clarendon Press, 1948, 8+412 pp, 30s, Nature 163 464, 2nd edition;also published London: Oxford University Press;other International Series of Monographs on Physics; 
 
 3 49.01(0).29  H. Römpp, Die Wunderwelt der Atome, München, Bernhard Funck Verlag, 1949, 192 pp, DM 9.00, Sternenwelt 1 287, 
 
@@ -25,7 +25,7 @@ For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 
 
 7 49.02(0).29  C. E. Moore, Atomic Energy Levels as derived from teh analyses of optical spectra; Volume 1 The spectra of Hydrogen comma Deuterium comma Tritium comma Helium comma Lithium comma Beryllium comma Boron comma Carbon comma Nitrogen comma Oxygen comma Fluorine comma Neon comma Sodium comma Magnesium comma Aluminum comma Silicon comma Phosphorus comma Sulfur comma Chlorine comma Argon comma Potassium comma Calcium comma Scandium comma Titanium comma and Vanadium, Washington DC, National Bureau of Standards, 1949, 43+309 pp, $2.75, J RAS Canada 43 206 and Nature 165 7 and Pop Astr 57 416, other NBS Circular 467; 
 
-8 49.02(0).30  C. E. Moore, Selected Tables for Atomic Energy Levels Volume 1; Landé g-values ionization potentials of neutral atoms comma the periodic system, Washington, National Bureau of Standards, , , , , other sections reprinted from AJB 49.02.29; 
+8 49.02(0).30  C. E. Moore, Selected Tables from Atomic Energy Levels Volume 1; Landé g-values ionization potentials of neutral atoms comma the periodic system, Washington, National Bureau of Standards, , 14 pp, , , other sections reprinted from AJB 49.02.29; 
 
 9 49.02(0).46  , Tables of Scattering Functions for Spherical Particles, Washington DC, National Bureau of Standards, , 13+119 pp, , Math. Rev. 10 625, other Applied Mathematics Series Nr. 4; 
 
@@ -33,11 +33,11 @@ For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 
 
 11 49.03(0).02  M. Boll, Remarques et Compléments aux Tables Numériques Universelles, Paris, Dunod, 1949, 32 pp, , Math. Rev. 10 483, 
 
-12 49.03(0).03  L. S. Chrenow, Fünfstellige Tafeln der trigonometrischen Funktionen comma enthaltend die natürlichen Werte der sechs trigonometrischen Funktionen für jede Minute von 0° bis 360° und die Werte der Kotangenten und Kosekanten für jede Bogensekunder von 0° 00ˊ bis 0° 50ˊ und für alle 10˝ von 0° bis 10°, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 104 pp, 4R. 40 Kop., , 2nd edition;in Russian;
+12 49.03(0).03  L. S. Chrenow, Fünfstellige Tafeln der trigonometrischen Funktionen comma enthaltend die natürlichen Werte der sechs trigonometrischen Funktionen für jede Minute von 0° bis 360° und die Werte der Kotangenten und Kosekanten für jede Bogensekunde von 0° 00ˊ bis 0° 50ˊ und für alle 10˝ von 0° bis 10°, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 104 pp, 4R. 40 Kop., , 2nd edition;in Russian;
 
-13 49.03(0).04  L. J. Comrie, Chamber's Six-Figure Mathematical Tables; Vol. 1 Logarithmic Values, Edinburgh-London, W. & R. Chambers Ltd., , 22+567 pp, 42s and $10.00, Nature 163 972 and NAT 1949 38 and Math. Rev. 11 56 and Obs 69 116, also published New York: D. Van Nostrand Co.;
+13 49.03(0).04  L. J. Comrie, Chamber's Six-Figure Mathematical Tables; Vol. 1 Logarithmic Values, Edinburgh-London, W. & R. Chambers Ltd., 1948, 22+567 pp, 42s and $10.00, Nature 163 972 and NAT 1949 38 and Math. Rev. 11 56 and Obs 69 116, also published New York: D. Van Nostrand Co.;
 
-14 49.03(0).04  L. J. Comrie, Chamber's Six-Figure Mathematical Tables; Vol. 2 Natural Values, Edinburgh-London, W. & R. Chambers Ltd., , 36+576 pp, 42s and $10.00, Nature 163 972 and NAT 1949 38 and Math. Rev. 11 56 and Obs 69 116, also published New York: D. Van Nostrand Co.;
+14 49.03(0).04  L. J. Comrie, Chamber's Six-Figure Mathematical Tables; Vol. 2 Natural Values, Edinburgh-London, W. & R. Chambers Ltd., 1949, 36+576 pp, 42s and $10.00, Nature 163 972 and NAT 1949 38 and Math. Rev. 11 56 and Obs 69 116, also published New York: D. Van Nostrand Co.;
 
 15 49.03(0).05  F. Emde, Tafeln elementarer Funktionen, Leipzig, B. G. Teubner Verlagsgesellschaft, 1948, 181 pp, DM 11.60, Z. f. Naturforshung 4a 318 and Mat. Rev. 11 263, 2nd edition;
 
@@ -47,7 +47,7 @@ For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 
 
 18 49.03(0).09  A. Rohrberg, Graphische Funtionentafeln comma enthaltend die Mantissen der dekadischen Logarithmen und die goniometrischen Funktionen von Minute zu Minute auf vier Stellen, Berlin, Fachverlag Schiele und Schön, 1949, 32 pp, 4.50 DM, Z. f. Naturforschung 4a 479, other the place of publication is listed as Berlin SO 36 what ever that means?; 
 
-19 49.03(0).10  H. M. Sassenfeld and H. F. A. Tschunko, Mathematische Tafeln für Mathematiker comma Naturissenschaftler comma Ingenieure comma 1 Teil Elementare Funktionen, Walldorf bei Heidelberg, Verlag Fr. Lamadé, 1949, 8+36 pp, 5.75 DM, AN 277 275 and Naturwiss. Rundschau 2 377 and Sterne 24 183 and Z. f. Naturforschung 4a 319, 
+19 49.03(0).10  H. M. Sassenfeld and H. F. A. Tschunko, Mathematische Tafeln für Mathematiker comma Naturissenschaftler comma Ingenieure; 1 Teil Elementare Funktionen, Walldorf bei Heidelberg, Verlag Fr. Lamadé, 1949, 8+36 pp, 5.75 DM, AN 277 275 and Naturwiss. Rundschau 2 377 and Sterne 24 183 and Z. f. Naturforschung 4a 319, 
 
 20 49.03(0).11  , Five-Figure Tables of Natural Trigonometrical Functions, , , , , , BA 13 341 and Nature 163 347, reference AJB 47.09.06;
 
@@ -55,7 +55,7 @@ For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 
 
 22 49.03(0).13  , Tables of Bessel Functions of Fractional Order Vol. 2, New York, Columbia University Press, 1949, 18+365 pp, $10.00, Math. Rev. 10 483, other prepared by the Computation Laboratory of the National Applied Mathematics Laboratories National Bureau of Standards; other see also AJB 48.03.14 for vol 1; 
 
-23 49.03(0).14  , Vega-Bremiker comma Logarithmisch-Trogonomitrisches Handbuch, Berlin-Frankfurt/Main, Weidmannsche Verlagsbuchhandlung, 1949, 10+570 pp, , , 97th edition;other yes it did say the 97th edition; 
+23 49.03(0).14  , Vega-Bremiker comma Logarithmisch-Trigonometrisches Handbuch, Berlin-Frankfurt/Main, Weidmannsche Verlagsbuchhandlung, 1949, 10+570 pp, , , 97th edition;other yes it did say the 97th edition; 
 
 24 49.03(0).15  , Tables of Sines and Cosines to Fifteen Decimal Places at Hundreths of a Degree, Washington DC, National Bureau of Standards, , 95 pp, $0.40, Obs 69 234 and Sky Tel. 8 287, 
 
@@ -73,523 +73,525 @@ For volume AJB 49 Index to the Literature of 1949, started 2 Nov 2014, finished 
 
 31 49.03(0).20  , Tables of the Bessel Functions of the First Kind of Orders Thirteen comma Fourteen and Fifteen, , , , 10+616, , Nature 163 152, other Continuation of AJB 48.03.15/16; reference AJB 48.03.15;
 
-32 49.03(0).20  , Tables of the Bessel Functions of the First Kind of Orders Twenty-Eight through Thirty-Nine, , , , 9+694, , Nature 163 152, other Continuation of AJB 48.03.15/16; reference AJB 48.03.15;
+32 49.03(0).20  , Tables of the Bessel Functions of the First Kind of Orders Sixteen through Twenty-seven, , , , 11+764 pp, , Nature 163 152, other Continuation of AJB 48.03.15/16; reference AJB 48.03.15;
 
-33 49.03(0).21  , Tables of the Bessel Functions of the First Kind of Orders Fifty-Two through Sixty-Three, Cambridge MA, Harvard University Press, 1949, 9+544 pp, $8.00, Nature 163 152, other Continuation of AJB 48.03.15/16; other Computation Laboratory NBS; 
+33 49.03(0).20  , Tables of the Bessel Functions of the First Kind of Orders Twenty-Eight through Thirty-Nine, , , , 9+694, , Nature 163 152, other Continuation of AJB 48.03.15/16; reference AJB 48.03.15;
 
-34 49.03(0).22  , Tables of the Bessel Functions of the First Kind of Orders Sixty-Four through Seventy-Eight, Cambridge MA, Harvard University Press, 1949, 10+566 pp, $8.00, Math. Rev. 11 463, other Continuation of AJB 48.03.15/16; other Computation Laboratory NBS; 
+34 49.03(0).21  , Tables of the Bessel Functions of the First Kind of Orders Fifty-Two through Sixty-Three, Cambridge MA, Harvard University Press, 1949, 9+544 pp, $8.00, Nature 163 152, other Continuation of AJB 48.03.15/16; other Computation Laboratory NBS; 
 
-35 49.03(1).23  E. C. Berkeley, Giant Brains or Machines That Think, New York, John Wiley & Sons Inc., 1949, 16+270 pp, $4.00, Math. Rev. 11 263, 
+35 49.03(0).22  , Tables of the Bessel Functions of the First Kind of Orders Sixty-Four through Seventy-Eight, Cambridge MA, Harvard University Press, 1949, 10+566 pp, $8.00, Math. Rev. 11 463, other Continuation of AJB 48.03.15/16; other Computation Laboratory NBS; 
 
-36 49.05(0).01  J. Andrejew, Ungewöhnliche Erscheinungen am Himmel, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 56 pp, 1R. 40 Kop., , in Russian;
+36 49.03(1).23  E. C. Berkeley, Giant Brains or Machines That Think, New York, John Wiley & Sons Inc., 1949, 16+270 pp, $4.00, Math. Rev. 11 263, 
 
-37 49.05(0).02  G. A. Aristow, Erde und Sonne, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 48 pp, 1R. 20 Kop., , in Russian;
+37 49.05(0).01  J. Andrejew, Ungewöhnliche Erscheinungen am Himmel, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 56 pp, 1R. 40 Kop., , in Russian;
 
-38 49.05(0).03  K. L. Bajew and W. A. Schischakow, Einführung in die Astronomie, Riga, Lettischer Staatsverlag, 1949, 92 pp, 2R. 10 Kop., , in Latvian;
+38 49.05(0).02  G. A. Aristow, Erde und Sonne, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 48 pp, 1R. 20 Kop., , in Russian;
 
-39 49.05(0).04  K. L. Bajew and W. A. Schischakow, Anfangsgründe der Weltallkunde, , Molotowsker staatlicher Gebietsverlag, 1949, 104 pp, 1R. 85 Kop., , in Russian;
+39 49.05(0).03  K. L. Bajew and W. A. Schischakow, Einführung in die Astronomie, Riga, Lettischer Staatsverlag, 1949, 92 pp, 2R. 10 Kop., , in Latvian;
 
-40 49.05(0).05  R. H. Baker, Hviezdna obloha, Bratislava, Verlag Pravda, 1949, 183 pp, , , other this is a translation of the american publication When the Stars Come Out.; 
+40 49.05(0).04  K. L. Bajew and W. A. Schischakow, Anfangsgründe der Weltallkunde, , Molotowsker staatlicher Gebietsverlag, 1949, 104 pp, 1R. 85 Kop., , in Russian;
 
-41 49.05(0).06  R. H. Baker, Astronomy, , , , , , Naturwiss. Rundschau 2 334, reference AJB 46.08.03;
+41 49.05(0).05  R. H. Baker, Hviezdna obloha, Bratislava, Verlag Pravda, 1949, 183 pp, , , other this is a translation of the american publication When the Stars Come Out.; 
 
-42 49.05(0).07  F. Becker, Einführung in die Astronomie, , , , , , Naturwissenschaften 36 61 and Naturwiss. Rundschau 2 334, reference AJB 47.08.03;
+42 49.05(0).06  R. H. Baker, Astronomy, , , , , , Naturwiss. Rundschau 2 334, reference AJB 46.08.03;
 
-43 49.05(0).08  W. Becker, Sterne und Sternesysteme, , , , , , AJ UdSSR 26 373, reference AJB 44.90.02;
+43 49.05(0).07  F. Becker, Einführung in die Astronomie, , , , , , Naturwissenschaften 36 61 and Naturwiss. Rundschau 2 334, reference AJB 47.08.03;
 
-44 49.05(0).09  H. J. Bernhard and D. A. Bennet and H. S. Rice, New Handbook of the Heavens, New York-London, McGraw-Hill Book Co. Inc, 1948, 11+360 pp, 18s, Nature 163 744, other new revised edition; 
+44 49.05(0).08  W. Becker, Sterne und Sternesysteme, , , , , , AJ UdSSR 26 373, reference AJB 44.90.02;
 
-45 49.05(0).10  B. H. Bürgel, Der Mensch und die Sterne, Berlin, Aufbau-Verlag, 1946, 196 pp, , Naturwiss. Rundschau 2 334, 
+45 49.05(0).09  H. J. Bernhard and D. A. Bennett and H. S. Rice, New Handbook of the Heavens, New York-London, McGraw-Hill Book Co. Inc, 1948, 11+360 pp, 18s, Nature 163 744, other new revised edition; 
 
-46 49.05(0).11  B. H. Bürgel, La scienza del cielo, Torino, G. Einaudi Editore, 1948, 10+637 pp, , , reprint of AJB 41.08.09;translated  by Anna Abetti;
+46 49.05(0).10  B. H. Bürgel, Der Mensch und die Sterne, Berlin, Aufbau-Verlag, 1946, 196 pp, , Naturwiss. Rundschau 2 334, 
 
-47 49.05(0).12  C. A. Chant, Our Wonderful Universe, London, George G. Harrap, 1949, 280 pp, $2.25, J RAS Canada 43 207, also published Toronto: Clarke comma Irwin & Co.;other revised edition; 
+47 49.05(0).11  B. H. Bürgel, La scienza del cielo, Torino, G. Einaudi Editore, 1948, 10+637 pp, , , reprint of AJB 41.08.09;translated  by Anna Abetti;
 
-48 49.05(0).13  E. Charadse, In der Welt der Sterne, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 44 pp, 2R., , in Georgian;
+48 49.05(0).12  C. A. Chant, Our Wonderful Universe, London, George G. Harrap, 1949, 280 pp, $2.25, J RAS Canada 43 207, also published Toronto: Clarke comma Irwin & Co.;other revised edition; 
 
-49 49.05(0).14  E. Charadse, Der Bau des Weltalls, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 72 pp, 3R. 55 Kop., , in Georgian;
+49 49.05(0).13  E. Charadse, In der Welt der Sterne, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 44 pp, 2R., , in Georgian;
 
-50 49.05(0).15  J.-F. Cox, Eléments d'Astronomie et de Géodésie, Bruxelles, Les Presses Universitaires, 1949, 351 pp, , Ciel et Terre 65 299, 
+50 49.05(0).14  E. Charadse, Der Bau des Weltalls, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 72 pp, 3R. 55 Kop., , in Georgian;
 
-51 49.05(0).16  F. Denza, Le Armonie dei Ciele, Firenza, L Ed. Le Monnier, 1949, 351 pp, L. 900, Mem SA It (NS) 20 343, 5th edition;
+51 49.05(0).15  J.-F. Cox, Eléments d'Astronomie et de Géodésie, Bruxelles, Les Presses Universitaires, 1949, 351 pp, , Ciel et Terre 65 299, 
 
-52 49.05(0).17  F. Dessauer, Weltfahrt der Erkenntnis; Leben und Werk Isaac Newton, Zürich, Rascher Verlag, 1945, 430 pp, , Sternenwelt 1 119, 
+52 49.05(0).16  F. Denza, Le Armonie dei Ciele, Firenza, Ed. Le Monnier, 1949, 274 pp, L. 900, Mem SA It (NS) 20 343, 5th edition;edited by N. Giannuzzi;
 
-53 49.05(0).18  D. S. Evans, Les Frontières de l'Astronomie, Paris, Editions Eyrolles, , 205 pp, , BSAF 63 64, translated from English;in French;
+53 49.05(0).17  F. Dessauer, Weltfahrt der Erkenntnis; Leben und Werk Isaac Newton, Zürich, Rascher Verlag, 1945, 430 pp, , Sternenwelt 1 119, 
 
-54 49.05(0).19  W. G. Fessenkow, Die heutigen Vorstellungen über das Weltall, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 260 pp, 15R., , in Russian;
+54 49.05(0).18  D. S. Evans, Les Frontières de l'Astronomie, Paris, Editions Eyrolles, , 205 pp, , BSAF 63 64, translated from English;in French;
 
-55 49.05(0).20  Gauzit jr., La vie et la mort des étoiles, Paris, Presses Universitaires de France, 1949, 128 pp, , Ann d'Astrophys 12 165, 
+55 49.05(0).19  W. G. Fessenkow, Die heutigen Vorstellungen über das Weltall, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 260 pp, 15R., , in Russian;
 
-56 49.50(0).21  I. del Giudice, Le meraviglie dell'Universo spiegate ed illustrate al populo, Firenze, G. Nerbini Editore, 1848, 239 pp, , , 4th edition;
+56 49.05(0).20  Gauzit jr., La vie et la mort des étoiles, Paris, Presses Universitaires de France, 1949, 128 pp, , Ann d'Astrophys 12 165, 
 
-57 49.05(0).22  S. G. Gordeladse, Die Erde und das Weltall, Kiew, Ges. zur Verbreitung politischer und wissenschaftlicher Kenntnisse der ukranischen Sowjetrepublik, 1949, 39 pp, 95 Kop., , in Ukrainian;
+57 49.50(0).21  I. del Giudice, Le meraviglie dell'Universo spiegate ed illustrate al populo, Firenze, G. Nerbini Editore, 1948, 239 pp, , , 4th edition;
 
-58 49.05(0).23  G. A. Gurew, Země a vesmír, Prag, Verlag Svoboda, 1949, 147 pp, , , translated from Russian;other from the Soviet book Erde und Himmels; 
+58 49.05(0).22  S. G. Gordeladse, Die Erde und das Weltall, Kiew, Ges. zur Verbreitung politischer und wissenschaftlicher Kenntnisse der ukranischen Sowjetrepublik, 1949, 39 pp, 95 Kop., , in Ukrainian;
 
-59 49.05(0).24  A. R. Hinks, Einführung in die Astronomie, , , , , , Sternenwelt 1 192, reference AJB 45.08.26;
+59 49.05(0).23  G. A. Gurew, Země a vesmír, Prag, Verlag Svoboda, 1949, 147 pp, , , translated from Russian;other from the Soviet book Erde und Himmels; 
 
-60 49.05(0).25  J. Jeans, The Universe Around Us, , , , , , Hemel en Dampkring 47 19, 4th edition;other also AJB 46.08.28; reference AJB 45.08.28;
+60 49.05(0).24  A. R. Hinks, Einführung in die Astronomie, , , , , , Sternenwelt 1 192, reference AJB 45.08.26;
 
-61 49.05(0).26  H. S. Jones, Worlds Without End, London, English Universities Press Ltd., 1948, 15+262 pp, 10s 6d, Nature 163 744, other a revised edition; 
+61 49.05(0).25  J. Jeans, The Universe Around Us, , , , , , Hemel en Dampkring 47 19, 4th edition;other also AJB 46.08.28; reference AJB 45.08.28;
 
-62 49.05(0).27  W. L. Kennon, Astronomy; A Textbook for Colleges, , , , , , J RAS Canada, 
+62 49.05(0).26  H. S. Jones, Worlds Without End, London, English Universities Press Ltd., 1948, 15+262 pp, 10s 6d, Nature 163 744, other a revised edition; 
 
-63 49.05(0).28  H. Kienle, Vom Wesen astronomischer Forschung, , , , , , Himmelswelt 56 135, reference AJB 48.05.28;
+63 49.05(0).27  W. L. Kennon, Astronomy; A Textbook for Colleges, , , , , , J RAS Canada 42 238 and Sky Tel. 8 98, reference AJB 48.05.27;
 
-64 49.05(0).29  M. L. Kohns and J. J. Raimond jr., Cosmografie; Sterrenkunde voor middelbaar en gymnasiaal onderwijs, , , , , , Hemel en Dampkring 47 34, reference AJB 48.05.29;
+64 49.05(0).28  H. Kienle, Vom Wesen astronomischer Forschung, , , , , , Himmelswelt 56 135, reference AJB 48.05.28;
 
-65 49.05(0).30  P. G. Kulikowskij, Handbuch für Liebhaber der Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 316 pp, 8R. 20 Kop., , in Russian;
+65 49.05(0).29  M. L. Kobus and J. J. Raimond jr., Cosmografie; Sterrenkunde voor middelbaar en gymnasiaal onderwijs, , , , , , Hemel en Dampkring 47 34, reference AJB 48.05.29;
 
-66 49.05(0).31  R. V. Kunickij, Deň a noc; Ročné obdobia, Bratislava, Verlag Tatran, 1949, 39 pp, , , reprint of AJB 48.30.08;translated from Russian;in Slovakian;
+66 49.05(0).30  P. G. Kulikowskij, Handbuch für Liebhaber der Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 316 pp, 8R. 20 Kop., , in Russian;
 
-67 49.05(0).32  W. I. Kuryschew, Das unendliche Weltall, , Irkitsker staatlicher Gebietsverlag, 1949, 56 pp, 1R., , in Russian;
+67 49.05(0).31  R. V. Kunickij, Deň a noc; Ročné obdobia, Bratislava, Verlag Tatran, 1949, 39 pp, , , reprint of AJB 48.30.08;translated from Russian;in Slovakian;
 
-68 49.05(0).33  F. Link, Jak poznává astrofysika vesmir?, Prag, Verlag JČMF, 1949, 108 pp, , , 2nd edition;in Czech;
+68 49.05(0).32  W. I. Kuryschew, Das unendliche Weltall, , Irkutsker staatlicher Gebietsverlag, 1949, 56 pp, 1R., , in Russian;
 
-69 49.05(0).34  P. Lum, The Stars in Our Heavens, , Pantheon, 1948, 245 pp, $3.75, Sky Tel. 8 231, 
+69 49.05(0).33  F. Link, Jak poznává astrofysika vesmir?, Prag, Verlag JČMF, 1949, 108 pp, , , 2nd edition;in Czech;
 
-70 49.05(0).35  R. W. Mouser and Forbes, Star Names, , , 1949, 38 pp, $1.25, Sky Tel. 8 315, other self published; 
+70 49.05(0).34  P. Lum, The Stars in Our Heavens, , Pantheon, 1948, 245 pp, $3.75, Sky Tel. 8 231, 
 
-71 49.05(0).36  K. F. Ogorodnikow, Na čom sa drží Zem, Bratislava, Verlag Tatran, 1949, 28 pp, , , reprint of AJB 48.05.33;translated from Russian;
+71 49.05(0).35  R. W. Mouser and Forbes, Star Names, , , 1949, 38 pp, $1.25, Sky Tel. 8 315, other self published; 
 
-72 49.05(0).37  K. F. Ogorodnikow, Worauf sich die Erde hält, Moskau-Leningrad, Staatsveralg für technisch-theoretische Literatur, 1949, 24 pp, 45 Kop., , 2nd edition;in Russian;
+72 49.05(0).36  K. F. Ogorodnikow, Na čom sa drží Zem, Bratislava, Verlag Tatran, 1949, 28 pp, , , reprint of AJB 48.05.33;translated from Russian;in Slovakian;
 
-73 49.05(0).38  D. Papp, Più in là del Sole, Milano, Valentino Bompiani Editore, 1949, 183 pp, , , other Avventure de Pensiero Vol. 66; 
+73 49.05(0).37  K. F. Ogorodnikow, Worauf sich die Erde hält, Moskau-Leningrad, Staatsveralg für technisch-theoretische Literatur, 1949, 24 pp, 45 Kop., , 2nd edition;in Russian;
 
-74 49.05(0).39  P. P. Parenago, Der Aufbau des Weltall, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 80 pp, 3R., , in Russian;
+74 49.05(0).38  D. Papp, Più in là del Sole, Milano, Valentino Bompiani Editore, 1949, 183 pp, , , other Avventure de Pensiero Vol. 66; 
 
-75 49.05(0).40  J. I. Perelman, Unterhaltende Astronomie, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 224 pp, 3R. 90 Kop., , 5th edition;edited by P. G. Kulikowskij;in Russian;
+75 49.05(0).39  P. P. Parenago, Der Aufbau des Weltalls, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 80 pp, 3R., , in Russian;
 
-76 49.05(0).41  H. Pfaffe, Sterne und Welten im All; Für junge Menschen durschgesehen und umgeschrieben von Henry-Marcel Gerstmeier, Berlin, Verlag Erich Beyer, 1948, 267 pp, , Sterne 25 92, 
+76 49.05(0).40  J. I. Perelman, Unterhaltende Astronomie, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 224 pp, 3R. 90 Kop., , 5th edition;edited by P. G. Kulikowskij;in Russian;
 
-77 49.05(0).42  J. S. Pickering, The Stars are Yours, , , , , , Obs 69 154 and Sky Tel. 8 98, reference AJB 48.05.36;
+77 49.05(0).41  H. Pfaffe, Sterne und Welten im All; Für junge Menschen durschgesehen und umgeschrieben von Henry-Marcel Gerstmeier, Berlin, Verlag Erich Beyer, 1948, 267 pp, , Sterne 25 92, 
 
-78 49.05(0).43  I. F. Polak, Wie das Weltall aufgebaut ist, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 40 pp, 60 Kop., , 2nd edition;in Russian;
+78 49.05(0).42  J. S. Pickering, The Stars are Yours, , , , , , Obs 69 154 and Sky Tel. 8 98, reference AJB 48.05.36;
 
-79 49.05(0).44  P. I. Popow, Sonne und Erde, Moskau, Verlag der Prawda, 1949, 20 pp, 50 Kop., , in Russian;
+79 49.05(0).43  I. F. Polak, Wie das Weltall aufgebaut ist, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 40 pp, 60 Kop., , 2nd edition;in Russian;
 
-80 49.05(0).45  P. I. Popow and K. L. Bajew and B. A. Woronzow-Weljaminow and R. W. Kunizkij, Astronomie, Moskau, Staatsverlag für Lehr- und Erziehungsbücher des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 504 pp, 16R. 25 Kop., , 2nd edition;in Russian;other highschool textbook; 
+80 49.05(0).44  P. I. Popow, Sonne und Erde, Moskau, Verlag der Prawda, 1949, 20 pp, 50 Kop., , in Russian;
 
-81 49.05(0).46  W. Prjanischnikow, Die Welt comma in der wir leben, Kiew, Staatsverlag für Lehr- und Erziehungbücher <<Radjanska Schkola>>, 1949, 172 pp, 4R. 60 Kop., , in Ukrainian;
+81 49.05(0).45  P. I. Popow and K. L. Bajew and B. A. Woronzow-Weljaminow and R. W. Kunizkij, Astronomie, Moskau, Staatsverlag für Lehr- und Erziehungsbücher des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 504 pp, 16R. 25 Kop., , 2nd edition;in Russian;other highschool textbook; 
 
-82 49.05(0).47  M. Questiaux, L'univers et la planète Terre, Dinant-Bellevue, Editions <Le Guide de la Nature>>, , 40 pp, 18 fr., Ciel et Terre 65 123, other location Belgium; 
+82 49.05(0).46  W. Prjanischnikow, Die Welt comma in der wir leben, Kiew, Staatsverlag für Lehr- und Erziehungbücher <<Radjanska Schkola>>, 1949, 172 pp, 4R. 60 Kop., , in Ukrainian;
 
-83 49.05(0).48  P. Rousseau, Pour comprendre ... l'Astrophysique, Paris, Gaston Doin et Cie, 1939, 191 pp, , Ciel et Terre 65 283 and Gaz astr 31 58, 
+83 49.05(0).47  M. Questiaux, L'univers et la planète Terre, Dinant-Bellevue, Editions <Le Guide de la Nature>>, , 40 pp, 18 fr., Ciel et Terre 65 123, other location Belgium; 
 
-84 49.05(0).49  L. Rudaux and G. de Vaucouleurs, Astronomia — les astres comma l'univers, , , , , , Hemel en Dampkring 47 198 and PAT 30 175, reference AJB 48.05.42;
+84 49.05(0).48  P. Rousseau, Pour comprendre ... l'Astrophysique, Paris, Gaston Doin et Cie, 1939, 191 pp, , Ciel et Terre 65 283 and Gaz astr 31 58, 
 
-85 49.05(0).50  B. Russell, Human Knowledge: its Scope and Limits, London, Allen & Unwin, 1948, , $5.00, J RAS Canada 43 114 and, also published New York: Simon & Schuster;
+85 49.05(0).49  L. Rudaux and G. de Vaucouleurs, Astronomia — les astres comma l'univers, , , , , , Hemel en Dampkring 47 198 and PAT 30 175, reference AJB 48.05.42;
 
-86 49.05(0).51  J. van Schewick, Aufbau des Kosmos, Kevelaer Rhld., Verlag Butzon & Bercker, 1949, 32 pp, , , 
+86 49.05(0).50  B. Russell, Human Knowledge: its Scope and Limits, London, Allen & Unwin, 1948, , $5.00, J RAS Canada 43 114, also published New York: Simon & Schuster;
 
-87 49.05(0).52  E. Selikowitsch, Sonnenwelten, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 80 pp, 2R., , in Russian;
+87 49.05(0).51  H. van Schewick, Aufbau des Kosmos, Kevelaer Rhld., Verlag Butzon & Bercker, 1949, 32 pp, , , 
 
-88 49.05(0).53  E. Selikowitsch, Sonnenwelten; Abriß der Stellarastronomie, Tiflis, Staatsverlag für der grusinischen Sowjetrepublik, 1949, 92 pp, 4R., , reprint of AJB 48.05.44;in Georgian;
+88 49.05(0).52  E. Selikowitsch, Sonnenwelten, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1949, 80 pp, 2R., , in Russian;
 
-89 49.05(0).54  I. W. Sergejew and F. D. Bublejnikow, Ungewöhnliche Himmelserscheinungen, , Novosibirsker staatlicher Gebietsverlag, 1949, 52 pp, 95 Kop., , in Russian;
+89 49.05(0).53  E. Selikowitsch, Sonnenwelten; Abriß der Stellarastronomie, Tiflis, Technischer Staatsverlag der grusinischen Sowjetrepublik, 1949, 92 pp, 4R., , reprint of AJB 48.05.44;in Georgian;
 
-90 49.05(0).55  H. Siedentopf, Die physikalische erforschung des Weltalls, Koln-Opladen, Westdeutscher Verlag, 1949, 38 pp, 2.75 DM, AN 278 143 and Universitas 5 731 and Z. f. Naturforschung 4a 475, 
+90 49.05(0).54  I. W. Sergejew and F. D. Bublejnikow, Ungewöhnliche Himmelserscheinungen, , Novosibirsker staatlicher Gebietsverlag, 1949, 52 pp, 95 Kop., , in Russian;
 
-91 49.05(0).56  P. Sizaire, Le Guide des Etoiles, Paris, Les Grandes Editions Françaises, , 50 pp, , BSAF 63 96, 
+91 49.05(0).55  H. Siedentopf, Die physikalische erforschung des Weltalls, Koln-Opladen, Westdeutscher Verlag, 1949, 38 pp, 2.75 DM, AN 278 143 and Universitas 5 731 and Z. f. Naturforschung 4a 475, 
 
-92 49.05(0).57  W. T. Skilling and R. S. Richardson, Sun comma Moon comma and Stars, Stuttgart, Union Deutsche Verlagsgesellschaft, 1949, , , Sterne 25 94, reprint of AJB 45.08.61;translated from English by H. Lindeman;in German;
+92 49.05(0).56  P. Sizaire, Le Guide des Etoiles, Paris, Les Grandes Editions Françaises, , 50 pp, , BSAF 63 96, 
 
-93 49.05(0).58  W. T. Skilling and R. S. Richardson, Astronomy, New York, Henry Holt & Co., 1948, 11+692 pp, 28s, Nature 163 744, also published London: Chapman & Hall Ltd.;
+93 49.05(0).57  W. T. Skilling and R. S. Richardson, Sun comma Moon comma and Stars, Stuttgart, Union Deutsche Verlagsgesellschaft, 1949, , , Sterne 25 94, reprint of AJB 45.08.61;translated from English by H. Lindeman;in German;
 
-94 49.05(0).59  H. Slouka, Pohledy do nebe, , , , , , Nature 163 623, reference AJB 47.08.24;
+94 49.05(0).58  W. T. Skilling and R. S. Richardson, Astronomy, New York, Henry Holt & Co., 1948, 11+692 pp, 28s, Nature 163 744, also published London: Chapman & Hall Ltd.;other a revised edition; 
 
-95 49.05(0).60  C. H Slueter, Atoom en kosmos; Problemen der astrophysica, Amsterdam, G. W. Breughel, 1949, 231 pp, , Hemel en Dampkring 47 79, 
+95 49.05(0).59  H. Slouka, Pohledy do nebe, , , , , , Nature 163 623, reference AJB 47.08.24;
 
-96 49.05(0).61  W. Stein, Das Kleine Sternenbuch, Berlin-Bielefeld, Verlag Klasing & Co. GmbH, 1948, 182 pp, 6.90 DM, Sternenwelt 1 262, 
+96 49.05(0).60  C. H Sluiter, Atoom en kosmos; Problemen der astrophysica, Amsterdam, G. W. Breughel, 1949, 231 pp, , Hemel en Dampkring 47 79, 
 
-97 49.05(0).62  B. Šternbeck and F. Link, Jen bychom rádi věděli ..., Prag, Verlag JČMF, 1949, 129 pp, , , 2nd edition;in Czech;
+97 49.05(0).61  W. Stein, Das Kleine Sternenbuch, Berlin-Bielefeld, Verlag Klasing & Co. GmbH, 1948, 182 pp, 6.90 DM, Sternenwelt 1 262, 
 
-98 49.05(0).63  O. Thomas, Astronomie; Tatsachen und Probleme, Salzburg, Verlag <<Das Bergland-Buch>>, 1949, 632 pp, 38.00 DM and 14.00 DM, Gaz astr 31 86 and Orion Schaffhausen 3 30 and Pop Astr 57 152, 6th edition;
+98 49.05(0).62  B. Šternbeck and F. Link, Jen bychom rádi věděli ..., Prag, Verlag JČMF, 1949, 129 pp, , , 2nd edition;in Czech;
 
-99 49.05(0).64  H. Vogt, Der Bau des Weltalls, Stuttgart, C. E. Schwab - Verlag, 1949, 108 pp, 4.80 DM, AN 277 276 and Sterne 25 45 and Sternenwelt 1 191 and Z. f. Naturforschung 4a 315, other CES-Bücherei Band 16; 
+99 49.05(0).63  O. Thomas, Astronomie; Tatsachen und Probleme, Salzburg, Verlag <<Das Bergland-Buch>>, 1949, 632 pp, 38.00 DM and 14.00 DM, Gaz astr 31 86 and NAT 1949 119 and Orion Schaffhausen 3 30 and Pop Astr 57 152, 6th edition;
 
-100 49.05(0).65  K. W. Wagner, Bau und Entstehung des Weltalls; Naturwissenschaft comma Technik und Religion, Braunschweig, Fr. Vieweg & Sohn, 1949, 57 pp, 2.70 DM, AN 278 144, 
+100 49.05(0).64  H. Vogt, Der Bau des Weltalls, Stuttgart, C. E. Schwab - Verlag, 1949, 108 pp, 4.80 DM, AN 277 276 and Sterne 25 45 and Sternenwelt 1 191 and Z. f. Naturforschung 4a 315, other CES-Bücherei Band 16; 
 
-101 49.06(0).66  H. Werner, Vom Polarstern bis zum Kreuz des Südens; Eine allgemeinverständliche Einführung in die Astronomie der Himmelskugel und Anleitung zur Orientierung im Gelände nach Gestirnen auf der ganzen Erde, Jena, Gustav Fischer, 1946, 210 pp, , Naturwiss. Rundschau 2 86, 2nd edition;
+101 49.05(0).65  K. W. Wagner, Bau und Entstehung des Weltalls; Naturwissenschaft comma Technik und Religion, Braunschweig, Fr. Vieweg & Sohn, 1949, 57 pp, 2.70 DM, AN 278 144, 
 
-102 49.05(0).67  G. J. Whitrow, The Structure of the Universe, London, Hutchinson's University Library, 1949, 171 pp, 7s 6d, JBAA 61 28, 
+102 49.06(0).66  H. Werner, Vom Polarstern bis zum Kreuz des Südens; Eine allgemeinverständliche Einführung in die Astronomie der Himmelskugel und Anleitung zur Orientierung im Gelände nach Gestirnen auf der ganzen Erde, Jena, Gustav Fischer, 1946, 210 pp, , Naturwiss. Rundschau 2 86, 2nd edition;
 
-103 49.05(0).68  B. A. Woronzow-Weljaminow, Das Weltall, Moskau-Leningrad, Technischer Staatsverlag, 1947, 488 pp, 10R., AJ UdSSR 26 262, in Russian;
+103 49.05(0).67  G. J. Whitrow, The Structure of the Universe, London, Hutchinson's University Library, 1949, 171 pp, 7s 6d, JBAA 61 28, 
 
-104 49.05(0).69  B. A. Woronzow-Weljaminow, Astronomie, Moskau, Staatsverlag für Lehr- und Erziehungsbücher der Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 176 pp, 2R. 90 Kop., , 3rd edition;in Russian;
+104 49.05(0).68  B. A. Woronzow-Weljaminow, Das Weltall, Moskau-Leningrad, Technischer Staatsverlag, 1947, 488 pp, 10R., AJ UdSSR 26 262, in Russian;
 
-105 49.05(0).70  B. A. Woronzow-Weljaminow, Sammlung von Aufgaben und Übungen zur Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 260 pp, 5R. 60 Kop., , 2nd edition;in Russian;
+105 49.05(0).69  B. A. Woronzow-Weljaminow, Astronomie, Moskau, Staatsverlag für Lehr- und Erziehungsbücher der Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 176 pp, 2R. 90 Kop., , 3rd edition;in Russian;
 
-106 49.05(0).71  B. A. Woronzow-Weljaminow, Der Bau des Weltall, Moskau-Leningrad, Staatsverlag für Jungendliteratur, 1949, 48 pp, 60 Kop., , 2nd edition;in Russian;
+106 49.05(0).70  B. A. Woronzow-Weljaminow, Sammlung von Aufgaben und Übungen zur Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 260 pp, 5R. 60 Kop., , 2nd edition;in Russian;
 
-107 49.05(0).72  B. A. Woronzow-Weljaminow, Der Bau des Weltalls, Moskau, Verlag <<Prawda>>, 1949, 20 pp, 50 Kop., , in Russian;
+107 49.05(0).71  B. A. Woronzow-Weljaminow, Der Bau des Weltall, Moskau-Leningrad, Staatsverlag für Jungendliteratur, 1949, 48 pp, 60 Kop., , 2nd edition;in Russian;
 
-108 49.05(0).73  S. K. Wsechswjatskij and A. A. Jakowkin, Astronomie Heft 2, Kiew, Staatsverlag für Lehr- und Erziehungsbücher <<Radjanska Schkola>>, 1949, 131 pp, 6R., , in Ukrainian;
+108 49.05(0).72  B. A. Woronzow-Weljaminow, Der Bau des Weltalls, Moskau, Verlag <<Prawda>>, 1949, 20 pp, 50 Kop., , in Russian;
 
-109 49.05(0).74  , How to Find the Stars and Planets, Cincinnati, University of Cincinnati Observatory, , , $0.25, Sky Tel. 8 99, 
+109 49.05(0).73  S. K. Wsechswjatskij and A. A. Jakowkin, Astronomie Heft 2, Kiew, Staatsverlag für Lehr- und Erziehungsbücher <<Radjanska Schkola>>, 1949, 131 pp, 6R., , in Ukrainian;
 
-110 49.05(0).75  , Newcomb-Engelmann comma Populäre Astronomie, , , , , , Naturwissenschaften 36 284 and Phys. Blätter 5 43, reference AJB 48.05.59;
+110 49.05(0).74  , How to Find the Stars and Planets, Cincinnati, University of Cincinnati Observatory, , , $0.25, Sky Tel. 8 99, 
 
-111 49.05(0).76  , Das Weltall in Zahlen, , , , , , Himmelswelt 56 190, reference AJB 48.05.56;
+111 49.05(0).75  , Newcomb-Engelmann comma Populäre Astronomie, , , , , , Naturwissenschaften 36 284 and Phys. Blätter 5 43, reference AJB 48.05.59;
 
-112 49.05(0).77  , 100 Facts in Astronomy, London, The Naldrett Press, , 32 pp, 6d, JBAA 59 131, 
+112 49.05(0).76  , Das Weltall in Zahlen, , , , , , Himmelswelt 56 190, reference AJB 48.05.56;
 
-113 49.06(0).03  K. L. Bajew and W. A. Schischakow, Die Wahrheit über den Himmel, Alma-Ata, Kasachischer Staatsverlag, 1949, 56 pp, 1R. 20 Kop., , in Russian;
+113 49.05(0).77  , 100 Facts in Astronomy, London, The Naldrett Press, , 32 pp, 6d, JBAA 59 131, 
 
-114 49.06(0).11  K. Cuypers, Reizigers voor de Maan comma instappen!; Aard-en Maanrijkskunde voor de jeugd, Antwerpen, De Garve Hopland 27, , 80 pp, 35.80 fr., Heelal 5 Nr. 6 3, 
+114 49.06(0).03  K. L. Bajew and W. A. Schischakow, Die Wahrheit über den Himmel, Alma-Ata, Kasachischer Staatsverlag, 1949, 56 pp, 1R. 20 Kop., , in Russian;
 
-115 49.06(0).12  M. Daisomont, Où en est l'astrologie?, Bruges, Editions <<De Tempel>>, 1947, 51 pp, 50 frs., Ciel et Terre 65 41, 
+115 49.06(0).11  K. Cuypers, Reizigers voor de Maan comma instappen!; Aard-en Maanrijkskunde voor de jeugd, Antwerpen-De Garve, Hopland 27, , 80 pp, 35.80 fr., Heelal 5 Nr. 6 3, 
 
-116 49.06(0).13  F. Dessauer, Mensch und Kosmos, Frankfurt a. M., Verlag Josef Knecht, 1949, 234 pp, 7.80 DM, Z. f. Naturforschung 4a 480, also published Frankfurt a. M.: Carolusdruckerei;
+116 49.06(0).12  M. Daisomont, Où en est l'astrologie?, Bruges, Editions <<De Tempel>>, 1947, 51 pp, 50 frs., Ciel et Terre 65 41, 
 
-117 49.06(0).16  A. Eddington, Philosophie der Naturwissenschaft, Wien, Humbolt-Verlag, 1949, 288 pp, 23.00 S., , translated from English by K. Hauptvogel;
+117 49.06(0).13  F. Dessauer, Mensch und Kosmos, Frankfurt a. M., Verlag Josef Knecht, 1949, 234 pp, 7.80 DM, Z. f. Naturforschung 4a 480, also published Frankfurt a. M.: Carolusdruckerei;
 
-118 49.06(0).18  R. Eisler, The Royal Art of Astrology, London, Herbert Joseph Ltd., , 296 pp, £18, Ciel et Terre 65 302, 
+118 49.06(0).16  A. Eddington, Philosophie der Naturwissenschaft, Wien, Humbolt-Verlag, 1949, 288 pp, 23.00 S., , translated from English by K. Hauptvogel;
 
-119 49.06(0).19  F. Eredia, Il fuoco e la luce, Milano, Valentino Bompiani Editore, 1949, 154 pp, , , other Avventure del Pensiero Vol. 68; 
+119 49.06(0).18  R. Eisler, The Royal Art of Astrology, London, Herbert Joseph Ltd., , 296 pp, 18s, Ciel et Terre 65 302, 
 
-120 49.06(0).20  A. Fritz, Unsere Welt; Der rätselvolle Bau des Kosmos, Stuttgart, Union Deutsche Verlagsgesellschaft, 1949, 304 pp, 8.50 DM, Sternenwelt 1 167, 
+120 49.06(0).19  F. Eredia, Il fuoco e la luce, Milano, Valentino Bompiani Editore, 1949, 154 pp, , , other Avventure del Pensiero Vol. 68; 
 
-121 49.06(0).24  F. Gruber, Das negative Proton; Astrophysikalische Beweisgründe für seine Existenz; Neue Kosmogonie, Wien, Selbstverlag des Verfassers, 1949, 24 pp, , , other self published; 
+121 49.06(0).20  A. Fritz, Unsere Welt; Der rätselvolle Bau des Kosmos, Stuttgart, Union Deutsche Verlagsgesellschaft, 1949, 304 pp, 8.50 DM, Sternenwelt 1 167, 
 
-122 49.06(0).25  G. A. Gurew, Gab es einen Anfang und wird es ein Ende der Welt geben?, Kasan, Tatarischer Staatsverlag, 1949, 56 pp, 2R. 50 Kop., , in Tatar;
+122 49.06(0).24  F. Gruber, Das negative Proton; Astrophysikalische Beweisgründe für seine Existenz; Neue Kosmogonie, Wien, Selbstverlag des Verfassers, 1949, 24 pp, , , other self published; 
 
-123 49.06(0).30  R. W. Kunizkij, Gab es einen Anfang der Welt?, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 32 pp, 50 Kop., , 2nd edition;in Russian;
+123 49.06(0).25  G. A. Gurew, Gab es einen Anfang und wird es ein Ende der Welt geben?, Kasan, Tatarischer Staatsverlag, 1949, 56 pp, 2R. 50 Kop., , in Tatar;
 
-124 49.06(0).31  A. Lundbak, Atomet og Universet, , <<Kultur og Videnskab>> Forlaget Fremad, , , 12.00 Kr., NAT 1949 119, 
+124 49.06(0).30  R. W. Kunizkij, Gab es einen Anfang der Welt?, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 32 pp, 50 Kop., , 2nd edition;in Russian;
 
-125 49.06(0).34  S. A. Pachuto, Der Zusammenbruck der religiösen Legende über die Weltschöpfung, Tallin, Staatsverlag <<Politischie Literatur>>, 1949, 36 pp, 1R. 50 Kop., , in Estonian;
+125 49.06(0).31  A. Lundbak, Atomet og Universet, , Serien <<Kultur og Videnskab>> Forlaget Fremad, , , 12.00 Kr., NAT 1949 119, 
 
-126 49.06(0).38  N. Puchnatschew, Gab es einen Anfang und wird es ein Ende der Welt geben?, Nowosibirsk, Nowosibirscker städtisches Lektionsbüro, 1949, 36 pp, , , in Russian;
+126 49.06(0).34  S. A. Pachuto, Der Zusammenbruck der religiösen Legende über die Weltschöpfung, Tallin, Staatsverlag <<Politischie Literatur>>, 1949, 36 pp, 1R. 50 Kop., , in Estonian;
 
-127 49.06(0).44  I. Sergejew, Ungewöhnliche Himmelsbeobachtungen, Ulan-Ude, Burjat-mongolischer Verlag, 1949, , 1R. 95 Kop., , in Buryat-Mongolian;
+127 49.06(0).38  N. Puchnatschew, Gab es einen Anfang und wird es ein Ende der Welt geben?, Nowosibirsk, Nowosibirscker städtisches Lektionsbüro, 1949, 36 pp, , , in Russian;
 
-128 49.06(0).48  N. N. Sytinskaja, Gibt es eid Leben auf den Himmelskörpern?, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 108 pp, 2R. 75 Kop., , in Russian;
+128 49.06(0).44  I. Sergejew, Ungewöhnliche Himmelsbeobachtungen, Ulan-Ude, Burjat-mongolischer Verlag, 1949, , 1R. 95 Kop., , in Buryat-Mongolian;
 
-129 49.06(0).49  G. A. Tichow, Astrobotanik, Alma-Ata, Verlag Akad. Viss. kasach. Sowjetrepublik, 1949, 23 pp, 1r. 50 Kop., , in Russian;
+129 49.06(0).48  N. N. Sytinskaja, Gibt es eid Leben auf den Himmelskörpern?, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 108 pp, 2R. 75 Kop., , in Russian;
 
-130 49.06(0).52  K. W. Wagner, Bau und Enstehung des Weltalls, Braunschweig, Friedrich Vieweg und Sohn, 1949, 57 pp, , Sterne 25 187, 
+130 49.06(0).49  G. A. Tichow, Astrobotanik, Alma-Ata, Verlag Akad. Viss. kasach. Sowjetrepublik, 1949, 23 pp, 1R. 50 Kop., , in Russian;
 
-131 49.06(0).54  S. L. Walgard, Leben im Weltall, Moskau, Verlag <<Moskowskij Rabotschij>>, 1949, 96 pp, 2R., , in Russian;
+131 49.06(0).52  K. W. Wagner, Bau und Enstehung des Weltalls, Braunschweig, Friedrich Vieweg und Sohn, 1949, 57 pp, , Sterne 25 187, 
 
-132 49.06(0).56  D. Wattenberg, Materie und Leben, Berlin-Frohnau, Conder Verlag, 1949, , , Himmelswelt 56 190, 
+132 49.06(0).54  S. L. Walgard, Leben im Weltall, Moskau, Verlag <<Moskowskij Rabotschij>>, 1949, 96 pp, 2R., , in Russian;
 
-133 49.06(0).59  H. Weyl, Philosophy of Mathematics and Natural Science, Princeton, Princeton University Press, 1949, 311 pp, $5.00, Publ ASP 61 234, 
+133 49.06(0).56  D. Wattenberg, Materie und Leben, Berlin-Frohnau, Conder Verlag, 1949, , , Himmelswelt 56 190, 
 
-134 49.06(0).60  B. A. Woronzow-Weljaminow, Das Licht — ein Bote ferner Welten, Moskau, Verlag der Prawda, 1949, 28 pp, 60 Kop., , in Russian;
+134 49.06(0).59  H. Weyl, Philosophy of Mathematics and Natural Science, Princeton, Princeton University Press, 1949, 311 pp, $5.00, Publ ASP 61 234, 
 
-135 49.06(0).61  B. A. Woronzow-Weljaminow, Gab es einen Anfang und wird es ein Ende der Welt geben?, , Tschkalowsker Verlag, 1949, 44 pp, 55 Kop., , in Russian;
+135 49.06(0).60  B. A. Woronzow-Weljaminow, Das Licht — ein Bote ferner Welten, Moskau, Verlag der Prawda, 1949, 28 pp, 60 Kop., , in Russian;
 
-136 49.06(0).67  , Dichters over sterren; Een bloemlezing verzameld en ingeleid door Dr M. G. J. Minnaert, Arnhem, van Loghum Slaterus, 1949, 219 pp, , , 
+136 49.06(0).61  B. A. Woronzow-Weljaminow, Gab es einen Anfang und wird es ein Ende der Welt geben?, , Tschkalowsker Verlag, 1949, 44 pp, 55 Kop., , in Russian;
 
-137 49.06(0).68  , Unterhaltungen über naturwisenschaftliche Themen, Rostow/Don, Abteilung für kulturell-aufklärende Arbeiten des Rostower Gebiets, 1949, 164 pp, , , in Russian;
+137 49.06(0).67  , Dichters over sterren; Een bloemlezing verzameld en ingeleid door Dr M. G. J. Minnaert, Arnhem, van Loghum Slaterus, 1949, 219 pp, , , 
 
-138 49.10(2).24  N. I. Leonow, Ulugbek — eingroßer Astronom es 15 Jahrhunderts, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 64 pp, 95 Kop., , in Russian;
+138 49.06(0).68  , Unterhaltungen über naturwisenschaftliche Themen, Rostow/Don, Abteilung für kulturell-aufklärende Arbeiten des Rostower Gebiets, 1949, 164 pp, , , in Russian;
 
-139 49.10(2).26  G. Loria, Galileo Galilei, Prag, Verlag Svoboda, 1949, 185 pp, , , translated from Italian;
+139 49.10(2).24  N. I. Leonow, Ulugbek — eingroßer Astronom es 15 Jahrhunderts, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 64 pp, 95 Kop., , in Russian;
 
-140 49.10(2).34  G. Rewsin, Nikolaus Kopernikus (1473—1543), , Leninschen Kommunistischen Jungendverbandes der UdSSR, 1949, 432 pp, 7R. 50 Kop., , in Russian;
+140 49.10(2).26  G. Loria, Galileo Galilei, Prag, Verlag Svoboda, 1949, 185 pp, , , translated from Italian;
 
-141 49.10(2).35  V. Ronchi, Galileo e il cannocchiale, , , , , , Heelal 5 32, reference AJB 45.03.85;
+141 49.10(2).34  G. Rewsin, Nikolaus Kopernikus (1473—1543), , Leninschen Kommunistischen Jungendverbandes der UdSSR, 1949, 432 pp, 7R. 50 Kop., , in Russian;
 
-142 49.10(2).53  H. Wright, Sweeper of the Sky; The Life of Maria Mitchell, New York, The Macmillan Company, 1949, 253 pp, $4.00, Pop Astr 57 255 and Sky Tel. 8 151, 
+142 49.10(2).35  V. Ronchi, Galileo e il cannocchiale, , , , , , Heelal 5 32, reference AJB 45.03.85;
 
-143 49.10(2).54  , Newton Tercentenary Celebrations, , , , , , Sky Tel. 8 74, reference AJB 47.03.31;
+143 49.10(2).53  H. Wright, Sweeper of the Sky; The Life of Maria Mitchell, New York, The Macmillan Company, 1949, 253 pp, $4.00, Pop Astr 57 255 and Sky Tel. 8 151, 
 
-144 49.07(0).02  A. K. Timirjasew ed., P. N. Lebedev comma Ausgewählte Werke, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 244 pp, 7R. 80 Kop., , in Russian;
+144 49.10(2).54  , Newton Tercentenary Celebrations, , , , , , Sky Tel. 8 74, reference AJB 47.03.31;
 
-145 49.07(0).06  , N. E. Shukowskij comma Gesammelte Werke; Band 1 Allgeneine Mechanik comma Mathematik und Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 656 pp, 24 R., , in Russian;
+145 49.07(0).02  A. K. Timirjasew ed., P. N. Lebedev comma Ausgewählte Werke, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 244 pp, 7R. 80 Kop., , in Russian;
 
-146 49.07(0).12  , Tycho Brahe's Description of his Instruments and Scientific Work, , , , , , J RAS Canada 43 244, reference AJB 46.07.09;
+146 49.07(0).06  , N. E. Shukowskij comma Gesammelte Werke; Band 1 Allgemeine Mechanik comma Mathematik und Astronomie, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 656 pp, 24 R., , in Russian;
 
-147 49.07(0).13  , Giordano Bruno comma Dialogs, , Staatsverlag für politischer Literatur, 1949, 552 pp, 10R., , in Russian;
+147 49.07(0).12  , Tycho Brahe's Description of his Instruments and Scientific Work, , , , , , J RAS Canada 43 244, reference AJB 46.07.09;
 
-148 49.07(0).14  , Nicolaus Copernicus comma De Revolutionibus, , , , , , J RAS Canada 42 239, reference AJB 47.07.05;
+148 49.07(0).13  , Giordano Bruno comma Dialoge, , Staatsverlag für politischer Literatur, 1949, 552 pp, 10R., , in Russian;
 
-149 49.07(0).15  , Nikolaus Kopernikus Gesamtausgabe; Band 2 Del Revolutionibus Orbium Caelestium Libri Sex, München, R. Oldenbourg, 1949, 470 pp, , , 
+149 49.07(0).14  , Nicolaus Copernicus comma De Revolutionibus, , , , , , J RAS Canada 42 239, reference AJB 47.07.05;
 
-150 49.07(0).16  A. A. Michajlow ed., Nikolaus Kopernikus comma Sammlung von Aufsätzen zu seinen vierhundertsten Todestag, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 220 pp, , , reference AJB 48.10.38;
+150 49.07(0).15  , Nikolaus Kopernikus Gesamtausgabe; Band 2 Del Revolutionibus Orbium Caelestium Libri Sex, München, R. Oldenbourg, 1949, 470 pp, , , 
 
-151 49.07(0).17  Fritz Rossmann ed., N. Kopernikus: Erster Entwurf eines Weltsystems sowie eine Auseinandersetzung Johannes Kepler nit Aristoteles über die Bewegung der Erde, München, Verlag Hermann Rinn, 1948, 100 p, 6.00 DM, AN 277 273, 
+151 49.07(0).16  A. A. Michajlow ed., Nikolaus Kopernikus comma Sammlung von Aufsätzen zu seinen vierhundertsten Todestag, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 220 pp, , , reference AJB 48.10.38;
 
-152 49.07(0).18  M. Caspar ed., Johannes Kepler comma Gesammelte Werke; Band 13 Briefe 1590—1599, München, C. H. Beck'sche Verlagsbuchhandlung, 1945, 17+432 pp, 40.00 DM, , 
+152 49.07(0).17  Fritz Rossmann ed., N. Kopernikus: Erster Entwurf eines Weltsystems sowie eine Auseinandersetzung Johannes Kepler mit Aristoteles über die Bewegung der Erde, München, Verlag Hermann Rinn, 1948, 100 p, 6.00 DM, AN 277 273, translated  by Fritz Rossmann;
 
-153 49.07(0).19  M. Caspar ed., Johannes Kepler comma Gesammelte Werke; Band 14 Briefe 1599—1603, München, C. H. Beck'sche Verlagsbuchhandlung, 1949, 520 pp, 40.00 DM, , 
+153 49.07(0).18  M. Caspar ed., Johannes Kepler comma Gesammelte Werke; Band 13 Briefe 1590—1599, München, C. H. Beck'sche Verlagsbuchhandlung, 1945, 17+432 pp, 40.00 DM, , 
 
-154 49.07(0).20  , Astrophysikalisches Sammelwerk, Moskau, Verlag für ausländische Literatur, 1949, 244 pp, 16R., , in Russian;
+154 49.07(0).19  M. Caspar ed., Johannes Kepler comma Gesammelte Werke; Band 14 Briefe 1599—1603, München, C. H. Beck'sche Verlagsbuchhandlung, 1949, 520 pp, 40.00 DM, , 
 
-155 49.07(0).21  , Centennial Symposia, , , , , , J RAS Canada 43 93 and PAT 30 87 and Pop Astr 57 48 and Sky Tel. 8 127, reference AJB 48.05.57;
+155 49.07(0).20  , Astrophysikalisches Sammelwerk, Moskau, Verlag für ausländische Literatur, 1949, 244 pp, 16R., , in Russian;
 
-156 49.07(0).22  , Forschritte der astronomischen Wissenschaften Band IV, , , , , , AJ UdSSR 26 320, reference AJB 48.07.23;
+156 49.07(0).21  , Centennial Symposia, , , , , , J RAS Canada 43 93 and PAT 30 87 and Pop Astr 57 48 and Sky Tel. 8 127, reference AJB 48.05.57;
 
-157 49.13(0).01  G. Abetti, Storia dell'Astronomie, Firenza, Vallecchie Editore, 1949, 370 pp, 1800 Lire, Mem SA It (NS) 21 263, 
+157 49.07(0).22  , Fortschritte der astronomischen Wissenschaften Band IV, , , , , , AJ UdSSR 26 320, reference AJB 48.07.23;
 
-158 49.13(0).02  K. L Bajew, Tvorcovia novej astronomie, Bratislava, Verlag Tatran, 1949, 95 p, , , reprint of AJB 48.13.02;translated from Russian;in Slovakian;
+158 49.13(0).01  G. Abetti, Storia dell'Astronomie, Firenza, Vallecchie Editore, 1949, 370 pp, 1800 Lire, Mem SA It (NS) 21 263, 
 
-159 49.13(0).03  H. Balss, Antike Astronomie, München, E. Heimeran, 1949, 312 pp, 9.00 DM, Hemel en Dampkring, 
+159 49.13(0).02  K. L Bajew, Tvorcovia novej astronomie, Bratislava, Verlag Tatran, 1949, 95 p, , , reprint of AJB 48.13.02;translated from Russian;in Slovakian;
 
-160 49.13(0).04  F. Becker, Geschichte der Astronomie, , , , , , Naturwiss. Rundschau 2 86, reference AJB 47.05.02;
+160 49.13(0).03  H. Balss, Antike Astronomie, München, E. Heimeran, 1949, 312 pp, 9.00 DM, Hemel en Dampkring 47 198, 
 
-161 49.13(0).07  G. A. Gurew, Erde und Himmel; Abriß zur Geschichte der Astronomie, Eriwan, Armenischer Staatsverlag, 1948, 196 pp, 6R., , in Arminian;
+161 49.13(0).04  F. Becker, Geschichte der Astronomie, , , , , , Naturwiss. Rundschau 2 86, reference AJB 47.05.02;
 
-162 49.13(0).09  P. Humbert, Historie des découvertes astronomiques, Paris, Revue des Jeunes Coll. <<Initiations>>, 1948, 272 pp, 180 f.f., Ciel et Terre 65 85, 
+162 49.13(0).07  G. A. Gurew, Erde und Himmel; Abriß zur Geschichte der Astronomie, Eriwan, Armenischer Staatsverlag, 1948, 196 pp, 6R., , in Armenian;
 
-163 49.13(0).10  J. Jeans, Hur fysiken utvecklats och vad den betyder för mänskligheten, , , , , , PAT 30 174, reprint of AJB 48.13.17;translated from English;in Swedish;other there is apparently a Swedish translation that was reviewed but there is no publishing information; 
+163 49.13(0).09  P. Humbert, Historie des découvertes astronomiques, Paris, Revue des Jeunes Coll. <<Initiations>>, 1948, 272 pp, 180 f.f., Ciel et Terre 65 85, 
 
-164 49.13(0).13  A. v. Möri, Das astronomische Weltbild der Antike, Innsbruck, Verlag Felizian Rauch, , 27 pp, , Sternenwelt 1 286, 
+164 49.13(0).10  J. Jeans, Hur fysiken utvecklats och vad den betyder för mänskligheten, , , , , , PAT 30 174, reprint of AJB 48.13.17;translated from English;in Swedish;other there is apparently a Swedish translation that was reviewed but there is no publishing information; 
 
-165 49.13(0).15  R. I. Waterfield, Sto let astronomie, Prag, Máj, 1948, 484 pp, , , translated from English by O. Seydl;in Czech;other a translation of A Hundred Years of Astronomy; 
+165 49.13(0).13  A. v. Mörl, Das astronomische Weltbild der Antike, Innsbruck, Verlag Felizian Rauch, , 27 pp, , Sternenwelt 1 286, 
 
-166 49.13(0).16  F. Whittaker, From Euclid to Eddington; A Study of Conceptions of the external world, , Cambridge University Press, 1949, 9+212 pp, $4.00, Math. rev. 11 2 and Sky Tel. 8 315, 
+166 49.13(0).15  R. I. Waterfield, Sto let astronomie, Prag, Máj, 1948, 484 pp, , , translated from English by O. Seydl;in Czech;other a translation of A Hundred Years of Astronomy; 
 
-167 49.13(0).19  F. Zwicky, Morphological Astronomy, , , , , , JBAA 59 10, reference AJB 48.13.36;
+167 49.13(0).16  F. Whittaker, From Euclid to Eddington; A Study of Conceptions of the external world, , Cambridge University Press, 1949, 9+212 pp, $4.00, Math. Rev. 11 2 and Sky Tel. 8 315, 
 
-168 49.20(0).10  H. J Cooper, Scientific Instruments, London, Hutchinson, , 306 pp, 30s, Ciel et Terre 65 157, 
+168 49.13(0).19  F. Zwicky, Morphological Astronomy, , , , , , JBAA 59 110, reference AJB 48.13.36;
 
-169 49.20(0).19  C. Florian, Optique sans formulas, Paris, Dunod, 1949, 402 pp, 355.50 fs. b., Ciel et Terre 65 283, 
+169 49.20(0).10  H. J Cooper, Scientific Instruments, London, Hutchinson, , 306 pp, 30s, Ciel et Terre 65 157, 
 
-170 49.20(0).23  F. Gianni, L'astrofilo autocostruttore, Genova, Briano Editore, 1949, 96 pp, , , 
+170 49.20(0).19  C. Florian, Optique sans formulas, Paris, Dunod, 1949, 402 pp, 355.50 fs. b., Ciel et Terre 65 283, 
 
-171 49.20(0).26  H. Harting, Photographische Optik, Pößneck, R. A. Lang Verlag, 1948, 164 pp, 15.00 DM, AN 277 273, 3rd edition;
+171 49.20(0).23  F. Gianni, L'astrofilo autocostruttore, Genova, Briano Editore, 1949, 96 pp, , , 
 
-172 49.20(0).40  M. S. Nawaschin, Anleitung zur Herstellung eines Reflektors, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 34 pp, 3R., , in Russian;
+172 49.20(0).26  H. Harting, Photographische Optik, Pößneck, R. A. Lang Verlag, 1948, 164 pp, 15.00 DM, AN 277 273, 3rd edition;
 
-173 49.20(0).41  L. Neuroth, Der Bau eines Spiegelfernrohres; Eine Anleitung zur Selbstherstellung für Liebhaber-Astronomen und solche comma die es werden wollen, Ravensburg, Verlag Otto Maier, , 76 pp, 3.50 DM, Sterne 25 94 and Sternenwelt 1 286, 
+173 49.20(0).40  M. S. Nawaschin, Anleitung zur Herstellung eines Reflektors, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 34 pp, 3R., , in Russian;
 
-174 49.20(0).46  M. H. Pirenne, Vision and the Eye, London, The Pilot Press Ltd., 1948, 187 pp, 12s 6d, JBAA 59 162, 
+174 49.20(0).41  L. Neuroth, Der Bau eines Spiegelfernrohres; Eine Anleitung zur Selbstherstellung für Liebhaber-Astronomen und solche comma die es werden wollen, Ravensburg, Verlag Otto Maier, , 76 pp, 3.50 DM, Sterne 25 94 and Sternenwelt 1 286, 
 
-175 49.20(0).48  H. Rohr, Das Fernrohr für Jedermann; Wie baue ich mir ein Spiegeltelesckop? Eine gründliche Anleitung zum Bau eines leistungsfähigen astronomischen Fernrohres, Zürich, Rascher-Verlag, 1949, 173 pp, Fr. 8.50, Ciel et Terre 65 41 and Heelal 4 80 and J RAS Canada 42 282 and Optik 5 123 and Orion Schaffhausen Nr. 22 530 and Sterne 24 92 and Sternenwelt 1 167, 
+175 49.20(0).46  M. H. Pirenne, Vision and the Eye, London, The Pilot Press Ltd., 1948, 187 pp, 12s 6d, JBAA 59 162, 
 
-176 49.20(0).50  E. Rosen, The Naming of the Telescope, , , , , , Nature 164 46, reference AJB 47.08.21;
+176 49.20(0).48  H. Rohr, Das Fernrohr für Jedermann; Wie baue ich mir ein Spiegeltelesckop? Eine gründliche Anleitung zum Bau eines leistungsfähigen astronomischen Fernrohres, Zürich, Rascher-Verlag, 1949, 173 pp, Fr. 8.50, Ciel et Terre 65 41 and Heelal 4 80 and J RAS Canada 42 282 and Optik 5 123 and Orion Schaffhausen Nr. 22 530 and Sterne 24 92 and Sternenwelt 1 167, 
 
-177 49.20(0).53  B. Smid, De telescoop, Haarlen-Antwerpen, J. H. Gottner, 1949, 214 pp, , Hemel en Dampkring 47 100, 
+177 49.20(0).50  E. Rosen, The Naming of the Telescope, , , , , , Nature 164 46, reference AJB 47.08.21;
 
-178 49.20(0).56  W. S. Suchorukich, Mikroskop und Teleskop, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 56 pp, 95 Kop., , in Russian;
+178 49.20(0).53  B. Smid, De telescoop, Haarlen-Antwerpen, J. H. Gottner, 1949, 214 pp, , Hemel en Dampkring 47 100, 
 
-179 49.20(1).71  F. Gianni, La fotografia degli astri, Genova, Briano Editore, 1949, 72 pp, , , 
+179 49.20(0).56  W. S. Suchorukich, Mikroskop und Teleskop, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 56 pp, 95 Kop., , in Russian;
 
-180 49.20(1).73  M. M. Lagajew and W. W. Fedinskij, Anleitung zur Beobachtung von Meteoren, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 26 pp, 1R. 50 Kop., , in Russian;
+180 49.20(1).71  F. Gianni, La fotografia degli astri, Genova, Briano Editore, 1949, 72 pp, , , 
 
-181 49.20(1).79  G. J. Jalalov, The sextant of Ulugh-Bek observatory, , , , , , Ann. Françaises Chronométrie 19 216, reference AJB 47.06.13;
+181 49.20(1).73  M. M. Lagajew and W. W. Fedinskij, Anleitung zur Beobachtung von Meteoren, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 26 pp, 1R. 50 Kop., , in Russian;
 
-182 49.21(0).19  M. S. Nawaschin, Das Fernrohr des Liebhaberastronomen, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 155 pp, 3R. 20 Kop., , in Russian;
+182 49.20(1).79  G. J. Jalalov, The sextant of Ulugh-Bek observatory, , , , , , Ann. Françaises Chronométrie 19 216, reference AJB 47.06.13;
 
-183 49.22(0).45  V. K. Zworykin and E. G. Ramberg, Photoelectricity and its Applications, New York, John Wiley & Sons Inc., 1949, 12+494 pp, $7.50, , other a new edition of the 1939 book Photocells and their Applications by Zorykin & Wilson; 
+183 49.21(0).19  M. S. Nawaschin, Das Fernrohr des Liebhaberastronomen, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 155 pp, 3R. 20 Kop., , in Russian;
 
-184 49.22(1).54  T. H. James and G. C. Higgins, Fundamentals of Photographic Theory, New York, John Wiley & Sons Ins., 1948, 7+286 pp, 21s, Nature 163 786, also published London: Chapman & Hall Ltd.;
+184 49.22(0).45  V. K. Zworykin and E. G. Ramberg, Photoelectricity and its Applications, New York, John Wiley & Sons Inc., 1949, 12+494 pp, $7.50, , other a new edition of the 1934 book Photocells and their Applications by Zorykin & Wilson; 
 
-185 49.22(1).55  R. N. Mayall and M. L. Mayall, Skyshooting comma hunting the stars with your camera, New York, Ronald Press Company, 1949, 11+174 pp, $3.75, J RAS Canada 43 204 and Pop Astr 57 524 and Publ ASP 61 234 and Sky Tel. 9 38, 
+185 49.22(1).54  T. H. James and G. C. Higgins, Fundamentals of Photographic Theory, New York, John Wiley & Sons Ins., 1948, 7+286 pp, 21s, Nature 163 786, also published London: Chapman & Hall Ltd.;
 
-186 49.23(0).02  W. A. Barinow, Die Zeit und ihre Messung, Moskau, Verlag <<Prawda>>, 1949, 24 pp, 60 Kop., , in Russian;
+186 49.22(1).55  R. N. Mayall and M. L. Mayall, Skyshooting comma hunting the stars with your camera, New York, Ronald Press Company, 1949, 11+174 pp, $3.75, J RAS Canada 43 204 and Pop Astr 57 524 and Publ ASP 61 234 and Sky Tel. 9 38, 
 
-187 49.23(0).16  F. Hope-Jones, Eletrical Timekeeping, London, N. A. G. Press Ltd., 1949, 279 pp, 21s, JBAA 60 61, 2nd edition;
+187 49.23(0).02  W. A. Barinow, Die Zeit und ihre Messung, Moskau, Verlag <<Prawda>>, 1949, 24 pp, 60 Kop., , in Russian;
 
-188 49.23(0).27  W. I. Prjanischnikow, Selbstgevaute Sonnenhren, , Verlag des Leninschen Kommunistischen Jugendverbandes der UdSSR, 1949, 32 pp, 50 Kop., , in Russian;
+188 49.23(0).16  F. Hope-Jones, Eletrical Timekeeping, London, N. A. G. Press Ltd., 1949, 279 pp, 21s, JBAA 60 61, 2nd edition;
 
-189 49.23(0).29  R. Schneider, Přesný čas, Prag, Verlag Orbis, 1949, 112 pp, , RH 30 153, in Czech;
+189 49.23(0).27  W. I. Prjanischnikow, Selbstgevaute Sonnenhren, , Verlag des Leninschen Kommunistischen Jugendverbandes der UdSSR, 1949, 32 pp, 50 Kop., , in Russian;
 
-190 49.30(0).01  M. Davidson, Elements of Mathematical Astronomy, , , , , , Sky Tel. 8 73, reference AJB 47.08.06;
+190 49.23(0).29  R. Schneider, Přesný čas, Prag, Verlag Orbis, 1949, 112 pp, , RH 30 153, in Czech;
 
-191 49.30(0).03  G. L. Hosmer and J. M. Robbins, Practical Astronomy, , , , , , J RAS Canada 42 239 and Obs 69 231 and Sky Tel. 8 72, reference AJB 48.30.07;
+191 49.30(0).01  M. Davidson, Elements of Mathematical Astronomy, , , , , , Sky Tel. 8 73, reference AJB 47.08.06;
 
-192 49.30(0).05  M. Iljin, Wie spät ist es?, Tiflis, Jugendverlag des Ministeriums für Volksbildung der grusinischen Sowjetrepublik, 1949, 88 pp, 5R., , in Georgian;
+192 49.30(0).03  G. L. Hosmer and J. M. Robbins, Practical Astronomy, , , , , , J RAS Canada 42 239 and Obs 69 231 and Sky Tel. 8 72, reference AJB 48.30.07;
 
-193 49.30(0).06  A. P. Juschtschenko, Azimute der Sterne δ≤30°; Band 2 comma Für die Breiten zwischen 30°und 50°, , Hydrographische Verwaltung WMS, 1949, 337 pp, 21R., , 2nd edition;in Russian;
+193 49.30(0).05  M. Iljin, Wie spät ist es?, Tiflis, Jugendverlag des Ministeriums für Volksbildung der grusinischen Sowjetrepublik, 1949, 88 pp, 5R., , in Georgian;
 
-194 49.30(0).07  A. I. Kajgorodow, Die astronomischen Grundlagen zur Berechnung der Zeit und der solaren Geographie, Moskau, Staatlicher Unterrichtsverlag des Ministeriums für Volksaufklärung des russ. Sowjetrepublik, 1949, 80 pp, 3R. 30 Kop., , in Russian;
+194 49.30(0).06  A. P. Juschtschenko, Azimute der Sterne δ≤30°; Band 2 Für die Breiten zwischen 30° und 50°, , Hydrographische Verwaltung WMS, 1949, 337 pp, 21R., , 2nd edition;in Russian;
 
-195 49.30(0).10  J. J. Nassau, Practical Astronomy, , , , , , Hemel en Dampkring 47 113 and Nature 163 744 and Obs 69 157 and Sky Tel. 8 72, reference AJB 48.30.09;
+195 49.30(0).07  A. I. Kajgorodow, Die astronomischen Grundlagen zur Berechnung der Zeit und der solaren Geographie, Moskau, Staatlicher Unterrichtsverlag des Ministeriums für Volksaufklärung des russ. Sowjetrepublik, 1949, 80 pp, 3R. 30 Kop., , in Russian;
 
-196 49.30(0).11  T. Niethammer, Die genauen Methoden der astronomisch-geographischen Ortsbestimmung, , , , , , Naturwiss. Rundschau 2 86, reference AJB 47.21.03;
+196 49.30(0).10  J. J. Nassau, Practical Astronomy, , , , , , Hemel en Dampkring 47 113 and Nature 163 744 and Obs 69 157 and Sky Tel. 8 72, reference AJB 48.30.09;
 
-197 49.30(0).15  , Ephemeriden zur Breitenbestimmung aus korrespondierenden Sternhöhen (nach der Methode von Pewzow) für die Zone von 44° 45ˊ bis 49° 45ˊ nördlicher Breite; Band 2, Moskau, Verlag für geodätische und kartographische Literatur, 1949, 122 pp, 18R., , in Russian;other also published as Heft 63 Publ. (Trudy) des zentralen Forschunginstituts für Geodäsie comma Luftbildaufnahme und Kartographie erschienen; 
+197 49.30(0).11  T. Niethammer, Die genauen Methoden der astronomisch-geographischen Ortsbestimmung, , , , , , Naturwiss. Rundschau 2 86, reference AJB 47.21.03;
 
-198 49.31(0).07  A. Gishizkij, Ephemeriden von Sternen zur Bestimmung astronomischen Punkte in hohen Breiten, Moskau, Verlag Akad. Wiss. UdSSR, 1947, 82 pp, , , 
+198 49.30(0).15  , Ephemeriden zur Breitenbestimmung aus korrespondierenden Sternhöhen (nach der Methode von Pewzow) für die Zone von 44° 45ˊ bis 49° 45ˊ nördlicher Breite; Band 2, Moskau, Verlag für geodätische und kartographische Literatur, 1949, 122 pp, 18R., , in Russian;other also published as Heft 63 Publ. (Trudy) des zentralen Forschunginstituts für Geodäsie comma Luftbildaufnahme und Kartographie erschienen; 
 
-199 49.32(0).02  A. A. Michajlow, Zatmenie Slnka a Mesiaca, Bratislava, Verlag Tatran, 1949, 39 pp, , , reprint of AJB 48.32.05;translated from Russian;in Czech;
+199 49.31(0).07  A. Gishizkij, Ephemeriden von Sternen zur Bestimmung astronomischer Punkte in hohen Breiten, Moskau, Verlag Akad. Wiss. UdSSR, 1947, 82 pp, , , 
 
-200 49.33(0).11  I. F. Polak, Zeit und Kalender, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 40 pp, 70 Kop., , 3rd edition;in Russian;
+200 49.32(0).02  A. A. Michajlow, Zatmenie Slnka a Mesiaca, Bratislava, Verlag Tatran, 1949, 39 pp, , , reprint of AJB 48.32.05;translated from Russian;in Czech;
 
-201 49.33(0).18  G. Mamedbejli ed., Synchronische Tafeln zum Übergang von der Mondjahrsrechnung zur Sonnenjahrsrechnung und ungekehrt, Baku, Verlag der aserbajdshanischen Kirow-Staatsuniversität, 1949, 12 pp, 70 Kop., , in Azerbaijani;
+201 49.33(0).11  I. F. Polak, Zeit und Kalender, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 40 pp, 70 Kop., , 3rd edition;in Russian;
 
-202 49.41(0).10  O. Costa de Beauregard, La Théorie de la Relativité Restreinte, Paris, Masson et Cie, 1949, 6+173 pp, 800 fr, Math. Rev. 11 546, 
+202 49.33(0).18  G. Mamedbejli ed., Synchronische Tafeln zum Übergang von der Mondjahrsrechnung zur Sonnenjahrsrechnung und ungekehrt, Baku, Verlag der aserbajdshanischen Kirow-Staatsuniversität, 1949, 12 pp, 70 Kop., , in Azerbaijani;
 
-203 49.41(0).19  W. Grotrian, Neuere Vorstellungen über die Entstehung des Weltalls, Berlin-Frohnau, Condor-Verlag, 1949, 40 pp, , Sternenwelt 1 192, 2nd edition;
+203 49.41(0).10  O. Costa de Beauregard, La Théorie de la Relativité Restreinte, Paris, Masson et Cie, 1949, 6+173 pp, 800 fr, Math. Rev. 11 546, 
 
-204 49.41(0).33  G. C. McVittie, Cosmological Theory, New York, John Wiley & Sons Inc, 1949, 8+103 pp, $1.50, Math. Rev. 11 468, 2nd edition;also published London: Methuen & Co. Ltd.;
+204 49.41(0).19  W. Grotrian, Neuere Vorstellungen über die Entstehung des Weltalls, Berlin-Frohnau, Condor-Verlag, 1949, 40 pp, , Sternenwelt 1 192, 2nd edition;
 
-205 49.41(0).34  E. A. Milne, Kinematic Relativity; A Sequel to Relativity comma Gravitation and World Structure, , , , , , ApJ 110 99 and Nature 163 931 and Obs 69 152, reference AJB 48.41.54;
+205 49.41(0).33  G. C. McVittie, Cosmological Theory, New York, John Wiley & Sons Inc, 1949, 8+103 pp, $1.50, Math. Rev. 11 468, 2nd edition;also published London: Methuen & Co. Ltd.;
 
-206 49.42(0).38  M. F. Subbotin, Lehrbuch der Himmelsmechanik comma Band 3, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 280 pp, 7R. 30 Kop., , in Russian;
+206 49.41(0).34  E. A. Milne, Kinematic Relativity; A Sequel to Relativity comma Gravitation and World Structure, , , , , , ApJ 110 99 and Nature 163 931 and Obs 69 152, reference AJB 48.41.54;
 
-207 49.44(0).18  E. von der Pahlen, Einführung in die Dynamik von Sternsystemen, , , , , , Ann d'Astrophys 12 80 and AJ UdSSR 26 374 and ApJ 110 99 and Ciel et Terre 65 246 and Nature 163 4 and Universitas 4 77, reference AJB 47.90.12;
+207 49.42(0).38  M. F. Subbotin, Lehrbuch der Himmelsmechanik comma Band 3, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 280 pp, 7R. 30 Kop., , in Russian;
 
-208 49.45(0).03  A. D. Dubjago, Bahnbestimmung, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 444 pp, 20R. 50 Kop., , in Russian;
+208 49.44(0).18  E. von der Pahlen, Einführung in die Dynamik von Sternsystemen, , , , , , Ann d'Astrophys 12 80 and AJ UdSSR 26 374 and ApJ 110 99 and Ciel et Terre 65 246 and Nature 163 4 and Universitas 4 77, reference AJB 47.90.12;
 
-209 49.45(0).05  P. Herget, The Computation of Orbits, , , , , , JBAA 60 169 and Obs 69 113 and Pop Astr 57 105 and Sky Tel. 8 126, reference AJB 48.45.02;
+209 49.45(0).03  A. D. Dubjago, Bahnbestimmung, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1949, 444 pp, 20R. 50 Kop., , in Russian;
 
-210 49.50(0).02  F. Gruber, Das negative Proton; Astrophysikalische Beweisgrüdne für seine Existenz, Wien, Selbstverlag des Verf., 1949, 24 pp, , , 
+210 49.45(0).05  P. Herget, The Computation of Orbits, , , , , , JBAA 60 169 and Obs 69 113 and Pop Astr 57 105 and Sky Tel. 8 126, reference AJB 48.45.02;
 
-211 49.50(0).06  M. Waldmeier, Einführung in die Astrophysik, , , , , , Ann d'Astrophys 12 165 and Ciel et Terre 65 182 and Obs 69 232 and Orion Schaffhausen Nr. 23 560 and PAT 30 86 and Publ ASP 61 109, reference AJB 48.50.14;
+211 49.50(0).02  F. Gruber, Das negative Proton; Astrophysikalische Beweisgrüdne für seine Existenz; Neue Kosmogonie, Wien, Selbstverlag des Verf., 1949, 24 pp, , , 
 
-212 49.51(0).43  A. Unsöld, Physik der Sternatmosphären, Moskau, Staatsverlag für ausländische Literatur, 1949, 630 pp, 54R., , translated from German by N. B. Jegorowa;edited by E. R. Mustel;in Russian;
+212 49.50(0).06  M. Waldmeier, Einführung in die Astrophysik, , , , , , Ann d'Astrophys 12 165 and Ciel et Terre 65 182 and Obs 69 232 and Orion Schaffhausen Nr. 23 560 and PAT 30 86 and Publ ASP 61 109, reference AJB 48.50.14;
 
-213 49.52(0).26  A. G. Massewitsch, Die Energiequelle von Sonne und Sternen, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 92 pp, 2R. 25 Kop., , in Russian;
+213 49.51(0).43  A. Unsöld, Physik der Sternatmosphären, Moskau, Staatsverlag für ausländische Literatur, 1949, 630 pp, 54R., , translated from German by N. B. Jegorowa;edited by E. R. Mustel;in Russian;
 
-214 49.54(0).05  G. Gamow, Geburt und Tod der Sonne, , , , , , Sternenwelt 1 168, reference AJB 47.41.09;
+214 49.52(0).26  A. G. Massewitsch, Die Energiequelle von Sonne und Sternen, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 92 pp, 2R. 25 Kop., , in Russian;
 
-215 49.54(0).06  G. Gamow, Het ontstaan en vergaan vad de Zon; Subatomaire energie end de levensloop van de sterren, Den Haag, Van Stockum, 1949, 257 pp, 8.90 fl., Ciel et Terre 65 284 and Gaz astr 31 84 and Heelal 5 92 and Hemel en Dampkring, translated  by J. J. Raimond jr.;other translation of the second edition; 
+215 49.54(0).05  G. Gamow, Geburt und Tod der Sonne, , , , , , Sternenwelt 1 168, reference AJB 47.41.09;
 
-216 49.54(0).25  P. Slawenas, Bau und Entwicklung des Weltalls, Kaunas, Staatsverlag für Enzyklopädien comma Lexika und wiss. Literatur, 1949, 40, 75 Kop., , in Lithuanian;
+216 49.54(0).06  G. Gamow, Het ontstaan en vergaan vad de Zon; Subatomaire energie end de levensloop van de sterren, Den Haag, Van Stockum, 1949, 257 pp, 8.90 fl., Ciel et Terre 65 284 and Gaz astr 31 84 and Heelal 5 92 and Hemel en Dampkring 47 197, translated  by J. J. Raimond jr.;other translation of the second edition; 
 
-217 49.54(0).29  M. F. Subbotin, Entstehung und Alter der Erde, , Archangelsker staatlicher Gebietsverlag, 1949, 40 pp, 70 Kop., , in Russian;
+217 49.54(0).25  P. Slawenas, Bau und Entwicklung des Weltalls, Kaunas, Staatsverlag für Enzyklopädien comma Lexika und wiss. Literatur, 1949, 40, 75 Kop., , in Lithuanian;
 
-218 49.54(0).33  B. A. Woronozow-Weljaminow, Ako vznikol vesmir, Bratislava, Verlag Tatran, 1949, 35 pp, , , translated from Russian;in Czeckslovakian;other a translation of the Russian book Wie ist des Weltall entstanden?; 
+218 49.54(0).29  M. F. Subbotin, Entstehung und Alter der Erde, , Archangelsker staatlicher Gebietsverlag, 1949, 40 pp, 70 Kop., , in Russian;
 
-219 49.55(0).08  G. Lemaître, L'hypotèse de l'atome primitif; Essai de cosmogonie, Neuchâtel, Editions du Griffon, 1946, 203 pp, 8 francs and 10s, Nature 163 855, also published London: H. K. Lewis & Co. Ltd.;
+219 49.54(0).33  B. A. Woronozow-Weljaminow, Ako vznikol vesmir, Bratislava, Verlag Tatran, 1949, 35 pp, , , translated from Russian;in Czeckslovakian;other a translation of the Russian book Wie ist des Weltall entstanden?; 
 
-220 49.55(0).16  O. J. Schmidt, Vier Vorlesungen über die Theorie der Erdentstehung, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 72 pp, 2R. 50 Kop., , in Russian;
+220 49.55(0).08  G. Lemaître, L'hypotèse de l'atome primitif; Essai de cosmogonie, Neuchâtel, Editions du Griffon, 1946, 203 pp, 8 francs and 10s, Nature 163 855, also published London: H. K. Lewis & Co. Ltd.;
 
-221 49.60(0).02  E. Charadse, Was wir von der Sonne wissen, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 54 pp, 1R. 50 Kop., , in Georgian;
+221 49.55(0).16  O. J. Schmidt, Vier Vorlesungen über die Theorie der Erdentstehung, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 72 pp, 2R. 50 Kop., , in Russian;
 
-222 49.60(0).07  F. Hoyle, Some Recent Researches in Solar Physics, London, Cambridge University Press, , 12+134 pp, 12s 6d and $3.00, Obs 69 233 and Sky Tel. 9 39, other Cambridge Monographs on Physics; 
+222 49.60(0).02  E. Charadse, Was wir von der Sonne wissen, Tiflis, Staatsverlag der grusinischen Sowjetrepublik, 1949, 54 pp, 1R. 50 Kop., , in Georgian;
 
-223 49.60(0).08  D. H. Menzel, Our Sun, Philadelphia-Toronto, Blakiston Company, 1949, 8+326 pp, $4.50, Ann d'Astrophys 12 168 and JBAA 60 87 and J RAS Canada 43 205 and PAT 30 173 and Publ ASP 61 235 and Sky Tel. 8 314, other Harvard Books on Astronomy; 
+223 49.60(0).07  F. Hoyle, Some Recent Researches in Solar Physics, London, Cambridge University Press, , 12+134 pp, 12s 6d and $3.00, Obs 69 233 and Sky Tel. 9 39, other Cambridge Monographs on Physics; 
 
-224 49.60(0).12  W. W. Scharonow, Die Sonne und ihre Beobachtung, , , , , , Priroda 38 Nr. 8 98, reference AJB 48.60.14;
+224 49.60(0).08  D. H. Menzel, Our Sun, Philadelphia-Toronto, Blakiston Company, 1949, 8+326 pp, $4.50, Ann d'Astrophys 12 168 and JBAA 60 87 and J RAS Canada 43 205 and PAT 30 173 and Publ ASP 61 235 and Sky Tel. 8 314, other Harvard Books on Astronomy; 
 
-225 49.60(0).13  E. Selikowitsch, Das Rätsel der Sonne, Taschkent, Staatsverlag der usbekischen Sowjetrepublik, 1949, 24 pp, 60 Kop., , in Uzbeck;
+225 49.60(0).12  W. W. Scharonow, Die Sonne und ihre Beobachtung, , , , , , Priroda 38 Nr. 8 98, reference AJB 48.60.14;
 
-226 49.60(0).14  M. Waldmeier, Sonne und Erde, , , , , , Sternenwelt 1 71, reference AJB 45.41.03;
+226 49.60(0).13  E. Selikowitsch, Das Rätsel der Sonne, Taschkent, Staatsverlag der usbekischen Sowjetrepublik, 1949, 24 pp, 60 Kop., , in Uzbeck;
 
-227 49.61(0).05  J. Houtgast, Shock waves in the solar atmosphere, Paris, Editions de la Revue d'Optique, 1949, 10 pp, , , other an actual conference proceeding held in Lyon September 1947; 
+227 49.60(0).14  M. Waldmeier, Sonne und Erde, , , , , , Sternenwelt 1 71, reference AJB 45.41.03;
 
-228 49.64(0).04  H. D. Babcock and C. E. Moore, The solar spectrun λ6600—λ13495, , , , , , BSAF 63 192 and Naturwiss. Rundschau 2 476, reference AJB 48.64.01;
+228 49.61(0).05  J. Houtgast, Shock waves in the solar atmosphere, Paris, Editions de la Revue d'Optique, 1949, 10 pp, , , other an actual conference proceeding held in Lyon September 1947; 
 
-229 49.68(0).19  F. J. A. Göschl, Planetare Wetterbeeinflussung nach Apexstellung und Konstellation, Salzburg, Salzberuger Druckerei und Verlag, 1949, 16 pp, 3.00 Sch., Gaz astr 31 88, 
+229 49.64(0).04  H. D. Babcock and C. E. Moore, The solar spectrun λ6600—λ13495, , , , , , BSAF 63 192 and Naturwiss. Rundschau 2 476, reference AJB 48.64.01;
 
-230 49.68(0).40  , Relations entre les phénomènes solaires et géophysiques, Paris, Editions de la Revue d'Optique, 1949, 312 pp, , Ann d'Astrophys 12 166, also published Paris: Editions du Centre National de la Recherche Scientifique;
+230 49.68(0).19  F. J. A. Göschl, Planetare Wetterbeeinflussung nach Apexstellung und Konstellation, Salzburg, Salzberuger Druckerei und Verlag, 1949, 16 pp, 3.00 Sch., Gaz astr 31 88, 
 
-231 49.70(0).07  M. Imnadse, Das Sonnensystem, Tiflis, Verlag Akad. Wiss. grusin. Sowjetrepublik, 1949, 40 pp, 2R., , in Georgian;
+231 49.68(0).40  , Relations entre les phénomènes solaires et géophysiques, Paris, Editions de la Revue d'Optique, 1949, 312 pp, , Ann d'Astrophys 12 166, also published Paris: Editions du Centre National de la Recherche Scientifique;
 
-232 49.70(0).15  G. Mamedbejli, Die Sonnenwelt, Baku, , 1949, 24 pp, , , in Azerbaijani;
+232 49.70(0).07  M. Imnadse, Das Sonnensystem, Tiflis, Verlag Akad. Wiss. grusin. Sowjetrepublik, 1949, 40 pp, 2R., , in Georgian;
 
-233 49.70(0).16  S. A. Pachuto and S. N. Sredinskij, Gibt es Leben auf anderen Planeten?, Minsk, Staatsverlag der belorussischen Sowjetrepublik, 1949, 40 pp, , , 
+233 49.70(0).15  G. Mamedbejli, Die Sonnenwelt, Baku, , 1949, 24 pp, , , in Azerbaijani;
 
-234 49.70(0).21  W. W. Scharonow, Gibt es Leben auf den Planeten?, Moskau, Prawda, 1949, 24 pp, 50 Kop., , in Russian;
+234 49.70(0).16  S. A. Pachuto and S. N. Sredinskij, Gibt es Leben auf anderen Planeten?, Minsk, Staatsverlag der belorussischen Sowjetrepublik, 1949, 40 pp, , , 
 
-235 49.70(0).24  P. Slawenas, Der Bau des Sonnensystem, Wilna, Komitee für die Angelegenheiten kulturell-aufklärender Institutionen beim Ministerrat der litauischen Sowjetrepublik, 1949, 16 pp, , , in Russian;
+235 49.70(0).21  W. W. Scharonow, Gibt es Leben auf den Planeten?, Moskau, Prawda, 1949, 24 pp, 50 Kop., , in Russian;
 
-236 49.70(0).27  A. J. M. Wanders, De Planeten en hun raadsel, , Erven J. Bijleveld, 1948, 268 pp, , Hemel en Dampkring 47 113, 3rd edition;
+236 49.70(0).24  P. Slawenas, Der Bau des Sonnensystem, Wilna, Komitee für die Angelegenheiten kulturell-aufklärender Institutionen beim Ministerrat der litauischen Sowjetrepublik, 1949, 16 pp, , , in Russian;
 
-237 49.70(0).29  B. A. Woronzow-Weljaminow, Gibt es ein Leben auf den Planeten?, , Nowosibirsker Gebietsverlag, 1949, 24 pp, 50 Kop., , in Russian;
+237 49.70(0).27  A. J. M. Wanders, De Planeten en hun raadsel, , Erven J. Bijleveld, 1948, 268 pp, , Hemel en Dampkring 47 113, 3rd edition;
 
-238 49.70(0).30  G. P. Kuiper ed., The Atmospheres of the Earth and Planets, Chicago, The University of Chicago Press, 1947, 7+366 pp, $7.50, ApJ 110 102 and BSAF 63 269 and BSAF 63 320 and Obs 70 120 and Pop Astr 57 201 and Publ ASP 61 106 and Rev. Sci. Instruments 20 688 and Sky Tel. 8 230 and Strolling Astronomer 3 Nr. 4 4, 
+238 49.70(0).29  B. A. Woronzow-Weljaminow, Gibt es ein Leben auf den Planeten?, , Nowosibirsker Gebietsverlag, 1949, 24 pp, 50 Kop., , in Russian;
 
-239 49.72(1).01  H. Berg, Einführung in die Physik der festen Erde, Stuttgart, S. Hirzel Verlag, 1949, 7+296 pp, 14.80 DM, , 
+239 49.70(0).30  G. P. Kuiper ed., The Atmospheres of the Earth and Planets, Chicago, The University of Chicago Press, 1949, 7+366 pp, $7.50, ApJ 110 102 and BSAF 63 269 and BSAF 63 320 and Obs 70 120 and Pop Astr 57 201 and Publ ASP 61 106 and Rev. Sci. Instruments 20 688 and Sky Tel. 8 230 and Strolling Astronomer 3 Nr. 4 4, other papers presented at the fiftieth anniversary symposium of the Yerkes Observatory September 1947; 
 
-240 49.72(1).04  F. Bublejnikow, Die Erde comma ihr Aufbau und ihre Entwicklung, Moskau, Staatsverlag für Lehr- und Erzienhungsbücher des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 176 pp, 4R., , in Russian;
+240 49.72(1).01  H. Berg, Einführung in die Physik der festen Erde, Stuttgart, S. Hirzel Verlag, 1949, 7+296 pp, 14.80 DM, , 
 
-241 49.72(1).05  F. D. Bublejnikow, Wie die Erde aufgebast ist, Moskau, Staatsverlag für geologische Literatur, 1949, 220 pp, 7R. 25 Kop., , in Russian;
+241 49.72(1).04  F. Bublejnikow, Die Erde comma ihr Aufbau und ihre Entwicklung, Moskau, Staatsverlag für Lehr- und Erzienhungsbücher des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 176 pp, 4R., , in Russian;
 
-242 49.72(1).06  F. D. Bublejnikow, Die Rätsel der Erde, Moskau-Leningrad, Staatsverlag für Jugendliteratur des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 120 pp, 1R. 50 Kop., , in Russian;
+242 49.72(1).05  F. D. Bublejnikow, Wie die Erde aufgebaut ist, Moskau, Staatsverlag für geologische Literatur, 1949, 220 pp, 7R. 25 Kop., , in Russian;
 
-243 49.72(1).11  R. Gheyselinck, Die ruhelose Erde, Berlin, Verlag des Druckhauses Tempelhof, 1947, 272 pp, 15.00 DM, Sternenwelt 1 192, edited by P. Karlson;
+243 49.72(1).06  F. D. Bublejnikow, Die Rätsel der Erde, Moskau-Leningrad, Staatsverlag für Jugendliteratur des Ministeriums für Bildungswesen der russischen Sowjetrepublik, 1949, 120 pp, 1R. 50 Kop., , in Russian;
 
-244 49.72(1).18  T. A. Ryder, Mother Earth; a popular account of the earth in the light of our recent knowledge, London, Hutchinson's Scientific and Technical Publications, 1947, 184 pp, 15s, Nature 163 81, 
+244 49.72(1).11  R. Gheyselinck, Die ruhelose Erde, Berlin, Verlag des Druckhauses Tempelhof, 1947, 272 pp, 15.00 DM, Sternenwelt 1 192, edited by P. Karlson;
 
-245 49.72(1).19  J. I. Schur, Biographie der Erde, Tiflis, Technischer Staatsverlag der grusinischen Sowjetrepublik, 1949, 168 pp, , , in Georgian;
+245 49.72(1).18  T. A. Ryder, Mother Earth; a popular account of the earth in the light of our recent knowledge, London, Hutchinson's Scientific and Technical Publications, 1947, 184 pp, 15s, Nature 163 81, 
 
-246 49.72(2).40  J. A. Chalmers, Atmospheric Electricity, Oxford, Clarendon Press, 1949, 175 pp, $3.75, Rev. Sci. Instruments 20 688, 
+246 49.72(1).19  J. I. Schur, Biographie der Erde, Tiflis, Technischer Staatsverlag der grusinischen Sowjetrepublik, 1949, 168 pp, 6R., , in Georgian;
 
-247 49.72(2).44  G. Grimminger, Analysis of Temperature comma Pressure comma and Density of the Atmosphere Extending to Extreme Altitudes, Santa Monica CA, The RAND Corporation, 1948, , $2.85, Pop Astr 57 152, 
+247 49.72(2).40  J. A. Chalmers, Atmospheric Electricity, Oxford, Clarendon Press, 1949, 175 pp, $3.75, Rev. Sci. Instruments 20 688, 
 
-248 49.72(7).127  J. Veldkamp, Aardmagnetiscme en Poollicht, Den Haag, Servire's Encyclopedia, 1949, 192 pp, f. 3.50, Hemel en Dampkring, 
+248 49.72(2).44  G. Grimminger, Analysis of Temperature comma Pressure comma and Density of the Atmosphere Extending to Extreme Altitudes, Santa Monica CA, The RAND Corporation, 1948, , $2.85, Pop Astr 57 152, 
 
-249 49.73(2).03  R. B. Baldwin, The Face of the Moon, Chicago, University of Chicago Press, 1949, 239 pp, $5.00, JBAA 60 58 and Pop Astr 57 257 and Sky Tel. 8 258, 
+249 49.72(7).127  J. Veldkamp, Aardmagnetiscme en Poollicht, Den Haag, Servire's Encyclopedia, 1949, 192 pp, f. 3.50, Hemel en Dampkring 47 198, 
 
-250 49.73(2).08  A. W. Chabakow, Über die Grundfragen der Entwicklungsgeschichte der Mondoberfläche, Moskau, Staatsverlag für geographische Literatur, 1949, 195 pp, 7R., , in Russian;
+250 49.73(2).03  R. B. Baldwin, The Face of the Moon, Chicago, University of Chicago Press, 1949, 239 pp, $5.00, JBAA 60 58 and Pop Astr 57 257 and Sky Tel. 8 258, 
 
-251 49.73(2).22  J. E. Spurr, Geology applied to Selenology III; Lunar Catastrophic History, , , , , , Sky Tel. 8 72, reference AJB 48.73.14;
+251 49.73(2).08  A. W. Chabakow, Über die Grundfragen der Entwicklungsgeschichte der Mondoberfläche, Moskau, Staatsverlag für geographische Literatur, 1949, 195 pp, 7R., , in Russian;
 
-252 49.73(2).33  F. Gruber, Wirkungen der Vernichtung von Meteoriten aus kontraterrener und kontralunarer Materie auf der Erde und auf dem Mond, Wien, Selbstverlag der Verfassers, 1949, 23 pp, , , 
+252 49.73(2).22  J. E. Spurr, Geology applied to Selenology III; Lunar Catastrophic History, , , , , , Sky Tel. 8 72, reference AJB 48.73.14;
 
-253 49.74(0).11  I. F. Polak, Der Planet Mars und die Möglichkeit des Lebens aug ihm, Riga, Lettischer Staatsverlag, 1949, 27 pp, 60 Kop., , in Latvian;
+253 49.73(2).33  F. Gruber, Wirkungen der Vernichtung von Meteoriten aus kontraterrener und kontralunarer Materie auf der Erde und auf dem Mond, Wien, Selbstverlag der Verfassers, 1949, 23 pp, , , 
 
-254 49.75(0).01  Y. Hagihara ed., Opposition ephemeris of asteroids for 1949; Part 1 comma Perturbed ephemeris, , National Research Council of Japan, , 17 pp, , , 
+254 49.74(0).11  I. F. Polak, Der Planet Mars und die Möglichkeit des Lebens auf ihm, Riga, Lettischer Staatsverlag, 1949, 27 pp, 60 Kop., , in Latvian;
 
-255 49.75(0).03  , Minor Planets for 1950; Opposition Ephemeris, , Cincinnati Observatory, 1949, 4+110 pp, , , other published for the IAU; 
+255 49.75(0).01  Y. Hagihara ed., Opposition ephemeris of asteroids for 1949; Part 1 comma Perturbed ephemeris, , National Research Council of Japan, , 17 pp, , , 
 
-256 49.75(0).04  , Ephemiriden Kleiner Planeten für  das Jahr 1950, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 124 pp, , , in Russian;other Edited by Institut für theoretische Astronomie der Akademie der Wissenschaften der UdSSR; 
+256 49.75(0).03  , Minor Planets for 1950; Opposition Ephemeris, , Cincinnati Observatory, 1949, 4+110 pp, , , other published for the IAU; 
 
-257 49.82(0).13  W. W. Fedynskij, Himmelssteine — Meteorite nd Meteore, Moskau, Prawda, 1949, 23 pp, 50 Kop., , in Russian;
+257 49.75(0).04  , Ephemiriden Kleiner Planeten für  das Jahr 1950, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 124 pp, , , in Russian;other Edited by Institut für theoretische Astronomie der Akademie der Wissenschaften der UdSSR; 
 
-258 49.82(0).14  W. W. Fedynskij and I. S. Astapowitsch, Die Kleinkörper des Weltalls, Stalinbad, Tadshikischer Staatsverlag, 1949, 52 pp, 2R., , in Tajiki;other language of the Tajik people in Tajikistan; 
+258 49.82(0).13  W. W. Fedynskij, Himmelssteine — Meteorite und Meteore, Moskau, Prawda, 1949, 23 pp, 50 Kop., , in Russian;
 
-259 49.82(0).17  W. G. Fessenkow, Meteorre und Meteorite, Alma-Ata, Verlag Akad. Wiss. kasach. Sowjetrepublik, 1949, 50 pp, 3R., , in Russian;
+259 49.82(0).14  W. W. Fedynskij and I. S. Astapowitsch, Die Kleinkörper des Weltalls, Stalinbad, Tadshikischer Staatsverlag, 1949, 52 pp, 2R., , in Tajiki;other language of the Tajik people in Tajikistan; 
 
-260 49.83(1).39  E. L. Krinow, Der tungusiche Meteorit, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 196 pp, 8R. 50 Kop., , in Russian;
+260 49.82(0).17  W. G. Fessenkow, Meteore und Meteorite, Alma-Ata, Verlag Akad. Wiss. kasach. Sowjetrepublik, 1949, 50 pp, 3R., , in Russian;
 
-261 49.91(0).02  P. I. Bakulin, Fundamentalkataloge, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 236 pp, 7R. 85 Kop., , in Russian;
+261 49.83(1).39  E. L. Krinow, Der tungusische Meteorit, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1949, 196 pp, 8R. 50 Kop., , in Russian;
 
-262 49.91(0).24  J. Hass ed., Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Katalog des 18 un 19 Jahrhunderts; Abteilung II comma Der südliche Sternhimmel Band 9 8ʰ Rektaszension comma Erste Lieferung 0ᵐ — 18ᵐ, Karlsruhe, Verlag G. Braun, 1949, 80 pp, 20 DM, , other vol 8 is AJB 47.71.08 price corrected rom 50 DM to 30 DM; 
+262 49.91(0).02  P. I. Bakulin, Fundamentalkataloge, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 236 pp, 7R. 85 Kop., , in Russian;
 
-263 49.91(0).25  , Second Cape Catalogue of Stars for the equinox 1925.0 consisting of Part I stars south of dec. -30° comma Part II zodiacal stars, London, His Majesty's Stationary Office, 1949, 23+168+66 pp, £1 10s 0d, , 
+263 49.91(0).24  J. Hass ed., Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Katalog des 18 un 19 Jahrhunderts; Abteilung II comma Der südliche Sternhimmel Band 9 comma 8ʰ Rektaszension comma Erste Lieferung 0ᵐ — 18ᵐ, Karlsruhe, Verlag G. Braun, 1949, 80 pp, 20 DM, , other vol 8 is AJB 47.71.08 price corrected from 50 DM to 30 DM; 
 
-264 49.91(0).26  , Astrographic Catalogue 1900.0 Perth Section Dec. -31° to -41° Vol 1 Measures of rectangular co-ordinates and diameters of 62502 star images on plates with centres in Dec -40° comma R.A. 6ʰ 0ᵐ to 23ʰ 50ᵐ, Paris, International Astronomical Union, 1949, 12+309 pp, , , other in continuation of Perth Astrographic Catalogue vol 33; 
+264 49.91(0).25  , Second Cape Catalogue of Stars for the equinox 1925.0 consisting of Part I stars south of dec. -30° comma Part II zodiacal stars, London, His Majesty's Stationary Office, 1949, 23+168+66 pp, £1 10s 0d, , 
 
-265 49.91(0).27  , Astrographic Catalogue 1900.0 Sydney Section; Vol 28 R.A. 18ʰ to 24ʰ comma Dec. -57° to -59°, Sydney, , 1949, 3+33 pp, , , 
+265 49.91(0).26  , Astrographic Catalogue 1900.0 Perth Section Dec. -31° to -41° Vol 1 Measures of rectangular co-ordinates and diameters of 62502 star images on plates with centres in Dec -40° comma R.A. 6ʰ 0ᵐ to 23ʰ 50ᵐ, Paris, International Astronomical Union, 1949, 12+309 pp, , , other in continuation of Perth Astrographic Catalogue vol 33; 
 
-266 49.91(1).30  A. Bečvář, Atlas Coeli Skalnaté Pleso, , , , , , Astr. Curc. UdSSR Nr. 89 8, reference AJB 48.91.30;
+266 49.91(0).27  , Astrographic Catalogue 1900.0 Sydney Section; Vol 28 R.A. 18ʰ to 24ʰ comma Dec. -57° to -59°, Sydney, , 1949, 3+33 pp, , , 
 
-267 49.91(1).30  A. Bečvář, Skalnate Pleso; Atlas of the Heavens, Cambridge MA, Sky Publishing Corporation, , , $5.00, ApJ 110 320 and Hemel en Dampkring 47 114 and Himmelswelt 56 135 and JBAA 60 59 and J RAS Canada 43 111 and Nature 164 635 and Obs 69 158 and Orion Schaffhausen Nr. 22 525 and PAT 30 172 and Publ ASP 61 196 and Sky Tel. 8 203, reprint of AJB 48.91.30;
+267 49.91(1).30  A. Bečvář, Atlas Coeli Skalnaté Pleso, , , , , , Astr. Circ. UdSSR Nr. 89 8, reference AJB 48.91.30;
 
-268 49.91(1).31  A. Brun, Atlas photométrique des constellations de +90° à -30° pour l'équinox 1900.0, , Le Breuil (Allier), 1948, 59 pp, 2000 frs., BSAF 63 32 and Heelal 5 32 and Hemel en Dampkring 47 114 and JBAA 59 132 and Orion Schaffhausen 3 30 and Sky Tel. 8 315, other see further AJB 48.91.36; 
+268 49.91(1).30  A. Bečvář, Skalnate Pleso; Atlas of the Heavens, Cambridge MA, Sky Publishing Corporation, , , $5.00, ApJ 110 320 and Hemel en Dampkring 47 114 and Himmelswelt 56 135 and JBAA 60 59 and J RAS Canada 43 111 and Nature 164 635 and Obs 69 158 and Orion Schaffhausen Nr. 22 525 and PAT 30 172 and Publ ASP 61 196 and Sky Tel. 8 203, reprint of AJB 48.91.30;
 
-269 49.91(1).32  M. Chome, Cartes célestes coulissantes, Rhode-St-Genèse, Selbstverlag, 1948, , 36 frs., Ciel et Terre 65 42, 
+269 49.91(1).31  A. Brun, Atlas photométrique des constellations de +90° à -30° pour l'équinox 1900.0, , Le Breuil (Allier), 1948, 59 pp, 2000 frs., BSAF 63 32 and Heelal 5 32 and Hemel en Dampkring 47 114 and JBAA 59 132 and Orion Schaffhausen 3 30 and Sky Tel. 8 315, other see further AJB 48.91.36; 
 
-270 49.91(1).33  V. Guth, Gnomonicky Atlas Hvesdne Oblohy, Prague, Czechoslovak Astronomical Association, 1940, 17 pp, , J RAS Canada 43 113, 
+270 49.91(1).32  M. Chome, Cartes célestes coulissantes, Rhode-St-Genèse, Selbstverlag, 1948, , 36 frs., Ciel et Terre 65 42, 
 
-271 49.91(1).34  R. Henseling, Himmelskarten der zwölf Monate und des Tierkreises, Berlin, Palmen-Verlag, , , 2.00 DM, AN 278 144 and Sterne 25 187, 
+271 49.91(1).33  V. Guth, Gnomonicky Atlas Hvesdne Oblohy, Prague, Czechoslovak Astronomical Association, 1940, 17 pp, , J RAS Canada 43 113, 
 
-272 49.91(1).37  O. Thomas, Atlas der Sternbilder, , , , , , Himmelswelt 56 91, reference AJB 46.71.36;
+272 49.91(1).34  R. Henseling, Himmelskarten der zwölf Monate und des Tierkreises, Berlin, Palmen-Verlag, , , 2.00 DM, AN 278 144 and Sterne 25 187, 
 
-273 49.91(1).38  , Carte céleste tournante Sirius, Bern, H. Suter, , , 7 f.s., Ciel et Terre 65 85, 
+273 49.91(1).37  O. Thomas, Atlas der Sternbilder, , , , , , Himmelswelt 56 91, reference AJB 46.71.36;
 
-274 49.91(1).39  , Mappa Coelestis Nova; Containing all Stars brighter thn 5.0 Visual Magnitude classified according to the Henry Draper Catalogue , Cambridge MA, Sky Publishing Corporation, 1949, , $3.50, ApJ 110 320 and JBAA 60 60 and Nature 164 635 and Obs 69 158, 
+274 49.91(1).38  , Carte céleste tournante Sirius, Bern, H. Suter, , , 7 f.s., Ciel et Terre 65 85, 
 
-275 49.91(1).40  , A new popular star atlas, Edinburgh, Gall & Inglis, , , £5, Pop Astr 57 415, other address of publisher given as London WC2 Strand; 
+275 49.91(1).39  , Mappa Coelestis Nova; Containing all Stars brighter thn 5.0 Visual Magnitude classified according to the Henry Draper Catalogue, Cambridge MA, Sky Publishing Corporation, 1949, , $3.50, ApJ 110 320 and JBAA 60 60 and Nature 164 635 and Obs 69 158, 
 
-276 49.100(0).02  R. Bonnet, Addenda au mémoire <<Spectres comma périodes et excentricités des binaires>>, Paris, Observatoire de Paris, 1949, 6 pp, , , other addendum to AJB 47.81.02; 
+276 49.91(1).40  , A new popular star atlas, Edinburgh, Gall & Inglis, , , 5s, Pop Astr 57 415, other address of publisher given as London WC2 Strand; 
 
-277 49.110(0).01  B. W. Kukarkin and P. P. Parenago, Generalkatalog Veränderlicher Sterne, , , , , , Himmelswelt 56 142 and Pop Astr 57 47, reference AJB 48.110.01;
+277 49.100(0).02  R. Bonnet, Addenda au mémoire <<Spectres comma périodes et excentricités des binaires>>, Paris, Observatoire de Paris, 1949, 6 pp, , , other addendum to AJB 47.81.02; 
 
-278 49.110(0).02  B. W. Kukarkin and P. P. Parenago, Erster nachtrag zur ersten Ausgabe des Generalkataloges Veräderlicher Sterne, Moskau-Leningrad, Verlag Akad Wiss. UdSSR, 1949, 48 pp, , , 
+278 49.110(0).01  B. W. Kukarkin and P. P. Parenago, Generalkatalog Veränderlicher Sterne, , , , , , Himmelswelt 56 142 and Pop Astr 57 47, reference AJB 48.110.01;
 
-279 49.110(0).09  W. P. Zessewitsch, Die veränderlichen Sterne und ihre Bedeutung für die Erforschung des Universums, Kiew, Verlag Akad. Wiss. ukrain. Sowjetrepublik, 1949, 111 pp, 2R. 75 Kop., , in Russian and Ukranian;
+279 49.110(0).02  B. W. Kukarkin and P. P. Parenago, Erster nachtrag zur ersten Ausgabe des Generalkataloges Veräderlicher Sterne, Moskau-Leningrad, Verlag Akad Wiss. UdSSR, 1949, 48 pp, , , 
 
-280 49.111(2).69  S. Rosseland, The Pulsation Theory of Variable Stars, Oxford, Clarendon Press, 1949, 8+152 pp, 18s, ApJ 110 515 and Mem SA It (NS) 20 175 and Nature 163 703 and Obs 69 112, also published London: Oxford University Press;other International Series of Monographs on Physics; 
+280 49.110(0).09  W. P. Zessewitsch, Die veränderlichen Sterne und ihre Bedeutung für die Erforschung des Universums, Kiew, Verlag Akad. Wiss. ukrain. Sowjetrepublik, 1949, 111 pp, 2R. 75 Kop., , in Russian;
 
-281 49.123(1).06  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Priroda 38 Nr. 5 77, reference AJB 45.90.03;
+281 49.111(2).69  S. Rosseland, The Pulsation Theory of Variable Stars, Oxford, Clarendon Press, 1949, 8+152 pp, 18s, ApJ 110 515 and Mem SA It (NS) 20 175 and Nature 163 703 and Obs 69 112, also published London: Oxford University Press;other International Series of Monographs on Physics; 
 
-282 49.130(0).01  C. F. Baeschlin, Lehrbuch der Geodäsie, Zürich, Orell Füssli Verlag, 1948, 892 pp, 65 Fr., VJS der Naturforschenden Ges. Zürich 94 136, 
+282 49.123(1).06  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Priroda 38 Nr. 5 77, reference AJB 45.90.03;
 
-283 49.130(0).12  I. A. Kasanskij ed., Handbuch der Geodäsie Band I Physikalische Geodäsie, Moskau-Leningrad, Verlag des Ministeriums für Kommunalwirtschaft, 1949, 423 pp, 66R., , in Russian;
+283 49.130(0).01  C. F. Baeschlin, Lehrbuch der Geodäsie, Zürich, Orell Füssli Verlag, 1948, 892 pp, 65 Fr., VJS der Naturforschenden Ges. Zürich 94 136, 
 
-284 49.13(0).12  R. W. Kunizkij, Lehrbuch der Luftfahrtastronomie, Moskau, Verlag des Ministeriums der Streitkräfte der UdSSR, 1949, 376 pp, 12R., , in Russian;
+284 49.130(0).12  I. A. Kasanskij ed., Handbuch der Geodäsie Band I Physikalische Geodäsie, Moskau-Leningrad, Verlag des Ministeriums für Kommunalwirtschaft, 1949, 423 pp, 66R., , in Russian;
 
-285 49.133(0).13  Lane and Montomery, Navigation the Easy Way, , Norton, 1949, 126 pp, $2.95, Sky Tel. 8 287, 
+285 49.133(0).12  R. W. Kunizkij, Lehrbuch der Luftfahrtastronomie, Moskau, Verlag des Ministeriums der Streitkräfte der UdSSR, 1949, 376 pp, 12R., , in Russian;
 
-286 49.134(0).01  C. Bonestell and W. Ley, The Conquest of Space, New York, The Viking Press, 1949, 160 pp, $3.95, JBAA 60 39 and J RAS Canada 43 241 and Publ ASP 61 269 and Weltraumfahrt Jahrgang 1950 46, 
+286 49.133(0).13  Lane and Montomery, Navigation the Easy Way, , Norton, 1949, 126 pp, $2.95, Sky Tel. 8 287, 
 
-287 49.134(0).08  W. Ley, Rockets and Space Travel, , , , , , Pop Astr 57 46, reference AJB 47.101.04;
+287 49.134(0).01  C. Bonestell and W. Ley, The Conquest of Space, New York, The Viking Press, 1949, 160 pp, $3.95, JBAA 60 39 and J RAS Canada 43 241 and Publ ASP 61 269 and Weltraumfahrt Jahrgang 1950 46, 
 
-288 49.134(0).09  W. Ley, Rockets and Space Travel; The Future of Flight beyond the Stratosphere, London, Chapman & Hall Ltd., 1948, 8+374, 18s, Nature 163 820, 
+288 49.134(0).08  W. Ley, Rockets and Space Travel, , , , , , Pop Astr 57 46, reference AJB 47.101.04;
 
-289 49.134(0).13  M. Nicolson, Voyages to the Moon, New York, The Macmillan Company, 1948, 297 pp, $4.00, Pop Astr 57 256 and Sky Tel. 9 12, 
+289 49.134(0).09  W. Ley, Rockets and Space Travel; The Future of Flight beyond the Stratosphere, London, Chapman & Hall Ltd., 1948, 8+374, 18s, Nature 163 820, 
 
-290 49.134(0).16  W. Schaub, Weltraumfahrt; Physikalische und astronomische Grundlagen comma Eine Studie zur Himmelsmechanik, Bonn, F. Dümmelers Verlag, 1949, 93 pp, , , 
+290 49.134(0).13  M. Nicolson, Voyages to the Moon, New York, The Macmillan Company, 1948, 297 pp, $4.00, Pop Astr 57 256 and Sky Tel. 9 12, 
 
-291 49.134(0).17  A. Sternfeld, Der Flug in den Weltraum, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 140 pp, 3R. 50 Kop., , in Russian;
+291 49.134(0).16  W. Schaub, Weltraumfahrt; Physikalische und astronomische Grundlagen comma Eine Studie zur Himmelsmechanik, Bonn, F. Dümmelers Verlag, 1949, 93 pp, , , 
+
+292 49.134(0).17  A. Sternfeld, Der Flug in den Weltraum, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1949, 140 pp, 3R. 50 Kop., , in Russian;
 
