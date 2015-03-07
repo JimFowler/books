@@ -81,7 +81,7 @@ install_html: install_private install_images
 	@for page in ${PUBLICWEBPAGES}; do \
 	    if `echo $${page} | grep --silent php`; then \
 		basepage=`basename $${page} \.php` ; \
-		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.htmlq ; \
+		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
 		install -m 0444 -p ./.tmp/$${basepage}.html ${htmldir} ; \
 	    else \
 		install -m 0444 -p $${page} ${htmldir} ; \
