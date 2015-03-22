@@ -1,8 +1,19 @@
+2015-03-22  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: Added 1/4, 1/2, and 3/4 symbols
+
+2015-03-07  Jim Fowler  <jrf@Biblion>
+
+	* WebPages/BlogLists.txt: Replaced thebooker.tumblr.com
+	with forreadingaddicts.co.uk.
+
 2015-02-15  Jim Fowler  <jrf@Biblion>
 
-	* WebPages/SemanticWeb.txt: Added Build Tools to Semantic
-	Web.  Linked to Protege and Callimachus Projects. Downloaded
-	tarball of Protege.
+	* Tools/doc/block_diagram.png: added block diagram image.
+
+	* WebPages/SemanticWeb.txt: Added Build Tools to Semantic Web.
+	Linked to Protege and Callimachus Projects. Downloaded tarball of
+	Protege.
 
 2015-01-19  Jim Fowler  <jrf@Biblion>
 

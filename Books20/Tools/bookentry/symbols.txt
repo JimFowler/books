@@ -99,6 +99,9 @@
 ≥, greater than or equal to
 –, En dash
 —, Em dash
+¼, vulgar one quarter
+½, vulgar one half
+¾, vulgar three quarters
 
 # Greek alphabet
 Α, Greek capital letter Alpha
