@@ -1,0 +1,587 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 48 Index to the Literature of 1947, started 24 Feb 2015, finished 22 Mar 2015, proofread 12 April 2015
+
+
+1 48.01(0).02  H. Athen, Ebene und sphärische Trigonometrie, Wolfenbüttel-Hannover, Wolfenbütteler Verlagsanstalt GmbH, 1948, 112 pp, 7.50 DM, Phys Ber 27 540, 
+
+2 48.01(0).06  G. R. Clements and L. T. Wilson, Manual of Mathematics and Mechanics, New York-London, McGraw-Hill Book Co. Inc., 1947, 9+346 pp, $3.25, Nature 161 789, 2nd edition;
+
+3 48.01(0).09  R. D. Douglas and D. P. Adams, Elements of Nomography, New York-London, McGraw-Hill Book Co. Inc., 1947, 9+209 pp, $3.50, Nature 162 278, 
+
+4 48.01(0).10  H. B. Dwight, Tables of Integrals and Other Mathematical Data, New York, The Macmillan Co., 1947, 250 pp, $2.50, J Applied Phys 19 961 and J. Franklin Inst. 245 81, 
+
+5 48.01(0).11  G. Gamov, One comma Two comma Three ... Infinity, , , , , , Sky Tel. 7 72, reference AJB 47.08.09;
+
+6 48.01(0).14  A. Hess, Praktische Mathematik, Zürich, Verlag Rascher, 1947, 116 pp, Fr. 8.90, VJS Naturf. Ges. Zürich 93 294, 
+
+7 48.01(0).15  N. I. Idelson, Die Methode der kleinsten Quadrate und die Theorie der mathematischen Bearbeitung der Beobachtung, Moskau, Verlag der geodätischen und kartographischen Literatur beim Ministerrat der Sowjetunion, 1947, 359 pp, 30R., , in Russian;
+
+8 48.01(0).16  T. Kochmanski, Abriß der Krakovianenrechnung, Warschau, , 1948, 46 pp, , , in Polish;other from the Main Office of the National Survey; 
+
+9 48.01(0).18  A. S. Levens, Nomography, New York, John Wiley & Sons Inc., 1948, 176+8 pp, $3.00, J. Franklin Inst. 245 445 and J Applied Phys 19 961, 
+
+10 48.02(0).01  E. N. da C. Andrade, The Atom and its Energy, London, G. Bell & Sons Ltd., 1947, 12+196 pp, 10s, Nature 161 582 and Proc Phys Soc 61 583, 
+
+11 48.02(0).03  H. Beghin, Cours de mécanique, Paris, Gauthier-Villars, 1948, 9+597 pp, 1800 ffrs., Nature 162 911, 
+
+12 48.02(0).04  H. Bethe, Elementary Nuclear Theory, New York, John Wiley & Sons Inc., 1947, 7+147 pp, $2.50, J Applied Phys 19 966 and Sky Tel. 7 126 and Sky Tel. 7 278, 
+
+13 48.02(0).06  A. G. Gaydon, Dissociation Energies and Spectra of Diatomic Moledules, New York, John Wiley & Sons Inc., 1947, 11+239 pp, $5.00, J Applied Phys 19 966, 
+
+14 48.02(0).12  B. Hoffmann, The Strange Story of the Quantum, New York, Harper & Brothers, 1947, 238 pp, $3.00, Sky Tel. 7 102, 
+
+15 48.02(0).19  E. L. Krinow, Die spektrale Reflexionseigenschaft natürlicher Gebilde, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 272 pp, 19R., Das sowjetische Buch Nr. 8 6, in Russian;
+
+16 48.02(0).21  R. A. Millikan, Electron (+ and -) comma Protons comma Photons comma Neutrons comma Mesotrons comma and Cosmic Rays, London, Cambridge University Press, 1947, 10+642 pp, 30s and $6.00, Proc Phys Soc 61 583 and J Applied Phys 19 966 and Nature 161 789 and Phys. Blätter 1947 95, 2nd edition;also published Chicago: University of Chicago Press;
+
+17 48.02(0).25  C. E. Moore, Atomic Energy Levels as derived from the analysis of optical spectra comma Volume 1 comma Section 1 comma The spectra of Hydrogen comma Deuterium comma Helium comma Lithium comma Beryllium comma Boron comma Carbon comma Nitrogen comma Oxygen comma and Fluorine, Washinton DC, Bureau of Standards, 1948, 75 pp, $0.50, ApJ 108 543 and J. Franklin Inst 246 259 and Nature 162 391 and Pop Astr 57 416, other Circular of the Bureau of Standards 467; 
+
+18 48.02(0).27  R. R. Nimmo, Atomic Energy, London, The Pilot Press Ltd., 1947, 201 pp, 9s 6d, Proc Phys Soc 60 403, 
+
+19 48.02(0).34  L. Rosenfeld, Nuclear Forces, Amsterdam, North-Holland Publishing Co., 1948, 19+181 pp, £1 4s 5d, Nature 162 907, other Monographs on Theoretical and Applied Physics Volume 1; 
+
+20 48.02(0).36  F. W. Sears and M. W. Zemansky, College Physics, Cambridge MA, Addison-Wesley Press Inc., 1948, 848 pp, $6.00, Sky Tel. 7 254, 
+
+21 48.02(0).43  G. Thomas, The Atom, London, Oxford University Press, 1947, 8+196 pp, $2.00 and 5s, J Applied Phys 19 966 and Nature 161 871, 3rd edition;
+
+22 48.02(0).45  W. M. Venable, The Interpretation of Spectra, New York, Reinhold Publishing Corporation, 1948, 5+200 pp, $6.00, J Applied Phys 19 966 and J. Franklin Inst 246 260, 
+
+23 48.02(0).46  Hermann Vogt, Atomenergie und Atomumwandlungen; Eine Einführung in die aktuellen Probleme der Kernphysik für Techniker und Naturwissenschaftler, Darmstadt, Demmig Verlag, 1948, 243 pp, 10.00 DM, , 
+
+24 48.02(0).47  , Naturforschung und Medizin in Deutschland 1939—1946; Bd. 13 Kernphysik und kosmische Strahlen Teil 1, Wiesbaden, Dieterich'sche Verlagsbuchhandlung, 1948, 230 pp, , , 
+
+25 48.03(0).01  C. Attwood, Practical Five-Figure Mathematical Tables, London, Macmillan & Co. Ltd., 1948, 5+74 pp, 3s, , 
+
+26 48.03(0).03  E. Cambi, Eleven and Fifteen-Place Tables of Bessel Functions of the First Kind comma to All Significant Orders, New York, Dover Publications Inc., 1948, 5+153 pp, $3.95, ApJ 109 182 and J Applied Phys 19 961, 
+
+27 48.03(0).04  L. J. Comrie, Chamber's Four-Figure Mathematical Tables, Edinburgh-London, W. & R. Chambers Ltd., 1947, , 5s, JBAA 58 107, 
+
+28 48.03(0).06  J. B. Dale, Logarithmic and Trigonometric Tables, London, Edward Arnold & Co., 1947, 42+6 pp, 2s 6d, Proc Phys Soc 60 600, 2nd edition;
+
+29 48.03(0).07  A. Danjon, Tables des Fonctions Trigonométriques; Valeurs Naturelles à 6 Décimales de centième en centième du Degrě nonagésimal comma Suivies de Tables de Conversion comma d'une Table des Logarithmes des Nombres de 1000 à 9999 comma et d'un Recueil de Formulas et de Nonbres Usuels, Paris, Libraire Hachette, , 128 pp, 850 fr, , 
+
+30 48.03(0).08  H. Gravelius, Vierstellige Tafeln für logarithmisches und numerisches Rechnen, , , , , , AN 277 144 and Himmeslwelt 55 206 and Naturwiss. Rundschau 1 92 and Sterne 24 90, reference AJB 47.09.03;
+
+31 48.03(0).09  H. D. Larsen, Rinehart Mathematical Tables, New York, Rinehart & Company Inc., 1948, 160 pp, , Pop Astr 56 453, 
+
+32 48.03(0).11  , Five-Figure Tables of Natural Trigonometrical Functions, , , , , , JBAA 58 108 and Proc Phys Soc 60 600, reference AJB 47.09.06;
+
+33 48.03(0).12  , Tables of Spherical Bessel Functions Vol II, , , , , , Proc Phys Soc 60 401, reference AJB 47.09.10;
+
+34 48.03(0).13  , Tables of Bessel Functions J_0(z) and J_1(z) for Complex Arguments, , , , , , Proc Phys Soc 60 401, reference AJB 47.09.11;
+
+35 48.03(0).14  , Tables of Bessel Functions of Fractional Order Volume 1, New York, Columbia University Press, 1948, 13+413 pp, $7.50, ApJ 109 182 and ZfMG 30 399, other printed for the Computation Laboratory of the National Applied Mathematics Laboratories National Bureau of Standards; 
+
+36 48.03(0).15  , Tables of Bessel Functions of the First Kind of Orders Sixteen Through Twenty-Seven, Cambridge MA, Harvard University Press, 1948, 11+764 pp, 55s, , also published London: Oxford University Press;other same as Ann. Computation Laboratory Harvard Univ. 9; 
+
+37 48.03(0).15  , Tables of Bessel Functions of the First Kind of Orders Forty  Through Fifty-One, Cambridge MA, Harvard University Press, 1948, 11+620 pp, $10.00, Math. Rev 10 483, other prepared by the Staff of the Computation Laboratory; 
+
+38 48.05(0).01  R. M. Aller, Astronomia a Simple Vista, Santiago de Compostela, , 1948, 2+197+26 pp, , , 
+
+39 48.05(0).02  D. Alter and C. H. Cleminshaw, Pictorial Astronomy, Los Angeles, The Griffith Observatory, 1948, 288 pp, $2.00 and $3.00, Publ ASP 60 276 and Sky Tel. 7 254, 
+
+40 48.05(0).03  I. Anderson, En rejse i verdensrummet, Kopenhagen, Grönholt Pedersens forlag, 1948, 119 pp, 5 Kr., NAT 1948 115, 
+
+41 48.05(0).04  K. L. Bajew and W. A. Schischakow, Einführung in die Astronomie, Moskau, Verlag für Ministeriums der Streitkräfte der UdSSR, 1947, 116 pp, 1R., , 3rd edition;in Russian;
+
+42 48.05(0).05  K. L. Bajew and W. A. Schischakow, Woran sich die Erde hält, Riga, Lettischer Staatsverlag, 1948, 56 pp, 1R. 50 Kop., , in Latvian;
+
+43 48.05(0).06  F. Becker, Einführung in die Astronomie, , , , , 2.90 DM, Z. f. Naturf 3a 312 and Ann d'Astrophys 11 162, reference AJB 47.08.03;
+
+44 48.05(0).07  P. Bersöe, Borger i Universet, Kopenhagen, Forlaget <<Fremad>>, 1948, 82 pp, 4.75 Kr., NAT 1948 156, 
+
+45 48.05(0).08  H. J. Bernhard and D. A. Bennett and H. S. Rise, New Handbook of the Heavens, New York, McGraw-Hill, 1948, , 18s, JBAA 59 44, other revised edition; 
+
+46 48.05(0).09  S. N. Blashko, Lehrbuch der gesamten Astronomie, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 8+500 pp, 14R. 50 Kop., Das Sowjetische Buch Nr. 6 17, 
+
+47 48.05(0).10  W. Brunner, Die Welt der Sterne, Zürich, Verlag Büchergilde, 1947, 228 pp, , Orion Genève Nr. 16 255, 
+
+48 48.05(0).11  A. Castelnuovo-Tedesco, Storia di mondi lontani, Firenze, Verlag Marzocco, 1948, 164 pp, 500 Lire, , 
+
+49 48.05(0).12  M. Davidson, Elements of Mathematical Astronomy, , , , , , MN ASSA 7 28, reference AJB 47.08.06;
+
+50 48.05(0).13  M. Davidson, From Atoms to Stars, London, Hutchinson's Scientific and Technical Publications, 1947, , 15s, , 
+
+51 48.05(0).14  M. Davidson, Astronomy for Beginners, London, Watts & Co. Ltd., 1948, 10+150 pp, 2s 6d, JBAA 59 109 and Pop Astr 57 200, other Thinker's Library Nr. 128; 
+
+52 48.05(0).15  P. Doig, An Outline of Stellar Astronomy, , , , , , JBAA 58 32 and MN ASSA 7 27 and Obs 68 34 and Sky Tel. 7 156, reference AJB 47.08.07;
+
+53 48.05(0).16  P. L. Erizzo, Conoscere il cielo, Milano, Verlag Cavallotti, 1948, 16+322 pp, 1200 Lire, , 
+
+54 48.05(0).17  R. Estève and H. Mitault, Cours de Mathématiques; Tome IV Cosmographie, Paris, Librairie Istra, 1948, 198 pp, , , 
+
+55 48.05(0).18  J. Febrer and E. Cabal, Lecciones de Cosmografia y Geologia, Barcelona, , 1947, 426 pp, , , 
+
+56 48.05(0).19  J. Febrer Carbó and E. Cabal Dalby, Lecciones de Astronomia Elemental, Barcelona, Editorial Reverté, 1948, 727 pp, , Urania Barcelona 32 Nr. 218 93, 
+
+57 48.05(0).20  W. g. Fessenkow, Der kosmische Raum, Alma-Ata, Verlag Akad. Wiss. kasach. Sowjetrepublik, 1948, 18 pp, 2R., , in Russian;
+
+58 48.05(0).21  O. W. Gail, "Ebbe en Flut" comma eine physikalisch-astronomische Betrachrung, München, Hanns Reich Verlag, 1947, 44 pp, 3.50 DM, Naturwiss. Rundschau 1 132, 
+
+59 48.05(0).22  L. Goldberg and L. Aller, Atome comma Sterne und Nebel, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 283 pp, 4R. 50 Kop., , reprint of AJB 45.08.23;translated from English by B. A. Woronzow-Weljaminow;in Russian;
+
+60 48.05(0).23  L. Gratton, La scoperta del cielo, Brescia, Verlag La Scuola, 1948, 167 pp, 370 Lire, Mem SA It (NS) 19 225, 
+
+61 48.05(0).24  F. J. Hargreaves, The Size of the Universe, West Drayton, Penguin Books, 1948, 175 pp, 1s 6d, JBAA 58 224 and Obs 68 196, other Pelican Books Nr. A193; 
+
+62 48.05(0).25  H. Hatschek, Astonomisches Skizzenbuch <<Wann — Wo — Warum — Wieso>>, Linz (Donau), Oberösterreichischer Landesverlag, 1948, 145 pp, , Orion Schaffhausen Nr. 21 507, 
+
+63 48.05(0).26  H. S. Jones, A Picture of the Universe, London, Raven Books, 1947, 88 pp, 3s, , 
+
+64 48.05(0).27  W. L. Kennon, Astronomy; A Textbook for Colleges, Boston, Ginn & Company, 1948, 7+737 pp, $5.50, ApJ 109 184 and Pop Astr 56 454 and Publ ASP 60 340, 
+
+65 48.05(0).28  H. Kienle, Vom Wesen astronomischer Forschung, Berlin, Aufbau-Verlag, 1948, 252 pp, 10.50 DM, AN 276 271 and Ann d'Astrophys 11 162 and Naturwiss 35 160 and Naturwiss. Rundschau 1 131 and Sterne 24 93, 
+
+66 48.05(0).29  M. L. Kobus and J. J. Raimond jr., Cosmografie, , , 1948, 217 pp, f. 3.45, Heelal 4 82, other this is the seventh printing; 
+
+67 48.05(0).29a A. Krause, Himmelskunde für Jedermann, , , , , , Sternenwelt 1 191, 2nd edition;reference AJB 43.08.36;
+
+68 48.05(0).30  A. I. Lebedinskij, In der Welt der Sterne, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 48 pp, 75 Kop., , in Russian;
+
+69 48.05(0).31  W. W. Linkewitsch, Die Erde im Weltraum, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 48 pp, 75 Kop., , in Russian;
+
+70 48.05(0).32  A. March, Der Weg des Universums, Bern, Verlag A. Francke, 1948, 190 pp, 8.50 DM, , 
+
+71 48.05(0).33  K. F. Ogorodnikow, Woran sich die Erde hält, Moskau, Verlag des Ministeriums der Streitkräfte der UdSSR, 1947, 32 pp, 25 Kop., , in Russian;
+
+72 48.05(0).34  P. P. Parenago, Die neusten Daten über den Aufbau des Weltall, Moskau, Prawda, 1948, 20 pp, 60 Kop., , in Russian;
+
+73 48.05(0).35  J. I Perelman, Anregende Astronomie, Kaunas, Staatsverlag für Enzyklopädien comma Lexika und wissenschaftliche Literatur, 1948, 235 pp, 7R. 30 Kop., , in Lithuanian;
+
+74 48.05(0).36  J. S. Pickering, The Stars are Yours, New York, Macmillan Company, 1948, 264 pp, $3.95, Pop Astr 56 509 and Sky Tel. 8 19, 
+
+75 48.05(0).37  I. F. Polak, Allgemeinverständliche Astronomie, Tartu, estnicher Staatsverlag, 1948, 416 pp, 15R., , in Estonian;
+
+76 48.05(0).38  I. F. Polak, Wie das Weltall aufgebaut ist, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, , 40 pp, , , in Russian;
+
+77 48.05(0).39  J. G. Porter, The Night Sky, London, Winchester Publications Ltd, 1948, 96 pp, 5s, JBAA 59 79, 
+
+78 48.05(0).40  W. Prjanischnikow, Die Welt comma in der wir leben, Leningrad, <<Junge Garde>>, 1947, 320 pp, 7R., , in Russian;other a popular book; 
+
+79 48.05(0).41  P. Rousseau, La Astronomia sin Telescopic, Barcelona, , 1947, 153 pp, , , other translation of Postigo L.; 
+
+80 48.05(0).42  L. Rudaux and G. de Vaucouleurs, Astronomie comma les astres comma l'univers, Paris, Librairie Larousse, 1948, 8+486 pp, , Ciel et Terre 64 283 and Gaz astr 30 40 and Mem SA It (NS) 20 171 and Pop Astr 56 452 and Sky Tel. 8 18, 
+
+81 48.05(0).43  W. W. Scharonow, Wie die Welt aufgebaut ist, Minsk, Staatsverlag der weißrussischen Sowjetrepublik, 1947, 96 pp, 80 Kop., , in Belarusian;
+
+82 48.05(0).44  E. Selikowitsch, Sonnenwelten; Abriß der Stellarastronomie, Moskau, Staatsverlag für volksbildende Literatur, 1948, 80 pp, 1R. 50 Kop., , in Russian;
+
+83 48.05(0).45  H. Shapley and H. Wright and S. Rapport, Readings in the Physical Sciences, New York, Appleton-Century-Crofts Inc., 1948, 501 pp, $3.00, Sky Tel. 8 46, 
+
+84 48.05(0).46  R. W. Shaw and S. L. Boothroyd, Manual of Astronomy, New York, Appleton-Century-Crofts Inc., 1947, , , Sky Tel. 7 182, reference AJB 47.08.22;
+
+85 48.05(0).47  J. B. Sidgwick, The Heavens Above; A Rationale of Astronomy, London, Oxford University Press, 1948, 15+282 pp, 21s, JBAA 58 157 and Obs 68 155, 
+
+86 48.05(0).48  F. J. Sigel, Astronomie des Unsichtbaren, Moskau, Prawda, 1948, 23 pp, 60 Kop., , in Russian;
+
+87 48.05(0).49  W. T. Skilling and R. S. Richardson, Astronomy, , , , , , JBAA 59 78 and Sky Tel. 7 101, reference AJB 47.08.23;
+
+88 48.05(0).50  J. M. Slonim, Sonne und Erde, Taschkent, Verlag Akad. Wiss. usbek. Sowjetrepublik, 1948, 24 pp, 1R., , in Uzbek;
+
+89 48.05(0).51  G. C. Warner, Star Stories, Boston, The Pilgrim Press, 1947, 64 pp, $1.25, Sky Tel. 7 206, 
+
+90 48.05(0).52  D. Wattenberg, Blick ins Weltall; Astronomie Unterhaltungen, , , , , , Himmelswelt 55 207, reference AJB 47.08.26;
+
+91 48.05(0).53  B. A. Woronozow-Weljaminow, Der Aufbaudes Weltalls, Moskau-Leningrad, Staatsverlag für Jugendliteratur des Ministeriums für Volksbildung der russischen Sowjetrepublik, 1948, 48 pp, 1R. 15 Kop., , in Russian;
+
+92 48.05(0).54  S. K. Wsechswjatskij, Moderne Methoden zur Erforschung des Weltalls, Kiew, Verlag Akad. Wiss. ukrain. Sowjetrepublik, 1948, 36 pp, 70 Kop., , in Ukranian;
+
+93 48.05(0).55  S. A. Wyssozkij, Bete ferner Welten, Kaunas, Staatsverlag für Enzyklopädien comma Lexika und wissenschaftliche Literatur, 1947, 210 pp, 8R., , in Lithuanian;
+
+94 48.05(0).56  H. Zoch, Das Weltall in Zahlen, München, , , 20 pp, 0.95 DM, AN 276 272 and Gaz astr 31 21 and Sterne 24 94, 
+
+95 48.05(0).57  , Centennial Symposia comma December 1946, Cambridge MA, Harvard College Observatory, 1948, 8+385 pp, $5.00, ApJ 109 180 and Publ ASP 60 396, other Harvard Observatory Monographs Nr. 7; 
+
+96 48.05(0).59  W. Becker and R. Müller and H. Schneller ed., Newcomb-Engelmann; Populäre Astronomie, Leipzig, Johann Ambrosius Barth, 1948, 10+1017 pp, 36.00 DM, AN 277 143 and Sterne 24 182 and Sternenwelt 1 143, 
+
+97 48.05(0).60  , Tähtitieteen harrastajan Kirja-Amatörastronomens handbok, Borgä och Helsingfors, Werner Söderströms förlagsaktiebolag, 1947, 208 pp, , NAT 1948 74, 
+
+98 48.06(0).02  G. A. Aristow, Gab es einen Anfang und wird es ein Ende der Welt geben?, Moskau, Staatsverlag für kulturell-aufklärende Literatur, 1948, 72 pp, 2R. 50 Kop., , in Russian;
+
+99 48.06(0).03  G. Balz, Neubau der Welterkenntnis; Die Welt als Gesetz comma Idee comma Erscheinung und Wirklichkeit, Frankfurt (M)-Höchst, Joh. Wagner & Söhne, 1948, 39 pp, , , 
+
+100 48.06(0).08  A. Danjon, Comographie, Paris, Librairie A. Hatier, 1948, , , BSAF 62 192, 
+
+101 48.06(0).13  G. A. Gurew, Gab es einen Anfang und wird es ein Ende der Welt geben?, Tallin, Verlag <<Pädagogische Literatur>>, 1947, 50 pp, 2R., , in Estonian;
+
+102 48.06(0).14  G. A. Gurew, Die Einheit des Weltalls, Kaunas, Staatsverlag für Enzyklopädien comma Lexika und wissensschaftliche Literatur, 1947, 44 pp, 1R. 50 Kop., , in Lithuanian;
+
+103 48.06(0).18  A. A. Jakowkin, Gab es einen Anfang und wird es ein Ende der Welt geben?, Kiew, Komitee für Volksbildung der ukrain. Sowjetrepublik, 1948, 22 pp, 1R., , in Ukrainian;
+
+104 48.06(0).21  R. W. Kunizkij, Gab es einen Anfang der Welt geben?, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 32 pp, 60 Kop., , in Russian;
+
+105 48.06(0).23  H. Maliskat, Im Reiche der Mondroboter; Neue witzig-belchrende Schilderung einer Fahrt durch das Weltall mit vielen Bildern, Berlin-Frohnau, Condor-Verlag, 1948, 96 pp, 4.00 DM, Sterne 24 124, 
+
+106 48.06(0).24  A. March, Natur und Erkenntnis; Die Welt in der Konstruktion des heutigen Physiker, Wien, Springer-Verlag, 1948, 7+239 pp, , Naturwiss 35 348, 
+
+107 48.06(0).26  H. Meyer-Bührer, Einige astronomische Grundbegriffe, , Astronomische Arbeitsgruppe Schaffhausen, , , sfr. 1.90, Orion Genève Nr. 16 356, 
+
+108 48.06(0).27  S. A. Pachuto, Über die religiöse Legende von der Schöpfungsgeschichte der Welt, Minsk, Staatsverlag der weißrussischen Sowjetrepublik, 1948, 32 pp, 50 Kop., , in Russian;
+
+109 48.06(0).34  G. B. Shdanow, Strahlen aus den Tiefen der Welt, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 107 pp, 2R., , in Russian;
+
+110 48.06(0).39  B. A. Woronzow-Weljaminow, Gab es einen Anfang und wird es ein Ende der Welt geben?, , Woronescher Gebietsverlag, 1948, 36 pp, 1R., , in Russian;
+
+111 48.07(0).01  K. Heinemann and W. Lohmann ed., Astronomischer Jahresbericht Band 47, Berlin, Walter de Gruyer & Co., 1949, 27+208 pp, , , other the literature of 1947; 
+
+112 48.07(0).02  , Die Astronomie in der Sowjetunion in den dreißig Jahren von 1917—1947, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 292 pp, 19R., , 
+
+113 48.07(0).11  , Arato de Soli; Fenomeni e pronostici, Firenze, Verlag Sansoni, 1948, 26+92 pp, 600 Lire, , translated  by G. Zannoni;in Italian;other possibly translate from Greek; 
+
+114 48.07(0).12  , Nicolaus Copernicus; De Revolutionibus comma Preface and Book 1, , , , , , J. Franklin Institute 246 178, translated  by J. F. Dobson and S. Brodetsky;reference AJB 47.07.05;
+
+115 48.07(0).13  , G. Galilei comma Annuzio sidereo etc., Firenze, Verlag Sansoni, 1948, 18+90 pp, 700 Lire, , translated from Latin by M. Timpanaro;in Italian;
+
+116 48.07(0).14  , G. Galilei comma Dialoghi dei massimi sistemi II—III giornata, Roma, Sandrom, 1947, 499 pp, , ZfMG 31 337, 
+
+117 48.07(0).15  , Galileo Galilei comma Dialog über die beiden Hauptsysteme der Welt — das ptolemäische und das kopernikanische, Moskau-Leningrad, Verlag für technisch-theoretische Literatur, 1948, 380 pp, 23R. 25 Kop., , translated  by A. I. Dolgow;in Russian;
+
+118 48.07(0).16  , S. W. Kowalewskaja; Wissenschaftliche Arbeiten, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 368 pp, 22R. 50 Kop., , in Russian;
+
+119 48.07(0).17  , A. M. Ljapunow; Ausgewählte Werke, , , 1948, 540 pp, , , in Russian;
+
+120 48.07(0).18  , Sammlung von Aufsätzen Lomonossows, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1946, 306 pp, 25R., , in Russian;
+
+121 48.07(0).20  , Newton's Principia, Berkeley, University of California Press, , , $6.50, Pop Astr 56 279, 
+
+122 48.07(0).21  L. Gabba, Schiaparelli, Brescia, Verlag La Scuola, , 160 pp, 90 Lire, , 
+
+123 48.07(0).23  , Fortschritte der astronomischen Wissenschaften; III, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 332 pp, 27R. 50 Kop., , in Russian;
+
+124 48.10(0).05  A. Armitage, Sun comma Stand Thou Still, , , , , , JBAA 59 44 and Obs 68 195 and Sky Tel. 7 157, reference AJB 47.05.01;
+
+125 48.10(0).08  M. Caspar, Johannes Kepler, Stuttgart, W. Kohlhammer Verlag, 1948, 442 pp, 18.00 DM, ApJ 110 319 and Pop Astr 57 303 and Sternenwelt 1 286, 
+
+126 48.10(0).11  P. Frank, Einstein comma His Life and Times, London, Jonathan Cape Ltd., 1948, 367 pp, 16s, Nature 162 591, 
+
+127 48.10(0).12  J. A. Gade, The Life and Times of Tycho Brahe, , , , , , NAT 1948 78 and Pop Astr 56 54 and Sky Tel. 7 157, reference AJB 47.05.04;
+
+128 48.10(0).19  P. G. Kulikowskij, Lomonossow — Astronom und Astrophysiker, Moskau, Lenin-Staatsuniversität, 1947, 46 pp, 4R., Das sowjetsiche Buch Nr. 8 10, in Russian;
+
+129 48.10(0).23  S. W. Orlow, Fjodor Alexandrowitsch Bredichin 1831—1904, Moskau, Verlag der Lomonossow-Staatsuniv., 1948, 32 pp, 3R., , in Russian;
+
+130 48.10(0).30  W. M. Smart, John Couch Adams and the discovery of Neptune, , , , , , J. Franklin Inst. 246 178 and Obs 68 72, reference AJB 47.05.18;
+
+131 48.10(0).43  , Royal Society; Newton Tercentenary Celebrations, Cambridge, At the University Press, 1947, 15+92 pp, 10s 6d, Nature 161 375, 
+
+132 48.13(0).02  K. L. Bajew, Die Begründer der modernen Astronomie comma Kopernikus comma Bruno comma Kepler comma Galilei, Moskau, Staatsverlag für Unterricht und Pädagogik des Unterrichtsministeriums der russischen Sowjetrepublik, 1948, 116 pp, 1R. 75 Kop., , in Russian;
+
+133 48.13(0).05  F. Becker, Geschichte der Astronomie, , , , , , PAT 29 79 and Sterne 24 90, reference AJB 47.05.02;
+
+134 48.13(0).06  A. E. Bell, Christian Huygens and the development of science in the seventeenth century, London, Edward Arnold & Co., 1947, 220 pp, 18s, JBAA 58 223 and Nat 162 472, 
+
+135 48.13(0).12  A. A. Fraenkel, The jewish contribution to mathematics and astronomy, Tel Aviv, , 1947, 32 pp, , , in Hebrew;
+
+136 48.13(0).13  S. G. Gordeladse, Der Planet Neptun (1846—1946), Kiew, Verlag Akad. Wiss. ukrain. Sowjetrepublik, 1947, 32 pp, 1R. 25 Kop., , 
+
+137 48.13(0).17  J. Jeans, The Growth of Physical Sciences, Cambridge, University Press, 1948, 10+364 pp, 12s 6d and $4.00, Obs 68 73 and Sky Tel. 7 230, also published New York: Macmillan;other Cambridge publication 1947; other Macmillan publiication 1948; 
+
+138 48.13(0).18  J. Jeans, Der Werdegang der exakten Wissenschaften, Bern, A. Francke AG Verlag, 1948, 384 pp, , Phys. Blätter 4 405, 
+
+139 48.13(0).19  H. S. Jones, John Couch Adams and the discovery of Neptune, , , , , , PAT 29 84, reference AJB 47.03.13;
+
+140 48.13(0).22  R. W. Kunizkij, Die Entwicklung der Anschauungen über den Bau des Sonnensystems; Kurze historische Skizze, Tallin, Verlag Pädagogische Literatur, 1947, 76 pp, 2R. 50 Kop., , in Eastonian;
+
+141 48.13(0).26  B. E. Rajkow, Skizzen zur Geschichte des heliozentrischen Weltbildes in Rußland, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 392 pp, 18R., , 2nd edition;in Russian;
+
+142 48.13(0).34  B. A. Woronzow-Weljaminow, Fortschritte der sowjetischen Astronomie, Moskau, Prawda, 1947, 31 pp, 60 Kop., , in Russian;
+
+143 48.14(0).03  D. del Carle, British Time, London, Crosby Lockwood & Son Ltd., 1947, 199 pp, , PAT 29 80, 
+
+144 48.14(0).11  R. A. Ibn'Ezra, El libro de los fundamentos de las tablas astronómicas, Madrid, , 1947, 171 pp, , , 
+
+145 48.20(0).02  W. A. Bronstein and S. W. Orlow, Anleitung zur Beobachtung von Planten und Kometen, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 16 pp, 2R., , in Russian;
+
+146 48.20(0).03a S. A. Issajew and N. J. Bugoslawskaja and W. A. Bronstein, Anweisungen zur Beobachtung von Nordlichern und leuchtenden Nachtwolken, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 16 pp, 2R., , in Russian;
+
+147 48.20(0).04  H. Michel, Traité de l'Astrolabe, , , , , , Ann. Françaises de Chronométrie (2) 18 185 and Ciel et Terre 64 235 and Nature 162 46, reference AJB 47.06.14;
+
+148 48.20(0).06  M. E. Nabokow, Astronomische Beobachtungen mit dem Opernglas, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 183 pp, 3R. 50 Kop., , in Russian;
+
+149 48.20(0).08  E. Rosen, The Naming of the Telescope, , , , , , Ciel et Terre 64 91 and Gaz astr 30 38 and JBAA 58 157 and Obs 68 114 and Pop Astr 56 55 and Sky Tel. 7 101 and Z. f. Naturf 3a 64, reference AJB 47.08.21;
+
+150 48.20(0).11  , Premiers principes d'astronomie et d'observations à l'usage des débutants, Toulouse, R. Lion, 1948, 79 pp, 60 ffr., Gaz astr 30 60, 2nd edition;
+
+151 48.20(1).12  A. Bouwers, Achievements in Optics, , Cleaver Hume Press, 1947, 8+125 pp, 12s, Proc Phys Soc 60 212, 
+
+152 48.20(1).17  M. Daisomont, Handleiding bij het gemakkelijk comma goedkoop en wetenschappelijk vervaardigen van een Sterrenkijker ten gebriuke van de beginneling, Bruges, Editions <<De Tempel>>, 1947, 32 pp, 40 frs, Ciel et Terre 64 287 and Gaz astr 30 40 and Heelal 2 15, 2nd edition;
+
+153 48.20(1).18  M. Daisomont, La pratique de l'Argenture des Miroirs utilisés en Astronomie, Bruges, Editions <<De Tempel>>, 1947, 11 pp, 20 frs, Ciel et Terre 64 287 and Gaz astr 30 40, 2nd edition;
+
+154 48.20(1).28  P. P. Lasarew, Untersuchungen über die Adaption, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 260 pp, 20R., , in Russian;
+
+155 48.20(1).33  D. D. Maxutow, Herstellung und Untersuchung astronomischer Optik, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 280 pp, 13R., , in Russian;
+
+156 48.20(1).36  O. Preiß, Der optische Rechner; Heft 1 comma Glas und Linsen: Eine Erläuterung wichtiger Grundbegriffe in Frage und Antwort, Göttingen, Druckerei Große, 1948, 46 pp, , , 
+
+157 48.20(1).37  O. Preiß, Der optische Rechner; Heft 2 comma Elementare Methoden zur Bestimmung der Konstruktionsdaten und die trigonometrische Durchrechnung einzelner Linsen: Glasarten und Brechungsziffern, Göttingen, Dieterichsche Univ.-Buchdrunkerei W. Fr. Kaestner, 1948, 46 pp, , , 
+
+158 48.20(1).38  O. Preiß, Der optische Rechner; Heft 3 comma Die trigonometrische Durchrechnung von Linsensystemem für parallen und schräg einfallende Lichtstrahlen, Göttingen, Dieterichsche Univ.-Buchdrunkerei W. Fr. Kaestner, 1948, 47 pp, , , 
+
+159 48.20(1).42  H. D. Taylor, The Adjustment and Testing of Telescope Objectives, , , , , , JBAA 58 30 and Orion Schaffhausen Nr. 22 532, reference AJB 45.11.08;
+
+160 48.20(1).47  , Scientific Instruments II, London, Hutchinson's Scientific and Technical Publications, , 300 pp, 30s, JBAA 59 43, 
+
+161 48.21(0).05  G. Dimitrow and D. Baker, Teleskope und ihr Zubehör, Moskau-Leningrad, Staatsverlag für techisch-theoretische Literatur, 1947, 308 pp, 5R., , reprint of AJB 45.11.06;translated from English by M. S. Nawaschin;in Russian;other Baker's initials are different from the entry in AJB 45.11.06; 
+
+162 48.21(0).08  D. Fink, Radar Engineering, New York, McGraw-Hill Book Company Inc., 1947, 12+644 pp, $7.00, J Applied Phys 19 965, 
+
+163 48.21(0).18  G. Matthewson, Constructing an Astronomical Telescope, , , , , , Ciel et Terre 64 91, reference AJB 47.11.04;
+
+164 48.21(0).22  L. N. Ridenour, Radar Systems Engineering, New York-London, McGraw-Hill Book Company Inc., 1947, 18+748 pp, 37s 6d, Proc Phys Soc 60 398 and Nature 161 867, 
+
+165 48.21(0).23  A. Roberts, Radar Beacons, New York, McGraw-Hill Book Co. Inc., 1947, 20+489 pp, $6.00, Proc Phys Soc 61 488, 
+
+166 48.21(0).27  E. G. Schneider, Le Radar, Paris, Editions de la Revue d'Optique théoreque et expérimentale, 1947, , , BSAF 62 128, translated from English by H. Pujade;in French;
+
+167 48.21(0).32  A. J. Thompson, Making your own Telescope, , , , , , JBAA 58 33 and Nature 161 502 and Pop Astr 56 281, reference AJB 47.11.05;
+
+168 48.22(1).41  P. E. Boucher, Fundamentals of Photography with Laboratory Experiments, New York, D. van Nostrand Co. Inc., 1947, 12+394+53 pp, , Proc Phys Soc 60 402, 2nd edition;
+
+169 48.22(1).43  T. H. James and G. C. Higgins, Fundamentals of Photographic Theory, New York, John Wiley & Sons Inc., 1948, 286 pp, $3.50, J. Franklin Inst. 245 526 and Sky Tel. 7 304, 
+
+170 48.22(1).51  G. de Vaucouleurs, La Science de la Photographie; Que se passe-t-il dans une plaque photographique?, Paris, Editions Elzévir, , 64 pp, 45 ffr., Gaz astr 30 17, other Collection des <<Problèmes>>; 
+
+171 48.22(1).53  E. J. Wall and F. I. Jordan, Photographic facts and formulas, Boston, American Photographic Publishing Co., 1947, 364 pp, $5.00, J. Franklin Inst. 245 261, 
+
+172 48.23(0).04  S. M. Axelrod, Die Uhrenmechanik, Moskau-Leningrad, Verlag für Maschinenbauliteratur, 1947, 360 pp, 32R., , in Russian;
+
+173 48.23(0).08  W. S. Fligelman and I. J. Roginskij, Die Uhrenmechanik, Leningrader, Zeitshriften- und Buchverlag, 1947, 272 pp, 12R., , in Russian;
+
+174 48.23(0).12  J. E. Haswell, Horology; The Science of Time Measurement and the Construction of Clocks comma Watches and Chronometers comma with Supplement, London, Chapman & Hall Ltd., 1947, 16+288 pp, 16s, Nature 162 163, 
+
+175 48.23(0).17  A. J. Rawlings, The Science of Clocks and Watches, London, Pitman & Sons Ltd., 1948, 303 pp, 20s, PAT 29 173, 2nd edition;
+
+176 48.24(0).10  N. N. Sytinskaja, Die absolute Photomietrie ausgedehnter Himmelsobjekte, Leningrad, Verlag der Shdanow-Staatsuniv., 1948, 199 pp, 12R., , in Russian;
+
+177 48.30(0).02  S. N. Blashko, Lehrbuch der sphärischen Astronomie, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 416 pp, 8R. 50 Kop., , in Russian;
+
+178 48.30(0).03  E. J. Bugoslawskaja, Photographische Astronomie, Moskau-Leningrad, Technischer Staatsverlag, 1947, 296 pp, , , 
+
+179 48.30(0).04  M. Davidson, Elements of Mathematical Astronomy, , , , , , JBAA 58 30 and Obs 68 75, reference AJB 47.08.06;
+
+180 48.30(0).07  G. L. Hosmer, Practical Astronomy, New York, John Wiley & Sons Inc., 1948, 15+355 pp, $4.50, ApJ 109 183 and JBAA 59 254 and Publ ASP 60 395 and Sky Tel. 7 278, 4th edition;also published London: Chapman & Hall Ltd.;
+
+181 48.30(0).08  R. W. Kunizkij, Tag und Nacht comma die Jahreszeiten, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 32 pp, 60 Kop., , in Russian;
+
+182 48.30(0).09  J. J. Nassau, Practical Astronomy, New York, McGraw-Hill Book Company Inc., 1948, 12+311 pp, $5.00, ApJ 109 183 and JBAA 59 216 and PAT 29 174 and Publ ASP 60 339, 2nd edition;
+
+183 48.30(0).10  T. Niethammer, Die genauen Methoden der astronomisch-geographischen Ortsbestimmung, , , , , , Obs 68 116, reference AJB 47.21.03;
+
+184 48.30(0).14  F. Zagar, Astronomia sferica e teorica, Bologna, Verlag Nicola Zanichelli, 1948, 16+493 pp, 2500 Lire, Mem SA It (NS) 19 143, 
+
+185 48.30(0).16  , Sammlung von Aufsätzen aus dem Gebiete der Geodäsie und verwandter Wissenschaften, Moskau, Verlag für geodätische und kartographische Literatur bein Ministerrat der UdSSR, 1947, 147 pp, 10R., , in Russian;
+
+186 48.32(0).05  A. A. Michajlow, Sonnen- und Mondfinsternisse, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 40 pp, 70 Kop., , in Russian;
+
+187 48.33(0).07  I. F. Polak, Zeit und Kalender, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 40 pp, , , 2nd edition;in Russian;
+
+188 48.33(0).09  P. C. Sengupta, Ancient Indian Chronology, Kalkutta, University of Kalcutta Press, 1947, 28+287 pp, Rs. 15, Obs 68 114, 
+
+189 48.33(0).12  , Studies and Essays comma Presented to R. Courant on His Sixtieth Birthday comma January 8, New York, Interscience Publishers Inc., 1948, 470 pp, $5.50, ApJ 107 423, 
+
+190 48.40(0).02  B. Hacar, Mechanika slunecní soustavy, Prag, JCMF, 1948, 128 pp, , , 
+
+191 48.41(0).06  P. B. Bergmann, Einführung in die Relativitätstheorie, Moskau, Staatsverlag für ausländische Literatur, 1947, 380 pp, 20R., , translated from English by P. Kunin and I. Taxar;edited by W. L. Hinsburg;in Russian;
+
+192 48.41(0).21  A. S. Eddington, Fundamental Theory, Teddington, Cambridge University Press, 1947, 222 pp, $6.00, J Applied Phys 19 114, also published New York: The Macmillan Company;
+
+193 48.41(0).38  M. Johnson, Time comma Knowledge and the Nebulae, New York, Dover Publications Inc., 1947, 189 pp, $2.75, J Applied Phys 19 970, 
+
+194 48.41(0).54  E. A. Milne, Kinematic Relativity; A Sequel to Relativity comma Gravitation and World Structure, Oxford, Clarendon Press, 1948, 7+238 pp, $6.50, Math. Reviews 10 578 and Mem SA It (NS) 20 245, 
+
+195 48.43(0).10  B. Waters, Severn Tide, London, J. M. Dent & Sons Ltd., 1947, 7+183 pp, 15s, Nature 161 790, 
+
+196 48.44(0).01  S. Chandrasekhar, Die Prinzipien der Stellardynamik, Moskau, Staatsverlag für ausländische Literatur, 1948, 264 pp, 18R. 50 Kop, , reprint of AJB 45.90.04;translated from English by W. W. Safranow;edited by P. P. Parenago;in Russian;
+
+197 48.44(0).18  E. v. d. Pahlen, Einführung in die Dynamik von Sternsystemen, , , , , , NAT 1948 77, reference AJB 47.90.12;
+
+198 48.45(0).02  P. Herget, The Computation of Orbits, , , 1948, 9+177 pp, , AN 277 274 and Math. Reviews 10 155 and Pop Astr 56 397, other privately published E. Brothers Inc in Ann Arbor; 
+
+199 48.50(0).14  M. Waldmeier, Einführung in die Astrophysik, Basel, Verlag Birkhäuser, 1948, 381 pp, 42.90 DM, , other Lehrbücher und Monographien aus dem Gebiete der exakten Wissenschaften 18; other Astronomisch-Geophysikalische Reihe Band 3; 
+
+200 48.52(0).20  A. G. Massewitsch, Was im Innern von Sonne und Sternen vorgeht, Moskau, Verlag der Prawda, 1948, 30 pp, , , in Russian;
+
+201 48.54(0).16  P. Jordan, Die Herkungt der Sterne, , , , , , Phys. Blätter 3 366, reference AJB 47.31.21;
+
+202 48.54(0).23  M. F. Subbotin, Entstehung und Alter der Erde, Tartu, Verlag Wissenschaftliche Literatur, 1947, 48 pp, 2 R., , in Estonian;
+
+203 48.54(0).23  M. F. Subbotin, Entstehung und Alter der Erde, Tschita, Tschitinsker Gebietsverlag, 1947, 40 pp, 90 Kop., , in Russian;
+
+204 48.54(0).27  B. A. Woronozow-Weljaminow, Die Entstehung der Himmelskörper, Moskau, Verlag der Ministeriums der Streitkräfte der Sowjetunion, 1947, 44 pp, 40 Kop., , in Russian;other published also in Estonian and Lithuanian; 
+
+205 48.55(0).04  K. Himpel, Probleme der Entwicklung im Universum, Stuttgart, Curt E. Schwab, 1948, 140 pp, 3.80 DM, Sterne 24 123, other CES-Bücherei Band 2; 
+
+206 48.55(0).06  B. J. Lewin, Die Entstehung der Erde und der Planeten, Moskau, Prawda, 1948, 24 pp, 50 Kop., , in Russian;other published also in Estonian; 
+
+207 48.60(0).04  N. J. Bugolawskaja and W. W. Basilewitsch, Anleitung zur Beobachtung der Sonne, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 16 pp, 1R. 25 Kop., , in Russian;
+
+208 48.60(0).08  H. Jarlan, Le Soleil et son rayonnement, , , 1948, 128 pp, , BSAF 62 303, other Collection Que saia-je? des Press Universitaires de France; 
+
+209 48.60(0).11  B. Mogilewskij, Sonne und Leben, Moskau, Staatsverlag für volksbildende Literatur, 1947, 52 pp, 2R., , in Russian;
+
+210 48.60(0).12  E. R. Mustel, Was an der Sonnenoberfläche vor sich geht, Moskau, Prawda, 1948, 24 pp, 60 Kop., , in Russian;
+
+211 48.60(0).14  W. W. Scharonow, Die Sonne und ihre Beobachtung, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 203 pp, 4R. and 1R., , in Russian;
+
+212 48.62(0).11  G. Aristow, Sonnenfinsternisse, Tallin, Pädagogische Literatur, 1947, 52 pp, 2R., , in Estonian;
+
+213 48.63(0).42  H. T. Stetson, Sunspots in Action, , , , , , BSAF 62 64 and J. Franklin Inst. 245 353 and Nature 161 951 and Obs 68 33 and Pop Astr 56 176 and Sky Tel. 7 126, reference AJB 47.43.28;
+
+214 48.64(0).01  H. D. Babcock and C. E. Moore, The Solar Spectrum comma λ6600 to λ13495, Washington DC, Carnegie Institution of Washington, 1947, , $1.40 and $2.00, Obs 68 156 and Ann d'Astrophys 11 162, other paperback $1.40 linen cloth cover $2.00; 
+
+215 48.68(0).16  M. S. Eigenson and M. N. Gnewyschew and A. I. Ohl and B. M. Rubaschew, Die Sonnenaktivität und ihre irdischen Auswirkungen, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 323 pp, 16R., , in Russian;
+
+216 48.70(0).01  G. A. Aristow, Gibt es Leben auf den anderen Planeten?, Moskau, Staatsverlag für volksbildende Literatur, 1948, 90 pp, 2R. 50 Kop., , in Russian;
+
+217 48.70(0).08  W. G. Fessenkow, Meteorische Materie im interplanetaren Raum, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 276 pp, 14R., , in Russian;
+
+218 48.70(0).09  F. Giandinoto, L'influenza delle masse dei pianeti sulla costante newtoniana, Catania, Self Published, , 23 pp, , , 
+
+219 48.70(0).22  F. G. Watson, Between the Planets, , , , , , Nature 161 460 and Priroda 37 Nr. 7 87, reference AJB 43.08.64;
+
+220 48.70(0).23  F. G. Watson, Zwischen den Planeten, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1947, 227 pp, 5R. 50 Kop., , reprint of AJB 43.08.64;translated from English by B. I. Lewin;in Russian;
+
+221 48.70(0).26  F. L. Whipple, Erde comma Mond und Planeten, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1948, 270 pp, 4R. 50 Kop., , reprint of AJB 43.51.20;translated from English by N. I. Poljakowa;in Russian;
+
+222 48.72(1).08  J. Jakob, Der chemische Aufbau unseres Planeten; Eine naturphilosophisch-weltanschauliche Betrachtung, Zürich, Büchergilde Gutenberg, 1945, 274 pp, , VJS Naturf. Ges. Zürich 93 295, 2nd edition;
+
+223 48.72(1).18  , Report of the Gassiot Committee of the Royal Society on the emission spectra of the night sky and aurorea; Papers read at an Interanational Conference held in London in July 1947, London, , 1948, 140 pp, 20s, , 
+
+224 48.72(4).90  I. A. Chwostikow, Die Leuchterscheinungen des Nachthimmels, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 496 pp, 27R., , 2nd edition;in Russian;
+
+225 48.72(7).107  C. M. Botley, Polar Lights, Tunbridge Wells, , , , 3s, JBAA 58 109, 
+
+226 48.72(7).110  C. Störmer, Dano-Norwegian Co-operation in Polar Auroras in north-east Greenland comma 1938—1939, Copenhagen, C. A. Reitzels Forlag, 1947, 60 pp, 5.00 Kr., JBAA 58 108, also published Copenhagen: Bianco Lungs Bogtrykkeri;
+
+227 48.73(1).06  G. Gurew, Die Mondwelt, Erewan, Armenischer Staatsverlag, 1948, 91 pp, 3R., , in Armenian;other popular literature; 
+
+228 48.73(1).13  W. W. Scharonow, Der Mond, Leningrad, Naturwissenschaftliche Bibliotjek des Zeitschriften- und Buchverlag, 1947, 79 pp, 1R., , in Russian;
+
+229 48.73(1).14  J. E. Spurr, Geology applied to Selenology III; Lunar Catastrophic History, , Rumford Press, 1948, 245 pp, $5.00, Pop Astr 56 454, 
+
+230 48.74(0).13  I. F. Polak, Der Planet Mars und die Frage nach dem Leben auf ihm, Moskau, Prawda, 1948, 24 pp, 60 Kop., , in Russian;
+
+231 48.74(0).14  W. W. Scharonow, Mars, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 180 pp, , , 
+
+232 48.74(0).18  G. A. Tichow, Der Planet Mars, Alma Ata, Verlag Akad. Wiss. kasach. Sowjetrepublik, 1948, 24 pp, 4R., , in Russian;
+
+233 48.74(0).19  G. A. Tichow, Neuere Untersuchungen zur Frage nach der Vegetation des Mars, Moskau, Prawda, 1948, 20 pp, 60 Kop., , in Russian;
+
+234 48.74(0).20  G. de Vaucouleurs, Le problème martien, Paris, Editions Elzévir, 1948, , 50 francs, , 
+
+235 48.82(0).12  W. W. Fedynskij and I. S. Astapowitsch, Kleinkörper des Weltraumes, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1948, 48 pp, 80 Kop., , in Russian;
+
+236 48.82(1).43  C. Hoffmeister, Meteorströme; Meteoric currents, Weimar, Werden und Wirken, 1948, 55 pp, , Sternenwelt 1 167, other unsure about page count; 
+
+237 48.83(0).14  E. L. Krinow, Meteorite; Answeisung zur Beobachtung des Falles von Meteoriten und Verschriften für ihre Sammlung, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 54 pp, , , in Russian;
+
+238 48.83(0).15  E. L. Krinow, Meteorite, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 336 pp, 20R., Das Sowjetische Buch Nr. 5 48, in Russian;
+
+239 48.83(0).17  E. L. Krinow, Katalog der Meteoritensammlung der Akademei der Wissenschaften der UdSSR, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1947, 88 pp, 4R., , in Russian;
+
+240 48.90(0).03  D. Sutcliffe, Untriangulated Stars; Letters from Edwin Arlington Robinson to Harry de Forest Smith comma 1890—1905, Cambridge MA, Harvard University Press, 1947, 348 pp, 27s 6d, , also published London: Oxford University Press;other not an astronomy book; other Robinson was a poet and three time winner of the Pulitzer prize; other curious why it is in AJB; 
+
+241 48.90(0).05  H. Zoch, Ich zeige Dir die Sternbilders; Ein zuverlässiger Wegweiser am Sternenhimmel für Anfänger und Fortgeschrittene, München, , , 32 pp, 0.95 DM, AN 276 272 and Gaz astr 31 21 and Sterne 24 123, other Issued on behalf of the Public Observatory; 
+
+242 48.91(0).08  N. F. Bojewa, Katalog von 1967 Sternen des Talcott-Programmes für die Epoche 1950 (System FK3) mit Reductionsgrößen auf den scheinbaren Ort, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, , 7R. 50 Kop., , 
+
+243 48.91(0).25  , Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 Jahrhunderts; Abteilung II. Der südliche Sternhimmel, Karlsruhe, G. Braun, 1948, , , , other Bd 8 7 hours Rektaszension 2 Leiferung 32 minutes to 59 minutes; 
+
+244 48.91(0).26  , Observatoire de Toulouse; Catalogue Photgraphique du Ciel comma Coordonnées rectilignes comma Tome 1 zome +9° à +11°, Laval, , 1948, 15+357 pp, , , 
+
+245 48.91(0).27  , Astrographic Catologue 1900.0; Sydney Section Vol. 25 Ra 0ʰ to 12ʰ comma Dec -57° to -59°, Sydney, , 1948, 3+26 pp, , , 
+
+246 48.91(0).28  , Astrographic Catologue 1900.0; Sydney Section Vol. 26 Ra 6ʰ to 12ʰ comma Dec -57° to -59° comma with plate constants for Volumes 17—19, Sydney, , 1947, 7+128 pp, , , 
+
+247 48.91(0).29  , Astrographic Catologue 1900.0; Sydney Section Vol. 27 Ra 12ʰ to 18ʰ comma Dec -57° to -59°, Sydney, , 1948, 3+97 pp, , , 
+
+248 48.91(1).30  A. Becvar, Atlas Coeli Skalnaté Pleso, Prag, Tschech. Astr. Ges., 1948, , 460 Kčs and $9.00, Pop Astr 57 360, other see also the article by Kopal Sky Tel. 8 13; 
+
+249 48.91(1).32  G. B. Lacchini, Atlante celeste, Triest, Self Published, 1948, , 450 Lire, , 
+
+250 48.91(1).34  P. Tardi, La lecture des cartes célestes, Paris, Librairie Gauthier-Villars, 1947, , , BSAF 62 303, 
+
+251 48.91(1).35  , Norton's Star Atlas and Telescopic Handbook, , , , , , JBAA 58 30, other review of the 10th edition; reference AJB 45.71.36;
+
+252 48.91(1).37  , Connais-tu les étoiles?, Paris, Editions du Seuil, 1947, , ffr. 50, Orion Genève Nr. 16 356, 
+
+253 48.100(0).02  P. Baize, Catalogue de 392 étoiles doubles accessibles aus petits instruments, Toulouse, R. Lion, 1948, 14 pp, 50 ffr, Gaz astr 30 60, 
+
+254 48.110(0).01  B. W. Kukarkin and P. P. Parenago, Generalkatalog veränderlicher Sterne; 1 Ausgabe comma enthaltend eine Zusammenstellung von 10912 bis zum Jahre 1948 comma entdeckten und bezeichneten veränderlichen Sternen, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 15+528 pp, 60R., JBAA 59 43 and Pop Astr 57 473 and RAJ 26 187, in Russian;
+
+255 48.110(0).02  T. Banachiewicz ed., Rocznik Astronomiczny Obserwatorjum Krakowskiego comma Supplemento Internationale Nr. 19, Kraków, , 1948, 7+101 pp, , , 
+
+256 48.110(0).07  L. Campbell and L. Jacchia, The Story of Variable Stars, London, A. Churchill Ltd., 1947, 5+226 pp, 18s, Nature 161 460, reprint of AJB 43.84.03;
+
+257 48.110(0).10  Z. Kopal, An Introduction to the Study of Eclipsing Variables, , , , , , VS Bull 6 222, reference AJB 45.84.02;
+
+258 48.110(0).12  P. P. Parenago and B. W. Kukarkin, Die veränderlichen Sterne und ihre Untersuchungsmethoden, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 168 pp, 3R., Das sowjetische Buch Nr. 6 20, 2nd edition;in Russian;
+
+259 48.110(0).14  F. J. Sigel, Anleitung zur Beobachtung veränderlicher Sterne, Moskau-Leningrad, Akad. Wiss. UdSSR, 1948, 16 pp, 1R. 50 Kop., , in Russian;
+
+260 48.110(0).15  M. S. Swerew and B. W. Kukarkin and D. J. Martynow and P. P. Parenago and N. F. Floja and W. P. Zessewitsch, Veränderliche Sterne; Band 3 Die Methoden zum Studium der Veränderlichen Sterne, Moskau-Leningrad, OGIS Staatsverlag für technisch-theoretische Literatur, 1947, 659 pp, 31R., , in Russian;
+
+261 48.113(0).14  B. A. Woronzow-Weljaminow, Gasnebel und Neue Sterne, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1948, 588 pp, 45R. and 20 DM, AN 278 142 and ApJ 110 315 and Das sowjetische Buch Nr. 6 21 and Pop Astr 57 526, 
+
+262 48.120(0).03  M. S. Eigenson, Der Aufbau der Sternsysteme, Moskau, Prawda, 1948, 19 pp, 60 Kop., , in Russian;
+
+263 48.122(0).23  , Lichtgevende gasnevels in het sterrenstelsel, s'Gravenhage, Martinus Nijhoff, 1947, 50 pp, 1.75 fl., Gaz astr 30 37, 
+
+264 48.123(0).04  B. Bok and P. Bok, Die Michstraße, Moskau-Leningrad, OGIS Staatsverlag für technisch-theoretische Literatur, 1948, 207 pp, 3R. 50 Kop., , reprint of AJB 43.89.02;translated from English by W. L. Auerbach;edited by P. P. Parenago;in Russian;
+
+265 48.124(0).18  H. Shapley, Galaxies, , , , , , Nature 161 460 and Priroda 37 Nr. 11 84, reference AJB 45.89.01;
+
+266 48.124(0).19  H. Shapley, Galaxien, Moskau-Leningrad, Staatsverlag für technish-theoretische Literatur, 1947, 226 pp, 4R., , reprint of AJB 45.89.01;translated from English by G. N. Neujmin;in Russian;
+
+267 48.125(0).04  H. Mineur, L'espace interstellaire, , , , , , BSAF 62 64 and Ciel et Terre 64 90, reference AJB 47.91.05;
+
+268 48.127(0).03  P. Auger, Was sind kosmische Strahlung?, Moskau-Leningrad, Staatsverlag für technisch-theoretische Literatur, 1947, 108 pp, 2R. 60 Kop., , translated from English by N. J. Rabinowitsch;in Russian;
+
+269 48.127(0).21  L. Jánossy, Cosmic Rays and Nuclear Physics, London, The Pilot Press Ltd., 1948, 14+186 pp, 9s 6d, Proc Phys Soc 61 584 and Nature 162 513, 
+
+270 48.127(0).22  L. Jánossy, Cosmic Rays, Oxford, Clarendon Press, 1948, 13+424 pp, 35s and $10.00, ApJ 109 183 and Nature 161 785, also published London: Oxford University Press;
+
+271 48.130(0).07  G. K. Mujshnek, Über die Umwandlung von Gauss-Lambert Koordinaten in Gauss-Krüger Koordinaten auf dem Territorium der estnischen Sowjetrepublik, Tartu, estnischer Staatsverlag, 1947, 24 pp, 1R. 50 Kop., , in Estonian;
+
+272 48.130(0).12  , Naturforschung und Medizin in Deutschland 1939—1946 Band 6 Angewandte Mathematik Teil 4 Geodäsie, Wiesbaden, Dieterisch'sche Verlagsbuchhandlung, 1948, 116 pp, , , 
+
+273 48.130(0).14  , Procès-Verbal de la 92nd séance de la Commission Géodésique Suisse tenue au Palais Fédéral à Berne le 6 mars 1948, Neuchatel, , 1948, 27 pp, , , 
+
+274 48.130(0).15  , Tafeln der Gauss-Krüger Koordinaten für die Breiten von 32°—80° comma in Intervallen von 5 Bogenminuten und für die Längen von 0°—3½° in Intervallen von 7½ Bogenminuten  und Tabellen der Umfänge und Flächen von Trapezen topographischer Aufnahmen comma bezogen auf das Ellipsoid von Krassowskij, Moskau, Verlag für geod. und kartogr. Literatur beim Ministerrat der UdSSR, 1948, 332 pp, 30R., , in Russian;
+
+275 48.131(0).03  A. Clairaut, Theorie der Erdfigur, Moskau, Verlag Akad. Wiss. UdSSR, 1947, 359 pp, 23R., , translated  by N. S. Jachontowa;in Russian;
+
+276 48.133(0).01  W. W. Achmatow, Höhe und Azimut in drei Minuten; Tafeln zur schnellen und einfachen Berechnung der Standlinien, , Verlag der Hydrographischen Verwaltung WMS, 1948, 48 pp, , , in Russian;
+
+277 48.133(0).02  I. E. Allison, Navigation and Astronomy for Students, , Harrap & Co. Ltd., 1948, 439 pp, 25s, JBAA 59 45 and J. Inst. of Navigation 1 368, 
+
+278 48.133(0).05  B. P. Chljustin, Navigation, Moskau-Leningrad, Verlag Seetransport, 1948, 507 pp, 16R. 50 Kop., , in Russian;
+
+279 48.133(0).09  B. Dutton, Navigation and Nautical Astronomy, Annapolis, , 1948, , , , 9th edition;
+
+280 48.133(0).12  J. S. Hall, Radar aids to navigation, New York-London, McGraw-Hill Book Co. Inc., 1947, 13+389 pp, 30s, Nature 162 633, 
+
+281 48.133(0).15  L. L. Johnson, A First Book of Navigation, London, Macmillan & Co. Ltd., 1948, 118 pp, 2s 6d, JBAA 58 225, 
+
+282 48.133(0).18  J. A. Pierce and A. A. McKenzie and R. H. Woodward, Loran comma Long Range Navigation, New York, McGraw-Hill Book Co. Inc., 1948, 14+476 pp, $6.00 and 36s, J. Franklin Inst. 246 176 and Nature 162 633, 
+
+283 48.133(0).23  R. A. Smith, Radio Aids to Navigation, Cambidge, University Press, 1947, 12+114 pp, 9s, Proc Phys Soc 61 582, 
+
+284 48.133(0).24  W. Stein, Nautik für Küstenfahrer, Berlin-Bielefeld, , 1948, , , , 
+
+285 48.134(0).01  A. Ananoff, Navigation interplanétaire, Paris, Editions Elzévir, 1948, , 50 francs, , 
+
+286 48.134(0).06  H. Oberth, Wege zur Verwirklichung des Weltraumfluges, Moskau, Staatsverlag für Verteidigung, 1948, 232 pp, 13R. 50 Kop., , translated from German by B. W. Rauschenbach;in Russian;other translation of the 3rd German edition; 
+
+287 48.134(0).11  F. A. Zander, Probleme des Raketenfluges, Moskau, Verlag für Verteidigung, 1947, 240 pp, 12R., , in Russian;other collection of 12 reviews on technical and astronautical problems in rocketry; 
+
