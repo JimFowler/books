@@ -42,7 +42,9 @@
 </td>
 
 <td width=250 height=250 valign="Top">
-  <h3></h3>
+  <h3>Electronic Publishing</h3>
+
+  <a href="http://www.fontcraft.com">Font Craft</a>
 
 </td>
 
