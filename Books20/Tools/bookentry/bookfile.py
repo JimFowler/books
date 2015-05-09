@@ -33,13 +33,16 @@ class BookFile():
     between the disk file format and the AJBentry format."""
 
     def __init__(self, parent=None):
-        self._entryList = []
-        self._volumeNumber = -1
-        self._fileName = 'document1'
-        self._dirName = './'
-        self._baseName = './'
-        self.curEntryNumber = -1  # 0 <= curEntryNumber < len(self._entryList)
         self._header = __defaultHeader__
+        self._entryList = []
+
+        self._volumeNumber = -1
+        self._fileName = './document1'
+        self._dirName = './'
+        self._baseName = 'document1'
+
+        self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
+
         self.setFileName('document1')
         self._dirty = False
 

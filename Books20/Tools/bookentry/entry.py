@@ -3,6 +3,8 @@ entry objects will be either entriesbook listings from
 Astronomisher Jahresbericht or Astronomy and Astrophysics
 Abstracts.  Specific entry types should be sub-classed from Entry.
 """
+# -*- coding: UTF-8 -*-
+# -*- mode: Python;-*-
 
 __version__ = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
 

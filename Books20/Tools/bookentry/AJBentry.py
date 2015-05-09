@@ -1,6 +1,8 @@
 """AJBentry provides a class which can convert between a unicode text
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
+# -*- coding: UTF-8 -*-
+# -*- mode: Python;-*-
 
 
 from nameparser import HumanName
@@ -77,8 +79,8 @@ class AJBentry(entry.Entry):
             return None
 
     def shortTitle(self):
-        '''Create a short title string for the entry. A short title
-        is "AJBnum 1stAuthor_lastname Title\n".'''
+        """Create a short title string for the entry. A short title
+        is 'AJBnum 1stAuthor_lastname Title'."""
         st = self.numStr() + ' '
         if self.notEmpty('Authors'):
             name = self['Authors'][0].last
@@ -86,10 +88,10 @@ class AJBentry(entry.Entry):
             name = self['Editors'][0].last
         else:
             name = 'noAuthor'
+
         st = st + name + ', ' + self['Title'] + '\n'
         return st
 
-            
     def isValid(self):
         """AJB entries are valid if they have a valid AJB num
         and a Title."""
