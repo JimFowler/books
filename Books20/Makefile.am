@@ -15,4 +15,4 @@
 #   permission of the author.
 # 
 #SUBDIRS = Data Docs Manuscript Scripts WebPages
-SUBDIRS = Docs Manuscript WebPages
+SUBDIRS = Docs Manuscript Tools WebPages

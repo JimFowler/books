@@ -17,7 +17,7 @@ PYRCC = pyrcc4 -py3
 USER_INTERFACES = ui_BookEntry.py ui_HeaderEntry.py ui_OrigStr.py \
 		ui_EntrySelect.py
 
-RESOURCE_FILES = ajb_rc_rc.py
+RESOURCE_FILES = ajb_rc.py
 
 
 all: $(USER_INTERFACES) $(RESOURCE_FILES)
@@ -40,8 +40,8 @@ ui_EntrySelect.py: designer/ui_EntrySelect.ui
 #
 # Convert the XML resource files to Python files
 #
-ajb_rc_rc.py: Resources/ajb_rc.qrc
-	$(PYRCC) -o ajb_rc_rc.py Resources/ajb_rc.qrc
+ajb_rc.py: Resources/ajb_rc.qrc
+	$(PYRCC) -o ajb_rc.py Resources/ajb_rc.qrc
 
 
 #

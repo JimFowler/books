@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 # -*- mode: Python;-*-
 
 """AJB/AAA dialog to review and edit books entries
@@ -17,14 +16,14 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
 from nameparser import HumanName
-import bookentry.ui_BookEntry as ui_BookEntry
-import bookentry.bookfile as bf
-import bookentry.menus as menus
-import bookentry.headerWindow as hw
-import bookentry.AJBentry as AJBentry
-import bookentry.symbol as symbol
-import bookentry.origstrWindow as origstr
-import bookentry.entryselect as es
+import ui_BookEntry as ui_BookEntry
+import bookfile as bf
+import menus as menus
+import headerWindow as hw
+import AJBentry as AJBentry
+import symbol as symbol
+import origstrWindow as origstr
+import entryselect as es
 
 
 import os
@@ -907,6 +906,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 #
 
 if __name__ == '__main__':
+
+   import sys
 
    app = QApplication(sys.argv)
    app.setApplicationName('Book Entry')

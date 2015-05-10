@@ -14,7 +14,7 @@ The packaged was modified for BookEntry.
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
-import bookentry.ajb_rc
+import ajb_rc
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,

@@ -8,9 +8,9 @@ the form Entry.py.entry()."""
 from nameparser import HumanName
 import re
 
-import bookentry.entry as entry
-from bookentry.AJBcomments import *
-import bookentry.utils as utils
+import entry as entry
+from AJBcomments import *
+import utils as utils
 
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 

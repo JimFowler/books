@@ -4,7 +4,7 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-import bookentry.ui_EntrySelect as ui_EntrySelect
+import ui_EntrySelect as ui_EntrySelect
 
 class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
 
