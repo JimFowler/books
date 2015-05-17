@@ -5,7 +5,7 @@ if it exists.
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
-import ui_OrigStr as ui_OrigStr
+import bookentry.ui_OrigStr as ui_OrigStr
 
 class OrigStrWindow(QDialog, ui_OrigStr.Ui_origstrDialog):
     def __init__(self, str=None):

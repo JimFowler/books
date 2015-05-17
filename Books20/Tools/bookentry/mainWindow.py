@@ -16,14 +16,15 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
 from nameparser import HumanName
-import ui_BookEntry as ui_BookEntry
-import bookfile as bf
-import menus as menus
-import headerWindow as hw
-import AJBentry as AJBentry
-import symbol as symbol
-import origstrWindow as origstr
-import entryselect as es
+
+import bookentry.ui_BookEntry as ui_BookEntry
+import bookentry.bookfile as bf
+import bookentry.menus as menus
+import bookentry.headerWindow as hw
+import bookentry.AJBentry as AJBentry
+import bookentry.symbol as symbol
+import bookentry.origstrWindow as origstr
+import bookentry.entryselect as es
 
 
 import os

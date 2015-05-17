@@ -6,7 +6,7 @@ import fileinput
 import os
 import traceback
 
-import AJBentry as AJBentry
+import bookentry.AJBentry as AJBentry
 
 __version__ = 0.1
 

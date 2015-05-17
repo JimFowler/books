@@ -15,6 +15,11 @@ of how comments are written.
 from modgrammar import *
 from modgrammar.extras import *
 
+grammar_whitespace_mode = 'optional'
+
+class WhiteSpace (Grammar):
+    grammar = (RE(r'[ \t\r\n]+'))
+               
 class Digit (Grammar):
     grammar = (WORD("0-9", count=1))
     grammar_collapse = True
@@ -103,44 +108,64 @@ class PublisherList (Grammar):
 #
 
 class Publishers (Grammar):
-    grammar = (L('also published'), PublisherList, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('also published'), PublisherList,
+               L(';'))
 
 class Translation (Grammar):
-    grammar = (L('translated'), OPTIONAL(FromLanguage),
-               OPTIONAL(ToLanguage), OPTIONAL(L('by'), NameList), L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('translated'), OPTIONAL(FromLanguage),
+               OPTIONAL(ToLanguage), OPTIONAL(L('by'), NameList),
+               L(';'))
 
 class Editors (Grammar):
-    grammar = (L('edited by'), NameList, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('edited by'), NameList,
+               L(';'))
 
 class Compilers (Grammar):
-    grammar = (L('compiled by'), NameList, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('compiled by'), NameList,
+               L(';'), OPTIONAL(WhiteSpace))
 
 class Contributors (Grammar):
-    grammar = (L('contributors'), NameList, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('contributors'), NameList,
+               L(';'))
 
 class Reprint (Grammar):
-    grammar = (L('reprint of'), OR(AJBNum, Year), L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('reprint of'), OR(AJBNum, Year),
+               L(';'))
 
 class Reference (Grammar):
-    grammar = (L('reference'), AJBNum, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('reference'), AJBNum,
+               L(';'))
   
 class Edition (Grammar):
-    grammar = (OR(Digit, TwoDigit),
+    grammar = (OPTIONAL(WhiteSpace),
+               OR(Digit, TwoDigit),
                OR(L('nd'), L('rd'), L('st'), L('th')),
-               OPTIONAL(OR(L('facsimile'), L('revised'))), L('edition'), L(';'))
+               OPTIONAL(OR(L('facsimile'), L('revised'))), L('edition'),
+               L(';'))
 
     def elem_init(self, sessiondata):
-        self.edition_num = self[0].string
+        self.edition_num = self[1].string
 
 class LanguageList (Grammar):
     grammar = (LIST_OF(uWords, sep='and'))
 
 class Language (Grammar):
-    grammar = (L('in'), LanguageList,
-               OPTIONAL( L('with'), uWords, L('references')),  L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('in'), LanguageList,
+               OPTIONAL( L('with'), uWords, L('references')),
+               L(';'))
 
 class Other (Grammar):
-    grammar = (L('other'), uWords, L(';'))
+    grammar = (OPTIONAL(WhiteSpace),
+               L('other'), uWords,
+               L(';'))
 
 class Comment (Grammar):
     grammar = (OR(Edition, Compilers, Contributors, 
@@ -153,86 +178,11 @@ if __name__ == '__main__':
 
     import sys
 
-    teststr = ['2nd edition;',
-               '3rd edition;',
-               '7th revised edition;',
-               '17th revised edition;',
-               
-               'reprint of 1956;',
-               'reprint of AJB 34.56.23;',
-               
-               'reference AJB 66.54.32;',
-               'reference AJB 66.54.32a;',
-               'reference AJB 66.54.32c;',
-               'reference AJB 66.54.32;',
-    
-               'edited by A. J. Reader;',
-               'edited by A.-B. J. Reader;',
-               'edited by A. B. J. Reader;',
-               'edited by A.-B. C.-D. J. Reader;',
-               'edited by A. Reader and I. M. Writer;',
+    def PrintResult(result):
 
-               'compiled by A. J. Reader;',
-               'compiled by A.-B. J. Reader;',
-               'compiled by A. Reader and I. M. Writer;',
-
-               'contributors A. J. Reader;',
-               'contributors A.-B. J. Reader;',
-               'contributors A. Reader and I. M. Writer;',
-
-               'translated by A. J. Reader-Writer; ',
-               'translated by A. Reader; ',
-               'translated by A. Reader and I. M. Writer; ',
-               'translated from Italian; ',
-               'translated into French; ',
-               'translated from Italian into French; ',
-               'translated from Italian by A. J. Reader; ',
-               'translated from Italian into French by A. J. Reader; ',
-               'translated from Italian into French by A. J. Reader and I. M. Writer; ',
-
-               'in Italian;',
-               'in French and Italian;',
-               'in French with Russian references; ',
-
-               'also published London: Big City Publisher; ',
-               'also published London: Rand McNally & Sons; ',
-               "also published London: St. Martin\u2019s Press;",
-               # a unicode city for when we figure out unicode words
-               'also published G\u00F6ttingen: Big City Publisher; ',
-               'also published New York: Another Big City Publisher Ltd.; ',
-               'also published New York: Another Big City, Publisher Ltd. and London: Phys.-Math. Staatsverlag; ',
-
-               'other now is the time for all good men ;',
-               'other <<The Books at Large>>;',
-               'other you should be able to write anything here including (45) _ and Abrvs.;']
-
-    fullstr = 'other extraneous material that I do not yet know how to handle; also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
-
-    cParser = Comment.parser()
-    count = 0
-
-    for comment in teststr:
-        print('\nComment is ', comment)
-        result = cParser.parse_string(comment)
-        if result:
-            grmName = result.elements[0].grammar_name
-            print(grmName)
-            print(result)
-        else:
-            print('bad result!')
-            print(type(comment))
-            count += 1
-        cParser.reset()
-
-    print( '\nDoing full string')
-    result = cParser.parse_string(fullstr, reset=True)
-    if not result:
-        print('bad result for')
-        print(fullstr)
-        count += 1
-    while result:
         grmName = result.elements[0].grammar_name
-        print('\n'+grmName)
+        print(grmName)
+
         if 'Edition' ==  grmName:
             tmp = result.elements[0].edition_num
             print(tmp)
@@ -291,7 +241,88 @@ if __name__ == '__main__':
             # parse the PublisherList
             print(tmp)
 
-        result = cParser.parse_string('')
+    teststr = ['  2nd edition;',
+               '3rd edition;',
+               '7th revised edition;',
+               '17th revised edition;',
+               
+               'reprint of 1956;',
+               'reprint of AJB 34.56.23;',
+               
+               'reference AJB 66.54.32;',
+               'reference AJB 66.54.32a;',
+               'reference AJB 66.54.32c;',
+               'reference AJB 66.54.32;',
+    
+               'edited by A. J. Reader;',
+               'edited by A.-B. J. Reader;',
+               'edited by A. B. J. Reader;',
+               'edited by A.-B. C.-D. J. Reader;',
+               'edited by A. Reader and I. M. Writer;',
+
+               'compiled by A. J. Reader;',
+               'compiled by A.-B. J. Reader;',
+               'compiled by A. Reader and I. M. Writer;',
+
+               'contributors A. J. Reader;',
+               'contributors A.-B. J. Reader;',
+               'contributors A. Reader and I. M. Writer;',
+
+               'translated by A. J. Reader-Writer;',
+               'translated by A. Reader;',
+               'translated by A. Reader and I. M. Writer;',
+               'translated from Italian;',
+               'translated into French;',
+               ' translated from Italian into French;',
+               'translated from Italian by A. J. Reader;',
+               'translated from Italian into French by A. J. Reader;',
+               'translated from Italian into French by A. J. Reader and I. M. Writer;',
+
+               'in Italian;',
+               'in French and Italian;',
+               'in French with Russian references;',
+
+               ' also published London: Big City Publisher;',
+               'also published London: Rand McNally & Sons;',
+               "also published London: St. Martin\u2019s Press;",
+               # a unicode city for when we figure out unicode words
+               'also published G\u00F6ttingen: Big City Publisher;',
+               'also published New York: Another Big City Publisher Ltd.;',
+               ' also published New York: Another Big City, Publisher Ltd. and London: Phys.-Math. Staatsverlag;',
+
+               'other now is the time for all good men ;',
+               'other <<The Books at Large>>;',
+               'other you should be able to write anything here including (45) _ and Abrvs.;']
+
+    fullstr = 'other extraneous material that I do not yet know how to handle; also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
+    newfullstr = 'other extraneous material that I do not yet know how to handle; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
+
+    cParser = Comment.parser()
+    count = 0
+
+    for comment in teststr:
+        print('\nComment is "' + comment + '"')
+        result = cParser.parse_string(comment)
+        if result:
+            PrintResult(result)
+        else:
+            print('bad result!')
+            print(type(comment))
+            count += 1
+        cParser.reset()
+
+    print( '\nDoing full string\n')
+
+    result = cParser.parse_text(fullstr, reset=True, multi=True)
+    if not result:
+        print('bad result for')
+        print(fullstr)
+        count += 1
+
+    for grm in result:
+        PrintResult(grm)
+        print()
+        #result = cParser.parse_string('')
 
     print('\n')
     sys.stdout.writelines(generate_ebnf(Comment))

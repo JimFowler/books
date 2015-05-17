@@ -8,9 +8,9 @@ the form Entry.py.entry()."""
 from nameparser import HumanName
 import re
 
-import entry as entry
-from AJBcomments import *
-import utils as utils
+import bookentry.entry as entry
+import bookentry.AJBcomments as comments
+import bookentry.utils as utils
 
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 
@@ -403,30 +403,30 @@ class AJBentry(entry.Entry):
 
     def _parseComments( self, field ):
         
-        cParser = Comment.parser()
-        result = cParser.parse_string(field, reset=True)
+        cParser = comments.Comment.parser()
+        results = cParser.parse_text(field, reset=True, multi=True)
         #
         # Look for translators, language, edition, and other publishers
         #
-        if result:
-            while result:
+        if results:
+             for result in results:
                 grmName = result.elements[0].grammar_name
                 if 'Edition' ==  grmName:
                     self['Edition'] = result.elements[0].edition_num
 
                 elif 'Reference' == grmName:
-                    self['Reference'] = str(result.find(AJBNum)).strip()
+                    self['Reference'] = str(result.find(comments.AJBNum)).strip()
 
                 elif 'Reprint' == grmName:
-                    tmp = result.find(AJBNum)
+                    tmp = result.find(comments.AJBNum)
                     if tmp:
                         self['Reprint'] = str(tmp).strip()
-                    tmp = result.find(Year)
+                    tmp = result.find(comments.Year)
                     if tmp:
                         self['Reprint'] = str(tmp).strip()
 
                 elif 'Editors' == grmName:
-                    line = str(result.find(NameList))
+                    line = str(result.find(comments.NameList))
                     nm = utils.makeNameList( line )
                     if self.notEmpty('Editors'):
                         self['Editors'].extend( nm )
@@ -434,7 +434,7 @@ class AJBentry(entry.Entry):
                         self['Editors'] = nm
 
                 elif 'Contributors' == grmName:
-                    line = str(result.find(NameList))
+                    line = str(result.find(comments.NameList))
                     nm = utils.makeNameList( line )
                     if self.notEmpty('Contributors'):
                         self['Contributors'].extend( nm )
@@ -442,7 +442,7 @@ class AJBentry(entry.Entry):
                         self['Contributors'] = nm
 
                 elif 'Compilers' == grmName:
-                    line = str(result.find(NameList))
+                    line = str(result.find(comments.NameList))
                     nm = utils.makeNameList( line )
                     if self.notEmpty('Compilers'):
                         self['Compilers'].extend( nm )
@@ -450,15 +450,15 @@ class AJBentry(entry.Entry):
                         self['Compilers'] = nm
 
                 elif 'Translation' == grmName :
-                    tmp = result.find(FromLanguage)
+                    tmp = result.find(comments.FromLanguage)
                     if tmp:
                         self['TranslatedFrom'] = str(tmp.elements[1]).strip()
 
-                    tmp = result.find(ToLanguage)
+                    tmp = result.find(comments.ToLanguage)
                     if tmp:
                         self['Language'] = str(tmp.elements[1]).strip()
 
-                    tmp = result.find(NameList)
+                    tmp = result.find(comments.NameList)
                     if tmp:
                         nm = utils.makeNameList(str(tmp))
                         if self.notEmpty('Translators'):
@@ -467,7 +467,7 @@ class AJBentry(entry.Entry):
                             self['Translators'] = nm 
 
                 elif 'Publishers' == grmName:
-                    tmp = str(result.find(PublisherList))
+                    tmp = str(result.find(comments.PublisherList))
                     # the space chars in the split avoids problems with 
                     # e.g. Rand McNally & Sons
                     list = tmp.split(' and ')
@@ -477,21 +477,16 @@ class AJBentry(entry.Entry):
                                                     'PublisherName': p[1].strip()})
 
                 elif 'Language' == grmName:
-                    self['Language'] = str(result.find(uWord)).strip()
+                    self['Language'] = str(result.find(comments.uWord)).strip()
 
                 elif 'Other' == grmName:
-                    nm = str(result.find(uWords)).strip()
+                    nm = str(result.find(comments.uWords)).strip()
                     if not self.notEmpty('Others'):
                         self['Others'] = []
                     self['Others'].append( nm )
 
                 else:
                     print('Unknown grammer name %s' % grmName)
-
-                result = cParser.parse_string('')
-
-
-
 
 
 

@@ -14,7 +14,6 @@ from PyQt4.QtGui  import *
 from pprint import *
 pp = PrettyPrinter()
 
-#from bookentry.mainWindow import BookEntry
 import bookentry.ajb_rc
 import bookentry.mainWindow as mw
 

@@ -1,3 +1,13 @@
+2015-05-14  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBcomments.py:
+	Had to add grammer_whitespace_mode='optional' and other changes
+	to support modgrammer-0.10
+
+2015-05-10  Jim Fowler  <jrf@Biblion>
+
+	* Auxil: installed modgrammer-0.10
+
 2015-05-03  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/bookfile.py (BookFile.__init__): minor
