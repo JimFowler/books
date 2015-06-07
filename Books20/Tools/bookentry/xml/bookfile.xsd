@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="testing"></xs:element><!-- used only for testing -->
+
+<xs:element name="BookFile">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Header" type="xs:string"/>
+      <xs:element name="Entries" type="entries"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="entries">
+  <xs:sequence>
+    <xs:element name="Entry" type="entry" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="entry">
+  <xs:all>
+    <!-- An Entry must have at least a Title and an Index to be valid -->
+    <xs:element name="Title" type="xs:string"/>
+    <xs:element name="subTitle" type="xs:string" minOccurs="0"/>
+    <xs:element name="Index" type="index"/>
+    <xs:element name="ReprintOf" type="index" minOccurs="0"/>
+    <xs:element name="ReferenceOf" type="index" minOccurs="0"/>
+    <xs:element name="Authors" type="authors" minOccurs="0"/>
+    <xs:element name="Editors" type="editors" minOccurs="0"/>
+    <xs:element name="Translators" type="translators" minOccurs="0"/>
+    <xs:element name="Compilers" type="compilers" minOccurs="0"/>
+    <xs:element name="Contributors" type="contributors" minOccurs="0"/>
+    <xs:element name="Publishers" type="publishers" minOccurs="0"/>
+    <xs:element name="Year" type="xs:string" minOccurs="0"/>
+    <xs:element name="Edition" type="xs:string" minOccurs="0"/>
+    <xs:element name="Pagination" type="pagination" minOccurs="0"/>
+    <xs:element name="Prices" type="prices" minOccurs="0"/>
+    <xs:element name="TranslatedFrom" type="xs:string" minOccurs="0"/>
+    <xs:element name="Language" type="xs:string" minOccurs="0"/>
+    <xs:element name="Reviews" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="Review" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="Comments" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="Comment" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="index">
+  <xs:all>
+    <xs:element name="IndexName" type="xs:string"/>
+    <xs:element name="VolumeNumber" type="xs:integer"/>
+    <xs:element name="SectionNumber" type="xs:integer"/>
+    <xs:element name="SubSectionNumber" type="xs:integer"/>
+    <xs:element name="EntryNumber" type="xs:string"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="publishers">
+  <xs:sequence>
+    <xs:element name="Publisher" type="publisher" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="publisher">
+  <xs:all>
+    <xs:element name="Place" type="xs:string"/>
+    <xs:element name="Name" type="xs:string"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="prices">
+  <xs:sequence>
+    <xs:element name="Price" type="price" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="price">
+  <xs:all>
+    <xs:element name="Currency" type="xs:string"/>
+    <xs:element name="Amount" type="xs:string"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="pagination">
+  <xs:all>
+    <xs:element name="Introductory" type="xs:string" minOccurs="0"/>
+    <xs:element name="Main" type="xs:integer" minOccurs="0"/>
+    <xs:element name="Appendices" type="xs:integer" minOccurs="0"/>
+    <xs:element name="Tables" type="xs:integer" minOccurs="0"/>
+    <xs:element name="Figures" type="xs:string" minOccurs="0"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="authors">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="Author" type="personInfo" maxOccurs="unbounded"/>
+    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="editors">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="Editor" type="personInfo" maxOccurs="unbounded"/>
+    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="translators">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="Translator" type="personInfo" maxOccurs="unbounded"/>
+    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="compilers">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="Compiler" type="personInfo" maxOccurs="unbounded"/>
+    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="contributors">
+  <xs:choice maxOccurs="unbounded">
+    <xs:element name="Contributor" type="personInfo" maxOccurs="unbounded"/>
+    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="personInfo">
+  <xs:all>
+    <xs:element name="Prefix" type="xs:string" minOccurs="0"/>
+    <xs:element name="First" type="xs:string" minOccurs="0"/>
+    <xs:element name="Middle" type="xs:string" minOccurs="0"/>
+    <xs:element name="Last" type="xs:string"/>
+    <xs:element name="Suffix" type="xs:string" minOccurs="0"/>
+    <xs:element name="NickName" type="xs:string" minOccurs="0"/>
+  </xs:all>
+</xs:complexType>
+
+</xs:schema>
+
+<!--
+  Remaining Problems
+
+How do we handle multiple volumes in one entry?
+If multiple entries, how do we link the two (or more) entries?
+
+Pagination definition conflicts with some multi-volume entries!
+Make Pagination just an xs:string and parse later?
+
+
+Possible redefinition of Review
+  (how to parse the string??)
+
+<xs:element name="Review" type="review"/>
+
+<xs:complexType name="review"/>
+  <xs:sequence>
+    <xs:element name="Journal" type="xs:string"/>
+    <xs:element name="volRef" type="xs:string"/>
+    <xs:element name="Reviewer" type="personInfo" minOccurs="0"/>
+  </xs:sequence>
+</xs:complexType>
+
+
+-->

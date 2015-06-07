@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<BookFile xmlns="http://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.w3schools.com note.xsd">
+
+  <Header>
+    Some long unicode
+  </Header>
+  <FileName unicode />
+  <Entries>
+    <Entry>
+      <Index>
+	<IndexName  "AJB" />
+	<VolumeNumber integer />
+	<SectionNumber integer />
+	<SubSectionNumber integer />
+	<EntryNumber unicode />
+      </Index>
+      <Authors>
+	<Author>
+	  <Title unicode />
+	  <First unicode />
+	  <Middle unicode />
+	  <Last unicode />
+	  <Suffix unicode />
+	  <NickName unicode />
+	</Author>
+	...
+      </Authors>
+      <Title unicode />
+      <SubTitle unicode />
+      <Editors>
+	<Editor>
+	  <Title unicode />
+	  <First unicode />
+	  <Middle unicode />
+	  <Last unicode />
+	  <Suffix unicode />
+	  <NickName unicode />
+	</Editor>
+	...
+      </Editors>
+      <Publishing>
+	<Publisher>
+	  <Place unicode />
+	  <Name unicode />
+	</Publisher>
+	...
+      </Publishing>
+      <Year unicode />
+      <Edition unicode />
+      <Pagination>
+	<Introductory number />
+	<Main number />
+	<Appendices number />
+	<Tables number />
+	<Figures number />
+	<Others number />  ???
+      </Pagination>
+      <Prices>
+	<Price>
+	  <Currency unicode />
+	  <Number unicode />
+	</Price>
+	...
+      </Prices>
+      <Reviews>
+	<Review unicode />
+	...
+      </Reviews>
+      <TranslatedFrom unicode />
+      <Language unicode />
+      <Translators>
+	<Translator>
+	  <Title unicode />
+	  <First unicode />
+	  <Middle unicode />
+	  <Last unicode />
+	  <Suffix unicode />
+	  <NickName unicode />
+	</Translator>
+	...
+      </Translators>
+      <Compilers>
+	<Compiler>
+	  <Title unicode />
+	  <First unicode />
+	  <Middle unicode />
+	  <Last unicode />
+	  <Suffix unicode />
+	  <NickName unicode />
+	</Compiler>
+	...
+      </Compilers>
+      <Contributors>
+	<Contributor>
+	  <Title unicode />
+	  <First unicode />
+	  <Middle unicode />
+	  <Last unicode />
+	  <Suffix unicode />
+	  <NickName unicode />
+	</Contributor>
+	...
+      </Contributors>
+      <ReprintOf unicode />
+      <ReferenceOf unicode />
+      <Comments>
+	<Comment  unicode />
+	...
+      </Comments>
+    </Entry>
+    ...
+  </Entries>
+</BookFile>
+

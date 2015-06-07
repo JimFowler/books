@@ -1,3 +1,11 @@
+2015-06-06  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/xml/ajbtest_books.xml: Wrote valid XML bookfile
+	and validated it against the schema.
+
+	* Tools/bookentry/xml/bookfile.xsd: Finished first draft of a
+	schema file in XML.  Successfully passed validity checks
+
 2015-05-14  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/AJBcomments.py:

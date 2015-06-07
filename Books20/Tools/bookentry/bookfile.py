@@ -5,6 +5,7 @@
 import fileinput
 import os
 import traceback
+import json
 
 import bookentry.AJBentry as AJBentry
 
@@ -241,11 +242,59 @@ class BookFile():
         fd.close()
         self._dirty = False
 
+    def readfileXML(self, filename=None):
+        """Open and read the header stuff into _header and the entries
+        into the entry list. If filename is not given, we use
+        the value set in BookFile.setFileName() if valid. Note that we
+        do not care if the entries or header have been modified; that is
+        the job of the calling routine.
+
+        Return value is the number of record entries read."""
+
+        if filename:
+            self.setFileName(filename)
+
+        if self._fileName == '' or not os.path.isfile(self._fileName):
+            return 0 # no records read
+
+        # if we have a good file, then clear the entryList and header
+        #self._entryList = []
+        #self._header = ''
+        #self._dirty = False
+
+        #We do something clever here when we know how.
+        print("Can't read XML files yet")
+
+        fd.close()
+        #self._dirty = False
+
+    def writefileXML(self, filename=None):
+        """Write the entry list and header to a disk file.
+        if filename is not given, we use BookEntry._fileName instead.
+
+        Returns True if the file could be written or False otherwise."""
+
+        if filename:
+            self.setFileName(filename)
+
+        try:
+            fd = open(self._fileName, 'w', encoding='UTF8')
+        except:
+            return False
+
+        #We do something clever here when we know how.
+        print("Can't write XML files yet")
+
+        fd.close()
+        # self._dirty = False
+
 
 if __name__ == "__main__":
 
+    from pprint import pprint
+
     bf = BookFile()
-    print( "%d entries found\n" % bf.readFile("./ajb58_books.txt"))
+    print( "%d entries found\n" % bf.readFile("/home/jrf/Documents/books/Books20/Data/Ajb/ajb58_books.txt"))
 
     print( 'The header for %s' % bf.getFileName())
     print( bf.getHeader() )
@@ -269,4 +318,8 @@ if __name__ == "__main__":
     bf.deleteEntry(0)
     bf.deleteEntry(5)
     print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
-    
+    print('\n\nDumping json file')
+    print('len of _entryList %d' % len(bf._entryList))
+    pprint(bf._entryList[45])
+    # This fails in HumanName
+    json.dumps(bf._entryList[45])

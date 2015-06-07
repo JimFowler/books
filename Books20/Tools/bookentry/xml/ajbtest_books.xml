@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+<testing> <!-- testing only. In order to have multiple bookfile entries per document -->
+
+<!-- This is a minimal bookfile. -->
+<BookFile>
+  <Header> </Header>
+  <Entries></Entries>
+</BookFile>
+
+<!--
+   This is a minimal book file with one minimal entry. Note that
+   a minimal entry is required to have an Index and a Title to be
+   a valid entry.
+-->
+<BookFile>
+ <Header>
+ </Header>
+ <Entries>
+  <Entry>
+    <Index>
+      <IndexName> AJB </IndexName>
+      <VolumeNumber> 58 </VolumeNumber>
+      <SectionNumber> 1 </SectionNumber>
+      <SubSectionNumber> 0 </SubSectionNumber>
+      <EntryNumber> 2a </EntryNumber>
+    </Index>
+    <Title> My First Book </Title>
+  </Entry>
+ </Entries>
+</BookFile>
+
+<!--
+   This is a full BookFile with lots of Entries
+-->
+<BookFile>
+  <Header>
+Entry format
+
+  Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+  AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+  Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+  Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+  For volume AJB ?? Index to the Literature of ????, started, finished, proofread
+
+  </Header>
+
+  <Entries>
+    <Entry>
+      <Index>
+ 	<IndexName>  AJB </IndexName>
+	<VolumeNumber> 58 </VolumeNumber>
+	<SectionNumber> 3 </SectionNumber>
+	<SubSectionNumber> 0 </SubSectionNumber>
+	<EntryNumber> 1 </EntryNumber>
+      </Index>
+      <Title> My First Book </Title>
+      <subTitle></subTitle>
+      <Authors>
+	<Author>
+	  <Prefix>Dr</Prefix>
+	  <First>J</First>
+	  <Middle>Robert</Middle>
+	  <Last>Fowler</Last>
+	  <Suffix>IV</Suffix>
+	</Author>
+        <Entity>My Writing Business</Entity>
+      </Authors>
+      <Editors>
+	<Editor>
+	  <Last>Fowler</Last>
+	</Editor>
+        <Editor>
+          <Last>Johnson</Last>
+        </Editor>
+      </Editors>
+      <Translators>
+        <Entity>My Translating Business</Entity>
+        <Entity>My Other Translating Business</Entity>
+        <Translator>
+         <First>James</First>
+         <Last>Fowler</Last>
+         <Suffix>IV</Suffix>
+        </Translator>
+      </Translators>
+      <Publishers>
+        <Publisher>
+          <Place>Oxford</Place>
+          <Name>Clarendon Press</Name>
+        </Publisher>
+        <Publisher>
+          <Place>New York</Place>
+          <Name>Oxford University Press</Name>
+        </Publisher>
+      </Publishers>
+      <Year>1958</Year>
+      <Edition>2</Edition>
+      <Pagination>
+        <Introductory>12</Introductory>
+        <Main>342</Main>
+      </Pagination>
+      <Prices>
+        <Price>
+          <Amount>12.50</Amount>
+          <Currency>Dollars</Currency>
+        </Price>
+        <Price>
+          <Amount>12.50</Amount>
+          <Currency>$</Currency>
+        </Price>
+      </Prices>
+      <TranslatedFrom>Italian</TranslatedFrom>
+      <Language>English</Language>
+      <Reviews>
+        <Review>ApJ 166 25</Review>
+        <Review>NAT 1985 Nr. 10 114</Review>
+      </Reviews>
+      <Comments>
+        <Comment>This is the first comment</Comment>
+        <Comment>This is the second comment</Comment>
+      </Comments>
+    </Entry>
+
+    <Entry>
+      <Index>
+ 	<IndexName>  AJB </IndexName>
+	<VolumeNumber> 58 </VolumeNumber>
+	<SectionNumber> 3 </SectionNumber>
+	<SubSectionNumber> 0 </SubSectionNumber>
+	<EntryNumber> 4 </EntryNumber>
+      </Index>
+      <Title> My Second Book </Title>
+      <subTitle>the Number Two Book</subTitle>
+    </Entry>
+
+  </Entries>
+       
+</BookFile>
+
+</testing> <!-- Do not use in real bookfile documents -->
