@@ -1,0 +1,273 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+For volume AJB 46 Index to the Literature of 1943-1946 part II, started12 May 2015, finished, proofread
+
+
+1 46.03(0).16  F. Dessauer, Weltfahrt der Erkenntnis; Leben und Werk Isaac Newtons, Zürich, Rascher Verlag, 1945, 430 pp, 17.5 sfr, Math Rev 9 169, 
+
+2 46.03(0).20  A. Flexner, Henry S. Pritchett, New York, Columbia University Press, 1943, $2.75, , Pop Astr 52 107 and, 
+
+3 46.03(0).21  J. E. Ford, David Rittenhouse; Astronomer-Patriot 1732—1796, Philadelphia, University of Pennsylvania Press, 1946, 8+226 pp, $2.50 and 15s 6d, Obs 67 65 and Pop Astr 54 495 and Publ ASP 58 389, also published London: Geoffrey Cumberlege and Oxford: University Press;reference AJB 45.03.27;
+
+4 46.03(0).24  N. Günther, Ernst Abbe comma der Schöpfer der Zeiss-Stiftung, Stuttgart, Wissenschaftliche Verlagsgesellschaft, 1946, 211 pp, RM 4.80, Z f Naturf 2 a 476, other Band 2 der Reihe Große Naturforscher; 
+
+5 46.03(0).36  S. P. Mizwa, Nicolas Copernicus 1543—1943, , , , , , Obs 65 129 and Pop Astr 53 525, reference AJB 45.03.69;
+
+6 46.03(0).43  J. Pelseneer, Morale de savants d'Hippocrate à Einstein, Bruxelles, Office de Publicité, 1946, 128 pp, , Ciel et Terre, other Collection Lebègue (7) Nr.77; 
+
+7 46.03(0).44  H. Reichenbach, From Copernicus to Einstein, , , , , , Publ ASP 54 212, reference AJB 45.03.82;
+
+8 46.03(0).57  F. Kubach ed., Nikolaus Kopernikus; Bildnis eines großen Deutschen, München-Berlin, Verlag R. Oldenbourg, 1943, 10+378 pp, 10.50 RM, Z. f. die gesamte Naturwissenschaft 10 33, other Neue Arbeiten der Kopernikus-Forschung mit Auszügen aus kopernikanischen Schriften in deutscher Sprache; 
+
+9 46.03(0).69  , Zum gedenken Isaak Newtons 1643—1943, Moskau, Verlag der Lomonossow-Staatsuniversität Moskau, 1946, 108 pp, 9R., , in Russian;
+
+10 46.03(0).70  , Exposition Le Verrier et son temps comma organisée par l'Observatoire e Paris avex le concours de la Société Astronomique de France Catalogue, Paris, Gauthier-Villars, 1946, 7+75 pp, , , 
+
+11 46.05(0).11  D. S. Evans, Frontiers of Astronomy, London, Sigma Books Ltd., 1946, 175 pp, 6s, Ciel et Terre 64 186 and Obs 67 33 and Proc. Phys. Soc. 60 404, other Sigma Introduction to Science Nr. 1; 
+
+12 46.05(0).13  A. R. Hinks, Einführung in die Astronomie, Bern, Verlag A. Francke, 1946, 267 pp, 6.80 schw. fr., Gaz Astr 31 59 and Himmelswelt 55 206, translated  by H. Bächler;in German;
+
+13 46.05(0).22  J. Rudnicki, Nicholaus Copernicus 1473—1543, , , , , , Obs 65 80, reference AJB 45.03.88;
+
+14 46.05(0).35  A. Zammarchi and A. Ferretti-Torricelli, Corso elementare de Fisica sperimentale; Vol. 1 Meccanica e Cosmografia, Brescia, Verlag La Scuola, 1946, 8+462 pp, 320 Lire, , 
+
+15 46.05(0).36  G. A. Baitsell ed., Science in Progress comma Third Series, New Haven CT, Yale University Press, , 322 pp, 20s, Obs 65 275, also published London: Humphrey Milford and London: Oxford University Press;
+
+16 46.05(0).37  G. A. Baitsell ed., Science in Progress comma Second Series, New Haven CT, Yale University Press, 1946, 317 pp, , , 
+
+17 46.06(0).12  K. Hildebrandt, Kopernikus und Kepler in der deutschen Geistesgeschichte, Halle, Niemeyer, 1944, 14 pp, , , 
+
+18 46.06(0).20  G. Loria, Guida allo Studio della Storia delle Matematiche, Mailand, Ulrico Hoepli, 1946, 19+385 pp, 550 Lire, Obs 67 191, 
+
+19 46.06(0).22  M. W. Makemson, The Morning Star Rises, , , , , , Obs 67 68 and Pop Astr 50 461, reference AJB 45.06.22;
+
+20 46.06(0).23  M. W. Makemson, The astronomical tables of the Maya, , , , , , Pop Astr 52 155, reference AJB 45.06.23;
+
+21 46.06(0).29  L. Nielsen, Tycho Brahes Bogtrykkeri, Kopenhagen, Vald. Pedersens Bogtrykkeri, 1946, , , NAT 1946 115, also published Kopenhagen: E. Munksgaard;
+
+22 46.06(0).33  C. Rufus and Tien Hsing-Chih, The Soochow Astronomical Chart, Ann Arbor, University of Michigan Press, 1945, 6+24 pp, $2.50 and 14s, J Can RAS 41 197 and Obs 67 33 and Pop Astr 54 555 and Science 106 227 and Sky Tel. 6 Nr. 5 16, also published London: Oxford University Press;
+
+23 46.07(0).02  , B. L. B. De Fontenelle comma Conversazione sulla pluralità dei mondi e dialoghi dei morti, Milano, Verlag Bompiani, 1945, 266 pp, 120 Lire, , translated  by M. Meschini;in Italian;other a translation of the 1686 Works of de Fontenelle on the Structure of the Universe; 
+
+24 46.07(0).04  C. A. Nallino, Raccolta de Scritti Editi e Inediti Vol. 5 Astrologia comma Astronomia comma Geografia, Rome, Ist. per L'Oriente, 1944, 3+558 pp, 600 Lire, Math. Reviews 8 305, 
+
+25 46.07(0).06  F. Kubach ed., Nikolaus Kopernikus Gesamtausgabe; Band 1 Opus de Revolutionibus Caelestibus Manu Propia, München-Berlin, Verlag R. Oldenbourg, 1944, 14 pp, 30.00 RM, , other facsimile edition; 
+
+26 46.07(0).07  M. Caspar ed., Johannes Kepler; Gesammelte Werke comma Band 13 Briefe 1590—1599, München, C. H. Beck'sche Verlagsbuchhandlung, 1945, 17+432, 40 DM, , 
+
+27 46.07(0).08  Isaac Newton, Principia, Berkeley, University of California Press, 1946, 680 pp, $6.50, Sky Tel. 6 Nr. 4 16, 2nd edition;edited by F. Cajori;other a revision of Motte translation; 
+
+28 46.07(0).09  H. Raeder and E. Strömgren and B. Strömgren ed., Tycho Brahe's description of his instruments and scientific work as given in Astronomiae Instauratae Mechanica (Wandesburg 1598), Kopenhagen, Kgl. Danske Videnskabernes Selskab, 1946, 144 pp, , , translated  by H. Raeder and E. Strömgren and B. Strömgren;
+
+29 46.07(0).10  , Le opere dei discepoli de Galileo Galilei, Firenze, S. A. G. Barbèra editore, 1942, 15+500 pp, , Ciel et Terre 60 140, other Edizione nazionale Volume 1 L'Accademia del Cimento Parte Prima; 
+
+30 46.07(0).11  Johannes Bayer, Uranometria, Prag, , 1938, 8 pp, $1.50, Sky Tel. 6 Nr. 3 16, edited by J. Klepsta;
+
+31 46.08(0).01  C. G. Abbot, The Earth and Stars, New York, D. van Nostrand Co., 1946, 12+288 pp, $3.75, ApJ 105 216 and Nature 159 862 and Pop Astr 55 56 and Scientific Monthly 64 353 and Science 106 228 and Sky Tel. 6 Nr. 7 15, 
+
+32 46.08(0).02  R. M. Aller, Introducción a la Astronomia, , , , , , Urania Barcelona 30 Nr. 209 32, other unknown if this is a book or article or ref; 
+
+33 46.08(0).03  R. H. Baker, Introducing the Constellations, New York, The Viking Press, 1947, 6+205 pp, , , 
+
+34 46.08(0).04  W. H. Barton and J. M. Joseph, Starcraft, , Whittlesey House, 1946, , , Sky Tel. 6 Nr. 4 16, other Whittlesey House is a divison of McGraw-Hill; reference AJB 45.08.06;
+
+35 46.08(0).05  E. A. Beet, A Text Book of Elementary Astronomy, , , , , , JBAA 57 184 and Obs 66 224, reference AJB 45.08.11;
+
+36 46.08(0).06  H. J. Bernhard and D. A. Bennett and H. S. Rice, New Handbook of the Heavens, New York, Whittlesey House McGraw-Hill Co. Inc., , 300 pp, $2.50, Pop Astr 50 288, 
+
+37 46.08(0).07  S. N. Bashko, Lehrbuch der praktischen Astronomie, Moskau-Leningrad, Technischer Staatsverlag, 1940, 320 pp, , , 2nd edition;in Russian;
+
+38 46.08(0).08  Borrás, Por el inmenso cielo, , , , , , Urania Barcelona 30 Nr. 209 32 and Urania Barcelona 30 Nr. 209 76, other unknown if this is a book or an article; 
+
+39 46.08(0).09  B. H. Bürgel, Los Mundos Lejanos, , , , , , Urania Barcelona 30 Nr. 209 32 and Urania Barcelona 30 Nr. 209 76, 
+
+40 46.08(0).10  F. E. Butler, Signpost to the Stars, London, George Philip & Son Ltd, , , 1s, Pop Astr 50 463, other address 32 Fleet Street; 
+
+41 46.08(0).11  C. A. Chant, Nuestro Maravilloso Universo, Madrid, J. Morata, 1946, 404 pp, , J Can RAS 41 239, reprint of AJB 30.08.28;translated  by R. Carrasco;in Spanish;other a second edition is AJB 42.08.11; 
+
+42 46.08(0).12  B. Cifuentes, Astronomia, , , , , , Urania Barcelona 30 Nr. 209 32, 
+
+43 46.08(0).13  J. Comás Solá, El Cielo, , , , , , Urania Barcelona 30 Nr. 209 31, 2nd edition;
+
+44 46.08(0).14  K. Cuypers, Sterren leven in geneenschap, Brüssel, A. Manteau, 1944, 141 pp, 80 fr., Ciel et Terre 60 53, other ajb is unsure of the publication year; 
+
+45 46.08(0).15  M. Davidson, An Easy Outline of Astronomy, , , , 4+108 pp, 2s 6d, Obs 65 129, other Thinker's Library Nr. 95 Science Section; reference AJB 45.08.14;
+
+46 46.08(0).16  M. Davidson, An Easy Outline of Astronomy, , , , , , Pop Astr 53 422, reference AJB 45.08.14;
+
+47 46.08(0).17  M. Davidson, From Atoms to Stars, , , , , , Obs 66 88 and JBAA 57 63, other JBAA reviewed the second edition; reference AJB 45.08.15;
+
+48 46.08(0).18  M. Davidson, The Stars and the Mind, London, Watts & Co., 1946, , 10s 6d, JBAA 57 104, 
+
+49 46.08(0).19  J. C. Duncan, Essentials of Astronomy, , , , , , Pop Astr 50 401, reference AJB 45.08.17;
+
+50 46.08(0).20  O. L. Dustheimer, Manual for Observational and Practical Laboratory Work in Elementary Astronomy, , , , , , Pop Astr 50 461, reference AJB 45.08.19;
+
+51 46.08(0).21  R. Eisler, The Royal Art of Astrology, London, Herbert Joseph, 1946, 296 pp, 18s, Obs 67 187 and Naturwiss. Rundschau 1948 237, 
+
+52 46.08(0).22  G. Gamow, Atomic Energy in Cosmic and Human Life, New York, Macmillan Company, 1946, 161 pp, $3.00, Sky Tel. 6 Nr. 1 15 and Sky Tel. 6 Nr. 6 16, 
+
+53 46.08(0).23  A. Gasser, Ein neues kosmisches Wetlbild; Der Kreislauf: Wasserstoffnebel — Planetensystem — Uranbombe — Wasserstoffnebel, Bern, Verlag Paul Haupt, 1946, 54 pp, , Orion Genève Nr. 16 355, 
+
+54 46.08(0).24  L. Goldberg and L. H. Aller, Atoms comma Stars comma and Nebulae, , , , , , Obs  66 60 and PAT 28 73 and Pop Astr 51 289 and Priroda 37 Nr. 12 89, reference AJB 45.08.23;
+
+55 46.08(0).25  G. W. Gray, La nueva imagen del universo, Buenos Aires, Libreria Hachette, 1943, , , Urania Barcelona 30 Nr. 209 32, translated from English by N. Viola and R. N. Viola;in Spanish;
+
+56 46.08(0).26  A. P. Herbert, A Better Sky comma or comma Name This Star, London, Methuen & Co. Ltd., 1944, 6+33 pp, 3s 6d, Obs 65 107 and Pop Astr 52 361, 
+
+57 46.08(0).27  B. Jaffe, Men of Science in America; The Role of Science in the Growth of Our Country, New York, Simon & Schuster, 1944, 600 pp, , , other particularly the sections on S. P. Langley comma A. A. Michelson comma E. P. Hubble; 
+
+58 46.08(0).28  J. Jean, The Universe Around Us, , , , , , Obs 65 225 and Pop Astr 54 442, reference AJB 45.08.28;
+
+59 46.08(0).29  J. Jeans, The Astronomical Horizon, Oxford, University Press, 1945, 23 pp, 2s 6d, Obs 66 224, 
+
+60 46.08(0).30  J. Jeans, Zásračný světhvěd, Prag, Děln. nakl., 1946, 150 pp, , , translated from English by E. Kraus;in Czech;other a translation of The Stars in their Courses; 
+
+61 46.08(0).31  M. Johnson, Time comma Knowledge and the Nebulae, , , , , , Obs 66 187, reference AJB 45.08.29;
+
+62 46.08(0).32  M. L. Kobus and J. J. Raimond jr., Cosmografie; Sterrenkunde voor Middelbaar en Gymnasiaal onderwijs, Gronigen, Wolters, 1946, 182 pp, 2.70 G., Heelal 2 61, 
+
+63 46.08(0).33  A. Krause, Astronomía para todos, Barcelona, Casa editorial Iberia J. Gili, , , 70 Pesetas, Urania Barcelona 31 Nr. 213 170, 
+
+64 46.08(0).34  W. Ley, Rockets — The Future of Travel beyond the Statosphere, , , , , , Pop Astr 52 360 and Publ ASP 56 134, reference AJB 45.08.37;
+
+65 46.08(0).35  W. Löw, Es werde Licht! Eiszeit comma Erdbahn comma — Mondbahn comma Neue Theorien, Basel, , 1946, , , , 
+
+66 46.08(0).36  E. M. Meder, Youth Considers the Heavens, New York, King's Crown Press, 1942, 60 pp, $1.00, Pop Astr 50 462, other imprint of Columbia University?; reference AJB 45.08.41;
+
+67 46.08(0).37  C. E. K. Mees, The Path of Science, New York, John Wiley & Sons, 1946, 250 pp, $3.00, Sky Tel 6 Nr. 6 16, 
+
+68 46.08(0).38  H. M. Neely, A Primer for Star-Gazers, , , , , , Sky Tel. 6 Nr. 7 14, reference AJB 45.08.46;
+
+69 46.08(0).39  Paredes, Elementos de Astronomía, , , , , , Urania Barcelona 30 Nr. 209 32, 
+
+70 46.08(0).40  P. P. Parenago, Lehrbuch der Stellarastronomie, Mosaku-Leningrad, Technischer Staatsverlag, 1946, 439 pp, 12R., , 2nd edition;in Russian;
+
+71 46.08(0).41  D. W. Pjaskowskij, Ist ein Lebel aug anderen Planeten möglich?, Kiew, Verlag Akad. Wiss. ukrain. Sowjetrepublik, 1946, 31 pp, 1R., , in Ukrainian;
+
+72 46.08(0).42  I. Puig, Existen otros mundos habitados?, Barcelona, , 1946, , , Manuales Revista Ibérica Nr. 12 192, 
+
+73 46.08(0).43  P. Puig, Manual de Astronomia, , , , , , Urania Barcelona 30 Nr. 209 32, 
+
+74 46.08(0).44  F. Reber, Praktische Himmelskunde, Aarau, Verlag H. R. Sauerländer & Co., 1946, 112 pp, sfr. 6.30, Orion Genève Nr. 13 263, 
+
+75 46.08(0).45  Ribera, Astronomía, , , , , , Urania Barcelona 30 Nr. 209 32, 
+
+76 46.08(0).46  L. Rodés, El Firmamento, , , , , , Urania Barcelona 30 Nr. 209 31, 2nd edition;reference AJB 44.08.27;
+
+77 46.08(0).47  A. Romañá, Los atrayentes problemas de la moderna Astronomía, Madrid, Editorial Redencion, 1940, 170 pp, , Urania Barcelona 30 Nr. 209 31, 
+
+78 46.08(0).48  H. N. Russell and R. S. Dugan and J. Q. Stewart, Astronomy Vol. 1 The Solar System, , , , , , Obs 67 149 and Pup Astr 54 105, reference AJB 45.51.03;
+
+79 46.08(0).49  O. E. Scott, The Stars in Myth and Fact, , , , , , Pop Astr 50 462, reference AJB 45.08.55;
+
+80 46.08(0).50  J. B. Sidgwick, Astronomy for Night Watchers, London, Faber & Faber Ltd., , , , Pop Astr 50 521, other address 24 Russell Square; reference AJB 45.08.57;
+
+81 46.08(0).51  J. B. Sidgwick, Introductory Astronomy; A Guide for Night Watchers, , , , , , Pop Astr 52 469, reference AJB 45.08.58;
+
+82 46.08(0).52  J. B. Sidgwick, Direction Finding by the Stars, , , , , , Pop Astr 53 146, reference AJB 45.08.59;
+
+83 46.08(0).53  W. T. Skilling and R. S. Richardson, Sun comma Moon comma and Stars, , , , , , Obs 67 189 and Pop Astr 55 514, reference AJB 45.08.61;
+
+84 46.08(0).54  E. Strömgren and B. Strömgren, Laerebog i Astronomi, Oslo, Gyldendal Norsk Forlag, 1945, 5+494 pp, 48:60 Kr., NAT 1945 142 and NAT 1946 34, 2nd edition;
+
+85 46.08(0).55  J. Wasiutyński, Verden og Geniet fra Solsystemets Dannelse til i Dag; Bind I, Oslo, Nasjonalforlaget, 1943, 263 pp, , NAT 1945 69, 
+
+86 46.08(0).56  R. I. Waterfield, The Revolving Heavens — Astronomy for Observers with the Naked Eye, , , , , , Obs 65 57 and Pop Astr 51 115, reference AJB 45.08.70;
+
+87 46.08(0).57  H. Werner, Vom Polarstern bis zum Kreuz des Südens; Eine allgemeinverständliche Einführung in die Astronomie nach Gestirnen auf der ganzen Erde, Jena, Verlag von Gustav Fischer, 1946, 8+210 pp, 8.50 RM, AN 275 270 and Himmelswelt 55 145, 2nd edition;
+
+88 46.08(0).58  P. Wetterfors, Stjärnor, Stockholm, Sveriges Scoutförbunds Förlagsaktiebolag, 1945, 359 pp, kr. 6.50, PAT 27 74, 
+
+89 46.08(0).59  E. T. Whittaker, The Begining and End of the World, Oxford, University Press, , 64 pp, 2s 6d, Obs 65 10, 
+
+90 46.08(0).60  E. Whittaker, Space and Spirit, Edingurgh, Nelson, 1946, 8+149 pp, 6s, Obs 67 70, 
+
+91 46.08(0).61  B. Woronzow-Weljaminow, Gibt es Lebel auf den Planeten?, Leningrad, Verleg Junge Gardes, 1946, 24 pp, 50 Kop., , in Russian;
+
+92 46.08(0).62  C. C. Wylie, Astronomy comma Maps comma and Weather, , , , , , Pop Astr 51 56, reference AJB 45.08.77;
+
+93 46.08(0).63  , Science from Shipboard, Washington DC, Science Service, 1943, 268 pp, $0.25, Pop Astr 51 575, 
+
+94 46.08(0).64  , Een Verden eller ingen, Haase, , 1946, , 9:75 Kr., NAT 1946 114, translated from English by G. Frederiksen and E. Rasmussen;other a translation of the American book; 
+
+95 46.09(0).02  E. Chappell, Five-Figure Logarithm Tables, , , , , , Pop Astr 53 146 and Pulb ASP 57 107, reference AJB 45.09.04;
+
+96 46.09(0).03  A. Fletcher and J. C. P. Miller and L. Rosenhead, An Index of Mathematical Tables, , , , , , Math. Rev. 8 286 and NAT 1946 115, reference AJB 45.09.04;
+
+97 46.09(0).05  C. D. Hedgman, Mathematical Tables, Cleveland OH, Chemical Rubber Publishing Co., 1946, , , Pop Astr 55 515, 8th edition;
+
+98 46.09(0).06  J. Peters, Sechsstellige Tafel der trigonometrischen Funktionen enthaltend die Werte der sechs trigonometrischen Funktionen von zehn zu zehn Bogensekunden des in 90° geteilten Quadranten und die Werte der Kotangente un Kosekante für jede Bogensekunde von 0° 0ˊ bis 1° 20ˊ, Bonn, F. Dümmlers Verlag, 1946, 293 pp, 32.40 RM, Optik 3 168 and Phys. Blätter 4 81 and Z f Naturf 3a 371, 3rd edition;
+
+99 46.09(0).08  M. F. Subbotin, Hilfstafeln zur Berechnung von Tabellen und Ephemeriden, Moskau-Leningrad, Technischer Staatsverlag, 1941, 143 pp, , , 
+
+100 46.09(0).09  , Auxillary Tables I&II, Cambridge, University Press, 1946, , 6d, Obs 66 346, 
+
+101 46.09(0).10  , British Association Mathematical Tables comma Vol 1, Cambridge, University Press, 1946, , 10s, JBAA 57 63, 2nd edition;
+
+102 46.09(0).11  , Mathematical Tables; Part A — Legendre Polynomial, Cambridge, University Press, 1946, 42 pp, 8s 6d, Obs 66 346, 
+
+103 46.09(0).12  , Mathematical Tables; Part B — The Airy Integral, Cambridge, University Press, 1946, 56 pp, 10s, Obs 66 346, 
+
+104 46.09(0).13  , Table of Arc Sin x, , , , , , Obs 67 110, reference AJB 45.09.11;
+
+105 46.09(0).14  , Tables of Fractional Powers, New York, Columbia University Press, 1946, 30+489 pp, $7.50, Math Rev 8 52 and Obs 67 110, other prepared by the Mathematical Tables Project National Bureau of Standards; 
+
+106 46.11(0).08  A. Bouwers, Achievements in Optics, New York-Amsterdam, Elsevier Publishing Co. Inc., 1946, 8+135 pp, fl. 6 and $2.50, ApJ 107 422 and Heelal 4 80 and Nature 161 704 and Z f Naturf 4a 644, other Monographs on the Progress on Research in Holland; 
+
+107 46.11(0).09  E. B. Brown, Optical Instruments, , , , , , Obs 66 326 and Pop Astr 54 324, reference AJB 45.11.01;
+
+108 46.11(0).13  H. J. Cooper, Scientific Instruments, New York, Chemical Publishing Co., 1946, 304 pp, $6.00, ApJ 105 216 and Sky Tel. 6 Nr. 5 16, 
+
+109 46.11(0).15  M. Daisomont, La Pratique de la lunette astronomique d'amateur, , , , , , Gaz Astr 28 46 and Heelal 2 16, reference AJB 45.11.04;
+
+110 46.11(0).16  M. Daisomont, Construction facile et écomomique d'un focomètre, Bruges, Editions De Tempels, 1946, 11 pp, , Ciel et Terre 63 129, 3rd edition;
+
+111 46.11(0).21  G. Z. Dimitroff and J. G. Baker, Telescopes and Accessories, , , , , , Obs 66 161 and PAT 27 156 and Publ ASP 57 106, reference AJB 45.11.06;
+
+112 46.11(0).37  R. A. Sawyer, Experimental Spectroscopy, New York, Prentice-Hall Inc., 1944, 8+323 pp, $5.00, Obs 66 125, 
+
+113 46.11(0).43  H. D. Taylor, The Testing and Adjustment of Telescope Objectives, Newcastle upon Tyne, Sir Howard Grubb comma Parsons and Co., 1946, 8+95 pp, 17s 6d, J Opt Soc Amer 37 58 and JBAA 58 30 and Nature 161 419 and Ob 67 152, 4th edition;
+
+114 46.11(0).48  , Scientific Instruments, London, Scientific & Technical Publications, , 294 pp, 25s, JBAA 57 61, 
+
+115 46.16(0).04  L. Defossez, Les Savants du 17ᵉ Siècle et la Mesure du Temps, Lusanne, Ed. du Journal Suisse d'Horlogerie et de Bijouterie, 1946, 341 pp, 540 frs. belges., Ciel et Terre 63 60, other is this a journal issue or a book?; 
+
+116 46.21(0).02  C. W. C. Barlow and G. H. Bryan, Elementary Mathematical Astronomy, London, University Tutorial Press Ltd., 1944, 8+387 pp, 12s 6d, Obs 65 274, 5th edition;edited by H. S. Jones;
+
+117 46.21(0).10  W. M. Smart, Foundations of Astronomy, , , , , , Obs 64 303, reference AJB 44.21.09;
+
+118 46.21(0).11  M. Waldmeier, Leitfaden der Astronomischen Orts- und Zeitbestimmung, , , , , , VJS der Naturf. Ges. Zürich 92 78, reference AJB 45.21.10;
+
+119 46.22(0).07  T. Niethammer, Die Bestimmung der in der Laplacesche Gleichung auftretenden Größen astronomischer Natur;, Basel, Soc. Helvétique des Sc. Naturelles, 1942, 19 pp, , , other Annexe au Precès-Verbal de la 87ᵐᵉ Séance de la Commission Géodésique Suisse; 
+
+120 46.23(0).04  A. A. Michajlow, Theorie der Finsternisse, Moskau-Leningrad, Technischer Staatsverlag, 1945, 199 pp, , , in Russian;
+
+121 46.26(0).04  H. Leitzmann, Zeitrechnung der römischen Kaiserzeit comma des Mittelalters und der Neuzeit für der Jahre 1—2000 nach Christus, Berlin, Walter de Gruyer, 1946, 127 pp, 2.40 DM, , 
+
+122 46.31(0).12  E. Borel, La Mécanique et la Gravitation Universelle, Paris, A. Michel, 1943, 8+364 pp, 48 frs., Ciel et Terre 60 130, other Bibliothèque d'Education par la Science; 
+
+123 46.31(0).20  A. S. Eddington, Fundamental Theory, Cambridge, University Press, 1946, 8+292 pp, 25s, Ciel et Terre 64 41 and Obs 67 144 and Science 106 226, 
+
+124 46.31(0).23  A. Einstein, The Meaning of Relativity, London, Methuen & Co., 1946, 5+130 pp, 6s, , 3rd edition;also published Princeton: Princeton University Press;
+
+125 46.31(0).30  O. Heckman, Theorien der Kosmologie, , , , , , Ciel et Terre 60 140 and Obs 65 148, reference AJB 44.31.03;
+
+126 46.31(0).73  W. Westphal, Die Relativitätstheorie, Rudolfstadt, Der Greifenverlag, 1946, 32 pp, , Kosmos 1948 177, 
+
+127 46.31(0).77  F. E. Zeuner, Dating the Past; An Introduction to Geochronology, London, Methuen, 1946, 18+444 pp, 30s, Scientific Monthly 64 527, 
+
+128 46.32(0).59  M. F. Subbotin, Lehrbuch der Himmelsmechanik, Moskau-Leningrad, Technischer Staatsverlag, 1941, 344 pp, , , 2nd edition;in Russian;
+
+129 46.34(0).05  A. J. Orlow and B. A. Orlow, Lehrbuch der theoretischen Astronomie; Bahnbestimmung von Planeten und Kometen mit Hilfe von Rechenmaschinen, Moskau-Leningrad, Technischer Staatsverlag, 1940, 198 pp, , , in Russian;
+
+130 46.34(0).10  W. Ussow, Mehrfachlösungen bei der Bestimmung der parabolischen Bahn, Swedlowsk, Staatsuniv., 1941, 20 pp, , , in Russian;
+
