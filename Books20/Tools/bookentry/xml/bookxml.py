@@ -13,8 +13,66 @@ import os
 import traceback
 import json
 
-# lxml has schema validation and is more complete the etree
+# lxml has schema validation, pretty print, and is more complete the etree
 from lxml import etree
+from copy import deepcopy
+
+# Building an etree
+bf = etree.Element('Bookfile')
+hdr = etree.SubElement(bf, 'Header')
+ets = etree.SubElement(bf, 'Entries')
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 0'
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 1'
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 2'
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 3'
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 4'
+et = etree.SubElement(ets, 'Entry')
+et.text = 'Entry 5'
+
+print()
+print('This is a byte stream with UTF-8 encoding and an xml header')
+print(etree.tostring(bf, pretty_print=False,
+                     method='xml', encoding='UTF-8',
+                     xml_declaration=True))
+
+print()
+print('Entry subelement 1 is', ets[1].tag)
+print('bookfile has', len(bf), 'subelements')
+print('Entries has', len(ets), 'subelements')
+
+print()
+print('Insert Entries[3] before Entries[5]')
+ets.insert( 5, deepcopy(ets[3]) )
+print(etree.tostring(bf, pretty_print=True,
+                     method='xml', encoding='unicode'))
+
+print()
+print('Elements have getnext() and getprevious() functions')
+print('ets[1] is ets[0].getnext()', ets[1] is ets[0].getnext())
+print('ets[2] is ets[3].getprevious()', ets[2] is ets[3].getprevious())
+
+print()
+hdr.text = 'This is the bookfile header.'
+print(etree.tostring(hdr, pretty_print=True,
+                     method='xml', encoding='unicode'))
+
+print()
+print('Get all the Entry elements')
+for el in bf.iter('Entry'):
+    print(el.text)
+
+print()
+print('We can read a file with the parse() function')
+bf2 = etree.parse('ajbtest_books.xml')
+print(etree.tostring(bf2, pretty_print=True,
+                     method='xml', encoding='unicode'))
+
+'''
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as md
 
@@ -80,3 +138,4 @@ tree.write('test.out', encoding='UTF-8', xml_declaration=True,
 # original XML file was pretty printed.
 
 #print(prettify(root))
+'''
