@@ -271,3 +271,25 @@ For volume AJB 46 Index to the Literature of 1943-1946 part II, started12 May 20
 
 130 46.34(0).10  W. Ussow, Mehrfachlösungen bei der Bestimmung der parabolischen Bahn, Swedlowsk, Staatsuniv., 1941, 20 pp, , , in Russian;
 
+131 46.35(0).05  H. A. Bauer, Grundlagen der Atomphysik; Eine Einführung in das Studium der Wellenmechanik, Wien, Springer-Verlag, 1945, 323 pp, , Naturwiss 34 91, 3rd edition;
+
+132 46.35(0).08  L. de Broglie, Matter and Light; The New Physics, New York, Dover Publications, 1946, 300 pp, $2.75, Sky Tel. 6 Nr. 12 17, 
+
+133 46.35(0).15  M. Davidson, The Mid-Twentieth Century Atom, London, Hutchinson's Scientific and Technical Publications, 1946, 127 pp, 8s 6d, JBAA 57 62 and Obs 67 67, 
+
+134 46.35(0).23  H. Jefferys and B. S. Jefferys, Methods of Mathematical Physics, Cambridge, At the University Press, 1946, 10+679 pp, £3 3s and $15.00, Obs 67 146 and Science 106 227, 
+
+135 46.35(0).27  H. G. Küssner, Principia Physics, Göttingen, Verlag Vandenhock & Ruprecht, , 260 pp, 13.50 DM and 15.00 DM, AN 276 269 and Himmelswelt 55 144, other higher priced copy bound in half linen; 
+
+136 46.35(0).29  J. Mattauch and S. Flügge, Nuclear Physics Tables and an Introduction to Nuclear Physics, New York-London, Interscience Publishers Inc., 1946, 8+173 pp, $12.00 and 72s, ApJ 109 182 and J Applied Phys 19 966 and Nature 161 418, translated from German by E. P. Gross and S. Bargmann;in English;
+
+137 46.39(0).02  A. F. Bogorodkij, Die Entstehung des Sonnesystems, Kiew, Staatsverlag für technische Literatur der Ukraine, 1946, 40 pp, 2R, , in Ukrainian;other a popular book; 
+
+138 46.39(0).10  W. G. Fessenkow, Die Kosmogonie des Sonnesystems, Moskau-Leningrad, Verlag Akad. Wiss. UdSSR, 1944, 122 pp, , , in Russian;
+
+139 46.41(0).07  G. Gamow, Nascita e morte del Sole, Verona, Velag Mondadori, 1946, 309 pp, 450 Lire, , reprint of AJB 42.41.08;translated from English by A. Campana;in Italian;
+
+140 46.41(0).08  G. Gamow, Nacimiento y muerte del Sol, , , , , , Urania Barcelona 30 Nr. 209 31, reprint of AJB 42.41.08;translated from English;in Spanish;
+
+141 46.48(0).13  H. H. Clayton, Solar Relations to weather; Vol 1 and 2, Canton MA, Clayton Weather Service, , , , Pop Astr 51 526, other volume 1 105 pp; other volume 2 14+439 pp; 
+
