@@ -1,9 +1,9 @@
-"""Tests for XML version of bookfile.  Ultimately need to read an XML file
+'''Tests for XML version of bookfile.  Ultimately need to read an XML file
 into a bookfile class and write a bookfile class to an XML file.
 
  We might also consider transforming the BookFile class, defined in 
 bookfile.py, into an ElementTree and work 1n 'pure' XML.
-"""
+'''
 # -*- coding: UTF-8 -*-
 # -*- mode: Python;-*-
 
@@ -18,7 +18,9 @@ from lxml import etree
 from copy import deepcopy
 
 # Building an etree
-bf = etree.Element('Bookfile')
+bf = etree.XML('''<?xml version="1.0"?>
+<BookFile>
+</BookFile>''')
 hdr = etree.SubElement(bf, 'Header')
 ets = etree.SubElement(bf, 'Entries')
 et = etree.SubElement(ets, 'Entry')
@@ -67,9 +69,22 @@ for el in bf.iter('Entry'):
     print(el.text)
 
 print()
-print('We can read a file with the parse() function')
-bf2 = etree.parse('ajbtest_books.xml')
-print(etree.tostring(bf2, pretty_print=True,
+print('We can read and validate a file with the parse() function')
+try:
+    bf_schema = etree.XMLSchema(file='bookfile.xsd')
+    Parser = etree.XMLParser(schema=bf_schema)
+    print('The schema is well formed')
+except:
+    print('The schema is not well formed')
+    sys.exit(1)
+try:
+    bf3 = etree.parse('ajbtest3_books.xml', parser=Parser)
+    print('The xml file is well formed and valid')
+except:
+    print('The xml file is not well formed or is invalid')
+
+print()
+print(etree.tostring(bf3, pretty_print=True,
                      method='xml', encoding='unicode'))
 
 '''

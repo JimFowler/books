@@ -1,3 +1,32 @@
+2015-06-27  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/xml/bookfile.xsd: cleaned up the file a bit.
+
+	* Tools/bookentry/xml/bookxml.py: Added parser and schema validation
+	to test file.
+
+2015-06-25  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/xml/bookfile.xsd: Added G2 element and redefined
+	Authors, Editors, etc.
+
+2015-06-23  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.makeEntry_XML): Added additional
+	XML write functions.
+
+2015-06-22  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.makeEntry_XML): moved
+	the individual make*_XML out of bookfile.py and into AJBentry.py
+	Tested successfully so far.
+
+2015-06-21  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/bookfile.py (BookFile.writefile_XML): Began
+	writing XML routines for the class BookFile. Added makePersonInfo_XML()
+	and makeEntry_XML()
+
 2015-06-06  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/xml/ajbtest_books.xml: Wrote valid XML bookfile

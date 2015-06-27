@@ -3,43 +3,62 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name="testing"></xs:element><!-- used only for testing -->
+<!-- Used only for testing. This can be a root element for files
+with multiple examples of BookFile elements -->
+<xs:element name="testing"></xs:element>
 
+<!--
+A BookFile is a document consisting of a descriptive Header about the
+file (which may be an empty string) and a set of Entries (which may
+also be an empty set).  The Entries element consists of multiple Entry
+elements.  Entry elements, in turn, describe books found in annual
+volumes of the Astronomischer Jahresbericht
+-->
 <xs:element name="BookFile">
   <xs:complexType>
     <xs:sequence>
       <xs:element name="Header" type="xs:string"/>
-      <xs:element name="Entries" type="entries"/>
+      <xs:element name="Entries">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Entry" type="entry" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 
-<xs:complexType name="entries">
-  <xs:sequence>
-    <xs:element name="Entry" type="entry" minOccurs="0" maxOccurs="unbounded"/>
-  </xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="entry">
   <xs:all>
     <!-- An Entry must have at least a Title and an Index to be valid -->
-    <xs:element name="Title" type="xs:string"/>
-    <xs:element name="subTitle" type="xs:string" minOccurs="0"/>
     <xs:element name="Index" type="index"/>
-    <xs:element name="ReprintOf" type="index" minOccurs="0"/>
-    <xs:element name="ReferenceOf" type="index" minOccurs="0"/>
-    <xs:element name="Authors" type="authors" minOccurs="0"/>
-    <xs:element name="Editors" type="editors" minOccurs="0"/>
-    <xs:element name="Translators" type="translators" minOccurs="0"/>
-    <xs:element name="Compilers" type="compilers" minOccurs="0"/>
-    <xs:element name="Contributors" type="contributors" minOccurs="0"/>
-    <xs:element name="Publishers" type="publishers" minOccurs="0"/>
+    <xs:element name="Title" type="xs:string"/>
+
+    <xs:element name="subTitle" type="xs:string" minOccurs="0"/>
+
+    <xs:element name="Authors" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="Author" type="G2" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Editors" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="Editor" type="G2" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Publishers" minOccurs="0"/>
     <xs:element name="Year" type="xs:string" minOccurs="0"/>
     <xs:element name="Edition" type="xs:string" minOccurs="0"/>
     <xs:element name="Pagination" type="pagination" minOccurs="0"/>
     <xs:element name="Prices" type="prices" minOccurs="0"/>
-    <xs:element name="TranslatedFrom" type="xs:string" minOccurs="0"/>
-    <xs:element name="Language" type="xs:string" minOccurs="0"/>
+
     <xs:element name="Reviews" minOccurs="0">
       <xs:complexType>
         <xs:sequence>
@@ -47,6 +66,37 @@
         </xs:sequence>
       </xs:complexType>
     </xs:element>
+
+    <xs:element name="TranslatedFrom" type="xs:string" minOccurs="0"/>
+    <xs:element name="Language" type="xs:string" minOccurs="0"/>
+
+    <xs:element name="Translators" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="Translator" type="G2" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Compilers" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="Compiler" type="G2" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Contributors" minOccurs="0">
+      <xs:complexType>
+        <xs:sequence>
+	  <xs:element name="Contributor" type="G2" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ReprintOf" type="index" minOccurs="0"/>
+    <xs:element name="ReferenceOf" type="index" minOccurs="0"/>
+
     <xs:element name="Comments" minOccurs="0">
       <xs:complexType>
         <xs:sequence>
@@ -55,6 +105,7 @@
       </xs:complexType>
     </xs:element>
   </xs:all>
+
 </xs:complexType>
 
 <xs:complexType name="index">
@@ -82,16 +133,17 @@
 
 <xs:complexType name="prices">
   <xs:sequence>
-    <xs:element name="Price" type="price" maxOccurs="unbounded"/>
+    <xs:element name="Price" maxOccurs="unbounded">
+      <xs:complexType>
+	<xs:all>
+	  <xs:element name="Currency" type="xs:string"/>
+	  <xs:element name="Amount" type="xs:string"/>
+	</xs:all>
+      </xs:complexType>
+    </xs:element>
   </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="price">
-  <xs:all>
-    <xs:element name="Currency" type="xs:string"/>
-    <xs:element name="Amount" type="xs:string"/>
-  </xs:all>
-</xs:complexType>
 
 <xs:complexType name="pagination">
   <xs:all>
@@ -103,38 +155,13 @@
   </xs:all>
 </xs:complexType>
 
-<xs:complexType name="authors">
-  <xs:choice maxOccurs="unbounded">
-    <xs:element name="Author" type="personInfo" maxOccurs="unbounded"/>
-    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
-  </xs:choice>
-</xs:complexType>
-
-<xs:complexType name="editors">
-  <xs:choice maxOccurs="unbounded">
-    <xs:element name="Editor" type="personInfo" maxOccurs="unbounded"/>
-    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
-  </xs:choice>
-</xs:complexType>
-
-<xs:complexType name="translators">
-  <xs:choice maxOccurs="unbounded">
-    <xs:element name="Translator" type="personInfo" maxOccurs="unbounded"/>
-    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
-  </xs:choice>
-</xs:complexType>
-
-<xs:complexType name="compilers">
-  <xs:choice maxOccurs="unbounded">
-    <xs:element name="Compiler" type="personInfo" maxOccurs="unbounded"/>
-    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
-  </xs:choice>
-</xs:complexType>
-
-<xs:complexType name="contributors">
-  <xs:choice maxOccurs="unbounded">
-    <xs:element name="Contributor" type="personInfo" maxOccurs="unbounded"/>
-    <xs:element name="Entity" type="xs:string" maxOccurs="unbounded"/>
+<xs:complexType name="G2">
+  <!-- A Group 2 element. Group 2 elements may be a person
+  or a corporate entity.  The personInfo is based on the
+  data structure in the python package nameparser. -->
+  <xs:choice>
+    <xs:element name="Person" type="personInfo"/>
+    <xs:element name="CorporateBody" type="xs:string"/>
   </xs:choice>
 </xs:complexType>
 
