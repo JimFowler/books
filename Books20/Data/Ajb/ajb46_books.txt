@@ -293,3 +293,27 @@ For volume AJB 46 Index to the Literature of 1943-1946 part II, started12 May 20
 
 141 46.48(0).13  H. H. Clayton, Solar Relations to weather; Vol 1 and 2, Canton MA, Clayton Weather Service, , , , Pop Astr 51 526, other volume 1 105 pp; other volume 2 14+439 pp; 
 
+142 46.51(0).25  F. G. Watson, Between the Planets, , , , , , Obs 64 234 and PAT 27 155, reference AJB 43.08.64;
+
+143 46.51(0).27  F. L. Whipple, Earth comma Moon and Planets, , , , , , Obs 64 233 and PAT 27 154, reference AJB 43.51.20;
+
+144 46.53(0).11  M. F. Subbotin, Entstehung und Alter der Erde, Moskau-Leningrad, Staatsverlag techn.-theoret. Literatur, 1946, 40 pp, 75 Kop., , in Russian;
+
+145 46.53(1).16  T. W. Bennington, Radio Waves and the Ionosphere, London, Iliffe & Sons Ltd., 1944, 6+81 pp, 6s, Obs 65 276, 
+
+146 46.54(0).11  C. Fischer, The Story of the Moon, , , , , , Pop Astr 51 347, reference AJB 45.54.46;
+
+147 46.54(0).28  J. E. Spurr, Features of the Moon, Lancaster PA, Science Press, 1945, , $5.00, PAT 28 71 and Sky Tel. 6 Nr. 1 14, other Vol 1 Geology applied to selenology; the Imbrian Plain 10+112 pp; other Vol 2 The features of the moon 13+318 pp; other Is this the same as AJB 45.54.40 or a second edition?; 
+
+148 46.54(0).28  J. E. Spurr, Geology applied to Selenology, , , , , , Pop Astr 54 440, reference AJB 45.54.41;
+
+149 46.55(0).05  D. L. Cyr, Life on Mars, , , , , , Pop Astr 52 247, reference AJB 45.55.06;
+
+150 46.55(0).20  G. de Vaucouleurs, Le Problème Martien, Paris, Edition Elzévir, 1946, 64 pp, 35 Fr., BSAF 62 32 and Ciel et Terre 63 61 and Gaz astr 29 48 and JBAA 58 32, 
+
+151 46.65(0).15  S. W. Orlow, Der Natur der Komenten, Moskau-Leningrad, Technischer Staatsverlag, 1944, 164 pp, , , in Russian;
+
+152 46.65(0).17  S. W. Orlow, Der Kometenkopf und die Klassifizierung der Kometenformen, Moskau, Sowjetische Wissenschaft, 1945, 91 pp, , , in Russian;
+
+153 46.67(0).43  H. H. Nininger, A Comet Strikes the Earth, , , , , , Pop Astr 50 565, reference AJB 45.67.17;
+
