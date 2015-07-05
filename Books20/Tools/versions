@@ -1,0 +1,9 @@
+git tag -a v0.1 -m "Really got bookfile working this time"  58b1b567c3dbbd1257b98f3214ad7e1948b3e620 
+git tag -a v1.0 -m "Full orking version"		    77bee59611494e17be39014a5d55b6dac3830c5a 
+git tag -a v1.1 -m "Default symbols.txt file now available" c8890f36a131049b566f0591709cfbfb1d266151 
+git tag -a v1.2 -m "Insert Entry button working"	    fbe573a5a7104750974cba24146d57a2d096899c 
+git tag -a v1.5 -m "Spit makeNamelist() and makeNameStr()"  47ba44cc2b0b44f0f744e9444c7e817ddd832232 
+git tag -a v1.6 -m "Added resources and program icon"	    53a95c80e0621bb6e506d76b69f8c9ac676d460f 
+git tag -a v1.7 -m "Added version flag to ajbbooks"	    d06d9d982b6fd5e72b70b711673db01a4ec500fc 
+git push origin --tags
+git push github --tags

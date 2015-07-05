@@ -1,3 +1,15 @@
+2015-07-05  Jim Fowler  <jrf@Biblion>
+
+	* Tools/versions: added tags to the git repository for the
+	book entry versions.
+
+2015-07-04  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.create_XML): changed name
+	of write_XML() and modified it to use append.  Now all XML
+	functions return elements.  Need to finish ReprintOf, Publishers,
+	Prices, and Pagination.
+
 2015-06-27  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/xml/bookfile.xsd: cleaned up the file a bit.
