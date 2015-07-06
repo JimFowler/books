@@ -6,6 +6,7 @@ import fileinput
 import os
 import traceback
 import json
+from lxml import etree
 
 import bookentry.AJBentry as AJBentry
 
@@ -242,33 +243,33 @@ class BookFile():
         fd.close()
         self._dirty = False
 
-    def readfileXML(self, filename=None):
+    def readfile_XML(self, filename=None):
         """Open and read the header stuff into _header and the entries
         into the entry list. If filename is not given, we use
         the value set in BookFile.setFileName() if valid. Note that we
         do not care if the entries or header have been modified; that is
         the job of the calling routine.
-
+    
         Return value is the number of record entries read."""
-
+    
         if filename:
             self.setFileName(filename)
-
+        
         if self._fileName == '' or not os.path.isfile(self._fileName):
             return 0 # no records read
 
         # if we have a good file, then clear the entryList and header
-        #self._entryList = []
-        #self._header = ''
-        #self._dirty = False
-
-        #We do something clever here when we know how.
+        self._entryList = []
+        self._header = ''
+        self._dirty = False
+    
+        # We do something clever here when we know how.
         print("Can't read XML files yet")
 
         fd.close()
-        #self._dirty = False
+        self._dirty = False
 
-    def writefileXML(self, filename=None):
+    def writefile_XML(self, filename=None):
         """Write the entry list and header to a disk file.
         if filename is not given, we use BookEntry._fileName instead.
 
@@ -276,22 +277,40 @@ class BookFile():
 
         if filename:
             self.setFileName(filename)
+        
+            try:
+                fd = open(self._fileName, 'w', encoding='UTF8')
+            except:
+                return False
+        else:
+            #   pop a user dialog to get the file name.
+            pass
 
-        try:
-            fd = open(self._fileName, 'w', encoding='UTF8')
-        except:
-            return False
+        # We do something clever here when we know how.
+        elBF = etree.Element('BookFile')
+        hdr = etree.SubElement(elBF, 'Header')
+        hdr.text = self.getHeader()
 
-        #We do something clever here when we know how.
-        print("Can't write XML files yet")
+        ets = etree.SubElement(elBF, 'Entries')
+        for entry in self._entryList:
+            # entry is of Class AJBentry
+            ee = entry.create_XML()
+            ets.append(ee)
+
+        bStr = etree.tostring(elBF,
+                              xml_declaration=True,
+                              method='xml', encoding='UTF-8')
+        strStr = bStr.decode(encoding='UTF-8')
+        fd.write(strStr)
 
         fd.close()
-        # self._dirty = False
+        self._dirty = False
 
 
 if __name__ == "__main__":
 
     from pprint import pprint
+    import sys
 
     bf = BookFile()
     print( "%d entries found\n" % bf.readFile("/home/jrf/Documents/books/Books20/Data/Ajb/ajb58_books.txt"))
@@ -317,9 +336,21 @@ if __name__ == "__main__":
     bf.deleteEntry(22)
     bf.deleteEntry(0)
     bf.deleteEntry(5)
-    print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
-    print('\n\nDumping json file')
-    print('len of _entryList %d' % len(bf._entryList))
-    pprint(bf._entryList[45])
-    # This fails in HumanName
-    json.dumps(bf._entryList[45])
+    #print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
+    #print('\n\n')
+    bf.writefile_XML('ajb58_books.xml')
+    print('We can read and validate a file with the parse() function')
+    try:
+        bf_schema = etree.XMLSchema(file='./xml/bookfile.xsd')
+        Parser = etree.XMLParser(schema=bf_schema)
+        print('The schema is well formed')
+    except:
+        print('The schema is not well formed')
+        sys.exit(1)
+    try:
+        bf3 = etree.parse('ajb58_books.xml', parser=Parser)
+        print('The xml file is well formed and valid')
+    except:
+        print('The xml file is not well formed or is invalid')
+
+

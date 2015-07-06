@@ -1,5 +1,10 @@
 2015-07-05  Jim Fowler  <jrf@Biblion>
 
+	* Tools/bookentry/bookfile.py (BookFile.writefile_XML): completed
+	AJBentry:create_XML() routine. Finished bookfile:writeXML()
+	routine. Tested all.  Had to modify xml/bookfile.xsd to accomodate
+	changes in how I did things.
+
 	* Tools/versions: added tags to the git repository for the
 	book entry versions.
 

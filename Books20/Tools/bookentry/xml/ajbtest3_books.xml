@@ -85,22 +85,22 @@ Entry format
       </Publishers>
       <Year>1958</Year>
       <Edition>2</Edition>
-      <Pagination>
-        <Introductory>12</Introductory>
-        <Main>342</Main>
-      </Pagination>
+      <Pagination>12+345 pp</Pagination>
       <Prices>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>Dollars</Currency>
-        </Price>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>$</Currency>
-        </Price>
+        <Price>$12.50</Price>
+        <Price>$6.00</Price>
       </Prices>
       <TranslatedFrom>Italian</TranslatedFrom>
       <Language>English</Language>
+      <ReprintOf> 
+	<Index>
+	  <IndexName>  AJB </IndexName>
+	  <VolumeNumber> 58 </VolumeNumber>
+	  <SectionNumber> 3 </SectionNumber>
+	  <SubSectionNumber> 0 </SubSectionNumber>
+	  <EntryNumber> 4 </EntryNumber>
+	</Index>
+      </ReprintOf>
       <Reviews>
         <Review>ApJ 166 25</Review>
         <Review>NAT 1985 Nr. 10 114</Review>
@@ -121,6 +121,9 @@ Entry format
       </Index>
       <Title> My Second Book </Title>
       <subTitle>the Number Two Book</subTitle>
+      <ReprintOf>
+	<Year>1956</Year>
+      </ReprintOf>
     </Entry>
 
   </Entries>

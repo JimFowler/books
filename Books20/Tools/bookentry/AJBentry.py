@@ -7,6 +7,7 @@ the form Entry.py.entry()."""
 
 from nameparser import HumanName
 import re
+from lxml import etree
 
 import bookentry.entry as entry
 import bookentry.AJBcomments as comments
@@ -107,6 +108,9 @@ class AJBentry(entry.Entry):
             return True
         return False
 
+    #
+    # Ascii comma separated variable file, read/write functions
+    #
     def write(self):
         """Write an AJBentry back into the string format that it came from.
         It should be the case that write(read(ajbstr)) == ajbstr up to
@@ -305,6 +309,7 @@ class AJBentry(entry.Entry):
         and a section number between 1-150
         and an entry number > 0"""
         num = self['Num']
+
         if num['volNum'] > 0 and num['volNum'] < 69 \
         and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
         and num['entryNum'] > 0 \
@@ -343,35 +348,40 @@ class AJBentry(entry.Entry):
     def _parseAJBNum(self, line ):
         """Get the Volume, Section, any possible subSection, and the
         section entry number.  The subSection defaults to zero
-        if no subSection value exists.
+        if no subSection value exists. Returns a dictionary with the 
+        AJB number elements {'volume': 'AJB', 'volNum': int, 'sectionNum': int,
+        'subsectionNum': int, 'entryNum': int, 'entrySuf': ''}.
         """
         #
         # This regular expression is used to parse the AJB number
         # which is of the form
-        # volNum.sectionNum[(subsectionNum)].entryNum[entrySuf], where
-        # the subsectionNum and entrySuf are optional
-        # e.g. 66.18(1).25a. It returns the list [empty, volNum,
-        # sectionNum, string, subsectionNum, itemNum, entrySuf, empty].  Note
+        # [AJB ]volNum.sectionNum[(subsectionNum)].entryNum[entrySuf], where
+        # the AJB, subsectionNum, and entrySuf are optional
+        # e.g. 66.18(1).25a. It returns the list [empty, empty, 66,
+        # 18, (1), 1, 25, 'a', empty].  Note
         # that the subsectionNum may not be there in which case both
-        # item 3 and 4 will be None and the subsection number defaults
+        # item 4 and 5 will be empty strings and the subsection number defaults
         # to zero.
         #
-        r2 = re.compile(r'(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
+        r2 = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
         nums = r2.split(line.strip())
-        
-        if not nums[4]:
-            nums[4] = 0 # or -1 for invalid???
-            
-        if not nums[6]:
-            nums[6] = ''
 
-        return {'volume':'AJB',
-                'volNum': int(nums[1]),
-                'sectionNum': int(nums[2]),
-                'subsectionNum': int(nums[4]),
-                'entryNum': int(nums[5]),
-                'entrySuf': nums[6],
+        if not nums[0]: # volume
+            nums[0] ='AJB'
+
+        if not nums[5]: # subsectionNum
+            nums[5] = 0 
+            
+        if not nums[7]: # entrySuf
+            nums[7] = ''
+
+        return {'volume': nums[0],
+                'volNum': int(nums[2]),
+                'sectionNum': int(nums[3]),
+                'subsectionNum': int(nums[5]),
+                'entryNum': int(nums[6]),
+                'entrySuf': nums[7],
                 }
 
 
@@ -488,8 +498,200 @@ class AJBentry(entry.Entry):
                 else:
                     print('Unknown grammer name %s' % grmName)
 
+    #
+    # XML create routines
+    #
+    def create_XML(self):
+        '''Create an XML etree element with the root tag Entry from
+        the entry.'''
+
+        if not self.isValid:
+            return None
+
+        # Title and Index are required of any entry
+        entryXML = etree.Element('Entry')
+    
+        a = self['Num']
+        entryXML.append(self.makeAJBNum_XML(a))
+        
+        el = etree.SubElement(entryXML, 'Title')
+        el.text = self['Title']
+
+        # This ends the required elements.  All further elements
+        # may be missing or blank.
+        
+        if self.notEmpty('subTitle'):
+            el = etree.SubElement(entryXML, 'SubTitle')
+            el.text = self['subTitle']
+
+        # Create the people list, right now these lists are
+        # only HumanNames but we need to add business names
+        # in the future.
+        if 0 < len(self['Authors']):
+            el = etree.SubElement(entryXML, 'Authors')
+            for author in self['Authors']:
+                al = etree.SubElement(el, 'Author')
+                # all authors are humannames right now.
+                ae = self.makePerson_XML(author)
+                al.append(ae)
+
+        if 0 < len(self['Editors']):
+            el = etree.SubElement(entryXML, 'Editors')
+            for editor in self['Editors']:
+                al = etree.SubElement(el, 'Editor')
+                # all authors are humannames right now.
+                ae = self.makePerson_XML(editor)
+                al.append(ae)
+
+        if 0 < len(self['Publishers']):
+            el = etree.SubElement(entryXML, 'Publishers')
+            for publ in self['Publishers']:
+                ep = etree.SubElement(el, 'Publisher')
+                epp = etree.Element('Place')
+                epp.text = publ['Place']
+                ep.append(epp)
+
+                epn = etree.Element('Name')
+                epn.text = publ['PublisherName']
+                ep.append(epn)
+
+        if self.notEmpty('Year'):
+            el = etree.SubElement(entryXML, 'Year')
+            el.text = str(self['Year'])
+
+        if self.notEmpty('Edition'):
+            el = etree.SubElement(entryXML, 'Edition')
+            el.text = str(self['Edition'])
+
+        if self.notEmpty('Pagination'):
+            el = etree.SubElement(entryXML, 'Pagination')
+            el.text = str(self['Pagination'])
+
+        # The schema defines a price with currency and value
+        # but we need to do some intellegent parsing of the prices
+        # before we can use this.  For now we just naively use
+        # the string.
+        if self.notEmpty('Prices'):
+            el = etree.SubElement(entryXML, 'Prices')
+            for price in self['Prices'].split(' and '):
+                ep = etree.SubElement(el, 'Price')
+                ep.text = price
+
+        if 0 < len(self['Reviews']):
+            el = etree.SubElement(entryXML, 'Reviews')
+            for rev in self['Reviews']:
+                er = etree.SubElement(el, 'Review')
+                er.text = str(rev)
+
+        if self.notEmpty('TranslatedFrom'):
+            el = etree.SubElement(entryXML, 'TranslatedFrom')
+            el.text = str(self['TranslatedFrom'])
+
+        if self.notEmpty('Language'):
+            el = etree.SubElement(entryXML, 'Language')
+            el.text = str(self['Language'])
+
+        if 0 < len(self['Translators']):
+            el = etree.SubElement(entryXML, 'Translators')
+            for trans in self['Translators']:
+                al = etree.SubElement(el, 'Translator')
+                # all translators are humannames right now.
+                ae = self.makePerson_XML(trans)
+                al.append(ae)
+
+        if 0 < len(self['Compilers']):
+            el = etree.SubElement(entryXML, 'Compilers')
+            for compiler in self['Compilers']:
+                al = etree.SubElement(el, 'Compiler')
+                # all compilers are humannames right now.
+                ae = self.makePerson_XML(compiler)
+                al.append(ae)
+
+        if 0 < len(self['Contributors']):
+            el = etree.SubElement(entryXML, 'Contributors')
+            for contrib in self['Contributors']:
+                al = etree.SubElement(el, 'Contributor')
+                # all contributors are humannames right now.
+                ae = self.makePerson_XML(contrib)
+                al.append(ae)
+
+        # Sometimes the reprint can be just a year number rather than
+        # an AJBnum.  An AJBnum should have decimal points in it and
+        # Years should not, so we look for a decimal point to determin
+        # which it is.
+        if self.notEmpty('Reprint'):
+            el = etree.SubElement(entryXML, 'ReprintOf')
+            if 1 == len(self['Reprint'].split('.')):
+                # Must be a year
+                ey = etree.SubElement(el, 'Year')
+                ey.text = self['Reprint']
+            else:
+                numDict = self._parseAJBNum(self['Reprint'])
+                ei = self.makeAJBNum_XML(numDict)
+                el.append(ei)
+
+        if self.notEmpty('Reference'):
+            el = etree.SubElement(entryXML, 'ReferenceOf')
+            numDict = self._parseAJBNum(self['Reference'])
+            aj = self.makeAJBNum_XML(numDict)
+            el.append(aj)
+            
+
+        if 0 < len(self['Others']):
+            el = etree.SubElement(entryXML, 'Comments')
+            for comment in self['Others']:
+                cl = etree.SubElement(el, 'Comment')
+                cl.text = comment
+
+        # return the root Entry element
+        return entryXML
 
 
+    def makeAJBNum_XML(self, ajbnum):
+        '''Write an XML version of an AJB number as an index
+        element. The index argument must be a dictionary'''
+        index_XML = etree.Element('Index')
+        el = etree.SubElement(index_XML, 'IndexName')
+        el.text = str(ajbnum['volume'])
+        el = etree.SubElement(index_XML, 'VolumeNumber')
+        el.text = str(ajbnum['volNum'])
+        el = etree.SubElement(index_XML, 'SectionNumber')
+        el.text = str(ajbnum['sectionNum'])
+        el = etree.SubElement(index_XML, 'SubSectionNumber')
+        el.text = str(ajbnum['subsectionNum'])
+        el = etree.SubElement(index_XML, 'EntryNumber')
+        el.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
+    
+        return index_XML
+
+
+    def makePerson_XML(self, nm):
+        '''Create a Person element from a HumanName object. Returns the
+        Person element.'''
+
+        person_XML = etree.Element('Person')
+
+        if nm.title:
+            el = etree.SubElement(person_XML, 'Prefix')
+            el.text = nm.title
+            
+        if nm.first:
+            el = etree.SubElement(person_XML, 'First')
+            el.text = nm.first
+
+        if nm.middle:
+            el = etree.SubElement(person_XML, 'Middle')
+            el.text = nm.middle
+
+        if nm.last:
+            el = etree.SubElement(person_XML, 'Last')
+            el.text = nm.last
+
+        if nm.suffix:
+            el = etree.SubElement(person_XML, 'Suffix')
+            el.text = nm.suffix
+
+        return person_XML
 
 
 if __name__ == '__main__':
@@ -506,7 +708,7 @@ if __name__ == '__main__':
 
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
-    allfieldsstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in Frenchh; reprint of AJB 59.03.05; reprint of 1956; reference AJB 59.144.55;'
+    allfieldsstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55;'
 
     allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
 
@@ -574,4 +776,8 @@ if __name__ == '__main__':
     eds = editorajb['Editors']
     print(eds[0].full_name)
 
+    print(editorajb._parseAJBNum('AJB 32.45(0).56'))
+    print(editorajb._parseAJBNum('32.45(0).56'))
 
+    et = allfieldajb.create_XML()
+    print(etree.tostring(et, pretty_print=True, encoding='unicode'))

@@ -48,7 +48,7 @@ ajb_rc.py: Resources/ajb_rc.qrc
 # Clean up our mess (what mess...)
 #
 clean:
-	rm -rf *~ testfile* *.pdf *.png *.aux *.log *.dvi
+	rm -rf *~ testfile* ajb58_books.xml *.pdf *.png *.aux *.log *.dvi
 
 distclean: clean
 	rm -rf $(USER_INTERFACES) $(RESOURCE_FILES) *.pyc __pycache__

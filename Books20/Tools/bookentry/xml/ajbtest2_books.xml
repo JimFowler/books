@@ -75,14 +75,8 @@ Entry format
         <Main>342</Main>
       </Pagination>
       <Prices>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>Dollars</Currency>
-        </Price>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>$</Currency>
-        </Price>
+        <Price>$212.50</Price>
+        <Price>$5.60</Price>
       </Prices>
       <TranslatedFrom>Italian</TranslatedFrom>
       <Language>English</Language>

@@ -53,10 +53,10 @@ volumes of the Astronomischer Jahresbericht
       </xs:complexType>
     </xs:element>
 
-    <xs:element name="Publishers" minOccurs="0"/>
+    <xs:element name="Publishers" type='publishers' minOccurs="0"/>
     <xs:element name="Year" type="xs:string" minOccurs="0"/>
     <xs:element name="Edition" type="xs:string" minOccurs="0"/>
-    <xs:element name="Pagination" type="pagination" minOccurs="0"/>
+    <xs:element name="Pagination" type="xs:string" minOccurs="0"/>
     <xs:element name="Prices" type="prices" minOccurs="0"/>
 
     <xs:element name="Reviews" minOccurs="0">
@@ -94,8 +94,22 @@ volumes of the Astronomischer Jahresbericht
       </xs:complexType>
     </xs:element>
 
-    <xs:element name="ReprintOf" type="index" minOccurs="0"/>
-    <xs:element name="ReferenceOf" type="index" minOccurs="0"/>
+    <xs:element name="ReprintOf" minOccurs="0">
+      <xs:complexType>
+	<xs:choice>
+	  <xs:element name="Index" type="index"/>
+	  <xs:element name="Year" type="xs:string"/>
+	</xs:choice>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ReferenceOf" minOccurs="0">
+      <xs:complexType>
+	<xs:sequence>
+	  <xs:element name="Index" type="index"/>
+	</xs:sequence>
+      </xs:complexType>
+    </xs:element>
 
     <xs:element name="Comments" minOccurs="0">
       <xs:complexType>
@@ -124,6 +138,7 @@ volumes of the Astronomischer Jahresbericht
   </xs:sequence>
 </xs:complexType>
 
+<!-- Name should be of type CorporateEntity. Someday... -->
 <xs:complexType name="publisher">
   <xs:all>
     <xs:element name="Place" type="xs:string"/>
@@ -132,6 +147,14 @@ volumes of the Astronomischer Jahresbericht
 </xs:complexType>
 
 <xs:complexType name="prices">
+  <xs:sequence>
+    <xs:element name="Price" type="xs:string" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<!-- future price increases. A more complex version of price
+but this requires some intellegent parsing. -->
+<xs:complexType name="prices2">
   <xs:sequence>
     <xs:element name="Price" maxOccurs="unbounded">
       <xs:complexType>

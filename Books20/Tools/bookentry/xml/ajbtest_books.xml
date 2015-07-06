@@ -63,29 +63,43 @@ Entry format
       <subTitle></subTitle>
       <Authors>
 	<Author>
-	  <Prefix>Dr</Prefix>
-	  <First>J</First>
-	  <Middle>Robert</Middle>
-	  <Last>Fowler</Last>
-	  <Suffix>IV</Suffix>
+	  <Person>
+	    <Prefix>Dr</Prefix>
+	    <First>J</First>
+	    <Middle>Robert</Middle>
+	    <Last>Fowler</Last>
+	    <Suffix>IV</Suffix>
+	  </Person>
 	</Author>
-        <Entity>My Writing Business</Entity>
+	<Author>
+	  <CorporateBody>My Writing Business</CorporateBody>
+	</Author>
       </Authors>
       <Editors>
 	<Editor>
-	  <Last>Fowler</Last>
+	  <Person>
+	    <Last>Fowler</Last>
+	  </Person>
 	</Editor>
         <Editor>
-          <Last>Johnson</Last>
+	  <Person>
+	    <Last>Johnson</Last>
+	  </Person>
         </Editor>
       </Editors>
       <Translators>
-        <Entity>My Translating Business</Entity>
-        <Entity>My Other Translating Business</Entity>
+	<Translator>
+	  <CorporateBody>My Translating Business</CorporateBody>
+	</Translator>
+	<Translator>
+	  <CorporateBody>My Other Translating Business</CorporateBody>
+	</Translator>
         <Translator>
-         <First>James</First>
-         <Last>Fowler</Last>
-         <Suffix>IV</Suffix>
+	  <Person>
+	    <First>James</First>
+	    <Last>Fowler</Last>
+	    <Suffix>IV</Suffix>
+	  </Person>
         </Translator>
       </Translators>
       <Publishers>
@@ -100,19 +114,10 @@ Entry format
       </Publishers>
       <Year>1958</Year>
       <Edition>2</Edition>
-      <Pagination>
-        <Introductory>12</Introductory>
-        <Main>342</Main>
-      </Pagination>
+      <Pagination>12+354 pp</Pagination>
       <Prices>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>Dollars</Currency>
-        </Price>
-        <Price>
-          <Amount>12.50</Amount>
-          <Currency>$</Currency>
-        </Price>
+        <Price>$12.50</Price>
+        <Price>2.50R</Price>
       </Prices>
       <TranslatedFrom>Italian</TranslatedFrom>
       <Language>English</Language>
