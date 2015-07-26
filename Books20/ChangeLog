@@ -1,3 +1,19 @@
+2015-07-25  Jim Fowler  <jrf@Biblion>
+
+	* Data/Ajb: Began adding reviewer's names to the reviews starting
+	with ajb46_books.txt starting with entry 172. A colon after the
+	review signifies that I have check AJB for the reviewer's name
+
+2015-07-11  Jim Fowler  <jrf@Biblion>
+
+	* Tools/doc/theory.rst: Started work on documenting the format of
+	the BookFile.
+
+2015-07-06  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/bookfile.py (BookFile.readfile_XML): Write
+	readfile_XML().
+
 2015-07-05  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/bookfile.py (BookFile.writefile_XML): completed
@@ -5,8 +21,8 @@
 	routine. Tested all.  Had to modify xml/bookfile.xsd to accomodate
 	changes in how I did things.
 
-	* Tools/versions: added tags to the git repository for the
-	book entry versions.
+	* Tools/versions: added tags to the git repository for the book
+	entry versions.
 
 2015-07-04  Jim Fowler  <jrf@Biblion>
 
