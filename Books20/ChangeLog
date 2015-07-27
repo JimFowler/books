@@ -1,3 +1,8 @@
+2015-07-26  Jim Fowler  <jrf@Biblion>
+
+	* Tools/ppxml: Wrote pretty print routine for XML files.  This way
+	users can look at a file as well as the computer.
+
 2015-07-25  Jim Fowler  <jrf@Biblion>
 
 	* Data/Ajb: Began adding reviewer's names to the reviews starting
