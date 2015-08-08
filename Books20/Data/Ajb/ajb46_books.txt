@@ -11,7 +11,7 @@ Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 Began adding reviewers names with the review; review : reviewer [& reviewer...]
 If no colon present the the review has not been checked for a reviewer.
 
-For volume AJB 46 Index to the Literature of 1943-1946 part II, started12 May 2015, finished, proofread
+For volume AJB 46 Index to the Literature of 1943-1946 part II, started 12 May 2015, finished 26 July 2015, proofread
 
 
 1 46.03(0).16  F. Dessauer, Weltfahrt der Erkenntnis; Leben und Werk Isaac Newtons, Zürich, Rascher Verlag, 1945, 430 pp, 17.5 sfr, Math Rev 9 169, 
@@ -360,7 +360,7 @@ For volume AJB 46 Index to the Literature of 1943-1946 part II, started12 May 20
 
 173 46.75(0).21  W. W. Morgan and P. C. Keenan and E. Kellman, An Atlas of Stellar Spectra: with an Outline of of Spectral Classification, , , , , , Obs 65 127 :, reference AJB 45.75.05;
 
-174 46.84(0).03  L. Campbell and L. Jacchia, The Story of Variable Stars, , , , , , Obs 64 235 : and PAT 27 155 : and , reference AJB 43.84.03;
+174 46.84(0).03  L. Campbell and L. Jacchia, The Story of Variable Stars, , , , , , Obs 64 235 : and PAT 27 155 : and, reference AJB 43.84.03;
 
 175 46.84(0).27  J. Stein ed., Specola Vaticana Atlas Stellarum Variabilium Series IX, , , , , , Pop Astr 55 564 : M. W. Mayall and Publ ASP 60 135 : G. H. Herbig, reference AJB 43.84.07;
 
