@@ -1,6 +1,7 @@
 Installation
 ************
 
+
 BookEntry uses the python library *distutils* to install and
 distribute the packages. More documentation about the installation
 program can be found by running the command
@@ -20,4 +21,7 @@ home directory so I use
 Or you can install in a different system directory with
 
 ``python3 setup.py install --prefix=/opt/local``
+
+Building and Installing the Documentation
+_________________________________________
 

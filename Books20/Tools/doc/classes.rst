@@ -154,8 +154,9 @@ Displays the original file string if the entry came from an existing file.
 BookEntry
 _________
 
-The BookEntry object is the main user interface to the entries in a file.
-It contains a bookfile, header entry, and symbol table objects.
+The BookEntry  object is the main  user interface to the  entries in a
+file.   It  is  defined  in ``mainWindow.py``.   The  BookEntry  class
+contains a bookfile, header entry, and symbol table objects.
 
 .. automodule:: mainWindow
     :members:

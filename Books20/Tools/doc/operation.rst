@@ -1,8 +1,8 @@
 Operation
 *********
 
-The **BookEntry** program may be started from the command line with
-the ``BookEntry.py`` command. The main display window looks like:
+The **ajbbooks** program may be started from the command line with
+the ``ajbbbooks`` command. The main display window looks like:
 
 .. image:: images/mainwindow.png
 
@@ -15,15 +15,17 @@ buttons on the right hand side.
 Command Line Arguments
 ======================
 
-BookEntry [-h] [-i filename] [-s filename] [-v integer]
+ajbbooks [-h] [-i filename] [-s filename] [-v integer]
 
-  -h --help -- print this usage message and then exit
+  -h, --help -- print this usage message and then exit
 
-  -i --input filename -- open an existing file and reads the entries
+  -V, --version -- provide version information and then exit
 
-  -s --symbols filename -- open an alternate symbol table
+  -i, --input filename -- open an existing file and reads the entries
 
-  -v --volume volnum -- default volume number for new entries
+  -s, --symbols filename -- open an alternate symbol table
+
+  -v, --volume volnum -- default volume number for new entries
 
 
 Menus
@@ -95,11 +97,11 @@ button.
 of the text or line items may be brought up with the right mouse
 button.
 
-**Insert Symbol... <Ctrl-I>**: Brings up a window with a list of non-ASCII
-charactors.  By clicking on a charactor it will be inserted into the
-currently active text or line entry box at the current cursor
-location.  No action occurs if the focus is currently held by
-something other than a text or line entry item.
+**Insert Symbol... <Ctrl-I>**: Brings up a window with a list of
+commonly used Unicode charactors.  By clicking on a charactor it will
+be inserted into the currently active text or line entry box at the
+current cursor location.  No action occurs if the focus is currently
+held by something other than a text or line entry item.
 
 **Edit Header... <Ctrl-H>**: Brings up a text entry box in a separate window so
 that one can edit the header lines in the book file.
