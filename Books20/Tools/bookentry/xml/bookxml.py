@@ -84,20 +84,21 @@ except:
 try:
     print('Validating minimal bookfile ajbtest_books.xml')
     bf2 = etree.parse('ajbtest_books.xml', parser=Parser)
-    print('The xml file is well formed and valid')
+    print('ajbtest_books.xml is well formed and valid')
     print()
-    print(etree.tostring(bf3, pretty_print=True,
+    print(etree.tostring(bf2, pretty_print=True,
                          method='xml', encoding='unicode'))
 except:
-    print('The xml file is not well formed or is invalid')
+    print('The xml file is not well formed or xxx is invalid')
 
 try:
     print('Validating the full entry file ajbtest3_books.xml')
     bf3 = etree.parse('ajbtest3_books.xml', parser=Parser)
-    print('The xml file is well formed and valid')
-    #print()
-    #print(etree.tostring(bf3, pretty_print=True,
-    #method='xml', encoding='unicode'))
+    print('ajbtest3_books.xml is well formed and valid')
 except:
     print('The xml file is not well formed or is invalid')
+    sys.exit(0)
 
+bf_root = bf3.getroot()
+print('bf_root[0] is ', bf_root[0].tag)
+print('bf_root[1] is ', bf_root[1].tag)

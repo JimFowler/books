@@ -262,12 +262,40 @@ class BookFile():
         self._entryList = []
         self._header = ''
         self._dirty = False
-    
-        # We do something clever here when we know how.
-        print("Can't read XML files yet")
 
-        fd.close()
+        count = 0
+    
+        # read and validate the XML file
+        try:
+            bf_schema = etree.XMLSchema(file='./xml/bookfile.xsd')
+            Parser = etree.XMLParser(schema=bf_schema)
+        except:
+            print('The schema is not well formed')
+            return 0
+        try:
+            bf_xml = etree.parse(self._fileName, parser=Parser)
+        except:
+            print('The xml file is not well formed or is invalid')
+            return 0
+
+        bf = bf_xml.getroot()
+        for child in bf:
+            if child.tag == 'Header':
+                self.setHeader(child.text)
+
+            if child.tag == 'Entries':
+                for entry in child:
+                    entTemp = AJBentry.AJBentry()
+                    entTemp.readXML(entry)
+                if entTemp.isValid():
+                    count += 1
+                    self._entryList.append(entTemp)
+                    entTemp = AJBentry.AJBentry()
+        
         self._dirty = False
+
+        return count
+
 
     def writefile_XML(self, filename=None):
         """Write the entry list and header to a disk file.
@@ -348,6 +376,7 @@ if __name__ == "__main__":
         print('The schema is not well formed')
         sys.exit(1)
     try:
+        # etree.parse() returns an Etree rather than an Element
         bf3 = etree.parse('ajb58_books.xml', parser=Parser)
         print('The xml file is well formed and valid')
     except:

@@ -694,6 +694,24 @@ class AJBentry(entry.Entry):
         return person_XML
 
 
+    def read_XML(self, elXML):
+        '''Parse an XML element of an Entry and place the information
+        into the AJBentry dictionary.'''
+
+        for child in elXML:
+            print('child is ', child.tag)
+
+            if child.tag == 'Index':
+                pass
+
+            if child.tag == 'Title':
+                pass
+                #self['Title'] = child.text
+
+            if child.tag == 'SubTitle':
+                pass
+        
+
 if __name__ == '__main__':
 
     ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
