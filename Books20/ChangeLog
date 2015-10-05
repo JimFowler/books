@@ -1,3 +1,7 @@
+2015-10-04  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/symbols.txt: added minus superscript.
+
 2015-07-26  Jim Fowler  <jrf@Biblion>
 
 	* Tools/ppxml: Wrote pretty print routine for XML files.  This way
