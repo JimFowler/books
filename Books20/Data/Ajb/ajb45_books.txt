@@ -243,13 +243,13 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 116 45.09(0).06  R. Kahlau, Vierstellive Tafeln zum logarithmischen  und numerischen Rechnen, Potsdam, Bonneß & Hachfeld, 1944, 44 pp, 2.00 RM, , 
 
-117 45.09(0).07  J. C. P. Miller, Tabels for Converting Rectangular to Polar Co-ordinates, New York, Dover Publications, 1939, 16 pp, $0.75, ApJ 101 382 :, reprint of ABJ 41.09.05;
+117 45.09(0).07  J. C. P. Miller, Tabels for Converting Rectangular to Polar Co-ordinates, New York, Dover Publications, 1939, 16 pp, $0.75, ApJ 101 382 :, reprint of AJB 41.09.05;
 
 118 45.09(0).08  H. Schubert, Vierstellige Tafeln und Gegentafeln für logarithmisches und trigonometrisches Rechnen, Berlin, , 1943, 181 pp, 1.60 RM, , other a new edition of R. Haussner; 
 
 119 45.09(0).09  H. S. Uhler, Original Tables to 137 Decimal Places of Natural Logarithms for Factors of the Form 1+/- n*10⁻ˣ comma Enhanced by Auxiliary Tables of Logarithms of Small Integers, New Haven, Yale University Press, 1942, 120 pp, , , 
 
-120 45.09(0).10  , Natural Sines and Cosines to Eight Decimal Places , Washington DC, , 1942, 541 pp, , , other Department of Commerce Special Publication Nr. 231; 
+120 45.09(0).10  , Natural Sines and Cosines to Eight Decimal Places, Washington DC, , 1942, 541 pp, , , other Department of Commerce Special Publication Nr. 231; 
 
 121 45.09(0).11  , Tables of Arc Sin x, New York, Columbia University Press, 1945, 19+124 pp, $3.50, ApJ 103 381 :, other Mathematical Tables Project National Bureau of Standards; 
 
@@ -257,11 +257,103 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 123 45.09(0).17  L. Schrutka, Theorie und Praxis des logarithmischen Rechenschiebers, Wien, Deuticke, 1943, 12+101 pp, 4.00 RM, , 3rd edition;
 
-124 45.09(0).20  F. A. Willers, Mathematische Instrumente, München-Berlin, R. Oldenbourg, 1943, 270 pp, 14.00 RM , , 
+124 45.09(0).20  F. A. Willers, Mathematische Instrumente, München-Berlin, R. Oldenbourg, 1943, 270 pp, 14.00 RM, , 
 
 125 45.10(0).01  N. Arley and K. R. Buch, Wahrscheinlichkeitsrechnung mit Anwendung auf Statistik comma Fehlertheorie un Ausgleichsrechnung, Kopenhagen, G. E. C. Gads Forlag, 1943, 166 pp, , , in Danish;
 
 126 45.10(0).04  G. Boaga, Elementi dell teoria delle probabilità e teoria degli errori con applicazione topografiche e geodetische, Firenze, Insituto Geografico Militara, 1943, 182 pp, , , 
 
 127 45.10(0).14  A. J. Thompon, Tables of Coefficients of Everett's Central-Difference Interpolation Formula, Cambridge, At the University Press, 1943, 8+32 pp, 5s, , 2nd edition;other Tracts for Computers Nr. 5; 
+
+128 45.11(0).01  E. B. Brown, Optical Instruments, Brooklyn NY, Chemical Publishing Co., 1945, 567+12 pp, $10.00, J Can RAS 39 320 : and Sky Tel. 5 Nr. 2 16 : H. F. Weaver, 
+
+129 45.11(0).02  M. Daisomont, Le pratique du foucaultage der miroirs de télescope; Théorie et application à l'usage des amateurs d'astronomie et des opticiens, Bruges, Edition De Tempel, 1943, 33 pp, 18.00 Fr., Ciel et Terre 59 364 : J. S. Dubois, 
+
+130 45.11(0).03  M. Daisomont, La pratique de l'argenture des miroirsd'amateur, Bruge, Edition de Tempel, 1943, 8 pp, 5.00 Fr., Ciel et Terre 60 27 :, 
+
+131 45.11(0).04  M. Daisomont, Le pratique de la lunette astronomique d'amateur, Bruges, Edition De Tempel, 1943, 76 pp, 25.00 Fr., Ciel et Terre 59 364 : P. Bourgeois, 
+
+132 45.11(0).04  M. Daisomont, Le pratique de la lunette astronomique d'amateur, Bruges, Edition De Tempel, 1946, 83 pp, 40.00 Fr., Ciel et Terre 62 62 : P. Bourgeois, 2nd edition;
+
+133 45.11(0).05  M. Daisomont, La taille des petites lentilles à la portée de l'amateur, Bruges, Edition De Tempel, 1946, 10 pp, 12.00 Fr., Ciel et Terre 62 304 : J. S. Dubois, 
+
+134 45.11(0).06  G. Z. Dimitroff and J. G. Baker, Telescopes and Accessories, Philadelphia-Toronto, The Blakiston Company, 1945, 5+309 pp, $2.50, Ann d'Astrophys 8 243 : and ApJ 102 140 : J. L. Greenstein and JBAA 56 19 : and Sky Tel. 4 Nr. 6 14 : R. K. Marshall, other Harvard Books on Astronomy; 
+
+135 45.11(0).07  A. G. Ingalls, Amateur Telescope Making, New York, Munn & Co., 1941, 497 pp, $3.00, Sky Tel. 1 Nr. 2 20 : J. Baker, 4th edition;
+
+136 45.11(0).08  H. D. Taylor, The Testing and Adjustment of Telescope Objectives, Newcastle-upon-Tyne, Sir Howard Grubb comma Parson & Co., 1946, 95+8 pp, 17s 6d, J Can RAS 40 339 :, 4th edition;
+
+137 45.11(0).09  F. Twyman, Prism and Lens Making, London, Adam Hilger, 1942, 178 pp, , JBAA 54 47 :, 
+
+138 45.13(0).11  C. E. K. Mees, The Theory of the Photographic Process, New York, Macmillan Co., 1942, 10+1124 pp, $12.00, ApJ 97 454 : D. M. Popper, 
+
+139 45.15(0).18  M. Migeotte, Sue la construction d'un spectrographe infra-rouge auto-enredistreur à grand pouvoir de résolution et sur son application à l'étude du spectre du soleil et de la vapeur d'eau dans la région comprise entre 13440Å et 15293Å, Bruxelles, M. Hayez, 1945, 107 pp, , ApJ 103 383 : P. Swings and Ciel et Terre 62 420 : M. Nicolet, 
+
+140 45.16(0).06  K. Scheibe and J. Stamm, Uhr und Strom; Ein Handbuch über elektrische Uhren, München, R. Oldenbourg, 1943, 208 pp, 9.00 RM, Himmelswelt 54 12 : B Sticker, 
+
+141 45.16(0).16a W. I. Milham, Time and Timekeepers, New York, Macmillan Co., 1941, 616 pp, $1.98, Sky Tel. 1 Nr. 3 20 : R. N. Mayall, 
+
+142 45.21(0).08  W. M. Smart, Text-book on Spherical Astronomy, Cambridge, University Press, , , $4.75, ApJ 103 Nr. 3 4 : R. J. Trumpler, 4th edition;reprint of AJB 38.21.02;also published New York: The Macmillan Company;
+
+143 45.21(0).10  M. Waldmeier, Leitfaden der Astronomischen Orts- und Zeitbestimmung, Aarau, H. R. Sauerländer & Co., 1946, 84 pp, , , 
+
+144 45.23(0).04  A. A. Mikhailov, The Theory of Eclipses, Moskau-Leningrad, Government Publishing for Technical and Theortical Literature, 1945, 199 pp, 10.00R, ApJ 103 381 : A. Pogo, in Russian;other Staatsverlag für technisch-theoritische Literatur; 
+
+145 45.26(0).01  E. Achelis, The Calendar for Everybody, New York, G. P. Putnam & Sons, 1943, 141 pp, $1.50, Sky Tel. 3 Nr. 6 15, 
+
+146 45.26(0).04  A. Fresa, Il calendario degli Israeliti, , Lunario Israelitico, 1946, , , , 
+
+147 45.26(0).09  F. H. Meyer, The Crux of Chronology, Boston, Bruce comma Humphries, 1942, 599 pp, $3.00, Sky Tel 2 Nr. 2 16 : W. H. Barton jr., 
+
+148 45.26(0).11  B. D. Panth, Consider the Calendar, , Teacher's College Columbia University, 1944, 134 pp, $1.25, Sky Tel. 4 Nr. 7 17 : R. N. Mayall, 
+
+149 45.31(0).19  O. Heckmann, Theorien der Kosmologie, , , , , , ApJ 104 146, reference AJB 44.31.03;
+
+150 45.31(0).27  H. Kleiner, Kraftwirking im Kosmos; Elektrostatik und -Dynamik contra Gravitation; Neue kosmische Gesetze, Leipzig, , 1943, 56 pp, 5.00 RM, , 
+
+151 45.35(0).01  W. Riezler, Einführung in die Kernphysik, Leipzig, Verlag Bibliograhisches Institut, 1944, 250 pp, , ZfA 22 236 :, 3rd edition;other review is actually of the second edition; 
+
+152 45.39(0).21  V. G. Fessenkoff, Cosmogony of the Solar System, Moskau-Leningrad, Academy of Sciences of the USSR, 1944, 112 pp, 5.00 R, ApJ 102 264 : O. Struve, 
+
+153 45.41(0).01  G. Gamov, The Birth and Death of the Sun, , , , , , JBAA 52 82 : M. A. Ellison and Sky Tel. 4 Nr. 10 8 : M. Lockwood, reference AJB 42.41.08;
+
+154 45.41(0).02  M. Waldmeier, Ergebnisse und Probleme der Sonnenforschung, , , , , , Ann d Hydrog 71 284 : A. Schwassmann, reference AJB 43.41.20;
+
+155 45.41(0).03  M. Waldmeier, Sonne und Erde, Zürich, Büchergilde Gutenberg, 1945, 239 pp, , ApJ 103 103 : and PAT 27 74 and VJS der Naturforschenden Ges. Zürich 90 239 : W. Brunner, 
+
+156 45.41(0).03  M. Waldmeier, Sonne und Erde, Zürich, Büchergilde Gutenberg, 1946, 240 pp, , ApJ 103 103 : and PAT 27 74 : and VJS der Naturforschenden Ges. Zürich 90 239 : W. Brunner, 2nd edition;
+
+157 45.48(0).28  J. Stokley, Electrons in Action, New York, Whittlesey House, 1946, 320 pp, $3.00, Sky Tel. 5 Nr. 7 14 : O. H. Caldwell, 
+
+158 45.51(0).01  , Planetary co-ordinates for the years 1940—1960 referred to the equinox of 1950.0, , , , , , , reprint of AJB 41.51.01;other photographic reprint; 
+
+159 45.51(0).02  F. Becker, Das Sonnensystem comma mechanisch comma physikalisch comma kosmogonische betrachtet, Oehringen, hohenlohesche Buchh., 1943, 64 pp, 2.50 RM, , other may be a reprint of Schriften des Deutschen Naturhundevereins (NF) 14; 
+
+160 45.51(0).03  H. N. Russell and R. S. Dugan and J. Q. Stewart, Astronomy Vol. 1; The Solar System, Boston, Ginn & Co., 1945, 11+470+21 pp, $3.00, ApJ 103 103 : and Sky Tel. 5 Nr. 3 14 : F. L. Whipple, other a revised edition; 
+
+161 45.51(0).04  F. G. Watson, Between the Planets, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 197 :, reference AJB 44.51.12;
+
+162 45.51(0).05  F. L. Whipple, Earth comma Moon and Planets, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 197 : and J Can RAS 36 33 :, reference AJB 44.51.14;
+
+163 45.53(0).01  A. Renier, L'âge de la Terre et autres essais, Bruxelles, Desclée de Brouwer, 1942, 327 pp, 60 fr. belges., Ciel et Terre 59  289, 
+
+164 45.54(2).40  J. E. Spurr, Geology appled to Selenology; The Imbrian Plain Region of the Moon, Lancaster, The Science Press, 1944, 112 pp, $2.00, Sky Tel. 4 Nr. 1 16 : R. K. Marshall, 
+
+165 45.54(2).41  J. E. Spurr, Geology applied to Selenology; II The Features of the Moon, Lancaster, The Science Press, 1945, 318 pp, $5.00, Sky Tel 5 Nr. 7 15 :, 
+
+166 45.54(2).46  C. Fisher, The Story of the Moon, Garden City NY, Doubleday comma Doran & Co., 1943, 301 pp, $3.00, Sky Tel. 2 Nr. 8 16, 
+
+167 45.54(2).48  A. Fresa, La Luna; Movimenti comma topografia comma influenze e culto: Conpiccolo dizionario selenografico, Milano, U. Hoepli, 1943, 24+530 pp, , , 2nd edition;
+
+168 45.54(2).50  E. Grupp, Mondzeiger; Ein Gerät zur Bestimmung der Lage und Phase des Mondes, Geislingen-Steige, , 1943, , 1.20 RM, , 
+
+169 45.55(0).06  D. L. Cyr, Life on Mars, El Centro CA, Desert Magazine Press, 1944, 50 pp, $1.00, Sky Tel. 3 Nr. 12 14 : E. B. Burke, 
+
+170 45.55(0).10  P. Merian, Mars, Basel, , 1940, 76 pp, 5.50 Fr., , 
+
+171 45.55(0).11  P. Merian, Die Vision vom Marskartenbild, Basel, , 1943, 32 pp, 2.30 Fr., , 
+
+172 45.67(0).12  R. K. Marshall, Things that fall from the Sky, Philadelphia, The Franklin Institute, 1944, 16 pp, $0.15, , 
+
+173 45.67(0).17  H. H. Nininger, A comet strikes the earth, Denver, American Meteorite Laboratory, 1942, , $0.35, Sky Tel. 1 Nr. 11 19 : P. W. Witherell, 
 
