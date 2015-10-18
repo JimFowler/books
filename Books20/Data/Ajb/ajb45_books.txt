@@ -8,7 +8,7 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
 
-For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 2015, finished, proofread
+For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 2015, finished 17 Oct 2015, proofread
 
 
 1 45.03(0).12  W. Blaschke, Galileo und Kepler, , , 1943, 14 pp, 2 RM, AN 274 144 : and Himmelswelt 54 24 : B. Sticker and VJS 78 202 : B. Myermann and ZfMG 28 99 :, other Hamburger Mathematische Einzelschriften 39; other a mathematical monograph; 
@@ -356,4 +356,122 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 172 45.67(0).12  R. K. Marshall, Things that fall from the Sky, Philadelphia, The Franklin Institute, 1944, 16 pp, $0.15, , 
 
 173 45.67(0).17  H. H. Nininger, A comet strikes the earth, Denver, American Meteorite Laboratory, 1942, , $0.35, Sky Tel. 1 Nr. 11 19 : P. W. Witherell, 
+
+174 45.71(0).19  F. Schlesinger and L. F. Jenkins, Catalogue of bright stars comma containing all important data known in January comma 1940 comma relating to all stars brighter than 6.5 visual magnitude comma and to some fainter stars; with appendices containing galactic co-ordinates and indices to the constellations, New Haven, Yale University Observatory, 1943, 3+213 pp, $3.00, , 2nd edition;other The Yale Bright Star Catalogue; 
+
+175 45.71(0).25  , Katalog der Anhaltsterne für das Zonenunternehmen der Astronomischen Gesellschaft; Nach Beobachtungen an der Sternwarten Babelsberg comma Bergedorf comma Bonn comma Breslau comma Heidelberg comma Leipzig und Pulkowo, Bonn-Berlin, F. Dümmlers Verlag, 1943, 20+361 pp, , , other same as Veröff. Berlin-Bahlem Nr. 55; 
+
+176 45.71(0).26  , Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 18 jahrhunderts; Abteilung II Der südliche Sternhimmel; Band 7 6ʰ Rektaszension, Karlsruhe, G. Braun, 1943, 235 pp, 32.40 RM, , other editing by Preuß. Akademie der Wissenschaften; 
+
+177 45.71(0).27  , Astrographic Catalogue 1900.0 Sydney Section Vol. 17 R.A. 0ʰ to 6ʰ comma Dec. -55° to -57°, Sydney, , 1943, 23 pp, , , 
+
+178 45.71(0).27  , Astrographic Catalogue 1900.0 Sydney Section Vol. 19 R.A. 12ʰ to 18ʰ comma Dec. -55° to -57°, Sydney, , 1944, 70 pp, , , 
+
+179 45.71(0).31  I. M. Lewitt and R. K. Marshall, Star Maps for Beginners, Philadelphia, The Franklin Institute, 1942, 33 pp, $0.50, J Can RAS 36 377 : and Sky Tel. 1 Nr. 8 21, 
+
+180 45.71(0).34  A. P. Norton, A Star Atlas and Reference Handbook, London, Gall & Inglis, 1942, , 13s, JBAA 52 277 :, 8th edition;
+
+181 45.71(0).35  A. P. Norton, A Star Atlas and Reference Handbook (Epoch 1950); for Students and Amateurs; covering the whole Star Sphere comma and showing over 8000 Stars comma Nebulae and Clusters comma with Short Descriptive Lists of Objects Suitable for Small Telescopes comma Notes on Planets comma Star Nomenclature comma etc., London-Edinburgh, Gall & Inglis, 1943, 16+90 pp, 15s, , 9th edition;
+
+182 45.71(0).36  A. P. Norton and J. G. Inglis, Norton's Star Atlas and Telescopic Handbook, London, Gall & Inglis, 1943, 56 pp, , ApJ 99 124 : W. W. Morgan and JBAA 53 218 : and, 9th edition;other do not know what the difference is with previous entry; 
+
+183 45.75(0).01  A. Gatterer and J. Junkes and V. Frodl, Atlas der Restlinien Vol 2 Spektren der seltenen Erden, Vatican City, Vatican Press, 1945, 350 pp, $60.00, ApJ 103 252 : G. Abetti, 
+
+184 45.75(0).02  G. Herzberg, Atomic Spectra and Atomic Structure, New York, Dover Publications, 1944, 14+257 pp, $2.75, ApJ 103 103 :, 2nd edition;
+
+185 45.75(0).03  G. Herzberg, Infrared and raman Spactra of Polyatomic Molecules, New York, D. Van Nostrand, 1945, 632+XIII pp, $9.50, ApJ 104 330 : E. F. Barker, 
+
+186 45.75(0).04  W. A. Hiltner and R. C. Williams, Photometric Atlas of Stellar Spectra, Ann Arbor MI, University of Michigan Press, 1946, , $7.50, ApJ 104 331 : M. Minnaert, 
+
+187 45.75(0).05  W. W. Morgan and P. C. Keenan and E. Kellman, An Atlas of Stellar Spectra; with an Outline of Spectral Classification, Chicago, University of Chicago Press, 1943, 6+36 pp, $10.00 and 60s, ApJ 98 240 : A. H. Joy and Himmelswelt 55 49 : and Nature 152 147 :, 
+
+188 45.84(0).01  L. Campbell and L. Jacchia, The Story of Variable Stars, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 196 : and J Can RAS 36 74 : and VJS 78 202 : C. Hoffneister, other a revised edition cost is $3.00; reference AJB 43.84.03;
+
+189 45.84(0).02  Z. Kopal, An Introduction to the Study of Eclipsing Variables, Cambridge, , 1946, 10+220 pp, $4.00, ApJ 104 463 : H. C. van de Hulst, other Harvards Obs. Monographs 6; 
+
+190 45.84(0).03  D. J. Martinoff, Stellar Variability Vol. 2 Eclipsing Variables, Moskau-Leningrad, ONT 3, 1939, 150 pp, 4.25 R, ApJ 101 380 : O. Struve, in Russian;reference AJB 41.84.01;
+
+191 45.84(0).04  C. Payne-Gaposchkin and S. Gaposchkin, Variable Stars, , , , , , Ciel et Terre 62 61 : A. van Hoof, reference AJB 40.84.02;
+
+192 45.89(0).01  H. Shapley, Galaxies, Philadelphia, The Blakiston Company, 1943, 6+229 pp, $2.50, Ann d'Astrophys 7 108 : and ApJ 99 320 : J. Stebbins and JBAA 54 108 :, other the 1944 edition priced at $3.00; other Harvard Books on Astronomy; 
+
+193 45.90(0).01  A. C. Banerji, Recent Advances in Galactic Dynamics, Allahabad, Allahabad Law Journal Press, 1942, 6+116 pp, , ApJ 99 124 : S. Chandrasekhar, other Lucknow University Studies Nr. 15; 
+
+194 45.90(0).02  W. Becker, Sterne und Sternsysteme, , , , , , NAT 1944 69 : and Phys Z 44 87 : W. Ramm and VJS 78 2 : J. Wempe, reference AJB 44.90.02;
+
+195 45.90(0).03  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Ann d'Astrophys 8 131 : P. Coudere and JBAA 53 197 : and The Sky 5 Nr. 12 18 :, other should The Sky actually be Sky Tel.?; reference AJB 44.89.01;
+
+196 45.90(0).04  B. J. Bok and P. F. Bok, The Milky Way, Philadelphia, The Blakiston Co., 1945, 6+224 pp, $3.00, ApJ 103 382 : W. W. Morgan and Sky Tel. 5 Nr. 4 14 : R. K. Marshall, 2nd edition;reprint of AJB 44.89.01;
+
+197 45.90(0).04  S. Chandrasekhar, Principles of Stellar Dynamics, , , , , , J Can RAS 36 377, reference AJB 44.90.15;
+
+198 45.92(0).01  W. Heisenberg ed., Kosmische Strahlung; Vörtrage comma gehalten im Max-Planck-Institut Berlin-Dahlem vom E. Bagge comma F. Bopp comma S. Flügge comma W. Heisenberg comma A. Klemm comma J. Neixner comma G. Molière comma H. Volz comma C. F. v. Weizsäcker comma K. Wirtz, Berlin, Springer-Verlag, 1943, 6+173 pp, 13.50 RM, , 
+
+199 45.92(0).02  P. Auger, What are Cosmic Rays?, Chicago, University of Chicago Press, 1945, 128 pp, $2.00, Sky Tel. 4 Nr. 9 14 : S. A. Korff, translated from French by M. M. Shapiro;in English;
+
+200 45.93(0).04  G. Pession, Manuale di Astronomia pratica (Astronomia geodetica), Roma, Librerie dello Stato, 1943, 588 pp, 100 Lire, , 2nd edition;reprint of AJB 44.93.05;
+
+201 45.97(0).07  W. K. Hristow, Die Gauß-Krügerschen Koordinaten auf dem Ellipsoid, Leipzig, B. G. Teubner, 1943, 6+80 pp, 5.00 RM, , 
+
+202 45.97(0).10  H. Kuiper, Poolbewegingen tengevolge van poolvlucht-kracht, Utrecht, , 1943, 8+87 pp, 10.00 Fl., , 
+
+203 45.100(0).01  W. H. Barton jr., An Introduction to Celestial Navigation, New York, , 1942, 32 pp, $0.50, JBAA 53 218 : and Sky Tel. 1 Nr. 7 21, 
+
+204 45.100(0).03  W. H. Barton jr. and C. O. Roth jr., Basic Problems in Celestial Navigation, Cambridge MA, Addison-Wesley Press, 1944, 56 pp, $1.00, J Can RAS 38 306 :, 
+
+205 45.100(0).04  E. F. Blackburn, Basic Air Navigation, New York, McGraw-Hill Book Co., 1943, 300 pp, $4.00, , 
+
+206 45.100(0).05  B. J. Bok and F. W. Wright, Basic Marine Navigation, Boston, Houghton Mifflin Co., 1944, 8+421 pp, $4.50, ApJ 100 115 : J. Cuffey and J Can RAS 38 304 :, other attachments or insert priced at $1.70; 
+
+207 45.100(0).06  D. Brouwer and F. W. Keator and D. A. McMillen, Spherographic Navigation, New York, The Macmillan Co., 1944, 200 pp, $5.00, Sky Tel. 3 Nr. 8 17 : E. G. Ebbighausen, 
+
+208 45.100(0).07  F. G. Brown, Air Navigation, , , , , , JBAA 52 79 :, reference AJB 43.100.02;
+
+209 45.100(0).09  F. Chichester, The Observer's Book on Astro-Navigation, , , , , , Sky Tel. 1 Nr. 7 21 : U. D. Fuller, reference AJB 44.100.03;
+
+210 45.100(0).11  F. F. Crossley, A First Course in Air Navigation, London, Macmillan & Co., 1943, 5+85+4 pp, 2s 6d, JBAA 53 137 :, 
+
+211 45.100(0).12  F. Debenhan, Astrographics: First Steps in Navigation by the Stars, Cambridge, W. Heffer & Sons, 1942, 5+120 pp, 7s 6d, JBAA 53 232 :, 
+
+212 45.100(0).13  R. M. Field and H. T. Stetson, Map Reading and Avigation, , D.  Van Nostrand Co., 1942, 129 pp, $2.50, Sky Tel. 2 Nr. 1 16 : F. L. Whipple, 
+
+213 45.100(0).14  W. Hadel, Celestial Navigation; A problem manual, New York, McGraw-Hill Book Co., 1943, 262 pp, $3.25, , 
+
+214 45.100(0).15  R. Hadingham, Astronomical Air Navigation; A Comprehensive Handbook embodying the Latest Principles for Pratical Navigators comma Instructors and Students, London, The Technical Press, 1943, 11+132 pp, 10s 6d, JBAA 53 254 : and Nature 152 173 : H. S. Jones, 
+
+215 45.100(0).19  L. M. Kells and W. F. Kern and J. R. Bland, Navigation, New York, McGraw-Hill Book Co., 1943, 479 pp, $5.00, Sky Tel. 3 Nr. 5 17 : W. H. Barton jr., 
+
+216 45.100(0).20  J. C. Kingsland and D. W. Seager, Navigation, London-New York-Toronto, Oxford University Press, 1943, 95 pp, 2s 6d and $ 1.00, ApJ 99 124 : J. Titus and Sky Tel. 2 Nr. 11 16 :, 
+
+217 45.100(0).21  L. G. Loze and J. André, Cours de navigation à l'usage du yachtman et de l'officier au cabotage, Bruxelles, Robert Stoops, 1943, 247 pp, 120 frs., Ciel et Terre 62 62 : F. Moreau, 
+
+218 45.100(0).23  A. L. Miéville, Astronomical Navigation Without Mathematics, New York, Macmillan Company, 1945, 25 pp, $0.25, Sky Tel. 4 Nr 8 15 :, 
+
+219 45.100(0).24  E. Molloy, Air navigation; Part 2, Brooklyn, Chemical Publishing Co., 1942, 132 pp, $2.50, Sky Tel 1 Nr. 9 19 :, 
+
+220 45.100(0).24  E. Molloy, Air navigation; Part 1, Brooklyn, Chemical Publishing Co., 1942, 128 pp, $2.50, Sky Tel 1 Nr. 9 19 :, 
+
+221 45.100(0).25  H. M. Neely, The Star Finder, New York, Smith & Durrell, 1943, 46 pp, $2.75, , 
+
+222 45.100(0).26  S. S. Rabl, The Star Atlas and Navigation Encyclopedia, New York, Cornell Maritime Press, 1946, 161 pp, $5.00, Sky Tel 5 Nr. 12 14 : J. Q. Stewart, 
+
+223 45.100(0).28  P. R. Rider and C. A. Hutchinson, Navigational Trigonometry, New York, Macmillan Co., 1943, 232 pp, $2.00, , 
+
+224 45.100(0).30  W. G. Shute and W. W. Shirk and G. F. Porter and C. Hemenway, An Introduction to Navigation and Nautical Astronomy, New York, Macmillan Co., 1944, 457 pp, $4.50, Sky Tel 3 Nr. 9 17 :, 
+
+225 45.100(0).31  W. T. Skilling and R. S. Richardson, The Practical Essentials of Pretraining Navigation, New York, Henry Holt & Co., 1942, 5+113 pp, $0.75, ApJ 97 83 : J. Titus, 
+
+226 45.100(0).32  W. M. Smart, Sea and Air Navigation, Oxford, , 1941, 48 pp, $0.70, Sky Tel. 1 Nr. 9 19 :, 
+
+227 45.100(0).34  H. Stewart and A. Nichols and S. A. Walling and J. C.Hill, Aircraft Navigation, Cambridge, At the University Press, 1943, 8+146 pp, 5s and $2.00, Sky Tel. 3 Nr. 1 16 :, also published New York: Macmillan Co.;
+
+228 45.100(0).36  J. Q. Stewart and N. L. Pierce, Marine and Air Navigation, Boston, Ginn & Co., 1944, 12+472 pp, $4.50, ApJ 100 115 : O. J. Lee and Sky Tel. 3 Nr. 9 16 : J. J. Nassau, 
+
+229 45.100(0).37  J. A. Stowell, Practical Marine Navigation, Cambridge MA, Addision-Wesley Press, 1945, 133+8 pp, $2.50, J Can RAS 39 193 : and Sky Tel. 4 Nr. 8 14 :, 
+
+230 45.100(0).38  S. A. Walling and J. C. Hill, Nautical Mathematics, Cambridge, At the University Press, 1943, 144 pp, 3s 6d, , 
+
+231 45.100(0).39  P. V. H. Weems and W. C. Eberle, Learning to Navigate, New York, Pitman Publishing Corporation, 1943, 135 pp, $2.00, Sky Tel. 3 Nr. 9 17 :, 
+
+232 45.100(0).42  , Instruzioni sulle curve di altezza, Firenze, Instituto Geografico Militare, 1943, 62 pp, , , 
 
