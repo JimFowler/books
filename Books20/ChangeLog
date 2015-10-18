@@ -1,3 +1,13 @@
+2015-10-17  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/xml/JournalFile_test.xml: Created test file
+	for journalfile.xsd.  Validated both .xsd and .xml file.
+
+	* Tools/bookentry/xml/journalfile.xsd: Started journal file
+	description.
+
+	* Data/Ajb/ajb45_books.txt: finished AJB 45 today.
+
 2015-10-04  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/symbols.txt: added minus superscript.

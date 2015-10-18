@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+
+<!-- testing only. In order to have multiple journal file entries per
+     document -->
+<testing>
+
+<!-- This is a minimal journal file. -->
+<JournalFile>
+  <Header> </Header>
+  <Journals></Journals>
+</JournalFile>
+
+
+<!--
+   This is a minimal journal file with one minimal journal. Note that
+   a minimal entry is required to have a Title to be a valid entry.
+-->
+<JournalFile>
+ <Header>
+ </Header>
+ <Journals>
+  <Journal>
+    <Title>Sky and Telescope</Title>
+  </Journal>
+ </Journals>
+</JournalFile>
+
+
+<!--
+   This is a fully filed out journal file with one complex journal. Note that
+   a minimal entry is required to have a Title to be a valid entry.
+-->
+<JournalFile>
+ <Header>
+   This is a test of the journal file format.  We have one journal entry.
+ </Header>
+ <Journals>
+  <Journal>
+    <Title>Sky and Telescope</Title>
+    <subTitle>A subTitle</subTitle>
+    <subsubTitle>Yet another subsubTitle</subsubTitle>
+    <Publishers>
+      <Publisher>
+	<Place>Cambridge MA</Place>
+	<Name>Harvard College Observatory</Name>
+	<startDate>1941/1/1</startDate>
+      </Publisher>
+      <Publisher>
+	<Place>Somewhere Else</Place>
+      </Publisher>
+    </Publishers>
+
+    <startDate>1941/1/1</startDate>
+
+    <Links>
+      <linkPrevious>The Sky</linkPrevious>
+      <linkPrevious>The Telescope</linkPrevious>
+      <linkNext>Telescope and Sky</linkNext>
+    </Links>
+
+  <Abbreviations>
+    <Abbreviation>Sky Tel</Abbreviation>
+    <Abbreviation>ST</Abbreviation>
+  </Abbreviations>
+
+  <ADSdesignator>SkyTel</ADSdesignator>
+  </Journal>
+
+ </Journals>
+</JournalFile>
+
+</testing>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Used only for testing. This can be a root element for files with
+     multiple examples of JournalFile elements -->
+<xs:element name="testing"></xs:element>
+
+<!-- A Journal file consists of a header and a list of journals. The
+     names, place, publisher, and some of the abbreviations for the
+     journals are taken from volumes of Astronomischer Jahresbericht.
+     These are the journals that AJB searched.
+
+     There are also entries for the final journal database.  These are
+     mainly place holders at this time. They simply record my ideas of
+     what might be needed.
+-->
+<xs:element name="JournalFile">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Header" type="xs:string"/>
+      <xs:element name="Journals">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Journal" type="journal" minOccurs="0"
+			maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="journal">
+  <xs:all>
+    <!-- The Title is the main label for a journal -->
+    <xs:element name="Title" type="xs:string"/>
+
+    <xs:element name="subTitle" type="xs:string" minOccurs="0"/>
+    <xs:element name="subsubTitle" type="xs:string" minOccurs="0"/>
+
+    <!-- A journal may have various publishers over the years.  More so
+         in the later Twentieth Century. -->
+    <xs:element name="Publishers" type='publishers' minOccurs="0"/>
+
+    <!-- Other names or abbreviations that the journal might be known
+         by. These are used in AJB at least. -->
+    <xs:element name="Abbreviations" minOccurs="0">
+      <xs:complexType>
+	<xs:sequence>
+	  <xs:element name="Abbreviation" type="xs:string"
+		      maxOccurs="unbounded"/>
+	</xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- These are elements that are meant for future use -->
+
+
+    <!-- Begining and ending dates for the journal -->
+    <xs:element name="startDate" type="xs:string" minOccurs="0"/>
+    <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+
+    <!-- If a journal merged into another one or was merged from
+         others, then the linkPrevious or linkNext indicate the Titles
+         of these journals. Clearly there can be multiple linkPrevous
+         entries.  But there might also be multiple linkNext in the
+         event a journal split s into multiple journals. Consider the
+         case of Physical Reviews; founded in 1893, it split into
+         Physical Reviews A, B, C, and D in 1970.
+
+         These entries will probably get more complicated as I
+         discover additional ways that societies and editors can create
+         journals.
+    -->
+    <xs:element name="Links" minOccurs="0">
+      <xs:complexType>
+	<xs:choice>
+	  <xs:element name="linkPrevious" type="xs:string" minOccurs="0"
+		      maxOccurs="unbounded"/>
+	  <xs:element name="linkNext" type="xs:string" minOccurs="0"
+		      maxOccurs="unbounded"/>
+	</xs:choice>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- The International Standard Serial Number if the journal has one -->
+    <xs:element name="ISSN" type="xs:string" minOccurs="0"/>
+
+    <!-- Database designators.  Different designators for the various
+         databases. For example, if the journal is in ADS, this is the
+         reference.
+
+         Do we need a overall Designators element to contain multiple
+         designators? -->
+    <xs:element name="ADSdesignator" type="xs:string" minOccurs="0" />
+
+
+  </xs:all>
+</xs:complexType>
+
+<!-- Composite types referenced above -->
+<xs:complexType name="publishers">
+  <xs:sequence>
+    <xs:element name="Publisher" type="publisher" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+
+<!-- Name should be of type CorporateEntity. Someday... -->
+<xs:complexType name="publisher">
+  <xs:all>
+    <xs:element name="Place" type="xs:string"/>
+    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="startDate" type="xs:string" minOccurs="0"/>
+    <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+  </xs:all>
+</xs:complexType>
+
+
+</xs:schema>
+
+<!-- Remaining problems:
+
+  Do we wish to list the editior (and associate editors)?  In the
+  later Twentieth Century this could get complex.
+
+-->
