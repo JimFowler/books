@@ -41,6 +41,7 @@
     <Title>Sky and Telescope</Title>
     <subTitle>A subTitle</subTitle>
     <subsubTitle>Yet another subsubTitle</subsubTitle>
+
     <Publishers>
       <Publisher>
 	<Place>Cambridge MA</Place>
@@ -48,7 +49,7 @@
 	<startDate>1941/1/1</startDate>
       </Publisher>
       <Publisher>
-	<Place>Somewhere Else</Place>
+	<Name>Somebody Else</Name>
       </Publisher>
     </Publishers>
 

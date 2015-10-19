@@ -76,12 +76,12 @@
     -->
     <xs:element name="Links" minOccurs="0">
       <xs:complexType>
-	<xs:choice>
+	<xs:sequence>
 	  <xs:element name="linkPrevious" type="xs:string" minOccurs="0"
 		      maxOccurs="unbounded"/>
 	  <xs:element name="linkNext" type="xs:string" minOccurs="0"
 		      maxOccurs="unbounded"/>
-	</xs:choice>
+	</xs:sequence>
       </xs:complexType>
     </xs:element>
 
@@ -96,6 +96,8 @@
          designators? -->
     <xs:element name="ADSdesignator" type="xs:string" minOccurs="0" />
 
+    <!-- For all the things we forget to identify -->
+    <xs:element name="Comments" type="xs:string" minOccurs="0" />
 
   </xs:all>
 </xs:complexType>
@@ -111,8 +113,9 @@
 <!-- Name should be of type CorporateEntity. Someday... -->
 <xs:complexType name="publisher">
   <xs:all>
-    <xs:element name="Place" type="xs:string"/>
+    <!-- Must have at least a Name -->
     <xs:element name="Name" type="xs:string"/>
+    <xs:element name="Place" type="xs:string" minOccurs="0"/>
     <xs:element name="startDate" type="xs:string" minOccurs="0"/>
     <xs:element name="endDate" type="xs:string" minOccurs="0"/>
   </xs:all>

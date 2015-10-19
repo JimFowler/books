@@ -72,7 +72,7 @@ volumes of the Astronomischer Jahresbericht
 
     <xs:element name="Translators" minOccurs="0">
       <xs:complexType>
-        <xs:sequence>
+	<xs:sequence>
 	  <xs:element name="Translator" type="G2" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:complexType>
@@ -138,7 +138,7 @@ volumes of the Astronomischer Jahresbericht
   </xs:sequence>
 </xs:complexType>
 
-<!-- Name should be of type CorporateEntity. Someday... -->
+<!-- Name should be of type CorporateBody. Someday... -->
 <xs:complexType name="publisher">
   <xs:all>
     <xs:element name="Place" type="xs:string"/>
@@ -180,7 +180,7 @@ but this requires some intellegent parsing. -->
 
 <xs:complexType name="G2">
   <!-- A Group 2 element. Group 2 elements may be a person
-  or a corporate entity.  The personInfo is based on the
+  or a corporate body.  The personInfo is based on the
   data structure in the python package nameparser. -->
   <xs:choice>
     <xs:element name="Person" type="personInfo"/>
