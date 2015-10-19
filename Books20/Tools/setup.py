@@ -18,7 +18,7 @@ setup( name='bookentry',
                   'Ubuntu 13',
                   'Ubuntu 14.10 LTS'],
        packages=['bookentry'],
-       scripts=['ajbbooks', 'ppxml'],
+       scripts=['ajbbooks', 'ppxml', 'validateXML'],
        package_data={'bookentry': ['symbols.txt']},
        )
 
