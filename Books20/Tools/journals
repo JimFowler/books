@@ -1,0 +1,82 @@
+#! /usr/bin/env python3
+# -*- mode: Python;-*-
+
+"""Journals entries from AAA/AJB
+"""
+
+import sys
+import os
+import argparse
+from PyQt4.QtCore import *
+from PyQt4.QtGui  import *
+
+# Trouble shooting assistance
+from pprint import *
+pp = PrettyPrinter()
+
+import bookentry.journal_rc
+import bookentry.journalWin as mw
+
+__version__ = '1.0'
+
+#
+# Parse the command line arguments
+#
+def getargs():
+   parser = argparse.ArgumentParser(description='Create or edit a journals.xml file')
+
+   parser.add_argument('-V', '--version',
+                       help='provide version info,',
+                       action='store_true')
+   parser.add_argument( '-i', '--input', type=str,
+                        help='read the file INPUT for entries',
+                        action='append')
+   parser.add_argument( '-s', '--symbols', type=str,
+                        help='use alternate symbol table,',
+                        action='append')
+
+   args = parser.parse_args()
+
+   return args
+
+
+#
+# The main body
+#
+
+def main():
+
+   args = getargs()
+
+   app = QApplication(sys.argv)
+   app.setApplicationName('AJB Journal Entry')
+   # app.setWindowIcon(QIcon(':/icon_journals.svg'))
+   
+   form = mw.JournalEntry()
+   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
+                   form.setFocusChanged)
+
+   if args.version:
+      hstr = form.helpString()
+      form.helpAbout()
+      sys.exit(0)
+
+   if args.symbols is not None:
+      form.setSymbolTableName(args.symbols[0])
+
+   if args.input is not None:
+      fname = args.input[0]
+      if os.path.isfile(fname):
+         form.openFile(fname)
+      else:
+         form.openNewFile()
+         form.bf.setFileName(fname)
+         form.setWinTitle(form.bf.getBaseName())
+
+
+   form.show()
+   sys.exit(app.exec_())
+
+
+
+main()

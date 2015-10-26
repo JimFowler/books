@@ -1,3 +1,15 @@
+2015-10-25  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/xml/journalfile.xsd: Added multiple comments
+	for a journal. Previous version only allowed one long comment.
+
+2015-10-24  Jim Fowler  <jrf@Biblion>
+
+	* Tools/journals:
+	* Tools/bookentry/designer/ui_JournalSearch.ui:
+	* Tools/bookentry/designer/ui_JournalEntry.ui: wrote initial
+	designer for Journal entry tool.
+
 2015-10-18  Jim Fowler  <jrf@Biblion>
 
 	* Tools/setup.py: added validateXML to scripts list.

@@ -15,7 +15,7 @@ PYRCC = pyrcc4 -py3
 # Target lists
 #
 USER_INTERFACES = ui_BookEntry.py ui_HeaderEntry.py ui_OrigStr.py \
-		ui_EntrySelect.py
+		ui_EntrySelect.py ui_JournalSearch.py ui_JournalEntry.py
 
 RESOURCE_FILES = ajb_rc.py
 
@@ -36,6 +36,12 @@ ui_OrigStr.py: designer/ui_OrigStr.ui
 ui_EntrySelect.py: designer/ui_EntrySelect.ui
 	$(PYUIC) -o ui_EntrySelect.py designer/ui_EntrySelect.ui
 
+
+ui_JournalSearch.py: designer/ui_JournalSearch.ui
+	$(PYUIC) -o ui_JournalSearch.py designer/ui_JournalSearch.ui
+
+ui_JournalSearch.py: designer/ui_JournalEntry.ui
+	$(PYUIC) -o ui_JournalEntry.py designer/ui_JournalEntry.ui
 
 #
 # Convert the XML resource files to Python files
