@@ -1,5 +1,8 @@
 2015-10-25  Jim Fowler  <jrf@Biblion>
 
+	* Tools/doc/theory.rst: got a lot of the theory document
+	written today.
+
 	* Tools/bookentry/xml/journalfile.xsd: Added multiple comments
 	for a journal. Previous version only allowed one long comment.
 

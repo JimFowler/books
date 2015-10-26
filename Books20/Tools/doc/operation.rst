@@ -38,8 +38,8 @@ File
 ----
 
 **New File <Ctrl-N>**: Create a new bookfile and display a blank entry ready
-for editing. If a file has previously opened and records saved to it
-or if the current entry has been modified a dialog box will pop up
+for editing. If a file has been previously opened and records saved to it
+or if the current entry has been modified, a dialog box will pop up
 asking if you wish to save the entry and the existing file before
 opening the new file
 
@@ -47,12 +47,12 @@ opening the new file
 dialog box that allows one to select an existing file. The file name
 will be displayed in the window title bar. Files are opened either to
 check the entries in the file or to add additional entries to the
-file.  The form will display the last entry. Simply click the ``New
+file.  The form will display the first entry. Simply click the ``New
 Entry`` button to bring up a blank entry item to be filled
 in. Alternatively use the ``Next`` and ``Previous`` buttons under the
 ``Index`` number to step through the records in order verify the
-records have been properly entered. If a file has previously opened
-and records saved to it or if the current entry has been modified a
+records have been properly entered. If a file has been previously opened
+and records saved to it or if the current entry has been modified, a
 dialog box will pop up asking if you wish to save the entry and the
 existing file before opening the new file
 
@@ -71,15 +71,16 @@ Command Line Flags. The user is asked to save the current entry if it
 has been modified.
 
 **Save Entry <Ctrl-R>**: Save the current entry in the display to the list of
-entries in the bookfile class.
+entries in the bookfile object.
 
-**Delete Entry <Ctrl-D>**: Delete the displayed entry from the internal list. A
-dialog box will appear to confirm that you want to delete this entry.
+**Delete Entry <Ctrl-D>**: Delete the displayed entry from the
+internal bookfile object. A dialog box will appear to confirm that you
+want to delete this entry.
 
-**Print Entry <Ctrl-P>**:
+**Print Entry <Ctrl-P>**: Will print a screen dump of the entry window.
 
 **Quit <Ctrl-Q>**: Close the window and quits the application.  If there are
-unsaved changes to the entries or the internal list the user will be
+unsaved changes to the entries or the internal bookfile object, the user will be
 asked to save the changes first.
 
 
@@ -132,7 +133,7 @@ Buttons
 Save Entry
 -----------
 
-Save the current on screen entry to the internal list of
+Save the current on-screen entry to the internal list of
 entries at the current index number
 
 
@@ -151,7 +152,7 @@ Insert the entry on the screen at a new location in the internal list.
 A dialog window will be displayed with the AJB index string, the
 author, and the title of the existing entries. Highlight an entry and
 click the **Ok** button to insert a copy of the existing entry into
-the internal before the highlight entry.
+the internal bookfile object before the highlighted entry.
 
 
 Delete Entry
@@ -175,8 +176,8 @@ The symbol table is illustrated below.  It can be displayed by
 selecting the **Insert Symbol** item in the **Edit** menu or use the
 keyboard shortcut **Cntr-I**. This brings up a window as shown below.
 Clicking on any letter will insert that letter in the current field at
-the current location of the cursor. See the section <Theory:Symbol
-Table> for information about adding new symbols.
+the current location of the cursor. See the section :ref:`symbol-table-theory`
+for information about adding new symbols.
 
 .. image:: images/symbols.png
 

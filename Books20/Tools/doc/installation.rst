@@ -1,6 +1,8 @@
 Installation
 ************
 
+Installing
+==========
 
 BookEntry uses the python library *distutils* to install and
 distribute the packages. More documentation about the installation
@@ -20,8 +22,31 @@ home directory so I use
 
 Or you can install in a different system directory with
 
-``python3 setup.py install --prefix=/opt/local``
+``python3 setup.py install --prefix=<dirname>``
+
+You may need superuser priviledges to install in system directories.
+
 
 Building and Installing the Documentation
-_________________________________________
+=========================================
+
+The documentation can be found in ./Tools/doc. It is written using
+Sphinx version 1.2.2 (cf. `sphinx-doc.org
+<http://sphinx-doc.org/>`_). Output formats may be HTML, LaTeX, pdf,
+postscript, epub, or other formats.  I primarily use pdf and HTML.
+(Making the pdf version requires that ``pdflatex`` be installed.)  You
+can run ``make help`` to see what other formats are available.
+
+To build the HTML and pdf documentation in the **doc** directory, run
+the command
+
+``make latexpdf html``
+
+To install these files, run the commands
+
+``mv _build/html/* <htmldir>``
+
+``mv _build/latex/AJBbooks.pdf <pdfdir>``
+
+
 
