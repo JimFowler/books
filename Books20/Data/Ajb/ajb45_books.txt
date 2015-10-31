@@ -8,7 +8,7 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
 
-For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 2015, finished 17 Oct 2015, proofread entry 128
+For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 2015, finished 17 Oct 2015, proofread entry 31 Oct 2015
 
 
 1 45.03(0).12  W. Blaschke, Galileo und Kepler, , , 1943, 14 pp, 2 RM, AN 274 144 : and Himmelswelt 54 24 : B. Sticker and VJS 78 202 : B. Meyermann and ZfMG 28 99 :, other Hamburger Mathematische Einzelschriften 39; other a mathematical monograph; 
@@ -271,7 +271,7 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 130 45.11(0).02  M. Daisomont, Le pratique du foucaultage der miroirs de télescope; Théorie et application à l'usage des amateurs d'astronomie et des opticiens, Bruges, Edition De Tempel, 1943, 33 pp, 18.00 Fr., Ciel et Terre 59 364 : J. S. Dubois, 
 
-131 45.11(0).03  M. Daisomont, La pratique de l'argenture des miroirsd'amateur, Bruge, Edition de Tempel, 1943, 8 pp, 5.00 Fr., Ciel et Terre 60 27 :, 
+131 45.11(0).03  M. Daisomont, La pratique de l'argenture des miroirs utiliés en astronomie, Bruge, Edition de Tempel, 1943, 8 pp, 5.00 Fr., Ciel et Terre 60 27 :, 
 
 132 45.11(0).04  M. Daisomont, Le pratique de la lunette astronomique d'amateur, Bruges, Edition De Tempel, 1943, 76 pp, 25.00 Fr., Ciel et Terre 59 364 : P. Bourgeois, 
 
@@ -289,19 +289,19 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 139 45.13(0).11  C. E. K. Mees, The Theory of the Photographic Process, New York, Macmillan Co., 1942, 10+1124 pp, $12.00, ApJ 97 454 : D. M. Popper, 
 
-140 45.15(0).18  M. Migeotte, Sue la construction d'un spectrographe infra-rouge auto-enredistreur à grand pouvoir de résolution et sur son application à l'étude du spectre du soleil et de la vapeur d'eau dans la région comprise entre 13440Å et 15293Å, Bruxelles, M. Hayez, 1945, 107 pp, , ApJ 103 383 : P. Swings and Ciel et Terre 62 420 : M. Nicolet, 
+140 45.15(0).18  M. Migeotte, Sur la construction d'un spectrographe infra-rouge auto-enregistreur à grand pouvoir de résolution et sur son application à l'étude du spectre du soleil et de la vapeur d'eau dans la région comprise entre 13440 Å et 15293 Å, Bruxelles, M. Hayez, 1945, 107 pp, , ApJ 103 383 : P. Swings and Ciel et Terre 62 420 : M. Nicolet, 
 
 141 45.16(0).06  K. Scheibe and J. Stamm, Uhr und Strom; Ein Handbuch über elektrische Uhren, München, R. Oldenbourg, 1943, 208 pp, 9.00 RM, Himmelswelt 54 12 : B Sticker, 
 
-142 45.16(0).16a W. I. Milham, Time and Timekeepers, New York, Macmillan Co., 1941, 616 pp, $1.98, Sky Tel. 1 Nr. 3 20 : R. N. Mayall, 
+142 45.16(0).16a W. I. Milham, Time and Timekeepers, New York, The Macmillan Co., 1941, 616 pp, $1.98, Sky Tel. 1 Nr. 3 20 : R. N. Mayall, 
 
 143 45.21(0).08  W. M. Smart, Text-book on Spherical Astronomy, Cambridge, University Press, , , $4.75, ApJ 103 Nr. 3 4 : R. J. Trumpler, 4th edition;reprint of AJB 38.21.02;also published New York: The Macmillan Company;
 
 144 45.21(0).10  M. Waldmeier, Leitfaden der Astronomischen Orts- und Zeitbestimmung, Aarau, H. R. Sauerländer & Co., 1946, 84 pp, , , 
 
-145 45.23(0).04  A. A. Mikhailov, The Theory of Eclipses, Moskau-Leningrad, Government Publishing for Technical and Theortical Literature, 1945, 199 pp, 10.00R, ApJ 103 381 : A. Pogo, in Russian;other Staatsverlag für technisch-theoritische Literatur; 
+145 45.23(0).04  A. A. Mikhailov, The Theory of Eclipses, Moskau-Leningrad, Government Publishing for Technical and Theoretical Literature, 1945, 199 pp, 10.00R, ApJ 103 381 : A. Pogo, in Russian;other Staatsverlag für technisch-theoritische Literatur; 
 
-146 45.26(0).01  E. Achelis, The Calendar for Everybody, New York, G. P. Putnam & Sons, 1943, 141 pp, $1.50, Sky Tel. 3 Nr. 6 15, 
+146 45.26(0).01  E. Achelis, The Calendar for Everybody, New York, G. P. Putnam & Sons, 1943, 141 pp, $1.50, Sky Tel. 3 Nr. 6 15 : R. N. Mayall, 
 
 147 45.26(0).04  A. Fresa, Il calendario degli Israeliti, , Lunario Israelitico, 1946, , , , 
 
@@ -309,27 +309,27 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 149 45.26(0).11  B. D. Panth, Consider the Calendar, , Teacher's College Columbia University, 1944, 134 pp, $1.25, Sky Tel. 4 Nr. 7 17 : R. N. Mayall, 
 
-150 45.31(0).19  O. Heckmann, Theorien der Kosmologie, , , , , , ApJ 104 146, reference AJB 44.31.03;
+150 45.31(0).19  O. Heckmann, Theorien der Kosmologie, , , , , , ApJ 104 146 : W. H. McCrea, reference AJB 44.31.03;
 
 151 45.31(0).27  H. Kleiner, Kraftwirking im Kosmos; Elektrostatik und -Dynamik contra Gravitation; Neue kosmische Gesetze, Leipzig, , 1943, 56 pp, 5.00 RM, , 
 
 152 45.35(0).01  W. Riezler, Einführung in die Kernphysik, Leipzig, Verlag Bibliograhisches Institut, 1944, 250 pp, , ZfA 22 236 :, 3rd edition;other review is actually of the second edition; 
 
-153 45.39(0).21  V. G. Fessenkoff, Cosmogony of the Solar System, Moskau-Leningrad, Academy of Sciences of the USSR, 1944, 112 pp, 5.00 R, ApJ 102 264 : O. Struve, 
+153 45.39(0).21  V. G. Fessenkoff, Cosmogony of the Solar System, Moskau-Leningrad, Academy of Sciences of the USSR, 1944, 112 pp, 5.00 R, ApJ 102 264 : O. Struve, in Russian;
 
 154 45.41(0).01  G. Gamov, The Birth and Death of the Sun, , , , , , JBAA 52 82 : M. A. Ellison and Sky Tel. 4 Nr. 10 8 : M. Lockwood, reference AJB 42.41.08;
 
 155 45.41(0).02  M. Waldmeier, Ergebnisse und Probleme der Sonnenforschung, , , , , , Ann d Hydrog 71 284 : A. Schwassmann, reference AJB 43.41.20;
 
-156 45.41(0).03  M. Waldmeier, Sonne und Erde, Zürich, Büchergilde Gutenberg, 1945, 239 pp, , ApJ 103 103 : and PAT 27 74 and VJS der Naturforschenden Ges. Zürich 90 239 : W. Brunner, 
+156 45.41(0).03  M. Waldmeier, Sonne und Erde, Zürich, Büchergilde Gutenberg, 1945, 239 pp, , ApJ 103 103 : and PAT 27 74 : and VJS der Naturforschenden Ges. Zürich 90 239 : W. Brunner, 
 
 157 45.41(0).03  M. Waldmeier, Sonne und Erde, Zürich, Büchergilde Gutenberg, 1946, 240 pp, , ApJ 103 103 : and PAT 27 74 : and VJS der Naturforschenden Ges. Zürich 90 239 : W. Brunner, 2nd edition;
 
 158 45.48(0).28  J. Stokley, Electrons in Action, New York, Whittlesey House, 1946, 320 pp, $3.00, Sky Tel. 5 Nr. 7 14 : O. H. Caldwell, 
 
-159 45.51(0).01  , Planetary co-ordinates for the years 1940—1960 referred to the equinox of 1950.0, , , , , , , reprint of AJB 41.51.01;other photographic reprint; 
+159 45.51(0).01  , Planetary co-ordinates for the years 1940—1960 referred to the equinox of 1950.0, , , , , , , reprint of AJB 41.51.01;other photographic reprint of the 1939 edition; 
 
-160 45.51(0).02  F. Becker, Das Sonnensystem comma mechanisch comma physikalisch comma kosmogonische betrachtet, Oehringen, hohenlohesche Buchh., 1943, 64 pp, 2.50 RM, , other may be a reprint of Schriften des Deutschen Naturhundevereins (NF) 14; 
+160 45.51(0).02  F. Becker, Das Sonnensystem comma mechanisch comma physikalisch comma kosmogonische betrachtet, Oehringen, Hohenlohesche Buchh., 1943, 64 pp, 2.50 RM, , other may be a reprint of Schriften des Deutschen Naturhundevereins (NF) 14; 
 
 161 45.51(0).03  H. N. Russell and R. S. Dugan and J. Q. Stewart, Astronomy Vol. 1; The Solar System, Boston, Ginn & Co., 1945, 11+470+21 pp, $3.00, ApJ 103 103 : and Sky Tel. 5 Nr. 3 14 : F. L. Whipple, other a revised edition; 
 
@@ -337,13 +337,13 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 163 45.51(0).05  F. L. Whipple, Earth comma Moon and Planets, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 197 : and J Can RAS 36 33 :, reference AJB 44.51.14;
 
-164 45.53(0).01  A. Renier, L'âge de la Terre et autres essais, Bruxelles, Desclée de Brouwer, 1942, 327 pp, 60 fr. belges., Ciel et Terre 59  289, 
+164 45.53(0).01  A. Renier, L'âge de la Terre et autres essais, Bruxelles, Desclée de Brouwer, 1942, 327 pp, 60 fr. belges., Ciel et Terre 59  289 :, 
 
-165 45.54(2).40  J. E. Spurr, Geology appled to Selenology; The Imbrian Plain Region of the Moon, Lancaster, The Science Press, 1944, 112 pp, $2.00, Sky Tel. 4 Nr. 1 16 : R. K. Marshall, 
+165 45.54(2).40  J. E. Spurr, Geology applied to Selenology; The Imbrian Plain Region of the Moon, Lancaster, The Science Press, 1944, 112 pp, $2.00, Sky Tel. 4 Nr. 1 16 : R. K. Marshall, 
 
 166 45.54(2).41  J. E. Spurr, Geology applied to Selenology; II The Features of the Moon, Lancaster, The Science Press, 1945, 318 pp, $5.00, Sky Tel 5 Nr. 7 15 :, 
 
-167 45.54(2).46  C. Fisher, The Story of the Moon, Garden City NY, Doubleday comma Doran & Co., 1943, 301 pp, $3.00, Sky Tel. 2 Nr. 8 16, 
+167 45.54(2).46  C. Fisher, The Story of the Moon, Garden City NY, Doubleday comma Doran & Co., 1943, 301 pp, $3.00, Sky Tel. 2 Nr. 8 16 : N. E. Wagman, 
 
 168 45.54(2).48  A. Fresa, La Luna; Movimenti comma topografia comma influenze e culto: Conpiccolo dizionario selenografico, Milano, U. Hoepli, 1943, 24+530 pp, , , 2nd edition;
 
@@ -363,31 +363,31 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 176 45.71(0).25  , Katalog der Anhaltsterne für das Zonenunternehmen der Astronomischen Gesellschaft; Nach Beobachtungen an der Sternwarten Babelsberg comma Bergedorf comma Bonn comma Breslau comma Heidelberg comma Leipzig und Pulkowo, Bonn-Berlin, F. Dümmlers Verlag, 1943, 20+361 pp, , , other same as Veröff. Berlin-Bahlem Nr. 55; 
 
-177 45.71(0).26  , Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 18 jahrhunderts; Abteilung II Der südliche Sternhimmel; Band 7 6ʰ Rektaszension, Karlsruhe, G. Braun, 1943, 235 pp, 32.40 RM, , other editing by Preuß. Akademie der Wissenschaften; 
+177 45.71(0).26  , Geschichte des Fixsternhimmels comma enthaltend die Sternörter der Kataloge des 18 und 19 jahrhunderts; Abteilung II Der südliche Sternhimmel; Band 7 6ʰ Rektaszension, Karlsruhe, G. Braun, 1943, 235 pp, 32.40 RM, , other editing by Preuß. Akademie der Wissenschaften; 
 
 178 45.71(0).27  , Astrographic Catalogue 1900.0 Sydney Section Vol. 17 R.A. 0ʰ to 6ʰ comma Dec. -55° to -57°, Sydney, , 1943, 23 pp, , , 
 
-179 45.71(0).27  , Astrographic Catalogue 1900.0 Sydney Section Vol. 19 R.A. 12ʰ to 18ʰ comma Dec. -55° to -57°, Sydney, , 1944, 70 pp, , , 
+179 45.71(0).28  , Astrographic Catalogue 1900.0 Sydney Section Vol. 19 R.A. 12ʰ to 18ʰ comma Dec. -55° to -57°, Sydney, , 1944, 70 pp, , , 
 
-180 45.71(0).31  I. M. Lewitt and R. K. Marshall, Star Maps for Beginners, Philadelphia, The Franklin Institute, 1942, 33 pp, $0.50, J Can RAS 36 377 : and Sky Tel. 1 Nr. 8 21, 
+180 45.71(0).31  I. M. Lewitt and R. K. Marshall, Star Maps for Beginners, Philadelphia, The Franklin Institute, 1942, 33 pp, $0.50, J Can RAS 36 377 : and Sky Tel. 1 Nr. 8 21 :, 
 
 181 45.71(0).34  A. P. Norton, A Star Atlas and Reference Handbook, London, Gall & Inglis, 1942, , 13s, JBAA 52 277 :, 8th edition;
 
 182 45.71(0).35  A. P. Norton, A Star Atlas and Reference Handbook (Epoch 1950); for Students and Amateurs; covering the whole Star Sphere comma and showing over 8000 Stars comma Nebulae and Clusters comma with Short Descriptive Lists of Objects Suitable for Small Telescopes comma Notes on Planets comma Star Nomenclature comma etc., London-Edinburgh, Gall & Inglis, 1943, 16+90 pp, 15s, , 9th edition;
 
-183 45.71(0).36  A. P. Norton and J. G. Inglis, Norton's Star Atlas and Telescopic Handbook, London, Gall & Inglis, 1943, 56 pp, , ApJ 99 124 : W. W. Morgan and JBAA 53 218 : and, 9th edition;other do not know what the difference is with previous entry; 
+183 45.71(0).36  A. P. Norton and J. G. Inglis, Norton's Star Atlas and Telescopic Handbook, London, Gall & Inglis, 1943, 56 pp, , ApJ 99 124 : W. W. Morgan and JBAA 53 218 :, 9th edition;other do not know what the difference is with previous entry; 
 
 184 45.75(0).01  A. Gatterer and J. Junkes and V. Frodl, Atlas der Restlinien Vol 2 Spektren der seltenen Erden, Vatican City, Vatican Press, 1945, 350 pp, $60.00, ApJ 103 252 : G. Abetti, 
 
 185 45.75(0).02  G. Herzberg, Atomic Spectra and Atomic Structure, New York, Dover Publications, 1944, 14+257 pp, $2.75, ApJ 103 103 :, 2nd edition;
 
-186 45.75(0).03  G. Herzberg, Infrared and raman Spactra of Polyatomic Molecules, New York, D. Van Nostrand, 1945, 632+XIII pp, $9.50, ApJ 104 330 : E. F. Barker, 
+186 45.75(0).03  G. Herzberg, Infrared and Raman Spectra of Polyatomic Molecules, New York, D. Van Nostrand, 1945, 632+XIII pp, $9.50, ApJ 104 330 : E. F. Barker, 
 
 187 45.75(0).04  W. A. Hiltner and R. C. Williams, Photometric Atlas of Stellar Spectra, Ann Arbor MI, University of Michigan Press, 1946, , $7.50, ApJ 104 331 : M. Minnaert, 
 
-188 45.75(0).05  W. W. Morgan and P. C. Keenan and E. Kellman, An Atlas of Stellar Spectra; with an Outline of Spectral Classification, Chicago, University of Chicago Press, 1943, 6+36 pp, $10.00 and 60s, ApJ 98 240 : A. H. Joy and Himmelswelt 55 49 : and Nature 152 147 :, 
+188 45.75(0).05  W. W. Morgan and P. C. Keenan and E. Kellman, An Atlas of Stellar Spectra; with an Outline of Spectral Classification, Chicago, University of Chicago Press, 1943, 6+36 pp, $10.00 and 60s, ApJ 98 240 : A. H. Joy and Himmelswelt 55 49 : and Nature 152 147 :, also published London: Cambridge University Press;other Astronomical Monographs; 
 
-189 45.84(0).01  L. Campbell and L. Jacchia, The Story of Variable Stars, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 196 : and J Can RAS 36 74 : and VJS 78 202 : C. Hoffneister, other a revised edition cost is $3.00; reference AJB 43.84.03;
+189 45.84(0).01  L. Campbell and L. Jacchia, The Story of Variable Stars, , , , , , Ann d'Astrophys 8 132 : and JBAA 53 196 : and J Can RAS 36 74 : and VJS 78 202 : C. Hoffmeister, other a revised edition cost is $3.00; reference AJB 43.84.03;
 
 190 45.84(0).02  Z. Kopal, An Introduction to the Study of Eclipsing Variables, Cambridge, , 1946, 10+220 pp, $4.00, ApJ 104 463 : H. C. van de Hulst, other Harvards Obs. Monographs 6; 
 
@@ -401,23 +401,23 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 195 45.90(0).02  W. Becker, Sterne und Sternsysteme, , , , , , NAT 1944 69 : and Phys Z 44 87 : W. Ramm and VJS 78 2 : J. Wempe, reference AJB 44.90.02;
 
-196 45.90(0).03  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Ann d'Astrophys 8 131 : P. Coudere and JBAA 53 197 : and The Sky 5 Nr. 12 18 :, other should The Sky actually be Sky Tel.?; reference AJB 44.89.01;
+196 45.90(0).03  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Ann d'Astrophys 8 131 : P. Coudere and JBAA 53 197 : and The Sky 5 Nr. 12 18 : R. K. Marshall, other should The Sky actually be Sky Tel.?; reference AJB 44.89.01;
 
 197 45.90(0).04  B. J. Bok and P. F. Bok, The Milky Way, Philadelphia, The Blakiston Co., 1945, 6+224 pp, $3.00, ApJ 103 382 : W. W. Morgan and Sky Tel. 5 Nr. 4 14 : R. K. Marshall, 2nd edition;reprint of AJB 44.89.01;
 
-198 45.90(0).04  S. Chandrasekhar, Principles of Stellar Dynamics, , , , , , J Can RAS 36 377, reference AJB 44.90.15;
+198 45.90(0).04  S. Chandrasekhar, Principles of Stellar Dynamics, , , , , , J Can RAS 36 377 :, reference AJB 44.90.15;
 
-199 45.92(0).01  W. Heisenberg ed., Kosmische Strahlung; Vörtrage comma gehalten im Max-Planck-Institut Berlin-Dahlem vom E. Bagge comma F. Bopp comma S. Flügge comma W. Heisenberg comma A. Klemm comma J. Neixner comma G. Molière comma H. Volz comma C. F. v. Weizsäcker comma K. Wirtz, Berlin, Springer-Verlag, 1943, 6+173 pp, 13.50 RM, , 
+199 45.92(0).01  W. Heisenberg ed., Kosmische Strahlung; Vörtrage comma gehalten im Max-Planck-Institut Berlin-Dahlem vom E. Bagge comma F. Bopp comma S. Flügge comma W. Heisenberg comma A. Klemm comma J. Meixner comma G. Molière comma H. Volz comma C. F. v. Weizsäcker comma K. Wirtz, Berlin, Springer-Verlag, 1943, 6+173 pp, 13.50 RM, , 
 
 200 45.92(0).02  P. Auger, What are Cosmic Rays?, Chicago, University of Chicago Press, 1945, 128 pp, $2.00, Sky Tel. 4 Nr. 9 14 : S. A. Korff, translated from French by M. M. Shapiro;in English;
 
-201 45.93(0).04  G. Pession, Manuale di Astronomia pratica (Astronomia geodetica), Roma, Librerie dello Stato, 1943, 588 pp, 100 Lire, , 2nd edition;reprint of AJB 44.93.05;
+201 45.93(0).04  G. Pession, Manuale di Astronomia pratica (Astronomia geodetica), Roma, Libreria dello Stato, 1943, 588 pp, 100 Lire, , 2nd edition;reprint of AJB 44.93.05;
 
 202 45.97(0).07  W. K. Hristow, Die Gauß-Krügerschen Koordinaten auf dem Ellipsoid, Leipzig, B. G. Teubner, 1943, 6+80 pp, 5.00 RM, , 
 
 203 45.97(0).10  H. Kuiper, Poolbewegingen tengevolge van poolvlucht-kracht, Utrecht, , 1943, 8+87 pp, 10.00 Fl., , 
 
-204 45.100(0).01  W. H. Barton jr., An Introduction to Celestial Navigation, New York, , 1942, 32 pp, $0.50, JBAA 53 218 : and Sky Tel. 1 Nr. 7 21, 
+204 45.100(0).01  W. H. Barton jr., An Introduction to Celestial Navigation, New York, , 1942, 32 pp, $0.50, JBAA 53 218 : and Sky Tel. 1 Nr. 7 21 :, 
 
 205 45.100(0).03  W. H. Barton jr. and C. O. Roth jr., Basic Problems in Celestial Navigation, Cambridge MA, Addison-Wesley Press, 1944, 56 pp, $1.00, J Can RAS 38 306 :, 
 
@@ -439,7 +439,7 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 214 45.100(0).14  W. Hadel, Celestial Navigation; A problem manual, New York, McGraw-Hill Book Co., 1943, 262 pp, $3.25, , 
 
-215 45.100(0).15  R. Hadingham, Astronomical Air Navigation; A Comprehensive Handbook embodying the Latest Principles for Pratical Navigators comma Instructors and Students, London, The Technical Press, 1943, 11+132 pp, 10s 6d, JBAA 53 254 : and Nature 152 173 : H. S. Jones, 
+215 45.100(0).15  R. Hadingham, Astronomical Air Navigation; A Comprehensive Handbook embodying the Latest Principles for Practical Navigators comma Instructors and Students, London, The Technical Press, 1943, 11+132 pp, 10s 6d, JBAA 53 254 : and Nature 152 173 : H. S. Jones, 
 
 216 45.100(0).19  L. M. Kells and W. F. Kern and J. R. Bland, Navigation, New York, McGraw-Hill Book Co., 1943, 479 pp, $5.00, Sky Tel. 3 Nr. 5 17 : W. H. Barton jr., 
 
@@ -473,7 +473,7 @@ For volume AJB 45 Index to the Literature of 1943-1946 Part 1, started 6 Sept 20
 
 231 45.100(0).38  S. A. Walling and J. C. Hill, Nautical Mathematics, Cambridge, At the University Press, 1943, 144 pp, 3s 6d, , 
 
-232 45.100(0).39  P. V. H. Weems and W. C. Eberle, Learning to Navigate, New York, Pitman Publishing Corporation, 1943, 135 pp, $2.00, Sky Tel. 3 Nr. 9 17 :, 
+232 45.100(0).39  P. V. H. Weems and W. C. Eberle, Learning to Navigate, New York, Pitman Publishing Corporation, 1943, 135 pp, $2.00, Sky Tel. 3 Nr. 9 17 : F.-H. Marshall jr., 2nd edition;
 
 233 45.100(0).42  , Instruzioni sulle curve di altezza, Firenze, Instituto Geografico Militare, 1943, 62 pp, , , 
 
