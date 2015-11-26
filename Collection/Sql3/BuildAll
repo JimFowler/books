@@ -1,0 +1,8 @@
+
+.separator |
+.import Vendors.txt Vendors
+.import Authors.txt Authors
+.import Projects.txt Projects
+.import Books.txt Books
+.import BookAuthor.txt BookAuthor
+.import BookProject.txt BookProject

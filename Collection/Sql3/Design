@@ -1,0 +1,96 @@
+21 November 2015
+J. R. Fowler
+
+Note: the current text files with the database data
+  are from Dec 2008
+
+To create the Collection database in sqlite3 format
+
+> sqlite3 Collection.db3
+ .read CreateTables.sql
+ .separator |
+ .import Books.txt Books
+ .import Authors.txt Authors
+ .import Projects.txt Projects
+ .import Vendors.txt Vendors
+ .import BookAuthor.txt BookAuthor
+ .import BookProject.txt BookProject
+ .import Wanted.txt Wanted
+ .import ToDo.txt ToDo
+ .read CreateViews.sql
+
+Need to define and build python interface
+   need display
+   define each display's data needs
+   write SQL query statements
+
+When that's done,
+  export current Access database
+  rebuild and import files into sqlite3 database
+
+
+User interface
+
+  python and/or webpages?
+  (if webpages, output in XML, use .css)
+
+  Main Selection
+   fancy graphics
+   list of options
+
+  Vendor entry/update
+  Author entry/update
+  Project entry/update
+
+    text entry form
+    list of existing vendors
+     double click or New
+    if Save:
+       update table
+
+  Book entry
+    list of Title, Author
+
+  Wanted entry
+
+  ToDo entry
+    list of tasks in date/time order, oldest first, completed last
+
+  Reports
+    title, author, year, Publisher, edition, printing, condition, cost
+    title, author 
+    wants
+
+  Other SQL
+
+
+SQL Statements
+
+To get list of Projects and ProjectsIds
+SELECT  ProjName, ProjectId FROM Projects ORDER BY ProjName;
+if name in list
+SELECT * IN Projects WHERE ProjName=='name';
+fill in fields
+get list of books
+SELECT ???
+read field
+INSERT OR REPLACE INTO Projects VALUES(...);
+COMMIT;
+
+To get list of Authors and AuthorId
+SELECT  LastName, FirstName, AuthorId FROM Authors ORDER BY LastName, FirstName;
+if name in list
+SELECT * IN Authors WHERE LastName=='lastname' and FirstName=='FirstName;
+fill in fields
+read fields
+INSERT OR REPLACE INTO Authors VALUES(...);
+COMMIT;
+
+To get list of Vendors and VendorId
+SELECT  VendorName, VendorId FROM Vendors ORDER BY VendorName;
+if name in list
+SELECT * IN Vendors WHERE VendorName=='name';
+fill in fields
+read fields
+INSERT OR REPLACE INTO Vendors VALUES(...);
+COMMIT;

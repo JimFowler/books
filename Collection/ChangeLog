@@ -1,3 +1,19 @@
+2015-11-25  Jim Fowler  <jrf@Biblion>
+
+	* Sql3/CreateTables.sql: added foreign keys PRAGMA and cleaned up
+	sql statements based on O'Reilly SQLite boot.
+
+2015-11-24  Jim Fowler  <jrf@Biblion>
+
+	* Sql3/CreateViews.sql: Added views to the database
+
+2015-11-21  Jim Fowler  <jrf@Biblion>
+
+	* Sql3/CreateTables.sql: Started work on redefining
+	the database using sqlite3 rather than mySQL. Sqlite
+	provides a lighter weight API for my small, low transaction
+	rate database
+
 2011-10-21  Jim Fowler  <jrf@Biblion>
 
 	* Git: converted to git version control system.
@@ -6,7 +22,7 @@
 
 	* Webpages: added the webpages to the svn list.  Checked all
 	modifications into svn
-	
+
 2009-08-23  Jim Fowler  <jrf@Biblion>
 
 	* WebPages/Collection.css: Created draft style sheet for
