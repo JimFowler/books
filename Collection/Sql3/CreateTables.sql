@@ -88,9 +88,6 @@ CREATE TABLE Books
     Description     TEXT NULL,
     Comments        TEXT NULL,
 
-    -- Wanted      CHECK( Wanted IN (No,Yes)),
-    Wanted          INT,
-
     --
     -- Should not have two books with the same AccessionNumber
     --
@@ -278,9 +275,9 @@ CREATE TABLE BookProject
 
 
 CREATE TABLE ToDo
-       (ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-        DateOfEntry DATE NOT NULL,
-	Task  TEXT NOT NULL,
+       (ToDoId        INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+        DateOfEntry   DATE NOT NULL,
+	Task          TEXT NOT NULL,
 	DateCompleted DATE NULL
        )
 ;

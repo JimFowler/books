@@ -1,8 +1,11 @@
-
+.read CreateTables.sql
 .separator |
-.import Vendors.txt Vendors
-.import Authors.txt Authors
-.import Projects.txt Projects
-.import Books.txt Books
-.import BookAuthor.txt BookAuthor
-.import BookProject.txt BookProject
+.import ./Data/Vendors.txt Vendors
+.import ./Data/Authors.txt Authors
+.import ./Data/Projects.txt Projects
+.import ./Data/Books.txt Books
+.import ./Data/Wanted.txt Wanted
+.import ./Data/BookAuthor.txt BookAuthor
+.import ./Data/BookProject.txt BookProject
+.import ./Data/ToDo.txt ToDo
+.read CreateViews.sql

@@ -9,12 +9,8 @@
 --
 -- To Use:
 --    $ sqlite3 Collection.db3
---       .read CreateViewss.sql
+--       .read CreateViews.sql
 --
---
--- The last known changes were checked in by $Author$
--- as revision $LastChangedRevision$
--- on $Date$
 --
 --
 
@@ -28,9 +24,31 @@ CREATE VIEW viewAllVendorNames AS
        FROM Vendors
        ORDER BY VendorName;
 
+CREATE VIEW viewAllAuthorNames AS 
+       SELECT LastName, FirstName, AuthorId
+       FROM Authors
+       ORDER BY LastName;
 
-
+CREATE VIEW viewAllToDoTasks AS
+       SELECT ToDoId, Task, DateOfEntry, DateCompleted
+       FROM ToDo
+       ORDER BY DateOfEntry;
 
 --
--- end of CreateTables.sql
+-- These two require joins
+--
+
+--CREATE VIEW viewAllBooks AS
+--       SELECT Books.Title, Authors.LastName, Books.Copyright, BookId
+--	 FROM some inner join
+--       ORDER BY Authors.LastName, Books.Copyright;
+-- 
+--CREATE VIEW viewAllWants AS
+--       SELECT Wanted.Title, Authors.LastName, Wanted.Copyright, WantedId
+--       FROM some inner join
+--       ORDER BY Authors.LastName, Books.Copyright;
+--
+
+--
+-- end of CreateViews.sql
 --
