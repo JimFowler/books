@@ -1,3 +1,17 @@
+2015-11-26  Jim Fowler  <jrf@Biblion>
+
+	* Sql3/Data/: Created new output files from Access.  Modifed
+	Books.txt to correct for duplicate AccessionNumbers. There were
+	three duplicate numbers.
+
+	* Sql3/Data/fixit.py: fix problems in Books.txt and split out
+	Wanted
+
+	* Sql3/CreateTables.sql: Removed wanted column. Changed ToDo.ID
+	into ToDo.ToDoId.
+
+	* Sql3/CreateViews.sql: Added more standard views
+
 2015-11-25  Jim Fowler  <jrf@Biblion>
 
 	* Sql3/CreateTables.sql: added foreign keys PRAGMA and cleaned up
