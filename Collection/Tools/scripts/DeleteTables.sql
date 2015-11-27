@@ -11,23 +11,18 @@
 --    sqlite> .read DeleteTables.sql
 --
 --
--- The last known changes were checked in by $Author$
--- as revision $LastChangedRevision$
--- on $Date$
---
---
---
+
 
 --
 -- Drop the tables...
 --
-DROP TABLE IF EXISTS Books;
-DROP TABLE IF EXISTS Authors;
 DROP TABLE IF EXISTS BookAuthor;
+DROP TABLE IF EXISTS BookProject;
+DROP TABLE IF EXISTS Books;
+DROP TABLE IF EXISTS Wanted;
+DROP TABLE IF EXISTS Authors;
 DROP TABLE IF EXISTS Vendors;
 DROP TABLE IF EXISTS Projects;
-DROP TABLE IF EXISTS BookProject;
-DROP TABLE IF EXISTS Wanted;
 DROP TABLE IF EXISTS ToDo;
 --
 -- end of DeleteTables.sql
