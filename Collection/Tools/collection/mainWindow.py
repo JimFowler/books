@@ -19,8 +19,8 @@ from nameparser import HumanName
 
 import bookentry.symbol as symbol
 
-import menus as menus
-import ui_mainWindow as ui_mainWindow
+import collection.menus as menus
+import collection.ui_mainWindow as ui_mainWindow
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -28,7 +28,7 @@ __DefaultSymbolTableName__ = __dirName + '/symbols.txt'
 del __dirName
 del __basename
 
-__version__ = '1.0'
+__version__ = '1.0.0'
 
 
 class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
@@ -42,7 +42,8 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.setWinTitle('')
         self.symbolTableName = __DefaultSymbolTableName__
         self.insertFunc = None
-        
+        self.datebaseName = '/home/jrf/Documents/books/Collection/Collection.db3'
+
         menus.createMenus(self, self.menubar)
 
         self.connect( self.quit_Button, SIGNAL('released()'), self.quit )
@@ -54,6 +55,24 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
     def quit(self):
         '''Clean up and exit.'''
         self.close()
+
+    #
+    # Set/Get functions
+    #
+    def setDatabaseName(self, database):
+        '''Set the name of the database that we operate on.
+        Return the name of the database or None if this is an invalid
+        name.'''
+        if os.path.isfile(database):
+            self.databaseName = database
+            return self.databaseName
+        else:
+            return None
+
+    def getDatabaseName():
+        '''Return the name of the current database.'''
+        return self.databaseName
+
 
     #
     # Edit menu functions
@@ -81,24 +100,6 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.setWindowTitle(QApplication.translate("MainWindow", 
              "Collection Database  v %s   -   %s" % (__version__, name),
                                None, QApplication.UnicodeUTF8))
-
-    #
-    # Help menu functions
-    #
-    def helpString(self):
-        helpStr = """<b>Collection Database</b> v {0}
-        <p>Author: J. R. Fowler
-        <p>Copyright &copy; 2015
-        <p>All rights reserved.
-        <p>This application is used to work with the database
-        Collections.db3.  This database is the catalog of books
-        in my library collection.
-        <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
-            __version__, platform.python_version(),
-            QT_VERSION_STR, PYQT_VERSION_STR,
-            platform.system())
-
-        return helpStr
 
     def insertChar(self, obj):
         """Insert the charactor in obj[0] with self.insertFunc
@@ -131,9 +132,27 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
          '''
         pass
       
+    #
+    # Help menu functions
+    #
+    def helpString(self):
+        helpStr = """<b>Collection Database</b> v {0}
+        <p>Author: J. R. Fowler
+        <p>Copyright &copy; 2015
+        <p>All rights reserved.
+        <p>This application is used to work with the database
+        Collections.db3.  This database is the catalog of books
+        in my library collection.
+        <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
+            __version__, platform.python_version(),
+            QT_VERSION_STR, PYQT_VERSION_STR,
+            platform.system())
+
+        return helpStr
+
     def helpAbout(self):
         hstr = self.helpString()
-        QMessageBox.about(self, 'About Collection', hstr )
+        QMessageBox.about(self, 'About books', hstr )
 
 #
 # Test routine

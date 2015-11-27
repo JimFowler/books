@@ -1,5 +1,3 @@
+build/
 Data/
 ToDo
-stylesheet
-ui_mainWindow.py
-ui_select.py

@@ -14,12 +14,12 @@ from PyQt4.QtGui  import *
 from pprint import *
 pp = PrettyPrinter()
 
-import mainWindow as mw
+import collection.mainWindow as mw
 
 __version__ = '1.0'
 
 #
-# Parse the command line arguments
+# Parse the command line aguments
 #
 def getargs():
    parser = argparse.ArgumentParser(description='Search and modify the my book Collection database.')
@@ -71,9 +71,9 @@ def main():
    if args.input is not None:
       fname = args.input[0]
       if os.path.isfile(fname):
-         pass
+         form.setDatabaseName(fname)
       else:
-         pass
+         form.setDatabaseName('/home/jrf/Documents/books/Collection/Collection.db3')
 
    form.show()
    sys.exit(app.exec_())
