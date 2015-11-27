@@ -7,14 +7,14 @@ from PyQt4.QtGui  import *
 
 import collection.ui_select as ui_select
 
-class Select( QDialog, ui_select.Ui_SelectionDialog ):
+class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
     """Select is the class which handles the list selection form
     for display of entries from the database.
     """
     def __init__( self, parent=None, _title=None, _list=None,
                   _viewFunction=None, _newFunction=None ):
 
-        super(Select, self).__init__(parent)
+        super(selectDialog, self).__init__(parent)
         self.setupUi(self)
 
         #
@@ -39,11 +39,11 @@ class Select( QDialog, ui_select.Ui_SelectionDialog ):
         #
         # Signal and Slots
         #
-        self.connect(self.itemList_Widget, SIGNAL('itemSelectionChanged()'),
-                                                  self.getSelectedItem )
         self.connect(self.itemList_Widget, 
                      SIGNAL('itemDoubleClicked()'),
                      self.doubleClick)
+        self.connect(self.itemList_Widget, SIGNAL('itemSelectionChanged()'),
+                                                  self.getSelectedItem )
 
         self.connect(self.view_Button, SIGNAL('released()'), self.viewAction )
         self.connect(self.new_Button, SIGNAL('released()'), self.newAction )
@@ -127,7 +127,7 @@ if __name__ == '__main__':
     for i in range(20):
         testList.append('item %d' % (i))
 
-    form = Select(_title='My Test Title',
+    form = selectDialog(_title='My Test Title',
                   _viewFunction=printItem,
                   _newFunction=newItem,
                   _list=testList)
