@@ -277,7 +277,8 @@ CREATE TABLE BookProject
 CREATE TABLE ToDo
        (ToDoId        INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
         DateOfEntry   DATE NOT NULL,
-	Task          TEXT NOT NULL,
+	Summary       TEXT NOT NULL,
+	Task          TEXT NULL,
 	DateCompleted DATE NULL
        )
 ;
