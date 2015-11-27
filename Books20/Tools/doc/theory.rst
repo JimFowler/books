@@ -7,12 +7,12 @@ Overview
 **ajbbooks** was written primarily to facilitate user input of entries
 and to facilitate review of entries (proofreading) by letting the user
 concentrate on the content of the entry rather than the formatting. In
-addition it needed to be able to read the already existing book lists
-that had been produced with a text editor. Finally it needs to writes
+addition, it needed to be able to read the already existing book lists
+that had been produced with Word. Finally, it needed to write
 out the text files in a consistent format so that all files are
 similar in format and structure. This later point is particularly
 important for files that would later be read into a database. The
-older method of formatting the files manually was sure to introduce
+older method, of formatting the files manually, was sure to introduce
 inconsistence between files.
 
 The list of book entries created by **ajbbooks** will be used by other
@@ -21,11 +21,13 @@ doesn't care much about the actual content of fields. It just needs to know
 how to parse and write the fields.
 
 To achieve these goals **ajbbooks** maintains three different views of
-a book list.  The first is the external comma separated list of
-entries called an Disk File.  The second is the internal python class
-BookFile. The third is the users graphical view of a single entry
+a book list.  The first is the external comma separated text file of
+entries called a DiskFile.  The second is the internal python class
+BookFile. The third is the user's graphical view of a single entry
 called BookEntry.  Various functions exist to transform from one view
-to the other via the internal BookFile class.
+to the other via the internal BookFile class. Thus BookFile knows how
+to read/write the DiskFile while BookEntry knows how the read/write
+the BookFile.
 
 The three state view in shown in the first illustration while second shows
 the the overall class structure in the views.
@@ -92,13 +94,13 @@ The third field lists the place of publication while the fourth field
 is the name of the publisher.  If the publisher is located in multiple
 cities then the place names are connected by hyphens, e.g. New
 York-London. The fifth field is the copyright year if known and the
-sixth field is the page count.  The seventh field is the prices in
-whatever currency was listed. In the situation where a book was
+sixth field is the page count.  The seventh field lists the prices in
+whatever currency was given in the AJB. In the situation where a book was
 published simultaneously in two or more different countries there may
 be more that one price listed, in which case the prices are separated
 by 'and'. The eighth field is a list of reviews also separated by
 'and'. The reviews themselves have no particular format, though the
-general standard is 'journalname volume (issue) page colon reviewer name'.
+general standard is 'journalname volume (issue) page colon reviewer_name'.
 
 The ninth field is a list of comments separated by a semi-colon.
 Comments are where all the entry variations are kept.
@@ -108,8 +110,8 @@ Comment Definitions
 
 By late 2011 I had created six book files by hand using Microsoft Word
 and Excel. As I progressed through the files I found various entries
-that were not in a standard format and that included addtional
-information that I wanted to collect.  Rather than add additional
+that were not in a standard format. However, the addtional
+information was important to collect.  Rather than add additional
 fields this information was put into the comments field with
 particular keywords designating what the information pertained to.
 For example, the first time I found both authors and editors listed
@@ -193,7 +195,7 @@ which contain the header of the external disk file and the list of
 entries respectively.  Entries are of the Class AJBentry, defined in
 AJBentry.py.  Secondary variables are ``_volumeNumber``, the value to
 autofill the volume number in a new entry; ``_fileName``, the pathname
-for the disk file as passed to BookFile via the command line or menu;
+for the disk file as passed to BookFile via the command line or menu item;
 ``_dirName``, the directory portion of _filename; ``_baseName``, the
 base name of ``_fileName``; ``_curEntryNumber``, the number of the
 current active entry in ``_entryList``, restricted to the range 1 <=
@@ -286,10 +288,10 @@ Comments holds the original comment field.
 
 OrigStr hold the original full text string.
 
-Reprint contains the AJB number. This entry is a reprint
+Reprint contains an AJB number. This entry is a reprint
 of the entry at that AJB number.
 
-Reference contains that AJB number of an entry, not necessarily in
+Reference contains the AJB number of an entry, not necessarily in
 this file, of which, this information should be appended or ammended.
 
 Reviews is a list of strings, each string containing a review reference.

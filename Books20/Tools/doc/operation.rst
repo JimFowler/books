@@ -2,9 +2,7 @@ Operation
 *********
 
 The **ajbbooks** program may be started from the command line with
-the ``ajbbbooks`` command. The main display window looks like:
-
-.. image:: images/mainwindow.png
+the ``ajbbbooks`` command. The main display window is shown in figure 1.
 
 The main features are the top line with the Index number and the AJB
 number along with the buttons to switch between existing records, the
@@ -26,6 +24,11 @@ ajbbooks [-h] [-i filename] [-s filename] [-v integer]
   -s, --symbols filename -- open an alternate symbol table
 
   -v, --volume volnum -- default volume number for new entries
+
+
+.. figure:: images/mainwindow.png
+
+	    The main display window of ajbbooks.
 
 
 Menus
@@ -179,7 +182,9 @@ Clicking on any letter will insert that letter in the current field at
 the current location of the cursor. See the section :ref:`symbol-table-theory`
 for information about adding new symbols.
 
-.. image:: images/symbols.png
+.. figure:: images/symbols.png
+
+	    The Insert Symbol table window.
 
 Header Edit
 ===========
@@ -189,4 +194,6 @@ may be edited via the Header Edit window.  This window is illustrated
 below and may be shown by selecting the **Edit Header** in the **Edit**
 manu or by typing the keyboard shortcut **Ctrl-H**.
 
-.. image:: images/headerwindow.png
+.. figure:: images/headerwindow.png
+
+	    The Header Edit window.

@@ -26,6 +26,17 @@ Or you can install in a different system directory with
 
 You may need superuser priviledges to install in system directories.
 
+If you install in a non-standard directory, then you will need to
+set the environment variables **PYTHONPATH**. I put the following in
+my ``.bashrc`` file.
+
+``export PYTHONPATH=/home/jrf/lib/python3.4/site-packages``
+
+But if you use a variant of csh, then you could put the following
+in your ``.cshrc`` file.
+
+``setenv PYTHONPATH /home/jrf/lib/python3.4/site-packages``
+
 
 Building and Installing the Documentation
 =========================================
