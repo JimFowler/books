@@ -7,8 +7,26 @@
     <x>0</x>
     <y>0</y>
     <width>622</width>
-    <height>421</height>
+    <height>415</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>622</width>
+    <height>415</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>622</width>
+    <height>415</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -32,6 +50,12 @@ background-color: grey;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
@@ -375,6 +399,7 @@ background-color: grey;
     </rect>
    </property>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections/>

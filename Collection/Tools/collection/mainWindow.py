@@ -160,14 +160,12 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
 
 if __name__ == '__main__':
 
-   import sys
+    import sys
 
-   app = QApplication(sys.argv)
-   app.setApplicationName('Collection Database')
-   form = Collection()
-   #QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-   #                form.setFocusChanged)
+    app = QApplication(sys.argv)
+    app.setApplicationName('Collection Database')
+    form = Collection()
 
-   form.show()
-   sys.exit(app.exec_())
+    form.show()
+    sys.exit(app.exec_())
 
