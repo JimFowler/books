@@ -1,5 +1,11 @@
 2015-11-26  Jim Fowler  <jrf@Biblion>
 
+	* Tools/mainWindow.py: created main window code.
+
+	* Tools/collection: created main program
+
+	* Tools/menus.py: created the menus file from bookentry/menus.py
+
 	* Sql3/Data/: Created new output files from Access.  Modifed
 	Books.txt to correct for duplicate AccessionNumbers. There were
 	three duplicate numbers.
