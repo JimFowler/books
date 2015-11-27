@@ -501,7 +501,7 @@ class AJBentry(entry.Entry):
     #
     # XML create routines
     #
-    def create_XML(self):
+    def write_XML_from_Entry(self):
         '''Create an XML etree element with the root tag Entry from
         the entry.'''
 
@@ -571,9 +571,9 @@ class AJBentry(entry.Entry):
         # but we need to do some intellegent parsing of the prices
         # before we can use this.  For now we just naively use
         # the string.
-        if self.notEmpty('Prices'):
+        if self.notEmpty('Price'):
             el = etree.SubElement(entryXML, 'Prices')
-            for price in self['Prices'].split(' and '):
+            for price in self['Price'].split(' and '):
                 ep = etree.SubElement(el, 'Price')
                 ep.text = price
 
@@ -617,7 +617,7 @@ class AJBentry(entry.Entry):
 
         # Sometimes the reprint can be just a year number rather than
         # an AJBnum.  An AJBnum should have decimal points in it and
-        # Years should not, so we look for a decimal point to determin
+        # Years should not, so we look for a decimal point to determine
         # which it is.
         if self.notEmpty('Reprint'):
             el = etree.SubElement(entryXML, 'ReprintOf')
@@ -694,24 +694,106 @@ class AJBentry(entry.Entry):
         return person_XML
 
 
-    def read_XML(self, elXML):
+    def read_XML_to_Entry(self, elXML):
         '''Parse an XML element of an Entry and place the information
-        into the AJBentry dictionary.'''
+        into the AJBentry dictionary. This is a bit tricky.  XML entries
+        contain more information than the AJBentry does.'''
 
         for child in elXML:
-            print('child is ', child.tag)
+            #print('child is ', child.tag)
 
             if child.tag == 'Index':
                 pass
 
             if child.tag == 'Title':
-                pass
-                #self['Title'] = child.text
+                self['Title'] = child.text
 
-            if child.tag == 'SubTitle':
-                pass
-        
+            # subTitle and subsubTitle not supported in AJBentry
+            if child.tag == 'subTitle':
+                self['Title'] += child.text
 
+            if child.tag == 'subsubTitle':
+                # PersonInfo or CorporateBody
+                self['Title'] += child.text
+
+            if child.tag == 'Authors':
+                for author in child:
+                    pass
+
+            if child.tag == 'Editors':
+                # PersonInfo or CorporateBody
+                for editor in child:
+                    pass
+
+            if child.tag == 'Publishers':
+                # Place and Name
+                for publ in child:
+                    pass
+
+            if child.tag == 'Year':
+                self['Year'] = child.text
+
+            if child.tag == 'Edition':
+                self['Edition'] = child.text
+
+            if child.tag == 'Pagination':
+                self['Pagination'] = child.text
+
+            if child.tag == 'Prices':
+                first = True
+                self['Price'] = ''
+                for price in child:
+                    if first:
+                       first = False
+                    else:
+                        self['Price'] += ' and '
+                    self['Price'] += price.text
+                del first
+
+            if child.tag == 'Reviews':
+                for review in child:
+                    self['Reviews'].append(review.text)
+
+
+            if child.tag == 'TranslatedFrom':
+                self['TranslatedFrom'] = child.text
+
+            if child.tag == 'Language':
+                self['Language'] = child.text
+
+            if child.tag == 'Translators':
+                # PersonInfo or CorporateBody
+                for trans in child:
+                    pass
+
+            if child.tag == 'Compilers':
+                # PersonInfo or CorporateBody
+                for comp in child:
+                    pass
+
+            if child.tag == 'Contributors':
+                # PersonInfo or CorporateBody
+                for contr in child:
+                    pass
+
+            if child.tag == 'ReprintOf':
+                # Year of AJBnum
+                pass
+
+            if child.tag == 'Reference':
+                # AJBnum
+                pass
+
+            if child.tag == 'Comments':
+                for comment in child:
+                    self['Others'].append(comment.text)
+
+
+
+
+#
+# Test everything
+#
 if __name__ == '__main__':
 
     ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
@@ -797,5 +879,18 @@ if __name__ == '__main__':
     print(editorajb._parseAJBNum('AJB 32.45(0).56'))
     print(editorajb._parseAJBNum('32.45(0).56'))
 
-    et = allfieldajb.create_XML()
+    #
+    # test XML routines
+    #
+    print('\n\nTesting XML routines\n')
+    print('allfieldajb as entry:')
+    pprint(allfieldajb)
+
+    print('\naffieldajb as XML')
+    et = allfieldajb.write_XML_from_Entry()
     print(etree.tostring(et, pretty_print=True, encoding='unicode'))
+
+    print('\nallfieldajbXML as entry')
+    eAll = AJBentry()
+    eAll.read_XML_to_Entry(et)
+    pprint(eAll)

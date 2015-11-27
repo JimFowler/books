@@ -1,3 +1,8 @@
+2015-11-08  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.read_XML_to_Entry): Added
+	read XML functions for entry class
+
 2015-10-31  Jim Fowler  <jrf@Biblion>
 
 	* Data/Ajb/ajb45_books.txt: Finished proofreading ajb45_books.txt
