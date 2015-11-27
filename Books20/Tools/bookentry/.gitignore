@@ -4,5 +4,6 @@ ui_BookEntry.py
 ui_EntrySelect.py
 ui_HeaderEntry.py
 ui_OrigStr.py
+ui_JournalSearch.py
 ToDo
 bookentry
