@@ -1,4 +1,6 @@
-"""Create the menus for the AJB BookEntry window
+"""Create the menus for the AJB BookEntry window.  This is not very
+generic since it depends on knowledge of the specific application and
+the available functions in the calling object passed in as self.
 """
 # -*- mode: Python;-*-
 
@@ -29,84 +31,106 @@ def createAction(self, text, slot=None, shortcut=None, icon=None,
 
 def createMenus( self, menuBar):
 
-        # set up the File menus
-        fileMenu = menuBar.addMenu('&File')
+    #
+    # set up the File menus
+    #
+    fileMenu = menuBar.addMenu('&File')
 
+    #newFileAction = createAction( self, '&New File',
+    #                               self.openNewFile, 'Ctrl+N' )
+    #openFileAction = createAction( self, '&Open File...',
+    #                               self.askOpenFile, 'Ctrl+O' )
+    #saveAction = createAction( self, '&Save File',
+    #                           self.saveFile, 'Ctrl+S')
+    #saveAsAction = createAction( self, 'Save File &As...',
+    #                             self.saveFileAs, 'Ctrl+A')
+    #newEntAction = createAction( self, 'New &Entry',
+    #                             self.newEntry, 'Ctrl+E')
+    #saveEntAction = createAction( self, 'Save Ent&ry', 
+    #                              self.saveEntry, 'Ctrl+R' )
+    #printAction = createAction( self, '&Print Entry', self.printEntry,
+    #                            'Ctrl+P')
+    exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q',
+                              'filequit', 'Close the Application')
 
-        #newFileAction = createAction( self, '&New File',
-        #                               self.openNewFile, 'Ctrl+N' )
-        #openFileAction = createAction( self, '&Open File...',
-        #                               self.askOpenFile, 'Ctrl+O' )
-        #saveAction = createAction( self, '&Save File',
-        #                           self.saveFile, 'Ctrl+S')
-        #saveAsAction = createAction( self, 'Save File &As...',
-        #                             self.saveFileAs, 'Ctrl+A')
-        #newEntAction = createAction( self, 'New &Entry',
-        #                             self.newEntry, 'Ctrl+E')
-        #saveEntAction = createAction( self, 'Save Ent&ry', 
-        #                              self.saveEntry, 'Ctrl+R' )
-        #printAction = createAction( self, '&Print Entry', self.printEntry,
-        #                            'Ctrl+P')
-        exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q',
-                                  'filequit', 'Close the Application')
-
-        #fileMenu.addAction(newFileAction)
-        #fileMenu.addAction(openFileAction)
-        #fileMenu.addAction(saveAction)
-        #fileMenu.addAction(saveAsAction)
-        #fileMenu.addSeparator()
-        #fileMenu.addAction(newEntAction)
-        #fileMenu.addAction(saveEntAction)
-        #fileMenu.addAction(printAction)
-        #fileMenu.addSeparator()
-        fileMenu.addAction(exitAction)
-
-
-
-
-        # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
-        cutAction = createAction(self, 'Cu&t', None, 'Ctrl+X')
-        cutAction.setEnabled(False)
-        copyAction = createAction(self, '&Copy', None, 'Ctrl+C') 
-        copyAction.setEnabled(False)
-        pasteAction = createAction(self, '&Paste', None, 'Ctrl+V')
-        pasteAction.setEnabled(False)
-        deleteAction = createAction(self, '&Delete', None, 'Del')
-        deleteAction.setEnabled(False)
-        addInfoAction = createAction(self, 'Additional &Info...',
-                                     None, 'Ctrl+T')
-        symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
-        #headerAction = createAction(self, 'Edit &Header...',
-        #                            self.editHeader, 'Ctrl+H')
-        #origstrAction = createAction(self, 'Show Original String',
-        #                            self.showOrigStr)
-        #setvolnumAction = createAction(self, 'Set Volume Number...',
-        #                            self.setVolumeNumberInteractive)
-
-        #fontsizeAction = createAction(self, 'Set font size...', None, None)
-        #fontsizeAction.setEnabled(False)
-
-        #fonttypeAction = createAction(self, 'Set font...', None, None)
-        #fonttypeAction.setEnabled(False)
-
-
-        editMenu = menuBar.addMenu('&Edit')
-        editMenu.addAction( cutAction)
-        editMenu.addAction( copyAction ) 
-        editMenu.addAction( pasteAction )
-        editMenu.addAction( deleteAction)
-        editMenu.addSeparator()
-        editMenu.addAction( symbolAction)
-        #editMenu.addAction( headerAction)
-        #editMenu.addAction( origstrAction)
-        #editMenu.addAction( setvolnumAction)
-        #editMenu.addAction( fontsizeAction)
-        #editMenu.addAction( fonttypeAction)
+    #fileMenu.addAction(newFileAction)
+    #fileMenu.addAction(openFileAction)
+    #fileMenu.addAction(saveAction)
+    #fileMenu.addAction(saveAsAction)
+    #fileMenu.addSeparator()
+    #fileMenu.addAction(newEntAction)
+    #fileMenu.addAction(saveEntAction)
+    #fileMenu.addAction(printAction)
+    #fileMenu.addSeparator()
+    fileMenu.addAction(exitAction)
 
 
 
-        # set up the Help menus
-        helpMenu = menuBar.addMenu('&Help')
-        aboutAction = createAction(self, '&About Collections...',
+
+    #
+    # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
+    #
+    editMenu = menuBar.addMenu('&Edit')
+
+    cutAction = createAction(self, 'Cu&t', None, 'Ctrl+X')
+    cutAction.setEnabled(False)
+    copyAction = createAction(self, '&Copy', None, 'Ctrl+C') 
+    copyAction.setEnabled(False)
+    pasteAction = createAction(self, '&Paste', None, 'Ctrl+V')
+    pasteAction.setEnabled(False)
+    deleteAction = createAction(self, '&Delete', None, 'Del')
+    deleteAction.setEnabled(False)
+    addInfoAction = createAction(self, 'Additional &Info...',
+                                 None, 'Ctrl+T')
+    symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
+
+    editMenu.addAction( cutAction)
+    editMenu.addAction( copyAction ) 
+    editMenu.addAction( pasteAction )
+    editMenu.addAction( deleteAction)
+    editMenu.addSeparator()
+    editMenu.addAction( symbolAction)
+
+    #
+    # Set up View menu
+    #
+    viewMenu = menuBar.addMenu('&View')
+
+    bookAction = createAction(self, '&Books...', None, None)
+    bookAction.setEnabled(False)
+    authorAction = createAction(self, 'A&uthors...', None, None)
+    authorAction.setEnabled(False)
+    vendorAction = createAction(self, 'Ven&dors...', None, None)
+    vendorAction.setEnabled(False)
+    projectsAction = createAction(self, 'Pr&ojects...', None, None)
+    projectsAction.setEnabled(False)
+    wantsAction = createAction(self, '&Wants...', None, None)
+    wantsAction.setEnabled(False)
+    todoAction = createAction(self, '&To Do List', None, None)
+    todoAction.setEnabled(False)
+    reportsAction = createAction(self, '&Reports...', None, None)
+    reportsAction.setEnabled(False)
+    searchAction = createAction(self, '&Search...', None, None)
+    searchAction.setEnabled(False)
+    otherAction = createAction(self, '&Other...', None, None)
+    otherAction.setEnabled(False)
+
+    viewMenu.addAction(bookAction)
+    viewMenu.addAction(authorAction)
+    viewMenu.addAction(vendorAction)
+    viewMenu.addAction(projectsAction)
+    viewMenu.addAction(wantsAction)
+    viewMenu.addAction(todoAction)
+    viewMenu.addAction(searchAction)
+    viewMenu.addAction(otherAction)
+    viewMenu.addAction(reportsAction)
+
+    #
+    # set up the Help menus
+    #
+    helpMenu = menuBar.addMenu('&Help')
+    aboutAction = createAction(self, '&About Collections...',
                                    self.helpAbout )
-        helpMenu.addAction(aboutAction)
+    helpMenu.addAction(aboutAction)
+
+    return

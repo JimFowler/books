@@ -45,7 +45,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         
         menus.createMenus(self, self.menubar)
 
-        self.connect( self.quitButton, SIGNAL('released()'), self.quit )
+        self.connect( self.quit_Button, SIGNAL('released()'), self.quit )
 
 
     #

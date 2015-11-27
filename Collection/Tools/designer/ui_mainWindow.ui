@@ -7,20 +7,28 @@
     <x>0</x>
     <y>0</y>
     <width>622</width>
-    <height>400</height>
+    <height>421</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
    <string notr="true">#MainWindow {
-background: url(./resources/the-long-room.jpg);
+background: url(./resources/the-long-room.png);
 background-repeat: no-repeat;
 background-position: left top;
 }
 #Title_Label {
 color: white;
+}
+QButton {
+background-color: grey;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -30,10 +38,10 @@ color: white;
       <x>30</x>
       <y>80</y>
       <width>103</width>
-      <height>293</height>
+      <height>291</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="left_VerticalLayout">
      <item>
       <widget class="QPushButton" name="Books_Button">
        <property name="palette">
@@ -43,70 +51,106 @@ color: white;
          <disabled/>
         </palette>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open Book selection dialog"/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="text">
-        <string>Books</string>
+        <string>Books...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Author_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open Author selectioni dialog"/>
+       </property>
        <property name="text">
-        <string>Authors</string>
+        <string>Authors...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Vendors_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open Vendor/Pupblisher selection  dialog"/>
+       </property>
        <property name="text">
-        <string>Vendors</string>
+        <string>Vendors...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Projects_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open Projects selection dialog"/>
+       </property>
        <property name="text">
-        <string>Projects</string>
+        <string>Projects...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Want_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open Wants list selection dialog"/>
+       </property>
        <property name="text">
-        <string>Wants</string>
+        <string>Wants...</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="ToDo_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open the Task List selection dialog"/>
+       </property>
        <property name="text">
         <string>To Do List</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="Report_Button">
-       <property name="text">
-        <string>Reports</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="Other_Button">
-       <property name="text">
-        <string>Other...</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="quitButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Quit</string>
        </property>
       </widget>
      </item>
@@ -115,9 +159,9 @@ color: white;
    <widget class="QLabel" name="Title_Label">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>0</x>
       <y>0</y>
-      <width>551</width>
+      <width>621</width>
       <height>91</height>
      </rect>
     </property>
@@ -220,6 +264,105 @@ color: white;
     <property name="text">
      <string>My Book Collection</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>80</y>
+      <width>111</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="right_VerticalLayout">
+     <item>
+      <widget class="QPushButton" name="search_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Other_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open a dialog to do something else"/>
+       </property>
+       <property name="text">
+        <string>Other...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Report_Button">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Open the Reports selection dialog"/>
+       </property>
+       <property name="text">
+        <string>Reports...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="quit_Button">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Close and quit the application"/>
+       </property>
+       <property name="text">
+        <string>Quit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

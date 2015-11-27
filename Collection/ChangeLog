@@ -1,3 +1,17 @@
+2015-11-27  Jim Fowler  <jrf@Biblion>
+
+	* Tools/designer/ui_mainWindow.ui: added second column
+	of buttons
+
+	* Tools/doc/conf.py: ran sphinx-quickstart to generate
+	base for documentation
+
+	* Tools/menus.py: added View menu to duplicate window buttons
+
+	* Collection.db3: Added Summary column to ToDo table.  Modified
+	Data/ToDo.txt to have a summary entry since I defined it as NOT
+	NULL.  Only five entries to modify so it was easy.
+
 2015-11-26  Jim Fowler  <jrf@Biblion>
 
 	* Tools/mainWindow.py: created main window code.
