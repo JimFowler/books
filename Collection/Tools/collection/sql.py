@@ -4,48 +4,54 @@
 #
 #
 
-import os, sys
 import sqlite3
 
-# Debugging
-import pprint
-pp = pprint.PrettyPrinter()
+import collection.database as database
 
-Database = 'Collection.db3'
+class collectionDB(database.DataBase):
+    
+    def __init__(self, parent=None, _dbname=None):
+        super(collectionDB, self).__init__(parent)
 
-conn = sqlite3.connect(Database)
-cur = conn.cursor()
+        self.cursor = self.openDB(_dbname)
 
-Query = 'SELECT ProjName, ProjectId FROM Projects ORDER BY ProjName;'
-Query2 = 'SELECT * FROM Projects WHERE ProjName == "History of Spectroscopy"';
+
 
 #
-# This does not work.  Note that cur, result, and result2 all point
-#   to the same object.
+# Self Test
 #
-result = cur.execute(Query)
-#result2 = cur.execute(Query2)
-# This will print the rows from Query2
-for row in result:
-    pp.pprint(row)
+if __name__ == '__main__':
 
-# select books under the project Astronomcal Lives, project id = 4.  Need 
-# to learn better SQL as this query selects all books that are associated with a project
+    import sys, os
+    
+    Query = 'SELECT ProjName, ProjectId FROM Projects ORDER BY ProjName;'
+    Query2 = 'SELECT * FROM Projects WHERE ProjName == "History of Spectroscopy"';
 
-BookProjOrig = '''SELECT BookProject.ProjectID, Projects.ProjName, BookProject.BookID, BookAuthor.AsWritten, Authors.LastName, Authors.FirstName, Books.Title, Books.Copyright, Books.Edition, Books.Printing, Books.PurchaseDate, Books.PurchasePrice, Books.PurchasedFrom, Books.PublishedAt, Books.Publisher, Books.MyCondition, Books.Description
-FROM Projects INNER JOIN ((Books INNER JOIN (Authors INNER JOIN BookAuthor ON Authors.AuthorID = BookAuthor.AuthorID) ON Books.BookID = BookAuthor.BookID) INNER JOIN BookProject ON Books.BookID = BookProject.BookID) ON Projects.ProjectID = BookProject.ProjectID
-WHERE (((BookAuthor.Priority)=1))
-ORDER BY Books.Copyright;'''
+    db = collectionDB(_dbname='/home/jrf/Documents/books/Collection/Collection.db3')
+    name = db.getDBName()
 
-BookProj = '''SELECT BookProject.ProjectID, Projects.ProjName, BookProject.BookID, BookAuthor.AsWritten, Authors.LastName, Authors.FirstName, Books.Title, Books.Copyright, Books.Edition, Books.Printing, Books.PurchaseDate, Books.PurchasePrice, Books.PurchasedFrom, Books.PublishedAt, Books.Publisher, Books.MyCondition, Books.Description
-FROM Projects INNER JOIN ((Books INNER JOIN (Authors INNER JOIN BookAuthor ON Authors.AuthorID = BookAuthor.AuthorID) ON Books.BookID = BookAuthor.BookID) INNER JOIN BookProject ON Books.BookID = BookProject.BookID) ON Projects.ProjectID = 4
-WHERE (((BookAuthor.Priority)=1))
-ORDER BY Books.Copyright;'''
+    if db.isValid():
+        print('%s is valid DB' % (name))
+    else:
+        print('Error sql.py: db is not valid DB!')
+        sys.exit(-1)
 
-cur.execute(BookProj)
-count = 0
-for row in cur:
-    pp.pprint(row)
-    count += 1
-print(count)
+    db.closeDB()
+
+    db = collectionDB()
+
+    name = db.getDBName()
+    
+    if db.isValid():
+        print('%s is valid DB' % (name))
+    else:
+        print('Error sql.py: db is not valid DB!')
+        sys.exit(-1)
+
+    db.closeDB()
+    #result = cur.execute(Query)
+    #for row in result:
+    #    pp.pprint(row)
+
+
 

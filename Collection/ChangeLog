@@ -1,5 +1,8 @@
 2015-11-27  Jim Fowler  <jrf@Biblion>
 
+	* Tools/collection/sql.py (DataBase.openDB): Added
+	DataBase class.
+
 	* Tools/setup.py: make collection into a python package
 
 	* Tools/designer/ui_mainWindow.ui: added second column
