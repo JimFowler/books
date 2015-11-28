@@ -11,7 +11,7 @@ database.  **books** is designed to ease the cataloging of entries.
 **books** was initially developed in Python 3.4.3 under Ubuntu 14.04
 and uses Qt 4.8.6 with PyQt 4.10.4 for the graphical portions of the
 software. The latest version (v1.0, Nov 2015) runs in Python 3.4.3
-under Ubuntu 14.10 and uses Qt 4.8.6 with PyQt 4.10.4
+under Ubuntu 14.04 and uses Qt 4.8.6 with PyQt 4.10.4
 
 
 History

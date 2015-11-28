@@ -46,6 +46,17 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
 
         menus.createMenus(self, self.menubar)
 
+        #self.connect( self.Books_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Authors_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Vendors_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Projects_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Wants_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.ToDo_Button, SIGNAL('released()'), self.quit )
+
+        #self.connect( self.Search_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Other_Button, SIGNAL('released()'), self.quit )
+        #self.connect( self.Reports_Button, SIGNAL('released()'), self.quit )
+
         self.connect( self.quit_Button, SIGNAL('released()'), self.quit )
 
 
@@ -164,6 +175,7 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     app.setApplicationName('Collection Database')
+
     form = Collection()
 
     form.show()

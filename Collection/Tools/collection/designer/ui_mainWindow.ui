@@ -94,7 +94,7 @@ background-color: grey;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Author_Button">
+      <widget class="QPushButton" name="Authors_Button">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -145,7 +145,7 @@ background-color: grey;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Want_Button">
+      <widget class="QPushButton" name="Wants_Button">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -303,7 +303,7 @@ background-color: grey;
     </property>
     <layout class="QVBoxLayout" name="right_VerticalLayout">
      <item>
-      <widget class="QPushButton" name="search_Button">
+      <widget class="QPushButton" name="Search_Button">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
@@ -334,7 +334,7 @@ background-color: grey;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Report_Button">
+      <widget class="QPushButton" name="Reports_Button">
        <property name="font">
         <font>
          <pointsize>12</pointsize>
