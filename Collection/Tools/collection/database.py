@@ -44,9 +44,9 @@ class DataBase(object):
         the database.'''
         self.closeDB()
 
-        if name is not None:
-            self.setDBName(name)
-            self.connection = sqlite3.connect(name)
+        if _name is not None:
+            self.setDBName(_name)
+            self.connection = sqlite3.connect(_name)
         elif self.DBName is not None:
             self.connection = sqlite3.connect(self.DBName)
         else:
