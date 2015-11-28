@@ -1,5 +1,8 @@
 2015-11-28  Jim Fowler  <jrf@Biblion>
 
+	* Tools/collection/designer: created ui_author.ui, ui_projects.ui,
+	and ui_reports.ui
+
 	* Tools/collection/mainWindow.py (Collection.selectVendor): added
 	code to get lists of Authors, Vendors, Projects, and ToDo Tasks
 	into a generic selection window. Modified books, mainWindow.py,
