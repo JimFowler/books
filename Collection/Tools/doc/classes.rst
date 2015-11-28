@@ -67,3 +67,28 @@ is taken from bookentry.symbols.
 
 
 
+
+Menus
+_____
+
+.. automodule:: menus
+    :members:
+    :show-inheritance:
+
+DataBase
+________
+
+
+.. automodule:: database
+    :members:
+    :show-inheritance:
+
+
+Sql
+___
+
+
+.. automodule:: sql
+    :members:
+    :show-inheritance:
+

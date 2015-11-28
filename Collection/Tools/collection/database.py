@@ -1,13 +1,14 @@
 #! /usr/bin/env python3
 #
 #
-''' Generic DataBase class implements a simple sqlite3 database interface.
+'''The DataBase class implements a simple sqlite3 database interface. This
+provides a parent class for more particular database classes
 '''
 
 import sqlite3
 
 class DataBase(object):
-
+    '''A generic database interface.'''
     def __init__(self, parent=None, dbname=None):
 
         # variables
@@ -22,16 +23,25 @@ class DataBase(object):
         self.DBName = name
 
     def getDBName(self):
+        '''Returns the filename of the current open database.'''
         return self.DBName
 
     def isValid(self):
+        '''Return True is a database is open and there is a valid
+        cursor object.'''
         if self.cursor is not None:
             return True
         else:
             return False
 
-    def openDB(self, name=None):
-
+    def openDB(self, _name=None):
+        '''Open an sqlite3 database file named _name. If _name is not
+        given, then we try to open the filename in the varialbles
+        self.DBName. Returns the cursor to the calling function or
+        None if it could not open the database.  The child class
+        should use this cursor to interogate the database. Really
+        should provide some diagnostic information if it can't open
+        the database.'''
         self.closeDB()
 
         if name is not None:
@@ -48,9 +58,12 @@ class DataBase(object):
         return self.cursor
 
     def closeDB(self):
+        '''Close any open database. Reset the connection, cursor
+        and name variables.'''
         if self.connection is not None:
             self.connection.close()
 
+        self.setDBName(None)
         self.cursor = None
         self.connection = None
 

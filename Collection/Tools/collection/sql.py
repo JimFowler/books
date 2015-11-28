@@ -3,19 +3,22 @@
 #  Scripts for the Python interface to SQL Lite 3.
 #
 #
+'''The specific database class for talking to the Collection.db3 database.
+This is a subclass of database.DataBase().'''
 
 import sqlite3
 
 import collection.database as database
 
 class collectionDB(database.DataBase):
-    
+    '''The handler for Collection.db3'''
     def __init__(self, parent=None, _dbname=None):
         super(collectionDB, self).__init__(parent)
         if _dbname is not None:
             self.open(_dbname)
 
     def open(self, name):
+        '''Open the named database if possible.'''
         self.cursor = self.openDB(name)
         if self.cursor is None:
             return False

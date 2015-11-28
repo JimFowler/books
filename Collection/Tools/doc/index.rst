@@ -6,8 +6,6 @@
 Welcome to CollectionDB's documentation!
 ========================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
