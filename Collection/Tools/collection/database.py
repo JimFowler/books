@@ -32,11 +32,15 @@ class DataBase(object):
 
     def openDB(self, name=None):
 
+        self.closeDB()
+
         if name is not None:
             self.setDBName(name)
             self.connection = sqlite3.connect(name)
         elif self.DBName is not None:
             self.connection = sqlite3.connect(self.DBName)
+        else:
+            return None
 
         if self.connection is not None:
             self.cursor = self.connection.cursor()

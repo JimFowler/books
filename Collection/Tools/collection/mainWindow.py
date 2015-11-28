@@ -21,6 +21,8 @@ import bookentry.symbol as symbol
 
 import collection.menus as menus
 import collection.ui_mainWindow as ui_mainWindow
+import collection.selectDialog as selectDialog
+import collection.sql as sql
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -42,16 +44,22 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.setWinTitle('')
         self.symbolTableName = __DefaultSymbolTableName__
         self.insertFunc = None
-        self.datebaseName = '/home/jrf/Documents/books/Collection/Collection.db3'
+        self.db = sql.collectionDB()
 
         menus.createMenus(self, self.menubar)
 
-        #self.connect( self.Books_Button, SIGNAL('released()'), self.quit )
-        #self.connect( self.Authors_Button, SIGNAL('released()'), self.quit )
-        #self.connect( self.Vendors_Button, SIGNAL('released()'), self.quit )
-        #self.connect( self.Projects_Button, SIGNAL('released()'), self.quit )
-        #self.connect( self.Wants_Button, SIGNAL('released()'), self.quit )
-        #self.connect( self.ToDo_Button, SIGNAL('released()'), self.quit )
+        self.connect( self.Books_Button,    SIGNAL('released()'),
+                      self.selectBook )
+        self.connect( self.Authors_Button,  SIGNAL('released()'),
+                      self.selectAuthor )
+        self.connect( self.Vendors_Button,  SIGNAL('released()'),
+                      self.selectVendor )
+        self.connect( self.Projects_Button, SIGNAL('released()'),
+                      self.selectProject )
+        self.connect( self.Wants_Button,    SIGNAL('released()'),
+                      self.selectWant )
+        self.connect( self.ToDo_Button,     SIGNAL('released()'),
+                      self.selectToDo )
 
         #self.connect( self.Search_Button, SIGNAL('released()'), self.quit )
         #self.connect( self.Other_Button, SIGNAL('released()'), self.quit )
@@ -72,17 +80,15 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
     #
     def setDatabaseName(self, database):
         '''Set the name of the database that we operate on.
-        Return the name of the database or None if this is an invalid
-        name.'''
-        if os.path.isfile(database):
-            self.databaseName = database
-            return self.databaseName
-        else:
-            return None
+        Return True if the name is valid and the database could be opened
+        or False if this is an invalid name.'''
+        # should really catch any open errors here
+        # but this is a single user program
+        return self.db.open(database)
 
     def getDatabaseName():
         '''Return the name of the current database.'''
-        return self.databaseName
+        return self.db.getDBName()
 
 
     #
@@ -142,7 +148,101 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
          self.insertFunc = None
          '''
         pass
-      
+
+    #
+    # Button Functions
+    #
+    def selectBook(self):
+        '''Get list of Books and open a selection window so the
+        users can pick one.'''
+        booklist = []
+
+        self.bookSelect = selectDialog.selectDialog(
+            _title='Book List',
+            _list=booklist,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.bookSelect.show()
+        
+
+    def selectAuthor(self):
+        '''Get list of Authors and open a selection window so the
+        users can pick one.'''
+        d = self.db.getAuthorDict()
+        l = list(d.keys())
+        l.sort()
+
+        self.authorSelect = selectDialog.selectDialog(
+            _title='Author List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.authorSelect.show()
+        
+
+    def selectVendor(self):
+        '''Get list of Vendor/Publishers and open a selection window so the
+        users can pick one.'''
+        d = self.db.getVendorDict()
+        l = list(d.keys())
+        l.sort()
+
+        self.vendorSelect = selectDialog.selectDialog(
+            _title='Vendor/Publisher List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.vendorSelect.show()
+        
+
+    def selectProject(self):
+        '''Get list of Projects and open a selection window so the
+        users can pick one.'''
+        d = self.db.getProjectDict()
+        l = list(d.keys())
+        l.sort()
+
+        self.projSelect = selectDialog.selectDialog(
+            _title='Project List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.projSelect.show()
+        
+
+    def selectWant(self):
+        '''Get list of Wants and open a selection window so the
+        users can pick one.'''
+        wantlist = []
+
+        self.wantSelect = selectDialog.selectDialog(
+            _title='Wants List',
+            _list=wantlist,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.wantSelect.show()
+        
+
+    def selectToDo(self):
+        '''Get list of Todo tasks and open a selection window so the
+        users can pick one.'''
+        d = self.db.getToDoDict()
+        l = list(d.keys())
+        l.sort()
+
+        self.todoSelect = selectDialog.selectDialog(
+            _title='ToDo List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.todoSelect.show()
+        
     #
     # Help menu functions
     #
@@ -177,6 +277,11 @@ if __name__ == '__main__':
     app.setApplicationName('Collection Database')
 
     form = Collection()
+    fname = '/home/jrf/Documents/books/Collection/Collection.db3'
+    if not form.setDatabaseName(fname):
+        print('Could not open database', fname )
+        sys.exit(1)
+ 
 
     form.show()
     sys.exit(app.exec_())

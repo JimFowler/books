@@ -68,12 +68,21 @@ def main():
       #form.setSymbolTableName(args.symbols[0])
       pass
 
+
+   # open database with input name otherwise
+   # use the default database
    if args.input is not None:
       fname = args.input[0]
       if os.path.isfile(fname):
-         form.setDatabaseName(fname)
-      else:
-         form.setDatabaseName('/home/jrf/Documents/books/Collection/Collection.db3')
+         if not form.setDatabaseName(fname):
+            print('Could not open database', fname )
+            sys.exit(1)
+   else:
+      fname = '/home/jrf/Documents/books/Collection/Collection.db3'
+      if not form.setDatabaseName(fname):
+         print('Could not open database', fname )
+         sys.exit(1)
+      
 
    form.show()
    sys.exit(app.exec_())
