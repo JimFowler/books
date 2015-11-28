@@ -30,7 +30,7 @@ CREATE VIEW viewAllAuthorNames AS
        ORDER BY LastName;
 
 CREATE VIEW viewAllToDoTasks AS
-       SELECT ToDoId, Task, DateOfEntry, DateCompleted
+       SELECT Summary, ToDoId
        FROM ToDo
        ORDER BY DateOfEntry;
 
