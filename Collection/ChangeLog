@@ -1,3 +1,15 @@
+2015-12-03  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView.getBookList): revised
+	ProjectView operations. Project views can now talk to the database
+	and get their own information.  Added search to get the book list
+	for a project.
+
+2015-12-01  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView.__init__): Added new
+	and delete buttons to project view.
+
 2015-11-28  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/designer: created ui_author.ui, ui_projects.ui,

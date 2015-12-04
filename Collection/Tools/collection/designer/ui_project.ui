@@ -75,7 +75,7 @@
   <widget class="QPushButton" name="saveButton">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>380</x>
      <y>400</y>
      <width>101</width>
      <height>27</height>
@@ -166,6 +166,46 @@
      </property>
     </widget>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>400</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Delete Project</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="newButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>400</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>New Project</string>
+   </property>
   </widget>
  </widget>
  <tabstops>

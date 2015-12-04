@@ -25,6 +25,10 @@ class collectionDB(database.DataBase):
         else:
             return True
 
+    def execute(self, sqlStmt):
+        '''Execute arbitrary SQL statement'''
+        return self.cursor.execute(sqlStmt)
+
     def getAuthorDict(self):
         '''get the list of projects from the database. Return a dictionary
         of {'LastName, FirstName': AuthorId.}'''

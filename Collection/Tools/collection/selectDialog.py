@@ -66,22 +66,15 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         released or an item is doubleClicked.  Functions must take a
         text string as an input argument. Returns True if the view
         function was set otherwise it returns False.'''
-        # This will be false for builtin types
-        if isinstance(func, types.FunctionType):
-            self.viewFunction = func
-            return True
-        return False
+        self.viewFunction = func
 
     def setNewFunction(self, func):
         '''Set the function to be called with the New buttons is released.
         The function will be called with an argument of None; so it should
         take at least one argument. Returns True if the new function was set
         otherwise it returns False.'''
-        # This will be false for builtin types
-        if isinstance(func, types.FunctionType):
-            self.newFunction = func
-            return True
-        return False
+        self.newFunction = func
+
 
     def setListEntrys(self, listEntrys):
         '''Set the elements in the QListWidget.  listEntrys must be a list
@@ -99,10 +92,8 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         # type is QListWidgetItem
         self.currentItem = itemlist[0]
 
-        if self.currentItem is not None:
-            print('getSelectedItem:', self.currentItem.text())
-
-        return
+        #if self.currentItem is not None:
+        #    print('getSelectedItem:', self.currentItem.text())
 
     #
     # Button Actions
@@ -112,7 +103,7 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         or the View button is pressed.'''
         if self.currentItem is None:
             return
-        print('View action:', self.currentItem.text())
+            
         if self.viewFunction is not None:
             self.viewFunction(self.currentItem.text())
         

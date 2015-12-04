@@ -38,7 +38,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">#MainWindow {
-background: url(./resources/the-long-room.png);
+background: url(/home/jrf/Documents/books/Collection/Tools/collection/resources/the-long-room.png);
 background-repeat: no-repeat;
 background-position: left top;
 }

@@ -1,7 +1,6 @@
-# -*- mode: Python;-*-
-
 """Main window for the Collection database
 """
+# -*- mode: Python;-*-
 
 import traceback
 import platform
@@ -23,6 +22,7 @@ import collection.menus as menus
 import collection.ui_mainWindow as ui_mainWindow
 import collection.selectDialog as selectDialog
 import collection.sql as sql
+import collection.project as project
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -44,7 +44,15 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.setWinTitle('')
         self.symbolTableName = __DefaultSymbolTableName__
         self.insertFunc = None
+
         self.db = sql.collectionDB()
+
+        self.project = project.Project(_db=self.db)
+
+        self.vendorDict = {}
+        self.authorDict = {}
+        self.todoDict = {}
+
 
         menus.createMenus(self, self.menubar)
 
@@ -55,7 +63,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.connect( self.Vendors_Button,  SIGNAL('released()'),
                       self.selectVendor )
         self.connect( self.Projects_Button, SIGNAL('released()'),
-                      self.selectProject )
+                      self.project.selectProject )
         self.connect( self.Wants_Button,    SIGNAL('released()'),
                       self.selectWant )
         self.connect( self.ToDo_Button,     SIGNAL('released()'),
@@ -166,54 +174,6 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.bookSelect.show()
         
 
-    def selectAuthor(self):
-        '''Get list of Authors and open a selection window so the
-        users can pick one.'''
-        d = self.db.getAuthorDict()
-        l = list(d.keys())
-        l.sort()
-
-        self.authorSelect = selectDialog.selectDialog(
-            _title='Author List',
-            _list=l,
-            _viewFunction=None,
-            _newFunction=None)
-
-        self.authorSelect.show()
-        
-
-    def selectVendor(self):
-        '''Get list of Vendor/Publishers and open a selection window so the
-        users can pick one.'''
-        d = self.db.getVendorDict()
-        l = list(d.keys())
-        l.sort()
-
-        self.vendorSelect = selectDialog.selectDialog(
-            _title='Vendor/Publisher List',
-            _list=l,
-            _viewFunction=None,
-            _newFunction=None)
-
-        self.vendorSelect.show()
-        
-
-    def selectProject(self):
-        '''Get list of Projects and open a selection window so the
-        users can pick one.'''
-        d = self.db.getProjectDict()
-        l = list(d.keys())
-        l.sort()
-
-        self.projSelect = selectDialog.selectDialog(
-            _title='Project List',
-            _list=l,
-            _viewFunction=None,
-            _newFunction=None)
-
-        self.projSelect.show()
-        
-
     def selectWant(self):
         '''Get list of Wants and open a selection window so the
         users can pick one.'''
@@ -228,11 +188,44 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.wantSelect.show()
         
 
+    def selectAuthor(self):
+        '''Get list of Authors and open a selection window so the
+        users can pick one.'''
+        self.authorDict = self.db.getAuthorDict()
+        l = list(self.authorDict.keys())
+        l.sort()
+
+        self.authorSelect = selectDialog.selectDialog(
+            _title='Author List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.authorSelect.show()
+        
+
+    def selectVendor(self):
+        '''Get list of Vendor/Publishers and open a selection window so the
+        users can pick one.'''
+        self.vendorDict = self.db.getVendorDict()
+        l = list(self.vendorDict.keys())
+        l.sort()
+
+        self.vendorSelect = selectDialog.selectDialog(
+            _title='Vendor/Publisher List',
+            _list=l,
+            _viewFunction=None,
+            _newFunction=None)
+
+        self.vendorSelect.show()
+        
+
+
     def selectToDo(self):
         '''Get list of Todo tasks and open a selection window so the
         users can pick one.'''
-        d = self.db.getToDoDict()
-        l = list(d.keys())
+        self.todoDict = self.db.getToDoDict()
+        l = list(self.todoDict.keys())
         l.sort()
 
         self.todoSelect = selectDialog.selectDialog(
