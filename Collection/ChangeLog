@@ -1,3 +1,9 @@
+2015-12-04  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView.getBookList): worked out
+	SQL statement for get books and authors for a project.  Can now display
+	the list of books in the Project view book list.
+
 2015-12-03  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/project.py (ProjectView.getBookList): revised

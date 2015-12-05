@@ -5,11 +5,15 @@ the Collection database.'''
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
+#from more_itertools import unique_everseen
 
 import bookentry.symbol as symbol
 
 import collection.ui_project as ui_project
 import collection.selectDialog as selectDialog
+import pprint
+
+pp =pprint.PrettyPrinter()
 
 class ProjectView( QDialog, ui_project.Ui_Dialog):
     '''View the information about a specific project.
@@ -96,13 +100,22 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             self.getBookList(_projId)
             self.clearProjectDirty()
 
+
         self.show()
 
     def getBookList(self, _projId):
-        search = 'SELECT Books.Title, Authors.LastName, BookAuthor.AsWritten FROM Projects INNER JOIN ((Books INNER JOIN (Authors INNER JOIN BookAuthor ON Authors.AuthorID = BookAuthor.AuthorID) ON Books.BookID = BookAuthor.BookID) INNER JOIN BookProject ON Books.BookID = BookProject.BookID) ON %d = BookProject.ProjectID WHERE (((BookAuthor.Priority)=1)) ORDER BY Books.Copyright;' % (_projId)
+        search = 'SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = 5) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;'
+
         books = self.db.execute(search)
-        proj = books.fetchone()
-        print(proj)
+        proj = books.fetchall()
+        for b in proj:
+            if b[3] == '':
+                name = b[2]
+            else:
+                name = b[3]
+
+            ent = '%s,   %s,   %s' % (b[0], name, b[1])
+            self.bookList.addItem(ent)
 
     def quit(self):
         self.SaveIfDirty()
@@ -156,8 +169,7 @@ class Project(object):
         else:
             projId = None
 
-        if self.view is None:
-            self.view = ProjectView(_db = self.db)
+        self.view = ProjectView(_db = self.db)
         self.view.setProjId(projId)
 
 

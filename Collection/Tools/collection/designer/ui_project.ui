@@ -129,7 +129,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="DescriptionTab">
     <attribute name="title">
@@ -155,13 +155,13 @@
     <attribute name="title">
      <string>Books</string>
     </attribute>
-    <widget class="QListView" name="bookList">
+    <widget class="QListWidget" name="bookList">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>0</y>
-       <width>561</width>
-       <height>191</height>
+       <width>581</width>
+       <height>201</height>
       </rect>
      </property>
     </widget>
@@ -212,7 +212,6 @@
   <tabstop>projectNameEdit</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>descriptionEdit</tabstop>
-  <tabstop>bookList</tabstop>
   <tabstop>saveButton</tabstop>
   <tabstop>closeButton</tabstop>
  </tabstops>
