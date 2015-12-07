@@ -42,8 +42,8 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         # Signal and Slots
         #
         self.connect(self.itemList_Widget, 
-                     SIGNAL('itemDoubleClicked()'),
-                     self.doubleClick)
+                     SIGNAL('itemDoubleClicked(QListWidgetItem*)'),
+                     self.viewAction)
         self.connect(self.itemList_Widget, SIGNAL('itemSelectionChanged()'),
                                                   self.getSelectedItem )
 
@@ -52,9 +52,6 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         self.connect(self.close_Button, SIGNAL('released()'), self.close )
 
         return
-
-    def doubleClick(self, item):
-        print('doubleClick called with ', item.text())
 
     def setTitle(self, title):
         '''Set the Title on the selectDialog.'''
@@ -92,8 +89,6 @@ class selectDialog( QDialog, ui_select.Ui_SelectionDialog ):
         # type is QListWidgetItem
         self.currentItem = itemlist[0]
 
-        #if self.currentItem is not None:
-        #    print('getSelectedItem:', self.currentItem.text())
 
     #
     # Button Actions

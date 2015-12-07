@@ -13,7 +13,7 @@ import collection.ui_project as ui_project
 import collection.selectDialog as selectDialog
 import pprint
 
-pp =pprint.PrettyPrinter()
+pp = pprint.PrettyPrinter()
 
 class ProjectView( QDialog, ui_project.Ui_Dialog):
     '''View the information about a specific project.
@@ -30,17 +30,22 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
                       self.quit )
         self.connect( self.saveButton, SIGNAL('released()'),
                       self.save )
-        #self.connect( self.deleteButton, SIGNAL('released()'),
-        #              self.delete )
+        self.connect( self.deleteButton, SIGNAL('released()'),
+                      self.delete )
         self.connect( self.newButton, SIGNAL('released()'),
                       self.new )
 
 
-        self.connect(self.projectNameEdit, SIGNAL('textChanged()'),
+        self.connect(self.projectNameEdit, SIGNAL('textChanged(QString)'),
                      self.setProjectDirty)
        
         self.connect(self.descriptionEdit, SIGNAL('textChanged()'),
                      self.setProjectDirty)
+       
+        self.connect(self.bookList, SIGNAL('itemDoubleClicked(QListWidgetItem*)'),
+                     self.getItem)
+        self.connect(self.bookList, SIGNAL('itemClicked()'),
+                     self.getItem)
        
         self.db = _db
         self.projectId = None
@@ -49,15 +54,15 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
 
     def setProjectDirty(self):
-        print('setProjectDirty')
+        #print('setProjectDirty')
         self.dirty = True
 
     def clearProjectDirty(self):
-        print('clearProjectDirty')
+        #print('clearProjectDirty')
         self.dirty = False
 
     def SaveIfDirty(self):
-        print('SaveIfDirty', self.dirty)
+        #print('SaveIfDirty', self.dirty)
         if self.dirty:
             ans = QMessageBox.warning( self, 'Save Project?',
                                        'Entry has changed. Do you want to save it?',
@@ -67,12 +72,44 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             if ans == QMessageBox.Save:
                 self.save()
 
+    #
+    # Button actions
+    #
+    def delete(self):
+        if not self.isNew:
+            query = 'DELETE FROM Projects WHERE ProjectId = %d;' % (self.projectId)
+            print(query)
+
     def save(self):
         # needs db.cursor or database
         if self.isNew:
+
             print('Inserting new record into projects')
-        else:
+            name = self.projectNameEdit.text()
+            description = self.descriptionEdit.toPlainText()
+            queryStmt = 'INSERT INTO Projects (ProjectName, Description) VALUES ("%s", "%s");' % (name, description)
+            print(queryStmt)
+            #self._db.execute(queryStmt)
+
+            # get new project id somehow
+            queryStmt = 'SELECT ProjectId FROM Projects WHERE ProjectName = "%s";' % (name)
+            res = self._db.execute(queryStmt)
+            proj = res.fetchone()
+            self.projectId = int(proj[0])
+            
+            self.clearProjectDirty()
+            self.isNew = False
+
+        elif self.dirty:
+
             print('Updating old record into projects')
+            name = self.projectNameEdit.text()
+            description = self.descriptionEdit.toPlainText()
+            queryStmt = 'UPDATE Projects SET ProjectName = "%s" Description = "%s" WHERE ProjectId = %d;' % (name, description, self.projectId)
+            print(queryStmt)
+            self.clearProjectDirty()
+
+            return
 
     def new(self):
         self.SaveIfDirty()
@@ -80,9 +117,18 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         self.projectId = None
         self.projectNameEdit.setText('New Project')
         self.descriptionEdit.setText('Enter project description')
+        self.bookList.clear()
         self.isNew = True
         self.clearProjectDirty()
         
+    def quit(self):
+        self.SaveIfDirty()
+        self.close()
+
+
+    #
+    # various functions to get information about a Project
+    #
     def setProjId(self, _projId):
         self.SaveIfDirty()
         if _projId is None:
@@ -94,6 +140,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
             res = self.db.execute(search)
             proj = res.fetchone()
+            self.projectId = _projId
             self.projectNameEdit.setText( proj[0])
             self.descriptionEdit.setText(proj[1])
             self.isNew = False
@@ -104,11 +151,11 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         self.show()
 
     def getBookList(self, _projId):
-        search = 'SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = 5) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;'
+        search = 'SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = %d) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;' %(_projId)
 
         books = self.db.execute(search)
-        proj = books.fetchall()
-        for b in proj:
+        self.bookproj = books.fetchall()
+        for b in self.bookproj:
             if b[3] == '':
                 name = b[2]
             else:
@@ -117,9 +164,16 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             ent = '%s,   %s,   %s' % (b[0], name, b[1])
             self.bookList.addItem(ent)
 
-    def quit(self):
-        self.SaveIfDirty()
-        self.close()
+            
+    def getItem(self, item):
+        #print('ProjectView: getItem called with:')
+        #print(item.text())
+        row = self.bookList.currentRow()
+        #print('row is', row, 'item should be')
+        #print(self.bookproj[row])
+        bookId = self.bookproj[row][4]
+        print('calling bookView with bookId %d and title %s' % (bookId, self.bookproj[row][0]))
+        #call book view with bookId
 
 
 class Project(object):
