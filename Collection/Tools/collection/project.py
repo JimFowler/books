@@ -72,6 +72,13 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             if ans == QMessageBox.Save:
                 self.save()
 
+    def begin(self):
+        self.db.execute('BEGIN TRANSACTION;')
+
+    def commit(self):
+        self.db.execute('COMMIT TRANSACTION;')
+
+        
     #
     # Button actions
     #
@@ -89,12 +96,13 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             description = self.descriptionEdit.toPlainText()
             queryStmt = 'INSERT INTO Projects (ProjectName, Description) VALUES ("%s", "%s");' % (name, description)
             print(queryStmt)
-            #self._db.execute(queryStmt)
-
+            self.db.execute(queryStmt)
             # get new project id somehow
             queryStmt = 'SELECT ProjectId FROM Projects WHERE ProjectName = "%s";' % (name)
-            res = self._db.execute(queryStmt)
+            print(queryStmt)
+            res = self.db.execute(queryStmt)
             proj = res.fetchone()
+            print('proj', proj)
             self.projectId = int(proj[0])
             
             self.clearProjectDirty()
@@ -105,8 +113,9 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             print('Updating old record into projects')
             name = self.projectNameEdit.text()
             description = self.descriptionEdit.toPlainText()
-            queryStmt = 'UPDATE Projects SET ProjectName = "%s" Description = "%s" WHERE ProjectId = %d;' % (name, description, self.projectId)
+            queryStmt = 'UPDATE Projects SET ProjectName = "%s", Description = "%s" WHERE ProjectId = %d;' % (name, description, self.projectId)
             print(queryStmt)
+            self.db.execute(queryStmt)
             self.clearProjectDirty()
 
             return
@@ -227,13 +236,5 @@ class Project(object):
         self.view.setProjId(projId)
 
 
-
-'''get project information
-
-
-'SELECT Books.Title Books.BookId
-FROM Books INNER JOIN BookProject
-WHERE BookProject.ProjectId == _projid'
-'''
 
 

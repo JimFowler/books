@@ -1,3 +1,14 @@
+2015-12-07  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView.save): Able to insert
+	and update records.
+
+	* Tools/scripts/CreateTables.sql: Changed AUTO_INCREMENT to
+	AUTOINCREMENT, moved to follow PRIMARY KEY, and changed all
+	INT to INTEGER.
+
+	* Tools/books: changed --input flag to --database
+
 2015-12-04  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/project.py (ProjectView.getBookList): worked out

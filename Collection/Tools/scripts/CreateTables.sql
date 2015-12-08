@@ -29,7 +29,7 @@ CREATE TABLE Books
     --
     -- Unique key.
     --
-   (BookId          INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   (BookId          INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
     -- Basic publishing information. Must have a title
@@ -45,8 +45,8 @@ CREATE TABLE Books
     --
     -- Zero or Null values is unknown
     --
-    Edition         INT UNSIGNED NULL,
-    Printing        INT UNSIGNED NULL,
+    Edition         INTEGER UNSIGNED NULL,
+    Printing        INTEGER UNSIGNED NULL,
 
     --
     -- YYYY-MM-DD if known, otherwise 1001-01-01.
@@ -65,7 +65,7 @@ CREATE TABLE Books
     -- Link to Vendor table through the VendorId.
     -- Zero or Null values mean unknown
     --
-    PurchasedFrom   INT UNSIGNED NULL REFERENCES Vendors(VendorId),
+    PurchasedFrom   INTEGER UNSIGNED NULL REFERENCES Vendors(VendorId),
 
     --
     -- The location the book was published,
@@ -77,7 +77,7 @@ CREATE TABLE Books
     --  statements are based on the definitions from Americam Bookman
     --  magazine.
     --
-    Publisher       INT UNSIGNED NULL REFERENCES Vendors(VendorId),
+    Publisher       INTEGER UNSIGNED NULL REFERENCES Vendors(VendorId),
     MyCondition     TEXT CHECK( MyCondition IN
     		  ("Reading", "Poor", "Good", "Very Good", "Fine", "As New" )),
 
@@ -91,7 +91,7 @@ CREATE TABLE Books
     --
     -- Should not have two books with the same AccessionNumber
     --
-    AccessionNumber INT UNSIGNED UNIQUE NOT NULL
+    AccessionNumber INTEGER UNSIGNED UNIQUE NOT NULL
    )
 
     -- The basic description of each book.
@@ -107,7 +107,7 @@ CREATE TABLE Wanted
     --
     -- Unique key.
     --
-   (WantId        INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   (WantId        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
     -- Title is the only required field
@@ -123,8 +123,8 @@ CREATE TABLE Wanted
     --
     -- Zero or Null values is unknown
     --
-    Edition       INT UNSIGNED NULL,
-    Printing      INT UNSIGNED NULL,
+    Edition       INTEGER UNSIGNED NULL,
+    Printing      INTEGER UNSIGNED NULL,
     PurchasePrice FLOAT UNSIGNED NULL,
 
     --
@@ -135,7 +135,7 @@ CREATE TABLE Wanted
     --
     -- Link to Vendor table through the VendorId.
     --
-    Publisher     INT UNSIGNED NULL REFERENCES Vendors(VendorId),
+    Publisher     INTEGER UNSIGNED NULL REFERENCES Vendors(VendorId),
 
     --
     -- Bibliographic description of the book, pages counts, figures,
@@ -153,7 +153,7 @@ CREATE TABLE Wanted
 -- Create the basic table for individual authors.
 --
 CREATE TABLE Authors
-   (AuthorId INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   (AuthorId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
     -- The name used for sorting, usually the family name,
@@ -194,7 +194,7 @@ CREATE TABLE Authors
 --  vendors as well.
 --
 CREATE TABLE Vendors
-   (VendorId INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   (VendorId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     VendorName     TEXT NOT NULL,
     MailingAddress TEXT NULL,
     MailingCity    TEXT NULL,
@@ -221,7 +221,7 @@ CREATE TABLE Vendors
 -- Create the Projects table
 --
 CREATE TABLE Projects
-      (ProjectId      INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+      (ProjectId      INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
        ProjectName    TEXT NOT NULL,
        Description    TEXT NULL
       )
@@ -235,22 +235,22 @@ CREATE TABLE Projects
 -- Create the many-to-many link between books and authors.
 --
 CREATE TABLE BookAuthor
-   (BookAuthorId  INT  AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   (BookAuthorId  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
     -- The author id for the author being referenced.    
     --
-    AuthorId      INT UNSIGNED NOT NULL REFERENCES Authors(AuthorId),
+    AuthorId      INTEGER UNSIGNED NOT NULL REFERENCES Authors(AuthorId),
 
     --
     -- The book id for the book being referenced.
     --
-    BookId        INT UNSIGNED NOT NULL REFERENCES Books(BookId),
+    BookId        INTEGER UNSIGNED NOT NULL REFERENCES Books(BookId),
 
     --
     -- What author is this, primary, secondary, etc.
     --
-    Priority      INT UNSIGNED NOT NULL,
+    Priority      INTEGER UNSIGNED NOT NULL,
 
     --
     -- How the authors name is written on the title page. This may be
@@ -266,16 +266,16 @@ CREATE TABLE BookAuthor
 -- Create the many-to-many link linking books and projects
 --
 CREATE TABLE BookProject
-      (ProjBookId INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-       ProjectId  INT UNSIGNED NOT NULL REFERENCES Project(ProjectId),
-       BookId     INT UNSIGNED NOT NULL REFERENCES Books(BookId),
+      (ProjBookId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+       ProjectId  INTEGER UNSIGNED NOT NULL REFERENCES Project(ProjectId),
+       BookId     INTEGER UNSIGNED NOT NULL REFERENCES Books(BookId),
        Notes      TEXT NULL
       )
 ;
 
 
 CREATE TABLE ToDo
-       (ToDoId        INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+       (ToDoId        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         DateOfEntry   DATE NOT NULL,
 	Summary       TEXT NOT NULL,
 	Task          TEXT NULL,
