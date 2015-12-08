@@ -29,9 +29,9 @@ def getargs():
                        dest='version',
                        default=False,
                        action='store_true')
-   parser.add_argument( '-i', '--input', type=str,
+   parser.add_argument( '-d', '--database', type=str,
                         help='use the database input instead of Collections.db3',
-                        dest='input',
+                        dest='database',
                         default=None,
                         action='append')
    parser.add_argument( '-s', '--symbols', type=str,
@@ -71,8 +71,8 @@ def main():
 
    # open database with input name otherwise
    # use the default database
-   if args.input is not None:
-      fname = args.input[0]
+   if args.database is not None:
+      fname = args.database[0]
       if os.path.isfile(fname):
          if not form.setDatabaseName(fname):
             print('Could not open database', fname )
