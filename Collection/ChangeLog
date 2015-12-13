@@ -1,3 +1,16 @@
+2015-12-13  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView.delete): Added query
+	and commit when deleting.
+
+2015-12-12  Jim Fowler  <jrf@Biblion>
+
+	* Tools/scripts/CreateTables.sql: Changed all DATE to TEXT
+	and FLOAT to REAL per sqlite3 documentation.
+
+	* Tools/collection/database.py (DataBase.commit): Added commit
+	method.  Changes were not being saved in the database file.
+
 2015-12-07  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/project.py (ProjectView.save): Able to insert

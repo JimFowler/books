@@ -51,15 +51,16 @@ CREATE TABLE Books
     --
     -- YYYY-MM-DD if known, otherwise 1001-01-01.
     -- If month or day are unknown use YYYY-01-01.
+    -- 
     --
-    PurchaseDate    DATE NULL,
+    PurchaseDate    TEXT NULL,
 
     --
     --  Zero values means this was free or was a gift.
     --   $0.01 mean I know a paid something for it but I don't
     --   recall what
     --
-    PurchasePrice   FLOAT UNSIGNED NULL,
+    PurchasePrice   REAL UNSIGNED NULL,
 
     --
     -- Link to Vendor table through the VendorId.
@@ -118,14 +119,14 @@ CREATE TABLE Wanted
     -- YYYY as a string because the YEAR(4) type only stores
     --  years from 1901 - 2155.
     --
-    Copyright     CHAR(4) NULL,
+    Copyright     TEXT NULL,
 
     --
     -- Zero or Null values is unknown
     --
     Edition       INTEGER UNSIGNED NULL,
     Printing      INTEGER UNSIGNED NULL,
-    PurchasePrice FLOAT UNSIGNED NULL,
+    PurchasePrice REAL UNSIGNED NULL,
 
     --
     -- The location the book was published,
@@ -176,8 +177,8 @@ CREATE TABLE Authors
     -- YYYY-MM-DD if known, otherwise 1001-01-01.
     -- If month or day are unknown use YYYY-01-01.
     --
-    Born       DATE NULL,
-    Died       DATE NULL,
+    Born       TEXT NULL,
+    Died       TEXT NULL,
 
     --
     -- Other information about the author that we might use.
@@ -257,7 +258,7 @@ CREATE TABLE BookAuthor
     -- different from the authors full name give in the author table
     -- and different for different books.
     --
-    AsWritten     TEXT(128) NOT NULL 
+    AsWritten     TEXT NOT NULL 
    )
 
 ;
@@ -276,10 +277,22 @@ CREATE TABLE BookProject
 
 CREATE TABLE ToDo
        (ToDoId        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-        DateOfEntry   DATE NOT NULL,
+
+        --
+	-- Short Summary of task
+	--
 	Summary       TEXT NOT NULL,
+
+	--
+	-- Longer description of the task
+	--
 	Task          TEXT NULL,
-	DateCompleted DATE NULL
+
+	--
+	-- Dates should be YYYY-MM-DD
+	--
+        DateOfEntry   TEXT NOT NULL,
+	DateCompleted TEXT NULL
        )
 ;
 

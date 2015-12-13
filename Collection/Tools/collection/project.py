@@ -72,37 +72,37 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             if ans == QMessageBox.Save:
                 self.save()
 
-    def begin(self):
-        self.db.execute('BEGIN TRANSACTION;')
-
-    def commit(self):
-        self.db.execute('COMMIT TRANSACTION;')
-
         
     #
     # Button actions
     #
     def delete(self):
         if not self.isNew:
-            query = 'DELETE FROM Projects WHERE ProjectId = %d;' % (self.projectId)
-            print(query)
+            queryStmt = 'DELETE FROM Projects WHERE ProjectId = %d;' % (self.projectId)
+            # ask yes/no
+            ans = QMessageBox.warning( self, 'Delete Project?',
+                                       'Are you sure you want to delete this project? This action can not be undone!',
+                                       QMessageBox.Yes,
+                                       QMessageBox.No )
+            if ans == QMessageBox.Yes:
+                self.db.execute(queryStmt)
+                self.db.commit()
+                self.clearProjectDirty()
+                self.quit()
 
     def save(self):
         # needs db.cursor or database
         if self.isNew:
 
-            print('Inserting new record into projects')
             name = self.projectNameEdit.text()
             description = self.descriptionEdit.toPlainText()
             queryStmt = 'INSERT INTO Projects (ProjectName, Description) VALUES ("%s", "%s");' % (name, description)
-            print(queryStmt)
             self.db.execute(queryStmt)
+
             # get new project id somehow
             queryStmt = 'SELECT ProjectId FROM Projects WHERE ProjectName = "%s";' % (name)
-            print(queryStmt)
             res = self.db.execute(queryStmt)
             proj = res.fetchone()
-            print('proj', proj)
             self.projectId = int(proj[0])
             
             self.clearProjectDirty()
@@ -110,19 +110,18 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
         elif self.dirty:
 
-            print('Updating old record into projects')
             name = self.projectNameEdit.text()
             description = self.descriptionEdit.toPlainText()
-            queryStmt = 'UPDATE Projects SET ProjectName = "%s", Description = "%s" WHERE ProjectId = %d;' % (name, description, self.projectId)
+            queryStmt = "UPDATE Projects SET ProjectName = '%s', Description = '%s' WHERE ProjectId = %d;" % (name, description, self.projectId)
             print(queryStmt)
             self.db.execute(queryStmt)
             self.clearProjectDirty()
 
-            return
+        self.db.commit()
+        return
 
     def new(self):
         self.SaveIfDirty()
-        
         self.projectId = None
         self.projectNameEdit.setText('New Project')
         self.descriptionEdit.setText('Enter project description')

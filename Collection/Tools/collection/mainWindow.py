@@ -81,6 +81,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
     #
     def quit(self):
         '''Clean up and exit.'''
+        self.db.closeDB()
         self.close()
 
     #

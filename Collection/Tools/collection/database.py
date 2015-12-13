@@ -57,10 +57,18 @@ class DataBase(object):
 
         return self.cursor
 
+    def commit(self):
+        '''Commit current changes to the database. If this is not
+        called before closing, all changes will not be written to the
+        disk file. This is a Python sqlite3 feature.'''
+        if self.connection is not None:
+            self.connection.commit()
+
     def closeDB(self):
         '''Close any open database. Reset the connection, cursor
         and name variables.'''
         if self.connection is not None:
+            self.connection.commit()
             self.connection.close()
 
         self.setDBName(None)
