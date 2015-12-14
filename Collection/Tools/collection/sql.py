@@ -13,12 +13,13 @@ import collection.database as database
 class collectionDB(database.DataBase):
     '''The handler for Collection.db3'''
     def __init__(self, parent=None, _dbname=None):
-        super(collectionDB, self).__init__(parent)
+        super(collectionDB, self).__init__(parent=parent)
         if _dbname is not None:
             self.open(_dbname)
 
     def open(self, name):
-        '''Open the named database if possible.'''
+        '''Open the named database if possible. Returns True if successful
+        or False otherwise.'''
         self.cursor = self.openDB(name)
         if self.cursor is None:
             return False
@@ -26,11 +27,11 @@ class collectionDB(database.DataBase):
             return True
 
     def execute(self, sqlStmt):
-        '''Execute arbitrary SQL statement'''
+        '''Execute arbitrary SQL statement. Returns the cursor '''
         return self.cursor.execute(sqlStmt)
 
     def getAuthorDict(self):
-        '''get the list of projects from the database. Return a dictionary
+        '''Get the list of projects from the database. Return a dictionary
         of {'LastName, FirstName': AuthorId.}'''
         self.cursor.execute('SELECT * FROM viewAllAuthorNames;')
         d = {}
@@ -42,17 +43,17 @@ class collectionDB(database.DataBase):
         return d
 
     def getVendorDict(self):
-        '''get the list of vendors from the database. Return a dictionary
+        '''Get the list of vendors from the database. Return a dictionary
         of {VendorName: VendorId.}'''
         return self.getList('SELECT * FROM viewAllVendorNames;')
 
     def getProjectDict(self):
-        '''get the list of projects from the database. Return a dictionary
+        '''Get the list of projects from the database. Return a dictionary
         of {ProjectName: ProjectId.}'''
         return self.getList('SELECT * FROM viewAllProjectNames;')
 
     def getToDoDict(self):
-        '''get the list of projects from the database. Return a dictionary
+        '''Get the list of projects from the database. Return a dictionary
         of {Summary: ToDoId.}'''
         return self.getList('SELECT * FROM viewAllToDoTasks;')
 

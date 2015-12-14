@@ -8,7 +8,7 @@ provides a parent class for more particular database classes
 import sqlite3
 
 class DataBase(object):
-    '''A generic database interface.'''
+    '''A generic interface to an SQLite3 database.'''
     def __init__(self, parent=None, dbname=None):
 
         # variables
@@ -20,6 +20,7 @@ class DataBase(object):
         return self.openDB()
 
     def setDBName(self, name):
+        '''Sets the filename of the current open database.'''
         self.DBName = name
 
     def getDBName(self):

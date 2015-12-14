@@ -5,14 +5,14 @@ the Collection database.'''
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
-#from more_itertools import unique_everseen
 
 import bookentry.symbol as symbol
 
 import collection.ui_project as ui_project
 import collection.selectDialog as selectDialog
-import pprint
 
+# Debugging
+import pprint
 pp = pprint.PrettyPrinter()
 
 class ProjectView( QDialog, ui_project.Ui_Dialog):
@@ -21,32 +21,44 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
     or None if you want to create a new project. _db is the
     database we are currently working with.  It doesn't make
     any sense to not pass the _db to the class.
-'''
+    '''
     def __init__( self, parent=None, _db=None ):
         super(ProjectView, self).__init__(parent)
         self.setupUi(self)
 
-        self.connect( self.closeButton, SIGNAL('released()'),
+        self.connect( self.closeButton,
+                      SIGNAL('released()'),
                       self.quit )
-        self.connect( self.saveButton, SIGNAL('released()'),
+
+        self.connect( self.saveButton,
+                      SIGNAL('released()'),
                       self.save )
-        self.connect( self.deleteButton, SIGNAL('released()'),
+
+        self.connect( self.deleteButton,
+                      SIGNAL('released()'),
                       self.delete )
-        self.connect( self.newButton, SIGNAL('released()'),
+
+        self.connect( self.newButton,
+                      SIGNAL('released()'),
                       self.new )
 
 
-        self.connect(self.projectNameEdit, SIGNAL('textChanged(QString)'),
+        self.connect(self.projectNameEdit,
+                     SIGNAL('textChanged(QString)'),
                      self.setProjectDirty)
        
-        self.connect(self.descriptionEdit, SIGNAL('textChanged()'),
+        self.connect(self.descriptionEdit,
+                     SIGNAL('textChanged()'),
                      self.setProjectDirty)
-       
-        self.connect(self.bookList, SIGNAL('itemDoubleClicked(QListWidgetItem*)'),
+        '''
+        self.connect(self.bookList,
+                     SIGNAL('itemDoubleClicked(QListWidgetItem*)'),
                      self.getItem)
-        self.connect(self.bookList, SIGNAL('itemClicked()'),
+
+        self.connect(self.bookList,
+                     SIGNAL('itemClicked()'),
                      self.getItem)
-       
+                     '''
         self.db = _db
         self.projectId = None
         self.isNew = True
