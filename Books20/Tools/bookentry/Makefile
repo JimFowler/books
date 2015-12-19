@@ -40,7 +40,7 @@ ui_EntrySelect.py: designer/ui_EntrySelect.ui
 ui_JournalSearch.py: designer/ui_JournalSearch.ui
 	$(PYUIC) -o ui_JournalSearch.py designer/ui_JournalSearch.ui
 
-ui_JournalSearch.py: designer/ui_JournalEntry.ui
+ui_JournalEntry.py: designer/ui_JournalEntry.ui
 	$(PYUIC) -o ui_JournalEntry.py designer/ui_JournalEntry.ui
 
 #
