@@ -1,11 +1,18 @@
-.read scripts/CreateTables.sql
+-- BuildAll from ./Collection
+--  invoke as sqlite3 CardCatalog.db3
+--     .read ./Tools/Scripts/BuildAll
+--
+.read   ./Tools/scripts/CreateTables.sql
 .separator |
 .import ./Data/Vendors.txt Vendors
 .import ./Data/Authors.txt Authors
 .import ./Data/Projects.txt Projects
 .import ./Data/Books.txt Books
-.import ./Data/Wanted.txt Wanted
+-- .import ./Data/Wanted.txt Wanted
 .import ./Data/BookAuthor.txt BookAuthor
 .import ./Data/BookProject.txt BookProject
-.import ./Data/ToDo.txt ToDo
-.read scripts/CreateViews.sql
+-- .import ./Data/ToDo.txt ToDo
+.read   ./Tools/scripts/CreateViews.sql
+--
+--   End of BuildAll
+--

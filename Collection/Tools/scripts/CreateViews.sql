@@ -49,6 +49,16 @@ CREATE VIEW viewAllToDoTasks AS
 --       ORDER BY Authors.LastName, Books.Copyright;
 --
 
+-- CREATE VIEW viewBooksInProject AS
+--      SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM
+--      	     Authors INNER JOIN
+--	     	     (BookAuthor INNER JOIN
+--		     		 (Books INNER JOIN BookProject
+--			         ON BookProject.ProjectId = %d)
+--		     ON BookProject.BookId = Books.BookId)
+--             ON Books.BookId = BookAuthor.BookId
+--      WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1
+--      ORDER BY Books.Copyright;
 --
 -- end of CreateViews.sql
 --
