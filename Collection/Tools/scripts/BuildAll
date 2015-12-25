@@ -8,10 +8,10 @@
 .import ./Data/Authors.txt Authors
 .import ./Data/Projects.txt Projects
 .import ./Data/Books.txt Books
--- .import ./Data/Wanted.txt Wanted
+.import ./Data/Wanted.txt Wanted
 .import ./Data/BookAuthor.txt BookAuthor
 .import ./Data/BookProject.txt BookProject
--- .import ./Data/ToDo.txt ToDo
+.import ./Data/ToDo.txt ToDo
 .read   ./Tools/scripts/CreateViews.sql
 --
 --   End of BuildAll

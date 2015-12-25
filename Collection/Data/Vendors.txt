@@ -1,175 +1,248 @@
-VendorID|Name|MailingAddress|MailingCity|MailingState/Prov|MailingCountry|MailingPostalCode|ShippingAddress|ShippingCity|ShippingState/Prov|ShippingCountry|ShippingCode|PhoneNumber|FaxNumber|EmailAddress|URL|Comments|
-2|Jeff Weber Rare Books|P.O Box 3368|Glendale|CA|USA|91221-0368|1923 Foothill Drive|Glendale|CA|USA|91201-1242|1-818-848-9704|1-818-558-1904|weber@primenet.com|#http://www.abaa-booknet.com/alldlrs/sc/91221jef.html#|Jeff and Linda Weber, 7AM - 10PM PT seven days a week|
-4|Knollwood Books|P.O. Box 197|Oregon|WI|USA|53575-0197|6211 Knollwood Dr|Oregon|WI|USA|53575|1-608-835-8861|1-608-835-8421|books@tdsnet.com||Lee and Peggy Price|
-5|19th Century Shop|1047 Hollins St|Baltimore|MD|USA|21223||||||(301)539-2586|(301)727-2681|rarebooks@19thcenturyshop.com|#http://www.19thcenturyshop.com/#|Fine books and manuscripts,  first ed.  Excellent quality|
-6|Antiquarian Scientist|P.O. Box 985|Acton|MA|USA|01720||||||(978)263-5504|(978)263-0114|antisci@ma.ultranet.com||Raymond V. Girodano,  antq. science and medicine, most pieces in good or very good condition  few in fine. Antique scientific equipment as well.|
-7|Edwin V. Glaser Rare Books|P.O. Box 1765|Sausalito|CA|USA|94966||||||(415)332-1194|(415)332-5024|glaserrare@aol.com||Excellent material  mostly fine cond.|
-8|Helena Sz'epe|1525 E. 53rd St  Suite 825|Chicago|IL|USA|60615||||||(312)493 4470||||good to very good with numerous UoC assoc copies|
-11|Scientia|P.O. Box 433  432A Massachusetts Ave.|Arlington|MA|USA|02174||||||1(617)643-5725||||Business at the shop is by appointment only, 1(617)646-7336 home|
-12|Seminary Coop Bookstore|5757 S. University Ave|Chicago|IL|USA|60637-1597||||||(312)752-4381||||(800)777-1456  acct #04835|
-13|Trotting Hill Park Books|P.O. Gox 1324|Springfield|MA|USA|01101||||||1(413)567-6466||||Catalog ordered 17 Feb 92|
-14|University of Chicago Press||Chicago|IL|USA|61||Chicago|IL|USA|61||||#http://www.press.uchicago.edu/#||
-17|Yerkes Observatory|P.O. Box 258|Williams Bay|WI|USA|53191|373 West Geneva Street|Williams Bay|WI|USA|53191|(414)245-5555|||#http://www.yerkes.uchicago.edu#||
-18|AAVSO|25 Birch Street|Cambridge|MA|USA|02138|25 Birch Street|Cambridge|MA|USA|02138|||||American Association of Variable Star Observers|
-19|Kluwer Academic|101 Philip Drive|Norwell|MA|USA|02601||||||||||Somewhere|
-21|Faber and Faber|24 Russell Square|London||UK|WC1|||||||||||
-23|L.H. Price||||||||||||||||
-24|American Elsevier Co.|52 Vanderbilt Avenue|New York|NY|USA|10017|||||||||||
-25|Good Books|431 North 4th Street|Tucson|AZ|USA||431 4th Street|Tucson|AZ|USA||(602)792-9551||||Out of business 1995|
-26|Chapman and Hall, Ltd.|37 Essex Street|London||UK|WC2|||||||||||
-27|Harper & Brothers||||||||||||||||
-28|George Allen & Unwin, Ltd.|Museum Street|London||UK||||||||||||
-29|Thomas Nelson & Sons|18 East 41st Street|New York|NY|USA|17||||||||||Address is for US office in 1962|
-30|Interstellar Media|2153 Russell Street|Berkeley|CA|USA|94705|||||||||||
-31|NASA||Washington|D.C.|USA||||||||||||
-32|D. Reidel|P.O. Box 17|Dordrecht||Holland|3300 AA||||||||||Sold in USA by Kluwer Academic Publishers.|
-33|McGraw-Hill||||||||||||||||
-34|Princeton University Press|41 William Street|Princeton|NJ|USA|08540|41 William Street|Princeton|NJ|USA|08540|(800)777-4726|(800)999-1958|orders@cpfs.pupress.princeton.edu|#http://pup.princeton.edu#||
-35|American Society of Mechanical Engineers||||||||||||||||
-36|Good Times Bookshop||Port Jefferson|NY||||Port Jefferson|NY||||||||
-37|John W. Briggs|||||||||||||jwb@yerkes.uchicago.edu|||
-38|Adam Hilger|Techno House, Redcliffe Way|Bristol||England|BS1 6NX|||||||||||
-39|Taylor and Francis||||||||||||||||
-40|W. H. Freeman and Company|660 Market Street|San Francisco|CA|USA|94104|||||||||||
-41|Powell's Books| 57th Street|Chicago|IL|USA|61317|||||||||||
-42|Springer-Verlag||||||||||||||||
-43|University of Chicago Bookstore|970 E. 58th Street|Chicago|IL|USA|60637|970 E. 58th Street|Chicago|IL|USA|60637|(773)702-8729|||||
-44|Charles Scribner's Sons||||||||||||||||
-45|Bookworks||||||||||||||||
-46|Yale University Press|P.O. Box 209040|New Haven|CT|USA|06520-9040||||||203-432-0960|203-432-0948||#http://yalebooks.com/#||
-47|Claredon Press||||||||||||||||
-48|Free Press, The|866 Third Ave|New York|NY|USA|10022|||||||||#http://www.sinonsays.com/#|A division of Simon & Shuster|
-49|Farr, Staus, and Giroux||||||||||||||||
-50|Bookstar||Albuquerque|NM|||||||||||||
-51|Longmans, Green and Co.||||||||||||||||
-52|Adam & Charles Black||||||||||||||||
-53|Astronomical Society of the Pacific|390 Ashton Ave|San Francisco|CA|USA|94112|390 Ashton Ave|San Francisco|CA|USA|94112||||#http://www.stsci.edu/pasp/#||
-54|Cambridge University Press|40 West 20th Street|New York|NY|USA|10011-4211||||||(800)872-7423|||#http://www.cup.org#||
-55|European Space Agency||||||||||||||||
-56|University of Wisconsin Press|430 Sterling Court|Madison|WI|USA||||||||||||
-57|University of Texas Press||Austin|TX|USA|||Austin|TX|USA|||||||
-58|McDonald Observatory Visitor's Center|P.O. Box 1337|Fort Davis|TX|USA|79734|State Highway 118 North|Fort Davis|TX|USA|79734|(915)426-3240|(915)426-3645||#http://www.as.utexas.edu/#||
-59|Society of Automotive Engineers|400 Commonwealth Drive|Warrendale|PA|USA|15096-0001|400 Commonwealth Drive|Warrendale|PA|USA|15096|(724)776-4841|(724)776-0790|publications@sae.org|#http://www.sae.org/BOOKSTORE#|The Engineering Society for Advancing Mobility, Land, Sea, Air, and Space|
-60|Mansell Publications||||||||||||||||
-62|Houghton Mifflin Co.||||||||||||||||
-63|University of Toronto Press||||||||||||||||
-64|Sky Publishing Corp.||||||||||||||||
-65|New York Academy of Science||||||||||||||||
-66|Blakiston Company|1012 Walnut Street|Philadelphia|PA|USA||||||||||||
-67|Sierra Club Books||||||||||||||||
-68|Alamogordo Public Library||Alamogordo|NM|USA|||Alamogordo|NM|USA|||||||
-69|Massachusetts Institute of Technology Press||||||||||||||||
-70|University of California Press|||||||||||(800)822-6657|||#http://www.ucpress.edu#||
-71|Johns Hopkins University Press|701 West 40th Street|Baltimore|MD|USA|21211|701 West 40th Street|Baltimore|MD|USA|21211||||||
-72|P. F. Collier and Sons||||||||||||||||
-73|Prentice-Hall||||||||||||||||
-74|Science History|156 Fifth Avenue|New York|NY|USA|10010|156 Fifth Avenue|New York|NY|USA|10010|||||A division of Neale Watson Academic Publications, Inc|
-75|University of Michigan Press||||||||||||||||
-76|University of Arizona Press|1230 North Park Avenue|Tucson|AZ|USA|85719|1230 North Park Avenue|Tucson|AZ|USA|85719|(800)426-3797|(800)426-3797|orders@uapress.arizona.edu|#http://www.uapress.arizona.edu#||
-77|William Wesley and Son|28 Essex Street|Strand||||||||||||||
-78|Coas Book Store||Las Cruces|NM|USA|||Las Cruces|NM|USA|||||||
-79|Belknap Press||||||||||||||||
-80|Smithsonian Institution|P.O. Box 960|Herndon|VA|USA|20172||||||(800)782-4612|||||
-81|Friends of the Library|||||||||||||||San Diego State University|
-82|Macmillian and Co.||||||||||||||||
-83|57th Street Books|57th Street|Chicago|IL|USA|60637| 57th street|Chicago|IL|USA|60637||||||
-84|Harvard University Press|||||||||||(800)448-2242|||#http://www.hup.harvard.edu/#||
-85|National Solar Observatory|P.O. Box 62|Sunspot|NM|USA|88349|N.M. Highway 6563|Sunspot|NM|Usa|88349||||#http://www.nso.noao.edu#||
-86|C. Kegan Paul & Co.||||||||||||||||
-87|Harper & Row||||||||||||||||
-88|Basic Books, Inc.||||||||||||||||
-89|St. Martins/Marek||||||||||||||||
-90|Vatican Observatory||||||||||||||||
-91|Pergamon Press||||||||||||||||
-92|E. Thunot||||||||||||||||
-93|Oxford University Press|198 Madison Ave|New York|NY|USA|10016|Great Clarendon Street|Oxford||UK|OX2 6DP|(800)451-7556|||#http://www.oup-usa.org/#||
-94|J. & D. A. Darling||||||||||||||||
-95|Paul S. Eriksson, Inc.||||||||||||||||
-96|Old Town Books||||||||||||||||
-97|University Science||||||||||||||||
-98|Corner Bookshop, The||Setauket|NY||||Setauket|NY|||(516)751-1904||||Out of Business, fall 1997|
-99|The Atlantic Monthly||||||||||||||||
-100|D. Appleton and Co||||||||||||||||
-101|The Bodley Head||||||||||||||||
-103|Octave Doin & Fils||||||||||||||||
-104|Robert Hale, Ltd||||||||||||||||
-105|Willhelm Englemann||||||||||||||||
-106|John Wiley and Sons||||||||||||||||
-107|Holden Day, Inc||||||||||||||||
-108|W. A. Benjamin||||||||||||||||
-109|Krieger Publishing||||||||||||||||
-110|Tharsis Books||||||||||||||||
-111|Stackpole Books|P.O. Box 1831|Harrisburg|PA|USA|17105|Cmeron and Kelker St|Harrisbug|PA|USA|17105||||||
-112|Graphics Press|P. O. Box 430|Cheshire|CN|USA|06410|P.|||||800-822-2454|203-272-8600|||In Connecticut call (203)272-9187.|
-113|World Scientific|P. O. Box 128|Singapore|||9128|||||||||||
-114|The Bond Wheelwright||||||||||||||||
-115|E. P. Dutton & Co.||||||||||||||||
-116|L. Davis Press||Schenectady|NY||||Schenectady|NY||||||||
-117|Academic Press, Inc.|1250 Sixth Avenue|San Diego|CA|USA|92101|1250 Sixth Avenue|San Diego|CA|USA|92101||||||
-118|MIT Press, The||Cambridge|MA|USA|||Cambridge|MA|USA|||||||
-119|Dutton - Penguin Books|375 Hudson Street|New York|NY|USA|10014|375 Hudson Street|New York|NY|USA|10014|||||Dutton is an imprint of Dutton Signet, a division of Penguin Books, USA.|
-120|Barnes and Noble|||||||||||||||A nationwide chain with stores  in numerous locations.|
-121|Borders Books|||||||||||||||Nation wide chain with stores in numerous locations.|
-122|HarperCollins|10 East 53rd Street|New York|NY|USA|10022|10 East 53rd Street|New York|NY|USA|10022||||||
-123|Harvard Coop||Cambridge|MA|USA||||||||||||
-124|Hilger & Watts, Ltd.|||||||||||||||Hilger Division, a manufacturer of spectrometers.|
-125|Philosophical Library|15 East 40th Street|New York|NY|USA|16|||||||||||
-126|Travis House Publications|P.O Box 37|Menlo Park|CA|USA|94026||||||(800)96-TRAVIS|||||
-127|Gordon and Breach Science Publishers|5301 Tacony Street, Drawer 330|Philadelphia|PA|USA|19137|5301 Tacony Street|Philadelphia|PA|USA|19137||||||
-128|Amazon.Com|P.O. Box 81410|Seattle|WA|USA|98108-1310|549 South Dawson|Seattle|WA|USA|98108-1310|800-201-7575|206-694-2950|orders@amazon.com|#http://www.amazon.com#||
-129|Carnegie Institution of Washington||Washington|DC|USA|||Washington|EDC|USA|||||||
-130|Harvard Observatory||Cambridge|MA||||Cambridge|MA||||||||
-131|Henry Gillman||Boy Court||UK|Ludgate Hill|||||||||||
-132|Royal Dublin Society||||||||||||||||
-133|Royal Dublin Society||||||||||||||||
-134|Warner and Swasey||Cleveland|OH|||||||||||||
-135|Rain Dog Books|404 S. Michigan Ave|Chicago|IL||60605|404 S. Michigan Ave|Chicago|IL||60605|(312)922-1200|(312)922-3182|raindog@raindogbooks.com|www.raindogbooks.com#http://www.raindogbooks.com#||
-136|Methuen & Co. Ltd||||||||||||||||
-137|British Interplanetary Society|12 Bessborough Gardens|London||SW1V 2JJ|England||||||01-821-9371|||||
-138|Galios Institute of Mathematics and Art||Brooklyn|NY|||||||||||||
-139|W.W. Norton & Company, Ltd||||||||||||||||
-140|Holt Rinehart Winston||||||||||||||||
-141|Long Island Univeristy Press||||||||||||||||
-142|Ronald Press Company||||||||||||||||
-143|Rinehart and Company||||||||||||||||
-144|Science Press Printing Company||Lancaster|PA|||||||||||||
-145|BookFeller||Fort Davis|TX||79734||||||||||Nel and Jerry opened in 2007|
-146|Interscience Publishers, Inc.|250 Fifth Ave|New York|NY|||||||||||||
-147|Follett's Intellectual Property|2402 Guadalupe Street|Austin|TX||78705||||||(512)478-0007|||#http://intellectualpropertyaustin.com#||
-148|Imperial College Press|57 Shelton Street|Covent Garden, London||UK|WC2H 9HE|||||||||||
-149|Chemical Publishing Company, Inc||Brooklyn|NY|USA||||||||||||
-150|Berkman Books|416 East Main Street|Fedricksburg|TX|USA|78624||||||(830)997-1535|||#http://www.berkmanbooks.com/#|Mon - Sat 10AM - 9PM|
-151|12th Street Books|827 West 12th Street|Austin|TX|USA|78701||||||(512)499-8828|||#http://www.12thstreetbooks.com/#||
-152|Half Price Books (Austin, TX)|5555 North Lamar|Austin|TX|USA|78751||||||(512)451-4463|||||
-153|Little Hands of Concrete Productions|R.L.M. 15-308, University of Texas at Austin|Austin|TX||78712||||||||||This appears to be a private company of Tom Sebring and McDonald Observatory|
-154|Alfred A. Knopf||||||||||||||#http://www.aaknopf.com/#|A division of Randon House Publishing|
-155|Walker and Company|435 Hudson Street|New York|NY|USA|10014|||||||||||
-156|Morris Publishing|3212 East Highway 30|Kearney|NE|USA|68847||||||(800)650-7888|||||
-157|American Institute of Physics||||||||||||||||
-158|Contemporary Book Inc.|180 North Michigan Ave|Chicago|IL|USA|60601|||||||||||
-159|Viking Press, Inc.|625 Madison Ave|New York|NY|USA|10022|||||||||||
-160|Half Price Books (Frisco, TX)||Frisco|TX||75034|||||||||||
-161|Blackie & Son, Limited||||||||||||||||
-162|National Academy Press||Washington|DC|||||||||||||
-163|Edward Arnold Ltd||||||||||||||||
-164|Fratelli Dumolard||Milan||Italy|||||||||||Dulmolard Brothers|
-165|Griffin, Bohn, and Company|Stationer Hall Court|London|UK|||||||||||||
-166|Taylor and Walton|29 Upper Gower Street|London||UK|||||||||||Booksellers and publishers to University College|
-167|Royal Institution of Great Britain||||||||||||||||
-168|Zeitlin & Ver Brugge||Los Angeles|CA|USA||||||||||||
-169|Delacorte Press|666 Fifth Ave|New York|NY|USA|10103||||||||||A division of Bantan Double Day Dell Publishing group|
-170|The SETI Institute and Press|2035 Landings Drive|Mountian View|CA|USA|94035|||||||||#http://www.seti.org/#||
-171|Berkeley Hill Books|P.O. Box 9877|Berkeley|CA|USA|94709|||||||||||
-172|Royal Society of Edinburgh||Edinburgh||Scotland||||||||||||
-173|Insitute of Physics|Dirac House, Temple Back|Bristol||UK|BS1 6BE|||||||||||
-174|Burndy Library||Norwalk|CT|USA||||||||||||
-175|Wiedenfield & Nicolson|Orion House, 5 Upper Saint Martin's Lane|London||UK|WC2H 9EA|||||||||||
-176|Harcourt, Brace and Company||||||||||||||||
-177|Putnam||New York|NY|||||||||||||
-178|Eyre & Spottiswoode|22 Heretta Street|London||UK|WC2|||||||||||
-179|American Physical Society|335 East 45th Street|New York|NY|USA|10017-3483|||||||||||
-180|American Journal of Science||||||||||||||||
-181|Herbert S. Stone||Chicago|IL|||||||||||||
-182|Hart Publishing Co.||New York|NY|||||||||||||
-183|George Newnes Limited|Tower House, Southampton St|London||UK|W.C.2|||||||||||
-184|University of Denver||Denver|CO|USA||||||||||||
+2|Jeff Weber Rare Books|P.O Box 3368|Glendale|CA|USA|91221-0368|1923 Foothill Drive|Glendale|CA|USA|91201-1242|1-323-344-9332|1-323344-9267|info@weberrarebooks.com|#http://www.abaa-booknet.com/alldlrs/sc/91221jef.html#|Jeff and Linda Weber, 7AM - 10PM PT seven days a week
+4|Knollwood Books|P.O. Box 197|Oregon|WI|USA|53575-0197|6211 Knollwood Dr|Oregon|WI|USA|53575|1-608-835-8861|1-608-835-8421|books@tdsnet.com||Lee and Peggy Price
+5|19th Century Shop|1047 Hollins St|Baltimore|MD|USA|21223||||||(301)539-2586|(301)727-2681|rarebooks@19thcenturyshop.com|#http://www.19thcenturyshop.com/#|Fine books and manuscripts,  first ed.  Excellent quality
+6|Antiquarian Scientist|P.O. Box 985|Acton|MA|USA|01720||||||(978)263-5504|(978)263-0114|antisci@ma.ultranet.com||Raymond V. Girodano,  antq. science and medicine, most pieces in good or very good condition  few in fine. Antique scientific equipment as well.
+7|Edwin V. Glaser Rare Books|P.O. Box 1765|Sausalito|CA|USA|94966||||||(415)332-1194|(415)332-5024|glaserrare@aol.com||Excellent material  mostly fine cond.
+8|Helena Sz'epe|1525 E. 53rd St  Suite 825|Chicago|IL|USA|60615||||||(312)493 4470||||good to very good with numerous UoC assoc copies
+11|Scientia|P.O. Box 433  432A Massachusetts Ave.|Arlington|MA|USA|02174||||||1(617)643-5725||||Business at the shop is by appointment only, 1(617)646-7336 home
+12|Seminary Coop Bookstore|5757 S. University Ave|Chicago|IL|USA|60637-1597||||||(312)752-4381||||(800)777-1456  acct #04835
+13|Trotting Hill Park Books|P.O. Gox 1324|Springfield|MA|USA|01101||||||1(413)567-6466||||Catalog ordered 17 Feb 92
+14|University of Chicago Press||Chicago|IL|USA|61||Chicago|IL|USA|61||||#http://www.press.uchicago.edu/#|
+17|Yerkes Observatory|P.O. Box 258|Williams Bay|WI|USA|53191|373 West Geneva Street|Williams Bay|WI|USA|53191|(414)245-5555|||#http://www.yerkes.uchicago.edu#|
+18|AAVSO|25 Birch Street|Cambridge|MA|USA|02138|25 Birch Street|Cambridge|MA|USA|02138|||||American Association of Variable Star Observers
+19|Kluwer Academic|101 Philip Drive|Norwell|MA|USA|02601||||||||||Somewhere
+21|Faber and Faber|24 Russell Square|London||UK|WC1||||||||||
+23|L.H. Price|||||||||||||||
+24|American Elsevier Co.|52 Vanderbilt Avenue|New York|NY|USA|10017||||||||||
+25|Good Books|431 North 4th Street|Tucson|AZ|USA||431 4th Street|Tucson|AZ|USA||(602)792-9551||||Out of business 1995
+26|Chapman and Hall, Ltd.|37 Essex Street|London||UK|WC2||||||||||
+27|Harper & Brothers|||||||||||||||
+28|George Allen & Unwin, Ltd.|Museum Street|London||UK|||||||||||
+29|Thomas Nelson & Sons|18 East 41st Street|New York|NY|USA|17||||||||||Address is for US office in 1962
+30|Interstellar Media|2153 Russell Street|Berkeley|CA|USA|94705||||||||||
+31|NASA||Washington|D.C.|USA|||||||||||
+32|D. Reidel|P.O. Box 17|Dordrecht||Holland|3300 AA||||||||||Sold in USA by Kluwer Academic Publishers.
+33|McGraw-Hill|||||||||||||||
+34|Princeton University Press|41 William Street|Princeton|NJ|USA|08540|41 William Street|Princeton|NJ|USA|08540|(800)777-4726|(800)999-1958|orders@cpfs.pupress.princeton.edu|#http://pup.princeton.edu#|
+35|American Society of Mechanical Engineers|||||||||||||||
+36|Good Times Bookshop||Port Jefferson|NY||||Port Jefferson|NY|||||||
+37|John W. Briggs|||||||||||||jwb@yerkes.uchicago.edu||
+38|Adam Hilger|Techno House, Redcliffe Way|Bristol||England|BS1 6NX||||||||||
+39|Taylor and Francis|||||||||||||||
+40|W. H. Freeman and Company|660 Market Street|San Francisco|CA|USA|94104||||||||||
+41|Powell's Books| 57th Street|Chicago|IL|USA|61317||||||||||
+42|Springer-Verlag|||||||||||||||
+43|University of Chicago Bookstore|970 E. 58th Street|Chicago|IL|USA|60637|970 E. 58th Street|Chicago|IL|USA|60637|(773)702-8729||||
+44|Charles Scribner's Sons|||||||||||||||
+45|Bookworks|||||||||||||||
+46|Yale University Press|P.O. Box 209040|New Haven|CT|USA|06520-9040||||||203-432-0960|203-432-0948||#http://yalebooks.com/#|
+47|Claredon Press|||||||||||||||
+48|Free Press, The|866 Third Ave|New York|NY|USA|10022|||||||||#http://www.sinonsays.com/#|A division of Simon & Shuster
+49|Farr, Staus, and Giroux|||||||||||||||
+50|Bookstar||Albuquerque|NM||||||||||||
+51|Longmans, Green and Co.|||||||||||||||
+52|Adam & Charles Black|||||||||||||||
+53|Astronomical Society of the Pacific|390 Ashton Ave|San Francisco|CA|USA|94112|390 Ashton Ave|San Francisco|CA|USA|94112||||#http://www.stsci.edu/pasp/#|
+54|Cambridge University Press|40 West 20th Street|New York|NY|USA|10011-4211||||||(800)872-7423|||#http://www.cup.org#|
+55|European Space Agency|||||||||||||||
+56|University of Wisconsin Press|430 Sterling Court|Madison|WI|USA|||||||||||
+57|University of Texas Press|P.O. Box 7819|Austin|TX|USA|78713-7819|2100 Comal|Austin|TX|USA|78722|512-471-7233|512-232-7178||#http://www.utexas.edu/utpress/#|
+58|McDonald Observatory Visitor's Center|P.O. Box 1337|Fort Davis|TX|USA|79734|State Highway 118 North|Fort Davis|TX|USA|79734|(915)426-3240|(915)426-3645||#http://www.as.utexas.edu/#|
+59|Society of Automotive Engineers|400 Commonwealth Drive|Warrendale|PA|USA|15096-0001|400 Commonwealth Drive|Warrendale|PA|USA|15096|(724)776-4841|(724)776-0790|publications@sae.org|#http://www.sae.org/BOOKSTORE#|The Engineering Society for Advancing Mobility, Land, Sea, Air, and Space
+60|Mansell Publications|||||||||||||||
+62|Houghton Mifflin Co.|||||||||||||||
+63|University of Toronto Press|||||||||||||||
+64|Sky Publishing Corp.|||||||||||||||
+65|New York Academy of Science|||||||||||||||
+66|Blakiston Company|1012 Walnut Street|Philadelphia|PA|USA|||||||||||
+67|Sierra Club Books|||||||||||||||
+68|Alamogordo Public Library||Alamogordo|NM|USA|||Alamogordo|NM|USA||||||
+69|Massachusetts Institute of Technology Press|||||||||||||||
+70|University of California Press|||||||||||(800)822-6657|||#http://www.ucpress.edu#|
+71|Johns Hopkins University Press|701 West 40th Street|Baltimore|MD|USA|21211|701 West 40th Street|Baltimore|MD|USA|21211|||||
+72|P. F. Collier and Sons|||||||||||||||
+73|Prentice-Hall|||||||||||||||
+74|Science History|156 Fifth Avenue|New York|NY|USA|10010|156 Fifth Avenue|New York|NY|USA|10010|||||A division of Neale Watson Academic Publications, Inc
+75|University of Michigan Press|||||||||||||||
+76|University of Arizona Press|1230 North Park Avenue|Tucson|AZ|USA|85719|1230 North Park Avenue|Tucson|AZ|USA|85719|(800)426-3797|(800)426-3797|orders@uapress.arizona.edu|#http://www.uapress.arizona.edu#|
+77|William Wesley and Son|28 Essex Street|Strand|||||||||||||
+78|Coas Book Store||Las Cruces|NM|USA|||Las Cruces|NM|USA||||||
+79|Belknap Press|||||||||||||||
+80|Smithsonian Institution|P.O. Box 960|Herndon|VA|USA|20172||||||(800)782-4612||||
+81|Friends of the Library|||||||||||||||San Diego State University
+82|Macmillian and Co.|||||||||||||||
+83|57th Street Books|57th Street|Chicago|IL|USA|60637| 57th street|Chicago|IL|USA|60637|||||
+84|Harvard University Press|||||||||||(800)448-2242|||#http://www.hup.harvard.edu/#|
+85|National Solar Observatory|P.O. Box 62|Sunspot|NM|USA|88349|N.M. Highway 6563|Sunspot|NM|Usa|88349||||#http://www.nso.noao.edu#|
+86|C. Kegan Paul & Co.|||||||||||||||
+87|Harper & Row|||||||||||||||
+88|Basic Books, Inc.|||||||||||||||
+89|St. Martins/Marek|||||||||||||||
+90|Vatican Observatory|||||||||||||||
+91|Pergamon Press|||||||||||||||
+92|E. Thunot|||||||||||||||
+93|Oxford University Press|198 Madison Ave|New York|NY|USA|10016|Great Clarendon Street|Oxford||UK|OX2 6DP|(800)451-7556|||#http://www.oup-usa.org/#|
+94|J. & D. A. Darling|||||||||||||||
+95|Paul S. Eriksson, Inc.|||||||||||||||
+96|Old Town Books|||||||||||||||
+97|University Science|||||||||||||||
+98|Corner Bookshop, The||Setauket|NY||||Setauket|NY|||(516)751-1904||||Out of Business, fall 1997
+99|The Atlantic Monthly|||||||||||||||
+100|D. Appleton and Co|||||||||||||||
+101|The Bodley Head|||||||||||||||
+103|Octave Doin & Fils|||||||||||||||
+104|Robert Hale, Ltd|||||||||||||||
+105|Willhelm Englemann|||||||||||||||
+106|John Wiley and Sons|||||||||||||||
+107|Holden Day, Inc|||||||||||||||
+108|W. A. Benjamin|||||||||||||||
+109|Krieger Publishing|||||||||||||||
+110|Tharsis Books|||||||||||||||
+111|Stackpole Books|P.O. Box 1831|Harrisburg|PA|USA|17105|Cmeron and Kelker St|Harrisbug|PA|USA|17105|||||
+112|Graphics Press|P. O. Box 430|Cheshire|CN|USA|06410|P.|||||800-822-2454|203-272-8600|||In Connecticut call (203)272-9187.
+113|World Scientific|P. O. Box 128|Singapore|||9128||||||||||
+114|The Bond Wheelwright|||||||||||||||
+115|E. P. Dutton & Co.|||||||||||||||
+116|L. Davis Press||Schenectady|NY||||Schenectady|NY|||||||
+117|Academic Press, Inc.|1250 Sixth Avenue|San Diego|CA|USA|92101|1250 Sixth Avenue|San Diego|CA|USA|92101|||||
+118|MIT Press, The||Cambridge|MA|USA|||Cambridge|MA|USA||||||
+119|Dutton - Penguin Books|375 Hudson Street|New York|NY|USA|10014|375 Hudson Street|New York|NY|USA|10014|||||Dutton is an imprint of Dutton Signet, a division of Penguin Books, USA.
+120|Barnes and Noble, Madison West|7433 Mineral Point Road|Madison|WI|USA|53717|7433 Mineral Point Road|Madison|WI|USA|53717|608-827-0809||||The store on the west side of Madison
+121|Borders Books|||||||||||||||Nation wide chain with stores in numerous locations.
+122|HarperCollins|10 East 53rd Street|New York|NY|USA|10022|10 East 53rd Street|New York|NY|USA|10022|||||
+123|Harvard Coop||Cambridge|MA|USA|||||||||||
+124|Hilger & Watts, Ltd.|||||||||||||||Hilger Division, a manufacturer of spectrometers.
+125|Philosophical Library|15 East 40th Street|New York|NY|USA|16||||||||||
+126|Travis House Publications|P.O Box 37|Menlo Park|CA|USA|94026||||||(800)96-TRAVIS||||
+127|Gordon and Breach Science Publishers|5301 Tacony Street, Drawer 330|Philadelphia|PA|USA|19137|5301 Tacony Street|Philadelphia|PA|USA|19137|||||
+128|Amazon.Com|P.O. Box 81410|Seattle|WA|USA|98108-1310|549 South Dawson|Seattle|WA|USA|98108-1310|800-201-7575|206-694-2950|orders@amazon.com|#http://www.amazon.com#|
+129|Carnegie Institution of Washington||Washington|DC|USA|||Washington|EDC|USA||||||
+130|Harvard Observatory||Cambridge|MA||||Cambridge|MA|||||||
+131|Henry Gillman||Boy Court||UK|Ludgate Hill||||||||||
+132|Royal Dublin Society|||||||||||||||
+133|Royal Dublin Society|||||||||||||||
+134|Warner and Swasey||Cleveland|OH||||||||||||
+135|Rain Dog Books|404 S. Michigan Ave|Chicago|IL||60605|404 S. Michigan Ave|Chicago|IL||60605|(312)922-1200|(312)922-3182|raindog@raindogbooks.com|www.raindogbooks.com#http://www.raindogbooks.com#|
+136|Methuen & Co. Ltd|||||||||||||||
+137|British Interplanetary Society|12 Bessborough Gardens|London||SW1V 2JJ|England||||||01-821-9371||||
+138|Galios Institute of Mathematics and Art||Brooklyn|NY||||||||||||
+139|W.W. Norton & Company, Ltd|||||||||||||||
+140|Holt Rinehart Winston|||||||||||||||
+141|Long Island Univeristy Press|||||||||||||||
+142|Ronald Press Company|||||||||||||||
+143|Rinehart and Company|||||||||||||||
+144|Science Press Printing Company||Lancaster|PA||||||||||||
+145|BookFeller||Fort Davis|TX||79734||||||||||Nel and Jerry opened in 2007
+146|Interscience Publishers, Inc.|250 Fifth Ave|New York|NY||||||||||||
+147|Follett's Intellectual Property|2402 Guadalupe Street|Austin|TX||78705||||||(512)478-0007|||#http://intellectualpropertyaustin.com#|
+148|Imperial College Press|57 Shelton Street|Covent Garden, London||UK|WC2H 9HE||||||||||
+149|Chemical Publishing Company, Inc||Brooklyn|NY|USA|||||||||||
+150|Berkman Books|416 East Main Street|Fedricksburg|TX|USA|78624||||||(830)997-1535|||#http://www.berkmanbooks.com/#|Mon - Sat 10AM - 9PM
+151|12th Street Books|827 West 12th Street|Austin|TX|USA|78701||||||(512)499-8828|||#http://www.12thstreetbooks.com/#|
+152|Half Price Books (Austin, TX)|5555 North Lamar|Austin|TX|USA|78751||||||(512)451-4463||||
+153|Little Hands of Concrete Productions|R.L.M. 15-308, University of Texas at Austin|Austin|TX||78712||||||||||This appears to be a private company of Tom Sebring and McDonald Observatory
+154|Alfred A. Knopf||||||||||||||#http://www.aaknopf.com/#|A division of Randon House Publishing
+155|Walker and Company|435 Hudson Street|New York|NY|USA|10014||||||||||
+156|Morris Publishing|3212 East Highway 30|Kearney|NE|USA|68847||||||(800)650-7888|||#http://www.morrispublishing.com/#|A vanity press.
+157|American Institute of Physics|||||||||||||||
+158|Contemporary Book Inc.|180 North Michigan Ave|Chicago|IL|USA|60601||||||||||
+159|Viking Press, Inc.|625 Madison Ave|New York|NY|USA|10022||||||||||
+160|Half Price Books (Frisco, TX)||Frisco|TX||75034||||||||||
+161|Blackie & Son, Limited|||||||||||||||
+162|National Academy Press||Washington|DC||||||||||||
+163|Edward Arnold Ltd|||||||||||||||
+164|Fratelli Dumolard||Milan||Italy|||||||||||Dulmolard Brothers
+165|Griffin, Bohn, and Company|Stationer Hall Court|London|UK||||||||||||
+166|Taylor and Walton|29 Upper Gower Street|London||UK|||||||||||Booksellers and publishers to University College
+167|Royal Institution of Great Britain|||||||||||||||
+168|Zeitlin & Ver Brugge||Los Angeles|CA|USA|||||||||||
+169|Delacorte Press|666 Fifth Ave|New York|NY|USA|10103||||||||||A division of Bantan Double Day Dell Publishing group
+170|The SETI Institute and Press|2035 Landings Drive|Mountian View|CA|USA|94035|||||||||#http://www.seti.org/#|
+171|Berkeley Hill Books|P.O. Box 9877|Berkeley|CA|USA|94709||||||||||
+172|Royal Society of Edinburgh||Edinburgh||Scotland|||||||||||
+173|Insitute of Physics|Dirac House, Temple Back|Bristol||UK|BS1 6BE||||||||||
+174|Burndy Library||Norwalk|CT|USA|||||||||||
+175|Wiedenfield & Nicolson|Orion House, 5 Upper Saint Martin's Lane|London||UK|WC2H 9EA||||||||||
+176|Harcourt, Brace and Company|||||||||||||||
+177|Putnam||New York|NY||||||||||||
+178|Eyre & Spottiswoode|22 Heretta Street|London||UK|WC2||||||||||
+179|American Physical Society|335 East 45th Street|New York|NY|USA|10017-3483||||||||||
+180|American Journal of Science|||||||||||||||
+181|Herbert S. Stone||Chicago|IL||||||||||||
+182|Hart Publishing Co.||New York|NY||||||||||||
+183|George Newnes Limited|Tower House, Southampton St|London||UK|W.C.2||||||||||
+184|University of Denver||Denver|CO|USA|||||||||||
+185|Gibbs Book Shop|||||||||||0161 998 2794||rob@gibbsbookshop.co.uk|http://gibbsbookshop.co.uk/#http://gibbsbookshop.co.uk/#|On line shop only?
+186|MacDonald Technical & Scientific|40-50 Poland Street|London||UK|W1|40-50 Poland Street|London||UK|W1|||||
+187|Half Price Books (Dallas, TX)|5803 E. Northwest Hwy.|Dallas|TX|USA|75231|5803 E. Northwest Hwy|Dallas|TX|USA|75231|214-379-8000||||
+188|Astronomy Books||Bernardston|MA||||||||||||Private impression of Paul Luther
+189|Willmann-Bell|P.O. Box 35025|Richmond|VA|USA|23235||||||804-320-7016|804-272-5920||#http://www.willbell.com/#|
+190|University of Illinois Press|1325 South Oak Street|Champaign|IL|USA|61820-6903||||||217-333-0950|217-244-8082|uipress@uillinois.edu|#http://www.press.uillinois.edu/#|
+191|William Heineman|20 Vauxhall Bridge Road|London||UK|SW1V 2SA||||||||||Part of the Randon House Group
+192|Half Price Books (Austin North, TX)|2500 W. Palmer Lane|Austin|TX|YSA|78727||||||||||
+193|Pantheon Books||||||||||||||#http://www.pantheonbooks.com/#|A division of Random House
+194|Eakin Press|P.O. Box 21235|Waco|TX|USA|76702||||||254-235-6161|254-235-6230|kriss@eakinpress.com|#http://eakinpress.com/#|
+195|Half Price Books (Madison, WI)|626 South Whitney Way|Madison|WI|USA|53711||||||608-273-1140||||
+196|Jones Antikvariat|Spetebyhall|Valla||Sweden|SE-640-23||||||+46 (0)150-66 41 52||info@jonesantikvariat.com|#http://jonesantikvariat.com#|Belinda Jones Alaton
+197|Marfa Book Company|P.O. Box 207|Marfa|TX|USA|79843|105 South Highland|Marfa|TX|USA|79843|432-729-3906|||#http://www.marfabooksco.com#|
+198|Garland Publishing||New York|NY|USA||||||||||http://www.garlandscience.com/#http://www.garlandscience.com/#|Founded in 1969 by Gavin Borland, joined Taylor & Francis in 1997. The URL http://www.garlandpub.com/ is out of date and now leads to a pharmaceutical company.
+199|Joseph Henry Press|500 Fifth Street, NW|Washington|DC|USA|20001||||||||||imprint of the National Academy Press.
+200|Scarecrow Press||Metuchen|NJ|USA||||||||||#http://www.scarecrowpress.com/#|
+201|Pennsylvania State University Press||University Park|PA|16802-1003|||||||||||
+202|SPIE Press||Bellingham|WA|98225|||||||||||
+203|Collins Foundation Press|4995 Santa Margarita Lake Road|Santa Margarita|CA||93453||||||||||
+204|University Book Store, Madison|Hilldale Shopping Center|Madison|WI|USA|||||||||||
+205|Frugal Muse, Madison West|235 Junction Road|Madison|WI|USA|53717||||||608-833-8668|||#http://www.frugalmuse.com/#|Usual price for standard hard backs is $4.98.
+206|Jeremy P. Tarcher|375 Hudson Street|New York|NY|USA|10014||||||||||part of the Penguin Publishing Group
+207|Fairborn Press|P.O. Box 7531|Mesa|AZ|USA|85206||||||||||
+208|Prometheus Books|59 john Glenn Drive|Amherst|NY|USA|14288-2119|||||||||#http://www.prometheusbooks.com/#|
+209|Duke University Press||Durham|NC|USA|||||||||||
+210|British Library|96 Euston Road|London|UK|UK|NW1 2DB|||||||||#http:..www.bl.uk/#|
+211|Bishop Museum|1525 Bernice Street|Honolulu|HA|USA|96817||||||||||
+212|Hooked on Books|3918 Maizeland Road|Colorado Springs|CO|USA|80909|3918 Maizeland Road|Colorado Springs|CO|USA|80909|719-596-1621||hookedonbooks@qwestoffice.net||Great store in Colorado Springs. Excellent collections in astronomy, books on books, and biography.  There are moving to a new location in Aug 2011.
+213|Books Again|622 South Union|Pueblo|CO|Usa|81004|622 South Union|Pueblo|CO|USA|81004|719-543-4688|||#http://booksagain-pueblo.com/#|The outlet store for the Friends of the Pueblo Library.  Very good selection
+214|Coblentz Society||||||||||||||#http://www.coblentz.org/#|
+215|University of Pennsylvania Press||Philadelphia|PA||||||||||||
+216|Little, Brown and Company, Ltd.|16 Great Dover Street|London||UK|SE1 4YA||||||||||
+217|Rice University Press|P.O. Box 1892|Houston|TX|USA|77251||||||||||
+218|Book Bazaar|417 Bank Street|Ottawa|ON|Canada|K2P1Y6||||||613-233-4380||jayne@bookbazaar.ca|#http://www.bookbazaar.ca/#|
+219|Avenue Victor Hugo Bookshop|P.O. Box 482|Abington|MA|USA|02351|||||||||#http://www.abebooks.com/avenue-victor-hugo-bookshop-abington-ma/5668458/sf#|ABE books only
+220|Metakomet Books|32 Bradford Street|Concord|MA|USA|01742|||||||||#http://www.abebooks.com/metakomet-books-concord-ma-u.s.a/54934128/sf#|ABE books only
+221|American Philosophical Society|Independence Square|Philadephia|PA|USA||||||||||#http://www.amphilsoc.org/#|
+222|Thos. P. Nicols & Son|||||||||||||||
+223|Salt Foundation|P.O. Box 9|Observatory||South Africa|||||||||||
+224|McDonald Observatory|20 Lunar Drive|Fort Davix|TX|USA|79734|||||||||#http://www.as.utexas.edu/#|
+225|University of Colorado - Boulder|Box 590|Boulder|CO|USA|80309-0590||||||||||Laboratory of Atmospheric and Space Physics
+226|US Naval Observatory|3450 Massachusetts Ave NW|Washington|DC|USA|20392-5420||||||||||
+227|British Astronomical Association|||||||||||||||
+228|Societe Royale des Sciences de Liege|Avenue des Tilleuls 15|Liege||Belgium|B 4000||||||||||
+229|Wonder Books & Video|2421A Monocacy Blvd|Fredrick|MD|USA|21701|2421A Monocacy Bliv|Fredrick|MD|USA|21701|||abe@wonderbk.com|#http://www.wonderbk.com/#|
+230|Doubleday/Anchor Press||Garden City|NJ|USA|||||||||||
+231|Booklover's Bookstore|132 West Troutman|Fort Collins|CO|USA|80525|132 West Troutman|Fort Collins|CO|USA|80525|970-207-9453||||
+232|Perastdion Press|10630 South Saint Louis Avenue|Chicago|IL||||||||||||
+233|Front Street Books|121 East Holland Ave|Alpine|TX|USA|79830||||||432-837-3360|||#http://www.fsbooks.com/#|
+234|SUNY Press||Albany|NY|USA||||||||||#http://www.sunypress.edu/#|State University of New York
+235|Owl Books|||||||||||||||An imprint of Henry Holt and Company
+236|Harvardyard||||||||||||||#http://abebooks.com/#|only through ABEBooks.com
+237|Bibliodisia Books||||||||||||||#http://abebooks.com/#|through ABEBooks.com
+238|Captain's Bookshelf Inc.||||||||||||||#http://abebooks.com/#|through ABEBooks.com
+239|Bookfeathers|PO Box 402|Lewisburg|PA|USA|17873||||||||||through Advanced Book Exchage, abebooks.com
+240|Jeffrey H. Marks|45 Exchange Street, Room 701|Rochester|NY|USA|14614||||||||||ABAA
+241|Meershaum Books||||||||||||||#http://ebay.com/#|Dorothy Olson owner,
+242|Edinburgh University Press|22 George Square|Edinburgh||Scotland|EH8 9LF|22 George Square|Edinburgh||Scotland|EH8 9LF||||#http://www.euppublishing.com/#|
+246|Konigliche Ungarische Universitatsdruckerie|||||||||||||||Should have umlauts on the o in Konigliche and the a in universitatsdruckerie.
+247|W. Heffer & Sons Ltd.||Cambridge||UK|||||||||||
+248|Herman et Cie|6 Rue de la Sorbonne 6|Paris||France|||||||||||
+249|Gravelly Run Antiquarians|17 Estelle Avenue|Dorthy|NJ||08317||||||||||via abebooks.com
+250|Mercure de France||Paris||France|||||||||||
+251|Amdrew James Books|54 Cottrell Road|Roath, Cardiff||UK|SGM CF24 3EZ||||||||||
+252|Merrickville Book Emporium|PO Box 74|Merrickville|ON|Canada|K0G1N0|105 Wellington St. E|Merrickville|ON|Canada|K0G1N0|||||
+253|David Esplin|30 High Street Overton|Basingstoke, Ham||UK|RG25 3HA||||||||||
+254|Back Door Book Shop|901 Throckmorton|Fort Worth|TX||76102||||||||||
+256|Washington Square Autographed Books|2 Washington Square Apt 8G|New York|NY|USA|10012|2 Washington Square Apt 8G|New York|NY|USA|10012|||||throught www.abebooks.com
+257|Hutchinson and Company|178-202 Great Portland Street|London||UK|W1||||||||||
+258|Bloomsbury|1385 Broadwau|New York|NY|USA|10018|||||||||#http://www.bloomsbury.com/#|Imprint of Bloomsbury Plc, 50 Bedford Square, London, WC1B 3DP, UK
+259|G. P. Putnam's Sons||New York|NY|USA|||||||||||
+260|Trolley Line Books|110 Walnut Street|Rogers|AR|USA|72756||||||479-636-1626||moranbks@sbcglobal.net||
+261|Mentor Books|||||||||||||||Published by the New American Library of World Literature, Inc, 501 Madison Ave, New York 22, NY
+262|Garden City  Publishing Company||Garden City|NY|USA|||||||||||
