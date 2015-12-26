@@ -1,0 +1,43 @@
+Entry format
+
+Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
+
+For volume AJB 44 Index to the Literature of 1942, started 25 Dec 2015, finished, proofread
+
+
+1 44.03(0).09  S. Carotenuto, Galileo Galilei nella storia e nella leggenda, Firenze, , 1942, 440 pp, 20 Lire, , 
+
+2 44.03(0).19  Z. von Harsànyi, Galileo Galilei, Milano, Sperling e Kupfer, 1941, 742 pp, 50 Lire, Coleum 12 26 :, translated from German;in Italian;
+
+3 44.03(0).29  E. Loreta, Sogno di una notte di giugno, Bologna, Cooperativa Tipografica Azzoguidi, 1941, 62 pp, 8 Lire, Himmelswelt 53 15 : B. Sticker, 
+
+4 44.03(0).33  E. L. Martin, Galileo Galilei (1564—1642), Padova, Stediv, 1942, 23 pp, , , other zur Dreihundertjahrfeier Galileis Lebensbeschreibung und Werke; 
+
+5 44.03(0).44  H. Reichenbach, From Copernicus to Einstein, , Philosophical Library, , 123 pp, $2.00, , 
+
+6 44.33(0).45  E. Reicke, Willibald Pirckheimers Briegwechsel Band 1, Müchen, C. H. Beck'sche Verlagsbuchhandlung, 1940, 51+592 pp, , VJS 77 289 : E. Zinner, other Kommision zur Erforschung der Geschichte der Reformation und Gegenreformation; other Humanistenbriefe; other in four volumes; 
+
+7 44.03(0).46  E. A. Roloff, Carl Friedrich Gauss, Osnabrück, Fromm, 1942, 80 pp, 1.20 RM, , other same as Schöpfersiche Neiderdeutsche Bd. 12; 
+
+8 44.03(0).50  E. Schmidt-Herrling, Die Briefsammlung des Nürnberger Arztes Christopher Jacob Trew (1695—1769), Erlangen, , 1940, 54+776 pp, , VJS 77 290 : E. Zinner, other Katalog der Handschriften der Universitätsbibliothek Erlangen Band 5; 
+
+9 44.05(0).11  O. Knopf, Die Astronomiean der Universität Jena, , , , , , VJS 77 275 : E. Zinner, reference AJB 39.04.30;
+
+10 44.05(0).12  H. Ludendorff, Zur Frühgeschichte der Astronomie in Berlin, Berlin, W. de Gruyter & Co., 1942, 23 pp, 0.90 RM, AN 272 248 :, other Preuß. Akad. Wiss. Vorträge und Schriften Heft 9; 
+
+11 44.06(0).06  G. Innerebner, Sonnenlaug und Zeitbestimmung im Leben der Urzeitvölker, Berlin-Dahlem, Ahnenerbe-Stiftung Verlag, 1942, 47 pp, 2.00 RM, ZfGMG 11 129 :, other same as Germanien. Beih. 2; 
+
+12 44.07(0).01  K. Heinemann ed., Astronomischer Jahresbericht Band 43, Berlin, Walter de Gruyter & Co., 1944, 26+236 pp, , , other literature of 1941; 
+
+13 44.07(0).13  , Le Opere dei Discepoli di Galileo Galilei Vol. 1, Florenz, S. A. G. Barbère, 1942, 15+500 pp, , Mem SA It (NS) 15 135 : L. Gabba, 
+
+14 44.07(0).15  , Johannes Kepler comma Gesammelte Werke Bd. 4, , , , , , Himmelswelt 53 46 : B. Sticker and Naturwissenschaften 31 174 : H. Kienle and NAT 23 66 : E. Strömgren and Sterne 23 13 : H. Schneller and VJS 77 271 : E. Zinner and Z. f. d. gesamte Naturwissenschaft 9 133 : F. Kubach, reference AJB 43.07.14;
+
+15 44.07(0).16  , Johannes Kepler comma Gesammelte Werke Bd. 6, , , , , , VJS 77 271 : E. Zinner, reference AJB 42.07.15;
+
