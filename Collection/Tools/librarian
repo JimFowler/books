@@ -78,7 +78,7 @@ def main():
             print('Could not open database', fname )
             sys.exit(1)
    else:
-      fname = '/home/jrf/Documents/books/Collection/Collection.db3'
+      fname = '/home/jrf/Documents/books/Collection/CardCatalog.db3'
       if not form.setDatabaseName(fname):
          print('Could not open database', fname )
          sys.exit(1)

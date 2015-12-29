@@ -67,10 +67,7 @@ class collectionDB(database.DataBase):
         return d
 
     def getBooksInProject(self, _projId):
-        projId = int(_projId)
         books = self.cursor.execute("SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = ?) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;", (_projId,))
-
-        
 
         return self.cursor.fetchall()
 
@@ -90,26 +87,23 @@ if __name__ == '__main__':
     if db.isValid():
         print('%s is valid DB' % (name))
     else:
-        print('Error sql.py: db is not valid DB!')
+        print('Error library.py: empty db is not valid DB!')
 
     db.closeDB()
 
-    db.open('/home/jrf/Documents/books/Collection/Collection.db3')
+    db.open('/home/jrf/Documents/books/Collection/CardCatalog.db3')
     name = db.getDBName()
 
     if db.isValid():
         print('%s is valid DB' % (name))
     else:
-        print('Error sql.py: db is not valid DB!')
+        print('Error library .py: db is not valid DB!')
 
-    pdict = db.getToDoList()
+    pdict = db.getToDoDict()
     for p in pdict:
         print(p, pdict[p])
 
     print(pdict.keys())
-    #result = cur.execute(Query)
-    #for row in result:
-    #    pp.pprint(row)
 
     db.closeDB()
 

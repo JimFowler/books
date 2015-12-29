@@ -16,8 +16,9 @@ setup( name='collection',
        url='http://het.as.utexas.edu/jrf/20thCentury.html',
        platforms=['Ubuntu 12.04',
                   'Ubuntu 13',
-                  'Ubuntu 14.10 LTS'],
+                  'Ubuntu 14.10 LTS',
+                  'MacOS X.11.2 El Capitan'],
        packages=['collection'],
-       scripts=['books'],
+       scripts=['librarian'],
        )
 

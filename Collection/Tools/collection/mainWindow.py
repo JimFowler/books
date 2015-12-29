@@ -21,7 +21,7 @@ import bookentry.symbol as symbol
 import collection.menus as menus
 import collection.ui_mainWindow as ui_mainWindow
 import collection.selectDialog as selectDialog
-import collection.sql as sql
+import collection.library as library
 import collection.project as project
 
 import os
@@ -45,7 +45,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.symbolTableName = __DefaultSymbolTableName__
         self.insertFunc = None
 
-        self.db = sql.collectionDB()
+        self.db = library.collectionDB()
 
         self.project = project.Project(_db=self.db)
 

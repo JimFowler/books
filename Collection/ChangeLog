@@ -1,3 +1,20 @@
+2015-12-28  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/library.py: Correction __main__ tests.
+
+	* Tools/collection/mainWindow.py (Collection.__init__): changed to
+	import library.py instead of sql.py
+
+	* Tools/collection/library.py: changed sql.py to library.py
+
+	* Tools: rename books to librarian. Update setup.py. Also rename
+	Collection.db3 to CardCatalog.db3
+
+	* Tools/collection/sql.py (collectionDB.getBooksInProject): Worked
+	out Books-in-Project search for both the Mac and Ubuntu.  Had and
+	earlier version of sqlite3 on the Mac.  Once it was upgraded the
+	problems went away.
+
 2015-12-13  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/project.py (ProjectView.delete): Added query
