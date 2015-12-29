@@ -171,10 +171,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         self.show()
 
     def getBookList(self, _projId):
-        search = 'SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = %d) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;' %(_projId)
-
-        books = self.db.execute(search)
-        self.bookproj = books.fetchall()
+        self.bookproj = self.db.getBooksInProject(_projId)
         for b in self.bookproj:
             if b[3] == '':
                 name = b[2]
