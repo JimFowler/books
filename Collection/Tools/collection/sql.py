@@ -66,6 +66,15 @@ class collectionDB(database.DataBase):
 
         return d
 
+    def getBooksInProject(self, _projId):
+        projId = int(_projId)
+        books = self.cursor.execute("SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = ?) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;", (_projId,))
+
+        
+
+        return self.cursor.fetchall()
+
+    
 #
 # Self Test
 #
