@@ -18,6 +18,7 @@ missing
 *.dvi
 *.toc
 COPYING
+Auxil/
 Books20/Makefile
 Books20/*/Makefile
 Books20/WebPages/Images/Makefile
