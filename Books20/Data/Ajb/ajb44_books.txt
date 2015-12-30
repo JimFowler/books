@@ -99,3 +99,45 @@ For volume AJB 44 Index to the Literature of 1942, started 25 Dec 2015, finished
 
 44 44.08(0).30  A. Schaßmann, Diesterwegs Populäre Himmelskunde und mathematische Geographie, , , , , , Himmelswelt 52 15 : W. Becker and Sterne 22 29 : H. Schneller, reference AJB 42.08.12;
 
+45 44.08(0).31  K. Stumpff, Das Uhrwerk des Himmels; Eine gemeinverständliche Einfürung in die Mechanik unseres Planetensystems, Stuttgart, Franckh, 1942, 136 pp, 3.60 RM, Weltall 43 92 : R. Sommer, 
+
+46 44.08(0).32  N. Tamm and A. Wallenquist, Amatörastronomen; Handledning i observationskonst, Stockholm, , 1942, 126 pp, , NAT (NR) 23 74 : and PAT 23 82 :, other bind 149 af Naturoch Kultur; 
+
+47 44.08(0).33  O. Thomas, Astronomie; Tatschen und Probleme, Salzburg, , 1942, 604 pp, 8.00 RM, Weltall 42 180 : R. Sommer, 3rd edition;
+
+48 44.08(0).34  A. Wallenquist, Tvillingsolar och stjärnhopar, Stockholm, Albert Bonniers Verlag, 1942, 64 pp, 1.50 Kr, PAT 23 158 :, other popular; 
+
+49 44.08(0).35  R. L. Wakefield, The revolving heavens; Astronomy bo observers with the naked eye, London, Gerald Duckworth & Co., 1942, 206 pp, 8s 6d, , 
+
+50 44.08(0).36  E. T. Whittaker, Cosmogony and religon; The begining and end of the world, London, Oxford University Press, 1942, 64 pp, 2s 6d, Nature 150 671 : J. H. Jeans, other Riddell Memorial Lectures Fourteenth Series delivered before the University of Durham at King's College Newcastle-on-Tyne February 1942; 
+
+51 44.08(0).50  M. Questiaux, Le Guide des étoiles, , Abonnements Preis, 1942, , 9.00 Fr., Ciel et Terre 58 105 :, other popular; 
+
+52 44.09(0).01  B. F. Bawtree, Sun tables for 0 to 2000 A.D., St. Albans, , 1941, , , , 
+
+53 44.09(0).02  K. Gey, Vierstellige Tafel der Logarithmen und Antilogarithmen, Bonn-Berlin, F. Dümmlers Verlag, 1942, 8 pp, 0.90 RM, Weltall 43 36 : R. Sommer, 
+
+54 44.09(0).03  W. Greve, Vierstellige logarithmische und trigonometrische Tafeln nebst zahlreichen Hiflstabellen für das Zahlenrechnen, Hannover, C. Meyer, 1941, 62 pp, 1.60 RM, , other Ausgabe B.; 
+
+55 44.09(0).04  K. Hayashi, Fünfstellige Tafeln der Kreis- und Hyperbelfunktionen sowie der Funktionen eˣ und e⁻ˣ mit den natürlichen Zahlen als Argument, Berlin, Walter de Gruyter & Co., 1941, 182 pp, 9.00 RM, , 
+
+56 44.09(0).05  W. Jordan, Logarithmische-trigonometrische Tafeln für neue zentesimale Teilung mit sechs Dezimalstellen, Stuttgart, Wittwer, 1942, 9+424 pp, 12.00 RM, , 6th edition;edited by O. Eggert;
+
+57 44.09(0).06  B. Kerst, Vierstellige Logarithmentafeln mit Rechentafeln für Potenzen comma Wurzeln u. a. m. comma sowie zahlreiche Zumsammenstellungen, Berlin, Grote, 1942, 16 pp, 0.75 RM, , 3rd edition;
+
+58 44.09(0).07  E. Ludwig and A. Reuschel, Vierstellige Logarithmentafeln nebst Tafeln der Quadrat- und Kubikwurzeln comma sowie der Winkelfuntionen comma Wachstumsfunktions- (Zinseszins-) und Sterbetafel, Wien, F. Deuticke, 1941, 20 pp, 0.60 RM, Z. f. gesamte Naturwissenschaft 8 307 : M. Streck, 
+
+59 44.09(0).08  J. Peters, Sechsstellige Werte der trigonometrischen Funktionen von Tausendstel zu Tausendstel des Neugrades, Berlin, Gebr. Wichmann, 1942, 520 pp, 22.00 RM, , 5th edition;
+
+60 44.09(0).09  L. J. Comrie, The Twin Marchant Calculating machines and its Application to Survey Problems, London, Scientific Computing Service, 1942, 40 pp, 10s, , 
+
+61 44.09(0).11  E. Kamke, Differentialgleichungen comma Lösungsmethoden und Lösungen; Band 1 Gewöhnliche Differntialglechungen, Leipzig, Akad. Verlagsgesellschaft, 1942, 26+642 pp, 37.00 RM, Ann d Hydrog 70 359 : G. Prüfer and VJS 77 260 : P. ten Bruggencate, also published Leipzig: Becker & Erler;
+
+62 44.09(0).12  W. Meyer zur Capplen, Mathematische Instrumente, Leipzig, Akad. Verlagsgessellschaft, 1941, 10+247 pp, 23.00 RM, Himmelswelt 52 60 : J. Weber, 
+
+63 44.09(0).14  M. Adolph, Einführung in die Nomographie; Für Studierende und zum Selbststudium, Leipzig, Jänecke, 1942, 147 pp, 2.80 RM, , 
+
+64 44.09(0).15  H. Diercks and H. Euler, Praktische Nomographie, Düsseldorf, Stahleisen, 1942, 96 pp, 5.00 RM, , 2nd edition;
+
+65 44.10(0).04  L. Schrutka, Leitfaden der Interpolation, , , , , , VJS 77 261 : G. Stracke, reference AJB 43.10.04;
+
