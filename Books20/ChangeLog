@@ -1,3 +1,8 @@
+2015-12-31  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
+
+	* Tools/bookentry/journalWin.py: Start work on main journal
+	window. Defined operations as a first pass
+
 2015-11-08  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/AJBentry.py (AJBentry.read_XML_to_Entry): Added
