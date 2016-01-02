@@ -8,7 +8,7 @@ Commas are field separators for automatic parsing.  Use the word ‘comma’ if 
 
 Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
 
-For volume AJB 44 Index to the Literature of 1942, started 25 Dec 2015, finished, proofread
+For volume AJB 44 Index to the Literature of 1942, started 25 Dec 2015, finished 1 Jan 2016, proofread
 
 
 1 44.03(0).09  S. Carotenuto, Galileo Galilei nella storia e nella leggenda, Firenze, , 1942, 440 pp, 20 Lire, , 
@@ -140,4 +140,124 @@ For volume AJB 44 Index to the Literature of 1942, started 25 Dec 2015, finished
 64 44.09(0).15  H. Diercks and H. Euler, Praktische Nomographie, Düsseldorf, Stahleisen, 1942, 96 pp, 5.00 RM, , 2nd edition;
 
 65 44.10(0).04  L. Schrutka, Leitfaden der Interpolation, , , , , , VJS 77 261 : G. Stracke, reference AJB 43.10.04;
+
+66 44.11(0).02  D. Argentieri, Ottica industriale, Milano, U. Hoepli, 1942, 32+688 pp, 48.00 Lire, , 
+
+67 44.11(0).10  Ch. von Hofe, Fernoptik; Theortische und praktische Ausführungen über Fernrohre und militärische Instrumente, Leipzig, Johann Ambrosius Barth, 1941, 7+275 pp, 18.00 RM, Naturwissenschaften 31 211 : H. Kienle, 
+
+68 44.13(0).04  C. E. Kenneth, The Theory of the photographic process, New York, , 1942, , , , 
+
+69 44.16(0).07  R. Schneider, Presny cas, Prag, Orbis, , 135 pp, , RH 24 46 : V. Guth, in Czech;other popular; 
+
+70 44.16(0).12  P. Ditisheim and R. Lallier and L. Reverehon and Vivielle, Pierre Le Roy et la chronométrie, Paris, Editions Tardy, 1940, , , Ann. Françaises de Chronométrie 11 41 :, 
+
+71 44.18(0).04  , Determinazioni astronomiche spediditive, Florenz, Instituto Geografico Militare, 1942, 78 pp, , ZfGMG 11 177 :, other see also AJB 44.21.11; other different figure count by otherwise the same; 
+
+72 44.21(0).02  K. Graff, Grundrißdergeographischen Ortsbestimmung aus astronomischen Beobachtungen, , , , , , Csillagászati Lapok 6 46 : and Himmelswelt 53 14 : J. Weber and VJS 77 253 : B. Meyermann, reference AJB 43.21.04;
+
+73 44.21(0).04  W. Jordan, Handbuch der Vermessungskunde, , , , , , Himmelswelt 52 98 : J. Weber and VJS 77 257 : J. Hopmann, reference AJB 43.21.08;
+
+74 44.21(0).05  F. Moreau, Eléments d'astronomie et de géodésie, Mons, Editions des étudiants de la Faculté Polytechnique, 1942, 178 pp, 45 Francs, Ciel et Terre 58 378 : G. Lemaître, 2nd edition;
+
+75 44.21(0).07  K. Schütte, Wann geht die Sonne auf und unter? Zeiten für alle Tage und für alle Orte Mittleeuropas, Bonn-Berlin, F. Dümmlers Verlag, 1940, 10+37 pp, 3.80 RM, Sterne 22 94 : E. Krug, 2nd edition;
+
+76 44.21(0).09  W. Smart, Foundations of Astronomy, London-New York-Toronto, Longmans comma Green & Co., 1942, 6+268 pp, 16s and $4.20, ApJ 96 159 :  and Nature 151 38 : J. C. P. Miller, 
+
+77 44.22(0).03  Th. Niethammer, Die Bestimmung der in der Laplaceschen Gleichung auftretenden Größen astronomischer Natur, Basel, E. Birkhäuser, 1942, 19 pp, , , other Soc. Helvétique des Sciences Naturelles Annexe au Procès-Verbal de la 87ᵐᵉ séance de la Commission Géod. Suisse; other conference proccedings?; 
+
+78 44.22(0).06  P. Sconzo, Calcolo simultaneo speditivo e rigoroso delle coordinate altazimutali di un astro, , Rivista Marittima, 1942, 4 pp, , , other a book?; 
+
+79 44.26(0).03  W. Kaiser, Der Kalendar auf Grundlage von Sonnen-Mond-Perioden; Mit Kalendarium, Bern, Francke, 1942, 17 pp, 1.40 RM, , 
+
+80 44.31(0).03  O. Heckmann, Theorien der Kosmologie, Berlin, Springer-Verlag, 1942, 110 pp, , Csillagászati Lapok 6 47 : and Himmelswelt 53 47 : J. Wempe and Naturwissenschaften 31 250 : H. Kienle and PAT 24 151 :  and Sterne 23 139 : L. Beirmann and VJS 78 208 : C. F. von Weizsäcker and ZfA 22 310 : E v. d. Pahlen and ZfGMG 11 124 : and ZfMG 27 371 :, other Fortschritte der Astronomie edited by Astronomischen Gesellschaft Band 2; 
+
+81 44.31(0).11  P. G. Bergmann, Introductions to the Theory of Relativity, New York, Prentice-Hall Inc., 1942, 16+287 pp, $4.50, , other Prentice-Hall Physics Series; 
+
+82 44.31(0).20  Th. Vahlen, Die Paradoxien der relativen Mechanik, Leipzig, S. Hirzel, 1942, 31 pp, 1.20 RM, AN 272 247, other Deutsche Mathematik 3 Beiheft; 
+
+83 44.31(0).21  H. G. Wells, The Triumph of Time, London, Watts & Co., 1942, 10+86 pp, 2s, Nature 150 444 : H. Dingle, other The Thinker's Library Nr. 92; 
+
+84 44.31(0).25  P. Rousseau, Le lumière, Paris, Presses universitaires de France, 1942, 125 pp, , Ciel et Terre 58 378 : R. Ledrus, other Collection of Que sais-je?; 
+
+85 44.31(0).29  H. Kleiner, Kritische Betrachtung der Begriffe Gravitation comma Schwere comma Gewicht comma Masse comma Trägheit comma Kraft comma Energie comma Äther comma Zeit und Raum; Die Widerlegung der Nowtonschen Gravitations-Theorie, Leipzig, , 1942, 93 pp, 7.50 RM, , 
+
+86 44.31(0).30  T. J. J. See, Wave Theory; Discovery of the Cause of Gravitation 7, Lynn, , 1942, , , , other Dicoveries in the gravitational theory of the Moon's motion; 
+
+87 44.32(0).04  H. Happel, Das Dreikörperproblem, , , , , , Csillagászati Lapok 6 46 : and Himmelswelt 52 61 : M. Lindow and Sterne 2 78 : F. Gondolatsch and VJS 77 254 : A. Klose and Z. f. d. gesamte Naturwissenschaft 9 45 : B Thüring, reference AJB 43.32.07;
+
+88 44.35(0).18  J. Mattauch and S. Flügge, Kernphysikalische Tabellen; Mit einer Einführung in die Kernphysik, Berlin, Springer-Verlag, 1942, 4+163 pp, 32.00 RM and 37.50 RM, ZfA 22 156, 
+
+89 44.35(0).30  E. Pietsch and H. Schimank ed., Robert Mayer und das Energieprinzip 1842—1942; Gedenkschrift zur 100 Wiederkehr der Entdeckung des Energieprinzip, Berlin, VDI-Verlag G.m.b.H., 1942, 395 pp, 12.00 RM, ZfA 23 136 : A. Unsöld, 
+
+90 44.41(0).04  G. Gamow, The Birth and Death of the Sun, , , , , , Phil Mag 33 556 :, reference AJB 42.41.08;
+
+91 44.41(0).05  G. Gamow, Solens Födelse och Död; Stellar evolution och subatomisk energi, Stockholm, Albert Bonniers Verlag, 1942, , , , reprint of AJB 42.41.08;translated from English by H. Pettersson;in Swedish;
+
+92 44.41(0).20  M. Waldmeier, Egrebnisse und Probleme der Sonnenforschung, , , , , , Ann d'Astrophys 5 123 : and Ann d Hydrog 71 284 : A. Schwassmann and Csillagászati Lapok 6 45 : and Himmelswelt 52 77 : H. von Klüber and NAT (NR) 23 147 : and PAT 23 82 : and Sterne 22 122 : H. von Klüber and VJS 77 262 : P. ten Bruggencate and Weltall 43 34 : H. K. Quodbach and ZfA 22 77 : E. v. d. Pahlen and Z. f. die gesamte Naturwissenschaft 8 206 :, reference AJB 43.41.20;
+
+93 44.51(0).12  F. G. Watson, Between the Planets, , , , , , Mem SA It (NS) 15 131 : G. Abetti and Pop Astr 50 336 : and  VJS 77 265 :, reference AJB 43.08.64;
+
+94 44.51(0).14  F. L. Whipple, Earth comma Moon and Planets, , , , , , ApJ 95 571 : O Struve, reference AJB 43.51.20;
+
+95 44.53(0).05  F. Baur, Einführung in die Großwetterorschung, Leipzig-Berlin, B. G. Teubner, 1942, 53 pp, 1.20 RM, , 2nd edition;reprint of AJB 39.53.02;other Math.-Phys. bibliothek Reihe I Nr. 88; 
+
+96 44.53(0).10  A. Renier, L'age de la terre et autres essais, Brüssels, Desclée de Brouwer éditeurs, 1942, 327 pp, 60 belg. fr., Ciel et Terre 59 289 :, 
+
+97 44.53(0).16  R. Spitaler, Chronologiedes Esizeitalters, Reichenberg, F. Kraus, 1941, 29 pp, , Weltall 43 52 : J. Heilmann and ZfGMG 11 225 :, other Abhandlungen der Deutschen Ges. der Wiss. und Künste Prag. Math-naturwiss Abt. Heft 5; 
+
+98 44.53(0).16  R. Spitaler, Ergänzung zur Chronologie des Esizeitalters, Reichenberg, F. Kraus, 1942, 13 pp, 1.40 RM, Weltall 43 52 : J. Heilmann and ZfGMG 11 225 :, other Abhandlungen der Deutschen Akad der Wiss. Prag. Math-naturwiss Kl. Heft 6; 
+
+99 44.53(0).23  B. Haurwitz, The Physical State of the Upper Atmosphere, Toronto, Royal Astronomical Society of Canada, , , Ca $0.75, Pop Astr 50 115 :, 
+
+100 44.53(0).59  L. Harang, Das Polarlicht und die Probleme der höchsten Atmosphärenschichten, , , , , , ZfA 22 389 : W. Grotrian, reference AJB 42.53.76;
+
+101 44.71(0).08  G. Peisino and M. Campa, Catalogo di 2390 stelle osservate al cerchio meridiano del R. Osservatories astronomico de Trieste negli anni 1931—32—33 e redotte all 1925.0, Milano, , 1942, 139 pp, , , 
+
+102 44.71(0).11  , Astrographic Catalogue 1900.0 Sydney Section Vol. 22 R.A.  6ʰ to 12ʰ comma Dec. -56° to -58°, Sydney, , 1940, 97 pp, , , 
+
+103 44.71(0).12  , Astrographic Catalogue 1900.0 Sydney Section Vol. 23 R.A.  12ʰ to 18ʰ comma Dec. -56° to -58°, Sydney, , 1942, 96 pp, , , 
+
+104 44.71(0).12  , Astrographic Catalogue 1900.0 Sydney Section Vol. 24 R.A.  18ʰ to 24ʰ comma Dec. -56° to -58°, Sydney, , 1941, 40 pp, , , 
+
+105 44.71(0).11  , Astrographic Catalogue 1900.0 Sydney Section Vol. 21 R.A.  0ʰ to 6ʰ comma Dec. -56° to -58°, Sydney, , 1941, 29 pp, , , 
+
+106 44.71(0).14  E. Biette, Le stelle dei naviganti (Carta stellare), Bergamo, Instituto Italiano d'Arti grafiche, 1942, , 15 Lire, , 2nd edition;
+
+107 44.71(0).17  P. Götz ed., B. E. R. Shuring comma Tabulae caelestes continentes omnes stellas caeli borealis nec non australis nudis oculis conspicuas; Himmelsatlas enthaltend alle mit bloßen Augen sichtbaren Sterne beider Hemisphaeren für des Aequinoctium 1925.0, Leipzig, , 1942, , 4.50 RM, , 7th edition;
+
+108 44.71(0).18  H. E. Watson, The Tropical Sky; Maps of the Constellations visible in the latitudes of the West Indies comma Guianas comma Nigeria comma E. Africa comma Ceylon comma Malaya etc. (5° to 10° N or thereabouts) comma and of the Planets and Solar system comma showing how and where the identify them in their starry background, Georgetown, Daily Chronicle, 1942, 27 pp, 3s 6d, Nature 151 378, 
+
+109 44.71(0).19  , Neue Kosmos-Sternkarte mit Planetenanzeiger, Stuttgart, Franckh'sche Verlagshandlung, , , 2.60 RM, Himmelswelt 52 47 : and Weltall 42 111 : R. Sommer, 
+
+110 44.72(0).03  W. J. Luyten, Bruce proper motion survey; the general catalogue, Minneapolis, , 1941, , , , 
+
+111 44.89(0).01  B. J. Bok and P. F. Bok, The Milky Way, , , , , , Mem SA It (NS) 15 131 : G. Abetti, reference AJB 43.89.02;
+
+112 44.90(0).02  W. Becker, Sterne und Sternsysteme, Drezden-Leipzig, Th. Steinkopff, 1942, 12+392 pp, 30.00 RM, AN 273 160 : and Csillagäszati Lapok 6 47 : and Himmelswelt 53 14 : B. Sticker and Naturwissenschaften 31 151 : H. Kienle and NAT (NR) 1944 69 : and PAT 24 79 : and Phys Ber 24 678 : and Pys Z 44 87 : W. Ramm and Sterne 22 187 : H. Schneller and VJS 78 2 : J. Wempe and Weltall 42 212 : R. Sommer and ZfA 22 78 : H. Müller and Z. f. d. gesamte Naturwissenschaft 9 134 : K. Himpel, other Wissenschaftliche Forschungsberichte comma naturwissenschaftliche Reihe Bd. 55; other also Sonderveröff. der Universitätis-Sternwarte Wien Band 2; 
+
+113 44.90(0).15  S. Chandrasekhar, Principles of Stellar Dynamics, Chicago, University of Chicago Press, 1942, 10+251 pp, $5.00, Nature 151 91 : A. S. Eddington and Science (NS) 96 160 : B. J. Bok, also published London: Cambridge University Press;other Astrophysical Monographs sponsored by the Astrophysical Journal; 
+
+114 44.93(0).03  E. Herbert, Vermussungskunde Band 2a, Berlin, , 1942, 348 pp, 7.50 RM, , 2nd edition;
+
+115 44.93(0).03  E. Herbert, Vermussungskunde Band 1a, Berlin, , 1942, 311 pp, 6.50 RM, , 2nd edition;
+
+116 44.93(0).05  G. Pession, Astronomia practica, Rom, Istituto Poligrafico della Stato, 1942, 456 pp, 65 Lire, Mem SA It (NS) 15 269 : L. Gialanella, 
+
+117 44.100(0).01  , Lehrbuch Navigation comma Teil 1, Bremen, A. Geist, 1942, 10+515 pp, 30.00 RMŝ, , other price includes part 2; 
+
+118 44.100(0).01  , Lehrbuch Navigation comma Teil 2, Bremen, A. Geist, 1942, 393 pp, 30.00 RM, , other price includes part 1; 
+
+119 44.100(0).04  F. Chichester, The Observer's Handbook on Astro-Navigation comma Part 4, London, George Allen & Unwin, 1942, 152 pp, 4s 6d, Nature 150 8 :, other Observer's Book Nr. 5; 
+
+120 44.100(0).06  F. Debenham, Astrographics comma or first steps in navigation by the stars, Cambridge, W. Heffer & Sons, 1942, 5+118 pp, 7s 6d, Nature 149 450 : H. S. Jones, 
+
+121 44.100(0).08  O. Fulst, Nautische Tafeln, Breman, Geist, 1942, 272 pp, 10.00 RM, , 17th edition;edited by O. Steppes;
+
+122 44.100(0).10  A. Grillo, Astronomia nautica, Livorno, Tipografia R. Accademia navale, 1942, 435 pp, , , other in two parts; 
+
+123 44.100(0).19  W. M. Smart, Astronomical Navigation, London-New York-Toronto, Longsmans comma Green & Co., 1942, 116 pp, 5s, , 
+
+124 44.100(0).23  W. A. Tilney, Marching or flying by night without a compass with a time table of directional stars; Compiled for latitudes 40° N— 55° N, London, , 1940, , , , 11th edition;
+
+125 44.100(0).26  P. V. H. Weems, Air navigation, London, McGraw-Hill Publishing Co., 1942, 12+519 pp, 35s, , 2nd edition;edited by A. J. Hughes and P. F. Everitt;also published New York: McGraw-Hill Book Co.;other British Empire edition revised; 
 
