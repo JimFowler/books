@@ -59,6 +59,37 @@ class AJBentry(entry.Entry):
 
     """
 
+    def blankEntry(self):
+        """Initialize a blank entry by setting known fields to
+        null values and deleting all other fields.
+        """
+        keys = list(self.keys())
+        for k in keys :
+            del(self[k])
+
+        self[ 'Index'] =      -1
+        self[ 'Num'] =        {'volNum':-1,
+                               'sectionNum':-1,
+                               'subsectionNum':-1,
+                               'entryNum':-1,
+                               'entrySuf':'',
+                               'volume': ''}
+        self[ 'Authors'] =    []
+        self[ 'Editors'] =    []
+        self[ 'Compilers'] =  []
+        self[ 'Contributors'] = []
+        self[ 'Translators']= []
+        self[ 'Others']=      []
+        self[ 'Title'] =      ''
+        self[ 'Publishers'] = []
+        self[ 'Year'] =       ''
+        self[ 'Pagination'] = ''
+        self[ 'Price'] =      ''
+        self[ 'Reviews'] =    []
+        self[ 'Comments'] =   ''
+        self[ 'OrigStr'] =    ''
+
+
     def version(self):
         return __ajbVersion__ + ": " + super(AJBentry, self).version()
 

@@ -24,39 +24,16 @@ class Entry(dict):
         return str(__version__)
 
 
+    #
+    # Functions to be provided by the sub-class
+    #
     def blankEntry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
         """
-        keys = list(self.keys())
-        for k in keys :
-            del(self[k])
+        assert 0, 'Entry.blankEntry() needs to be defined'
 
-        self[ 'Index'] =      -1
-        self[ 'Num'] =        {'volNum':-1,
-                               'sectionNum':-1,
-                               'subsectionNum':-1,
-                               'entryNum':-1,
-                               'entrySuf':'',
-                               'volume': ''}
-        self[ 'Authors'] =    []
-        self[ 'Editors'] =    []
-        self[ 'Compilers'] =  []
-        self[ 'Contributors'] = []
-        self[ 'Translators']= []
-        self[ 'Others']=      []
-        self[ 'Title'] =      ''
-        self[ 'Publishers'] = []
-        self[ 'Year'] =       ''
-        self[ 'Pagination'] = ''
-        self[ 'Price'] =      ''
-        self[ 'Reviews'] =    []
-        self[ 'Comments'] =   ''
-        self[ 'OrigStr'] =    ''
 
-    #
-    # Functions to be provided by the sub-class
-    #
     def isValid(self):
         """Return a boolean based on some criteria. The criteria
         must be set by the sub-class."""

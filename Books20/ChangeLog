@@ -1,3 +1,9 @@
+2016-01-03  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/entry.py (Entry.blankEntry): moved blankEntry
+	definition to subclass so I could use entry.py for journals as
+	well as books.
+
 2016-01-02  Jim Fowler  <jrf@Biblion>
 
 	* Tools/journals: made JournalEntry to main window
