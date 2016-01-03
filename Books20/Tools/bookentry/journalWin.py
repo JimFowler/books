@@ -17,8 +17,8 @@ import fileinput
 from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
-import bookentry.ui_JournalSearch as ui_journalSearch
-#import bookentry.journalfile as bf
+import bookentry.ui_JournalEntry as ui_journalEntry
+#import bookentry.journalfile as jf
 import bookentry.journalMenus as menus
 import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
@@ -35,10 +35,10 @@ del __basename
 
 __version__ = '1.0.0'
 
-class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
+class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
    def __init__(self, parent = None ):
-      super(JournalSearch, self).__init__(parent)
+      super(JournalEntry, self).__init__(parent=parent)
       self.setupUi(self)
 
       # This boolean indicates that the window entries
@@ -46,7 +46,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       # window contents without asking the user if they should
       # be saved.
       self.tmpEntryDirty = False
-      self.bf = None
+      self.jf = None
       self.curEntryNumber = 0
       self.setMaxEntryNumber(0)
       self.setWinTitle('document1')
@@ -55,14 +55,14 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
 
       menus.createMenus(self, self.menubar)
 
-      self.connect(self.QuitButton, SIGNAL('released()'), self.close)
+      self.connect(self.QuitButton, SIGNAL('released()'), self.quit)
 
 
    def setMaxEntryNumber(self, n):
       if n < 0:
           n = 0
       self.maxEntryNumber = n
-      '''
+
       if self.maxEntryNumber == 0:
           self.prevButton.setEnabled(False)
           self.nextButton.setEnabled(False)
@@ -71,7 +71,6 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
           self.nextButton.setEnabled(True)
 
       self.ofnumLabel.setText('of %d'%self.maxEntryNumber)
-      '''
 
    #
    # Menu and button slots
@@ -90,14 +89,14 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
    #
    def openNewFile(self):
       """Create a new bookfile saving the old one if it is dirty."""
-      if self.bf is not None:
+      if self.jf is not None:
          if self.askSaveEntry() == QMessageBox.Cancel:
             return
 
          if self.askSaveFile() == QMessageBox.Cancel:
             return
 
-      self.bf = bf.BookFile()
+      self.jf = jf.JournalFile()
       self.setMaxEntryNumber(0)
       self.newEntry()
 
@@ -106,7 +105,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       the first entry. If no records are found we assume that this is
       a new file and we automatically generate a new entry."""
 
-      self.setMaxEntryNumber(self.bf.readFile(name))
+      self.setMaxEntryNumber(self.jf.readFile(name))
       if self.maxEntryNumber:
          self.statusbar.clearMessage()
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
@@ -116,18 +115,18 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
          self.newEntry()
-      self.setWinTitle(self.bf.getBaseName())
+      self.setWinTitle(self.jf.getBaseName())
 
 
    def saveFile(self):
       """Ignore dirty entries and just save the file."""
-      #print("saving file %s"%self.bf.getFileName())
-      if self.bf.getFileName() is None:
+      #print("saving file %s"%self.jf.getFileName())
+      if self.jf.getFileName() is None:
          self.saveFileAs()
       else:
-         self.bf.writeFile()
+         self.jf.writeFile()
 
-      self.statusbar.showMessage('Saving file ' + self.bf.getBaseName())
+      self.statusbar.showMessage('Saving file ' + self.jf.getBaseName())
       QTimer.singleShot(10000, self.statusbar.clearMessage  )
 
 
@@ -137,8 +136,8 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
           "%s -- Choose file"%QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         self.bf.writeFile(fname)
-         self.setWinTitle(self.bf.getBaseName())
+         self.jf.writeFile(fname)
+         self.setWinTitle(self.jf.getBaseName())
 
    #
    # Menu and button slots for Entry Actions
@@ -154,9 +153,9 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       #pp.pprint(self.tmpEntry)
 
       if self.curEntryNumber > self.maxEntryNumber:
-         ret = self.bf.setNewEntry(self.tmpEntry, self.curEntryNumber)
+         ret = self.jf.setNewEntry(self.tmpEntry, self.curEntryNumber)
       else:
-         ret = self.bf.setEntry(self.tmpEntry, self.curEntryNumber)
+         ret = self.jf.setEntry(self.tmpEntry, self.curEntryNumber)
 
       if not ret:
          QMessageBox.information(self, "Entry Invalid", 
@@ -197,7 +196,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
          return
 
       self.entrySelect= es.EntrySelect()
-      self.entrySelect.setText( self.bf.mkShortTitleList() )
+      self.entrySelect.setText( self.jf.mkShortTitleList() )
 
       self.entrySelect.show()
       self.connect(self.entrySelect, SIGNAL('lineEmit'),
@@ -213,7 +212,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       if not num or num < 1 or num > self.maxEntryNumber:
          return
 
-      self.bf.setNewEntry(self.tmpEntry, num)
+      self.jf.setNewEntry(self.tmpEntry, num)
       self.curEntryNumber = num
       self.setMaxEntryNumber(self.maxEntryNumber + 1)
       self.showEntry(self.curEntryNumber)
@@ -229,7 +228,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       if ans == QMessageBox.Cancel:
          return
 
-      self.setMaxEntryNumber(self.bf.deleteEntry(self.curEntryNumber))
+      self.setMaxEntryNumber(self.jf.deleteEntry(self.curEntryNumber))
       if self.maxEntryNumber < 1:
          self.insertButton.setEnable(False)
          self.newEntry()
@@ -254,7 +253,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
          self.curEntryNumber = recnum
 
       # Display the actual entry data
-      self.tmpEntry = self.bf.getEntry(self.curEntryNumber)
+      self.tmpEntry = self.jf.getEntry(self.curEntryNumber)
 
       if not self.tmpEntry:
          return
@@ -268,7 +267,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
 
    def newprintEntry(self):
       """Print a postscript file of the current display."""
-      pp.pprint(self.bf.getEntry(self.curEntryNumber))
+      pp.pprint(self.jf.getEntry(self.curEntryNumber))
 
    def printEntry(self):
       """Print a postscript file of the current display."""
@@ -281,8 +280,10 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       self.render(pt)
       del pt
 
+
    #
    # Set/Clear flags for Entry
+   #
    def setEntryDirty(self):
       """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
       self.tmpEntryDirty = True
@@ -327,12 +328,34 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
    def editHeader(self):
       """Open the edit header form."""
       self.headerWindow = hw.HeaderWindow(self)
-      self.headerWindow.setBookFile(self.bf)
+      self.headerWindow.setBookFile(self.jf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                         "Edit Headers - %s" % (self.bf.getBaseName()),
+                         "Edit Headers - %s" % (self.jf.getBaseName()),
                          None, QApplication.UnicodeUTF8))
-      self.headerWindow.setHeaderText(self.bf.getHeader())
+      self.headerWindow.setHeaderText(self.jf.getHeader())
       self.headerWindow.show()
+
+   #
+   # Help menu functions
+   #
+   def helpString(self):
+      helpStr = """<b>Journal Entry</b> v {0}
+      <p>Author: J. R. Fowler
+      <p>Copyright &copy; 2016
+      <p>All rights reserved.
+      <p>This application is used to create and visualize
+      the XML files with the journals found in the annual
+      bibliographies of <b>Astronomischer Jahresbericht</b>.
+      <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
+          __version__, platform.python_version(),
+          QT_VERSION_STR, PYQT_VERSION_STR,
+          platform.system())
+      return helpStr
+      
+   def helpAbout(self):
+      hstr = self.helpString()
+      QMessageBox.about(self, 'About BookEntry', hstr )
+
 
    #
    # Button slots and Signals
@@ -378,7 +401,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
    def askSaveFile(self):
       """Ask if we should save the dirty file."""
       ans = None
-      if self.bf.isDirty():
+      if self.jf.isDirty():
          ans = QMessageBox.warning( self, 'Save file?',
                                     'The File has changed. Do you want to save it?',
                                     QMessageBox.Save,
@@ -402,7 +425,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       # else get a file name 
       fname = QFileDialog.getOpenFileName(self,
           "%s -- Choose new file"%QApplication.applicationName(),
-                            self.bf.getDirName(), "*.txt")
+                            self.jf.getDirName(), "*.txt")
       if fname:
          self.openFile(fname)
 
@@ -411,11 +434,11 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
    # Methods to deal with various display aspects
    #
    def setWinTitle( self, name ):
-      """Creates the string 'BookEntry vx.x - name' and
+      """Creates the string 'Journal Entry vx.x - name' and
       places it into the window title.
       """
       self.setWindowTitle(QApplication.translate("MainWindow", 
-                 "AJB Book Entry  v %s   -   %s" % (__version__, name),
+                 "Journal Entry  v %s   -   %s" % (__version__, name),
                  None, QApplication.UnicodeUTF8))
 
    def EntryToDisplay(self, entry):
@@ -426,25 +449,4 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       """Copy the display into a new entry and
       return the entry."""
       pass
-
-   #
-   # Help menu functions
-   #
-   def helpString(self):
-      helpStr = """<b>Journal Entry</b> v {0}
-      <p>Author: J. R. Fowler
-      <p>Copyright &copy; 2016
-      <p>All rights reserved.
-      <p>This application is used to create and visualize
-      the XML files with the journals found in the annual
-      bibliographies of <b>Astronomischer Jahresbericht</b>.
-      <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
-          __version__, platform.python_version(),
-          QT_VERSION_STR, PYQT_VERSION_STR,
-          platform.system())
-      return helpStr
-      
-   def helpAbout(self):
-      hstr = self.helpString()
-      QMessageBox.about(self, 'About BookEntry', hstr )
 

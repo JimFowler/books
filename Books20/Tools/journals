@@ -49,10 +49,10 @@ def main():
    args = getargs()
 
    app = QApplication(sys.argv)
-   app.setApplicationName('AJB Journal Entry')
+   app.setApplicationName('Journal Entry')
    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
    
-   form = mw.JournalSearch()
+   form = mw.JournalEntry()
    #QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
    #                form.setFocusChanged)
 

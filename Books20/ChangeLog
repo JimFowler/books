@@ -1,5 +1,10 @@
 2016-01-02  Jim Fowler  <jrf@Biblion>
 
+	* Tools/journals: made JournalEntry to main window
+	rather than JournalSearch
+
+	* Tools/bookentry/journalFile.py (JournalFile): Created
+
 	* Data/Ajb/ajb44_books.txt: finished proofreading
 
 2016-01-01  Jim Fowler  <jrf@Biblion>
