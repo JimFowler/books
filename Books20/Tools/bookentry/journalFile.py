@@ -1,4 +1,4 @@
-"""Defines the class that handles disk files and entry lists"""
+'''Defines the class that handles disk files and entry lists'''
 # -*- coding: UTF-8 -*-
 # -*- mode: Python;-*-
 
@@ -8,22 +8,13 @@ import traceback
 import json
 from lxml import etree
 
+import bookentry.journalEntry as journalEntry
+
 __version__ = 0.1
 
-__defaultHeader__ = """Entry format
-
-Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
-
-AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
-
-Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
-
-Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
-
-For volume AJB ?? Index to the Literature of ????, started, finished, proofread
-
-
-"""
+__defaultHeader__ = '''
+Default header for journal file
+'''
 # end of defaultHeader
 
 
@@ -36,7 +27,6 @@ class JournalFile():
         self._header = __defaultHeader__
         self._entryList = []
 
-        self._volumeNumber = -1
         self._fileName = './document1'
         self._dirName = './'
         self._baseName = 'document1'
@@ -53,13 +43,6 @@ class JournalFile():
         or the header has changed since the last read() or write().
         """
         return self._dirty
-
-    # volume number
-    def setVolumeNumber( self, vol ):
-        self._volumeNumber = vol
-
-    def getVolumeNumber(self):
-        return self._volumeNumber
 
 
     # file name
@@ -162,7 +145,7 @@ class JournalFile():
         shortTitleList = ''
         count = 1
         for e in self._entryList:
-            shortTitleList = shortTitleList + str(count) + ' ' + e.shortTitle()
+            shortTitleList = shortTitleList + str(count) + ' ' + e['Title']
             count += 1
 
         return shortTitleList
@@ -192,7 +175,7 @@ class JournalFile():
     
         # read and validate the XML file
         try:
-            bf_schema = etree.XMLSchema(file='./xml/bookfile.xsd')
+            bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/bookentry/xml/journalfile.xsd')
             Parser = etree.XMLParser(schema=bf_schema)
         except:
             print('The schema is not well formed')
@@ -208,14 +191,13 @@ class JournalFile():
             if child.tag == 'Header':
                 self.setHeader(child.text)
 
-            if child.tag == 'Entries':
+            if child.tag == 'Journals':
                 for entry in child:
-                    entTemp = AJBentry.AJBentry()
-                    entTemp.readXML(entry)
-                if entTemp.isValid():
-                    count += 1
-                    self._entryList.append(entTemp)
-                    entTemp = AJBentry.AJBentry()
+                    entTemp = journalEntry.journalEntry()
+                    entTemp.read_XML_to_Entry(entry)
+                    if entTemp.isValid():
+                        count += 1
+                        self._entryList.append(entTemp)
         
         self._dirty = False
 
@@ -231,23 +213,19 @@ class JournalFile():
         if filename:
             self.setFileName(filename)
         
-            try:
-                fd = open(self._fileName, 'w', encoding='UTF8')
-            except:
-                return False
-        else:
-            #   pop a user dialog to get the file name.
-            pass
+        try:
+            fd = open(self._fileName, 'w', encoding='UTF8')
+        except:
+            return False
 
         # We do something clever here when we know how.
-        elBF = etree.Element('BookFile')
+        elBF = etree.Element('JournalFile')
         hdr = etree.SubElement(elBF, 'Header')
         hdr.text = self.getHeader()
 
-        ets = etree.SubElement(elBF, 'Entries')
+        ets = etree.SubElement(elBF, 'Journals')
         for entry in self._entryList:
-            # entry is of Class AJBentry
-            ee = entry.create_XML()
+            ee = entry.write_XML_from_Entry()
             ets.append(ee)
 
         bStr = etree.tostring(elBF,
@@ -265,36 +243,16 @@ if __name__ == "__main__":
     from pprint import pprint
     import sys
 
-    bf = BookFile()
-    print( "%d entries found\n" % bf.readFile("/home/jrf/Documents/books/Books20/Data/Ajb/ajb58_books.txt"))
+    bf = JournalFile()
+    bf.readfile_XML('./xml/JournalFile.xml')
 
     print( 'The header for %s' % bf.getFileName())
     print( bf.getHeader() )
 
-    bf.writeFile("testfile.txt")
-
-    bf.readFile('testfile.txt')
-    bf.writeFile('testfile2.txt')
-    print(' run "diff testfile2.txt testfile.txt"')
-
-    ent = AJBentry.AJBentry('500 58.04.05 , An Amazing Book')
-    ent2 = AJBentry.AJBentry('500 58.04.06 , An Amazing Book Too')
-    bf.setNewEntry(ent) # append
-    bf.setNewEntry(ent2, 0) # append
-    bf.setNewEntry(ent, 1) # insert as entry 1
-    bf.setNewEntry(ent2, 5) # insert as entry 5
-    bf.setEntry(ent, 4) # replace entry 4
-    bf.writeFile('testfile3.txt')
-    bf.setNewEntry(ent, 5)
-    bf.deleteEntry(22)
-    bf.deleteEntry(0)
-    bf.deleteEntry(5)
-    #print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
-    #print('\n\n')
-    bf.writefile_XML('ajb58_books.xml')
+    bf.writefile_XML('journalfile_test.xml')
     print('We can read and validate a file with the parse() function')
     try:
-        bf_schema = etree.XMLSchema(file='./xml/bookfile.xsd')
+        bf_schema = etree.XMLSchema(file='./xml/journalfile.xsd')
         Parser = etree.XMLParser(schema=bf_schema)
         print('The schema is well formed')
     except:
@@ -302,7 +260,7 @@ if __name__ == "__main__":
         sys.exit(1)
     try:
         # etree.parse() returns an Etree rather than an Element
-        bf3 = etree.parse('ajb58_books.xml', parser=Parser)
+        bf3 = etree.parse('journalfile_test.xml', parser=Parser)
         print('The xml file is well formed and valid')
     except:
         print('The xml file is not well formed or is invalid')

@@ -1,5 +1,17 @@
 2016-01-03  Jim Fowler  <jrf@Biblion>
 
+	* Tools/bookentry/journalWin.py (JournalEntry): Got the journal
+	program working, I think.  Will need some more testing with edge
+	cases.
+
+	* Tools/bookentry/journalFile.py: able to get journalFile to work with
+	journalEntry
+
+	* Tools/bookentry/journalEntry.py
+	(journalEntry.write_XML_from_Entry): added write_XML_from_Entry()
+	function
+	(journalEntry.read_XML_to_Entry): added read_XML_to_Entry() functions
+
 	* Tools/bookentry/entry.py (Entry.blankEntry): moved blankEntry
 	definition to subclass so I could use entry.py for journals as
 	well as books.

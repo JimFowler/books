@@ -18,8 +18,9 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui  import *
 
 import bookentry.ui_JournalEntry as ui_journalEntry
-#import bookentry.journalfile as jf
+import bookentry.journalFile as jf
 import bookentry.journalMenus as menus
+import bookentry.journalEntry as journalEntry
 import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
 
@@ -55,7 +56,31 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       menus.createMenus(self, self.menubar)
 
-      self.connect(self.QuitButton, SIGNAL('released()'), self.quit)
+      self.connect(self.quitButton, SIGNAL('released()'), self.quit)
+      self.connect(self.saveButton, SIGNAL('released()'), self.saveEntry)
+      self.connect(self.newButton, SIGNAL('released()'), self.newEntry)
+      self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry)
+
+      self.saveButton.setEnabled(False)
+      self.deleteButton.setEnabled(False)
+      self.newButton.setEnabled(True)
+
+      self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
+
+      self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.subTitleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.subsubTitleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.publisherEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.abbreviationsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.startDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.endDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.LinkPreviousEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.LinkNextEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.ISSN_Edit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.ADS_Edit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.CommentsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+
+      self.openNewFile()
 
 
    def setMaxEntryNumber(self, n):
@@ -105,12 +130,11 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       the first entry. If no records are found we assume that this is
       a new file and we automatically generate a new entry."""
 
-      self.setMaxEntryNumber(self.jf.readFile(name))
+      self.setMaxEntryNumber(self.jf.readfile_XML(name))
       if self.maxEntryNumber:
          self.statusbar.clearMessage()
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
          self.showEntry(1)
-         self.insertButton.setEnabled(True)
          self.clearEntryDirty()
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
@@ -124,7 +148,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.jf.getFileName() is None:
          self.saveFileAs()
       else:
-         self.jf.writeFile()
+         self.jf.writefile_XML()
 
       self.statusbar.showMessage('Saving file ' + self.jf.getBaseName())
       QTimer.singleShot(10000, self.statusbar.clearMessage  )
@@ -136,7 +160,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
           "%s -- Choose file"%QApplication.applicationName(),
                                           ".", "*.txt")
       if fname:
-         self.jf.writeFile(fname)
+         self.jf.writefile_XML(fname)
          self.setWinTitle(self.jf.getBaseName())
 
    #
@@ -147,7 +171,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.tmpEntry = self.DisplayToEntry()
       if not self.tmpEntry:
          QMessageBox.information(self, "Entry Invalid", 
-                                 "Entry invalid!  Not saved in bookfile!" )
+                                 "Entry invalid!  Not saved in journalfile!" )
          return
 
       #pp.pprint(self.tmpEntry)
@@ -159,7 +183,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       if not ret:
          QMessageBox.information(self, "Entry Invalid", 
-                                 "Entry invalid!  Not saved in bookfile!" )
+                                 "Entry invalid!  Not saved in journalfile!" )
          return
 
       if self.curEntryNumber > self.maxEntryNumber:
@@ -172,17 +196,10 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.askSaveEntry() == QMessageBox.Cancel:
          return
 
-      self.tmpEntry = AJBentry.AJBentry()
+      self.tmpEntry = journalEntry.journalEntry()
       self.curEntryNumber = self.maxEntryNumber + 1
-      self.tmpEntry['Index'] = self.curEntryNumber
       self.EntryToDisplay(self.tmpEntry)
       self.indexEntry.setText(str(self.curEntryNumber))
-      if self.defaultVolumeNumber is not None:
-         self.volNum.setText(self.defaultVolumeNumber)
-      self.volNum.setFocus()
-      self.deleteButton.setEnabled(False)
-      if self.maxEntryNumber > 0:
-         self.insertButton.setEnabled(True)
       self.clearEntryDirty()
 
    def askInsertEntry(self):
@@ -287,13 +304,13 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
    def setEntryDirty(self):
       """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
       self.tmpEntryDirty = True
-      self.acceptButton.setEnabled(True)
+      self.saveButton.setEnabled(True)
       # set menu item enable to True as well
 
    def clearEntryDirty(self):
       """Set the tmpEntryDirty flag to False and disable the Save Entry button."""
       self.tmpEntryDirty = False
-      self.acceptButton.setEnabled(False)
+      self.saveButton.setEnabled(False)
       # set menu item enable False as well.
       # set Save File menu True
 
@@ -443,10 +460,158 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
    def EntryToDisplay(self, entry):
       """Given an entry, display the parts on the GUI display."""
-      pass
+
+      astr = ''
+      if entry.notEmpty('Title'):
+         astr += entry['Title']
+      self.titleEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('subTitle'):
+         astr += entry['subTitle']
+      self.subTitleEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('subsubTitle'):
+         astr += entry['subsubTitle']
+      self.subsubTitleEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('Publishers'):
+         first = True
+         for p in entry['Publishers']:
+            if not first:
+               astr += '\n'
+            first = False
+            if p.__contains__('Place'):
+               astr += p['Place']
+            astr += ' : '
+            if p.__contains__('Name'):
+               astr += p['Name']
+            astr += ' : '
+            if p.__contains__('startDate'):
+               astr += p['startDate']
+            astr += ' : '
+            if p.__contains__('endDate'):
+               astr += p['endDate']
+      self.publisherEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('Abbreviations'):
+         first = True
+         for a in entry['Abbreviations']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += a
+      self.abbreviationsEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('startDate'):
+         astr += entry['startDate']
+      self.startDateEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('endDate'):
+         astr += entry['endDate']
+      self.endDateEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('linkprevious'):
+         first = True
+         for l in entry['linkprevious']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += l
+      self.LinkPreviousEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('linknext'):
+         first = True
+         for l in entry['linknext']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += l
+      self.LinkPreviousEdit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('ISSN'):
+         astr += entry['ISSN']
+      self.ISSN_Edit.setText(astr)
+
+      astr = ''
+      if entry.notEmpty('ADSdesignator'):
+         astr += entry['ADSdesignator']
+      self.ADS_Edit.setText(astr)
+
+
+      astr = ''
+      if entry.notEmpty('Comments'):
+         astr += entry['Comments']
+      self.CommentsEdit.setText(astr)
+
 
    def DisplayToEntry(self):
       """Copy the display into a new entry and
       return the entry."""
-      pass
+      entry = journalEntry.journalEntry()
+
+      entry['Title'] = self.titleEdit.toPlainText().strip()
+      entry['subTitle'] = self.subTitleEdit.toPlainText().strip()
+      entry['subsubTitle'] = self.subsubTitleEdit.toPlainText().strip()
+
+      # Publishers
+      a = self.publisherEdit.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            d = {}
+            flds = line.split(':')
+            d['Place'] = flds[0].strip()
+            d['Name'] = flds[1].strip()
+            d['startDate'] = flds[2].strip()
+            d['endDate'] = flds[3].strip()
+            entry['Publishers'].append(d)
+
+
+      # Abbreviations
+      a = self.LinkPreviousEdit.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            entry['Abbreviations'].append(line.strip())
+
+      # startDate
+      entry['startDate'] = self.startDateEdit.text().strip()
+
+      # endDate
+      entry['endDate'] = self.endDateEdit.text().strip()
+
+      # link previous
+      a = self.LinkPreviousEdit.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            entry['linkprevious'].append(line.strip())
+
+      # link next
+      a = self.LinkNextEdit.toPlainText()
+      if len(a) != 0:
+         alist = a.split('\n')
+         for line in alist:
+            entry['linknext'].append(line.strip())
+
+      # ISSN
+      entry['ISSN'] = self.ISSN_Edit.text()
+
+      # ADS
+      entry['ADSdesignator'] = self.ADS_Edit.text().strip()
+
+      # Comments
+      entry['Comments'] = self.CommentsEdit.toPlainText()
+
+
+      return entry
 
