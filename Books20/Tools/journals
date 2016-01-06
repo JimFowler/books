@@ -53,8 +53,8 @@ def main():
    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
    
    form = mw.JournalEntry()
-   #QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-   #                form.setFocusChanged)
+   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
+                   form.setFocusChanged)
 
    if args.version:
       hstr = form.helpString()

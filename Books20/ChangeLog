@@ -1,3 +1,8 @@
+2016-01-05  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/journalWin.py (JournalEntry.setFocusChanged):
+	Connected symbol table to edit boxes.
+
 2016-01-03  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/journalWin.py (JournalEntry): Got the journal

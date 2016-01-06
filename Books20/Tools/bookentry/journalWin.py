@@ -54,6 +54,25 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.insertFunc = None
       self.setSymbolTableName( __DefaultSymbolTableName__)
 
+      # Fields within an Entry that we know about already
+      self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
+                               'Publishers', 'Edition', 'Year',
+                               'Pagination', 'Price', 'Reviews',
+                               'Compilers', 'Contributors', 'Translators',
+                               'Language', 'TranslatedFrom', 'Reference',
+                               'Reprint', 'Others', 'OrigStr', 'Comments', ]
+
+      # lists of which display fields may or may not have symbol entry allowed
+      self.noEntryList = [ 'indexEntry', 'startDateEdit', 'endDateEdit',
+                           'ISSN_Edit', 'ADS_Edit']
+
+      self.setTextEntryList = ['titleEdit', 'subTitleEdit', 'subsubTitleEdit',
+                               'publisherEdit', 'abbreviationsEdit',
+                               'LinkPreviousEdit', 'LinkNextEdit',
+                               'CommentsEdit']
+      self.setLineEntryList = []
+
+
       menus.createMenus(self, self.menubar)
 
       self.connect(self.quitButton, SIGNAL('released()'), self.quit)
@@ -341,6 +360,35 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       """Set the name of the symbol table to use in place of the
       default table."""
       self.symbolTableName = name
+
+   def insertChar(self, obj):
+      """Insert the charactor in obj[0] with self.insertFunc
+      if insertFunc is not None."""
+
+      char = obj[0]
+      # invoke self.insertFunc(char)
+      if self.insertFunc is not None:
+         self.insertFunc(char)
+      # take back focus somehow??
+
+   def setFocusChanged(self, oldWidget, nowWidget ):
+      """For items in setTextEntryList and setLineEntryList
+      set insertFunc to be either insertPlainText or insert."""
+
+      if oldWidget is None:
+         pass
+      elif oldWidget.objectName() == 'indexEntry':
+         self.indexEntry.setText(str(self.curEntryNumber))
+
+      if nowWidget is None:
+         pass
+      elif self.setTextEntryList.count(nowWidget.objectName()):
+         self.insertFunc = nowWidget.insertPlainText
+      elif self.setLineEntryList.count(nowWidget.objectName()):
+         self.insertFunc = nowWidget.insert
+      elif self.noEntryList.count(nowWidget.objectName()):
+         self.insertFunc = None
+
 
    def editHeader(self):
       """Open the edit header form."""
