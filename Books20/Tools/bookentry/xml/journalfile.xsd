@@ -58,7 +58,7 @@
     <!-- These are elements that are meant for future use -->
 
 
-    <!-- Begining and ending dates for the journal -->
+    <!-- Beginnng and ending dates for the journal -->
     <xs:element name="startDate" type="xs:string" minOccurs="0"/>
     <xs:element name="endDate" type="xs:string" minOccurs="0"/>
 
@@ -66,7 +66,7 @@
          others, then the linkPrevious or linkNext indicate the Titles
          of these journals. Clearly there can be multiple linkPrevous
          entries.  But there might also be multiple linkNext in the
-         event a journal split s into multiple journals. Consider the
+         event a journal splits into multiple journals. Consider the
          case of Physical Reviews; founded in 1893, it split into
          Physical Reviews A, B, C, and D in 1970.
 
@@ -78,23 +78,26 @@
       <xs:complexType>
 	<xs:sequence>
 	  <xs:element name="linkPrevious" type="xs:string" minOccurs="0"
-		      maxOccurs="unbounded"/>
+ maxOccurs="unbounded"/>
 	  <xs:element name="linkNext" type="xs:string" minOccurs="0"
 		      maxOccurs="unbounded"/>
 	</xs:sequence>
       </xs:complexType>
     </xs:element>
 
-    <!-- The International Standard Serial Number if the journal has one -->
-    <xs:element name="ISSN" type="xs:string" minOccurs="0"/>
 
     <!-- Database designators.  Different designators for the various
-         databases. For example, if the journal is in ADS, this is the
-         reference.
-
-         Do we need a overall Designators element to contain multiple
-         designators? -->
-    <xs:element name="ADSdesignator" type="xs:string" minOccurs="0" />
+         databases. -->
+    <xs:element name="Designators" minOccurs="0">
+      <xs:complexType>
+        <xs:all>
+	    <!-- Astrophysical Data Systems Biblographic Codes -->
+	    <xs:element name="ADS_Bibcode" type="xs:string" minOccurs="0" />
+	    <!-- The International Standard Serial Number if the journal has one -->
+	    <xs:element name="ISSN" type="xs:string" minOccurs="0"/>
+        </xs:all>
+      </xs:complexType>
+    </xs:element>
 
     <!-- For all the things we forget to identify -->
     <xs:element name="Comments" minOccurs="0">
@@ -132,7 +135,7 @@
 
 <!-- Remaining problems:
 
-  Do we wish to list the editior (and associate editors)?  In the
+  Do we wish to list the editor (and associate editors)?  In the
   later Twentieth Century this could get complex.
 
 -->

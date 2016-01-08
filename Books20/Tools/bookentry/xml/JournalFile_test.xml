@@ -29,7 +29,7 @@
 
 
 <!--
-   This is a fully filed out journal file with one complex journal. Note that
+   This is a fully filled out journal file with one complex journal. Note that
    a minimal entry is required to have a Title to be a valid entry.
 -->
 <JournalFile>
@@ -50,6 +50,7 @@
       </Publisher>
       <Publisher>
 	<Name>Somebody Else</Name>
+	<endDate>1975/1/1</endDate>
       </Publisher>
     </Publishers>
 
@@ -66,7 +67,16 @@
     <Abbreviation>ST</Abbreviation>
   </Abbreviations>
 
-  <ADSdesignator>SkyTel</ADSdesignator>
+  <Designators>
+    <ADS_Bibcode>SkyTel</ADS_Bibcode>
+    <ISSN>9-123456-8901-8</ISSN>
+  </Designators>
+
+  <Comments>
+    <Comment>This is the first comment</Comment>
+    <Comment>This is the second comment</Comment>
+  </Comments>
+
   </Journal>
 
  </Journals>

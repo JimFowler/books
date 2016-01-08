@@ -60,7 +60,7 @@ if args.version:
 
 if args.schemafile != '':
     if args.verbose:
-        print('Schema file: %s\n' % (args.schemafile))
+        print('Schema file:\n   %s\n' % (args.schemafile))
 else:
     if args.verbose:
         print('No schema file given.')
