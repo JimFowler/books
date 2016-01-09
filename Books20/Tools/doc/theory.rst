@@ -13,7 +13,7 @@ out the text files in a consistent format so that all files are
 similar in format and structure. This later point is particularly
 important for files that would later be read into a database. The
 older method, of formatting the files manually, was sure to introduce
-inconsistence between files.
+inconsistencies between files.
 
 The list of book entries created by **ajbbooks** will be used by other
 programs to generate the database for the project.  Thus **ajbbooks**
@@ -133,6 +133,10 @@ are listed below
   10. edition <1st or 2nd or 3rd or 4th or 5th ...>
   11. other
 
+Where <name_list> is of the form "name [and name [and ...]]" and name
+is of the form "[FirstInitial] [MiddleInitials] last"; note that the
+last name is required but the first initial and the middle ones are optional.
+There may be multiple middle initials.
 
 The grammer, in Extended Bachus-Naur format, is
 
@@ -169,6 +173,13 @@ uWord          =  ? <RE> ?;
 Publisher      =  uWords, ':', uWords;
 Initial        =  ? <RE> ?, '.';
 =============  == ==================================================
+
+The python package ``modgrammer`` is used to parse the comments using
+the defined grammer. This version of **ajbbooks** uses modgrammer-0.10.
+The code may be found at `pypi.python/org
+<https://pypi.python.org/pypi/modgrammar/0.10>`_ and the documentation
+can be found at `pythonhosted.org
+<http://packages.python.org/modgrammar>`_
 
 Internal Bookfile Object
 ========================
@@ -239,6 +250,9 @@ When ever it needs to read/write an entry to/from the ``_entryList``,
 it calls on the entry itself to handle this action.  Entries are of type
 ``Class AJBentry`` defined in AJBentry.py.
 
+AJB Entrie
+-----------
+
 The ``Class AJBentry`` is a subclass of ``Entry`` which is defined in
 entry.py. A generic entry object is a python dictionary with the following
 fields and default values.
@@ -277,48 +291,189 @@ fields that are normally in the comments.
  Entry[ 'Reference']       =     ''                  
 ========================= ===== ======================
 
+Index is the entry number within the individual BookFiles. It is 
+simply a running count of the number of books.
+
+Num is the volume, section, and index within an *AJB* volume. It serves
+to distinguish the book from any other within the *AJB* series.
+
+Authors, Editors, Compilers, Contributors, and Translators are lists
+of HumanName object defined in the third-party package nameparser.
+This version of **ajbbooks** uses nameparser-0.3.3.
+The code can be found at the `Project Home Page
+<https://github.com/derek73/python-nameparser>`_ and the documentation
+can be found on `nameparser.readthedocs.org <http://nameparser.readthedocs.org/en/latest/>`_
+
+Others is a list of string. This strings contains the real comments
+about the entry rather than the extra entry information.
+
+Title is the name of the book. Note that many books has a sub-title as
+well. The current structure does not distinguish this fact.  I use a semi-colon
+between titles and sub-titles (as well as sub-sub-titles).
+
 Publishers is a list of dictionaries with the location and name of the
 publisher, {'Place': <placename>, 'PublisherName': <publisherName>}
 
-Authors, Editors, Compilers, Contributors, and Translators
-are lists of HumanName object defined in the third-party package
-nameparser.  Give link!
+Year contains the copyright date if known.
+
+Pagination contains the page count of the preface and main text. The *AJB* may
+indicate the number of tables and illustrations in addition to the page
+count but those information are not included here.
+
+Price is a simple string entry. More that one price will be separated 
+by 'and'.
+
+Reviews is a list of strings, each string containing a review reference.
 
 Comments holds the original comment field.
 
 OrigStr hold the original full text string.
 
-Reprint contains an AJB number. This entry is a reprint
-of the entry at that AJB number.
-
-Reference contains the AJB number of an entry, not necessarily in
-this file, of which, this information should be appended or ammended.
-
-Reviews is a list of strings, each string containing a review reference.
-
-Others is a list of string. This strings contains the real comments
-about the entry rather than the extra entry information.
-
-Price is a simple string entry. More that one price will be separated 
-by 'and'.
+TranslatedFrom is a simple string entry that indicates the language
+of the orginal volume that this work is a translation of.
 
 Language is a simple string entry. If an entry is written in more
 than one language, the language names are separated by 'and'.  There
 are occasional books published in Russian and English for example.
 
+Reprint contains an *AJB* number. This entry is a reprint
+of the entry at that *AJB( number.
+
+Reference contains the *AJB* number of an entry, not necessarily in
+this file, of which, this information should be appended or ammended.
+
+AJBentry Functions
+------------------
+
+The generic ``class entry(dict)`` defines empty read/write functions
+as well as ``isValid()``.  Subclasses of ``entry`` must defined there own
+read/write function to convert between the external BookFile format and the
+internal class format. The ``isValid()`` function must return ``True`` for a
+minimally valid entry. In the case of AJBentry this means that a books has at
+least a title and an *AJB* number
+
+Special Considerations
+----------------------
+
+Note that the external BookFile format for the book entries use commas
+as field separators.  This implies that commas may not be used in
+title strings, publisher names, comments, and other string
+fields. However, commas frequently occur in such strings.  Commas are
+legal in any of the AJBentry fields so we need to take special
+precautions when reading/writing an external BookFile.  In particular
+the class functions AJBentry::write() checks for commas in any string
+and replaces them with the string ' comma '. Similarly the function
+AJBentry::write() checks for ' comma ' in BookFile strings and
+replaces them with the string ', ' in the AJBentry dictionary values.
+
+The use of comma separated fields within a text based file is very
+constraining when documenting books. Because of the design I am limited
+in the amount and type of information I can store. Furthermore, extending
+the design usually requires extensive code changes.  In future versions
+of **ajbbooks** I hope to use XML as the external BookFile format.
+
 
 Reading and Writing the Display
 ===============================
 
+The ``class BookEntry`` defined in `mainWindow.py` handles menu and
+button event as well as the main display for the books. This display
+presents book information in a visual format that is easy for people
+to read and process, see Figure 3.1.
 
 designer
 --------
+
+QtDesigner 4.8 is used to build the window interfaces.  The ``ui`` files are
+in the directory ``bookentry/designer``.
 
 .. _symbol-table-theory:
 
 symbol table
 ------------
 
+The *AJB* covers the entire international field of astronomer and
+astrophysics and therefore has titles and names in multiple languages
+which many additional characters beyond the standard ASCII
+codes. The internal and external formats are encoded
+in UTF-8 rather than plain ASCII in order to deal with this issue.
 
-header
-------
+Standard keyboards do not have all these additional characters and I did
+not want to learn a large number of keyboard tricks in order to enter
+these characters.  The solution was to build a symbol table modeled after
+similar tables in advanced text editing programs.
+
+The table was based on the charpicker.py package developed by Rich
+Griswold. I found it at his blog
+`http://richgriswold.wordpress.com/2009/10/17/character-picker/
+<http://richgriswold.wordpress.com/2009/10/17/character-picker/>`_ but
+that URL no longer appears to be valid. My symbol table code is
+located in bookentry/symbol.py
+
+Everytime the symbol table is opened it reads the file
+symbols.txt. The location of the symbols.txt file is found in
+mainWindow.py by looking at the file name of the imported file
+symbol.py. The string ``symbols.txt`` is appended to the directory
+portion of this name and the resulting name is opened. This is not the
+proper pythonic way of doing thing but it works for the time being.
+
+The symbols.txt file is simply a list of characters with tool tips
+separated by a comma.  The format of a file look like::
+
+  #
+  #
+  # symbols.txt
+  #  A symbol table for the symbol.py package under the BookEntry program
+  #  6 Feb 2013 James R Fowler
+  #
+  #
+  Ä, Capital letter A with diaeresis
+  ä, Small letter a with diaeresis
+  Å, Capital letter A with ring above
+  å, Small letter a with ring above
+  à, small letter a with grave
+  á, small letter a with acute
+  ç, Small letter c with cedilla
+  Č, Capital letter C with caron
+  č, Small letter c with caron
+  ć, Small letter c with acute
+
+  Ë, Capital letter E with diaeresis
+  ë, Small letter e with diaeresis
+  È, Capital letter E with grave
+  É, Captial letter E with acute
+  è, Small letter e with grave
+  é, Small letter e with acute
+  ě, Small letter e with caron
+  ę, Small letter e with cedilla
+  Ï, Capital letter I with diaresis
+  ï, Small letter i with diaresis
+  ì, Small letter i with grave
+  í, Small letter i with acute
+  î, Small letter i with caron
+
+  Ň, Captial letter N with caron
+  ň, Small letter n with caron
+  Ö, Capital letter O with diaeresis
+  ö, Small letter o with diaeresis
+  ø, Small letter o with stroke
+  ô, Small letter o with circumflex
+  ò, Small letter o with grave
+  ó, Small letter o with acute
+
+  #
+  # The End
+  #
+
+Comment lines begin with '#' and are ignored by the software.  Each
+character is then used as the text image for a Qt button object with
+pthe tip added as the tooltip.  A blank line in the symbols.txt
+indicated the start of a new line in the window display. The action
+of the button when it is clicked is to send the signal ``sigClicked(QString)``
+with the character as the parameter in the signal.
+
+This signal in turn is caught in the BookEntry class (mainWindow.py) and
+is connected to the insertChar() function.  This insertion function changes
+on the fly whenever the focus changes in the BookEntry window between the various
+LineEdit and TextEdit items.
+

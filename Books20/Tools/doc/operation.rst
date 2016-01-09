@@ -2,7 +2,7 @@ Operation
 *********
 
 The **ajbbooks** program may be started from the command line with
-the ``ajbbbooks`` command. The main display window is shown in figure 1.
+the ``ajbbbooks`` command. The main display window is shown in figure 3.1.
 
 The main features are the top line with the Index number and the AJB
 number along with the buttons to switch between existing records, the
@@ -26,9 +26,10 @@ ajbbooks [-h] [-i filename] [-s filename] [-v integer]
   -v, --volume volnum -- default volume number for new entries
 
 
+
 .. figure:: images/mainwindow.png
 
-	    The main display window of ajbbooks.
+   The main display window of ajbbooks.
 
 
 Menus
