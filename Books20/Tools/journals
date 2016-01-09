@@ -70,7 +70,7 @@ def main():
          form.openFile(fname)
       else:
          form.openNewFile()
-         form.setFileName(fname)
+         form.jf.setFileName(fname)
          form.setWinTitle(form.jf.getBaseName())
 
 

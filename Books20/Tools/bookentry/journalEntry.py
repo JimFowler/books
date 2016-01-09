@@ -45,9 +45,15 @@ class journalEntry(entry.Entry):
         self[ 'endDate']       = '' # the end of publishing
         self[ 'linknext']      = [] # a list of strings'
         self[ 'linkprevious']  = [] # a list of strings
-        self[ 'ISSN']          = '' # if the journal has one
-        self[ 'ADSdesignator'] = '' 
-        self[ 'Comments']      = '' # should be a list of strings
+        self[ 'Designators']   = {}
+        #
+        # Designators is a dictionary of catalogue designations
+        #   for example 'ISSN' : '9-123456-789-12-3'
+        #     and       "ADS_Bibcode' : '....ApJ...'
+        #    others can be 
+        #               'LCCN', 'DDCN', etc
+        #
+        self[ 'Comments']      = [] # should be a list of strings
 
 
 
@@ -151,23 +157,21 @@ class journalEntry(entry.Entry):
                 ep.text = link
 
 
-        # ISSN
-        if self.notEmpty('ISSN'):
-            el = etree.SubElement(entryXML, 'ISSN')
-            el.text = self['ISSN']
-
-        # ADSdesignator
-        if self.notEmpty('ADSdesignator'):
-            el = etree.SubElement(entryXML, 'ADSdesignator')
-            el.text = self['ADSdesignator']
+        # Designators is a dictionary
+        if self.notEmpty('Designators'):
+            el = etree.SubElement(entryXML, 'Designators')
+            for key in self['Designators'].keys():
+                #key = key.strip()
+                print('write_XML_from_Entry: (%s) : (%s)' % (key, self['Designators'][key] ))
+                cl = etree.SubElement(el, key)
+                cl.text = self['Designators'][key]
 
         # Comments
         if self.notEmpty('Comments'):
             el = etree.SubElement(entryXML, 'Comments')
-            el.text = self['Comments']
-        #    for comment in self['Comments']:
-        #        cl = etree.SubElement(el, 'Comment')
-        #        cl.text = comment
+            for comment in self['Comments']:
+                cl = etree.SubElement(el, 'Comment')
+                cl.text = comment
 
         # return the root Entry element
         return entryXML
@@ -233,18 +237,17 @@ class journalEntry(entry.Entry):
                     else:
                         assert 0, 'journalEntry.read_XML_to_entry() invalid link name'
 
-            # ISSN
-            elif child.tag == 'ISSN':
-                self['ISSN'] = child.text
+            # Designators is a dictionary
+            #   This should be valid for any entry
+            elif child.tag == 'Designators':
+                for desg in child:
+                    print('read_XML_to_Entry: (%s) : (%s)' % (desg.tag, desg.text))
+                    self['Designators'][desg.tag] = desg.text
 
-            # ADS Designator
-            elif child.tag == 'ADSdesignator':
-                self['ADSdesignator'] = child.text
-
-
-            # Comments
+            # Comments is a list of strings
             elif child.tag == 'Comments':
-                self['Comments'] = child.text
+                for comment in child:
+                    self['Comments'].append(comment.text)
 
             else:
                 assert 0, 'journalEntry.read_XML_to_entry() invalid tag name'

@@ -1,3 +1,25 @@
+2016-01-09  Jim Fowler  <jrf@Biblion>
+
+	* Tools/Bookentry/designer/ui_JournalEntry.ui: added Designator
+	text edit box to tab order.
+
+	* Tools/bookentry/: fixed mistakes and typos in ../jounrals,
+	journalEntry.py and journalFile.py. Tested successfully.
+
+2016-01-08  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/journalWin.py (JournalEntry.DisplayToEntry):
+	Modified EntryToDisplay() and DisplayToEntry() to accomodate
+	changes in ui_JournalEntry.ui.
+
+	* Tools/bookentry/designer/ui_JournalEntry.ui: Removed subTitle
+	and subsubTitle textEdit boxes and added Designator textEdit.
+
+	* Tools/bookentry/journalEntry.py (journalEntry.blankEntry):
+	Removed ADSdesignator and ISSN entries and added Designators as a
+	dictionary. Modifed write_XML_from_Entry() and read_XML_to_Entry()
+	to accomodate these changes
+
 2016-01-07  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/xml/JournalFile_test.xml: modified to support

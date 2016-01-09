@@ -87,16 +87,13 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
       self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.subTitleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.subsubTitleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.publisherEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.abbreviationsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.startDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.endDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.LinkPreviousEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.LinkNextEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.ISSN_Edit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.ADS_Edit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.designatorEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.CommentsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
 
       self.openNewFile()
@@ -301,11 +298,11 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
 
-   def newprintEntry(self):
+   def printEntry(self):
       """Print a postscript file of the current display."""
       pp.pprint(self.jf.getEntry(self.curEntryNumber))
 
-   def printEntry(self):
+   def oldprintEntry(self):
       """Print a postscript file of the current display."""
       pr = QPrinter()
       pr.setOutputFileName('BookEntry.pdf')
@@ -512,17 +509,11 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       astr = ''
       if entry.notEmpty('Title'):
          astr += entry['Title']
-      self.titleEdit.setText(astr)
-
-      astr = ''
       if entry.notEmpty('subTitle'):
-         astr += entry['subTitle']
-      self.subTitleEdit.setText(astr)
-
-      astr = ''
+         astr = astr + '\n' + entry['subTitle']
       if entry.notEmpty('subsubTitle'):
-         astr += entry['subsubTitle']
-      self.subsubTitleEdit.setText(astr)
+         astr = astr + '\n' + entry['subsubTitle']
+      self.titleEdit.setText(astr)
 
       astr = ''
       if entry.notEmpty('Publishers'):
@@ -582,22 +573,29 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
                astr += '\n'
             first = False
             astr += l
-      self.LinkPreviousEdit.setText(astr)
+      self.LinkNextEdit.setText(astr)
 
       astr = ''
-      if entry.notEmpty('ISSN'):
-         astr += entry['ISSN']
-      self.ISSN_Edit.setText(astr)
-
-      astr = ''
-      if entry.notEmpty('ADSdesignator'):
-         astr += entry['ADSdesignator']
-      self.ADS_Edit.setText(astr)
+      if entry.notEmpty('Designators'):
+         first = True
+         for k in entry['Designators']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += k
+            astr += ' : '
+            astr += entry['Designators'][k]
+         self.designatorEdit.setText(astr)
 
 
       astr = ''
       if entry.notEmpty('Comments'):
-         astr += entry['Comments']
+         first = True
+         for c in entry['Comments']:
+            if not first:
+               astr += '\n'
+            first = False
+            astr += c
       self.CommentsEdit.setText(astr)
 
 
@@ -606,9 +604,18 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       return the entry."""
       entry = journalEntry.journalEntry()
 
-      entry['Title'] = self.titleEdit.toPlainText().strip()
-      entry['subTitle'] = self.subTitleEdit.toPlainText().strip()
-      entry['subsubTitle'] = self.subsubTitleEdit.toPlainText().strip()
+      # Titles
+      a = self.titleEdit.toPlainText().strip()
+      if 0 != len(a):
+         alist = a.split('\n')
+         if 0 == len(alist[0]):
+            return None
+         entry['Title'] = alist[0]
+         if 1 < len(alist) and 0 != alist[1]: 
+            entry['subTitle'] = alist[1]
+         if 2 < len(alist) and 0 != alist[2]: 
+            entry['subsubTitle'] = alist[2]
+
 
       # Publishers
       a = self.publisherEdit.toPlainText()
@@ -625,7 +632,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
 
       # Abbreviations
-      a = self.LinkPreviousEdit.toPlainText()
+      a = self.abbreviationsEdit.toPlainText()
       if len(a) != 0:
          alist = a.split('\n')
          for line in alist:
@@ -651,15 +658,21 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          for line in alist:
             entry['linknext'].append(line.strip())
 
-      # ISSN
-      entry['ISSN'] = self.ISSN_Edit.text()
-
-      # ADS
-      entry['ADSdesignator'] = self.ADS_Edit.text().strip()
-
+      # Designators
+      a = self.designatorEdit.toPlainText()
+      if 0 != len(a):
+         alist = a.split('\n')
+         for line in alist:
+            flds = line.split(':')
+            entry['Designators'][flds[0].strip()] = flds[1].strip()
+         
+      
       # Comments
-      entry['Comments'] = self.CommentsEdit.toPlainText()
-
+      a = self.CommentsEdit.toPlainText()
+      if 0!= len(a):
+         alist = a.split('\n')
+         for line in alist:
+            entry['Comments'].append(line)
 
       return entry
 
