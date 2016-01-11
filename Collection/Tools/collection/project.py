@@ -116,7 +116,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             res = self.db.execute(queryStmt)
             proj = res.fetchone()
             self.projectId = int(proj[0])
-            
+            self.idLabel.setText(str(self.projectId))
             self.clearProjectDirty()
             self.isNew = False
 
@@ -161,7 +161,8 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
             res = self.db.execute(search)
             proj = res.fetchone()
             self.projectId = _projId
-            self.projectNameEdit.setText( proj[0])
+            self.idLabel.setText(str(_projId))
+            self.projectNameEdit.setText(proj[0])
             self.descriptionEdit.setText(proj[1])
             self.isNew = False
             self.getBookList(_projId)
@@ -195,10 +196,13 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
 class Project(object):
     '''Handle the general projects stuff.  It makes
-    no sense to call this class and not pass a database
+     no sense to call this class and not pass a database
     as _db to it.'''
 
     def __init__(self, parent=None, _db=None):
+
+        if _db is None:
+            pass
 
         # A dictionary of projectName: ProjectId
         self.projectDict = {}

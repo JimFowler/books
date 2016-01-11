@@ -28,6 +28,7 @@ PRAGMA foreign_keys;
 CREATE TABLE Books
     --
     -- Unique key.
+
     --
    (BookId          INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
@@ -200,12 +201,12 @@ CREATE TABLE Vendors
     MailingAddress TEXT NULL,
     MailingCity    TEXT NULL,
     MailingState   TEXT NULL,
-    MailingCounty  TEXT NULL,
+    MailingCountry TEXT NULL,
     MailingPostalCode TEXT NULL,
     ShippingAddress TEXT NULL,
     ShippingCity    TEXT NULL,
     ShippingState   TEXT NULL,
-    ShippingCounty  TEXT NULL,
+    ShippingCountry TEXT NULL,
     ShippingPostalCode TEXT NULL,
     PhoneNumber     TEXT NULL,
     FaxNumber       TEXT NULL,

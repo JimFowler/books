@@ -15,7 +15,7 @@ PYRCC = pyrcc4 -py3
 # Target lists
 #
 USER_INTERFACES = ui_mainWindow.py ui_select.py\
-		  ui_author.py ui_project.py ui_reports.py
+		  ui_vendor.py ui_project.py ui_tasks.py
 
 RESOURCE_FILES = 
 
@@ -37,8 +37,14 @@ ui_author.py: designer/ui_author.ui
 ui_project.py: designer/ui_project.ui
 	$(PYUIC) -o ui_project.py designer/ui_project.ui
 
+ui_vendor.py: designer/ui_vendor.ui
+	$(PYUIC) -o ui_vendor.py designer/ui_vendor.ui
+
 ui_reports.py: designer/ui_reports.ui
 	$(PYUIC) -o ui_reports.py designer/ui_reports.ui
+
+ui_tasks.py: designer/ui_tasks.ui
+	$(PYUIC) -o ui_tasks.py designer/ui_tasks.ui
 
 
 

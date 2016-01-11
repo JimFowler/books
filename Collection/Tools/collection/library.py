@@ -67,7 +67,42 @@ class collectionDB(database.DataBase):
         return d
 
     def getBooksInProject(self, _projId):
-        books = self.cursor.execute("SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM Authors INNER JOIN (BookAuthor INNER JOIN (Books INNER JOIN BookProject ON BookProject.ProjectId = ?) ON BookProject.BookId = Books.BookId) ON Books.BookId = BookAuthor.BookId WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1 ORDER BY Books.Copyright;", (_projId,))
+        books = self.cursor.execute('''SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId
+        FROM Authors INNER JOIN
+                     (BookAuthor INNER JOIN
+                                 (Books INNER JOIN BookProject
+                                        ON BookProject.ProjectId = ?)
+                                 ON BookProject.BookId = Books.BookId)
+                     ON Books.BookId = BookAuthor.BookId
+        WHERE BookAuthor.AuthorId = Authors.AuthorId
+              AND BookAuthor.Priority = 1
+        ORDER BY Books.Copyright;''', (_projId,))
+
+        return self.cursor.fetchall()
+
+    def getBooksPurchasedFromVendor(self, _vendorId):
+        books = self.cursor.execute('''SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId
+       FROM Authors INNER JOIN
+                    (Books INNER JOIN BookAuthor
+		           ON BookAuthor.BookId = Books.BookId)
+	            ON Authors.AuthorId = BookAuthor.AuthorId
+       WHERE ? = Books.PurchasedFrom 
+       	     AND BookAuthor.AuthorId = Authors.AuthorId
+	     AND BookAuthor.Priority = 1
+       ORDER BY Books.Copyright;''', (_vendorId,))
+
+        return self.cursor.fetchall()
+
+    def getBooksPublishedByVendor(self, _vendorId):
+        books = self.cursor.execute('''SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId
+        FROM Authors INNER JOIN
+                     (Books INNER JOIN BookAuthor
+                            ON BookAuthor.BookId = Books.BookId)
+                     ON Authors.AuthorId = BookAuthor.AuthorId
+        WHERE ? = Books.Publisher
+              AND BookAuthor.AuthorId = Authors.AuthorId
+              AND BookAuthor.Priority = 1
+        ORDER BY Books.Copyright;''', (_vendorId,))
 
         return self.cursor.fetchall()
 

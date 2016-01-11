@@ -23,6 +23,8 @@ import collection.ui_mainWindow as ui_mainWindow
 import collection.selectDialog as selectDialog
 import collection.library as library
 import collection.project as project
+import collection.vendor as vendor
+import collection.tasks as tasks
 
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -48,11 +50,10 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.db = library.collectionDB()
 
         self.project = project.Project(_db=self.db)
+        self.vendor = vendor.Vendor(_db=self.db)
+        self.tasks = tasks.Task(_db=self.db)
 
-        self.vendorDict = {}
         self.authorDict = {}
-        self.todoDict = {}
-
 
         menus.createMenus(self, self.menubar)
 
@@ -61,13 +62,13 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.connect( self.Authors_Button,  SIGNAL('released()'),
                       self.selectAuthor )
         self.connect( self.Vendors_Button,  SIGNAL('released()'),
-                      self.selectVendor )
+                      self.vendor.selectVendor )
         self.connect( self.Projects_Button, SIGNAL('released()'),
                       self.project.selectProject )
         self.connect( self.Wants_Button,    SIGNAL('released()'),
                       self.selectWant )
         self.connect( self.ToDo_Button,     SIGNAL('released()'),
-                      self.selectToDo )
+                      self.tasks.selectTask )
 
         #self.connect( self.Search_Button, SIGNAL('released()'), self.quit )
         #self.connect( self.Other_Button, SIGNAL('released()'), self.quit )

@@ -1,3 +1,23 @@
+2016-01-10  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/tasks.py: Added task viewer.
+
+	* Tools/collection/library.py
+	(collectionDB.getBooksPublishedByVendor): Got query for
+	getBooksPublishedByVendor() and getBooksPurchasedFromVendor()
+	working today.
+
+	* Tools/collection/vendor.py: started working on the
+	vendor/publisher code. Cloned from projects.py
+
+	* Tools/collection/designer/ui_vendor.ui: created dialog
+	window for vendor/publisher views.
+
+2016-01-09  Jim Fowler  <jrf@Biblion>
+
+	* Tools/scripts/CreateTables.sql: Changed Vendor table field from
+	MailingCounty to MailingCountry. Likewise for Shipping address.
+
 2015-12-28  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/library.py: Correction __main__ tests.
