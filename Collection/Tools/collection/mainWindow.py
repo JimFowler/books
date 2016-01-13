@@ -22,6 +22,7 @@ import collection.menus as menus
 import collection.ui_mainWindow as ui_mainWindow
 import collection.selectDialog as selectDialog
 import collection.library as library
+import collection.author as author
 import collection.project as project
 import collection.vendor as vendor
 import collection.tasks as tasks
@@ -49,18 +50,19 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
 
         self.db = library.collectionDB()
 
+        self.author = author.Author(_db=self.db)
         self.project = project.Project(_db=self.db)
         self.vendor = vendor.Vendor(_db=self.db)
         self.tasks = tasks.Task(_db=self.db)
 
-        self.authorDict = {}
+
 
         menus.createMenus(self, self.menubar)
 
         self.connect( self.Books_Button,    SIGNAL('released()'),
                       self.selectBook )
         self.connect( self.Authors_Button,  SIGNAL('released()'),
-                      self.selectAuthor )
+                      self.author.selectAuthor )
         self.connect( self.Vendors_Button,  SIGNAL('released()'),
                       self.vendor.selectVendor )
         self.connect( self.Projects_Button, SIGNAL('released()'),

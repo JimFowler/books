@@ -15,6 +15,7 @@ PYRCC = pyrcc4 -py3
 # Target lists
 #
 USER_INTERFACES = ui_mainWindow.py ui_select.py\
+		  ui_author.py\
 		  ui_vendor.py ui_project.py ui_tasks.py
 
 RESOURCE_FILES = 

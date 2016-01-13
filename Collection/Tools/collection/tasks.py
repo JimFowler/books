@@ -165,11 +165,10 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
             res = self.db.execute(search)
             vendor = res.fetchone()
             self.taskId = _taskId
-            # This ordering may change if database is regenerated. TODO
             self.idLabel.setText(    str(vendor[0]))
-            self.summaryEdit.setText(    vendor[2] )
-            self.descriptionEdit.setText(vendor[3] )
-            self.createdEdit.setText(    vendor[1] )
+            self.summaryEdit.setText(    vendor[1] )
+            self.descriptionEdit.setText(vendor[2] )
+            self.createdEdit.setText(    vendor[3] )
             self.completionEdit.setText( vendor[4] )
             self.isNew = False
             self.clearTaskDirty()

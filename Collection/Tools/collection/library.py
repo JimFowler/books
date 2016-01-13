@@ -30,6 +30,21 @@ class collectionDB(database.DataBase):
         '''Execute arbitrary SQL statement. Returns the cursor '''
         return self.cursor.execute(sqlStmt)
 
+
+    #
+    # Known SQL queries that the librarian can handle for us.
+    #
+    def getBookDict(self):
+        '''Get the lists of all our books. Return a dictionary of
+        Title, FirstAuthorName, Copyright'''
+        d = {}
+        self.cursor.execute('''SELECT * FROM viewAllBooks;''')
+        tlist = self.cursor.fetchall()
+        for t in tlist:
+            name = str(t[1]) + ', ' + str(t[2]) + ', ' + str(t[3])
+            d[name] = t[0]
+        return d
+
     def getAuthorDict(self):
         '''Get the list of projects from the database. Return a dictionary
         of {'LastName, FirstName': AuthorId.}'''
@@ -106,7 +121,15 @@ class collectionDB(database.DataBase):
 
         return self.cursor.fetchall()
 
-    
+    def getBooksAssociatedByAuthor(self, _authorId):
+        books = self.cursor.execute('''SELECT Books.Title, Books.Copyright, BookAuthor.Priority, Books.BookId
+       FROM Books INNER JOIN BookAuthor ON Books.BookId = BookAuthor.BookId
+       WHERE BookAuthor.AuthorId = ?
+       ORDER BY Books.CopyRight;''', (_authorId,))
+
+        return self.cursor.fetchall()
+
+
 #
 # Self Test
 #

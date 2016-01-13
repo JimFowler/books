@@ -1,5 +1,7 @@
 2016-01-13  Jim Fowler  <jrf@Biblion>
 
+	* Tools/scripts/CreateViews.sql: added viewAllBooks
+
 	* Tools/collection/author.py (AuthorView): Write author class
 	and tested.
 

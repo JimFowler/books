@@ -184,7 +184,6 @@ class VendorView( QDialog, ui_vendor.Ui_Dialog):
         self.faxEdit.clear()
         self.emailEdit.clear()
         self.urlEdit.clear()
-        # clear other fields TODO
         self.bookList.clear()
         self.publishedList.clear()
 
@@ -210,7 +209,6 @@ class VendorView( QDialog, ui_vendor.Ui_Dialog):
             self.new()
         else:
             # Look up an old vendor/publisher
-            # get other info TODO
             search =  'SELECT * from Vendors WHERE VendorId = %d' % (_vendorId)
 
             res = self.db.execute(search)
@@ -233,7 +231,6 @@ class VendorView( QDialog, ui_vendor.Ui_Dialog):
             self.emailEdit.setText(  vendor[14] )
             self.urlEdit.setText(    vendor[15] )
             self.descriptionEdit.setText( vendor[16] )
-            # grab other info TODO
             self.isNew = False
             self.getPublishedList(_vendorId)
             self.getPurchasedList(_vendorId)
