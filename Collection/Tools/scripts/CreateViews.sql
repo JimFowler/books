@@ -43,18 +43,16 @@ CREATE VIEW viewAllBooks AS
        WHERE BookAuthor.Priority = 1
        ORDER BY Authors.LastName ASC, Books.Copyright ASC;
    
---
--- Assumes we have Wants and WantAuthor tables
---
---CREATE VIEW viewAllWants AS
---       SELECT Wants.Title, Authors.LastName, Wants.Copyright, Wants.WantId
---       FROM Authors INNER JOIN
---                    (WantAuthor INNER JOIN Wants
---                                ON WantAuthor.WantId = Wants.WantId)
---                    ON BookAuthor.AuthorId = Authors.AuthorId
---       WHERE WantAuthor.Priority = 1
---       ORDER BY Authors.LastName ASC, Wants.Copyright ASC;
---
+
+CREATE VIEW viewAllWants AS
+       SELECT Wants.Title, Authors.LastName, Wants.Copyright, Wants.WantId
+       FROM Authors INNER JOIN
+                    (WantAuthor INNER JOIN Wants
+                                ON WantAuthor.WantId = Wants.WantId)
+                    ON WantAuthor.AuthorId = Authors.AuthorId
+       WHERE WantAuthor.Priority = 1
+       ORDER BY Authors.LastName ASC, Wants.Copyright ASC;
+
 
 --
 -- end of CreateViews.sql

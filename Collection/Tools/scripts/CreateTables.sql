@@ -105,7 +105,7 @@ CREATE TABLE Books
 -- These books are desired for my collection and this
 -- table contains the basic information about them.
 -- 
-CREATE TABLE Wanted
+CREATE TABLE Wants
     --
     -- Unique key.
     --
