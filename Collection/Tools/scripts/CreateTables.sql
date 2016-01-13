@@ -265,6 +265,37 @@ CREATE TABLE BookAuthor
 ;
 
 --
+-- Create the many-to-many link between Wants and Authors.
+--
+CREATE TABLE WantAuthor
+   (WantAuthorId  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    --
+    -- The author id for the author being referenced.    
+    --
+    AuthorId      INTEGER UNSIGNED NOT NULL REFERENCES Authors(AuthorId),
+
+    --
+    -- The want id for the want (book) being referenced.
+    --
+    WantId        INTEGER UNSIGNED NOT NULL REFERENCES Wants(WantId),
+
+    --
+    -- What author is this, primary, secondary, etc.
+    --
+    Priority      INTEGER UNSIGNED NOT NULL,
+
+    --
+    -- How the authors name is written on the title page. This may be
+    -- different from the authors full name give in the author table
+    -- and different for different books.
+    --
+    AsWritten     TEXT NOT NULL 
+   )
+
+;
+
+--
 -- Create the many-to-many link linking books and projects
 --
 CREATE TABLE BookProject

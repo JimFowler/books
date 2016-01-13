@@ -34,31 +34,28 @@ CREATE VIEW viewAllToDoTasks AS
        FROM ToDo
        ORDER BY DateOfEntry;
 
+CREATE VIEW viewAllBooks AS
+       SELECT Books.Title, Authors.LastName, Books.Copyright, Books.BookId
+       FROM Authors INNER JOIN
+                    (BookAuthor INNER JOIN Books 
+                                ON BookAuthor.BookId = Books.BookId)
+                    ON BookAuthor.AuthorId = Authors.AuthorId
+       WHERE BookAuthor.Priority = 1
+       ORDER BY Authors.LastName ASC, Books.Copyright ASC;
+   
 --
--- These two require joins
+-- Assumes we have Wants and WantAuthor tables
 --
-
---CREATE VIEW viewAllBooks AS
---       SELECT Books.Title, Authors.LastName, Books.Copyright, BookId
---	 FROM some inner join
---       ORDER BY Authors.LastName, Books.Copyright;
--- 
 --CREATE VIEW viewAllWants AS
---       SELECT Wanted.Title, Authors.LastName, Wanted.Copyright, WantedId
---       FROM some inner join
---       ORDER BY Authors.LastName, Books.Copyright;
+--       SELECT Wants.Title, Authors.LastName, Wants.Copyright, Wants.WantId
+--       FROM Authors INNER JOIN
+--                    (WantAuthor INNER JOIN Wants
+--                                ON WantAuthor.WantId = Wants.WantId)
+--                    ON BookAuthor.AuthorId = Authors.AuthorId
+--       WHERE WantAuthor.Priority = 1
+--       ORDER BY Authors.LastName ASC, Wants.Copyright ASC;
 --
 
--- CREATE VIEW viewBooksInProject AS
---      SELECT Books.Title, Books.Copyright, Authors.LastName, BookAuthor.AsWritten, Books.BookId FROM
---      	     Authors INNER JOIN
---	     	     (BookAuthor INNER JOIN
---		     		 (Books INNER JOIN BookProject
---			         ON BookProject.ProjectId = %d)
---		     ON BookProject.BookId = Books.BookId)
---             ON Books.BookId = BookAuthor.BookId
---      WHERE BookAuthor.AuthorId = Authors.AuthorId and BookAuthor.Priority = 1
---      ORDER BY Books.Copyright;
 --
 -- end of CreateViews.sql
 --

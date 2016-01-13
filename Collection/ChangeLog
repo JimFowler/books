@@ -1,3 +1,14 @@
+2016-01-13  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/author.py (AuthorView): Write author class
+	and tested.
+
+	* Tools/collection/library.py
+	(collectionDB.getBooksAssociatedByAuthor): Got query for
+	getBooksAssociatedByAuthor() working.
+
+	* Data/Authors.txt: removed timestamp 0:00:00 from all dates.
+
 2016-01-10  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/tasks.py: Added task viewer.

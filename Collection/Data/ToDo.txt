@@ -1,5 +1,5 @@
-1|2008-11-27 0:00:00|Pretty print options|Decide on pretty print options, what is display info and what is info information.|
-2|2008-11-27 0:00:00|Title pretty print|Decide on Title pretty print options. Should we have just title; or Title and Subtitle,|
-3|2008-11-27 0:00:00|Decide on format for BookAuthor!AsWritten|Should it be last name and first name or should it be literally as indicated on the title page of the book|
-4|2008-11-27 0:00:00|Fix ToDo form|Fix ToDo form so we can see all the tasks|2008-11-27 0:00:00
-5|2008-11-27 0:00:00|Print Short Book Report|Go through shelves and make sure all books are in database.|
+1|Pretty print options|Decide on pretty print options, what is display info and what is info information.|2008-11-27|
+2|Title pretty print|Decide on Title pretty print options. Should we have just title; or Title and Subtitle,|2008-11-27|
+3|Decide on format for BookAuthor!AsWritten|Should it be last name and first name or should it be literally as indicated on the title page of the book|2008-11-27|
+4|Fix ToDo form|Fix ToDo form so we can see all the tasks|2008-11-27|2008-11-27
+5|Print Short Book Report|Go through shelves and make sure all books are in database.|2008-11-27|

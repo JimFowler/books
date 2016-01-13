@@ -23,7 +23,7 @@
 46|Elmegreen|G.|Bruce|||
 47|Genzel||R.|||
 48|Buttman||Gunther|||
-49|Chandrasekhar||S.||1996-01-01 0:00:00|
+49|Chandrasekhar||S.||1996-01-01|
 50|Christianson|E.|Gale|||
 51|Clerke|M.|Agnus|||
 52|Cox|P.|John|||
@@ -161,17 +161,17 @@
 191|Shapley||Harlow|||
 192|Sheehan||William|||
 193|Shklovskii|S.|I.|||
-194|Sagan||Carl||1997-01-01 0:00:00|
+194|Sagan||Carl||1997-01-01|
 195|Smartt|Marshall|William|||
 196|Smith|W.|Robert|||
-197|Spitzer|J.|Lyman||1997-01-01 0:00:00|
+197|Spitzer|J.|Lyman||1997-01-01|
 198|Stephenson||Bruce|||
 199|Sternberg||Shlomo|||
 200|Swerdlow||Noel|||
 201|Tassoul||Jean-Louis|||
 202|Terrell||Dirk|||
 203|Mukherjee|D.|J.|||
-204|Tombaugh|W.|Clyde||1997-01-01 0:00:00|
+204|Tombaugh|W.|Clyde||1997-01-01|
 205|Moore||Patrick|||
 206|Tucker|H.|Wallace|||
 207|Tuckerman||Alfred|||
@@ -217,7 +217,7 @@
 248|Doyle|Reeve|Laurance|||
 249|Wright|L.|Jerome|||
 250|Zubrin|M.|Robert|||
-251|Wagner|S,|Richard|1953-01-01 0:00:00||
+251|Wagner|S,|Richard|1953-01-01||
 252|Stern||Alan|||
 253|Mitton||Jacqueline|||
 254|Lyman||Theodore|||
@@ -232,11 +232,11 @@
 263|Aitken|Grant|Robert|||
 264|Edmonson|K.|Frank|||
 265||||||Empty Record
-266|Hartree|R.|D.|1897-01-01 0:00:00|1958-01-01 0:00:00|F.R.S., Plummer Professor of mathematical physics at Cambridge University
-267|Sommerfeld||Arnold|1868-01-01 0:00:00|1951-01-01 0:00:00|
+266|Hartree|R.|D.|1897-01-01|1958-01-01|F.R.S., Plummer Professor of mathematical physics at Cambridge University
+267|Sommerfeld||Arnold|1868-01-01|1951-01-01|
 268|Martin|R.|A.|||
 269|Schwarzshild||Martin|||
-270|Lieber|Rosanoff|Lillian|1886-01-01 0:00:00|1986-01-01 0:00:00|
+270|Lieber|Rosanoff|Lillian|1886-01-01|1986-01-01|
 271|Lieber|Gray|Hugh|||Professor and Head of the Department of Fine Arts, Long Island University
 272|Manguel||Alberto|||
 273|Gordy||Walter|||Professor of Physics, Duke University
@@ -251,24 +251,24 @@
 282|Shodel||Rainer|||University of Cologne, Germany
 283|Straubmeir||Christian|||University of Cologne, Germany
 284|Bertin||Giuseppe|||Professor of Physics, Scruola Normale Superiore, Pisa, Italy
-285|Lin|Ch'iao|Chia|1916-01-01 0:00:00||Professor Emeritus of Physics, MIT
+285|Lin|Ch'iao|Chia|1916-01-01||Professor Emeritus of Physics, MIT
 286|van den Bergh||Sidney|||Dominion Astrophysical Observatory
 287|Brown|B|Earle|||
 288|Warwick||Andrew|||
 289|Collins||Harry|||
 290|Cronin|W|James|||Professor of Physics, University of Chicago Nobel Prize Physics
 291|Stanley||Mattew|||Professor of History, Michigan State University
-292|Srinivasan||Ganasen|1942-01-01 0:00:00||
+292|Srinivasan||Ganasen|1942-01-01||
 293|Berry|Elton|Robert|||
 294|Westfall|S|Richard|||Professor of History, Indiana University
-295|Cohen|Bernard|I|1914-01-01 0:00:00||
+295|Cohen|Bernard|I|1914-01-01||
 296|Sebring|A|Thomas|||
-297|Dirac|Adrien Maurice|Paul|1902-01-01 0:00:00||
+297|Dirac|Adrien Maurice|Paul|1902-01-01||
 298|Bird||Kai|||
 299|Sherwin|J|Martin|||Professor of English and History Tufts University
 300|Alder||Ken|||Professor of History Northwestern University
 301|Standage||Tom|||
-302|McInnes|R|Colin|1968-01-01 0:00:00||
+302|McInnes|R|Colin|1968-01-01||
 303|Ramsey||JoAnne|||Wife of Harry Ramsey
 304|DeVorkin|H|David|||
 305|Bradbury||Ray|||
@@ -279,9 +279,9 @@
 310|Cowan|D|Robert|||
 311|Turner|L'e|Gerard|||
 312|Gardner||Martin|||
-313|Field||George|1929-01-01 0:00:00||Professor of Applied Astronomy, Harvard University
+313|Field||George|1929-01-01||Professor of Applied Astronomy, Harvard University
 314|Michel||Henri|||Academie Internationale d'Histoire des Sciendes
-315|Paschen||Friedrich|1865-01-01 0:00:00|1947-01-01 0:00:00|\"Probably the greatest experimental spectroscopist of his time\", DSB, X pp 345-349
+315|Paschen||Friedrich|1865-01-01|1947-01-01|\"Probably the greatest experimental spectroscopist of his time\", DSB, X pp 345-349
 316|Gotze||R.|||
 317|Greenspan|Thordike|Nancy|||
 318|Lewis|Judd|S.|||
@@ -292,7 +292,7 @@
 323|Lockyer|L.|Winifred|||
 324|Draper|William|John|||
 325|Buchwald|Z.|Jed|||
-326|Secchi|A|P|1818-01-01 0:00:00|1878-01-01 0:00:00|
+326|Secchi|A|P|1818-01-01|1878-01-01|
 327|Faraday||Michael|||
 328|Mutch|A|Thomas|||
 329|Arvidson|E|Raymond|||
@@ -305,11 +305,11 @@
 336|Sobel||Dava|||
 337|Shostak||Seth|||
 338|Billingham||John|||
-339|Smyth|Piazzi|Charles|1819-01-01 0:00:00|1900-01-01 0:00:00|Astronomer Royal for Scotland 1845-1888
+339|Smyth|Piazzi|Charles|1819-01-01|1900-01-01|Astronomer Royal for Scotland 1845-1888
 340|Miller|I|Arthur|||Professor of the History and Philosophy of Science, Unversity College London
 341|Glass|S|I|||
 342|Goodchild||Peter|||
-343|Seabrook||William|1886-01-01 0:00:00||
+343|Seabrook||William|1886-01-01||
 344|Warnow|N|Joan|||
 345|Weiner||Charles|||
 346|Schmidt||Stanley|||
@@ -327,9 +327,9 @@
 358|Fison|H|Alfred|||
 359|Dauvillier||A.|||Professor, College de France, Pic-du-Midi Observatory
 360|Kemp|A.|D.|||Department of Librarianship, Newcastle-upon-Tyne Polytechnic previously Librarian, Royal Observatory, Edinburgh
-361|Reisch|A|George|1962-01-01 0:00:00||
+361|Reisch|A|George|1962-01-01||
 362|Luther||Paul|||
-363|Kohlstedt|Gregory|Sally|1943-01-01 0:00:00||
+363|Kohlstedt|Gregory|Sally|1943-01-01||
 364|Zuckerman||Harriet|||Associate Professor of Sociology at Columbia University.
 365|Montgomery|L|Scott|||
 366|Bartusiak||Marcia|||Teaches in the graduate program in science writing at MIT. Two time winner of the AIP Science Writing Award.
@@ -337,7 +337,7 @@
 368|Opik|J|Ernst|||Armagh Observatory, Armagh, Nothern Ireland.  The last name should have an umlaut over the 'O'
 369|Zimmerman||Robert|||
 370|Barrow|D|John|||Professor of Mathematical Sciences, Cambridge University
-371|Mitton||Simon|1946-01-01 0:00:00||
+371|Mitton||Simon|1946-01-01||
 372|Kronick|A|David|||
 373|Duley|W|W|||
 374|Williams|A|D|||
@@ -363,7 +363,7 @@
 396|Bigg||Charlotte|||
 397|Sibum|Otto|H.|||
 398|Dunbar||David|||
-400|Cameron|G. W.|Alastair|1925-01-01 0:00:00||Born in Winnipeg, Manitoba. Obtained B.Sc.  From the University of Manitoba in 1947 and Ph.D. from University of Saskatchewan in 1952
+400|Cameron|G. W.|Alastair|1925-01-01||Born in Winnipeg, Manitoba. Obtained B.Sc.  From the University of Manitoba in 1947 and Ph.D. from University of Saskatchewan in 1952
 401|Chauvin||Michael|||
 402|Barnes|G.|Thomas|||Faculty University of Texas at Austin
 403|Tassoul||Monique|||
@@ -376,8 +376,8 @@
 411|Wood|Bradshaw|Frank|||
 412|Clark|H.|David|||
 413|Smoot||George|||
-414|Chance||Jane|1945-01-01 0:00:00||
-415|Wells|O'Neill|Raymond|1940-01-01 0:00:00||Should have Jr. on the name
+414|Chance||Jane|1945-01-01||
+415|Wells|O'Neill|Raymond|1940-01-01||Should have Jr. on the name
 416|Lorenz||Ralph|||
 418|McKinley|W. R.|D|||
 419|Chabas||Jose|||
@@ -436,11 +436,11 @@
 472|Filchner||Wilhelm|||
 473|Przybyllok||Erich|||
 474|Hagen||Toni|||
-475|Struve||Otto|1897-08-08 0:00:00|1963-04-06 0:00:00|Director of Yerkes and McDonald Observatories
+475|Struve||Otto|1897-08-08|1963-04-06|Director of Yerkes and McDonald Observatories
 476|Lambert|L|David|||
 477|Clarke||David|||
 478|Wilson||Margaret|||
-479|Blackett|Maynard Stuart|Patrick|1897-11-18 0:00:00|1974-07-13 0:00:00|
+479|Blackett|Maynard Stuart|Patrick|1897-11-18|1974-07-13|
 480|Morse|S|Edward|||
 481|Cohen|R.|E|||
 482|Crowe|M.|Kenneth|||
@@ -469,7 +469,7 @@
 505|Pawsey|L|J|||
 506|Bracewell|N|R|||
 507|Roberts||Sibhan|||
-508|Gray||Jeremy|1947-01-01 0:00:00||
+508|Gray||Jeremy|1947-01-01||
 510|McKready||Kevin|||Pen name for Edgar Gardner Murphy
 511|Burdick|Stanley|Bruce|||
 512|Hoyle||Fred|||
