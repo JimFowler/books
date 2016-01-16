@@ -57,12 +57,12 @@ are related by AJB volume, however, a BookFile is primarily just a
 list of entries. The entries may or may not have a relationship with
 each other.
 
-The entries themselves have a very specific format but are basicly a
+The entries themselves have a very specific format but are basically a
 single line with fields separated by commas. This format was chosen
-to make parsing the entry easy with tools that I was familar with at
+to make parsing the entry easy with tools that I was familiar with at
 the time. The fields were chosen to match the usual information within
 the AJB.  However, this format rather quickly needed to be extended as
-more varient entries were found.
+more variant entries were found.
 
 The entry format fields are
 
@@ -110,13 +110,13 @@ Comment Definitions
 
 By late 2011 I had created six book files by hand using Microsoft Word
 and Excel. As I progressed through the files I found various entries
-that were not in a standard format. However, the addtional
+that were not in a standard format. However, the additional
 information was important to collect.  Rather than add additional
 fields this information was put into the comments field with
 particular keywords designating what the information pertained to.
 For example, the first time I found both authors and editors listed
 for a work I added a comment string 'edited by <name_list>'. The same
-thing was done when I found compilers, contributers and translators.
+thing was done when I found compilers, contributors and translators.
 
 In all, a total of eleven different comments strings have been defined which
 are listed below
@@ -138,7 +138,7 @@ is of the form "[FirstInitial] [MiddleInitials] last"; note that the
 last name is required but the first initial and the middle ones are optional.
 There may be multiple middle initials.
 
-The grammer, in Extended Bachus-Naur format, is
+The grammar, in Extended Bachus-Naur format, is
 
 =============  == ==================================================
 First          =  Second
@@ -174,14 +174,14 @@ Publisher      =  uWords, ':', uWords;
 Initial        =  ? <RE> ?, '.';
 =============  == ==================================================
 
-The python package ``modgrammer`` is used to parse the comments using
-the defined grammer. This version of **ajbbooks** uses modgrammer-0.10.
+The python package ``modgrammar`` is used to parse the comments using
+the defined grammar. This version of **ajbbooks** uses modgrammar-0.10.
 The code may be found at `pypi.python/org
 <https://pypi.python.org/pypi/modgrammar/0.10>`_ and the documentation
 can be found at `pythonhosted.org
 <http://packages.python.org/modgrammar>`_
 
-Internal Bookfile Object
+Internal BookFile Object
 ========================
 
 The internal class BookFile is defined in bookfile.py. 
@@ -205,7 +205,7 @@ The primary internal variables are ``_header`` and ``_entryList``,
 which contain the header of the external disk file and the list of
 entries respectively.  Entries are of the Class AJBentry, defined in
 AJBentry.py.  Secondary variables are ``_volumeNumber``, the value to
-autofill the volume number in a new entry; ``_fileName``, the pathname
+outfall the volume number in a new entry; ``_fileName``, the pathname
 for the disk file as passed to BookFile via the command line or menu item;
 ``_dirName``, the directory portion of _filename; ``_baseName``, the
 base name of ``_fileName``; ``_curEntryNumber``, the number of the
@@ -250,7 +250,7 @@ When ever it needs to read/write an entry to/from the ``_entryList``,
 it calls on the entry itself to handle this action.  Entries are of type
 ``Class AJBentry`` defined in AJBentry.py.
 
-AJB Entrie
+AJB Entries
 -----------
 
 The ``Class AJBentry`` is a subclass of ``Entry`` which is defined in
@@ -330,17 +330,17 @@ Comments holds the original comment field.
 OrigStr hold the original full text string.
 
 TranslatedFrom is a simple string entry that indicates the language
-of the orginal volume that this work is a translation of.
+of the original volume that this work is a translation of.
 
 Language is a simple string entry. If an entry is written in more
 than one language, the language names are separated by 'and'.  There
 are occasional books published in Russian and English for example.
 
 Reprint contains an *AJB* number. This entry is a reprint
-of the entry at that *AJB( number.
+of the entry at that *AJB* number.
 
 Reference contains the *AJB* number of an entry, not necessarily in
-this file, of which, this information should be appended or ammended.
+this file, of which, this information should be appended or amended.
 
 AJBentry Functions
 ------------------
@@ -410,7 +410,7 @@ Griswold. I found it at his blog
 that URL no longer appears to be valid. My symbol table code is
 located in bookentry/symbol.py
 
-Everytime the symbol table is opened it reads the file
+Every time the symbol table is opened it reads the file
 symbols.txt. The location of the symbols.txt file is found in
 mainWindow.py by looking at the file name of the imported file
 symbol.py. The string ``symbols.txt`` is appended to the directory
@@ -441,18 +441,18 @@ separated by a comma.  The format of a file look like::
   Ë, Capital letter E with diaeresis
   ë, Small letter e with diaeresis
   È, Capital letter E with grave
-  É, Captial letter E with acute
+  É, Capital letter E with acute
   è, Small letter e with grave
   é, Small letter e with acute
   ě, Small letter e with caron
   ę, Small letter e with cedilla
-  Ï, Capital letter I with diaresis
-  ï, Small letter i with diaresis
+  Ï, Capital letter I with diaeresis
+  ï, Small letter i with diaeresis
   ì, Small letter i with grave
   í, Small letter i with acute
   î, Small letter i with caron
 
-  Ň, Captial letter N with caron
+  Ň, Capital letter N with caron
   ň, Small letter n with caron
   Ö, Capital letter O with diaeresis
   ö, Small letter o with diaeresis
@@ -467,13 +467,14 @@ separated by a comma.  The format of a file look like::
 
 Comment lines begin with '#' and are ignored by the software.  Each
 character is then used as the text image for a Qt button object with
-pthe tip added as the tooltip.  A blank line in the symbols.txt
-indicated the start of a new line in the window display. The action
-of the button when it is clicked is to send the signal ``sigClicked(QString)``
-with the character as the parameter in the signal.
+the tip added as the tool tip.  A blank line in the symbols.txt
+indicated the start of a new line in the window display. The action of
+the button when it is clicked is to send the signal
+``sigClicked(QString)`` with the character as the parameter in the
+signal.
 
-This signal in turn is caught in the BookEntry class (mainWindow.py) and
-is connected to the insertChar() function.  This insertion function changes
-on the fly whenever the focus changes in the BookEntry window between the various
-LineEdit and TextEdit items.
+This signal in turn is caught in the BookEntry class (mainWindow.py)
+and is connected to the insertChar() function.  This insertion
+function changes on the fly whenever the focus changes in the
+BookEntry window between the various LineEdit and TextEdit items.
 

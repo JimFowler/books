@@ -35,7 +35,7 @@ ajbbooks [-h] [-i filename] [-s filename] [-v integer]
 Menus
 =====
 
-Many of the menus are standard and should be familar to most users.  
+Many of the menus are standard and should be familiar to most users.  
 
 
 File
@@ -103,7 +103,7 @@ of the text or line items may be brought up with the right mouse
 button.
 
 **Insert Symbol... <Ctrl-I>**: Brings up a window with a list of
-commonly used Unicode charactors.  By clicking on a charactor it will
+commonly used Unicode characters.  By clicking on a character it will
 be inserted into the currently active text or line entry box at the
 current cursor location.  No action occurs if the focus is currently
 held by something other than a text or line entry item.
@@ -193,7 +193,7 @@ Header Edit
 The file header contains information about the entries in the file and
 may be edited via the Header Edit window.  This window is illustrated
 below and may be shown by selecting the **Edit Header** in the **Edit**
-manu or by typing the keyboard shortcut **Ctrl-H**.
+menu or by typing the keyboard shortcut **Ctrl-H**.
 
 .. figure:: images/headerwindow.png
 

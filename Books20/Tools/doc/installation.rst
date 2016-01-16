@@ -24,7 +24,7 @@ Or you can install in a different system directory with
 
 ``python3 setup.py install --prefix=<dirname>``
 
-You may need superuser priviledges to install in system directories.
+You may need superuser privileges to install in system directories.
 
 If you install in a non-standard directory, then you will need to
 set the environment variables **PYTHONPATH**. I put the following in
