@@ -53,6 +53,9 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.setWinTitle('document1')
       self.insertFunc = None
       self.setSymbolTableName( __DefaultSymbolTableName__)
+      self.tmpEntryDirty = False
+      self.tmpTitleDirty = False
+      self.searchFlag = False
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -63,8 +66,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
                                'Reprint', 'Others', 'OrigStr', 'Comments', ]
 
       # lists of which display fields may or may not have symbol entry allowed
-      self.noEntryList = [ 'indexEntry', 'startDateEdit', 'endDateEdit',
-                           'ISSN_Edit', 'ADS_Edit']
+      self.noEntryList = [ 'indexEntry', 'startDateEdit', 'endDateEdit']
 
       self.setTextEntryList = ['titleEdit', 'subTitleEdit', 'subsubTitleEdit',
                                'publisherEdit', 'abbreviationsEdit',
@@ -87,13 +89,14 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
 
       self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setTitleDirty)
       self.connect(self.publisherEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.abbreviationsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.startDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.endDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
       self.connect(self.LinkPreviousEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.LinkNextEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.designatorEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
+      self.connect(self.designatorEdit, SIGNAL('textChanged()'), self.setEntryDirty)
       self.connect(self.CommentsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
 
       self.openNewFile()
@@ -150,7 +153,9 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.maxEntryNumber:
          self.statusbar.clearMessage()
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
+         self.clearSearchFlag()
          self.showEntry(1)
+         self.clearTitleDirty()
          self.clearEntryDirty()
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
@@ -204,7 +209,10 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       if self.curEntryNumber > self.maxEntryNumber:
          self.setMaxEntryNumber(self.curEntryNumber)
+
       self.deleteButton.setEnabled(True)
+      self.clearSearchFlag()
+      self.clearTitleDirty()
       self.clearEntryDirty()
 
    def newEntry(self):
@@ -212,10 +220,14 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.askSaveEntry() == QMessageBox.Cancel:
          return
 
+      self.clearSearchFlag()
       self.tmpEntry = journalEntry.journalEntry()
       self.curEntryNumber = self.maxEntryNumber + 1
       self.EntryToDisplay(self.tmpEntry)
       self.indexEntry.setText(str(self.curEntryNumber))
+      self.titleEdit.setFocus()
+      self.clearTitleDirty()
+      self.setSearchFlag()
       self.clearEntryDirty()
 
    def askInsertEntry(self):
@@ -313,18 +325,52 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.render(pt)
       del pt
 
+   def search(self):
+      '''Search the existing Titles, subTitles, subsubTitles, and
+      abbreviations for any entries that match or partially match the
+      string in titleEdit. Pop a list window. If the users double
+      clicks and entry, then return the index of the entry selected
+      from the list and clear the searchflag.  Clear the searchFlag if
+      the users selects stopSearch.'''
+      print('searching', self.searchFlag, self.tmpTitleDirty)
+      self.clearTitleDirty()
+
+
 
    #
    # Set/Clear flags for Entry
    #
+   def setTitleDirty(self):
+      """Set the tmpTitleDirty flag to True and run a search
+      if the searchFlag is True."""
+      self.tmpTitleDirty = True
+      if self.searchFlag:
+         self.search()
+
+   def clearTitleDirty(self):
+      """Set the tmpTitleDirty flag to False and disable searches."""
+      self.tmpTitleDirty = False
+
+
+   def setSearchFlag(self):
+      """Set the  searchflag to True to enable searcehs"""
+      self.searchFlag = True
+
+   def clearSearchFlag(self):
+      """Set the search flag to False and disable searches."""
+      self.searchFlag = False
+
+
    def setEntryDirty(self):
-      """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
+      """Set the tmpEntryDirty flag to True and enable the Save Entry
+      button."""
       self.tmpEntryDirty = True
       self.saveButton.setEnabled(True)
       # set menu item enable to True as well
 
    def clearEntryDirty(self):
-      """Set the tmpEntryDirty flag to False and disable the Save Entry button."""
+      """Set the tmpEntryDirty flag to False and disable the Save
+      Entry button."""
       self.tmpEntryDirty = False
       self.saveButton.setEnabled(False)
       # set menu item enable False as well.
@@ -416,7 +462,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       
    def helpAbout(self):
       hstr = self.helpString()
-      QMessageBox.about(self, 'About BookEntry', hstr )
+      QMessageBox.about(self, 'About JournalEntry', hstr )
 
 
    #
@@ -585,7 +631,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
             astr += k
             astr += ' : '
             astr += entry['Designators'][k]
-         self.designatorEdit.setText(astr)
+      self.designatorEdit.setText(astr)
 
 
       astr = ''
@@ -624,10 +670,16 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          for line in alist:
             d = {}
             flds = line.split(':')
-            d['Place'] = flds[0].strip()
-            d['Name'] = flds[1].strip()
-            d['startDate'] = flds[2].strip()
-            d['endDate'] = flds[3].strip()
+            # Check len(flds) here, pop dialog if not 4
+            if 0 < len(flds):
+               d['Place'] = flds[0].strip()
+            if 1 < len(flds):
+               d['Name'] = flds[1].strip()
+            if 2 < len(flds):
+               d['startDate'] = flds[2].strip()
+            if 3 < len(flds):
+               d['endDate'] = flds[3].strip()
+
             entry['Publishers'].append(d)
 
 

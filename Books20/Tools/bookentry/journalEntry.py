@@ -108,9 +108,10 @@ class journalEntry(entry.Entry):
             for publ in self['Publishers']:
                 ep = etree.SubElement(el, 'Publisher')
 
-                epp = etree.Element('Name')
-                epp.text = publ['Name']
-                ep.append(epp)
+                if publ.__contains__('Name') and publ['Name']:
+                    epp = etree.Element('Name')
+                    epp.text = publ['Name']
+                    ep.append(epp)
 
                 if publ.__contains__('Place') and publ['Place']:
                     epp = etree.Element('Place')
@@ -145,16 +146,17 @@ class journalEntry(entry.Entry):
             el.text = self['endDate']
 
         # Links
-        el = etree.SubElement(entryXML, 'Links')
-        if self.notEmpty('linkprevious'):
-            for link in self['linkprevious']:
-                ep = etree.SubElement(el, 'linkPrevious')
-                ep.text = link
+        if self.notEmpty('linkprevious') or self.notEmpty('linknext'):
+            el = etree.SubElement(entryXML, 'Links')
+            if self.notEmpty('linkprevious'):
+                for link in self['linkprevious']:
+                    ep = etree.SubElement(el, 'linkPrevious')
+                    ep.text = link
 
-        if self.notEmpty('linknext'):
-            for link in self['linknext']:
-                ep = etree.SubElement(el, 'linkNext')
-                ep.text = link
+            if self.notEmpty('linknext'):
+                for link in self['linknext']:
+                    ep = etree.SubElement(el, 'linkNext')
+                    ep.text = link
 
 
         # Designators is a dictionary
@@ -267,8 +269,8 @@ if __name__ == '__main__':
 
     allFields = journalEntry()
     allFields['Title'] = 'First Test Journal'
-    allFields['subTitle'] = 'A journal of First Thing'
-    allFields['subsubTitle'] = 'being a pot full of honey'
+    allFields['subTitle'] = 'A journal of First Things'
+    allFields['subsubTitle'] = 'and a pot full of honey'
     publ1 = { 'Name' : 'Publisher_1',
               'Place' : 'Place_1'}
     publ2 = { 'Name' : 'Publisher_2',
@@ -281,9 +283,10 @@ if __name__ == '__main__':
     allFields['endDate'] = '2010-01-01'
     allFields['linkprevious'] = ['The Sky', 'The Telescope']
     allFields['linknext'] = ['Sky and Telescope']
-    allFields['ISSN'] = '9-01234-567-890-12'
-    allFields['ADSdesignator'] = 'U...ApJ..'
-    allFields['Comments'] = '''This is a comment.  We need to change this to be mulitple comments. We also need to change ADSdesignator and ISSN to be subElements of a Designators element.'''
+    allFields['Designators'] = {'ISSN' :'9-01234-567-890-12',
+                                'ADSdesignator' : 'U...ApJ..'}
+    allFields['Comments'] = ['This is a comment.',
+                            'This is a second comment']
 
     #
     # test XML routines

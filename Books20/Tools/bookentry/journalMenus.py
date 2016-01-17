@@ -108,6 +108,6 @@ def createMenus( self, menuBar):
 
         # set up the Help menus
         helpMenu = menuBar.addMenu('&Help')
-        aboutAction = createAction(self, '&About Book Entry...',
+        aboutAction = createAction(self, '&About Journal Entry...',
                                    self.helpAbout )
         helpMenu.addAction(aboutAction)

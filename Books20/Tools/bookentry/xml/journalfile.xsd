@@ -95,6 +95,8 @@
 	    <xs:element name="ADS_Bibcode" type="xs:string" minOccurs="0" />
 	    <!-- The International Standard Serial Number if the journal has one -->
 	    <xs:element name="ISSN" type="xs:string" minOccurs="0"/>
+	    <!-- The Online Computer Library Center -->
+	    <xs:element name="OCLC" type="xs:string" minOccurs="0"/>
         </xs:all>
       </xs:complexType>
     </xs:element>
@@ -122,8 +124,7 @@
 <!-- Name should be of type CorporateEntity. Someday... -->
 <xs:complexType name="publisher">
   <xs:all>
-    <!-- Must have at least a Name -->
-    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="Name" type="xs:string" minOccurs="0"/>
     <xs:element name="Place" type="xs:string" minOccurs="0"/>
     <xs:element name="startDate" type="xs:string" minOccurs="0"/>
     <xs:element name="endDate" type="xs:string" minOccurs="0"/>
