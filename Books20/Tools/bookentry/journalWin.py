@@ -23,10 +23,10 @@ import bookentry.journalMenus as menus
 import bookentry.journalEntry as journalEntry
 import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
+import bookentry.search as search
 
 # Trouble shooting assistance
-from pprint import *
-pp = PrettyPrinter()
+from pprint import pprint
 
 
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -56,6 +56,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.tmpEntryDirty = False
       self.tmpTitleDirty = False
       self.searchFlag = False
+      self.sdict = search.SearchDict()
 
       # Fields within an Entry that we know about already
       self.knownEntryFields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -129,6 +130,25 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.close()
 
    #
+   # Deal with the Search Dictionary
+   #
+   def buildSearchDict(self):
+      '''Add all the titles and abbreviations to the search
+      dictionary'''
+      self.sdict.clear()
+      index = 0
+      for l in self.jf._entryList:
+        # print(index, l['Title'])
+         self.sdict.addSubStrings(l['Title'], index)
+         for abr in l['Abbreviations']:
+            #print('   ', abr)
+            if abr is not None:
+               self.sdict.addSubStrings(abr, index)
+         index += 1
+      #pprint(self.sdict)
+
+
+   #
    # Menu and button slots for File actions
    #
    def openNewFile(self):
@@ -153,6 +173,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.maxEntryNumber:
          self.statusbar.clearMessage()
          self.statusbar.showMessage('%d records found'%self.maxEntryNumber, 6000)
+         self.buildSearchDict()
          self.clearSearchFlag()
          self.showEntry(1)
          self.clearTitleDirty()
@@ -195,7 +216,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
                                  "Entry invalid!  Not saved in journalfile!" )
          return
 
-      #pp.pprint(self.tmpEntry)
+      #pprint(self.tmpEntry)
 
       if self.curEntryNumber > self.maxEntryNumber:
          ret = self.jf.setNewEntry(self.tmpEntry, self.curEntryNumber)
@@ -211,6 +232,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          self.setMaxEntryNumber(self.curEntryNumber)
 
       self.deleteButton.setEnabled(True)
+      self.buildSearchDict()
       self.clearSearchFlag()
       self.clearTitleDirty()
       self.clearEntryDirty()
@@ -258,10 +280,11 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          return
 
       self.jf.setNewEntry(self.tmpEntry, num)
+      self.buildSearchDict()
       self.curEntryNumber = num
       self.setMaxEntryNumber(self.maxEntryNumber + 1)
       self.showEntry(self.curEntryNumber)
-      pass
+
 
    def deleteEntry(self):
       """Delete the entry at the curEntryNumber but
@@ -274,6 +297,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          return
 
       self.setMaxEntryNumber(self.jf.deleteEntry(self.curEntryNumber))
+      self.buildSearchDict()
       if self.maxEntryNumber < 1:
          self.insertButton.setEnable(False)
          self.newEntry()
@@ -308,11 +332,12 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       self.EntryToDisplay(self.tmpEntry)
       self.deleteButton.setEnabled(True)
+      self.clearTitleDirty()
       self.clearEntryDirty()
 
    def printEntry(self):
       """Print a postscript file of the current display."""
-      pp.pprint(self.jf.getEntry(self.curEntryNumber))
+      pprint(self.jf.getEntry(self.curEntryNumber))
 
    def oldprintEntry(self):
       """Print a postscript file of the current display."""
@@ -325,14 +350,17 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.render(pt)
       del pt
 
-   def search(self):
-      '''Search the existing Titles, subTitles, subsubTitles, and
-      abbreviations for any entries that match or partially match the
-      string in titleEdit. Pop a list window. If the users double
-      clicks and entry, then return the index of the entry selected
-      from the list and clear the searchflag.  Clear the searchFlag if
-      the users selects stopSearch.'''
-      print('searching', self.searchFlag, self.tmpTitleDirty)
+   def search(self, string):
+      '''Search the existing Titles and abbreviations for any entries
+      that match or partially match the string in titleEdit. Pop a
+      list window. If the users double clicks and entry, then return
+      the index of the entry selected from the list and clear the
+      searchflag.  Clear the searchFlag if the users selects
+      stopSearch.'''
+      print('searching for ', string, self.searchFlag, self.tmpTitleDirty)
+      d = self.sdict[string]
+      if d is not None:
+         pprint(d)
       self.clearTitleDirty()
 
 
@@ -345,7 +373,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if the searchFlag is True."""
       self.tmpTitleDirty = True
       if self.searchFlag:
-         self.search()
+         self.search(self.titleEdit.toPlainText())
 
    def clearTitleDirty(self):
       """Set the tmpTitleDirty flag to False and disable searches."""
