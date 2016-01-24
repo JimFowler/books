@@ -40,10 +40,30 @@ class SearchDict(dict):
     def _splitString(self, string, index):
         '''Split a string into sub-strings, return a sorted list of
         unique tuples of (sub-string, string, index). '''
-        front = [(string[:i].strip(), string, index) for i in range(len(string) + 1)]
-        back  = [(string[i:].strip(), string, index) for i in range(len(string) + 1)]
-        front.extend(back)
-        return sorted(set(front))
+        front = [(sstring, string, index) for sstring in self._getSubStrings(string)]
+        return front
+
+    def _getSubStrings(self, s, minN=3, maxN=10):
+        '''Gets the set of all contiguous sub-strings of 's' between minN
+        and maxN chars in length. If the string is shorter than maxN chars
+        we set the maximum to be the length of the string. Returns a set
+        of sub-strings.'''
+
+        lenS = len(s) # the length of the input string
+        maxN = min(maxN, lenS) # the max length substring we will return
+        
+        strset = set() # the temporary sub-string set
+        
+        if maxN >= minN and 0 < maxN:
+            for sLen in range(minN, (maxN + 1)):
+                for start in range(0, lenS):
+                    end = start + sLen
+                    if end <= lenS:
+                        strset.add(s[start:end].strip())
+                    else:
+                        # break out of the inner loop here.
+                        break
+        return strset
 
     def _add(self, tstr):
         '''Take a tuple (sub-string, string, index) and add to the
@@ -52,9 +72,9 @@ class SearchDict(dict):
         not exist as a key, then add a new key with the tuple as the first
         element in the value list.'''
         if tstr[0] in self.keys():
-            self[tstr[0]][tstr[1]] = tstr[2]
+            self[tstr[0]].append((tstr[1], tstr[2]))
         else:
-            self[tstr[0]] = {tstr[1] : tstr[2]}
+            self[tstr[0]] = [(tstr[1], tstr[2])]
 
 
 if __name__ == '__main__':

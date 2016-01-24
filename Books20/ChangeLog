@@ -1,3 +1,8 @@
+2016-01-23  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/search.py (SearchDict._getSubStrings): got
+	the sub-string generator working correctly today.
+
 2016-01-18  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/search.py (SearchDict): wrote search dictionary
