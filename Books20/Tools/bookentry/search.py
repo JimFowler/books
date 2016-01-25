@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
 ''' Searching for a Title
 
 Want to look for a sub-string within a list of sub-strings formed from
@@ -15,7 +17,7 @@ The dictionary looks like
 
 { 'astr' : [('title1', index1), ('title2', index2), ...],
   'astro' : [('title1', index1), ('title3', index3), ...],
-  'astronoomy jou' : [('title1', index1), ('title4', index4), ...],
+  'astronomy jou' : [('title1', index1), ('title4', index4), ...],
   ...
 }
 '''
@@ -29,6 +31,29 @@ class SearchDict(dict):
     def __init__(self):
         self.clear()
         return
+
+    def _valkey(self, s):
+        return s[2]
+
+    def search(self, ss1):
+        '''Search for sub-string ss1 in self. Compute the distance of
+        the sub-string for the start of title string. Return a list of
+        (title, index) sorted by the start distance.'''
+
+        final = []
+        try:
+            sl = self[ss1[:10]]
+        except:
+            return final
+
+        for s in sl:
+            sdist = s[0].find(ss1)
+            if sdist != -1:
+                final.append((s[0], s[1], sdist))
+
+        final.sort(key=self._valkey)
+
+        return final
 
     def addSubStrings(self, string, index):
         '''Given a string, add all unique sub-strings to
@@ -79,19 +104,27 @@ class SearchDict(dict):
 
 if __name__ == '__main__':
 
+    from fuzzywuzzy import fuzz
     from pprint import pprint
+    from titleList import titleList
 
-    titleList = [('Astronomical Journal', 1), ('Astrophysical Journal', 2),
-                 ('ApJ', 2), ('Aj', 1),
-                 ('Monthly Notices of the Royal Astronomical Society', 3)]
+
+
+    #titleList = [('Astronomical Journal', 1), ('The Astrophysical Journal', 2),
+    #             ('ApJ', 2), ('Aj', 1),
+    #             ('Monthly Notices of the Royal Astronomical Society', 3)]
 
     d = SearchDict()
 
     for title in titleList:
         d.addSubStrings(title[0], title[1])
 
-    print('searching for "Journal"')
-    pprint(d['Journal'])
+    pprint(d.search('Journal devo'))
+
+    pprint(d.search('Astrop'))
+    pprint(d.search('Optical'))
+    pprint(d.search('Astro'))
+    '''
     print('\nsearching for "Astro"')
     pprint(d['Astro'])
     print('\nsearching for "Astrop"')
@@ -100,3 +133,4 @@ if __name__ == '__main__':
     pprint(d['ApJ'])
     print('\nsearching for "Monthly"')
     pprint(d['Monthly'])
+    '''

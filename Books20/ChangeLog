@@ -1,3 +1,30 @@
+2016-01-24  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/search.py (SearchDict.search): added search
+	function to SearchDict. Used distance of the sub-string from the
+	start of the title as a metric for sorting.
+
+	* fuzzywuzzy: installed version 0.8.0 for testing fuzzy matching
+	of string in /home/jrf. This turns out to not be useful for
+	my search/sort.
+
+	* pep8: installed pep8 v1.7.0 python style guide checker in the
+	system libraries.  It was needed by fuzzywuzzy but will be useful
+	for other things.
+
+	* Levenshtein: installed the python package python-leveshtein
+	version 0.12.0 in /home/jrf
+
+	* python3-dev: installed python3-dev package from Ubuntu in order
+	to build Levenshtein package.
+
+	* Tools/bookentry/search.py (SearchDict): Added sub-string
+	generator to SearchDict. Tested routines with titleList.py.  Seems
+	to work well.  But this package doesn't find the best matches.
+	For a short sub-string we may get matches to many titles. Would
+	like to get the top five best matches if we can.
+
+
 2016-01-23  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/search.py (SearchDict._getSubStrings): got
