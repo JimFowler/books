@@ -5,6 +5,6 @@ git tag -a v1.2 -m "Insert Entry button working"	    fbe573a5a7104750974cba24146
 git tag -a v1.5 -m "Spit makeNamelist() and makeNameStr()"  47ba44cc2b0b44f0f744e9444c7e817ddd832232 
 git tag -a v1.6 -m "Added resources and program icon"	    53a95c80e0621bb6e506d76b69f8c9ac676d460f 
 git tag -a v1.7 -m "Added version flag to ajbbooks"	    d06d9d982b6fd5e72b70b711673db01a4ec500fc 
-git tag -a v1.97 -m "Completed version 1 documentation"	    b5795a54b60da7853af749230460bcce21980a6b
+git tag -a v1.9 -m "Completed version 1 documentation"	    b5795a54b60da7853af749230460bcce21980a6b
 git push origin --tags
 git push github --tags
