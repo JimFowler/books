@@ -1,3 +1,45 @@
+2016-02-07  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBcomments.py (Compilers): Removed ",
+	OPTIONAL(WhiteSpace))" from the definition of Compilers.  In the
+	situation where the 'compiled by' was the only comment the grammer
+	would not recognize it.  This implies that every volume from AJB45
+	to AJB68 may have lost compiler date.  Will need to proofread
+	these volumes again and look for compiler information. The original
+	inclusion of the offending statement occured in the check in of
+	2015-05-17 so volumes before this date may not be affected. The
+	last file before this date was ajb47_books.txt.  The last file
+	with a compiled by entry is ajb57_books.txt
+
+	* Tools/bookentry/xml/bookfile.xsd: modifed personInfo to allow
+	minOccurs=0 for 'Last'.  This means that personInfo may not have
+	any child elements but was necessary because
+	nameparser.HumanName() parses a single word as a first name rather
+	than a last name. This behaviour seems to be a feature of
+	HumanName.
+
+2016-02-04  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.askOpenFile): added
+	additional filters to askOpenFile() and saveFileAs(). Set filename
+	extension if not set be user.
+
+	* Tools/bookentry/bookfile.py: Modified
+	to support filename extensions.  readFile() and writeFile()
+	modified to call the proper reader/writer depending on the
+	extension.  Renamed old readFile() to readFile_Text() and
+	old writeFile() to writeFile_Text().  Modified setFilename()
+	to extract extension name.
+
+2016-01-25  Jim Fowler  <jrf@Biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.HumanNameFmXML): created
+	function to translate XML Person entry to HumanName object.
+	(AJBentry.AJBnumFromIndex): created function to translate an
+	XML Index entry to AJB string.
+
+	I think this completes the read+XML_to_Entry() function.
+
 2016-01-24  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/search.py (SearchDict.search): added search

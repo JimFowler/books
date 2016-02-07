@@ -294,7 +294,7 @@ class AJBentry(entry.Entry):
             #print(line)
             fields = line.split(',')
             fieldNum = -1
-            for field in fields :
+            for field in fields:
                 
                 fieldNum += 1
                 field = field.replace(' comma ', ', ' )
@@ -323,7 +323,8 @@ class AJBentry(entry.Entry):
                     self['Price'] = field 
                     
                 elif 7 == fieldNum:   # Reviews
-                    self['Reviews'] = field.split(' and ') 
+                    if 0 < len(field):
+                        self['Reviews'] = field.split(' and ') 
 
                 elif 8 == fieldNum:   # Comments and other material
                     self['Comments'] = field
@@ -485,6 +486,7 @@ class AJBentry(entry.Entry):
                 elif 'Compilers' == grmName:
                     line = str(result.find(comments.NameList))
                     nm = utils.makeNameList( line )
+                    print('Compiler comment', line)
                     if self.notEmpty('Compilers'):
                         self['Compilers'].extend( nm )
                     else:
@@ -683,7 +685,7 @@ class AJBentry(entry.Entry):
         element. The index argument must be a dictionary'''
         index_XML = etree.Element('Index')
         el = etree.SubElement(index_XML, 'IndexName')
-        el.text = str(ajbnum['volume'])
+        el.text = str(ajbnum['volume']).strip()
         el = etree.SubElement(index_XML, 'VolumeNumber')
         el.text = str(ajbnum['volNum'])
         el = etree.SubElement(index_XML, 'SectionNumber')
@@ -730,11 +732,27 @@ class AJBentry(entry.Entry):
         into the AJBentry dictionary. This is a bit tricky.  XML entries
         contain more information than the AJBentry does.'''
 
+        r2 = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
         for child in elXML:
             #print('child is ', child.tag)
 
             if child.tag == 'Index':
-                pass
+                for el in child:
+                    if el.tag == 'IndexName':
+                        self['Num']['volume'] = el.text
+                    elif el.tag == 'VolumeNumber':
+                        self['Num']['volNum'] = int(el.text)
+                    elif el.tag == 'SectionNumber':
+                        self['Num']['sectionNum'] = int(el.text)
+                    elif el.tag == 'SubSectionNumber':
+                        self['Num']['subsectionNum'] = int(el.text)
+                    elif el.tag == 'EntryNumber':
+                        # need to split off the suffix, use regex
+                        m = r2.match(el.text)
+                        self['Num']['entryNum'] = int(m.group(1))
+                        self['Num']['entrySuf'] = m.group(2)
+                    else:
+                        pass
 
             if child.tag == 'Title':
                 self['Title'] = child.text
@@ -744,22 +762,42 @@ class AJBentry(entry.Entry):
                 self['Title'] += child.text
 
             if child.tag == 'subsubTitle':
-                # PersonInfo or CorporateBody
                 self['Title'] += child.text
 
             if child.tag == 'Authors':
                 for author in child:
-                    pass
+                    for g2 in author:
+                        if g2.tag == 'Person':
+                            self['Authors'].append(self.HumanNameFmXML(g2))
 
             if child.tag == 'Editors':
                 # PersonInfo or CorporateBody
                 for editor in child:
-                    pass
+                    for g2 in editor:
+                        if g2.tag == 'Person':
+                            self['Editors'].append(self.HumanNameFmXML(g2))
 
             if child.tag == 'Publishers':
                 # Place and Name
                 for publ in child:
-                    pass
+                    publisher = {}
+                    for pub in publ:
+                        if pub.tag == 'Place':
+                            if pub.text is not None:
+                                publisher['Place'] = str(pub.text)
+                            else:
+                                publisher['Place'] = ''
+                                
+                        elif pub.tag == 'Name':
+                            if pub.text is not None:
+                                publisher['PublisherName'] = str(pub.text)
+                            else:
+                                publisher['PublisherName'] = ''
+
+                        else:
+                            pass
+                    self['Publishers'].append(publisher)
+                    del(publisher)
 
             if child.tag == 'Year':
                 self['Year'] = child.text
@@ -795,31 +833,78 @@ class AJBentry(entry.Entry):
             if child.tag == 'Translators':
                 # PersonInfo or CorporateBody
                 for trans in child:
-                    pass
+                    for g2 in trans:
+                        if g2.tag == 'Person':
+                            self['Translators'].append(self.HumanNameFmXML(g2))
 
             if child.tag == 'Compilers':
                 # PersonInfo or CorporateBody
                 for comp in child:
-                    pass
+                    for g2 in comp:
+                        if g2.tag == 'Person':
+                            self['Compilers'].append(self.HumanNameFmXML(g2))
 
             if child.tag == 'Contributors':
                 # PersonInfo or CorporateBody
                 for contr in child:
-                    pass
+                    for g2 in contr:
+                        if g2.tag == 'Person':
+                            self['Contributors'].append(self.HumanNameFmXML(g2))
 
             if child.tag == 'ReprintOf':
-                # Year of AJBnum
-                pass
+                # Year or AJBnum but only one
+                for rp in child:
+                    if rp.tag == 'Year':
+                        self['Reprint'] = rp.text
+                    elif rp.tag == 'Index':
+                        self['Reprint'] = self.AJBstringFromIndex_XML(rp)
+                
 
-            if child.tag == 'Reference':
+            if child.tag == 'ReferenceOf':
                 # AJBnum
-                pass
+                subsectionNum = '0'
+                for ell in child:
+                    if ell.tag == 'Index':
+                        self['Reference'] = self.AJBstringFromIndex_XML(ell)
 
             if child.tag == 'Comments':
                 for comment in child:
                     self['Others'].append(comment.text)
 
+    def AJBstringFromIndex_XML( self, ell):
+        for el in ell:
+            if el.tag == 'IndexName':
+                aname = el.text
+            elif el.tag == 'VolumeNumber':
+                volNum = '%02d'%int(el.text)
+            elif el.tag == 'SectionNumber':
+                sectionNum = '%02d'%int(el.text)
+            elif el.tag == 'SubSectionNumber':
+                subsectionNum = el.text
+            elif el.tag == 'EntryNumber':
+                entryNum = '%02d'%int(el.text)
+        return aname + ' ' + volNum + '.' + sectionNum + '.' + entryNum
+        
+        
+    def HumanNameFmXML(self, ell):
+        hn = HumanName()
+        for el in ell:
+            if el.tag == 'First':
+                hn.first = el.text
+            elif el.tag == 'Middle':
+                hn.middle = el.text
+            elif el.tag == 'Last':
+                hn.last = el.text
+            elif el.tag == 'Title':
+                hn.title = el.text
+            elif el.tag == 'Suffix':
+                hn.suffix = el.text
+            elif el.tag == 'NickName':
+                hn.nickname = el.text
+            else:
+                pass
 
+        return hn
 
 
 #
@@ -839,7 +924,7 @@ if __name__ == '__main__':
 
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
-    allfieldsstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55;'
+    allfieldsstr = '4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55;'
 
     allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
 

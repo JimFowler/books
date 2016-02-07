@@ -126,7 +126,7 @@ class Editors (Grammar):
 class Compilers (Grammar):
     grammar = (OPTIONAL(WhiteSpace),
                L('compiled by'), NameList,
-               L(';'), OPTIONAL(WhiteSpace))
+               L(';'))
 
 class Contributors (Grammar):
     grammar = (OPTIONAL(WhiteSpace),

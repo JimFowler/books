@@ -193,7 +193,7 @@ but this requires some intellegent parsing. -->
     <xs:element name="Prefix" type="xs:string" minOccurs="0"/>
     <xs:element name="First" type="xs:string" minOccurs="0"/>
     <xs:element name="Middle" type="xs:string" minOccurs="0"/>
-    <xs:element name="Last" type="xs:string"/>
+    <xs:element name="Last" type="xs:string" minOccurs="0"/>
     <xs:element name="Suffix" type="xs:string" minOccurs="0"/>
     <xs:element name="NickName" type="xs:string" minOccurs="0"/>
   </xs:all>

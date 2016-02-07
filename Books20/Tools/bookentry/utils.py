@@ -34,6 +34,6 @@ def makeNameStr( namelist, sep=' and '):
         if not first:
             nameStr += sep
         first = False
-        nameStr += nm.full_name
+        nameStr += str(nm)
         
     return nameStr

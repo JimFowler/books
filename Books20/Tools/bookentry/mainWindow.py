@@ -3,7 +3,6 @@
 """AJB/AAA dialog to review and edit books entries
 """
 
-import traceback
 import platform
 import fileinput
 import re
@@ -155,6 +154,28 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.setMaxEntryNumber(0)
       self.newEntry()
 
+   def askOpenFile(self):
+      """Open an existing file saving the old one if it is dirty."""
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
+      if self.askSaveFile() == QMessageBox.Cancel:
+         return
+
+      # else get a file name 
+      fname, filterA = QFileDialog.getOpenFileNameAndFilter(self,
+          "%s -- Choose new file"%QApplication.applicationName(),
+                            self.bf.getDirName(), "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
+      if fname:
+         name, ext = os.path.splitext(fname)
+         if ext == '':
+            if filterA == 'XML Files (*.xml)':
+               fname += '.xml'
+            else:
+               fname +='.txt'
+               
+         self.openFile(fname)
+
    def openFile(self, name=None):
       """Open an existing file, get the count of entries, and display
       the first entry. If no records are found we assume that this is
@@ -170,7 +191,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
          self.newEntry()
-      self.setWinTitle(self.bf.getBaseName())
+      self.setWinTitle(self.bf.getBaseNameWithExtension())
 
 
    def saveFile(self):
@@ -181,21 +202,29 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       else:
          self.bf.writeFile()
 
-      self.statusbar.showMessage('Saving file ' + self.bf.getBaseName())
+      self.statusbar.showMessage('Saving file ' + self.bf.getBaseNameWithExtension())
       QTimer.singleShot(10000, self.statusbar.clearMessage  )
 
 
    def saveFileAs(self):
       """Ignore dirty entries and save the file as..."""
-      fname = QFileDialog.getSaveFileName(self,
+      fname, filterA = QFileDialog.getSaveFileNameAndFilter(self,
           "%s -- Choose file"%QApplication.applicationName(),
-                                          ".", "*.txt")
+                                          ".", "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
+
       if fname:
+         name, ext = os.path.splitext(fname)
+         if ext == '':
+            if filterA == 'XML Files (*.xml)':
+               fname += '.xml'
+            else:
+               fname +='.txt'
+               
          self.bf.writeFile(fname)
-         self.setWinTitle(self.bf.getBaseName())
+         self.setWinTitle(self.bf.getBaseNameWithExtension())
 
    #
-   # Menu and button slots for Entry Actions
+   # Menu and button slots for Entry Actions on File menu
    #
    def saveEntry(self):
       """Save the entry to the current entry number in the bookfile."""
@@ -337,6 +366,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    #
    # Set/Clear flags for Entry
+   #
    def setEntryDirty(self):
       """Set the tmpEntryDirty flag to True and enable the Save Entry button."""
       self.tmpEntryDirty = True
@@ -382,7 +412,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow = hw.HeaderWindow(self)
       self.headerWindow.setBookFile(self.bf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                                  "Edit Headers - %s" % (self.bf.getBaseName()),
+                                  "Edit Headers - %s" % (self.bf.getBaseNameWithExtension()),
                                   None, QApplication.UnicodeUTF8))
       self.headerWindow.setHeaderText(self.bf.getHeader())
       self.headerWindow.show()
@@ -459,21 +489,6 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       return ans
 
-   def askOpenFile(self):
-      """Open an existing file saving the old one if it is dirty."""
-      if self.askSaveEntry() == QMessageBox.Cancel:
-         return
-
-      if self.askSaveFile() == QMessageBox.Cancel:
-         return
-
-      # else get a file name 
-      fname = QFileDialog.getOpenFileName(self,
-          "%s -- Choose new file"%QApplication.applicationName(),
-                            self.bf.getDirName(), "*.txt")
-      if fname:
-         self.openFile(fname)
-
 
    #
    # Methods to deal with various display aspects
@@ -524,7 +539,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                if not first:
                   astr += '\n'
                first = False
-               astr += b.full_name
+               astr += str(b)
       self.authorEntry.setText(astr)
 
       # Editors
@@ -537,7 +552,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                if not first:
                   astr += '\n'
                first = False
-               astr += b.full_name
+               astr += str(b)
       self.editorEntry.setText(astr)
 
       # Title
@@ -545,6 +560,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if entry.notEmpty('Title'):
          astr += entry['Title']
       self.titleEntry.setText(astr)
+
 
       # Publishers
       astr = ''
@@ -616,7 +632,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                if not first:
                   astr += '\n'
                first = False
-               astr += b.full_name
+               astr += str(b)
       self.translatorEntry.setText(astr)
 
       # Compilers
@@ -629,7 +645,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                if not first:
                   astr += '\n'
                first = False
-               astr += b.full_name
+               astr += str(b)
       self.compilersEntry.setText(astr)
 
       # Contributors
@@ -642,7 +658,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                if not first:
                   astr += '\n'
                first = False
-               astr += b.full_name
+               astr += str(b)
       self.contribEntry.setText(astr)
 
       # Reprint
