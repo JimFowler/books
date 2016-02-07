@@ -11,7 +11,7 @@ Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
 For volume AJB ?43 Index to the Literature of 1941, started 24 Jan 2016, finished, proofread
 
 
-1 43.03(0).04  A. Armitage, Compernicus comma The Founder of Modern Astronomy, , , , , , Pop Astr 49 111 :, reference AJB 40.03.03;
+1 43.03(0).04  A. Armitage, Copernicus comma The Founder of Modern Astronomy, , , , , , Pop Astr 49 111 :, reference AJB 40.03.03;
 
 2 43.03(0).10  P. Ditisheim and R. Lallier and L. Reverchon and Vivielle, Pierre Leroy et al chronométrie, Paris, Tardy, 1941, , , Cahiers de Physique Nr. 2 59 :, 
 
@@ -21,7 +21,7 @@ For volume AJB ?43 Index to the Literature of 1941, started 24 Jan 2016, finishe
 
 5 43.05(0).02  E. von Erhardt-Siebold and R. von Erhardt, Cosmology in the "Annotationes in Marcianum"; More Light on Erigena's Astronomy, Baltimore, The Williams & Wilkins Company, 1940, 45 pp, $1.25, VJS 76 17 : H Ludendorff, 
 
-6 43.05(0).08  B. O. Zanotti, Stroia populare dell'astronomia, Torino, , 1941, 24+324 pp, 12.60 Lire, , 
+6 43.05(0).08  B. O. Zanotti, Storia populare dell'astronomia, Torino, , 1941, 24+324 pp, 12.60 Lire, , 
 
 7 43.06(0).05  J. van der Bilt, Die Venusvorübergänge von 1761—1769, Groningen, J. B. Wolters, , 76 pp, , , other a collection of the articles described in AJB 41.06.08; 
 
