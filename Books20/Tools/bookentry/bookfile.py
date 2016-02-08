@@ -241,7 +241,7 @@ class BookFile():
         for line in fileinput.input([self._fileName]):
             line = line.strip()
             try:
-                if not entTemp.read(line) and not count:
+                if not entTemp.read_Text_to_Entry(line) and not count:
                     self._header = self._header + line + '\n'
             except:
                 print(line + '\n')
@@ -278,7 +278,7 @@ class BookFile():
         fd.write(self._header)
         count = 1
         for ent in self._entryList:
-            fd.write(str(count) + ' ' + ent.write() + newline)
+            fd.write(str(count) + ' ' + ent.write_Text_from_Entry() + newline)
             count += 1
 
         fd.close()

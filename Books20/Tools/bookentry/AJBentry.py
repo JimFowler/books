@@ -142,7 +142,7 @@ class AJBentry(entry.Entry):
     #
     # Ascii comma separated variable file, read/write functions
     #
-    def write(self):
+    def write_Text_from_Entry(self):
         """Write an AJBentry back into the string format that it came from.
         It should be the case that write(read(ajbstr)) == ajbstr up to
         the order of the comments and that read(write(ajbent)) == ajbent."""
@@ -274,7 +274,7 @@ class AJBentry(entry.Entry):
 
         return entryStr
 
-    def read(self, line):
+    def read_Text_to_Entry(self, line):
         """Parse a line with an AJB entry in it placing the values in the
         Entry dictionary. Returns True if this is a parsable line and 
         false if it is not."""
