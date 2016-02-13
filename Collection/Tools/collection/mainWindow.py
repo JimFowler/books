@@ -21,7 +21,9 @@ import bookentry.symbol as symbol
 import collection.menus as menus
 import collection.ui_mainWindow as ui_mainWindow
 import collection.selectDialog as selectDialog
-import collection.library as library
+import collection.librarian as library
+import collection.book as book
+#import collection.want as want
 import collection.author as author
 import collection.project as project
 import collection.vendor as vendor
@@ -50,6 +52,8 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
 
         self.db = library.collectionDB()
 
+        self.book = book.Book(_db=self.db)
+        #self.want = want.Want(_db=self.db)
         self.author = author.Author(_db=self.db)
         self.project = project.Project(_db=self.db)
         self.vendor = vendor.Vendor(_db=self.db)
@@ -60,7 +64,9 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         menus.createMenus(self, self.menubar)
 
         self.connect( self.Books_Button,    SIGNAL('released()'),
-                      self.selectBook )
+                      self.book.selectBook )
+        #self.connect( self.Wants_Button,    SIGNAL('released()'),
+        #              self.want.selectBook )
         self.connect( self.Authors_Button,  SIGNAL('released()'),
                       self.author.selectAuthor )
         self.connect( self.Vendors_Button,  SIGNAL('released()'),
@@ -167,29 +173,32 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
     def selectBook(self):
         '''Get list of Books and open a selection window so the
         users can pick one.'''
-        booklist = []
+        self.bookDict =self.db.getBookDict()
+        l = list(self.bookDict.keys())
 
         self.bookSelect = selectDialog.selectDialog(
             _title='Book List',
-            _list=booklist,
+            _list=l,
             _viewFunction=None,
             _newFunction=None)
 
         self.bookSelect.show()
         
-
+    
     def selectWant(self):
         '''Get list of Wants and open a selection window so the
         users can pick one.'''
-        wantlist = []
+        return
+        #self.wantDict =self.db.getWantDict()
+        #l = list(self.wantDict.keys())
 
-        self.wantSelect = selectDialog.selectDialog(
-            _title='Wants List',
-            _list=wantlist,
-            _viewFunction=None,
-            _newFunction=None)
+        #self.wantSelect = selectDialog.selectDialog(
+        #    _title='Wants List',
+        #    _list=wantlist,
+        #    _viewFunction=None,
+        #    _newFunction=None)
 
-        self.wantSelect.show()
+        #self.wantSelect.show()
         
 
     def selectAuthor(self):
@@ -197,7 +206,6 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         users can pick one.'''
         self.authorDict = self.db.getAuthorDict()
         l = list(self.authorDict.keys())
-        l.sort()
 
         self.authorSelect = selectDialog.selectDialog(
             _title='Author List',
@@ -213,7 +221,6 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         users can pick one.'''
         self.vendorDict = self.db.getVendorDict()
         l = list(self.vendorDict.keys())
-        l.sort()
 
         self.vendorSelect = selectDialog.selectDialog(
             _title='Vendor/Publisher List',
@@ -230,7 +237,6 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         users can pick one.'''
         self.todoDict = self.db.getToDoDict()
         l = list(self.todoDict.keys())
-        l.sort()
 
         self.todoSelect = selectDialog.selectDialog(
             _title='ToDo List',

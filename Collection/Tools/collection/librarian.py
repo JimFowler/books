@@ -4,7 +4,8 @@
 #
 #
 '''The specific database class for talking to the Collection.db3 database.
-This is a subclass of database.DataBase().'''
+This is a subclass of database.DataBase(). It can make common request for
+searchs just like a librarian.'''
 
 import sqlite3
 
@@ -41,8 +42,8 @@ class collectionDB(database.DataBase):
         self.cursor.execute('''SELECT * FROM viewAllBooks;''')
         tlist = self.cursor.fetchall()
         for t in tlist:
-            name = str(t[1]) + ', ' + str(t[2]) + ', ' + str(t[3])
-            d[name] = t[0]
+            name = str(t[0]) + ', ' + str(t[1]) + ', ' + str(t[2])
+            d[name] = t[3]
         return d
 
     def getAuthorDict(self):

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Reports and Catalogues</string>
   </property>
   <widget class="QPushButton" name="quit_Button">
    <property name="geometry">
@@ -58,7 +58,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>110</y>
+     <y>90</y>
      <width>101</width>
      <height>27</height>
     </rect>
@@ -78,7 +78,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>160</y>
+     <y>130</y>
      <width>101</width>
      <height>27</height>
     </rect>
@@ -111,6 +111,26 @@
    </property>
    <property name="text">
     <string>Catalog</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="priceButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Price List</string>
    </property>
   </widget>
  </widget>
