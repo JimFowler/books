@@ -3,7 +3,6 @@
 # -*- mode: Python;-*-
 
 import traceback
-import platform
 import fileinput
 import re
 
@@ -28,14 +27,13 @@ import collection.author as author
 import collection.project as project
 import collection.vendor as vendor
 import collection.tasks as tasks
-
+import collection.version as version
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
 __DefaultSymbolTableName__ = __dirName + '/symbols.txt'
 del __dirName
 del __basename
 
-__version__ = '1.0.0'
 
 
 class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
@@ -133,7 +131,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         places it into the window title.
         """
         self.setWindowTitle(QApplication.translate("MainWindow", 
-             "Collection Database  v %s   -   %s" % (__version__, name),
+             "Collection Database  v %s   -   %s" % (version.__version__, name),
                                None, QApplication.UnicodeUTF8))
 
     def insertChar(self, obj):
@@ -249,24 +247,9 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
     #
     # Help menu functions
     #
-    def helpString(self):
-        helpStr = """<b>Collection Database</b> v {0}
-        <p>Author: J. R. Fowler
-        <p>Copyright &copy; 2015
-        <p>All rights reserved.
-        <p>This application is used to work with the database
-        Collections.db3.  This database is the catalog of books
-        in my library collection.
-        <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
-            __version__, platform.python_version(),
-            QT_VERSION_STR, PYQT_VERSION_STR,
-            platform.system())
-
-        return helpStr
-
     def helpAbout(self):
-        hstr = self.helpString()
-        QMessageBox.about(self, 'About books', hstr )
+        hstr = version.aboutString()
+        QMessageBox.about(self, 'About Library', hstr )
 
 #
 # Test routine

@@ -1,3 +1,9 @@
+2016-02-20  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/version.py: added version.py.  Placed help
+	string and version string inside and removed them from
+	mainWindow.py.
+
 2016-01-13  Jim Fowler  <jrf@Biblion>
 
 	* Tools/scripts/CreateViews.sql: added viewAllBooks
