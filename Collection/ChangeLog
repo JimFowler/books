@@ -1,3 +1,13 @@
+2016-02-21  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/project.py (ProjectView): Added .replace("'", "''")
+	to all string retrivals that are written into SQLite statements.
+	See page 343 of Using SQLite.
+
+	* Tools/collection/tasks.py (TaskView): Added .replace("'", "''")
+	to all string retrivals that are written into SQLite statements.
+	See page 343 of Using SQLite.
+
 2016-02-20  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/version.py: added version.py.  Placed help

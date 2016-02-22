@@ -28,7 +28,8 @@ class collectionDB(database.DataBase):
             return True
 
     def execute(self, sqlStmt):
-        '''Execute arbitrary SQL statement. Returns the cursor '''
+        '''Execute arbitrary SQL statement. Returns the cursor.'''
+        #print('librarian', sqlStmt, '\n')
         return self.cursor.execute(sqlStmt)
 
 

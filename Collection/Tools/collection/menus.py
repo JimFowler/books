@@ -121,6 +121,7 @@ def createMenus( self, menuBar):
     viewMenu.addAction(projectsAction)
     viewMenu.addAction(wantsAction)
     viewMenu.addAction(todoAction)
+    viewMenu.addSeparator()
     viewMenu.addAction(searchAction)
     viewMenu.addAction(otherAction)
     viewMenu.addAction(reportsAction)

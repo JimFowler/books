@@ -85,13 +85,13 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
     #
     def delete(self):
         if not self.isNew:
-            queryStmt = 'DELETE FROM ToDo WHERE ToDoId = %d;' % (self.taskId)
             # ask yes/no
             ans = QMessageBox.warning( self, 'Delete ToDo task?',
                                        'Are you sure you want to delete this task? This action can not be undone!',
                                        QMessageBox.Yes,
                                        QMessageBox.No )
             if ans == QMessageBox.Yes:
+                queryStmt = 'DELETE FROM ToDo WHERE ToDoId = %d;' % (self.taskId)
                 self.db.execute(queryStmt)
                 self.db.commit()
                 self.clearTaskDirty()
@@ -101,30 +101,30 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
         # needs db.cursor or database
         if self.isNew:
 
-            summary = self.summaryEdit.text()
+            summary = self.summaryEdit.text().replace("'", "''")
             create = self.createdEdit.text()
             complete = self.completionEdit.text()
-            description = self.descriptionEdit.toPlainText()
+            description = self.descriptionEdit.toPlainText().replace("'", "''")
             # add other info TODO
-            queryStmt = 'INSERT INTO ToDo (Summary, Description, DateOfEntry, DateCompleted) VALUES ("%s", "%s", "%s", "%s");' % (summary, description, create, complete)
+            queryStmt = "INSERT INTO ToDo (Summary, Task, DateOfEntry, DateCompleted) VALUES ('%s', '%s', '%s', '%s');" % (summary, description, create, complete)
             self.db.execute(queryStmt)
 
-            # get new task id somehow, requires Name to be unique
-            queryStmt = 'SELECT ToDoId FROM ToDo WHERE Summary = "%s";' % (summary)
+            # get new task id somehow, requires Summary to be unique
+            queryStmt = "SELECT ToDoId FROM ToDo WHERE Summary = '%s';" % (summary)
             res = self.db.execute(queryStmt)
             task = res.fetchone()
             self.taskId = int(task[0])
-            self.idLabel.setText(self.taskId)
+            self.idLabel.setText(str(self.taskId))
             self.clearTaskDirty()
             self.isNew = False
 
         elif self.dirty:
 
-            summary = self.summaryEdit.text()
+            summary = self.summaryEdit.text().replace("'", "''")
             create = self.createdEdit.text()
             complete = self.completionEdit.text()
-            description = self.descriptionEdit.toPlainText()
-            queryStmt = "UPDATE ToDo SET Summary = '%s', Task = '%s', DateOfEntry = '%s', DateCompleted = '%s' WHERE VendorId = %d;" % (summary, description, create, completion, self.vendorId)
+            description = self.descriptionEdit.toPlainText().replace("'", "''")
+            queryStmt = "UPDATE ToDo SET Summary = '%s', Task = '%s', DateOfEntry = '%s', DateCompleted = '%s' WHERE ToDoId = %d;" % (summary, description, create, complete, self.taskId)
             print(queryStmt)
             self.db.execute(queryStmt)
             self.clearTaskDirty()

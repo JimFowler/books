@@ -1,6 +1,4 @@
-'''Stuff that knows about projects within
-the Collection database.'''
-
+'''Stuff that knows about projects within the Collection database.'''
 # -*- mode: python; -*-
 
 from PyQt4.QtCore import *
@@ -12,8 +10,7 @@ import collection.ui_project as ui_project
 import collection.selectDialog as selectDialog
 
 # Debugging
-import pprint
-pp = pprint.PrettyPrinter()
+from pprint import pprint
 
 class ProjectView( QDialog, ui_project.Ui_Dialog):
     '''View the information about a specific project.
@@ -50,7 +47,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         self.connect(self.descriptionEdit,
                      SIGNAL('textChanged()'),
                      self.setProjectDirty)
-        '''
+
         self.connect(self.bookList,
                      SIGNAL('itemDoubleClicked(QListWidgetItem*)'),
                      self.getItem)
@@ -58,7 +55,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         self.connect(self.bookList,
                      SIGNAL('itemClicked()'),
                      self.getItem)
-                     '''
+
         self.db = _db
         self.projectId = None
         self.isNew = True
@@ -90,13 +87,13 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
     #
     def delete(self):
         if not self.isNew:
-            queryStmt = 'DELETE FROM Projects WHERE ProjectId = %d;' % (self.projectId)
             # ask yes/no
             ans = QMessageBox.warning( self, 'Delete Project?',
                                        'Are you sure you want to delete this project? This action can not be undone!',
                                        QMessageBox.Yes,
                                        QMessageBox.No )
             if ans == QMessageBox.Yes:
+                queryStmt = 'DELETE FROM Projects WHERE ProjectId = %d;' % (self.projectId)
                 self.db.execute(queryStmt)
                 self.db.commit()
                 self.clearProjectDirty()
@@ -106,13 +103,14 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
         # needs db.cursor or database
         if self.isNew:
 
-            name = self.projectNameEdit.text()
-            description = self.descriptionEdit.toPlainText()
+            name = self.projectNameEdit.text().replace("'", "''")
+            description = self.descriptionEdit.toPlainText().replace("'", "''")
+
             queryStmt = 'INSERT INTO Projects (ProjectName, Description) VALUES ("%s", "%s");' % (name, description)
             self.db.execute(queryStmt)
 
             # get new project id somehow
-            queryStmt = 'SELECT ProjectId FROM Projects WHERE ProjectName = "%s";' % (name)
+            queryStmt = "SELECT ProjectId FROM Projects WHERE ProjectName = '%s';" % (name)
             res = self.db.execute(queryStmt)
             proj = res.fetchone()
             self.projectId = int(proj[0])
@@ -122,10 +120,11 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
         elif self.dirty:
 
-            name = self.projectNameEdit.text()
-            description = self.descriptionEdit.toPlainText()
+            name = self.projectNameEdit.text().replace("'", "''")
+            description = self.descriptionEdit.toPlainText().replace("'", "''")
+
             queryStmt = "UPDATE Projects SET ProjectName = '%s', Description = '%s' WHERE ProjectId = %d;" % (name, description, self.projectId)
-            print(queryStmt)
+            #print('project', queryStmt, '\n')
             self.db.execute(queryStmt)
             self.clearProjectDirty()
 
@@ -196,7 +195,7 @@ class ProjectView( QDialog, ui_project.Ui_Dialog):
 
 class Project(object):
     '''Handle the general projects stuff.  It makes
-     no sense to call this class and not pass a database
+    no sense to call this class and not pass a database
     as _db to it.'''
 
     def __init__(self, parent=None, _db=None):
@@ -246,7 +245,4 @@ class Project(object):
 
         self.view = ProjectView(_db = self.db)
         self.view.setProjId(projId)
-
-
-
 
