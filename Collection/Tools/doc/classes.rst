@@ -19,11 +19,11 @@ ________
     :show-inheritance:
 
 
-Sql
-___
+Librarian
+_________
 
 
-.. automodule:: sql
+.. automodule:: librarian
     :members:
     :show-inheritance:
 
