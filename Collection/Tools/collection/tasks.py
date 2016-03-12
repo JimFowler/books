@@ -22,9 +22,15 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
     database we are currently working with.  It doesn't make
     any sense to not pass the _db to the class.
     '''
-    def __init__( self, parent=None, _db=None ):
+    def __init__( self, parent=None, _db=None, _updater=None ):
         super(TaskView, self).__init__(parent)
         self.setupUi(self)
+
+        self.db = _db
+        self.upDater = _updater
+        self.taskId = None
+        self.isNew = True
+        self.dirty = False
 
         self.connect( self.closeButton,
                       SIGNAL('released()'),
@@ -42,6 +48,9 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                       SIGNAL('released()'),
                       self.new )
 
+        if self.upDater is not None:
+            pass
+
         # for a line edit box
         self.connect(self.summaryEdit, SIGNAL('textChanged(QString)'),
                      self.setTaskDirty)
@@ -53,11 +62,6 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
         # for a text edit box
         self.connect(self.descriptionEdit, SIGNAL('textChanged()'),
                      self.setTaskDirty)
-
-        self.db = _db
-        self.taskId = None
-        self.isNew = True
-        self.dirty = False
 
 
     def setTaskDirty(self):
@@ -94,6 +98,8 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                 queryStmt = 'DELETE FROM ToDo WHERE ToDoId = %d;' % (self.taskId)
                 self.db.execute(queryStmt)
                 self.db.commit()
+                if self.upDater is not None:
+                    self.upDater.taskListChanged()
                 self.clearTaskDirty()
                 self.quit()
 
@@ -130,6 +136,8 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
             self.clearTaskDirty()
 
         self.db.commit()
+        if self.upDater is not None:
+            self.upDater.todoListChanged()
         return
 
     def clearForm(self):
@@ -182,22 +190,23 @@ class Task(object):
      no sense to call this class and not pass a database
     as _db to it.'''
 
-    def __init__(self, parent=None, _db=None):
+    def __init__(self, parent=None, _db=None, _updater=None):
 
         if _db is None:
             pass
 
-        # A dictionary of VendorName: VendorId
+        # A dictionary of Summary: TaskId
         self.taskDict = {}
 
         # the database to talk to for information
         # We pass this to our views so they can talk to the
         # database also.
         self.db = _db
+        self.upDater = _updater
 
         # a vendor view
         self.view = None
-        # but what if we want more than one vendor view???
+        # but what if we want more than one task view???
 
 
     def getTasks(self):
@@ -227,7 +236,7 @@ class Task(object):
         else:
             taskId = None
 
-        self.view = TaskView(_db = self.db)
+        self.view = TaskView(_db = self.db, _updater = self.upDater)
         self.view.setTaskId(taskId)
 
 

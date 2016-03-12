@@ -1,3 +1,17 @@
+2016-02-22  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/update.py (UpDater): Started writing
+	update class.  This class will provide the ability for
+	item view windows to signal to list windows that the database
+	has changed and that list windows should update their lists
+	accordingly.
+
+	* Tools/collection/mainWindow.py (Collection.__init__): Started
+	adding hooks to support the update class.
+
+	* Tools/collection/tasks.py (TaskView.__init__): Started adding
+	hooks to support the update class.
+
 2016-02-21  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/project.py (ProjectView): Added .replace("'", "''")

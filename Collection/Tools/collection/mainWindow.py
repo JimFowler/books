@@ -28,6 +28,8 @@ import collection.project as project
 import collection.vendor as vendor
 import collection.tasks as tasks
 import collection.version as version
+import collection.update as update
+
 import os
 __dirName, __basename  = os.path.split(symbol.__file__)
 __DefaultSymbolTableName__ = __dirName + '/symbols.txt'
@@ -57,7 +59,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.vendor = vendor.Vendor(_db=self.db)
         self.tasks = tasks.Task(_db=self.db)
 
-
+        self.upDater = update.UpDater()
 
         menus.createMenus(self, self.menubar)
 
