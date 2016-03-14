@@ -51,15 +51,15 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.insertFunc = None
 
         self.db = library.collectionDB()
+        self.upDater = update.UpDater()
+
 
         self.book = book.Book(_db=self.db)
         #self.want = want.Want(_db=self.db)
         self.author = author.Author(_db=self.db)
         self.project = project.Project(_db=self.db)
         self.vendor = vendor.Vendor(_db=self.db)
-        self.tasks = tasks.Task(_db=self.db)
-
-        self.upDater = update.UpDater()
+        self.tasks = tasks.Task(_db=self.db, _updater=self.upDater)
 
         menus.createMenus(self, self.menubar)
 

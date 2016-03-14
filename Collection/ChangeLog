@@ -1,3 +1,8 @@
+2016-03-12  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/update.py (UpDater): Finished updater class
+	definition and tests.
+
 2016-02-22  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/update.py (UpDater): Started writing
