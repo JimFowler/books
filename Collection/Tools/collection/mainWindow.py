@@ -59,7 +59,7 @@ class Collection( QMainWindow, ui_mainWindow.Ui_MainWindow ):
         self.author = author.Author(_db=self.db)
         self.project = project.Project(_db=self.db)
         self.vendor = vendor.Vendor(_db=self.db)
-        self.tasks = tasks.Task(_db=self.db, _updater=self.upDater)
+        self.tasks = tasks.ToDo(_db=self.db, _updater=self.upDater)
 
         menus.createMenus(self, self.menubar)
 

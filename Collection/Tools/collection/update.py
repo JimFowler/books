@@ -36,7 +36,7 @@ class UpDater(QObject):
         return
 
     def todoListChanged(self):
-        # emit signal to anybody who care about ToDo lists
+        # emit signal to anybody who care about ToDo task lists
         self.emit(SIGNAL('todoListChanged'))
         return
 

@@ -1,5 +1,8 @@
 '''Stuff that knows about ToDo tasks within
-the Collection database.'''
+the Collection database. The ToDo list is a list of
+tasks which need to (should be) done to improve
+the program. ToDo is the list; a task is an item in that
+list.'''
 
 # -*- mode: python; -*-
 
@@ -16,8 +19,8 @@ import pprint
 pp = pprint.PrettyPrinter()
 
 class TaskView( QDialog, ui_tasks.Ui_Dialog):
-    '''View the information about a specific ToDo tasks
-    Must be called with _taskId = to a specific Task ID
+    '''View the information about a specific Todo tasks
+    Must be called with _todoId = to a specific ToDo task ID
     or None if you want to create a new task. _db is the
     database we are currently working with.  It doesn't make
     any sense to not pass the _db to the class.
@@ -48,8 +51,6 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                       SIGNAL('released()'),
                       self.new )
 
-        if self.upDater is not None:
-            pass
 
         # for a line edit box
         self.connect(self.summaryEdit, SIGNAL('textChanged(QString)'),
@@ -64,6 +65,9 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                      self.setTaskDirty)
 
 
+    def testme(self):
+        print('testme called')
+
     def setTaskDirty(self):
         #print('setTaskDirty')
         self.dirty = True
@@ -75,7 +79,7 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
     def SaveIfDirty(self):
         #print('SaveIfDirty', self.dirty)
         if self.dirty:
-            ans = QMessageBox.warning( self, 'Save ToDo task?',
+            ans = QMessageBox.warning( self, 'Save Task?',
                                        'Entry has changed. Do you want to save it?',
                                        QMessageBox.Save,
                                        QMessageBox.No,
@@ -90,7 +94,7 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
     def delete(self):
         if not self.isNew:
             # ask yes/no
-            ans = QMessageBox.warning( self, 'Delete ToDo task?',
+            ans = QMessageBox.warning( self, 'Delete Task?',
                                        'Are you sure you want to delete this task? This action can not be undone!',
                                        QMessageBox.Yes,
                                        QMessageBox.No )
@@ -99,7 +103,7 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                 self.db.execute(queryStmt)
                 self.db.commit()
                 if self.upDater is not None:
-                    self.upDater.taskListChanged()
+                    self.upDater.todoListChanged()
                 self.clearTaskDirty()
                 self.quit()
 
@@ -185,7 +189,7 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
         self.show()
 
 
-class Task(object):
+class ToDo(QObject):
     '''Handle the general ToDo Task stuff.  It makes
      no sense to call this class and not pass a database
     as _db to it.'''
@@ -196,7 +200,7 @@ class Task(object):
             pass
 
         # A dictionary of Summary: TaskId
-        self.taskDict = {}
+        self.todoDict = {}
 
         # the database to talk to for information
         # We pass this to our views so they can talk to the
@@ -208,15 +212,20 @@ class Task(object):
         self.view = None
         # but what if we want more than one task view???
 
+        if self.upDater is not None:
+            # update information if ToDo task list is updated.
+            #self.connect(self.upDater, SIGNAL('todoListChanged'),
+            #             None)
+            pass
 
     def getTasks(self):
-        self.tasksDict = self.db.getToDoDict()
+        self.todoDict = self.db.getToDoDict()
         
     def selectTask(self):
         '''Get list of Vendors and open a selection window so the
         users can pick one.'''
         self.getTasks()
-        l = list(self.tasksDict.keys())
+        l = list(self.todoDict.keys())
         l.sort()
         
         self.taskSelect = selectDialog.selectDialog(
@@ -232,7 +241,7 @@ class Task(object):
 
         if name is not None:
             self.getTasks()
-            taskId = self.tasksDict[name]
+            taskId = self.todoDict[name]
         else:
             taskId = None
 

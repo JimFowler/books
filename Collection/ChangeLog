@@ -1,3 +1,16 @@
+2016-03-27  Jim Fowler  <jrf@Biblion>
+
+	* Tools/collection/mainWindow.py (Collection.__init__): Changed
+	self.tasks = tasks.Tasks() to tasks.Todo() to be consistent with
+	naming.
+
+	* Tools/collection/update.py (UpDater.todoListChanged): Changed
+	taskListChanged() to todoListChanged() and changed signal to
+	todoListChanged to be consist with naming
+
+	* Tools/collection/tasks.py (ToDo): Changed Task to ToDo in
+	order to be consistent with naming.
+
 2016-03-12  Jim Fowler  <jrf@Biblion>
 
 	* Tools/collection/update.py (UpDater): Finished updater class
