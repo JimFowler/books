@@ -120,7 +120,7 @@
     </font>
    </property>
    <property name="text">
-    <string>To Do List</string>
+    <string>Task Details</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

@@ -51,6 +51,11 @@ class TaskView( QDialog, ui_tasks.Ui_Dialog):
                       SIGNAL('released()'),
                       self.new )
 
+        if self.upDater is not None:
+            # update information if ToDo task list is updated.
+            self.connect(self.upDater, SIGNAL('todoListChanged'),
+                         self.testme)
+
 
         # for a line edit box
         self.connect(self.summaryEdit, SIGNAL('textChanged(QString)'),
@@ -212,12 +217,6 @@ class ToDo(QObject):
         self.view = None
         # but what if we want more than one task view???
 
-        if self.upDater is not None:
-            # update information if ToDo task list is updated.
-            #self.connect(self.upDater, SIGNAL('todoListChanged'),
-            #             None)
-            pass
-
     def getTasks(self):
         self.todoDict = self.db.getToDoDict()
         
@@ -229,7 +228,7 @@ class ToDo(QObject):
         l.sort()
         
         self.taskSelect = selectDialog.selectDialog(
-            _title='To Do Task List',
+            _title='ToDo Task List',
             _list=l,
             _viewFunction=self.taskView,
             _newFunction=self.taskView)
