@@ -486,7 +486,6 @@ class AJBentry(entry.Entry):
                 elif 'Compilers' == grmName:
                     line = str(result.find(comments.NameList))
                     nm = utils.makeNameList( line )
-                    print('Compiler comment', line)
                     if self.notEmpty('Compilers'):
                         self['Compilers'].extend( nm )
                     else:
