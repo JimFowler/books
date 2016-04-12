@@ -210,7 +210,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Ignore dirty entries and save the file as..."""
       fname, filterA = QFileDialog.getSaveFileNameAndFilter(self,
           "%s -- Choose file"%QApplication.applicationName(),
-                                          ".", "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
+                                             self.bf.getDirName(),
+           "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
 
       if fname:
          name, ext = os.path.splitext(fname)

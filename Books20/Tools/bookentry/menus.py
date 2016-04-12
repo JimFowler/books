@@ -39,8 +39,8 @@ def createMenus( self, menuBar):
                                        self.askOpenFile, 'Ctrl+O' )
         saveAction = createAction( self, '&Save File',
                                    self.saveFile, 'Ctrl+S')
-        saveAsAction = createAction( self, 'Save File &As...',
-                                     self.saveFileAs, 'Ctrl+A')
+        saveAsAction = createAction( self, 'Save File As...',
+                                     self.saveFileAs, None)
         newEntAction = createAction( self, 'New &Entry',
                                      self.newEntry, 'Ctrl+E')
         saveEntAction = createAction( self, 'Save Ent&ry', 
@@ -75,7 +75,8 @@ def createMenus( self, menuBar):
         deleteAction.setEnabled(False)
         addInfoAction = createAction(self, 'Additional &Info...',
                                      None, 'Ctrl+T')
-        symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
+        symbolAction = createAction(self, '&Insert Symbol...',
+                                    self.openSymbol, 'Ctrl+I')
         headerAction = createAction(self, 'Edit &Header...',
                                     self.editHeader, 'Ctrl+H')
         origstrAction = createAction(self, 'Show Original String',

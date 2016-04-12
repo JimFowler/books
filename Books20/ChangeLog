@@ -1,3 +1,10 @@
+2016-04-11  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.saveFileAs): modified
+	to use self.bf.getDirName() as the directory to start in.
+
+	* Data/Ajb: Converted all files to XML format and saved with git.
+
 2016-02-07  Jim Fowler  <jrf@Biblion>
 
 	* Tools/bookentry/AJBcomments.py (Compilers): Removed ",
