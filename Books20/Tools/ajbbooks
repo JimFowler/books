@@ -17,7 +17,7 @@ pp = PrettyPrinter()
 import bookentry.ajb_rc
 import bookentry.mainWindow as mw
 
-__version__ = '1.0'
+__version__ = '1.9'
 
 #
 # Parse the command line arguments
