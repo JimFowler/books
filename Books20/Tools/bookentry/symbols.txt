@@ -50,6 +50,7 @@
 ň, Small letter n with caron
 Ö, Capital letter O with diaeresis
 ö, Small letter o with diaeresis
+ő, Small letter o with double acute
 ø, Small letter o with stroke
 ô, Small letter o with circumflex
 ò, Small letter o with grave
