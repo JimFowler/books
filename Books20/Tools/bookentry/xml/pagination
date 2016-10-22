@@ -1,0 +1,54 @@
+Pagination (part of the physical description)
+
+
+30 May 2016
+
+The original pagination scheme was have '<front>+<main> pp'.  This
+worked fine for use with Microsoft Word and text based entry. The 'pp'
+made it clear where the field was in the comma-separated
+list. However, it soon became clear that there was more information in
+the entries than I was recording.  When I switched to the ajbbooks 1.0
+program the 'pp' became redundant and did not convey any useful data.
+With the advent of ajbbooks 2.0 and the XML format it became possible
+to easily include additional information. However, with only one
+string field in the user form display it became necessary to encode
+the information.  Starting with volume 42 I created the following
+pagination codes.  These are still stored as a string in the XML file
+until I create the parsers to read them.
+
+Pagination codes
+
+<count><code>[+<count><code>[+...]]
+
+<count>p+<count>p shows pagination for the front matter and the main
+matter.
+
+German,        English, code
+   S,          pages,    p
+ fig,          figures,  f
+Tafeln,        tables,   t
+Sternkarten, star cards
+              (charts?), c
+bildtafeln,  pictures boards
+	       (plates), P
+  abb.,   illustrations, i
+zeichnungn,    drawings, d
+
+At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08 what do the
+brackets mean?
+
+There are at least a few cases where the pagination is listed as
+"<count>+<count>+A<count>+B<count> pp" where A, B, etc., indicate
+appendices that are separately numbered.
+
+Some page counts use Roman numerals so the characters I, V, X, L, C,
+D, and M should not be used for the code suffix or prefix. However, if
+we have an appendix C with Roman pagination, we have a conflict. Just
+such a situation occurs in 43.51(0).01. I used brackets around the
+page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p
+
+Code should provide
+element PaginationToXml(string)
+string XmlToPagination(element)
+  but who allocates the memory??
+  who frees the memory??
