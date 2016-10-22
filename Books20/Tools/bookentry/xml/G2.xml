@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+<Authors>
+  <Person>
+    <Prefix>Dr</Prefix>
+    <First>J</First>
+    <Middle>Robert</Middle>
+    <Last>Fowler</Last>
+    <Suffix>IV</Suffix>
+  </Person>
+  <CorporateBody>My Writing Business</CorporateBody>
+</Authors>

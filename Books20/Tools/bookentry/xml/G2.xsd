@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Authors">
+  <xs:complexType>
+    <xs:sequence>
+	<xs:element name="Person" type="personInfo" minOccurs="0" maxOccurs="unbounded"/>
+	<xs:element name="CorporateBody" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="G2">
+  <!-- A Group 2 element. Group 2 elements may be a person
+  or a corporate body.  The personInfo is based on the
+  data structure in the python package nameparser. -->
+  <xs:choice>
+    <xs:element name="Person" type="personInfo"/>
+    <xs:element name="CorporateBody" type="xs:string"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="personInfo">
+  <xs:all>
+    <xs:element name="Prefix" type="xs:string" minOccurs="0"/>
+    <xs:element name="First" type="xs:string" minOccurs="0"/>
+    <xs:element name="Middle" type="xs:string" minOccurs="0"/>
+    <xs:element name="Last" type="xs:string"/>
+    <xs:element name="Suffix" type="xs:string" minOccurs="0"/>
+    <xs:element name="NickName" type="xs:string" minOccurs="0"/>
+  </xs:all>
+</xs:complexType>
+
+</xs:schema>
