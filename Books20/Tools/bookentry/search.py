@@ -38,12 +38,12 @@ class SearchDict(dict):
     def search(self, ss1):
         '''Search for sub-string ss1 in self. Compute the distance of
         the sub-string for the start of title string. Return a list of
-        (title, index) sorted by the start distance.'''
-
+        (title, index, distance) sorted by the start distance.'''
+        print("sldict.search")
         final = []
         try:
             sl = self[ss1[:10]]
-        except:
+        except KeyError:
             return final
 
         for s in sl:
@@ -51,7 +51,7 @@ class SearchDict(dict):
             if sdist != -1:
                 final.append((s[0], s[1], sdist))
 
-        final.sort(key=self._valkey)
+        final.sort(key=self._valkey, reverse=True)
 
         return final
 
@@ -104,15 +104,9 @@ class SearchDict(dict):
 
 if __name__ == '__main__':
 
-    from fuzzywuzzy import fuzz
+    #from fuzzywuzzy import fuzz
     from pprint import pprint
     from titleList import titleList
-
-
-
-    #titleList = [('Astronomical Journal', 1), ('The Astrophysical Journal', 2),
-    #             ('ApJ', 2), ('Aj', 1),
-    #             ('Monthly Notices of the Royal Astronomical Society', 3)]
 
     d = SearchDict()
 

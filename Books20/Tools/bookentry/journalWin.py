@@ -353,12 +353,15 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
    def search(self, string):
       '''Search the existing Titles and abbreviations for any entries
       that match or partially match the string in titleEdit. Pop a
-      list window. If the users double clicks and entry, then return
+      list window. If the users double clicks an entry, then return
       the index of the entry selected from the list and clear the
       searchflag.  Clear the searchFlag if the users selects
       stopSearch.'''
       print('searching for ', string, self.searchFlag, self.tmpTitleDirty)
-      d = self.sdict[string]
+      try:
+         d = self.sdict[string.strip()]
+      except KeyError:
+         d = None
       if d is not None:
          pprint(d)
       self.clearTitleDirty()
@@ -373,7 +376,9 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if the searchFlag is True."""
       self.tmpTitleDirty = True
       if self.searchFlag:
-         self.search(self.titleEdit.toPlainText())
+         title_text = self.titleEdit.toPlainText()
+         if len(title_text) > 2:
+            self.search(title_text)
 
    def clearTitleDirty(self):
       """Set the tmpTitleDirty flag to False and disable searches."""
@@ -381,11 +386,11 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
 
    def setSearchFlag(self):
-      """Set the  searchflag to True to enable searcehs"""
+      """Set the  searchflag to True to enable searchs"""
       self.searchFlag = True
 
    def clearSearchFlag(self):
-      """Set the search flag to False and disable searches."""
+      """Set the search flag to False and disable searchs."""
       self.searchFlag = False
 
 

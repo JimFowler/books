@@ -164,7 +164,7 @@ class journalEntry(entry.Entry):
             el = etree.SubElement(entryXML, 'Designators')
             for key in self['Designators'].keys():
                 #key = key.strip()
-                print('write_XML_from_Entry: (%s) : (%s)' % (key, self['Designators'][key] ))
+                #print('write_XML_from_Entry: (%s) : (%s)' % (key, self['Designators'][key] ))
                 cl = etree.SubElement(el, key)
                 cl.text = self['Designators'][key]
 
@@ -243,7 +243,7 @@ class journalEntry(entry.Entry):
             #   This should be valid for any entry
             elif child.tag == 'Designators':
                 for desg in child:
-                    print('read_XML_to_Entry: (%s) : (%s)' % (desg.tag, desg.text))
+                    #print('read_XML_to_Entry: (%s) : (%s)' % (desg.tag, desg.text))
                     self['Designators'][desg.tag] = desg.text
 
             # Comments is a list of strings

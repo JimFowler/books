@@ -1,3 +1,8 @@
+2016-08-07  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalWin.py (JournalEntry.printPrinter): Made
+	minor changes to journal.
+
 2016-04-11  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/mainWindow.py (BookEntry.saveFileAs): modified
