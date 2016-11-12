@@ -23,6 +23,7 @@
 
   <a href="https://www.youtube.com/channel/UCUaayO0NgrA4--4LU3fDL8w"> Bookbinders Chronicle</a>
   <br><a href="https://www.youtube.com/channel/UCTCkA8YbXGh6xqh9sVuF6eA">Amanda Buck - Fine Bindings</a>
+  <br><a href="http://keithsmithbooks.com/">Keith Smith Books</a>
 
   <br><a href="http://www.sagereynolds.com/">Sage Reynolds Workshop</a>
   <font size="2">
@@ -38,7 +39,9 @@
     <li> <a href="https://www.youtube.com/watch?v=BL7CaBLUKRM&list=UUVrw-tSHwbBADzIncCILN1A">Lining the Spine Part 2</a>
     <li> <a href="https://www.youtube.com/watch?v=xI0pcRd_qdw&list=UUVrw-tSHwbBADzIncCILN1A">Making a Case Part 1</a>
     <li> <a href="https://www.youtube.com/watch?v=glbe_fDpCiU&list=UUVrw-tSHwbBADzIncCILN1A">Making a Case Part 2</a>
+  </ul>
   </font>
+  
 </td>
 </tr>
 
@@ -50,6 +53,7 @@
 
   <a href="http://www.cattailrun.com/">Cat Tail Run</a>
   <br><a href="http://bookbindingacademy.org/">Amer. Acad. Bookbinding</a>
+  <br><a href="http://atxbookarts.org/">Austin Book Arts Center</a>
 </td>
 
 <td width=250 height=250 valign="Top">
