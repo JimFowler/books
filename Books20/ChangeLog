@@ -1,5 +1,14 @@
 2016-12-11  Jim Fowler  <jrf@biblion>
 
+	* Tools/journals: Changed signal connect to use new style signals
+	which is the only mechanism supported in PyQt5.
+
+	* Tools/journalWin.py: Changed signal connect to use new style signals
+	which is the only mechanism supported in PyQt5.
+
+	* Tools/journalMenus.py: Changed signal connect to use new style signals
+	which is the only mechanism supported in PyQt5.
+
 	* Tools/bookentry/symbol.py (MyButton): Changed signal mechanism
 	to new PyQt5 signals.
 

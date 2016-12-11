@@ -14,8 +14,10 @@ import sys
 import os
 import platform
 import fileinput
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
+
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
 
 import bookentry.ui_JournalEntry as ui_journalEntry
 import bookentry.journalFile as jf
@@ -78,27 +80,27 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       menus.createMenus(self, self.menubar)
 
-      self.connect(self.quitButton, SIGNAL('released()'), self.quit)
-      self.connect(self.saveButton, SIGNAL('released()'), self.saveEntry)
-      self.connect(self.newButton, SIGNAL('released()'), self.newEntry)
-      self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry)
+      self.quitButton.released.connect(self.quit)
+      self.saveButton.released.connect(self.saveEntry)
+      self.newButton.released.connect(self.newEntry)
+      self.deleteButton.released.connect(self.deleteEntry)
 
       self.saveButton.setEnabled(False)
       self.deleteButton.setEnabled(False)
       self.newButton.setEnabled(True)
 
-      self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
+      self.indexEntry.returnPressed.connect(self.indexChanged)
 
-      self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.titleEdit, SIGNAL('textChanged()'), self.setTitleDirty)
-      self.connect(self.publisherEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.abbreviationsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.startDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.endDateEdit, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.LinkPreviousEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.LinkNextEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.designatorEdit, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.CommentsEdit, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.titleEdit.textChanged.connect(self.setEntryDirty)
+      self.titleEdit.textChanged.connect(self.setTitleDirty)
+      self.publisherEdit.textChanged.connect(self.setEntryDirty)
+      self.abbreviationsEdit.textChanged.connect(self.setEntryDirty)
+      self.startDateEdit.textChanged.connect(self.setEntryDirty)
+      self.endDateEdit.textChanged.connect(self.setEntryDirty)
+      self.LinkPreviousEdit.textChanged.connect(self.setEntryDirty)
+      self.LinkNextEdit.textChanged.connect(self.setEntryDirty)
+      self.designatorEdit.textChanged.connect(self.setEntryDirty)
+      self.CommentsEdit.textChanged.connect(self.setEntryDirty)
 
       self.openNewFile()
 
@@ -198,9 +200,9 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
    def saveFileAs(self):
       """Ignore dirty entries and save the file as..."""
-      fname = QFileDialog.getSaveFileName(self,
+      fname, filterA = QFileDialog.getSaveFileName(self,
           "%s -- Choose file"%QApplication.applicationName(),
-                                          ".", "*.txt")
+                                          ".", "*.xml")
       if fname:
          self.jf.writefile_XML(fname)
          self.setWinTitle(self.jf.getBaseName())
@@ -291,8 +293,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       ask the user first."""
       ans = QMessageBox.warning( self, 'Delete Entry?',
                                  'Are you sure you want to delete this entry? This action can not be undone!',
-                                 QMessageBox.Ok,
-                                 QMessageBox.Cancel )
+                                 QMessageBox.Ok|QMessageBox.Cancel )
       if ans == QMessageBox.Cancel:
          return
 
@@ -428,9 +429,8 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
    def openSymbol(self):
       """Open the symbol entry form."""
       self.symbolTable = symbol.SymbolForm(self.symbolTableName, 'FreeSans', 14, self)
+      self.symbolTable.sigClicked.connect(self.insertChar )
       self.symbolTable.show()
-      self.connect(self.symbolTable, SIGNAL('sigClicked'),
-                   self.insertChar )
 
    def setSymbolTableName(self, name):
       """Set the name of the symbol table to use in place of the
@@ -471,8 +471,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.headerWindow = hw.HeaderWindow(self)
       self.headerWindow.setBookFile(self.jf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                         "Edit Headers - %s" % (self.jf.getBaseName()),
-                         None, QApplication.UnicodeUTF8))
+                         "Edit Headers - %s" % (self.jf.getBaseName()),None))
       self.headerWindow.setHeaderText(self.jf.getHeader())
       self.headerWindow.show()
 
@@ -530,9 +529,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.tmpEntryDirty:
          ans = QMessageBox.warning( self, 'Save Entry?',
                                     'Entry has changed. Do you want to save it?',
-                                    QMessageBox.Save,
-                                    QMessageBox.No,
-                                    QMessageBox.Cancel )
+                                    QMessageBox.Save|QMessageBox.No|QMessageBox.Cancel )
 
          if ans == QMessageBox.Save:
             self.saveEntry()
@@ -545,9 +542,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       if self.jf.isDirty():
          ans = QMessageBox.warning( self, 'Save file?',
                                     'The File has changed. Do you want to save it?',
-                                    QMessageBox.Save,
-                                    QMessageBox.Discard,
-                                    QMessageBox.Cancel )
+                                    QMessageBox.Save|QMessageBox.Discard|QMessageBox.Cancel )
 
          if ans == QMessageBox.Save:
             self.saveFile()
@@ -564,9 +559,9 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          return
 
       # else get a file name 
-      fname = QFileDialog.getOpenFileName(self,
+      fname, filterA = QFileDialog.getOpenFileName(self,
           "%s -- Choose new file"%QApplication.applicationName(),
-                            self.jf.getDirName(), "*.txt")
+                            self.jf.getDirName(), "*.xml")
       if fname:
          self.openFile(fname)
 
@@ -580,7 +575,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       """
       self.setWindowTitle(QApplication.translate("MainWindow", 
                  "Journal Entry  v %s   -   %s" % (__version__, name),
-                 None, QApplication.UnicodeUTF8))
+                 None))
 
    def EntryToDisplay(self, entry):
       """Given an entry, display the parts on the GUI display."""

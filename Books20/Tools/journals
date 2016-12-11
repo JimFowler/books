@@ -7,8 +7,10 @@
 import sys
 import os
 import argparse
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
+
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
 
 # Trouble shooting assistance
 from pprint import *
@@ -53,8 +55,7 @@ def main():
    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
    
    form = mw.JournalEntry()
-   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-                   form.setFocusChanged)
+   app.focusChanged.connect(form.setFocusChanged)
 
    if args.version:
       hstr = form.helpString()

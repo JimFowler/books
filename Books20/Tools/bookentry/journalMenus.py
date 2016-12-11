@@ -2,13 +2,16 @@
 """
 # -*- mode: Python;-*-
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
-
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
+    
 def createAction(self, text, slot=None, shortcut=None, icon=None,
-                 tip=None, checkable=False, signal="triggered()"):
+                 tip=None, checkable=False, signal="triggered"):
     """Usage: createAction( self, text, slot=None, shortcut=None, icon=None,
                             tip=None, checkable=False, signal="triggered")
+         Note: the vars 'slot', 'shortcut', 'icon', 'tip',
+               and 'signal' should be of type string.
     """
     action = QAction(text, self)                                  
     if icon is not None:                                          
@@ -19,7 +22,7 @@ def createAction(self, text, slot=None, shortcut=None, icon=None,
         action.setToolTip(tip)                                    
         action.setStatusTip(tip)                                  
     if slot is not None:                                          
-        self.connect(action, SIGNAL(signal), slot)
+        eval('action.' + signal + '.connect(' + slot + ')')
     else:
         action.enabled = False
     if checkable:                                                 
@@ -34,21 +37,38 @@ def createMenus( self, menuBar):
 
 
         newFileAction = createAction( self, '&New File',
-                                       self.openNewFile, 'Ctrl+N' )
+                                       slot='self.openNewFile',
+                                      shortcut='Ctrl+N')
+        
         openFileAction = createAction( self, '&Open File...',
-                                       self.askOpenFile, 'Ctrl+O' )
+                                       slot='self.askOpenFile',
+                                       shortcut='Ctrl+O')
+        
         saveAction = createAction( self, '&Save File',
-                                   self.saveFile, 'Ctrl+S')
+                                   slot='self.saveFile',
+                                   shortcut='Ctrl+S')
+        
         saveAsAction = createAction( self, 'Save File &As...',
-                                     self.saveFileAs, 'Ctrl+A')
+                                     slot='self.saveFileAs',
+                                     shortcut='Ctrl+A')
+        
         newEntAction = createAction( self, 'New &Entry',
-                                     self.newEntry, 'Ctrl+E')
+                                     slot='self.newEntry',
+                                     shortcut='Ctrl+E')
+        
         saveEntAction = createAction( self, 'Save Ent&ry', 
-                                      self.saveEntry, 'Ctrl+R' )
-        printAction = createAction( self, '&Print Entry', self.printEntry,
-                                    'Ctrl+P')
-        exitAction = createAction(self, '&Quit', self.quit, 'Ctrl+Q',
-                                  'filequit', 'Close the Application')
+                                      slot='self.saveEntry',
+                                      shortcut='Ctrl+R')
+        
+        printAction = createAction( self, '&Print Entry',
+                                    slot='self.printEntry',
+                                    shortcut='Ctrl+P')
+        
+        exitAction = createAction(self, '&Quit',
+                                  slot='self.quit',
+                                  shortcut='Ctrl+Q',
+                                  icon='filequit',
+                                  tip='Close the Application')
 
         fileMenu.addAction(newFileAction)
         fileMenu.addAction(openFileAction)
@@ -65,19 +85,28 @@ def createMenus( self, menuBar):
 
 
         # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
-        cutAction = createAction(self, 'Cu&t', None, 'Ctrl+X')
+        cutAction = createAction(self, 'Cu&t', shortcut='Ctrl+X')
         cutAction.setEnabled(False)
-        copyAction = createAction(self, '&Copy', None, 'Ctrl+C') 
+
+        copyAction = createAction(self, '&Copy', shortcut='Ctrl+C') 
         copyAction.setEnabled(False)
-        pasteAction = createAction(self, '&Paste', None, 'Ctrl+V')
+
+        pasteAction = createAction(self, '&Paste', shortcut='Ctrl+V')
         pasteAction.setEnabled(False)
-        deleteAction = createAction(self, '&Delete', None, 'Del')
+
+        deleteAction = createAction(self, '&Delete', shortcut='Del')
         deleteAction.setEnabled(False)
+
         addInfoAction = createAction(self, 'Additional &Info...',
-                                     None, 'Ctrl+T')
-        symbolAction = createAction(self, '&Insert Symbol...', self.openSymbol, 'Ctrl+I')
+                                     shortcut='Ctrl+T')
+        
+        symbolAction = createAction(self, '&Insert Symbol...',
+                                    slot='self.openSymbol',
+                                    shortcut='Ctrl+I')
+        
         headerAction = createAction(self, 'Edit &Header...',
-                                    self.editHeader, 'Ctrl+H')
+                                    slot='self.editHeader',
+                                    shortcut='Ctrl+H')
 
         #origstrAction = createAction(self, 'Show Original String',
         #                            self.showOrigStr)
@@ -109,5 +138,5 @@ def createMenus( self, menuBar):
         # set up the Help menus
         helpMenu = menuBar.addMenu('&Help')
         aboutAction = createAction(self, '&About Journal Entry...',
-                                   self.helpAbout )
+                                   slot='self.helpAbout' )
         helpMenu.addAction(aboutAction)
