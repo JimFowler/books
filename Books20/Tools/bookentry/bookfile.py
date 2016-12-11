@@ -195,7 +195,7 @@ class BookFile():
             return self.readFile_XML()
         else:
             # return error to caller who should know about Qt message boxes.
-            print('Invalid file extension for %s' % self._filename)
+            print('Invalid file extension for %s' % self._fileName)
             return 0
 
 
@@ -214,7 +214,7 @@ class BookFile():
             return self.writeFile_XML()
         else:
             # return error to caller who should know about Qt message boxes.
-            print('Invalid file extension for %s' % self._filename)
+            print('Invalid file extension for %s' % self._fileName)
             return 0
 
 

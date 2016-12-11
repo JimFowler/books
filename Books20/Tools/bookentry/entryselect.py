@@ -1,18 +1,26 @@
 """Choose an entry from the list."""
 
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+try:
+    from PyQt5.QtCore import *
+    from PyQt5.QtGui import *
+    from PyQt5.QtWidgets import *
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui import *
 
 import bookentry.ui_EntrySelect as ui_EntrySelect
 
 class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
+
+    lineEmit = pyqtSignal( object, name='lineEmit')
 
     def __init__(self, parent=None, shortTitleList=None):
         super(EntrySelect, self).__init__()
 
         self.setupUi(self)
 
+        
         self.redBkgd = QTextCharFormat()
         self.redBkgd.setBackground(QBrush(QColor("red")))
 
@@ -47,7 +55,7 @@ class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
         # emit selection and close?
         #print('selected: %s '% self.cursor.selectedText())
         emitStr = self.cursor.selectedText()
-        self.emit(SIGNAL("lineEmit"), (emitStr, ) )
+        self.lineEmit.emit( (emitStr, ) )
         self.close()
 
     def highlight(self):

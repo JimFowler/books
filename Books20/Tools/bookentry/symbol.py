@@ -11,25 +11,35 @@ The packaged was modified for BookEntry.
 """
 # -*- mode: Python; -*-
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
-
+try:
+    from PyQt5.QtCore import *
+    from PyQt5.QtGui  import *
+    from PyQt5.QtWidgets import *
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui  import *
+    
 import bookentry.ajb_rc
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,
     in our case a character. When the button is clicked
     it emits the text string."""
+
+    sigClicked = pyqtSignal( object, name='sigClicked')
+    
     def __init__( self, parent=None ):
         QToolButton.__init__( self, parent )
-        QObject.connect( self, SIGNAL("clicked()"), self.slotClicked )
+        self.clicked.connect( self.slotClicked )
 
     def slotClicked( self ):
-        self.emit( SIGNAL( "sigClicked" ), ( self.text(), )) 
+        self.sigClicked.emit( ( self.text(), )) 
 
 class SymbolForm( QDialog ):
     """Create a table of buttons which emit their character
     when pressed."""
+
+    sigClicked = pyqtSignal( object, name='sigClicked')
 
     def __init__( self, file_name, font_family, font_size, parent=None ):
         QWidget.__init__( self, parent )
@@ -92,7 +102,7 @@ class SymbolForm( QDialog ):
             button.setObjectName('%03d%03dButton'%(row,col))
             self.gridLayout.addWidget( button, row, col, 1, 1 )
             self.buttonGroup.addButton( button, id )
-            QObject.connect( button, SIGNAL("sigClicked"), self.slotClicked )
+            button.sigClicked.connect( self.slotClicked )
             self.buttons[row, col] = button
             col += 1
             id += 1
@@ -115,7 +125,7 @@ class SymbolForm( QDialog ):
     def slotClicked( self, obj ):
         char =  obj[0]
         self.clicked = True
-        self.emit( SIGNAL( "sigClicked" ), ( char, ) )
+        self.sigClicked.emit( ( char, ) )
         self.clicked = False
 
 

@@ -11,9 +11,10 @@ import re
 from pprint import *
 pp = PrettyPrinter()
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
-
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
+   
 from nameparser import HumanName
 
 import bookentry.ui_BookEntry as ui_BookEntry
@@ -77,38 +78,38 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       menus.createMenus(self, self.menubar)
 
-      self.connect(self.quitButton, SIGNAL('released()'), self.quit )
-      self.connect(self.newEntryButton, SIGNAL('released()'), self.newEntry )
-      self.connect(self.acceptButton, SIGNAL('released()'), self.saveEntry )
-      self.connect(self.deleteButton, SIGNAL('released()'), self.deleteEntry )
-      self.connect(self.insertButton, SIGNAL('released()'), self.askInsertEntry )
+      self.quitButton.released.connect( self.quit )
+      self.newEntryButton.released.connect( self.newEntry )
+      self.acceptButton.released.connect( self.saveEntry )
+      self.deleteButton.released.connect( self.deleteEntry )
+      self.insertButton.released.connect( self.askInsertEntry )
       self.acceptButton.setEnabled(False)
       self.deleteButton.setEnabled(False)
       self.insertButton.setEnabled(False)
 
-      self.connect(self.indexEntry, SIGNAL('returnPressed()'), self.indexChanged)
+      self.indexEntry.returnPressed.connect( self.indexChanged)
 
-      self.connect(self.volNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.secNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.subSecNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.itemNum, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.authorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.editorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.titleEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.publEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.editionEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.yearEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.pageEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.priceEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.reviewsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.reprintEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.referenceEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.fromlangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.tolangEntry, SIGNAL('textChanged(QString)'), self.setEntryDirty)
-      self.connect(self.translatorEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.compilersEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.contribEntry, SIGNAL('textChanged()'), self.setEntryDirty)
-      self.connect(self.commentsEntry, SIGNAL('textChanged()'), self.setEntryDirty)
+      self.volNum.textChanged.connect( self.setEntryDirty)
+      self.secNum.textChanged.connect( self.setEntryDirty)
+      self.subSecNum.textChanged.connect( self.setEntryDirty)
+      self.itemNum.textChanged.connect( self.setEntryDirty)
+      self.authorEntry.textChanged.connect( self.setEntryDirty)
+      self.editorEntry.textChanged.connect( self.setEntryDirty)
+      self.titleEntry.textChanged.connect( self.setEntryDirty)
+      self.publEntry.textChanged.connect( self.setEntryDirty)
+      self.editionEntry.textChanged.connect( self.setEntryDirty)
+      self.yearEntry.textChanged.connect( self.setEntryDirty)
+      self.pageEntry.textChanged.connect( self.setEntryDirty)
+      self.priceEntry.textChanged.connect( self.setEntryDirty)
+      self.reviewsEntry.textChanged.connect( self.setEntryDirty)
+      self.reprintEntry.textChanged.connect( self.setEntryDirty)
+      self.referenceEntry.textChanged.connect( self.setEntryDirty)
+      self.fromlangEntry.textChanged.connect( self.setEntryDirty)
+      self.tolangEntry.textChanged.connect( self.setEntryDirty)
+      self.translatorEntry.textChanged.connect( self.setEntryDirty)
+      self.compilersEntry.textChanged.connect( self.setEntryDirty)
+      self.contribEntry.textChanged.connect( self.setEntryDirty)
+      self.commentsEntry.textChanged.connect(self.setEntryDirty)
 
       self.openNewFile()
 
@@ -163,7 +164,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          return
 
       # else get a file name 
-      fname, filterA = QFileDialog.getOpenFileNameAndFilter(self,
+      fname, filterA = QFileDialog.getOpenFileName(self,
           "%s -- Choose new file"%QApplication.applicationName(),
                             self.bf.getDirName(), "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
       if fname:
@@ -196,19 +197,22 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def saveFile(self):
       """Ignore dirty entries and just save the file."""
-      #print("saving file %s"%self.bf.getFileName())
-      if self.bf.getFileName() is None:
-         self.saveFileAs()
-      else:
-         self.bf.writeFile()
+
+      if self.bf.getFileName() is None or self.bf.getBaseName() == 'document1':
+         if self.saveFileAs() == QMessageBox.Cancel:
+            return QMessageBox.Cancel
+
+      self.bf.writeFile()
 
       self.statusbar.showMessage('Saving file ' + self.bf.getBaseNameWithExtension())
       QTimer.singleShot(10000, self.statusbar.clearMessage  )
 
+      return QMessageBox.Save
+
 
    def saveFileAs(self):
       """Ignore dirty entries and save the file as..."""
-      fname, filterA = QFileDialog.getSaveFileNameAndFilter(self,
+      fname, filterA = QFileDialog.getSaveFileName(self,
           "%s -- Choose file"%QApplication.applicationName(),
                                              self.bf.getDirName(),
            "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
@@ -223,6 +227,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                
          self.bf.writeFile(fname)
          self.setWinTitle(self.bf.getBaseNameWithExtension())
+         return QMessageBox.Save
+      else:
+         return QMessageBox.Cancel
+         
 
    #
    # Menu and button slots for Entry Actions on File menu
@@ -284,8 +292,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.entrySelect.setText( self.bf.mkShortTitleList() )
 
       self.entrySelect.show()
-      self.connect(self.entrySelect, SIGNAL('lineEmit'),
-                   self.insertEntry )
+      self.entrySelect.lineEmit.connect( self.insertEntry )
 
    def insertEntry(self, line):
       """Parse the short title line, get the index number and insert
@@ -308,8 +315,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       ask the user first."""
       ans = QMessageBox.warning( self, 'Delete Entry?',
                                  'Are you sure you want to delete this entry? This action can not be undone!',
-                                 QMessageBox.Ok,
-                                 QMessageBox.Cancel )
+                                 QMessageBox.Ok| QMessageBox.Cancel )
       if ans == QMessageBox.Cancel:
          return
 
@@ -400,8 +406,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Open the symbol entry form."""
       self.symbolTable = symbol.SymbolForm(self.symbolTableName, 'FreeSans', 14, self)
       self.symbolTable.show()
-      self.connect(self.symbolTable, SIGNAL('sigClicked'),
-                   self.insertChar )
+      self.symbolTable.sigClicked.connect( self.insertChar )
 
    def setSymbolTableName(self, name):
       """Set the name of the symbol table to use in place of the
@@ -413,8 +418,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.headerWindow = hw.HeaderWindow(self)
       self.headerWindow.setBookFile(self.bf)
       self.headerWindow.setWindowTitle(QApplication.translate("headerWindow", 
-                                  "Edit Headers - %s" % (self.bf.getBaseNameWithExtension()),
-                                  None, QApplication.UnicodeUTF8))
+                                  "Edit Headers - %s" % (self.bf.getBaseNameWithExtension()), None))
       self.headerWindow.setHeaderText(self.bf.getHeader())
       self.headerWindow.show()
 
@@ -465,9 +469,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if self.tmpEntryDirty:
          ans = QMessageBox.warning( self, 'Save Entry?',
                                     'Entry has changed. Do you want to save it?',
-                                    QMessageBox.Save,
-                                    QMessageBox.No,
-                                    QMessageBox.Cancel )
+                                    QMessageBox.Save | QMessageBox.Discard | QMessageBox.Cancel,
+                                    QMessageBox.Save)
 
          if ans == QMessageBox.Save:
             self.saveEntry()
@@ -480,12 +483,10 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       if self.bf.isDirty():
          ans = QMessageBox.warning( self, 'Save file?',
                                     'The File has changed. Do you want to save it?',
-                                    QMessageBox.Save,
-                                    QMessageBox.Discard,
-                                    QMessageBox.Cancel )
+                                    QMessageBox.Save|QMessageBox.Discard|QMessageBox.Cancel )
 
          if ans == QMessageBox.Save:
-            self.saveFile()
+            ans = self.saveFile()
             # set save file menu enable to False
 
       return ans
@@ -498,9 +499,12 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       """Creates the string 'BookEntry vx.x - name' and
       places it into the window title.
       """
+      #self.setWindowTitle(QApplication.translate("MainWindow", 
+      #                            "AJB Book Entry  v %s   -   %s" % (__version__, name),
+      #                            None, QApplication.UnicodeUTF8))
       self.setWindowTitle(QApplication.translate("MainWindow", 
                                   "AJB Book Entry  v %s   -   %s" % (__version__, name),
-                                  None, QApplication.UnicodeUTF8))
+                                  None))
 
    def setDefaultVolumeNumber(self, num):
       """Sets the default volume number for new entries."""
@@ -930,8 +934,7 @@ if __name__ == '__main__':
    app = QApplication(sys.argv)
    app.setApplicationName('Book Entry')
    form = BookEntry()
-   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-                   form.setFocusChanged)
+   app.focusChanged.connect(form.setFocusChanged)
 
    form.show()
    sys.exit(app.exec_())

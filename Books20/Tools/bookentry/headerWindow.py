@@ -8,9 +8,13 @@ All text work done through the intermediate bookfile.
 Need to explicitly save this bookfile to disk in order
 to save your changed permenantly
 """
-
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
+try:
+    from PyQt5.QtCore import *
+    from PyQt5.QtGui  import *
+    from PyQt5.QtWidgets import *
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui  import *
 
 import bookentry.ui_HeaderEntry as ui_HeaderEntry
 

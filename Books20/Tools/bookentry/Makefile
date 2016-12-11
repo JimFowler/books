@@ -8,8 +8,9 @@
 #
 # Definitions
 #
-PYUIC = pyuic4
-PYRCC = pyrcc4 -py3
+PYUIC = pyuic5
+PYRCC = pyrcc5
+#PYRCC = pyrcc4 -py3
 
 #
 # Target lists

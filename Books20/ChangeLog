@@ -1,3 +1,18 @@
+2016-12-11  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/symbol.py (MyButton): Changed signal mechanism
+	to new PyQt5 signals.
+
+	* Tools/bookentry/mainWindow.py: Changed signal connect to use new
+	style signals which is the only mechanism supported in PyQt5.
+	Also changed some dialog boxes for new calling sequence.
+
+	* Tools/bookentry/menus.py: Changed signal connect to use new
+	style signals which is the only mechanism supported in PyQt5.
+
+	* Tools/ajbbooks: Changed signal connect to use new style signals
+	which is the only mechanism supported in PyQt5.
+
 2016-08-07  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/journalWin.py (JournalEntry.printPrinter): Made

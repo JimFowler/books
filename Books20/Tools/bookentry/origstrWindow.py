@@ -1,10 +1,14 @@
 """A window for viewing the original string entry
 if it exists.
 """
-
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
-
+try:
+    from PyQt5.QtCore import *
+    from PyQt5.QtGui  import *
+    from PyQt5.QtWidgets import *
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui  import *
+    
 import bookentry.ui_OrigStr as ui_OrigStr
 
 class OrigStrWindow(QDialog, ui_OrigStr.Ui_origstrDialog):

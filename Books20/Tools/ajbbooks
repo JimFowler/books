@@ -7,8 +7,13 @@
 import sys
 import os
 import argparse
-from PyQt4.QtCore import *
-from PyQt4.QtGui  import *
+try:
+   from PyQt5.QtCore import *
+   from PyQt5.QtGui  import *
+   from PyQt5.QtWidgets import *
+except:
+   from PyQt4.QtCore import *
+   from PyQt4.QtGui  import *
 
 # Trouble shooting assistance
 from pprint import *
@@ -59,8 +64,7 @@ def main():
    app.setWindowIcon(QIcon(':/icon_ajb.svg'))
    
    form = mw.BookEntry()
-   QObject.connect(app, SIGNAL("focusChanged(QWidget *, QWidget *)"), 
-                   form.setFocusChanged)
+   app.focusChanged.connect( form.setFocusChanged)
 
    if args.version:
       hstr = form.helpString()
