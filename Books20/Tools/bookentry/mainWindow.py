@@ -33,7 +33,7 @@ __DefaultSymbolTableName__ = __dirName + '/symbols.txt'
 del __dirName
 del __basename
 
-__version__ = '1.0'
+__version__ = '2.0'
 
 
 class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
