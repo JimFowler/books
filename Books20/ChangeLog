@@ -1,3 +1,8 @@
+2016-12-24  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/symbols.txt: Reorder entries to table has
+	smaller width.
+
 2016-12-11  Jim Fowler  <jrf@biblion>
 
 	* Tools/journals: Changed signal connect to use new style signals

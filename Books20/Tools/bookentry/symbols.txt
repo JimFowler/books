@@ -42,10 +42,10 @@
 í, Small letter i with acute
 î, Small letter i with caron
 ī, Small letter i with macron
+
 ł, Small letter l with stoke
 ñ, Small letter n with tilde
 ń, Small letter n with acute
-
 Ň, Capital letter N with caron
 ň, Small letter n with caron
 Ö, Capital letter O with diaeresis
@@ -59,6 +59,7 @@
 õ, Small letter o with tilde
 Ř, Capital letter r with caron
 ř, Small letter r with caron
+
 Ś, Capital letter S with acute
 ś, Small letter s with acute
 Š, Capital letter S with caron
@@ -68,7 +69,6 @@
 Ş, Capital letter S with cedilla
 ş, Small letter s with cedilla
 ß, Small letter sharp s
-
 ţ, Small letter t with cedilla
 ť, Small letter t with caron
 Ü, Capital letter U with diaeresis
@@ -77,6 +77,7 @@
 ù, Small letter u with grave
 ú, Small letter u with accent
 û, Small letter u wit circumflex
+
 ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
 Ź, Capital letter Z with acute
@@ -161,4 +162,3 @@
 #
 # The End
 #
-
