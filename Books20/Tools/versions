@@ -14,8 +14,11 @@ Version of ajbbooks (also version tags for the entire repository)
 
 2014-01-11 18:49:21 # git tag -a v1.7 -m "Added version flag to ajbbooks"	  d06d9d982b6fd5e72b70b711673db01a4ec500fc
 
-2016-01-16 13:10:36 # git tag -a v1.9 -m "Completed version 1 documentation"	  b5795a54b60da7853af749230460bcce21980a6b
+2016-01-16 13:10:36 # git tag -a v1.9 -m "Completed version 1 documentation"	  b5795a54b60da7853af749230460bcce21980a6
+
+2016-12-31 13:41:28 # git tag -a v2.0 -m "version 2.0 with Xml"                   df01ee9630d8df3f3874e6f8ac63c5c3e78ce1bb
+
 
 git push origin --tags
 git push github --tags
-git log -1 --format=\%ai MY_TAG_NAME
+git log -1 --format=\%ai <MY_TAG_NAME>
