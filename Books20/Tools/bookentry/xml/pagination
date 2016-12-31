@@ -29,10 +29,11 @@ German,        English, code
 Tafeln,        tables,   t
 Sternkarten, star cards
               (charts?), c
-bildtafeln,  pictures boards
-	       (plates), P
-  abb.,   illustrations, i
+bildtafeln,      plates, P
+         (pictures board)
+abb.,     illustrations, i
 zeichnungn,    drawings, d
+modellbogen,     models, b  cf 40.11.04
 
 At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08 what do the
 brackets mean?
@@ -45,7 +46,9 @@ Some page counts use Roman numerals so the characters I, V, X, L, C,
 D, and M should not be used for the code suffix or prefix. However, if
 we have an appendix C with Roman pagination, we have a conflict. Just
 such a situation occurs in 43.51(0).01. I used brackets around the
-page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p
+page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p. Also
+brackets multiple collections of pages per appendix, as in the example
+above, Appendix C has 9 pages of introduction and 161 pages of material.
 
 Code should provide
 element PaginationToXml(string)

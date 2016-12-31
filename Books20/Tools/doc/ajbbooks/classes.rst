@@ -162,3 +162,16 @@ contains a bookfile, header entry, and symbol table objects.
     :members:
     :show-inheritance:
 
+
+.. _bookfile-xsd:
+
+bookfile.xsd
+____________
+
+This is the current schema for the external file format BookFileXml.
+
+.. literalinclude:: ../../bookentry/xml/bookfile2.xsd
+   :language: xml
+   :linenos:
+
+   

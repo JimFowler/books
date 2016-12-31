@@ -10,7 +10,7 @@ Welcome to the AJBbooks Users Guide!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    introduction
    installation

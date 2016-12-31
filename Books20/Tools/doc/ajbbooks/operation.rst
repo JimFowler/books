@@ -77,10 +77,6 @@ has been modified.
 **Save Entry <Ctrl-R>**: Save the current entry in the display to the list of
 entries in the bookfile object.
 
-**Delete Entry <Ctrl-D>**: Delete the displayed entry from the
-internal bookfile object. A dialog box will appear to confirm that you
-want to delete this entry.
-
 **Print Entry <Ctrl-P>**: Will print a screen dump of the entry window.
 
 **Quit <Ctrl-Q>**: Close the window and quits the application.  If there are
@@ -101,6 +97,10 @@ button.
 **Paste <Ctrl-V>**: This menu item is disabled. The Cut/Copy/Paste menu in any
 of the text or line items may be brought up with the right mouse
 button.
+
+**Delete <Del>**: This menu item is disabled. The Cut/Copy/Paste menu is any
+of the text of line items may be brought up with the right mouse
+button
 
 **Insert Symbol... <Ctrl-I>**: Brings up a window with a list of
 commonly used Unicode characters.  By clicking on a character it will

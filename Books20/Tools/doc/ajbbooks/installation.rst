@@ -30,23 +30,24 @@ If you install in a non-standard directory, then you will need to
 set the environment variables **PYTHONPATH**. I put the following in
 my ``.bashrc`` file.
 
-``export PYTHONPATH=/home/jrf/lib/python3.4/site-packages``
+``export PYTHONPATH=/home/jrf/lib/python3.5/site-packages``
 
 But if you use a variant of csh, then you could put the following
 in your ``.cshrc`` file.
 
-``setenv PYTHONPATH /home/jrf/lib/python3.4/site-packages``
+``setenv PYTHONPATH /home/jrf/lib/python3.5/site-packages``
 
 
 Building and Installing the Documentation
 =========================================
 
-The documentation can be found in ./Tools/doc. It is written using
-Sphinx version 1.2.2 (cf. `sphinx-doc.org
-<http://sphinx-doc.org/>`_). Output formats may be HTML, LaTeX, pdf,
-postscript, epub, or other formats.  I primarily use pdf and HTML.
-(Making the pdf version requires that ``pdflatex`` be installed.)  You
-can run ``make help`` to see what other formats are available.
+The documentation can be found in ./Tools/doc. It is first written
+using Sphinx version 1.2.2 and is now building under Sphinx version
+1.4.6 (cf. `sphinx-doc.org <http://sphinx-doc.org/>`_). Output formats
+may be HTML, LaTeX, pdf, postscript, epub, or other formats.  I
+primarily use pdf and HTML.  (Making the pdf version requires that
+``pdflatex`` be installed.)  You can run ``make help`` to see what
+other formats are available.
 
 To build the HTML and pdf documentation in the **doc** directory, run
 the command

@@ -4,7 +4,7 @@ Theory of Operation
 Overview
 ======== 
 
-**ajbbooks** was written primarily to facilitate user input of entries
+**ajbbooks** was written to facilitate user input of entries
 and to facilitate review of entries (proofreading) by letting the user
 concentrate on the content of the entry rather than the formatting. In
 addition, it needed to be able to read the already existing book lists
@@ -21,13 +21,15 @@ doesn't care much about the actual content of fields. It just needs to know
 how to parse and write the fields.
 
 To achieve these goals **ajbbooks** maintains three different views of
-a book list.  The first is the external comma separated text file of
-entries called a DiskFile.  The second is the internal python class
-BookFile. The third is the user's graphical view of a single entry
-called BookEntry.  Various functions exist to transform from one view
-to the other via the internal BookFile class. Thus BookFile knows how
-to read/write the DiskFile while BookEntry knows how the read/write
-the BookFile.
+a book list.  The first is the external file on disk which may either
+be a comma separated text file of entries called a BookFileTxt or an
+XML file known as BookFileXml.  The second is the internal python
+class BookFile. The third is the user's graphical view of a single
+entry called BookEntry.  Various functions exist to transform from one
+view to the other via the internal BookFile class. Thus the intermal
+BookFile object knows how to read/write the BookFileTxt and
+BookFileXml formats while BookEntry knows how the read/write the
+BookFile.
 
 The three state view in shown in the first illustration while second shows
 the the overall class structure in the views.
@@ -42,27 +44,45 @@ the the overall class structure in the views.
 
 .. figure:: images/block_diagram.png
 
-   The block diagram of the class hierarchy.
+   The block diagram of the class hierarchy. Note that AJBentry.py and bookfile.py contain the code to read/write both the BookFileTxt format as well as the BookFileXml
 
 
-The External BookFile Format
-============================
 
-A single text file, i.e. a BookFile, consists of a header section
-followed by an unlimited number of entries.  The header section is
+
+The External File Format
+========================
+
+The external file formats contain a header and a list of
+entries. Currently all entries in an external are related by AJB
+volume, however, the external format is primarily just a list of
+entries. The entries may or may not have a relationship with each
+other.
+
+As of version 2.0 the code supports both the BookFileTxt as well as the
+BookFileXml formats.  The BookFileTxt format is not backwards compatible with
+the BookFileXml format and is deprecated. It will soon
+be removed from service.
+
+
+The BookFileTxt Format
+----------------------
+
+A simple text file format, BookFileTxt, was the first external format
+used in **ajbbooks**. It consists of a unnumbered header section
+followed by an unlimited list of numbered entries.  The header section is
 always at the start of the file and the first numbered line begins the
 entries. Blank lines or lines that do not start with a number are
-ignored when looking for entries. Currently all entries in a BookFile
-are related by AJB volume, however, a BookFile is primarily just a
-list of entries. The entries may or may not have a relationship with
-each other.
+ignored when looking for entries.
 
 The entries themselves have a very specific format but are basically a
-single line with fields separated by commas. This format was chosen
-to make parsing the entry easy with tools that I was familiar with at
-the time. The fields were chosen to match the usual information within
-the AJB.  However, this format rather quickly needed to be extended as
-more variant entries were found.
+single line with fields separated by commas. This format was chosen to
+make parsing the entry easy with tools that I was familiar with at the
+time; primarly Microsoft Word™ and Excel™. The fields were chosen to
+match the usual information within the AJB.  However, this format
+rather quickly needed to be extended as more variant entries were
+found.  Unfortunately the only extension mechanism that did not require
+rewritting already existing files consisted of adding additional comment
+types.
 
 The entry format fields are
 
@@ -78,10 +98,10 @@ and a typical entry looks like,
   also published New York: John Wiley & Sons;
 
 Field Definitions
------------------
+^^^^^^^^^^^^^^^^^
 
 The first field contains three different pieces of information. the
-index number is simply a count of the entries within the BookFile. The
+index number is simply a count of the entries within the BookFileTxt. The
 AJB_number is the index number within the *Astronomischer
 JahresBericht* consisting of the volume number, the section number, a
 subsection number in parenthesis, and the entry number within the
@@ -106,10 +126,10 @@ The ninth field is a list of comments separated by a semi-colon.
 Comments are where all the entry variations are kept.
 
 Comment Definitions
--------------------
+^^^^^^^^^^^^^^^^^^^
 
-By late 2011 I had created six book files by hand using Microsoft Word
-and Excel. As I progressed through the files I found various entries
+By late 2011 I had created six book files by hand using Microsoft Word™
+and Excel™. As I progressed through the files I found various entries
 that were not in a standard format. However, the additional
 information was important to collect.  Rather than add additional
 fields this information was put into the comments field with
@@ -175,11 +195,63 @@ Initial        =  ? <RE> ?, '.';
 =============  == ==================================================
 
 The python package ``modgrammar`` is used to parse the comments using
-the defined grammar. This version of **ajbbooks** uses modgrammar-0.10.
-The code may be found at `pypi.python/org
+the defined grammar. This version of **ajbbooks** uses
+modgrammar-0.10.  The code may be found at `pypi.python/org
 <https://pypi.python.org/pypi/modgrammar/0.10>`_ and the documentation
 can be found at `pythonhosted.org
 <http://packages.python.org/modgrammar>`_
+
+The BookFileXml Format
+----------------------
+
+The external BookFileXml file is similar to the BookFileTxt format in
+that it contains a header and a list of entries. The schema for the
+format is given in :ref:`bookfile-xsd` Like the BookFileTxt format
+it contains fields to list authors, editor, publishers, and the other
+fields that BookFileTxt supports.  In addition BookFileXml supports
+both agencies and people in locations that BookFileTxt only supports
+people, e.g. authors and editors. I use the **etree** package out of
+the **lxml** package under python to read/write the xml
+files. **lmxl** and **etree** are described at `lxml.de <http://lxml.de/>`_.
+The package can also be downloaded from this site
+in the event that your system does not have it installed.
+
+One should note that, that at least in version 2.0, while the
+BookFileXml format is technically compatible with the BookFileTxt
+format, in that both contain the same information (the internal
+BookFile object has not changed), the comments field of the
+BookFileTxt file will accepts fewer types of characters than the
+comments files in the BookFileXml file.  In addition, the field
+formats in BookFileTxt are fairly rigid but are not as restrictive in
+BookFileXml.  Therefore switching back and forth between formats may
+lose information. BookFileXml was designed to be a superset of the information
+available in the BookFileTxt.  For this reason the BookFileTxt format is
+deprecated and will be removed in a future version of **ajbbooks**.
+
+A BookFileXml format file is normally stored with no unecessary white space.
+In order to view the file in a human readable format use the program
+**ppxml** which will pretty-print the Xml file given on the command line.
+
+New Features in BookFileXml
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are a number of additional features in the BookFileXml format
+that are not generally available in the BookFileTxt format.
+
+pagination, addition page types
+
+G2 elements, person, corporateBody, requires changes to internal parsing
+
+Title, subtitle split on semi-colon
+
+Price, units and amounts
+
+Review includes reviewer, split on colon
+
+Comments free form
+
+PersonInfo
+
 
 Internal BookFile Object
 ========================
@@ -240,8 +312,8 @@ The default header is
    '''
 
 
-Reading and Writing Text Files
-------------------------------
+Reading and Writing Text/Xml Files
+----------------------------------
 
 The BookFile class knows how to insert/delete/replace entries in the
 ``_entryList``, how to open/read/write disk files, how to read the
@@ -249,6 +321,9 @@ header of a disk file, and how to recognize an entry in the disk file.
 When ever it needs to read/write an entry to/from the ``_entryList``,
 it calls on the entry itself to handle this action.  Entries are of type
 ``Class AJBentry`` defined in AJBentry.py.
+
+This also applies to the Xml file format.
+
 
 AJB Entries
 -----------
@@ -282,7 +357,7 @@ fields and default values.
 ======================== ===== ======================
 
 The AJBentry adds the following items to this dictionary to add
-fields that are normally in the comments.
+fields that are normally in the comments of BookFileTxt format files
 
 ========================= ===== ======================
  Entry[ 'TranslatedFrom']  =     ''                  
@@ -291,55 +366,111 @@ fields that are normally in the comments.
  Entry[ 'Reference']       =     ''                  
 ========================= ===== ======================
 
-Index is the entry number within the individual BookFiles. It is 
+`Index` is the entry number within the individual BookFiles. It is 
 simply a running count of the number of books.
 
-Num is the volume, section, and index within an *AJB* volume. It serves
+`Num` is the volume, section, and index within an *AJB* volume. It serves
 to distinguish the book from any other within the *AJB* series.
 
-Authors, Editors, Compilers, Contributors, and Translators are lists
-of HumanName object defined in the third-party package nameparser.
-This version of **ajbbooks** uses nameparser-0.3.3.
-The code can be found at the `Project Home Page
+`Authors`, `Editors`, `Compilers`, `Contributors`, and `Translators`
+are lists of HumanName object defined in the third-party package
+nameparser.  This version of **ajbbooks** uses nameparser-0.3.3.  The
+code can be found at the `Project Home Page
 <https://github.com/derek73/python-nameparser>`_ and the documentation
-can be found on `nameparser.readthedocs.org <http://nameparser.readthedocs.org/en/latest/>`_
+can be found on `nameparser.readthedocs.org
+<http://nameparser.readthedocs.org/en/latest/>`_. These fields will soon
+include CorporateNames as well once I workout how to distinguish
+people from corporations.
 
-Others is a list of string. This strings contains the real comments
-about the entry rather than the extra entry information.
+`Others` is a list of strings. These strings contain the real comments
+about the entry rather than the extra entry information. If the external
+file is in BookFileXml format this contains just the comments
 
-Title is the name of the book. Note that many books has a sub-title as
+`Title` is the name of the book. Note that many books have a sub-title as
 well. The current structure does not distinguish this fact.  I use a semi-colon
 between titles and sub-titles (as well as sub-sub-titles).
 
-Publishers is a list of dictionaries with the location and name of the
+`Publishers` is a list of dictionaries with the location and name of the
 publisher, {'Place': <placename>, 'PublisherName': <publisherName>}
 
-Year contains the copyright date if known.
+`Year` contains the copyright year if known.
 
-Pagination contains the page count of the preface and main text. The *AJB* may
-indicate the number of tables and illustrations in addition to the page
-count but those information are not included here.
+`Pagination` contains the page counts as listed in the bibliography.
+The original pagination scheme was '<front>+<main> pp'.  This worked
+fine for use with Microsoft Word™ and text based entry. The 'pp' made
+it clear where the field was in the comma-separated list. However, it
+soon became clear that there was more information in the entries than
+I was recording.  When I switched to the ajbbooks 1.0 program the 'pp'
+became redundant and did not convey any useful data.  With the advent
+of ajbbooks 2.0 and the XML format it became possible to easily
+include additional information. However, with only one string field in
+the user form display it became necessary to encode the information.
+Starting with volume 42 I created the following pagination codes.
+These are still stored as a string in the XML file until I create the
+parsers to read them. I will need to go back though volumes 43 through 68
+to pick up the missing pagination.
 
-Price is a simple string entry. More that one price will be separated 
-by 'and'.
+The pagination string is defined as follows:
 
-Reviews is a list of strings, each string containing a review reference.
+<count><code>[+<count><code>[+...]]
 
-Comments holds the original comment field.
+<count>p+<count>p shows pagination for the front matter and the main
+matter.
 
-OrigStr hold the original full text string.
+============    ==============    ================
+German            English            code
+============    ==============    ================
+   S            pages                 p
+ fig            figures               f
+Tafeln          tables                t
+Sternkarten     star cards            c
+\               charts            \
+bildtafeln      plates                P
+\               picture board     \
+abb.            illustrations         i
+zeichnungn      drawings              d
+modellbogen     models            b (cf 40.11.04)
+============    ==============    ================
 
-TranslatedFrom is a simple string entry that indicates the language
+At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08, what do the
+brackets mean?
+
+There are at least a few cases where the pagination is listed as
+"<count>+<count>+A<count>+B<count> pp" where A, B, etc., indicate
+appendices that are separately numbered.
+
+Some page counts use Roman numerals so the characters I, V, X, L, C,
+D, and M should not be used for the code suffix or prefix. However, if
+we have an appendix C with Roman pagination, we have a conflict. Just
+such a situation occurs in 43.51(0).01. I used brackets around the
+page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p. Also
+brackets multiple collections of pages per appendix, as in the example
+above, Appendix C has 9 pages of introduction and 161 pages of material.
+
+`Price` is a simple string entry. More that one price will be separated 
+by 'and'. Prices are typically given as <amount> <unit> however some currencies
+such as US Dollars are given as <unit> <amount>.
+
+`Reviews` is a list of strings, each string containing a review reference,
+a colon, followed by an optional reviewer name.
+
+`Comments` holds the original comment field. It is not used if the external
+file was in BookFileXml format.
+
+`OrigStr` holds the original full text string. This not used if the external
+file was in BookFileXml format.
+
+`TranslatedFrom` is a simple string entry that indicates the language
 of the original volume that this work is a translation of.
 
-Language is a simple string entry. If an entry is written in more
+`Language` is a simple string entry. If an entry is written in more
 than one language, the language names are separated by 'and'.  There
 are occasional books published in Russian and English for example.
 
-Reprint contains an *AJB* number. This entry is a reprint
+`Reprint` contains an *AJB* number. This entry is a reprint
 of the entry at that *AJB* number.
 
-Reference contains the *AJB* number of an entry, not necessarily in
+`Reference` contains the *AJB* number of an entry, not necessarily in
 this file, of which, this information should be appended or amended.
 
 AJBentry Functions
@@ -355,7 +486,7 @@ least a title and an *AJB* number
 Special Considerations
 ----------------------
 
-Note that the external BookFile format for the book entries use commas
+Note that the external BookFileTxt format for the book entries use commas
 as field separators.  This implies that commas may not be used in
 title strings, publisher names, comments, and other string
 fields. However, commas frequently occur in such strings.  Commas are
@@ -364,13 +495,15 @@ precautions when reading/writing an external BookFile.  In particular
 the class functions AJBentry::write() checks for commas in any string
 and replaces them with the string ' comma '. Similarly the function
 AJBentry::write() checks for ' comma ' in BookFile strings and
-replaces them with the string ', ' in the AJBentry dictionary values.
+replaces any occurrence with the string ', ' in the AJBentry dictionary values.
 
 The use of comma separated fields within a text based file is very
 constraining when documenting books. Because of the design I am limited
 in the amount and type of information I can store. Furthermore, extending
-the design usually requires extensive code changes.  In future versions
-of **ajbbooks** I hope to use XML as the external BookFile format.
+the design usually requires extensive code changes. 
+
+This consideration does not apply in versions of **ajbbooks** above 2.x.
+The Xml format deals with this just fine.
 
 
 Reading and Writing the Display
@@ -478,3 +611,9 @@ and is connected to the insertChar() function.  This insertion
 function changes on the fly whenever the focus changes in the
 BookEntry window between the various LineEdit and TextEdit items.
 
+Future Work
+===========
+
+Various things that I would like to do in **ajbbooks**.
+
+Add a Futures section to the documentation!

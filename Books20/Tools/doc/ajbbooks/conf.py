@@ -19,8 +19,9 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('../../bookentry'))
 sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('../../bookentry'))
+sys.path.insert(0, os.path.abspath('../../bookentry/xml'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -33,7 +34,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.doctest', 
               'sphinx.ext.intersphinx', 
               'sphinx.ext.coverage', 
-              'sphinx.ext.pngmath', 
+              'sphinx.ext.imgmath', 
               'sphinx.ext.ifconfig', 
               'sphinx.ext.viewcode']
 
