@@ -6,4 +6,5 @@
 <br><a href="./books20.pdf">The Manuscript (pdf)</a> 
 <!--    (<a href="./books20.pdf">pdf</a>) -->
 <br><a href="MyCollection.php">My Book Collection</a>
+<br><a href="./ajbbooks/index.html">ajbbooks documentation</a>
 <br>More...
