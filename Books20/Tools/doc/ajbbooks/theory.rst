@@ -421,8 +421,10 @@ matter.
 German            English            code
 ============    ==============    ================
    S            pages                 p
- fig            figures               f
+fig             figures               f
+Diagrammen      diagrams              D
 Tafeln          tables                t
+Tabellen        tables                T
 Sternkarten     star cards            c
 \               charts            \
 bildtafeln      plates                P

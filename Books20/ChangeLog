@@ -1,3 +1,10 @@
+2016-12-31  Jim Fowler  <jrf@biblion>
+
+	* Tools/doc/ajbbooks/theory.rst: Updated documentation for
+	ajbbooks v2.0.  Committed and tagged v2.0.
+
+	* Data/Ajb/ajb40_books.xml: finished AJB 40 today.
+
 2016-12-24  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/symbols.txt: Reorder entries to table has
