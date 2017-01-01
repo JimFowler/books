@@ -1,3 +1,12 @@
+2017-01-01  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/xml/price: created price document. Will
+	add to documentation later.
+
+	* Tools/doc/ajbbooks/conf.py: Changed version number in
+	the documentation from 1.9 to 2.0.  Should have done this
+	yesterday.
+
 2016-12-31  Jim Fowler  <jrf@biblion>
 
 	* Tools/doc/ajbbooks/theory.rst: Updated documentation for
