@@ -420,9 +420,11 @@ matter.
 ============    ==============    ================
 German            English            code
 ============    ==============    ================
-   S            pages                 p
-fig             figures               f
 Diagrammen      diagrams              D
+fig             figures               f
+Titelbild       frontispiece          F
+Mappe           map                   m
+S               pages                 p
 Tafeln          tables                t
 Tabellen        tables                T
 Sternkarten     star cards            c

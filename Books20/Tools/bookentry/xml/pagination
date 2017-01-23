@@ -26,7 +26,9 @@ matter.
 German,        English, code
    S,          pages,    p
  fig,          figures,  f
+titelbild      frontispiece  F
 diagrammen     diagrams  D
+Mappen         map       M
 Tafeln,        tables,   t
 Tabellen       tables    T
 Sternkarten, star cards
