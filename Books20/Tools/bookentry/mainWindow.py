@@ -5,6 +5,7 @@
 
 import platform
 import fileinput
+import sys, traceback
 import re
 
 # Trouble shooting assistance
@@ -712,20 +713,42 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       # Index
       index = int(self.indexEntry.text())
-      entry['Index'] = str(index - 1)
+      try:
+         entry['Index'] = str(index - 1)
+      except:
+         exc_type, exc_value, exc_traceback = sys.exc_info()
+         tb = traceback.format_tb(exc_traceback)
+         tb_str = ''
+         for s in tb:
+            tb_str = tb_str + s
+         tb_str = tb_str + '\n\n Invalid Index number'
+         QMessageBox.warning(self, 'Invalid Index Num', tb_str, QMessageBox.Ok)
+         return None
 
       # AJB number
       num = {}
       num['volume'] = 'AJB'
-      num['volNum'] = int(self.volNum.text())
-      num['sectionNum'] = int(self.secNum.text())
-      num['subsectionNum'] = int(self.subSecNum.text())
-      num['entryNum'] = int(items[1])
-      num['entrySuf'] = items[2]
+      
+      try:
+         num['volNum'] = int(self.volNum.text())
+         num['sectionNum'] = int(self.secNum.text())
+         num['subsectionNum'] = int(self.subSecNum.text())
+         num['entryNum'] = int(items[1])
+         num['entrySuf'] = items[2]
+      except:
+         exc_type, exc_value, exc_traceback = sys.exc_info()
+         tb = traceback.format_tb(exc_traceback)
+         tb_str = ''
+         for s in tb:
+            tb_str = tb_str + s
+         tb_str = tb_str + '\n\n Invalid AJB Entry number'
+         QMessageBox.warning(self, 'Invalid AJB Num', tb_str, QMessageBox.Ok)
+         return None
+         
       entry['Num'] = num
       if not entry.isValidAjbNum():
          QMessageBox.warning(self, 'Invalid number',
-                             'Entry must have a valid AJB num  in order to be valid',
+                             'Entry must have a valid AJB num in order to be valid',
                              QMessageBox.Ok)
          return None
 
@@ -767,7 +790,15 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
          alist = a.split('\n')
          for line in alist:
             nm = {}
-            place, publisher = line.split(':')
+            try:
+               place, publisher = line.split(':')
+            except:
+               #warn that there is no title
+               QMessageBox.warning( self, 'No Colon in publishing',
+                                    'Publishing field must be Place : PublisherName.\nColon is missing.',
+                                    QMessageBox.Ok)
+               return None
+               
             if not place:
                place = ''
             if not publisher:
@@ -903,7 +934,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    def helpString(self):
       helpStr = """<b>AJB Book Entry</b> v {0}
       <p>Author: J. R. Fowler
-      <p>Copyright &copy; 2012
+      <p>Copyright &copy; 2012-2017
       <p>All rights reserved.
       <p>This application is used to create and visualize
       the text files with the books found in the annual

@@ -3,7 +3,7 @@
 # -*- mode: Python;-*-
 
 import fileinput
-import os
+import os, sys
 import traceback
 import json
 from lxml import etree
@@ -314,6 +314,9 @@ class BookFile():
         try:
             bf_xml = etree.parse(self._fileName, parser=Parser)
         except:
+            exc_type, exc_value, exc_traceback = sys.exc_info()
+            traceback.print_exception(exc_type, exc_value, exc_traceback,
+                               limit=2, file=sys.stdout)
             print('The xml file is not well formed or is invalid')
             return 0
 

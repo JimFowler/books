@@ -1,3 +1,14 @@
+2017-01-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.DisplayToEntry): Added more
+	error checking.
+
+2017-01-22  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.DisplayToEntry): Began
+	adding additional error checking after I lost an hours worth of
+	work today.
+
 2017-01-01  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/xml/price: created price document. Will
