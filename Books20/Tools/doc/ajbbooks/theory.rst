@@ -431,6 +431,7 @@ Sternkarten     star cards            c
 \               charts            \
 bildtafeln      plates                P
 \               picture board     \
+bildnissen      portraits         \
 abb.            illustrations         i
 zeichnungn      drawings              d
 modellbogen     models            b (cf 40.11.04)
