@@ -16,6 +16,7 @@ Welcome to the AJBbooks Users Guide!
    installation
    operation
    theory
+   ajbxml
    classes
    
 
