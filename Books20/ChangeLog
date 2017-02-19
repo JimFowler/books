@@ -1,3 +1,8 @@
+2017-02-19  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/symbols.txt: Added T with line under and A with
+	macron.
+
 2017-01-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/mainWindow.py (BookEntry.DisplayToEntry): Added more

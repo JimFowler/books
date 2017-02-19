@@ -15,6 +15,7 @@
 â, Small letter a with circumflex
 ă, Small letter a with breve
 ã, Small letter a with tilde
+Ā, Capital letter A with macron
 ā, Small letter a with macron
 Ą, Capital letter A with cedilla
 ą, Small letter a with cedilla
@@ -69,6 +70,8 @@
 Ş, Capital letter S with cedilla
 ş, Small letter s with cedilla
 ß, Small letter sharp s
+Ṯ, Capital letter T with line below
+ṯ, Small letter t with line below
 ţ, Small letter t with cedilla
 ť, Small letter t with caron
 Ü, Capital letter U with diaeresis
