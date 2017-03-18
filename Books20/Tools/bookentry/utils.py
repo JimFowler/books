@@ -37,3 +37,7 @@ def makeNameStr( namelist, sep=' and '):
         nameStr += str(nm)
         
     return nameStr
+
+if __name__ == '__main__':
+    print('No tests available yet')
+    

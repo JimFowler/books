@@ -172,3 +172,7 @@ titleList =  [
  ("ZfPhys", 1),
  ("Phys Z", 1),
  ("ZfGMG", 1)]
+
+
+if __name__ == '__main__':
+    print('No tests available.  This is a list of title for testing search.py')

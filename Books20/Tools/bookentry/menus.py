@@ -141,3 +141,6 @@ def createMenus( self, menuBar):
         aboutAction = createAction(self, '&About Book Entry...',
                                    'self.helpAbout' )
         helpMenu.addAction(aboutAction)
+
+if __name__ == '__main__':
+    print('No tests available yet')
