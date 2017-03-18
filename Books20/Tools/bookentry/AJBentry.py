@@ -871,6 +871,10 @@ class AJBentry(entry.Entry):
                     self['Others'].append(comment.text)
 
     def AJBstringFromIndex_XML( self, ell):
+        '''Return a AJB number as a string "AJB xx.xxx(xx).xx[a]" from 
+        an XML Index element.'''
+
+        r2 = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
         for el in ell:
             if el.tag == 'IndexName':
                 aname = el.text
@@ -881,7 +885,9 @@ class AJBentry(entry.Entry):
             elif el.tag == 'SubSectionNumber':
                 subsectionNum = el.text
             elif el.tag == 'EntryNumber':
-                entryNum = '%02d'%int(el.text)
+                m = r2.match(el.text)
+                entryNum = '%02d'%int(m.group(1))
+                entrySuf = m.group(2)
         return aname + ' ' + volNum + '.' + sectionNum + '.' + entryNum
         
         
@@ -1001,11 +1007,11 @@ if __name__ == '__main__':
     print('allfieldajb as entry:')
     pprint(allfieldajb)
 
-    print('\naffieldajb as XML')
+    print('\nallfieldajb as XML')
     et = allfieldajb.write_XML_from_Entry()
     print(etree.tostring(et, pretty_print=True, encoding='unicode'))
 
-    print('\nallfieldajbXML as entry')
+    print('\nallfieldajb XML as entry')
     eAll = AJBentry()
     eAll.read_XML_to_Entry(et)
     pprint(eAll)

@@ -1,3 +1,14 @@
+2017-03-18  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/AJBentry.py (AJBentry.AJBstringFromIndex_XML):
+	Fixed function to properly read suffix.  It was trying to convert
+	number + suffix to an int().  Added regex test.
+
+2017-03-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/mainWindow.py (BookEntry.insertEntry): added
+	try/except around insert entry test.
+
 2017-02-19  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/symbols.txt: Added T with line under and A with
