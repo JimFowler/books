@@ -404,7 +404,7 @@ if __name__ == "__main__":
     bf.deleteEntry(5)
     #print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
     #print('\n\n')
-    bf.writefile_XML('ajb58_books.xml')
+    bf.writeFile_XML('ajb58_books.xml')
     print('We can read and validate a file with the parse() function')
     try:
         bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/bookentry/xml/bookfile.xsd')
