@@ -238,6 +238,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    #
    def saveEntry(self):
       """Save the entry to the current entry number in the bookfile."""
+      #
+      # Save the back up file here
+      #
       self.tmpEntry = self.DisplayToEntry()
       if not self.tmpEntry:
          QMessageBox.information(self, "Entry Invalid", 
@@ -301,10 +304,16 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
       words = line[0].split(' ')
 
-      num = int(words[0])
-      if not num or num < 1 or num > self.maxEntryNumber:
+      try:
+         num = int(words[0])
+      except ValueError:
+         QMessageBox.warning(self, "Insert Invalid",
+                             "Unable to insert before {0}".format(words[0]))
          return
 
+      if not num or num < 1 or num > self.maxEntryNumber:
+         return
+      
       self.bf.setNewEntry(self.tmpEntry, num)
       self.curEntryNumber = num
       self.setMaxEntryNumber(self.maxEntryNumber + 1)
@@ -454,8 +463,13 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.showEntry(self.curEntryNumber + 1)
 
    def indexChanged(self):
-      enum = int(self.indexEntry.text())
-
+      try:
+         enum = int(self.indexEntry.text())
+      except ValueError:
+         QMessageBos.warning( self, 'Index Changed',
+                            'Invalid index entry {0}'.format(self.indexEntry.text()), QMessageBox.Ok)
+         return
+      
       if self.askSaveEntry() == QMessageBox.Cancel:
          return
 
@@ -681,7 +695,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
 
       # Others
-      astr = ''
+      astr =''
       if entry.notEmpty('Others'):
          a = entry['Others']
          first = True
@@ -689,7 +703,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
             if not first:
                astr += '\n'
             first = False
-            astr += b
+            astr += str(b)
       self.commentsEntry.setPlainText(astr)
 
 
@@ -712,8 +726,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       entry = AJBentry.AJBentry()
 
       # Index
-      index = int(self.indexEntry.text())
       try:
+         index = int(self.indexEntry.text())
          entry['Index'] = str(index - 1)
       except:
          exc_type, exc_value, exc_traceback = sys.exc_info()

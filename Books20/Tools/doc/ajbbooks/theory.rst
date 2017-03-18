@@ -435,6 +435,7 @@ bildnissen      portraits         \
 abb.            illustrations         i
 zeichnungn      drawings              d
 modellbogen     models            b (cf 40.11.04)
+nomogrammen     nomographs            n
 ============    ==============    ================
 
 At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08, what do the
