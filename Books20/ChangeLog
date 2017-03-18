@@ -1,5 +1,8 @@
 2017-03-18  Jim Fowler  <jrf@biblion>
 
+	* Tools/bookentry/bookfile.py (BookFile.writeFile_XML): Fixed bug
+	in opening filename.  The code was ignoring the input value.
+
 	* Tools/bookentry/AJBentry.py (AJBentry.AJBstringFromIndex_XML):
 	Fixed function to properly read suffix.  It was trying to convert
 	number + suffix to an int().  Added regex test.

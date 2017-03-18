@@ -345,10 +345,15 @@ class BookFile():
 
         Returns True if the file could be written or False otherwise."""
 
-        
         try:
-            fd = open(self._fileName, 'w', encoding='UTF8')
+            if filename is not None:
+                fd = open(filename, 'w', encoding='UTF8')
+                # only set _filename if we are successful in opening
+                self._filename = filename
+            else:
+                fd = open(self._fileName, 'w', encoding='UTF8')
         except:
+            # really should print the exception here
             return False
 
 
@@ -402,8 +407,8 @@ if __name__ == "__main__":
     bf.deleteEntry(22)
     bf.deleteEntry(0)
     bf.deleteEntry(5)
-    #print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
-    #print('\n\n')
+    print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
+    print('\n\n')
     bf.writeFile_XML('ajb58_books.xml')
     print('We can read and validate a file with the parse() function')
     try:
