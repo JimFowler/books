@@ -17,7 +17,7 @@ class Entry(dict):
         self.blankEntry()
 
         if _entrystr :
-            self.read(_entrystr)
+            self.read_Text_to_Entry(_entrystr)
 
     def version(self):
         """Return the version string of the Entry class."""
@@ -39,15 +39,23 @@ class Entry(dict):
         must be set by the sub-class."""
         assert 0, 'Entry.isValid() needs to be defined'
 
-    def read(self, line):
+    def read_Text_to_Entry(self, line):
         """Read string and parse entry items out of it. Should return
         a boolean indicating whether the line was actually read correctly.
         The sub-class must provide this function."""
         assert 0, 'Entry.read() method required'
 
-    def write(self):
+    def write_Text_from_Entry(self):
         """Returns a string with the  entry items. This string should one
         that could be parsed by the read method. It is the responsiblity
         of the sub-class to implement this funtion. The sub-class must 
         provide this function."""
         assert 0, 'Entry.write() method required'
+
+
+if __name__ == '__main__':
+
+    try:
+        badentry = Entry(ajbstr)
+    except:
+        print("Entry() class fails properly with no read() method.")
