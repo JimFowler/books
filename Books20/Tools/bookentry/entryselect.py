@@ -72,6 +72,9 @@ if __name__ == '__main__':
 
     import sys
 
+    def printMe(l):
+        print('You selected line:', l[0])
+        
     app = QApplication(sys.argv)
     ex = EntrySelect()
     ex.show()
@@ -80,5 +83,6 @@ if __name__ == '__main__':
 3 AJB 55.06.09 Author3, Title3
 """
     ex.setText(txtStr)
+    ex.lineEmit.connect(printMe)
 
     app.exec_()

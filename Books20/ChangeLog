@@ -1,5 +1,8 @@
 2017-03-18  Jim Fowler  <jrf@biblion>
 
+	* Tools/bookentry/entryselect.py (printMe): Added print for
+	line selected in testing section.
+
 	* Tools/bookentry/symbol.py: Added sigClicked() call to testing
 	section.
 
