@@ -132,9 +132,13 @@ class SymbolForm( QDialog ):
 
 if __name__ == "__main__":
     import sys
-    
+
+    def PrintMe(s):
+        print('Char selected is', s[0])
+        
     app = QApplication( sys.argv )
     myapp = SymbolForm( 'symbols.txt', 'FreeSans', 14 )
     myapp.show()
+    myapp.sigClicked.connect( PrintMe )
     sys.exit( app.exec_() )
                     
