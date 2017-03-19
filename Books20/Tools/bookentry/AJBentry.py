@@ -888,7 +888,7 @@ class AJBentry(entry.Entry):
                 m = r2.match(el.text)
                 entryNum = '%02d'%int(m.group(1))
                 entrySuf = m.group(2)
-        return aname + ' ' + volNum + '.' + sectionNum + '.' + entryNum
+        return aname + ' ' + volNum + '.' + sectionNum + '.' + entryNum + entrySuf
         
         
     def HumanNameFmXML(self, ell):
@@ -929,7 +929,7 @@ if __name__ == '__main__':
 
     editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
 
-    allfieldsstr = '4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55;'
+    allfieldsstr = '4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55b;'
 
     allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
 

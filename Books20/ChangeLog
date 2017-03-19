@@ -1,5 +1,8 @@
 2017-03-18  Jim Fowler  <jrf@biblion>
 
+	* Tools/bookentry/AJBentry.py (AJBentry.AJBstringFromIndex_XML): Actually
+	added entrySuf to string this time.
+
 	* Tools/bookentry/entryselect.py (printMe): Added print for
 	line selected in testing section.
 
