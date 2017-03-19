@@ -9,6 +9,8 @@ have a space between the units and the number.
 Abbreviation         Units
 =================  ==================
 $1.00                US Dollars
+1.00 $C              Canadian Dollars
+1.00 $A                 Australian Dollar
 £1                   British Pounds
 1s                   British Shillings
 1d                   British Pence
@@ -40,7 +42,6 @@ $1.00                US Dollars
 1 Yen                Japanese Yen
 1 ¥                  \
 1 Lei                Romanian Lion
-1 $A                 Australian Dollar
 1 n. d. 68.4.183    no denomination?
 =================  ==================
 
