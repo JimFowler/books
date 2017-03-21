@@ -10,7 +10,7 @@ Abbreviation         Units
 =================  ==================
 $1.00                US Dollars
 1.00 $C              Canadian Dollars
-1.00 $A                 Australian Dollar
+1.00 $A              Australian Dollar
 £1                   British Pounds
 1s                   British Shillings
 1d                   British Pence
@@ -21,8 +21,11 @@ $1.00                US Dollars
 1 swf                \
 1.00 Belg. Fr.       Belgian Francs
 1.00 DM              Deutsch Marks
-1.00 RM              Reich Marks
-\                    German 193x-194x
+1.00 RM              Reichsark
+\                    German 1924-1948
+100 rpf              100 Reichspfenning
+1.00 Schill          Austrian schilling
+\                    1925-1938, 1945-1999
 1.00 R               Soviet Rubels
 1 Kop                Soviet Kopecks
 1.00 L               Italian Lire
