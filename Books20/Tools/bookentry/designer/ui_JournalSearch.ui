@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>425</width>
+    <width>507</width>
     <height>168</height>
    </rect>
   </property>
@@ -18,12 +18,12 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>425</width>
+     <width>501</width>
      <height>167</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
@@ -36,7 +36,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QComboBox" name="SearchBox">
+     <widget class="QLineEdit" name="entryEdit"/>
+    </item>
+    <item>
+     <widget class="QComboBox" name="searchResults">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -60,7 +63,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="NewButton">
+       <widget class="QPushButton" name="newButton">
         <property name="toolTip">
          <string>Create a new journal entry</string>
         </property>
@@ -83,7 +86,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="QuitButton">
+       <widget class="QPushButton" name="quitButton">
         <property name="toolTip">
          <string>Exit the program</string>
         </property>

@@ -73,7 +73,7 @@ def main():
          form.openNewFile()
          form.jf.setFileName(fname)
          form.setWinTitle(form.jf.getBaseName())
-
+      form.newEntry()
 
    form.show()
    sys.exit(app.exec_())

@@ -364,7 +364,13 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       except KeyError:
          d = None
       if d is not None:
-         pprint(d)
+         # add to titleCombo
+         for i in range(10):
+            try:
+               print(i, d[i])
+            except IndexError:
+               pass
+               
       self.clearTitleDirty()
 
 
