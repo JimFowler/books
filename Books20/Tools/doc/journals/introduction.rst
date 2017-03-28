@@ -4,14 +4,14 @@ Introduction
 Overview
 ========
 
-The **journal** program is part of the *Books20* project, which is
+The **journals** program is part of the *Books20* project, which is
 designed to catalog books published in Astronomy and Astrophysics
-during the 20th Century. **journal** is designed to ease the
+during the 20th Century. **journals** is designed to ease the
 cataloging of journalentries found in the annual bibliographies
 *Astronomischer Jahrsbericht* by providing a graphical interface that
 focuses on the information and not on the formatting.
 
-**journal** was initially developed in Python 3.4.3 under Ubuntu 14.04
+**journals** was initially developed in Python 3.4.3 under Ubuntu 14.04
 and uses Qt 4.8.6 with PyQt 4.10.4 for the graphical portions of the
 software.
 

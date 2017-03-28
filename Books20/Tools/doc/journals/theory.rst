@@ -21,8 +21,8 @@ doesn't care much about the actual content of fields. It just needs to know
 how to parse and write the fields.
 
 
-Internal BookFile Object
-========================
+Internal JournalFile Object
+===========================
 
 The internal class BookFile is defined in bookfile.py. 
 

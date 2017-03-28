@@ -1,8 +1,8 @@
 Operation
 *********
 
-The **journal** program may be started from the command line with
-the ``journal`` command. The main display window is shown in figure 3.1.
+The **journals** program may be started from the command line with
+the ``journals`` command. The main display window is shown in figure 3.1.
 
 The main features are the top line with the Index number and the AJB
 number along with the buttons to switch between existing records, the
@@ -28,7 +28,7 @@ journals [-h] | [-V] | [-i filename] [-s filename] [-v integer]
 
 #.. figure:: images/mainwindow.png
 
-#   The main display window of ajbbooks.
+#   The main display window of journals.
 
 
 Menus

@@ -57,7 +57,7 @@ To install these files, run the commands
 
 ``mv _build/html/* <htmldir>``
 
-``mv _build/latex/AJBbooks.pdf <pdfdir>``
+``mv _build/latex/Journals.pdf <pdfdir>``
 
 
 
