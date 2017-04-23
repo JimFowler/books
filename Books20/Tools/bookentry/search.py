@@ -1,78 +1,96 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
-''' Searching for a Title
+'''Search for a sub-string from a list of string and return some
+associated value.
 
-Want to look for a sub-string within a list of sub-strings formed from
-the title and abbreviation. If we find a match, we return a list of
-titles and indicies to the relevant entires.
+Given a list of strings and return values, we create another set of
+sub-strings from the strings and associate the sub-strings and the
+return value in a dictionary. The sub-strings are keys to the dictionary
+and the values are a list of the various return values that are associated
+with the string that the sub-string was created from.
 
-The sub-strings are keys to a dictionary.  Looking up a the key
-returns a list of tuples of (title, index). The list of tuples should
-be alphabetized by title. Alternatively, the tuples should be in a
-weighted order scheme, e.g. the title appears closer to the begining
-of the list if the sub-string appears closer to the start of the
-title. But this later feature is harder to implement.
+Looking up a the key returns a list of tuples of (title, returnvalue).
 
-The dictionary looks like
+Ideally the tuples should be in a weighted order scheme, e.g. the
+sub-string is closer to the beginning of the list if the sub-string
+appears closer to the start of the string. Alternatively, we can remove
+the articles from the string before creating the sub-strings.  This may
+best be left to the user.
 
-{ 'astr' : [('title1', index1), ('title2', index2), ...],
-  'astro' : [('title1', index1), ('title3', index3), ...],
-  'astronomy jou' : [('title1', index1), ('title4', index4), ...],
+For example; a dictionary created from the strings
+('British Astronomy Journal', retVal1),
+('Americal Astronomy Journal', retVal2),
+('Astronomy Journal of Pakistan', retVal3),
+('The Astronomical Journal', retVal4)
+...
+
+would look something like
+
+{ 'astr' : [('title1', retVal1), ('title4', retVal4), ...],
+  'astro' : [('title1', retVal1), ('title3', retVal3), ...],
+  'astronomy jou' : [('title1', retVal1), ('title2', retVal2), ...],
   ...
 }
+
 '''
 
 class SearchDict(dict):
     '''SearchDict is a dictionary whose keys are sub-strings of
     strings that have been added to the dictionary.  The values are
-    a dictionary of the original string as well as an index into
-    something else.'''
+    a list of retVals associated with the original string.'''
 
     def __init__(self):
+        '''When a new SeachDict object is created we clear() the
+        underlying dictionary.'''
         self.clear()
         return
 
-    def _valkey(self, s):
-        return s[2]
-
-    def search(self, ss1):
-        '''Search for sub-string ss1 in self. Compute the distance of
-        the sub-string for the start of title string. Return a list of
-        (title, index, distance) sorted by the start distance.'''
-        print("sldict.search")
+    #
+    # Public functions
+    #
+    def search(self, SubString, maxLen=10):
+        '''Search for SubString  in self. Return a list of the returnVals
+        entered when the sub-strings were added.
+        '''
         final = []
         try:
-            sl = self[ss1[:10]]
+            sl = self[SubString[:maxLen]]
         except KeyError:
             return final
 
         for s in sl:
-            sdist = s[0].find(ss1)
-            if sdist != -1:
-                final.append((s[0], s[1], sdist))
-
-        final.sort(key=self._valkey, reverse=True)
-
+            final.append((s[0], s[1]))
+                         
         return final
 
-    def addSubStrings(self, string, index):
-        '''Given a string, add all unique sub-strings to
-        the dictionary'''
-        for t in self._splitString(string, index):
+    def addSubStrings(self, string, retVal):
+        '''Given a string, add all unique sub-strings to the
+        dictionary. retVal will be in the list returned when a
+        particular substring matches.  retVal may be any valid
+        python type.
+        '''
+        for t in self._splitString(string, retVal):
             if t[0] != '':
                 self._add(t)
 
-    def _splitString(self, string, index):
-        '''Split a string into sub-strings, return a sorted list of
-        unique tuples of (sub-string, string, index). '''
-        front = [(sstring, string, index) for sstring in self._getSubStrings(string)]
+    #
+    # Local functions
+    # (still publicly available but not recommended for public use)
+    #
+    def _splitString(self, string, retVal):
+        '''Split a string into sub-strings.  Return a list of unique
+        tuples of (sub-string, retVal).
+        '''
+        front = [(sstring, retVal) for sstring in self._getSubStrings(string)]
         return front
 
     def _getSubStrings(self, s, minN=3, maxN=10):
         '''Gets the set of all contiguous sub-strings of 's' between minN
         and maxN chars in length. If the string is shorter than maxN chars
-        we set the maximum to be the length of the string. Returns a set
-        of sub-strings.'''
+        we set the maximum to be the length of the string.
+
+        Returns a set of sub-strings.
+        '''
 
         lenS = len(s) # the length of the input string
         maxN = min(maxN, lenS) # the max length substring we will return
@@ -91,40 +109,51 @@ class SearchDict(dict):
         return strset
 
     def _add(self, tstr):
-        '''Take a tuple (sub-string, string, index) and add to the
+        '''Take a tuple (sub-string, returnVal) and add it to the
         dictionary. If the sub-string already exists in the dictionary,
-        then add the (title, index) to that key. If the sub-string does
-        not exist as a key, then add a new key with the tuple as the first
+        then add the returnVal to that key. If the sub-string does
+        not exist as a key, then add a new key with the returnVal as the first
         element in the value list.'''
         if tstr[0] in self.keys():
-            self[tstr[0]].append((tstr[1], tstr[2]))
+            self[tstr[0]].append(tstr[1])
         else:
-            self[tstr[0]] = [(tstr[1], tstr[2])]
+            self[tstr[0]] = [tstr[1]]
 
 
+#
+# Test everything (I hope)
+#
 if __name__ == '__main__':
-
-    #from fuzzywuzzy import fuzz
     from pprint import pprint
-    from titleList import titleList
+    import titleList as tl
 
     d = SearchDict()
 
-    for title in titleList:
-        d.addSubStrings(title[0], title[1])
+    for title in tl.titleList:
+        d.addSubStrings(title[0], (title[0],title[1]))
 
+    print('\n\nsearching for "Journal devo"')
     pprint(d.search('Journal devo'))
 
-    pprint(d.search('Astrop'))
-    pprint(d.search('Optical'))
+    print('\n\nsearching for "Astro"')
     pprint(d.search('Astro'))
-    '''
-    print('\nsearching for "Astro"')
-    pprint(d['Astro'])
-    print('\nsearching for "Astrop"')
-    pprint(d['Astrop'])
-    print('\nsearching for "ApJ"')
-    pprint(d['ApJ'])
-    print('\nsearching for "Monthly"')
-    pprint(d['Monthly'])
-    '''
+
+    print('\n\nsearching for "Astrop"')
+    pprint(d.search('Astrop'))
+
+    print('\n\nsearching for "ApJ"')
+    pprint(d.search('ApJ'))
+
+    print('\n\nsearching for "Optical"')
+    pprint(d.search('Optical'))
+
+    # test with the color list
+    # we first clear the existing SearchDict
+    #  and reloaded it with the color sub-strings
+    d.clear()
+    for color in tl.colorList:
+        d.addSubStrings(color[0], color[1])
+
+
+    print('\n\nsearching for "red"')
+    pprint(d.search('red'))

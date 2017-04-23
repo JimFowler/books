@@ -1,3 +1,19 @@
+2017-04-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/search.py: Finished modifications to SearchDict.
+
+	* Tools/bookentry/titleList.py: Added colorList.
+
+2017-04-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/search.py: Began modifying SearchDict to
+	be more generic.
+
+2017-03-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalWin.py (JournalWindow.search): Got a
+	combo box to display the search values.
+
 2017-03-25  Jim Fowler  <jrf@biblion>
 
 	* Data/Ajb/ajb38_books.xml: Finished proofreading AJB 38
