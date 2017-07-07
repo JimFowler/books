@@ -7,17 +7,17 @@
 import sys
 import os
 import argparse
+import configparser
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui  import *
 from PyQt5.QtWidgets import *
 
+import bookentry.journalSearch as mw
+
 # Trouble shooting assistance
 from pprint import *
 pp = PrettyPrinter()
-
-#import bookentry.journal_rc
-import bookentry.journalWin as mw
 
 __version__ = '1.0'
 
@@ -30,16 +30,22 @@ def getargs():
    parser.add_argument('-V', '--version',
                        help='provide version info,',
                        action='store_true')
+
    parser.add_argument( '-i', '--input', type=str,
-                        help='read the file INPUT for entries',
-                        action='append')
+                        help='read the file INPUT for entries')
+
    parser.add_argument( '-s', '--symbols', type=str,
-                        help='use alternate symbol table,',
-                        action='append')
+                        help='use alternate symbol table,')
+
+   parser.add_argument( '-c', '--config', type=str,
+                        help='use alternate configuration file name,',
+                        default='./journals.conf')
 
    args = parser.parse_args()
 
    return args
+
+
 
 
 #
@@ -51,30 +57,30 @@ def main():
    args = getargs()
 
    app = QApplication(sys.argv)
-   app.setApplicationName('Journal Entry')
+   app.setApplicationName('Journal Search and Entry')
    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
    
-   form = mw.JournalEntry()
-   app.focusChanged.connect(form.setFocusChanged)
+   form = mw.JournalSearch( config_name=args.config)
+   #app.focusChanged.connect(form.setFocusChanged)
 
+   '''
    if args.version:
       hstr = form.helpString()
       form.helpAbout()
       sys.exit(0)
 
    if args.symbols is not None:
-      form.setSymbolTableName(args.symbols[0])
-
+      form.setSymbolTableName(args.symbols)
+   '''
    if args.input is not None:
-      fname = args.input[0]
+      fname = args.input
       if os.path.isfile(fname):
          form.openFile(fname)
       else:
          form.openNewFile()
          form.jf.setFileName(fname)
          form.setWinTitle(form.jf.getBaseName())
-      form.newEntry()
-
+   
    form.show()
    sys.exit(app.exec_())
 

@@ -51,7 +51,7 @@ def createMenus( self, menuBar):
         saveAsAction = createAction( self, 'Save File &As...',
                                      slot='self.saveFileAs',
                                      shortcut='Ctrl+A')
-        
+        '''
         newEntAction = createAction( self, 'New &Entry',
                                      slot='self.newEntry',
                                      shortcut='Ctrl+E')
@@ -63,7 +63,7 @@ def createMenus( self, menuBar):
         printAction = createAction( self, '&Print Entry',
                                     slot='self.printEntry',
                                     shortcut='Ctrl+P')
-        
+        '''
         exitAction = createAction(self, '&Quit',
                                   slot='self.quit',
                                   shortcut='Ctrl+Q',
@@ -74,10 +74,13 @@ def createMenus( self, menuBar):
         fileMenu.addAction(openFileAction)
         fileMenu.addAction(saveAction)
         fileMenu.addAction(saveAsAction)
+        
         fileMenu.addSeparator()
+        '''
         fileMenu.addAction(newEntAction)
         fileMenu.addAction(saveEntAction)
         fileMenu.addAction(printAction)
+        '''
         fileMenu.addSeparator()
         fileMenu.addAction(exitAction)
 
@@ -108,17 +111,6 @@ def createMenus( self, menuBar):
                                     slot='self.editHeader',
                                     shortcut='Ctrl+H')
 
-        #origstrAction = createAction(self, 'Show Original String',
-        #                            self.showOrigStr)
-        #setvolnumAction = createAction(self, 'Set Volume Number...',
-        #                            self.setVolumeNumberInteractive)
-
-        #fontsizeAction = createAction(self, 'Set font size...', None, None)
-        #fontsizeAction.setEnabled(False)
-
-        #fonttypeAction = createAction(self, 'Set font...', None, None)
-        #fonttypeAction.setEnabled(False)
-
 
         editMenu = menuBar.addMenu('&Edit')
         editMenu.addAction( cutAction)
@@ -128,10 +120,7 @@ def createMenus( self, menuBar):
         editMenu.addSeparator()
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
-        #editMenu.addAction( origstrAction)
-        #editMenu.addAction( setvolnumAction)
-        #editMenu.addAction( fontsizeAction)
-        #editMenu.addAction( fonttypeAction)
+
 
 
 
