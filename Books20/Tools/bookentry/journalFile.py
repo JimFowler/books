@@ -34,6 +34,7 @@ class JournalFile():
         self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
 
         self.setFileName('document1')
+        self.schemaName = None
         self._dirty = False
 
 
