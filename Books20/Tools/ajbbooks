@@ -30,18 +30,23 @@ __version__ = '1.9'
 def getargs():
    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
 
-   parser.add_argument('-V', '--version',
-                       help='provide version info,',
-                       action='store_true')
+   parser.add_argument( '-V', '--version',
+                        help='provide version info,',
+                        action='store_true')
+
    parser.add_argument( '-i', '--input', type=str,
-                        help='read the file INPUT for entries',
-                        action='append')
+                        action='append',
+                        help='read the file INPUT for entries')
+
    parser.add_argument( '-s', '--symbols', type=str,
-                        help='use alternate symbol table,',
-                        action='append')
-   parser.add_argument('-v', '--volume', type=str,
-                       help='default volume number.',
-                       action='append')
+                        help='use alternate symbol table,')
+
+   parser.add_argument( '-v', '--volume', type=str,
+                        help='default volume number,')
+                        
+   parser.add_argument( '-c', '--config', type=str,
+                        help='alternate configuration file name.',
+                        default='./ajbbooks.conf')
    #parser.add_argument( 'filename', type=str,
    #                     help='the name of the file to process.',
    #                     action='append')
@@ -72,11 +77,11 @@ def main():
       sys.exit(0)
 
    if args.volume is not None:
-      form.setDefaultVolumeNumber(args.volume[0])
+      form.setDefaultVolumeNumber(args.volume)
       form.newEntry()
 
    if args.symbols is not None:
-      form.setSymbolTableName(args.symbols[0])
+      form.setSymbolTableName(args.symbols)
 
    if args.input is not None:
       fname = args.input[0]

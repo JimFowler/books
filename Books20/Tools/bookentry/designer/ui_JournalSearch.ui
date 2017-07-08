@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>JournalSearch</class>
- <widget class="QDialog" name="JournalSearch">
+ <widget class="QMainWindow" name="JournalSearch">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>507</width>
-    <height>168</height>
+    <width>526</width>
+    <height>209</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>501</width>
-     <height>167</height>
-    </rect>
-   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QLabel" name="label">
@@ -99,6 +91,17 @@
     </item>
    </layout>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>526</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections/>

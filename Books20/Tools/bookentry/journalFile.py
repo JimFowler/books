@@ -34,6 +34,7 @@ class JournalFile():
         self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
 
         self.setFileName('document1')
+        self.schemaName = None
         self._dirty = False
 
 
@@ -149,7 +150,13 @@ class JournalFile():
             count += 1
 
         return shortTitleList
-            
+
+    #
+    # schema utilities
+    #
+    def setSchemaName(self, sname):
+        self.schemaName = sname
+        
     # file I/O
     def readfile_XML(self, filename=None):
         """Open and read the header stuff into _header and the entries
@@ -175,10 +182,10 @@ class JournalFile():
     
         # read and validate the XML file
         try:
-            bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/bookentry/xml/journalfile.xsd')
+            bf_schema = etree.XMLSchema(file=self.schemaName)
             Parser = etree.XMLParser(schema=bf_schema)
         except:
-            print('The schema is not well formed')
+            print('The schema {0} is not well formed'.format(self.schemaName))
             return 0
         try:
             bf_xml = etree.parse(self._fileName, parser=Parser)
@@ -200,7 +207,7 @@ class JournalFile():
                         self._entryList.append(entTemp)
         
         self._dirty = False
-
+        print('Recs found:', count)
         return count
 
 
