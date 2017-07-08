@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
 # -*- mode: Python;-*-
 
-"""Main window for journal entries from AAA/AJB
+"""
+Main window for journal entries from AAA/AJB
 
-  open with Journal Search
   open existing journalFile or new one
   New button or search brings up Entry window with an already open file
   redoing a search sets the index number in the current entry
@@ -38,10 +38,10 @@ del __basename
 
 __version__ = '1.0.0'
 
-class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
+class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
    def __init__(self, parent = None ):
-      super(JournalEntry, self).__init__(parent=parent)
+      super(JournalWindow, self).__init__(parent=parent)
       self.setupUi(self)
 
       # This boolean indicates that the window entries
@@ -58,6 +58,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.tmpEntryDirty = False
       self.tmpTitleDirty = False
       self.searchFlag = False
+      self.currentSearchList = []
       self.sdict = search.SearchDict()
 
       # Fields within an Entry that we know about already
@@ -92,7 +93,7 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.indexEntry.returnPressed.connect(self.indexChanged)
 
       self.titleEdit.textChanged.connect(self.setEntryDirty)
-      self.titleEdit.textChanged.connect(self.setTitleDirty)
+      #self.titleEdit.textChanged.connect(self.setTitleDirty)
       self.publisherEdit.textChanged.connect(self.setEntryDirty)
       self.abbreviationsEdit.textChanged.connect(self.setEntryDirty)
       self.startDateEdit.textChanged.connect(self.setEntryDirty)
@@ -102,8 +103,27 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.designatorEdit.textChanged.connect(self.setEntryDirty)
       self.CommentsEdit.textChanged.connect(self.setEntryDirty)
 
-      self.openNewFile()
 
+      #
+      # Every key stroke in searchCombo causes a search and
+      # an update in the searchCombo box,
+      #  see self.setTitleDirty() and self.search()
+      #
+      # Selecting a result in the searchCombo
+      #   causes the title to be placed in the entryEdit
+      #   and a journalEntry window to be opened with that
+      #   entry
+      #
+      # Clicking 'new' or typing return in the entryEdit
+      #  with no item number assigned will open a journalEntry
+      #  window for a new object with the title filled in from entryEdit.
+      #
+      self.searchCombo.setMaxCount(10)
+      self.searchCombo.setInsertPolicy(QComboBox.InsertAtCurrent)
+      self.searchCombo.editTextChanged.connect(self.setTitleDirty)
+      #self.searchCombo.currentIndexChanged.connect(self.comboChanged)
+      
+      self.openNewFile()
 
    def setMaxEntryNumber(self, n):
       if n < 0:
@@ -140,12 +160,12 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.sdict.clear()
       index = 0
       for l in self.jf._entryList:
-        # print(index, l['Title'])
-         self.sdict.addSubStrings(l['Title'], index)
+         t = l['Title']
+         self.sdict.addSubStrings(t, (t, index))
          for abr in l['Abbreviations']:
             #print('   ', abr)
             if abr is not None:
-               self.sdict.addSubStrings(abr, index)
+               self.sdict.addSubStrings(abr, (abr, index))
          index += 1
       #pprint(self.sdict)
 
@@ -358,21 +378,23 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       the index of the entry selected from the list and clear the
       searchflag.  Clear the searchFlag if the users selects
       stopSearch.'''
-      print('searching for ', string, self.searchFlag, self.tmpTitleDirty)
+      print('searching for "' + string + '"', self.searchFlag, self.tmpTitleDirty)
       try:
-         d = self.sdict[string.strip()]
+         self.currentSearchList = self.sdict.search(string.strip())
       except KeyError:
-         d = None
-      if d is not None:
-         # add to titleCombo
-         for i in range(10):
-            try:
-               print(i, d[i])
-            except IndexError:
-               pass
-               
-      self.clearTitleDirty()
+         self.currentSearchList = None
 
+
+   def comboChanged(self, i):
+      # entry value is an integer which is the index into the
+      # combo box
+      if i > -1 and i < len(self.currentSearchList):
+         title, index = self.currentSearchList[i]
+         self.showEntry(index + 1)
+         print('combo select:', i, title, index)
+      else:
+         print('comboChanged: i ', i)
+         
 
 
    #
@@ -382,10 +404,42 @@ class JournalEntry( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       """Set the tmpTitleDirty flag to True and run a search
       if the searchFlag is True."""
       self.tmpTitleDirty = True
-      if self.searchFlag:
-         title_text = self.titleEdit.toPlainText()
-         if len(title_text) > 2:
-            self.search(title_text)
+
+      try:
+         self.searchCombo.editTextChanged.disconnect(self.setTitleDirty)
+      except:
+         pass
+         
+      title_text = self.searchCombo.currentText()
+      if self.searchFlag and len(title_text) > 2: 
+         self.search(title_text)
+
+         # Update the combo box
+         try:
+            self.searchCombo.currentIndexChanged.disconnect(self.comboChanged)
+         except:
+            pass
+         if self.currentSearchList is not None:
+            # add to searchCombo
+            self.searchCombo.clear()
+            self.searchCombo.insertItem(0, title_text)
+            for i in range(1, min(9,len(self.currentSearchList)+1)):
+               try:
+                  self.searchCombo.insertItem(i, self.currentSearchList[i][0])
+                  print(i, self.currentSearchList[i])
+               except IndexError:
+                  pass
+         try:
+            self.searchCombo.currentIndexChanged.connect(self.comboChanged)
+         except:
+            pass
+         self.searchCombo.showPopup()
+
+      try:
+         self.searchCombo.editTextChanged.disconnect(self.setTitleDirty)
+      except:
+         pass
+      self.clearTitleDirty()
 
    def clearTitleDirty(self):
       """Set the tmpTitleDirty flag to False and disable searches."""

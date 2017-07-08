@@ -50,16 +50,16 @@ class SearchDict(dict):
     #
     def search(self, SubString, maxLen=10):
         '''Search for SubString  in self. Return a list of the returnVals
-        entered when the sub-strings were added.
-        '''
+        entered when the sub-strings were added or None if no match was
+        found.'''
         final = []
         try:
             sl = self[SubString[:maxLen]]
         except KeyError:
-            return final
+            return None
 
         for s in sl:
-            final.append((s[0], s[1]))
+            final.append(s)
                          
         return final
 
