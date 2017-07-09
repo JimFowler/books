@@ -436,7 +436,7 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          self.searchCombo.showPopup()
 
       try:
-         self.searchCombo.editTextChanged.disconnect(self.setTitleDirty)
+         self.searchCombo.editTextChanged.connect(self.setTitleDirty)
       except:
          pass
       self.clearTitleDirty()

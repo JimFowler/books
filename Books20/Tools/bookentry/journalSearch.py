@@ -27,6 +27,10 @@ import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
 import bookentry.search as search
 
+# Trouble shooting assistance
+from pprint import pprint
+
+
 __version__ = '1.0.0'
 
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -44,6 +48,8 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
         self.curEntryNumber = 0
         self.setMaxEntryNumber(0)
         self.setWinTitle('document1')
+        self.TitleDirty = False
+        self.currentSearchList = []
         self.sdict = search.SearchDict()
         
         self.config = configparser.ConfigParser()
@@ -62,6 +68,24 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
         self.quitButton.released.connect(self.quit)
         #self.newButton.released.connect(self.newEntry)
   
+        #
+        # Every key stroke in searchResults causes a search and
+        # an update in the searchResults box,
+        #  see self.setTitleDirty() and self.search()
+        #
+        # Selecting a result in the searchResults
+        #   causes the title to be placed in theEdit
+        #   and a journalEntry window to be opened with that
+        #   entry
+        #
+        # Clicking 'new' or typing return in the entryEdit
+        #  with no item number assigned will open a journalEntry
+        #  window for a new object with the title filled in from entryEdit.
+        #
+        self.searchResults.setMaxCount(10)
+        self.searchResults.setInsertPolicy(QComboBox.InsertAtCurrent)
+        self.titleEdit.textChanged.connect(self.setTitleDirty)
+        #self.searchResults.currentIndexChanged.connect(self.comboChanged)
       
 
     def quit(self):
@@ -83,21 +107,20 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       """Open an existing file, get the count of entries, and display
       the first entry. If no records are found we assume that this is
       a new file and we automatically generate a new entry."""
-      print('self.openFile: opening', name)
       self.setMaxEntryNumber(self.jf.readfile_XML(name))
       if self.maxEntryNumber:
          self.statusBar.clearMessage()
          self.statusBar.showMessage('%d records found'%self.maxEntryNumber, 6000)
          self.buildSearchDict()
-         self.clearSearchFlag()
+         self.setSearchFlag()
       else:
          self.statusBar.showMessage('No records found in file %s' % name)
+         self.clearSearchFlag()
       self.setWinTitle(self.jf.getBaseName())
 
 
     def saveFile(self):
       """Ignore dirty entries and just save the file."""
-      #print("saving file %s"%self.jf.getFileName())
       if self.jf.getFileName() is None:
          self.saveFileAs()
       else:
@@ -144,14 +167,12 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       self.sdict.clear()
       index = 0
       for l in self.jf._entryList:
-        # print(index, l['Title'])
-         self.sdict.addSubStrings(l['Title'], index)
+         t = l['Title']
+         self.sdict.addSubStrings(t, (t, index))
          for abr in l['Abbreviations']:
-            #print('   ', abr)
             if abr is not None:
                self.sdict.addSubStrings(abr, index)
          index += 1
-      #pprint(self.sdict)
 
     def setSearchFlag(self):
       """Set the  searchflag to True to enable searchs"""
@@ -254,5 +275,76 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       QMessageBox.about(self, 'About JournalEntry', hstr )
      
 
+
+    def search(self, string):
+      '''Search the existing Titles and abbreviations for any entries
+      that match or partially match the string in titleEdit. Pop a
+      list window. If the users double clicks an entry, then return
+      the index of the entry selected from the list and clear the
+      searchflag.  Clear the searchFlag if the users selects
+      stopSearch.'''
+      print('searching for "' + string + '"', self.searchFlag, self.TitleDirty)
+      try:
+         self.currentSearchList = self.sdict.search(string.strip())
+      except KeyError:
+         self.currentSearchList = None
+
+    def comboChanged(self, i):
+      # entry value is an integer which is the index into the
+      # combo box
+      if i > -1 and i < len(self.currentSearchList):
+         title, index = self.currentSearchList[i]
+         #self.showEntry(index + 1)
+         print('combo select:', i, title, index)
+      else:
+         print('comboChanged: i ', i)
+         
+
+
+    #
+    # Set/Clear flags for Entry
+    #
+    def setTitleDirty(self):
+      """Set the TitleDirty flag to True and run a search
+      if the searchFlag is True."""
+      self.TitleDirty = True
+
+      try:
+         self.titleEdit.textChanged.disconnect(self.setTitleDirty)
+      except:
+         pass
+         
+      title_text = self.titleEdit.text()
+      if self.searchFlag and len(title_text) > 2: 
+         self.search(title_text)
+         # Update the combo box
+         try:
+            self.searchResults.currentIndexChanged.disconnect(self.comboChanged)
+         except:
+            pass
+         if self.currentSearchList is not None:
+            # add to searchResults
+            self.searchResults.clear()
+            self.searchResults.insertItem(0, title_text)
+            for i in range(1, min(9,len(self.currentSearchList)+1)):
+               try:
+                  self.searchResults.insertItem(i, self.currentSearchList[i][0])
+               except IndexError:
+                  pass
+         try:
+            self.searchResults.currentIndexChanged.connect(self.comboChanged)
+         except:
+            pass
+         self.searchResults.showPopup()
+
+      try:
+         self.titleEdit.textChanged.connect(self.setTitleDirty)
+      except:
+         pass
+      self.clearTitleDirty()
+
+    def clearTitleDirty(self):
+      """Set the tmpEditDirty flag to False and disable searches."""
+      self.TitleDirty = False
 
 

@@ -33,6 +33,7 @@ would look something like
 }
 
 '''
+from pprint import pprint
 
 class SearchDict(dict):
     '''SearchDict is a dictionary whose keys are sub-strings of
@@ -49,9 +50,11 @@ class SearchDict(dict):
     # Public functions
     #
     def search(self, SubString, maxLen=10):
-        '''Search for SubString  in self. Return a list of the returnVals
-        entered when the sub-strings were added or None if no match was
-        found.'''
+        '''Search for SubString in self. Return a list of the returnVals
+        entered when the sub-strings were added or an None if no
+        match was found.
+        '''
+        
         final = []
         try:
             sl = self[SubString[:maxLen]]
@@ -60,7 +63,7 @@ class SearchDict(dict):
 
         for s in sl:
             final.append(s)
-                         
+        print('search.py;', sl)
         return final
 
     def addSubStrings(self, string, retVal):
