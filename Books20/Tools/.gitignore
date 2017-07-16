@@ -2,3 +2,4 @@ dist
 test
 build
 MANIFEST
+*.conf
