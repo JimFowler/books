@@ -1,3 +1,22 @@
+2017-07-15  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalSearch.py: Modified journalSearch to use
+	a listWidget instead of a combo box.  This was much easier to
+	program.
+
+	* Tools/bookentry/developer/ui_JournalSearch.ui: changed comboBox
+	to a ListWidget.
+
+2017-07-09  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalSearch.py: Got search combo box working
+	in journalSearch.py.  Need to add entry display and edit.
+
+2017-05-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/symbols.txt: Added superscript 2 and created
+	new line of mathematical symbols.
+
 2017-05-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/symbols.txt: Added superscript 2 and created

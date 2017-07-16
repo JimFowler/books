@@ -30,7 +30,6 @@ import bookentry.search as search
 # Trouble shooting assistance
 from pprint import pprint
 
-
 __version__ = '1.0.0'
 
 __dirName, __basename  = os.path.split(symbol.__file__)
@@ -69,7 +68,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
         #self.newButton.released.connect(self.newEntry)
   
         #
-        # Every key stroke in searchResults causes a search and
+        # Every key stroke in titleEdit causes a search and
         # an update in the searchResults box,
         #  see self.setTitleDirty() and self.search()
         #
@@ -82,10 +81,8 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
         #  with no item number assigned will open a journalEntry
         #  window for a new object with the title filled in from entryEdit.
         #
-        self.searchResults.setMaxCount(10)
-        self.searchResults.setInsertPolicy(QComboBox.InsertAtCurrent)
         self.titleEdit.textChanged.connect(self.setTitleDirty)
-        #self.searchResults.currentIndexChanged.connect(self.comboChanged)
+        self.searchResults.itemDoubleClicked.connect(self.titleSelected)
       
 
     def quit(self):
@@ -162,17 +159,17 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
     # Deal with the Search Dictionary
     #
     def buildSearchDict(self):
-      '''Add all the titles and abbreviations to the search
-      dictionary'''
-      self.sdict.clear()
-      index = 0
-      for l in self.jf._entryList:
-         t = l['Title']
-         self.sdict.addSubStrings(t, (t, index))
-         for abr in l['Abbreviations']:
-            if abr is not None:
-               self.sdict.addSubStrings(abr, index)
-         index += 1
+        '''Add all the titles and abbreviations to the search
+        dictionary'''
+        self.sdict.clear()
+        index = 0
+        for l in self.jf._entryList:
+            t = l['Title']
+            self.sdict.addSubStrings(t, (t, index))
+            for abr in l['Abbreviations']:
+                if abr is not None:
+                    self.sdict.addSubStrings(abr, (abr, index))
+            index += 1
 
     def setSearchFlag(self):
       """Set the  searchflag to True to enable searchs"""
@@ -283,22 +280,23 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       the index of the entry selected from the list and clear the
       searchflag.  Clear the searchFlag if the users selects
       stopSearch.'''
-      print('searching for "' + string + '"', self.searchFlag, self.TitleDirty)
+      #print('searching for "' + string + '"', self.searchFlag, self.TitleDirty)
       try:
          self.currentSearchList = self.sdict.search(string.strip())
       except KeyError:
          self.currentSearchList = None
 
-    def comboChanged(self, i):
-      # entry value is an integer which is the index into the
-      # combo box
-      if i > -1 and i < len(self.currentSearchList):
-         title, index = self.currentSearchList[i]
-         #self.showEntry(index + 1)
-         print('combo select:', i, title, index)
-      else:
-         print('comboChanged: i ', i)
-         
+
+    def titleSelected(self, title):
+        # entry value is an integer which is the index into the
+        # combo box
+        for t, i in self.currentSearchList:
+            if t == title.text():
+                print(title.text(), t, i)
+                #self.showEntry(index + 1)
+                return
+        print('Creating new entry', title.text())
+
 
 
     #
@@ -322,7 +320,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
             self.searchResults.currentIndexChanged.disconnect(self.comboChanged)
          except:
             pass
-         if self.currentSearchList is not None:
+         if self.currentSearchList is not None and len(self.currentSearchList) > 0:
             # add to searchResults
             self.searchResults.clear()
             self.searchResults.insertItem(0, title_text)
@@ -335,7 +333,6 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
             self.searchResults.currentIndexChanged.connect(self.comboChanged)
          except:
             pass
-         self.searchResults.showPopup()
 
       try:
          self.titleEdit.textChanged.connect(self.setTitleDirty)

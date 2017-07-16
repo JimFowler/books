@@ -63,7 +63,6 @@ class SearchDict(dict):
 
         for s in sl:
             final.append(s)
-        print('search.py;', sl)
         return final
 
     def addSubStrings(self, string, retVal):

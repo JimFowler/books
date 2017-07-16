@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>526</width>
-    <height>221</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,15 +31,6 @@
      <widget class="QLineEdit" name="titleEdit"/>
     </item>
     <item>
-     <widget class="QComboBox" name="searchResults">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item>
      <spacer name="verticalSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -51,6 +42,32 @@
        </size>
       </property>
      </spacer>
+    </item>
+    <item>
+     <widget class="QListWidget" name="searchResults">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>The list of search results if any</string>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+     </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
