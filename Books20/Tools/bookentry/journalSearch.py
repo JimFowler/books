@@ -166,6 +166,9 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
         for l in self.jf._entryList:
             t = l['Title']
             self.sdict.addSubStrings(t, (t, index))
+            for sub in l['subTitle']:
+                if sub is not None:
+                    self.sdict.addSubStrings(sub, (sub, index))
             for abr in l['Abbreviations']:
                 if abr is not None:
                     self.sdict.addSubStrings(abr, (abr, index))
