@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>824</width>
+    <width>786</width>
     <height>865</height>
    </rect>
   </property>
@@ -16,13 +16,13 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <layout class="QHBoxLayout" name="main_hLayout">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="main_vLayout">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <layout class="QHBoxLayout" name="index_hLayout">
           <item>
-           <spacer name="horizontalSpacer_2">
+           <spacer name="index_hSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -35,7 +35,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="indexLabel_1">
             <property name="font">
              <font>
               <pointsize>12</pointsize>
@@ -79,7 +79,7 @@
            <widget class="QLineEdit" name="indexEntry">
             <property name="maximumSize">
              <size>
-              <width>150</width>
+              <width>100</width>
               <height>16777215</height>
              </size>
             </property>
@@ -145,7 +145,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="indexLabel_2">
             <property name="font">
              <font>
               <pointsize>12</pointsize>
@@ -164,7 +164,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QHBoxLayout" name="title_Layout">
           <item>
            <widget class="QLabel" name="titleLabel">
             <property name="sizePolicy">
@@ -212,54 +212,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="blankLabel">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Suggestions:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="searchCombo">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="toolTip">
-             <string>Enter title or abbreviations</string>
-            </property>
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <layout class="QHBoxLayout" name="publisher_hLayout">
           <item>
            <widget class="QLabel" name="PublisherLabel">
             <property name="font">
@@ -297,7 +250,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <layout class="QHBoxLayout" name="abbrv_hlLayout">
           <item>
            <widget class="QLabel" name="AbbreviationsLabel">
             <property name="font">
@@ -335,7 +288,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <layout class="QHBoxLayout" name="date_hLayout">
           <item>
            <widget class="QLabel" name="startDateLabel">
             <property name="font">
@@ -401,7 +354,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <layout class="QHBoxLayout" name="prevname_hLayout">
           <item>
            <widget class="QLabel" name="LinkPreviousLabel">
             <property name="font">
@@ -439,7 +392,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <layout class="QHBoxLayout" name="futurename_hLayout">
           <item>
            <widget class="QLabel" name="LinkNextLabel">
             <property name="font">
@@ -477,7 +430,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QHBoxLayout" name="designator_hLayout">
           <item>
            <widget class="QLabel" name="designatorLabel">
             <property name="font">
@@ -515,7 +468,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <layout class="QHBoxLayout" name="comment_hLayout">
           <item>
            <widget class="QLabel" name="CommentsLabel">
             <property name="font">
@@ -563,7 +516,7 @@
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="button_vLayout">
       <item>
        <widget class="QPushButton" name="saveButton">
         <property name="enabled">
@@ -692,7 +645,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>824</width>
+     <width>786</width>
      <height>25</height>
     </rect>
    </property>
