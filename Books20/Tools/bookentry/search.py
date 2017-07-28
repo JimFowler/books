@@ -11,13 +11,15 @@ with the string that the sub-string was created from.
 
 Looking up a the key returns a list of tuples of (title, returnvalue).
 
+The sub-strings and search string are case-sensitive.
+
 Ideally the tuples should be in a weighted order scheme, e.g. the
 sub-string is closer to the beginning of the list if the sub-string
 appears closer to the start of the string. Alternatively, we can remove
 the articles from the string before creating the sub-strings.  This may
 best be left to the user.
 
-For example; a dictionary created from the strings
+As an example; a dictionary created from the strings
 ('British Astronomy Journal', retVal1),
 ('Americal Astronomy Journal', retVal2),
 ('Astronomy Journal of Pakistan', retVal3),
@@ -26,9 +28,9 @@ For example; a dictionary created from the strings
 
 would look something like
 
-{ 'astr' : [('title1', retVal1), ('title4', retVal4), ...],
-  'astro' : [('title1', retVal1), ('title3', retVal3), ...],
-  'astronomy jou' : [('title1', retVal1), ('title2', retVal2), ...],
+{ 'Astr' : [('British Astronomy Journal', retVal1), ('The Astronomical Journal', retVal4), ...],
+  'Astro' : [('British Astronomy Journal', retVal1), ('Astronomy Journal of Pakistan', retVal3), ...],
+  'Astronomy Jou' : [('British Astronomy Journal', retVal1), ('Ameican Astronomy Journal', retVal2), ...],
   ...
 }
 
@@ -36,12 +38,15 @@ would look something like
 from pprint import pprint
 
 class SearchDict(dict):
-    '''SearchDict is a dictionary whose keys are sub-strings of
-    strings that have been added to the dictionary.  The values are
-    a list of retVals associated with the original string.'''
+    '''SearchDict is a dictionary whose keys are sub-strings of strings
+    that have been added to the dictionary.  The sub-strings are
+    case-snsitive. The values are a list of retVals associated with
+    the original string.
+
+    '''
 
     def __init__(self):
-        '''When a new SeachDict object is created we clear() the
+        '''When a new SeachDict object is created clear() the
         underlying dictionary.'''
         self.clear()
         return
@@ -51,15 +56,15 @@ class SearchDict(dict):
     #
     def search(self, SubString, maxLen=10):
         '''Search for SubString in self. Return a list of the returnVals
-        entered when the sub-strings were added or an None if no
-        match was found.
+        entered when the sub-strings were added or an empty list if no
+        match was found. SubString is case-sensitive.
         '''
         
         final = []
         try:
             sl = self[SubString[:maxLen]]
         except KeyError:
-            return None
+            return final
 
         for s in sl:
             final.append(s)
@@ -146,6 +151,9 @@ if __name__ == '__main__':
     print('\n\nsearching for "ApJ"')
     pprint(d.search('ApJ'))
 
+    print('\n\nsearching for "apj"')
+    pprint(d.search('apj'))
+
     print('\n\nsearching for "Optical"')
     pprint(d.search('Optical'))
 
@@ -159,3 +167,7 @@ if __name__ == '__main__':
 
     print('\n\nsearching for "red"')
     pprint(d.search('red'))
+
+    print('\n\nsearching for a non-exist string')
+    pprint(d.search('animal'))
+    
