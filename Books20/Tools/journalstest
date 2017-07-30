@@ -13,7 +13,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui  import *
 from PyQt5.QtWidgets import *
 
-import bookentry.journalWin as mw
+import bookentry.journalSearch as mw
 
 # Trouble shooting assistance
 from pprint import *
@@ -60,10 +60,10 @@ def main():
    app.setApplicationName('Journal Search and Entry')
    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
    
-   form = mw.JournalWindow(config_name=args.config)
-   app.focusChanged.connect(form.setFocusChanged)
+   form = mw.JournalSearch( config_name=args.config)
+   #app.focusChanged.connect(form.setFocusChanged)
 
-
+   '''
    if args.version:
       hstr = form.helpString()
       form.helpAbout()
@@ -71,17 +71,15 @@ def main():
 
    if args.symbols is not None:
       form.setSymbolTableName(args.symbols)
-
+   '''
    if args.input is not None:
       fname = args.input
       if os.path.isfile(fname):
          form.openFile(fname)
-         form.showEntry(1)
       else:
          form.openNewFile()
          form.jf.setFileName(fname)
          form.setWinTitle(form.jf.getBaseName())
-         form.newEntry()
    
    form.show()
    sys.exit(app.exec_())
