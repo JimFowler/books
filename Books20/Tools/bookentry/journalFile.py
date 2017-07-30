@@ -146,7 +146,7 @@ class JournalFile():
         shortTitleList = ''
         count = 1
         for e in self._entryList:
-            shortTitleList = shortTitleList + str(count) + ' ' + e['Title']
+            shortTitleList = shortTitleList + str(count) + ' ' + e['Title'] + '\n'
             count += 1
 
         return shortTitleList

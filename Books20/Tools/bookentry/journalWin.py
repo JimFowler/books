@@ -14,6 +14,7 @@ import sys
 import os
 import platform
 import fileinput
+import configparser
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui  import *
@@ -23,8 +24,10 @@ import bookentry.ui_JournalEntry as ui_journalEntry
 import bookentry.journalFile as jf
 import bookentry.journalMenus as menus
 import bookentry.journalEntry as journalEntry
+import bookentry.journalsearch as journalsearch
 import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
+import bookentry.entryselect as es
 import bookentry.search as search
 
 # Trouble shooting assistance
@@ -40,23 +43,20 @@ __version__ = '1.0.0'
 
 class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
-   def __init__(self, parent = None ):
+   def __init__(self, parent = None, config_name=None ):
       super(JournalWindow, self).__init__(parent=parent)
       self.setupUi(self)
 
-      # This boolean indicates that the window entries
-      # have been modified and that we should not change the
-      # window contents without asking the user if they should
-      # be saved.
-      self.tmpEntryDirty = False
-      self.jf = None
+      #
+      # Set up an empty journal set
+      #
+      self.jf = jf.JournalFile()
       self.curEntryNumber = 0
       self.setMaxEntryNumber(0)
       self.setWinTitle('document1')
       self.insertFunc = None
       self.setSymbolTableName( __DefaultSymbolTableName__)
-      self.tmpEntryDirty = False
-      self.tmpTitleDirty = False
+      self.EntryDirty = False
       self.searchFlag = False
       self.currentSearchList = []
       self.sdict = search.SearchDict()
@@ -81,10 +81,12 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       menus.createMenus(self, self.menubar)
 
-      self.quitButton.released.connect(self.quit)
-      self.saveButton.released.connect(self.saveEntry)
+      self.searchButton.released.connect(self.searchEntry)
       self.newButton.released.connect(self.newEntry)
+      self.saveButton.released.connect(self.saveEntry)
+      self.insertButton.released.connect(self.askInsertEntry)
       self.deleteButton.released.connect(self.deleteEntry)
+      self.quitButton.released.connect(self.quit)
 
       self.saveButton.setEnabled(False)
       self.deleteButton.setEnabled(False)
@@ -93,7 +95,6 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.indexEntry.returnPressed.connect(self.indexChanged)
 
       self.titleEdit.textChanged.connect(self.setEntryDirty)
-      #self.titleEdit.textChanged.connect(self.setTitleDirty)
       self.publisherEdit.textChanged.connect(self.setEntryDirty)
       self.abbreviationsEdit.textChanged.connect(self.setEntryDirty)
       self.startDateEdit.textChanged.connect(self.setEntryDirty)
@@ -103,27 +104,16 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.designatorEdit.textChanged.connect(self.setEntryDirty)
       self.CommentsEdit.textChanged.connect(self.setEntryDirty)
 
+      #
+      # Read the config file
+      #
+      self.config = configparser.ConfigParser()
+      self.config.read(config_name)
+      self.jf.setSchemaName(self.config['DEFAULT']['journal_xsd'])
+      jfName = self.config['DEFAULT']['journal_file_dir'] + '/' + self.config['DEFAULT']['journal_file_name'] + '.' + self.config['DEFAULT']['journal_file_ext']
 
-      #
-      # Every key stroke in searchCombo causes a search and
-      # an update in the searchCombo box,
-      #  see self.setTitleDirty() and self.search()
-      #
-      # Selecting a result in the searchCombo
-      #   causes the title to be placed in the entryEdit
-      #   and a journalEntry window to be opened with that
-      #   entry
-      #
-      # Clicking 'new' or typing return in the entryEdit
-      #  with no item number assigned will open a journalEntry
-      #  window for a new object with the title filled in from entryEdit.
-      #
-      self.searchCombo.setMaxCount(10)
-      self.searchCombo.setInsertPolicy(QComboBox.InsertAtCurrent)
-      self.searchCombo.editTextChanged.connect(self.setTitleDirty)
-      #self.searchCombo.currentIndexChanged.connect(self.comboChanged)
-      
-      self.openNewFile()
+      if jfName is not None and os.path.isfile(jfName):
+         self.openFile(jfName)
 
    def setMaxEntryNumber(self, n):
       if n < 0:
@@ -171,6 +161,33 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
 
    #
+   # Search for an existing entry
+   #  This function called when Search... button is pressed
+   #
+   def searchEntry(self):
+      # open search dialog
+      # link search to self.showSearchSelect()
+
+      print('self.searchEntry() called')
+
+      self.jsearch = journalsearch.JournalSearch(parent=self, searchDict=self.sdict)
+
+      self.jsearch.show()
+            
+      return
+
+   #
+   # Display the selected search result
+   #
+   def showSearchSelect(self, rec):
+      '''Display the selected record number or
+      a new entry if the rec is zero.'''
+      if rec == 0:
+         self.newEntry()
+      else:
+         self.showEntry(rec)
+         
+   #
    # Menu and button slots for File actions
    #
    def openNewFile(self):
@@ -198,7 +215,6 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
          self.buildSearchDict()
          self.clearSearchFlag()
          self.showEntry(1)
-         self.clearTitleDirty()
          self.clearEntryDirty()
       else:
          self.statusbar.showMessage('No records found in file %s' % name)
@@ -256,7 +272,6 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.deleteButton.setEnabled(True)
       self.buildSearchDict()
       self.clearSearchFlag()
-      self.clearTitleDirty()
       self.clearEntryDirty()
 
    def newEntry(self):
@@ -270,7 +285,6 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       self.EntryToDisplay(self.tmpEntry)
       self.indexEntry.setText(str(self.curEntryNumber))
       self.titleEdit.setFocus()
-      self.clearTitleDirty()
       self.setSearchFlag()
       self.clearEntryDirty()
 
@@ -284,12 +298,13 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
                                  "Entry invalid!  Not saved in bookfile!" )
          return
 
-      self.entrySelect= es.EntrySelect()
+      self.entrySelect = es.EntrySelect()
       self.entrySelect.setText( self.jf.mkShortTitleList() )
 
       self.entrySelect.show()
-      self.connect(self.entrySelect, SIGNAL('lineEmit'),
-                   self.insertEntry )
+      #self.connect(self.entrySelect, SIGNAL('lineEmit'),
+      #             self.insertEntry )
+      self.entrySelect.lineEmit.connect(self.insertEntry)
 
    def insertEntry(self, line):
       """Parse the short title line, get the index number and insert
@@ -330,6 +345,10 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       recnum is the index into the entry list.  The buttons will
       wrap around the index values.
       """
+
+      if self.maxEntryNumber < 1:
+         return
+      
       self.prevButton.setEnabled(True)
 
       self.nextButton.setEnabled(True)
@@ -353,7 +372,6 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
       self.EntryToDisplay(self.tmpEntry)
       self.deleteButton.setEnabled(True)
-      self.clearTitleDirty()
       self.clearEntryDirty()
 
    def printEntry(self):
@@ -378,74 +396,16 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       the index of the entry selected from the list and clear the
       searchflag.  Clear the searchFlag if the users selects
       stopSearch.'''
-      print('searching for "' + string + '"', self.searchFlag, self.tmpTitleDirty)
+      print('searching for "' + string + '"', self.searchFlag)
       try:
          self.currentSearchList = self.sdict.search(string.strip())
       except KeyError:
          self.currentSearchList = None
 
 
-   def comboChanged(self, i):
-      # entry value is an integer which is the index into the
-      # combo box
-      if i > -1 and i < len(self.currentSearchList):
-         title, index = self.currentSearchList[i]
-         self.showEntry(index + 1)
-         print('combo select:', i, title, index)
-      else:
-         print('comboChanged: i ', i)
-         
-
-
    #
    # Set/Clear flags for Entry
    #
-   def setTitleDirty(self):
-      """Set the tmpTitleDirty flag to True and run a search
-      if the searchFlag is True."""
-      self.tmpTitleDirty = True
-
-      try:
-         self.searchCombo.editTextChanged.disconnect(self.setTitleDirty)
-      except:
-         pass
-         
-      title_text = self.searchCombo.currentText()
-      if self.searchFlag and len(title_text) > 2: 
-         self.search(title_text)
-
-         # Update the combo box
-         try:
-            self.searchCombo.currentIndexChanged.disconnect(self.comboChanged)
-         except:
-            pass
-         if self.currentSearchList is not None:
-            # add to searchCombo
-            self.searchCombo.clear()
-            self.searchCombo.insertItem(0, title_text)
-            for i in range(1, min(9,len(self.currentSearchList)+1)):
-               try:
-                  self.searchCombo.insertItem(i, self.currentSearchList[i][0])
-                  print(i, self.currentSearchList[i])
-               except IndexError:
-                  pass
-         try:
-            self.searchCombo.currentIndexChanged.connect(self.comboChanged)
-         except:
-            pass
-         self.searchCombo.showPopup()
-
-      try:
-         self.searchCombo.editTextChanged.connect(self.setTitleDirty)
-      except:
-         pass
-      self.clearTitleDirty()
-
-   def clearTitleDirty(self):
-      """Set the tmpTitleDirty flag to False and disable searches."""
-      self.tmpTitleDirty = False
-
-
    def setSearchFlag(self):
       """Set the  searchflag to True to enable searchs"""
       self.searchFlag = True
@@ -456,16 +416,16 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
 
    def setEntryDirty(self):
-      """Set the tmpEntryDirty flag to True and enable the Save Entry
+      """Set the EntryDirty flag to True and enable the Save Entry
       button."""
-      self.tmpEntryDirty = True
+      self.EntryDirty = True
       self.saveButton.setEnabled(True)
       # set menu item enable to True as well
 
    def clearEntryDirty(self):
-      """Set the tmpEntryDirty flag to False and disable the Save
+      """Set the EntryDirty flag to False and disable the Save
       Entry button."""
-      self.tmpEntryDirty = False
+      self.EntryDirty = False
       self.saveButton.setEnabled(False)
       # set menu item enable False as well.
       # set Save File menu True
@@ -586,7 +546,7 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
    def askSaveEntry(self):
       """Ask if we should save the dirty entry."""
       ans = None
-      if self.tmpEntryDirty:
+      if self.EntryDirty:
          ans = QMessageBox.warning( self, 'Save Entry?',
                                     'Entry has changed. Do you want to save it?',
                                     QMessageBox.Save|QMessageBox.No|QMessageBox.Cancel )

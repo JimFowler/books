@@ -19,7 +19,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui  import *
 from PyQt5.QtWidgets import *
 
-import bookentry.ui_JournalSearch as ui_journalSearch
+import bookentry.ui_JournalSearchMain as ui_journalSearch
 import bookentry.journalFile as jf
 import bookentry.journalMenus as menus
 import bookentry.journalEntry as journalEntry
@@ -287,7 +287,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
       try:
          self.currentSearchList = self.sdict.search(string.strip())
       except KeyError:
-         self.currentSearchList = None
+         self.currentSearchList = []
 
 
     def titleSelected(self, title):
@@ -323,7 +323,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
             self.searchResults.currentIndexChanged.disconnect(self.comboChanged)
          except:
             pass
-         if self.currentSearchList is not None and len(self.currentSearchList) > 0:
+         if len(self.currentSearchList) > 0:
             # add to searchResults
             self.searchResults.clear()
             self.searchResults.insertItem(0, title_text)
@@ -337,10 +337,14 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
          except:
             pass
 
+      else:
+          self.searchResults.clear()
+             
       try:
          self.titleEdit.textChanged.connect(self.setTitleDirty)
       except:
          pass
+     
       self.clearTitleDirty()
 
     def clearTitleDirty(self):

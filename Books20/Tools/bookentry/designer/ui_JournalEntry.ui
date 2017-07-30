@@ -518,10 +518,7 @@
     <item>
      <layout class="QVBoxLayout" name="button_vLayout">
       <item>
-       <widget class="QPushButton" name="saveButton">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
+       <widget class="QPushButton" name="searchButton">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -533,10 +530,10 @@
          <enum>Qt::NoFocus</enum>
         </property>
         <property name="toolTip">
-         <string>Save the current informantion to the entry list</string>
+         <string>Open the search window and look for an existing journal</string>
         </property>
         <property name="text">
-         <string> Save Entry</string>
+         <string>Search Entry...</string>
         </property>
        </widget>
       </item>
@@ -561,9 +558,49 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="toolTip">
+         <string>Save the current informantion to the entry list</string>
+        </property>
+        <property name="text">
+         <string> Save Entry</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="insertButton">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Insert this entry else where in the file...</string>
+        </property>
+        <property name="text">
+         <string>Insert Entry...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="deleteButton">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="font">
          <font>
@@ -580,26 +617,6 @@
         </property>
         <property name="text">
          <string>Delete Entry</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="searchButton">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="toolTip">
-         <string>Open the search window and look for an existing journal</string>
-        </property>
-        <property name="text">
-         <string>Search Entry...</string>
         </property>
        </widget>
       </item>

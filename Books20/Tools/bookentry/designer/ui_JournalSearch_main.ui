@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>JournalSearch</class>
- <widget class="QDialog" name="JournalSearch">
+ <widget class="QMainWindow" name="JournalSearch">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,18 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Journal Search</string>
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="geometry">
-    <rect>
-     <x>14</x>
-     <y>31</y>
-     <width>501</width>
-     <height>431</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="mainVLayout">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QLabel" name="label">
       <property name="font">
@@ -36,7 +28,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="searchEdit"/>
+     <widget class="QLineEdit" name="titleEdit"/>
     </item>
     <item>
      <spacer name="verticalSpacer">
@@ -78,16 +70,9 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="buttoneHLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="newButton">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
         <property name="toolTip">
          <string>Create a new journal entry</string>
         </property>
@@ -110,19 +95,12 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="closeButton">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
+       <widget class="QPushButton" name="quitButton">
         <property name="toolTip">
          <string>Exit the program</string>
         </property>
         <property name="text">
-         <string>Close</string>
+         <string>Quit</string>
         </property>
        </widget>
       </item>
@@ -140,16 +118,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>3</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections/>
