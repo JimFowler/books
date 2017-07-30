@@ -1,3 +1,23 @@
+2017-07-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalWin.py (JournalWindow.__init__):
+	Re-enable entry menu items and create new entry menu. Added symbol
+	insert to search edit box. Also added askSaveEntry() when
+	selecting an existing entry from the search box.  These
+	modification were all based on issues encountered when trying to
+	use the journals program.
+
+2017-07-29  Jim Fowler  <jrf@biblion>
+
+	* Tools/bookentry/journalsearch.py (JournalSearch.SearchEditChanged):
+	Found search problem. Was using 1-based count instead of 0-based
+	count for getting the entries from currentSearchList.
+
+	* Tools/bookentry/journalWin.py (JournalWindow.showSearchSelect):
+	Added search capabilities to main entry window.  Wrote
+	journalsearch.py to support the dialog box.  Need to find and fix
+	problem with search.py not returning values that I expect.
+
 2017-07-17  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/journalSearch.py (JournalSearch.buildSearchDict):

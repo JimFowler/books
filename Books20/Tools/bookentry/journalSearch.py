@@ -327,7 +327,7 @@ class JournalSearch( QMainWindow, ui_journalSearch.Ui_JournalSearch ):
             # add to searchResults
             self.searchResults.clear()
             self.searchResults.insertItem(0, title_text)
-            for i in range(1, min(9,len(self.currentSearchList)+1)):
+            for i in range(1, min(20,len(self.currentSearchList)+1)):
                try:
                   self.searchResults.insertItem(i, self.currentSearchList[i][0])
                except IndexError:

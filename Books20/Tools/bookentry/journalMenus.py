@@ -51,19 +51,7 @@ def createMenus( self, menuBar):
         saveAsAction = createAction( self, 'Save File &As...',
                                      slot='self.saveFileAs',
                                      shortcut='Ctrl+A')
-        '''
-        newEntAction = createAction( self, 'New &Entry',
-                                     slot='self.newEntry',
-                                     shortcut='Ctrl+E')
-        
-        saveEntAction = createAction( self, 'Save Ent&ry', 
-                                      slot='self.saveEntry',
-                                      shortcut='Ctrl+R')
-        
-        printAction = createAction( self, '&Print Entry',
-                                    slot='self.printEntry',
-                                    shortcut='Ctrl+P')
-        '''
+
         exitAction = createAction(self, '&Quit',
                                   slot='self.quit',
                                   shortcut='Ctrl+Q',
@@ -76,15 +64,8 @@ def createMenus( self, menuBar):
         fileMenu.addAction(saveAsAction)
         
         fileMenu.addSeparator()
-        '''
-        fileMenu.addAction(newEntAction)
-        fileMenu.addAction(saveEntAction)
-        fileMenu.addAction(printAction)
-        '''
-        fileMenu.addSeparator()
+
         fileMenu.addAction(exitAction)
-
-
 
 
         # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
@@ -112,7 +93,7 @@ def createMenus( self, menuBar):
                                     shortcut='Ctrl+H')
 
 
-        editMenu = menuBar.addMenu('&Edit')
+        editMenu = menuBar.addMenu('Edit')
         editMenu.addAction( cutAction)
         editMenu.addAction( copyAction ) 
         editMenu.addAction( pasteAction )
@@ -121,6 +102,35 @@ def createMenus( self, menuBar):
         editMenu.addAction( symbolAction)
         editMenu.addAction( headerAction)
 
+
+        # set up the Entry menus
+        entryMenu = menuBar.addMenu('Entry')
+
+        newEntAction = createAction( self, 'New &Entry',
+                                     slot='self.newEntry',
+                                     shortcut='Ctrl+E')
+        
+        saveEntAction = createAction( self, 'Save Ent&ry', 
+                                      slot='self.saveEntry',
+                                      shortcut='Ctrl+R')
+        
+        insertEntAction = createAction( self, 'Insert Entry', 
+                                      slot='self.askInsertEntry',
+                                      )
+        
+        deleteEntAction = createAction( self, '&Delete Entry', 
+                                      slot='self.deleteEntry',
+                                      shortcut='Ctrl+D')
+        
+        printAction = createAction( self, '&Print Entry',
+                                    slot='self.printEntry',
+                                    shortcut='Ctrl+P')
+
+        entryMenu.addAction(newEntAction)
+        entryMenu.addAction(saveEntAction)
+        entryMenu.addAction(insertEntAction)
+        entryMenu.addAction(deleteEntAction)
+        entryMenu.addAction(printAction)
 
 
 

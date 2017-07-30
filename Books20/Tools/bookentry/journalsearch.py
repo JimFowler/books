@@ -49,14 +49,16 @@ class JournalSearch( QDialog, ui_journalSearch.Ui_JournalSearch ):
     #
     def SearchEditChanged(self):
         """Run a search of the sdict and fill in the searchResults"""
-        print('SearchEditChanged')
+        #print('SearchEditChanged')
         try:
             self.searchEdit.textChanged.disconnect(self.SearchEditChanged)
         except:
             pass
 
-        self.searchResults.clear()
         search_text = self.searchEdit.text()
+        self.searchResults.clear()
+        self.searchResults.insertItem(0, search_text.strip())
+
         if len(search_text) > 2: 
             # Update the searchResults box
             try:
@@ -67,10 +69,9 @@ class JournalSearch( QDialog, ui_journalSearch.Ui_JournalSearch ):
                 
             if len(self.currentSearchList) > 0:
                 # add to searchResults
-                self.searchResults.insertItem(0, search_text)
                 for i in range(1, min(9,len(self.currentSearchList)+1)):
                     try:
-                        self.searchResults.insertItem(i, self.currentSearchList[i][0])
+                        self.searchResults.insertItem(i, self.currentSearchList[i-1][0])
                     except IndexError:
                         pass
             
@@ -82,13 +83,14 @@ class JournalSearch( QDialog, ui_journalSearch.Ui_JournalSearch ):
     def titleSelected(self, title):
         """If a title has been selected in the searchResults, then
         find that title in the currentSearchList, extract that record
-        number and send a signal with the relevant record number. A
-        record number of 0"""
+        number and show the entry with the relevant record number."""
+        tt = title.text()
         for t, i in self.currentSearchList:
-            if t == title.text():
-                print(title.text(), t, i)
-                self.parent.showEntry(i+1./)
+            if t == tt:
+                print(tt, t, i)
+                self.parent.showEntry(i+1)
                 return
+            
         self.parent.newEntry()
-        print('Creating new entry', title.text())
+        self.parent.titleEdit.setText(tt)
 

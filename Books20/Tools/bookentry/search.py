@@ -157,6 +157,10 @@ if __name__ == '__main__':
     print('\n\nsearching for "Optical"')
     pprint(d.search('Optical'))
 
+    print('\n\nsearching for "Astro"')
+    pprint(d.search('Astro'))
+
+
     # test with the color list
     # we first clear the existing SearchDict
     #  and reloaded it with the color sub-strings

@@ -76,7 +76,7 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
                                'publisherEdit', 'abbreviationsEdit',
                                'LinkPreviousEdit', 'LinkNextEdit',
                                'CommentsEdit']
-      self.setLineEntryList = []
+      self.setLineEntryList = ['searchEdit']
 
 
       menus.createMenus(self, self.menubar)
@@ -168,24 +168,12 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       # open search dialog
       # link search to self.showSearchSelect()
 
-      print('self.searchEntry() called')
-
       self.jsearch = journalsearch.JournalSearch(parent=self, searchDict=self.sdict)
 
       self.jsearch.show()
             
       return
 
-   #
-   # Display the selected search result
-   #
-   def showSearchSelect(self, rec):
-      '''Display the selected record number or
-      a new entry if the rec is zero.'''
-      if rec == 0:
-         self.newEntry()
-      else:
-         self.showEntry(rec)
          
    #
    # Menu and button slots for File actions
@@ -346,6 +334,9 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       wrap around the index values.
       """
 
+      if self.askSaveEntry() == QMessageBox.Cancel:
+         return
+
       if self.maxEntryNumber < 1:
          return
       
@@ -469,7 +460,7 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
 
    def setFocusChanged(self, oldWidget, nowWidget ):
       """For items in setTextEntryList and setLineEntryList
-      set insertFunc to be either insertPlainText or insert."""
+      set insertFunc to be either insertPlainText() or insert()."""
 
       if oldWidget is None:
          pass
