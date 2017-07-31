@@ -16,9 +16,10 @@ setup( name='bookentry',
        url='http://het.as.utexas.edu/jrf/20thCentury.html',
        platforms=['Ubuntu 12.04',
                   'Ubuntu 13',
-                  'Ubuntu 14.10 LTS'],
+                  'Ubuntu 14.10 LTS',
+                  'Ubuntu 16.10 LTS'],
        packages=['bookentry'],
-       scripts=['ajbbooks', 'ppxml', 'validateXML'],
+       scripts=['ajbbooks', 'journals', 'ppxml', 'validateXML'],
        package_data={'bookentry': ['symbols.txt']},
        )
 
