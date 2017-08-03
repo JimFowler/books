@@ -4,7 +4,7 @@ Theory of Operation
 Overview
 ======== 
 
-**ajbbooks** was written primarily to facilitate user input of entries
+**journals** was written primarily to facilitate user input of entries
 and to facilitate review of entries (proofreading) by letting the user
 concentrate on the content of the entry rather than the formatting. In
 addition, it needed to be able to read the already existing book lists
@@ -15,8 +15,8 @@ important for files that would later be read into a database. The
 older method, of formatting the files manually, was sure to introduce
 inconsistencies between files.
 
-The list of book entries created by **ajbbooks** will be used by other
-programs to generate the database for the project.  Thus **ajbbooks**
+The list of journal entries created by **journals** will be used by other
+programs to generate the database for the project.  Thus **journals**
 doesn't care much about the actual content of fields. It just needs to know
 how to parse and write the fields.
 
@@ -24,115 +24,92 @@ how to parse and write the fields.
 Internal JournalFile Object
 ===========================
 
-The internal class BookFile is defined in bookfile.py. 
+The internal class JournalFile is defined in bookfile.py. 
 
 =================== == ======================================
 =================== == ======================================
 self._header        =  __defaultHeader__
-self._entryList     =  []
+self._entryList     =  [] # a list of journalEntry objects
 
-self._volumeNumber  =  -1
 self._fileName      =  './document1'
 self._dirName       =  './'
 self._baseName      =  'document1'
 
 self.curEntryNumber =  -1
 self._dirty         =  False
+self.schemaName     =  None
+self._dirty         =  False
 =================== == ======================================
 
 
 The primary internal variables are ``_header`` and ``_entryList``,
 which contain the header of the external disk file and the list of
-entries respectively.  Entries are of the Class AJBentry, defined in
-AJBentry.py.  Secondary variables are ``_volumeNumber``, the value to
-outfall the volume number in a new entry; ``_fileName``, the pathname
-for the disk file as passed to BookFile via the command line or menu item;
+entries respectively.  Entries are of the class journalEntry, defined in
+journalEntry.py.  Secondary variables  ``_fileName``, the pathname
+for the disk file as passed to JournalFile via the command line or menu item;
 ``_dirName``, the directory portion of _filename; ``_baseName``, the
 base name of ``_fileName``; ``_curEntryNumber``, the number of the
 current active entry in ``_entryList``, restricted to the range 1 <=
 ``_curEntryNumber`` <= len(``_entryList``); and ``_dirty``, indicating
-that the internal BookFile has been modified since the last write to
+that the internal JournalFile has been modified since the last write to
 disk. The class functions are detailed in the Classes section of this
 manual.
  
-The default header is
-
-.. parsed-literal::
-
-   '''
-   Entry format
-
-   Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place,
-   Publisher, year, description, price, review [and review [and …]],
-   comments
-
-   AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25
-   would be volume 68, section 144, subsection 1, and entry number 25.
-
-   Commas are field separators for automatic parsing.  Use the word
-   ‘comma’ if you want the character in field string. We will use global
-   search and replace after parsing into fields.
-
-   Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
-
-   For volume AJB ?? Index to the Literature of ????, started, finished,
-   proofread
-   '''
 
 
-Reading and Writing Text Files
-------------------------------
+Journal Entries
+---------------
 
-The BookFile class knows how to insert/delete/replace entries in the
-``_entryList``, how to open/read/write disk files, how to read the
-header of a disk file, and how to recognize an entry in the disk file.
-When ever it needs to read/write an entry to/from the ``_entryList``,
-it calls on the entry itself to handle this action.  Entries are of type
-``Class AJBentry`` defined in AJBentry.py.
-
-AJB Entries
------------
-
-The ``Class AJBentry`` is a subclass of ``Entry`` which is defined in
+The ``class journalEntry`` is a subclass of ``Entry`` which is defined in
 entry.py. A generic entry object is a python dictionary with the following
 fields and default values.
 
-======================== ===== ======================
- Entry[ 'Index']          =    -1                   
- Entry[ 'Num']            =    {'volNum' : -1,         
- \                       \     'sectionNum' : -1,      
- \                       \     'subsectionNum' : -1,   
- \                       \     'entryNum' :- 1,        
- \                       \     'entrySuf' : '',
- \                       \     'volume' : ''}         
- Entry[ 'Authors']        =     []                  
- Entry[ 'Editors']        =     []                        
- Entry[ 'Compilers']      =     []                  
- Entry[ 'Contributors']   =     []                  
- Entry[ 'Translators']    =     []                  
- Entry[ 'Others']         =     []                  
- Entry[ 'Title']          =     ''                  
- Entry[ 'Publishers']     =     []                  
- Entry[ 'Year']           =     ''                  
- Entry[ 'Pagination']     =     ''                  
- Entry[ 'Price']          =     ''                  
- Entry[ 'Reviews']        =     []                  
- Entry[ 'Comments']       =     ''                  
- Entry[ 'OrigStr']        =     ''                  
-======================== ===== ======================
+=============== === ======================
+'Title'          =   ''
+'subTitle'       =   ''
+'subsubTitle'    =   ''
+'Publishers'     =   []
+'Abbreviations'  =   [] # a list of strings
+'startDate'      =   '' # the start of publishing
+'endDate'        =   '' # the end of publishing
+'linknext'       =   [] # a list of strings'
+'linkprevious'   =   [] # a list of strings
+'Designators'    =   {}
+'Comments'       =   [] # should be a list of strings
+=============== === ======================
 
-The AJBentry adds the following items to this dictionary to add
-fields that are normally in the comments.
+``Publishers`` is list of dictionaries of the form::
 
-========================= ===== ======================
- Entry[ 'TranslatedFrom']  =     ''                  
- Entry[ 'Language']        =     ''                  
- Entry[ 'Reprint']         =     ''                  
- Entry[ 'Reference']       =     ''                  
-========================= ===== ======================
+  {'Name'      : '', # required, all others optional
+   'Place'     : '',
+   'startDate' : '',
+   'endDate'   : ''
+  }
 
-Index is the entry number within the individual BookFiles. It is 
-simply a running count of the number of books.
+where ``startDate`` and ``endDate`` are the dates when the publisher
+started/ended publication of the particular journal. A number of journals
+changed publishers during their lifetime.
+
+``startDate`` and ``endDate`` in the journalEntry itself refer to the
+starting/ending dates of publication.  A journal ends publication when it
+merges with another journal or ceases operations all together.
+
+``linnext`` and ``linkprevious`` are for journals that have merged or are
+the result of a merge.  ``linknext`` lists the journals that merged to form
+this journal.  ``linkprevious`` is the name of the journal that this one
+merged into.
+
+``Designators`` is a dictionary of catalogue designations for example::
+
+  { 'ISSN' : '9-123456-789-12-3',
+    'ADS_Bibcode' : '....ApJ...'
+  }
+
+others can be 'LCCN', 'DDCN', etc.
+
+``Comments`` are any other information about the journal that is not
+included in the above fields.
+
 
 designer
 --------
@@ -221,13 +198,18 @@ separated by a comma.  The format of a file look like::
 Comment lines begin with '#' and are ignored by the software.  Each
 character is then used as the text image for a Qt button object with
 the tip added as the tool tip.  A blank line in the symbols.txt
-indicated the start of a new line in the window display. The action of
+indicated the start of a new row in the window display. The action of
 the button when it is clicked is to send the signal
 ``sigClicked(QString)`` with the character as the parameter in the
 signal.
 
-This signal in turn is caught in the BookEntry class (mainWindow.py)
-and is connected to the insertChar() function.  This insertion
-function changes on the fly whenever the focus changes in the
-BookEntry window between the various LineEdit and TextEdit items.
+This signal in turn is caught in the main window defined in
+JournalWindow class (journalWin.py) and is connected to the
+insertChar() function.  This insertion function changes on the fly
+whenever the focus changes in the BookEntry window between the various
+LineEdit and TextEdit items.
 
+Search Dialog
+-------------
+
+The search dialog

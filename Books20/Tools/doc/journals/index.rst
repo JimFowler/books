@@ -17,7 +17,7 @@ Welcome to the Journal Users Guide!
    operation
    theory
    classes
-   
+   journalxml
 
 
 Indices and tables

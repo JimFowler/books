@@ -5,40 +5,15 @@ Entry
 _____
 
 Entry provides the basic class for any book entry.  Specific sub-classes
-should be created for each type of entry, AJB or AAA.
+should be created for each type of entry, Journals, AJB or AAA.
 
 Entry is a sub-class of dict so keyword:values may be accessed
 directly.  Some entry items are pre-defined but there is nothing to
 prevent the program from deleting an item so programs should check for
-existence of a list item before appending or extending. A blank Entry
-objects look like:
+existence of a list item before appending or extending.
 
-.. code-block:: python
-   :linenos:
-
-   entry = {
-	'Index' :     -1            # file index number
-	'Num' :       {'volNum':-1,       # bibliography entry num
-                       'sectionNum':-1,
-                       'subsectionNum':-1,
-                       'entryNum':-1,
-                      'volume': ''}
-        'Authors' :   []   # list of nameparser::HumanName objects
-	'Editors' :   []   # list of nameparser::HumanName objects
-	'Compilers' : []   # list of nameparser::HumanName objects
-	'Contributors' : [] # list of nameparser::HumanName objects
-	'Translators'] : []   # list of nameparser::HumanName objects
-	'Others' ] :  []   # list strings from the comments that we can't parse
-	'Title' :      ''   # the title of the work
-	'Publishers' : []   # list of tuples (Place, PublisherName)
-	'Year' :       ''   # year of publication, if known
-	'Pagination' : ''   # page count, if known
-	'Price' :      ''   # publishers price, if known
-	'Reviews'] :   []   # bibliographic list of reviews, strings
-	'Comments' :   ''   # the original comment string
-	'OrigStr' :    ''   # the original book entry string if read from a string
-	}
-
+The functions provided in this base class are empty and will need to be over ridden
+by your specific class.
 
 .. automodule:: entry
     :members:
@@ -47,12 +22,47 @@ objects look like:
 journalEntry
 ____________
 
-The journalEntry class provides the specific methods for read and write
-journal entries.
-
 .. automodule:: journalEntry
     :members:
     :show-inheritance:
+
+The journalEntry class provides the specific methods to read and write
+the journal entries in XML format.  A blank journalEntry object looks
+like:
+
+.. code-block:: python
+   :linenos:
+
+   entry = {
+        'Title'         = '',
+        'subTitle'      = '',
+        'subsubTitle'   = '',
+        'Publishers'     = [],
+        #
+        #Publishers is list of dictionaries of the form
+        #   {'Name'      : '', # required, all others optional
+        #    'Place'     : '',
+        #    'startDate' : '',
+        #    'endDate'   : ''
+        #   }
+        #
+        'Abbreviations' = [], # a list of strings
+        'startDate'     = '', # the start of publishing
+        'endDate'       = '', # the end of publishing
+        'linknext'      = [], # a list of strings'
+        'linkprevious'  = [], # a list of strings
+        'Designators'   = {},
+        #
+        # Designators is a dictionary of catalogue designations
+        #   for example 'ISSN' : '9-123456-789-12-3'
+        #     and       "ADS_Bibcode' : '....ApJ...'
+        #    others can be 
+        #               'LCCN', 'DDCN', etc
+        #
+        'Comments'      = [] # should be a list of strings
+
+	}
+
 
 
 journalFile
