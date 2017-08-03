@@ -29,7 +29,8 @@ class Entry(dict):
     #
     def blankEntry(self):
         """Initialize a blank entry by setting known fields to
-        null values and deleting all other fields.
+        null values and deleting all other fields. The sub-class
+        must provide this function.
         """
         assert 0, 'Entry.blankEntry() needs to be defined'
 

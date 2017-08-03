@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 # -*- mode: Python;-*-
 
-"""Main window for journal entries from AAA/AJB
+"""Dialog window for journal entries from AAA/AJB
 
   open with Journal Search
   open existing journalFile or new one
@@ -41,7 +41,7 @@ class JournalSearch( QDialog, ui_journalSearch.Ui_JournalSearch ):
       
 
         self.closeButton.released.connect(self.close)
-        #Self.newButton.released.connect(self.newEntry)
+        self.newButton.released.connect(self.parent.newEntry)
   
 
     #
