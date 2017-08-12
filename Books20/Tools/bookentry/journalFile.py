@@ -185,11 +185,15 @@ class JournalFile():
             bf_schema = etree.XMLSchema(file=self.schemaName)
             Parser = etree.XMLParser(schema=bf_schema)
         except:
+            # change to message Box but we don't have Qt loaded
+            # return indicator to journalWin that schema file is unreadable?
             print('The schema {0} is not well formed'.format(self.schemaName))
             return 0
         try:
             bf_xml = etree.parse(self._fileName, parser=Parser)
         except:
+            # change to message Box but we don't have Qt loaded
+            # return indicator to journalWin that xml file is unreadable?
             print('The xml file is not well formed or is invalid')
             return 0
 
@@ -207,7 +211,7 @@ class JournalFile():
                         self._entryList.append(entTemp)
         
         self._dirty = False
-        print('Recs found:', count)
+        #print('Recs found:', count)
         return count
 
 

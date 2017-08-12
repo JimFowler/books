@@ -87,7 +87,7 @@ class JournalSearch( QDialog, ui_journalSearch.Ui_JournalSearch ):
         tt = title.text()
         for t, i in self.currentSearchList:
             if t == tt:
-                print(tt, t, i)
+                #print(tt, t, i)
                 self.parent.showEntry(i+1)
                 return
             
