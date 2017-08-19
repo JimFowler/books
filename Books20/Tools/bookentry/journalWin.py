@@ -152,6 +152,10 @@ class JournalWindow( QMainWindow, ui_journalEntry.Ui_JournalEntry ):
       for l in self.jf._entryList:
          t = l['Title']
          self.sdict.addSubStrings(t, (t, index))
+         t = l['subTitle']
+         self.sdict.addSubStrings(t, (t, index))
+         t = l['subsubTitle']
+         self.sdict.addSubStrings(t, (t, index))
          for abr in l['Abbreviations']:
             #print('   ', abr)
             if abr is not None:
