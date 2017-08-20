@@ -9,29 +9,33 @@ from lxml import etree
 
 import bookentry.entry as entry
 
-__version__ = 'class journalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
+__version__ = 'class JournalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
 
-class journalEntry(entry.Entry):
+class JournalEntry(entry.Entry):
 
     """Read the information from an XML string and put the data in the
     journalEntry dictionary. The entry is valid if there is a valid
     title.
 
-    The journalEntry XML definition can be found in journalfile.xsd
+    The JournalEntry XML definition can be found in journalfile.xsd
     """
 
     def blankEntry(self):
+        """Hack until I can rewrite entry.py and AJBentry.py"""
+        self.blank_entry()
+
+    def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
         """
         keys = list(self.keys())
-        for k in keys :
-            del(self[k])
+        for k in keys:
+            del self[k]
 
-        self[ 'Title']         = ''
-        self[ 'subTitle']      = ''
-        self[ 'subsubTitle']   = ''
-        self[ 'Publishers']     = []
+        self['Title'] = ''
+        self['subTitle'] = ''
+        self['subsubTitle'] = ''
+        self['Publishers'] = []
         #
         #Publishers is list of dictionaries of the form
         #   {'Name'      : '', # required, all others optional
@@ -40,35 +44,32 @@ class journalEntry(entry.Entry):
         #    'endDate'   : ''
         #   }
         #
-        self[ 'Abbreviations'] = [] # a list of strings
-        self[ 'startDate']     = '' # the start of publishing
-        self[ 'endDate']       = '' # the end of publishing
-        self[ 'linknext']      = [] # a list of strings'
-        self[ 'linkprevious']  = [] # a list of strings
-        self[ 'Designators']   = {}
+        self['Abbreviations'] = [] # a list of strings
+        self['startDate'] = '' # the start of publishing
+        self['endDate'] = '' # the end of publishing
+        self['linknext'] = [] # a list of strings'
+        self['linkprevious'] = [] # a list of strings
+        self['Designators'] = {}
         #
         # Designators is a dictionary of catalogue designations
         #   for example 'ISSN' : '9-123456-789-12-3'
         #     and       "ADS_Bibcode' : '....ApJ...'
-        #    others can be 
+        #    others can be
         #               'LCCN', 'DDCN', etc
         #
-        self[ 'Comments']      = [] # should be a list of strings
+        self['Comments'] = [] # should be a list of strings
 
 
 
     def version(self):
-        return __version__ + ": " + super(journalEntry, self).version()
+        return __version__ + ": " + super(JournalEntry, self).version()
 
 
-    def isValid(self):
-        """journalEntries are valid if they have a valid Title."""
-        if self['Title'] != '':
-            return True
-        else:
-            return False
+    def is_valid(self):
+        """journal entries are valid if they have a valid Title."""
+        return self['Title'] != ''
 
-    def notEmpty(self, key ):
+    def not_empty(self, key):
         """Return the truth value of, 'key' existing
         in the entry and the key value is not empty."""
         if self.__contains__(key) and self[key]:
@@ -78,7 +79,7 @@ class journalEntry(entry.Entry):
     #
     # XML create routines
     #
-    def write_XML_from_Entry(self):
+    def write_xml_from_entry(self):
         '''Create an XML etree element with the root tag Entry from
         the entry.
         '''
@@ -87,103 +88,102 @@ class journalEntry(entry.Entry):
             return None
 
         # Title and Index are required of any entry
-        entryXML = etree.Element('Journal')
-    
-        el = etree.SubElement(entryXML, 'Title')
-        el.text = self['Title']
+        element = etree.Element('Journal')
+
+        sub_element = etree.SubElement(element, 'Title')
+        sub_element.text = self['Title']
 
         # This ends the required elements.  All further elements
         # may be missing or blank.
-        
-        if self.notEmpty('subTitle'):
-            el = etree.SubElement(entryXML, 'subTitle')
-            el.text = self['subTitle']
 
-        if self.notEmpty('subsubTitle'):
-            el = etree.SubElement(entryXML, 'subsubTitle')
-            el.text = self['subsubTitle']
-            
-        if 0 < len(self['Publishers']):
-            el = etree.SubElement(entryXML, 'Publishers')
+        if self.not_empty('subTitle'):
+            sub_element = etree.SubElement(element, 'subTitle')
+            sub_element.text = self['subTitle']
+
+        if self.not_empty('subsubTitle'):
+            sub_element = etree.SubElement(element, 'subsubTitle')
+            sub_element.text = self['subsubTitle']
+
+        pub_len = len(self['Publishers'])
+        if pub_len > 0:
+            sub_element = etree.SubElement(element, 'Publishers')
             for publ in self['Publishers']:
-                ep = etree.SubElement(el, 'Publisher')
+                publisher_element = etree.SubElement(sub_element, 'Publisher')
 
                 if publ.__contains__('Name') and publ['Name']:
                     epp = etree.Element('Name')
                     epp.text = publ['Name']
-                    ep.append(epp)
+                    publisher_element.append(epp)
 
                 if publ.__contains__('Place') and publ['Place']:
                     epp = etree.Element('Place')
                     epp.text = publ['Place']
-                    ep.append(epp)
+                    publisher_element.append(epp)
 
                 if publ.__contains__('startDate') and publ['startDate']:
                     epp = etree.Element('startDate')
                     epp.text = publ['startDate']
-                    ep.append(epp)
+                    publisher_element.append(epp)
 
                 if publ.__contains__('endDate') and publ['endDate']:
                     epp = etree.Element('endDate')
                     epp.text = publ['endDate']
-                    ep.append(epp)
+                    publisher_element.append(epp)
 
         # abbreviations
-        if self.notEmpty('Abbreviations'):
-            el = etree.SubElement(entryXML, 'Abbreviations')
+        if self.not_empty('Abbreviations'):
+            sub_element = etree.SubElement(element, 'Abbreviations')
             for abrv in self['Abbreviations']:
-                ep = etree.SubElement(el, 'Abbreviation')
-                ep.text = abrv
-                
+                abrv_element = etree.SubElement(sub_element, 'Abbreviation')
+                abrv_element.text = abrv
+
         # startDate
-        if self.notEmpty('startDate'):
-            el = etree.SubElement(entryXML, 'startDate')
-            el.text = self['startDate']
+        if self.not_empty('startDate'):
+            sub_element = etree.SubElement(element, 'startDate')
+            sub_element.text = self['startDate']
 
         # endDate
-        if self.notEmpty('endDate'):
-            el = etree.SubElement(entryXML, 'endDate')
-            el.text = self['endDate']
+        if self.not_empty('endDate'):
+            sub_element = etree.SubElement(element, 'endDate')
+            sub_element.text = self['endDate']
 
         # Links
-        if self.notEmpty('linkprevious') or self.notEmpty('linknext'):
-            el = etree.SubElement(entryXML, 'Links')
-            if self.notEmpty('linkprevious'):
+        if self.not_empty('linkprevious') or self.not_empty('linknext'):
+            sub_element = etree.SubElement(element, 'Links')
+            if self.not_empty('linkprevious'):
                 for link in self['linkprevious']:
-                    ep = etree.SubElement(el, 'linkPrevious')
-                    ep.text = link
+                    link_element = etree.SubElement(sub_element, 'linkPrevious')
+                    link_element.text = link
 
-            if self.notEmpty('linknext'):
+            if self.not_empty('linknext'):
                 for link in self['linknext']:
-                    ep = etree.SubElement(el, 'linkNext')
-                    ep.text = link
+                    link_element = etree.SubElement(sub_element, 'linkNext')
+                    link_element.text = link
 
 
         # Designators is a dictionary
-        if self.notEmpty('Designators'):
-            el = etree.SubElement(entryXML, 'Designators')
+        if self.not_empty('Designators'):
+            sub_element = etree.SubElement(element, 'Designators')
             for key in self['Designators'].keys():
-                #key = key.strip()
-                #print('write_XML_from_Entry: (%s) : (%s)' % (key, self['Designators'][key] ))
-                cl = etree.SubElement(el, key)
-                cl.text = self['Designators'][key]
+                desg_element = etree.SubElement(sub_element, key)
+                desg_element.text = self['Designators'][key]
 
         # Comments
-        if self.notEmpty('Comments'):
-            el = etree.SubElement(entryXML, 'Comments')
+        if self.not_empty('Comments'):
+            sub_element = etree.SubElement(element, 'Comments')
             for comment in self['Comments']:
-                cl = etree.SubElement(el, 'Comment')
-                cl.text = comment
+                comment_element = etree.SubElement(sub_element, 'Comment')
+                comment_element.text = comment
 
         # return the root Entry element
-        return entryXML
+        return element
 
 
-    def read_XML_to_Entry(self, elXML):
+    def read_xml_to_entry(self, element):
         '''Parse an XML element of a Journal Entry and place the information
         into the journalEntry dictionary. '''
 
-        for child in elXML:
+        for child in element:
             #print('child is ', child.tag)
 
             if child.tag == 'Title':
@@ -252,8 +252,8 @@ class journalEntry(entry.Entry):
                     self['Comments'].append(comment.text)
 
             else:
-                assert 0, 'journalEntry.read_XML_to_entry() invalid tag name'
-                
+                assert 0, 'JournalEntry.read_xml_to_entry() invalid tag name %s' % (child.tag)
+
 
 
 #
@@ -261,45 +261,48 @@ class journalEntry(entry.Entry):
 #
 if __name__ == '__main__':
 
-    try:
-        from pprint import pprint
-    except:
-        print('Pretty Print module unavailable')
-        sys.exit(0)
+    from pprint import pprint
 
-    allFields = journalEntry()
-    allFields['Title'] = 'First Test Journal'
-    allFields['subTitle'] = 'A journal of First Things'
-    allFields['subsubTitle'] = 'and a pot full of honey'
-    publ1 = { 'Name' : 'Publisher_1',
-              'Place' : 'Place_1'}
-    publ2 = { 'Name' : 'Publisher_2',
-              'Place' : 'Place_2',
-              'startDate' : '1968-10-21',
-              'endDate' : '1972-12-31' }
-    allFields['Publishers'] = [publ1, publ2]
-    allFields['Abbreviations'] = ['Fj', 'F Journal']
-    allFields['startDate'] = '1960-01-01'
-    allFields['endDate'] = '2010-01-01'
-    allFields['linkprevious'] = ['The Sky', 'The Telescope']
-    allFields['linknext'] = ['Sky and Telescope']
-    allFields['Designators'] = {'ISSN' :'9-01234-567-890-12',
-                                'ADSdesignator' : 'U...ApJ..'}
-    allFields['Comments'] = ['This is a comment.',
-                            'This is a second comment']
+    def test():
+        '''The main test function'''
+        all_fields = JournalEntry()
+        all_fields['Title'] = 'First Test Journal'
+        all_fields['subTitle'] = 'A journal of First Things'
+        all_fields['subsubTitle'] = 'and a pot full of honey'
+        publ1 = {'Name' : 'Publisher_1',
+                 'Place' : 'Place_1'}
+        publ2 = {'Name' : 'Publisher_2',
+                 'Place' : 'Place_2',
+                 'startDate' : '1968-10-21',
+                 'endDate' : '1972-12-31'}
+        all_fields['Publishers'] = [publ1, publ2]
+        all_fields['Abbreviations'] = ['Fj', 'F Journal']
+        all_fields['startDate'] = '1960-01-01'
+        all_fields['endDate'] = '2010-01-01'
+        all_fields['linkprevious'] = ['The Sky', 'The Telescope']
+        all_fields['linknext'] = ['Sky and Telescope']
+        all_fields['Designators'] = {'ISSN' :'9-01234-567-890-12',
+                                     'ADSdesignator' : 'U...ApJ..'}
+        all_fields['Comments'] = ['This is a comment.',
+                                  'This is a second comment']
+
+        #
+        # test XML routines
+        #
+        print('\n\n Testing Journal EntryXML routines\n')
+        print('all_fields as entry:')
+        pprint(all_fields)
+
+        print('\n all_fields as XML from entry')
+        entry_xml = all_fields.write_xml_from_entry()
+        print(etree.tostring(entry_xml, pretty_print=True, encoding='unicode'))
+
+        print('\n all_fields as entry read from XML')
+        entries = JournalEntry()
+        entries.read_xml_to_entry(entry_xml)
+        pprint(entries)
 
     #
-    # test XML routines
+    # Run it
     #
-    print('\n\nTesting Journal Entry XML routines\n')
-    print('allFields as entry:')
-    pprint(allFields)
-
-    print('\nallFields as XML from entry')
-    et = allFields.write_XML_from_Entry()
-    print(etree.tostring(et, pretty_print=True, encoding='unicode'))
-
-    print('\nallFields as entry read from XML')
-    eAll = journalEntry()
-    eAll.read_XML_to_Entry(et)
-    pprint(eAll)
+    test()

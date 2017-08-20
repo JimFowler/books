@@ -28,7 +28,7 @@ class JournalSearch(QtWidgets.QDialog, ui_journalSearch.Ui_JournalSearch):
 
 
         self.closeButton.released.connect(self.close)
-        self.newButton.released.connect(self.parent.newEntry)
+        self.newButton.released.connect(self.parent.new_entry)
 
 
     #
@@ -67,8 +67,8 @@ class JournalSearch(QtWidgets.QDialog, ui_journalSearch.Ui_JournalSearch):
         title_text = search_title.text()
         for title, index in self.current_search_list:
             if title == title_text:
-                self.parent.showEntry(index + 1)
+                self.parent.show_entry(index + 1)
                 return
 
-        self.parent.newEntry()
+        self.parent.new_entry()
         self.parent.titleEdit.setText(title_text)

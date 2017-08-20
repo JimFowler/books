@@ -1,51 +1,41 @@
 #! /usr/bin/env python3
 # -*- mode: Python;-*-
-
-"""Journals entries from AAA/AJB
-"""
+'''
+Journals entries from AAA/AJB
+'''
 
 import sys
 import os
 import argparse
-import configparser
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui  import *
-from PyQt5.QtWidgets import *
+from PyQt5 import QtWidgets
 
-import bookentry.journalWin as mw
-
-# Trouble shooting assistance
-from pprint import *
-pp = PrettyPrinter()
-
-__version__ = '1.0'
+import bookentry.journalwindow as mw
 
 #
 # Parse the command line arguments
 #
 def getargs():
-   parser = argparse.ArgumentParser(description='Create or edit a journals.xml file')
+    '''Get the command line arguments.'''
+    parser = argparse.ArgumentParser(description='Create or edit a journals.xml file')
 
-   parser.add_argument('-V', '--version',
-                       help='provide version info,',
-                       action='store_true')
+    parser.add_argument('-V', '--version',
+                        help='provide version info,',
+                        action='store_true')
 
-   parser.add_argument( '-i', '--input', type=str,
+    parser.add_argument('-i', '--input', type=str,
                         help='read the file INPUT for entries')
 
-   parser.add_argument( '-s', '--symbols', type=str,
+    parser.add_argument('-s', '--symbols', type=str,
                         help='use alternate symbol table,')
 
-   parser.add_argument( '-c', '--config', type=str,
+    parser.add_argument('-c', '--config', type=str,
                         help='use alternate configuration file name,',
                         default='./journals.conf')
 
-   args = parser.parse_args()
+    args = parser.parse_args()
 
-   return args
-
-
+    return args
 
 
 #
@@ -53,38 +43,40 @@ def getargs():
 #
 
 def main():
+    '''Do something with the command line arguments and
+    open the entry window.
+    '''
 
-   args = getargs()
+    args = getargs()
 
-   app = QApplication(sys.argv)
-   app.setApplicationName('Journal Search and Entry')
-   # app.setWindowIcon(QIcon(':/icon_journals.svg'))
-   
-   form = mw.JournalWindow(config_name=args.config)
-   app.focusChanged.connect(form.setFocusChanged)
+    app = QtWidgets.QApplication(sys.argv)
+    app.setApplicationName('Journal Search and Entry')
+    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
+
+    form = mw.JournalWindow(config_name=args.config)
+    app.focusChanged.connect(form.set_focus_changed)
 
 
-   if args.version:
-      hstr = form.helpString()
-      form.helpAbout()
-      sys.exit(0)
+    if args.version:
+        form.help_about()
+        sys.exit(0)
 
-   if args.symbols is not None:
-      form.setSymbolTableName(args.symbols)
+    if args.symbols is not None:
+        form.set_symbol_table_name(args.symbols)
 
-   if args.input is not None:
-      fname = args.input
-      if os.path.isfile(fname):
-         form.openFile(fname)
-         form.showEntry(1)
-      else:
-         form.openNewFile()
-         form.jf.setFileName(fname)
-         form.setWinTitle(form.jf.getBaseName())
-         form.newEntry()
-   
-   form.show()
-   sys.exit(app.exec_())
+    if args.input is not None:
+        fname = args.input
+        if os.path.isfile(fname):
+            form.open_file(fname)
+            form.show_entry(1)
+        else:
+            form.open_new_file()
+            form.jf.setFileName(fname)
+            form.set_window_title(form.jf.getBaseName())
+            form.new_entry()
+
+    form.show()
+    sys.exit(app.exec_())
 
 
 
