@@ -69,6 +69,7 @@
 ŝ, Small letter s with circumflex
 Ş, Capital letter S with cedilla
 ş, Small letter s with cedilla
+ṣ, small letter s with dot below
 ß, Small letter sharp s
 Ṯ, Capital letter T with line below
 ṯ, Small letter t with line below
