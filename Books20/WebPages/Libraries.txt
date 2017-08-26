@@ -3,6 +3,6 @@
 <br><a href="http://www.loc.gov/">Library of Congress</a>
 <br><a href="http://www.lib.utexas.edu/">UT/Austin Library</a>
 <br><a href="http://www.lib.uchicago.edu/">Univ. of Chicago Library</a>
-<br><a href="http://www.sulross.edu/library">Sul Ross Library</a>
+<br><a href="http://library.sulross.edu">Sul Ross Library</a>
 <br><a href="http://dp.la/">Digital Public Library</a>
 <br>More...
