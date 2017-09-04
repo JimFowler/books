@@ -67,33 +67,36 @@ else:
         print('No schema file given.')
     sys.exit(101)
 
-if len(args.xmlfiles) == 0:
-    if args.verbose:
-        print('No XML files given.')
-    sys.exit(102)
-else:
-    if args.verbose:
-        print('XML files:')
-        for f in args.xmlfiles:
-            print("   %s" % (f))
-        print('\n')
-
 #
-# we have a Schema file and at least one XML file
-#
+# we have a Schema file
 #
 try:
     schema = etree.XMLSchema(file=args.schemafile)
     Parser = etree.XMLParser(schema=schema)
     if args.verbose:
-        print('The schema in file %s is well formed' % (args.schemafile))
+        print('The schema in the file %s is well formed' % (args.schemafile))
 except:
     if args.verbose:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         tb.print_exception(exc_type, exc_value, exc_traceback,
                                limit=2, file=sys.stdout)
-        print('The schema is not well formed')
+        print('This schema is not well formed')
     sys.exit(103)
+
+
+#
+# Test any XML files
+#
+if len(args.xmlfiles) == 0:
+    if args.verbose:
+        print('No XML files given.')
+        sys.exit(102)
+else:
+    if args.verbose:
+        print('\n\nXML files:')
+        for f in args.xmlfiles:
+            print("   %s" % (f))
+        print('\n')
 
 returnCount = 0
 for f in args.xmlfiles:
@@ -103,10 +106,11 @@ for f in args.xmlfiles:
             print('The XML file %s is valid against the schema' % (f))
     except:
         if args.verbose:
+            print('\nThe XML file %s is NOT valid against the schema' % (f))
             exc_type, exc_value, exc_traceback = sys.exc_info()
             tb.print_exception(exc_type, exc_value, exc_traceback,
                                limit=2, file=sys.stdout)
-            print('\nThe XML file %s is NOT valid against the schema' % (f))
+            print('\n')
             returnCount += 1
 
 sys.exit(returnCount)
