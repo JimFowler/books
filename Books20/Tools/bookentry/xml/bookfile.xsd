@@ -54,10 +54,10 @@ volumes of the Astronomischer Jahresbericht
     </xs:element>
 
     <xs:element name="Publishers" type='publishers' minOccurs="0"/>
-    <xs:element name="Year" type="xs:string" minOccurs="0"/>
-    <xs:element name="Edition" type="xs:string" minOccurs="0"/>
-    <xs:element name="Pagination" type="xs:string" minOccurs="0"/>
-    <xs:element name="Prices" type="prices" minOccurs="0"/>
+    <xs:element name="Year"       type="xs:string"  minOccurs="0"/>
+    <xs:element name="Edition"    type="xs:string"  minOccurs="0"/>
+    <xs:element name="Pagination" type="xs:string"  minOccurs="0"/>
+    <xs:element name="Prices"     type="prices"     minOccurs="0"/>
 
     <xs:element name="Reviews" minOccurs="0">
       <xs:complexType>
@@ -98,7 +98,7 @@ volumes of the Astronomischer Jahresbericht
       <xs:complexType>
 	<xs:choice>
 	  <xs:element name="Index" type="index"/>
-	  <xs:element name="Year" type="xs:string"/>
+	  <xs:element name="Year"  type="xs:string"/>
 	</xs:choice>
       </xs:complexType>
     </xs:element>
@@ -124,11 +124,11 @@ volumes of the Astronomischer Jahresbericht
 
 <xs:complexType name="index">
   <xs:all>
-    <xs:element name="IndexName" type="xs:string"/>
-    <xs:element name="VolumeNumber" type="xs:integer"/>
-    <xs:element name="SectionNumber" type="xs:integer"/>
+    <xs:element name="IndexName"        type="xs:string"/>
+    <xs:element name="VolumeNumber"     type="xs:integer"/>
+    <xs:element name="SectionNumber"    type="xs:integer"/>
     <xs:element name="SubSectionNumber" type="xs:integer"/>
-    <xs:element name="EntryNumber" type="xs:string"/>
+    <xs:element name="EntryNumber"      type="xs:string"/>
   </xs:all>
 </xs:complexType>
 
@@ -142,7 +142,7 @@ volumes of the Astronomischer Jahresbericht
 <xs:complexType name="publisher">
   <xs:all>
     <xs:element name="Place" type="xs:string"/>
-    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="Name"  type="xs:string"/>
   </xs:all>
 </xs:complexType>
 
@@ -160,7 +160,7 @@ but this requires some intellegent parsing. -->
       <xs:complexType>
 	<xs:all>
 	  <xs:element name="Currency" type="xs:string"/>
-	  <xs:element name="Amount" type="xs:string"/>
+	  <xs:element name="Amount"   type="xs:string"/>
 	</xs:all>
       </xs:complexType>
     </xs:element>
@@ -170,11 +170,11 @@ but this requires some intellegent parsing. -->
 
 <xs:complexType name="pagination">
   <xs:all>
-    <xs:element name="Introductory" type="xs:string" minOccurs="0"/>
-    <xs:element name="Main" type="xs:integer" minOccurs="0"/>
-    <xs:element name="Appendices" type="xs:integer" minOccurs="0"/>
-    <xs:element name="Tables" type="xs:integer" minOccurs="0"/>
-    <xs:element name="Figures" type="xs:string" minOccurs="0"/>
+    <xs:element name="Introductory" type="xs:string"  minOccurs="0"/>
+    <xs:element name="Main"         type="xs:integer" minOccurs="0"/>
+    <xs:element name="Appendices"   type="xs:integer" minOccurs="0"/>
+    <xs:element name="Tables"       type="xs:integer" minOccurs="0"/>
+    <xs:element name="Figures"      type="xs:string"  minOccurs="0"/>
   </xs:all>
 </xs:complexType>
 
@@ -182,19 +182,22 @@ but this requires some intellegent parsing. -->
   <!-- A Group 2 element. Group 2 elements may be a person
   or a corporate body.  The personInfo is based on the
   data structure in the python package nameparser. -->
-  <xs:choice>
-    <xs:element name="Person" type="personInfo"/>
-    <xs:element name="CorporateBody" type="xs:string"/>
-  </xs:choice>
+  <xs:sequence>
+    <xs:choice>
+      <xs:element name="Person" type="personInfo"/>
+      <xs:element name="CorporateBody" type="xs:string"/>
+    </xs:choice> 
+    <xs:element name="Order" type="xs:integer" minOccurs="0"/>
+  </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="personInfo">
   <xs:all>
-    <xs:element name="Prefix" type="xs:string" minOccurs="0"/>
-    <xs:element name="First" type="xs:string" minOccurs="0"/>
-    <xs:element name="Middle" type="xs:string" minOccurs="0"/>
-    <xs:element name="Last" type="xs:string" minOccurs="0"/>
-    <xs:element name="Suffix" type="xs:string" minOccurs="0"/>
+    <xs:element name="Prefix"   type="xs:string" minOccurs="0"/>
+    <xs:element name="First"    type="xs:string" minOccurs="0"/>
+    <xs:element name="Middle"   type="xs:string" minOccurs="0"/>
+    <xs:element name="Last"     type="xs:string" minOccurs="0"/>
+    <xs:element name="Suffix"   type="xs:string" minOccurs="0"/>
     <xs:element name="NickName" type="xs:string" minOccurs="0"/>
   </xs:all>
 </xs:complexType>
@@ -218,8 +221,8 @@ Possible redefinition of Review
 
 <xs:complexType name="review"/>
   <xs:sequence>
-    <xs:element name="Journal" type="xs:string"/>
-    <xs:element name="volRef" type="xs:string"/>
+    <xs:element name="Journal"  type="xs:string"/>
+    <xs:element name="volRef"   type="xs:string"/>
     <xs:element name="Reviewer" type="personInfo" minOccurs="0"/>
   </xs:sequence>
 </xs:complexType>

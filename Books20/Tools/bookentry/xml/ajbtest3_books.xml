@@ -41,9 +41,11 @@ Entry format
 	    <Last>Fowler</Last>
 	    <Suffix>IV</Suffix>
 	  </Person>
+	  <Order>1</Order>
 	</Author>
 	<Author>
 	  <CorporateBody>My Writing Business</CorporateBody>
+	  <Order>2</Order>
 	</Author>
       </Authors>
       <Editors>
