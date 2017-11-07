@@ -43,8 +43,10 @@
 í, Small letter i with acute
 î, Small letter i with caron
 ī, Small letter i with macron
-
+Ĭ, Capital letter i with breve
+ĭ, Small letter i with breve
 ł, Small letter l with stoke
+
 ñ, Small letter n with tilde
 ń, Small letter n with acute
 Ň, Capital letter N with caron
