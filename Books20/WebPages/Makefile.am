@@ -23,6 +23,7 @@
 #                 to ${PUBLICHTML}. Added target 'all'.
 #
 #
+.SILENT:
 
 PRINTER = lp -Phome
 
@@ -50,6 +51,7 @@ SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}
 
 all:
 	@echo "Available targets for Webpages"
+	@echo "          html -- create HTML versions of web pages in ./html"
 	@echo "  install_html -- install HTML version of the web pages"
 	@echo "                  in ${htmldir}"
 	@echo "  install_private -- install private PHP and text files"
@@ -69,19 +71,31 @@ all:
 # Mac Book, I don't have a web server running. In these cases I install
 # the HTML pages and read them as file:///...
 #
-install_html: install_private install_images
-	@echo "Installing HTML pages in ${htmldir}"
-	@if [ ! -d ${htmldir} ]; then \
-		echo "Making ${htmldir}"; \
-		mkdir ${htmldir}; \
-	fi
-	@if [ ! -d .tmp ]; then \
-		mkdir .tmp ; \
-	fi
+html:
+	@echo "Creating HTML web pages"
+	@mkdir -p ./html
 	@for page in ${PUBLICWEBPAGES}; do \
 	    if `echo $${page} | grep --silent php`; then \
 		basepage=`basename $${page} \.php` ; \
-		php $${page}| sed s/php/html/ > ./.tmp/$${basepage}.html ; \
+		php $${page} | sed s/php/html/ > ./html/$${basepage}.html ; \
+	    else \
+		cp $${page} ./html ; \
+	    fi ; \
+	done
+
+install_html: html install_private install_images
+	echo "Installing HTML pages in ${htmldir}"
+	if [ ! -d ${htmldir} ]; then \
+		echo "Making ${htmldir}"; \
+		mkdir ${htmldir}; \
+	fi
+	install --mode=0444 --preserve-timestamps --target-directory=${htmldir} ./html/*
+
+dummy:
+	@for page in ${PUBLICWEBPAGES}; do \
+	    if `echo $${page} | grep --silent php`; then \
+		basepage=`basename $${page} \.php` ; \
+		php $${page} | sed s/php/html/ > ./.tmp/$${basepage}.html ; \
 		install -m 0444 -p ./.tmp/$${basepage}.html ${htmldir} ; \
 	    else \
 		install -m 0444 -p $${page} ${htmldir} ; \

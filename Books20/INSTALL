@@ -18,24 +18,25 @@ various installation targets:
 Commands to do installation:
 
  on Biblion
-    automake           # if changes to any Makefile.am
+    ./bootstrap           # if changes to any Makefile.am
     ./configure --prefix=/home/jrf --htmldir=/home/jrf/public_html
     cd Webpages
     make install_html
 
 
- on Liberty
-    automake            # if changes to any Makefile.am
-    ./configure --prefix=/home/het/jrf --htmldir=/home/het/jrf/public_html
+ on Het
+    ./bootstrap            # if changes to any Makefile.am
+    ./configure --prefix=/home/het/jrf --htmldir=/var/www/html/jrf
     cd Webpages
     make install_html
 
 
 on JRF Mac
-   aclocal
-   autoconf
-   automake --add-missing
-   (or use 'bootstrap')
+   ./bootstrap
+   ./configure --prefix=/home/jrf --htmldir=/home/jrf/public_html
+    cd Webpages
+    make install_html
+   
 
 Generic Installation Instructions
 *************************
