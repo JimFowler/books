@@ -45,7 +45,7 @@ clean:
 	rm -f *~
 
 veryclean: clean
-	rm -f *.aux *.log *.dvi *.toc *.out *.pdf
+	rm -f *.aux *.log *.dvi *.lot *.toc *.out *.pdf
 
 distclean: veryclean
 	rm -f Makefile Makefile.in
