@@ -16,9 +16,13 @@ missing
 *.blg
 *.log
 *.dvi
+*.lot
 *.toc
+*.out
 COPYING
 Auxil/
 Books20/Makefile
 Books20/*/Makefile
 Books20/WebPages/Images/Makefile
+Books20/Tools/TeX/Makefile
+Books20/Docs/Series/Makefile
