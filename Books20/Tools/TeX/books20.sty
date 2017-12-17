@@ -19,12 +19,20 @@
 \ProvidesPackage{books20}[2017/12/17]
 
 %% Put new \DeclareOption{}{} commands here
-\DeclareOption*{\PackageWarning{books20}{Unknown `\CurrentOption'}}
+\DeclareOption*{\PackageWarning{books20}{Ignoring unknown option `\CurrentOption'}}
 \ProcessOptions\relax
+
+% The Project Title
+\newcommand{\PTitle}{{\bf Books20}}
+
+% The Book Title
+\newcommand{\BTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
 
 % The command for writing a numeric century
 \newcommand{\Cen}[1]{\ensuremath{#1^{th}}\thinspace Century}
 
+% Print a book title
+\newcommand{\bt}[1]{{\it #1}}
 
 %%
 %% End of books20.sty

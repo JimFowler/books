@@ -22,15 +22,18 @@ BIBTEX = bibtex
 TEXFILES = style_guide
 
 # This rather assumes I am installing in a home directory
-INSTALLDIR = ${PREFIX}/texmf/tex/latex/books20
+INSTALLDIR = $(prefix)/texmf/tex/latex/books20
+INSTALLFILES = books20.sty
 
 #
 # Basic TeX processing
 #
+style_guide: guide
 guide: ${TEXFILES}
 	${LATEX} style_guide.tex
 	${LATEX} style_guide.tex
 	${LATEX} style_guide.tex
+
 
 
 #
@@ -40,7 +43,7 @@ lines:
 	wc ${TEXFILES} Makefile.am
 
 install:
-	install -m 444 ${INSTALL} ${INSTALLDIR}
+	install -m 444 ${INSTALLFILES} ${INSTALLDIR}
 
 clean:
 	rm -f *~

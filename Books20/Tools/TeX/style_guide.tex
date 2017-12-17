@@ -1,8 +1,80 @@
-use latex
-  what macros
+%%
+%%
+%% style_guide.tex
+%%
+%%   The style that I will used for 
+%%   the book project "Some Important Books in Astronomy
+%%    and Astrophysics in the 20th Century"
+%%
+%%   Copyright 2017 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%%
+\documentclass{article}
 
-Tables should be in \begin{tabular} style
- should have \hline after headings and at the end
+\usepackage{books20}
 
+\begin{document}
+\title{Style Guide for the \PTitle\ Project}
+\author{James R. Fowler}
+
+\maketitle
+
+\section{General Comments}
+
+Documents for the \PTitle\ project should be written in \LaTeX\ and use
+the books20.sty package Most documents will be articles but the
+manuscript should be in the books document class. The reasoning behind
+using \LaTeX\ is that I expect academic publishers to prefer or at
+least have available a \LaTeX\ class package.  It will be difficult if
+I need to convert these documents to Microsoft Word\texttrademark or
+some other formatting package.
+
+The \LaTeX\ style files books20.sty shall be used in all
+\LaTeX\ documents. To include it use \verb|\usepackage{books20}|, there
+are no options to this style file at this time.
+
+Tables should be in longtable style and should have a caption with two
+hlines after the heading and at the end.  All documents should include
+the package \verb|\usepackage{longtable}|.
+
+Use the serial comma. For example, we write this, that, and the other
+things.
+
+Books title shall be in \bt{italics}. Use the command
+\verb|\bt{My Book Title}| to produce \bt{My Book Title} in this
+sentence.
+
+\section{Defined command in books20.sty}
+
+\begin{itemize}
+
+\item \verb|\Cen{19}| is used to produce century names,
+  e.g.\ \Cen{19}. Note that it works only for centuries that use the
+  \textsuperscript{th} format.  That is, it won't work for the
+  21\textsuperscript{st} Century, the 2\textsuperscript{nd} Century, or the
+  3\textsuperscript{rd} Century. I should probably fix this issue.
+
+\item \verb|\bt{Book Title}| produces book titles in italic face,
+e.g.\ \bt{Book Title} is the title of a book.
+
+\item \verb|\PTitle\ | produces the project title in bold face,
+  e.g.\ the \PTitle\ project is the name of this project.
+
+\item \verb|\BTitle\ | produces the book title in italic face, e.g.\ \BTitle\ or whatever I (or my editor) chooses for a title.
+
+\end{itemize}
+
+\section{An Example Document}
+
+Put an example document here so I can see what the \LaTeX\ commands are.
+
+\end{document}
 
 
