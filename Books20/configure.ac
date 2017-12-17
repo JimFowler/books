@@ -22,6 +22,7 @@ AC_PROG_INSTALL()
 
 AC_OUTPUT(Makefile
       Docs/Makefile
+      Docs/Series/Makefile
       Manuscript/Makefile
       WebPages/Makefile
       WebPages/Images/Makefile)

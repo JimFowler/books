@@ -1,3 +1,9 @@
+2017-12-16  Jim Fowler  <jrf@biblion>
+
+	* Docs/Series/Makefile.am: created book series documentation.
+	Modifed ../configure.ac and started series.tex as well as
+	HarvardBooksAstronomy.tex.
+
 2017-07-30  Jim Fowler  <jrf@biblion>
 
 	* Tools/bookentry/journalWin.py (JournalWindow.__init__):
