@@ -1,0 +1,31 @@
+%%
+%%
+%% books20.sty
+%%
+%%   A style file for my project
+%%  "Some Important Books in Astronomy and Astrophysics in the 20th Century"
+%%
+%%   Copyright 2017 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{books20}[2017/12/17]
+
+%% Put new \DeclareOption{}{} commands here
+\DeclareOption*{\PackageWarning{books20}{Unknown `\CurrentOption'}}
+\ProcessOptions\relax
+
+% The command for writing a numeric century
+\newcommand{\Cen}[1]{\ensuremath{#1^{th}}\thinspace Century}
+
+
+%%
+%% End of books20.sty
+%%
