@@ -19,6 +19,7 @@
 \documentclass{article}
 
 \usepackage{books20}
+\usepackage{hyperref}
 
 \begin{document}
 \title{Style Guide for the \PTitle\ Project}
@@ -36,20 +37,49 @@ least have available a \LaTeX\ class package.  It will be difficult if
 I need to convert these documents to Microsoft Word\texttrademark or
 some other formatting package.
 
-The \LaTeX\ style files books20.sty shall be used in all
-\LaTeX\ documents. To include it use \verb|\usepackage{books20}|, there
-are no options to this style file at this time.
+\subsection{Document Design}
 
-Tables should be in longtable style and should have a caption with two
-hlines after the heading and at the end.  All documents should include
-the package \verb|\usepackage{longtable}|.
+\begin{itemize}
+  
+\item The \LaTeX\ style files books20.sty shall be used in all
+  \LaTeX\ documents. To include it use \verb|\usepackage{books20}|, there
+  are no options to this style file at this time. Note that books20.sty
+  is designed for \LaTeXe\ and may not work with \LaTeX\ 2.09.
+  
 
-Use the serial comma. For example, we write this, that, and the other
-things.
+\item Place sections in a separate file and use an include command in the
+  document file. Then it is possible to use the section file in a
+  different document with out having to clean up the document commands.
 
-Books title shall be in \bt{italics}. Use the command
-\verb|\bt{My Book Title}| to produce \bt{My Book Title} in this
-sentence.
+\end{itemize}
+
+\subsection{Specifics}
+
+\begin{itemize}
+
+\item Dashes and Hypens --- The dash `-' is used for compound words and for
+  hypenation at the end of a line.  The en-dash `--' is used for a range
+  of numbers. The em-dash `---' is used for punctuation,
+  e.g.\ separating phrases.
+
+\item Date format --- Use the
+  \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO-8601} style
+  YYYY-MM-DD for dates and hh:mm:ss for time.
+
+\item Tables should be in longtable style and should have a caption with two
+  hlines after the heading and at the end.  All documents should include
+  the package \verb|\usepackage{longtable}|.
+
+\item Use the serial comma --- for example, we write this, that, and the
+  other things.
+
+\item Books title shall be in \bt{italics}. Use the command
+  \verb|\bt{My Book Title}| to produce \bt{My Book Title} in a
+  sentence. Note that \verb|\bt{}| can be changed in books20.sty
+  to produce another style if necessary.
+
+\end{itemize}
+
 
 \section{Defined command in books20.sty}
 
@@ -59,7 +89,7 @@ sentence.
   e.g.\ \Cen{19}. Note that it works only for centuries that use the
   \textsuperscript{th} format.  That is, it won't work for the
   21\textsuperscript{st} Century, the 2\textsuperscript{nd} Century, or the
-  3\textsuperscript{rd} Century. I should probably fix this issue.
+  3\textsuperscript{rd} Century, etc. I should probably fix this issue.
 
 \item \verb|\bt{Book Title}| produces book titles in italic face,
 e.g.\ \bt{Book Title} is the title of a book.
@@ -73,7 +103,92 @@ e.g.\ \bt{Book Title} is the title of a book.
 
 \section{An Example Document}
 
-Put an example document here so I can see what the \LaTeX\ commands are.
+Here is an example document so you can see what the \LaTeX\ commands are.
+
+\begin{verbatim}
+
+%%
+%%
+%% style_guide.tex
+%%
+%%   The style that I will used for 
+%%   the book project "Some Important Books in Astronomy
+%%    and Astrophysics in the 20th Century"
+%%
+%%   Copyright 2017 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%%
+\documentclass{article}
+
+% Should these be included in books20.sty ??
+\usepackage{hyperref}
+\usepackage{longtable}
+
+\usepackage{books20}
+
+\begin{document}
+\title{Style Guide for the \PTitle\ Project}
+\author{James R. Fowler}
+\date{2017-12-15}
+
+\maketitle
+\tableofcontents
+\listoftables 
+
+\include{my_section}
+
+\end{document}
+%
+% The following would be included in the my_section.tex document
+%
+\section{First Section}
+
+The first of many sections.
+
+\subsection{First SubSection}
+
+And more subsections.
+
+As well as a table in longtable format.
+
+\begin{longtable}[p]{l l l}
+  \caption{\bf Harvard Observatory Monographs} \\
+  \label{HMA:1} \\
+
+  Title & Author(s) & Date \\
+  \hline\hline
+  \endfirsthead
+
+  \multicolumn{3}{c}{Continuation of Harvard Obs.\ Monographs} \\
+  Title & Author(s) & Date \\
+  \hline\hline
+  \endhead
+
+  \hline
+  \endfoot
+  
+  \hline\hline
+  \endlastfoot
+
+  1 \bt{Stellar Atmospheres} & Cecilia Payne & 1925 \\
+
+  2 \bt{Star Clusters} & Harlow Shapley & 1930 \\
+
+  3 \bt{The Stars of High Luminosity} & Cecilia Payne & 1930 \\
+
+  
+\end{longtable}
+
+\end{verbatim}
+
+
 
 \end{document}
 
