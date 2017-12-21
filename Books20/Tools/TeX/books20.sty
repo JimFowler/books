@@ -15,12 +15,33 @@
 %%
 %%
 %%
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{books20}[2017/12/17]
 
-%% Put new \DeclareOption{}{} commands here
+%%
+%% Identification
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{books20}[2017/12/17 Command used in my Books20 project]
+
+%%
+%% Required packages for all Books20 documents
+%%
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{hyperref}
+\RequirePackage{longtable}
+
+%%
+%% Preliminary declarations
+%%
+
+%%
+%% Options
+%%
 \DeclareOption*{\PackageWarning{books20}{Ignoring unknown option `\CurrentOption'}}
 \ProcessOptions\relax
+
+%%
+%% Declarations
+%%
 
 % The Project Title
 \newcommand{\PTitle}{{\bf Books20}}
