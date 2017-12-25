@@ -19,7 +19,8 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = bibtex
 
-TEXFILES = series.tex HarvardBooksAstronomy.tex
+SERIES_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex uaspacescience.tex
+HANDBOOK_FILES = handbuch.tex
 
 BIBFILES = references.bib
 
@@ -27,10 +28,16 @@ BIBFILES = references.bib
 # Basic TeX processing
 #
 #	 ${BIBTEX} series.aux
-series: ${TEXFILES}
+series: ${SERIES_FILES}
 	${LATEX} series.tex
 	${LATEX} series.tex
 	${LATEX} series.tex
+
+handbuch handbook: handbuch.tex
+	${LATEX} handbuch.tex
+	${LATEX} handbuch.tex
+	${LATEX} handbuch.tex
+
 
 
 #
