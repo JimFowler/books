@@ -36,7 +36,7 @@ PRIVATEWEB = $(prefix)/private_html
 # Installation files to go in those directories
 PUBLICWEBPAGES = 20thCentury.php BooksBooks.php ToDoList.php index.html \
 	Bibliographies.php BlogLists.php Auction.php BookBinding.php \
-	Writing.php SemanticWeb.php robots.txt
+	Writing.php SemanticWeb.php DigitalHum.php robots.txt
 
 PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	BookStores.txt Collecting.txt HistoryAstronomy.txt \
@@ -44,7 +44,7 @@ PRIVATEFILES = 20thCentury.txt BookMaking.txt BooksOnLine.txt \
 	HomeLibrary.txt Libraries.txt RareBooks.txt References.txt \
 	Resources.txt SociologyScience.txt ToDoList.txt Tools.txt \
 	BibSources.txt BibTools.txt BibRefs.txt BlogLists.txt Auctions.txt \
-	BookBinding.txt Writing.txt SemanticWeb.txt
+	BookBinding.txt Writing.txt SemanticWeb.txt DigitalHum.txt
 PRIVATEPHP = phpBooks.inc
 
 SAVFILES = ${PUBLICWEBPAGES} ${PRIVATEFILES} ${PRIVATEPHP}

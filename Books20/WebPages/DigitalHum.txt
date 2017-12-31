@@ -1,0 +1,21 @@
+<tr valign="Top">
+
+<td width=250 height=250 valign="Top">
+  <h3>Links</h3>
+
+  <br><br>Something will appear here...
+</td>
+
+
+<td valign="Top">
+  <h3>Resources</h3>
+
+  <a href="http://www.tei-c.org/index.xml">TEI - Text Encoding Initiative</a>
+</td>
+
+<td width=250 height=250 valign="Top">
+  <h3></h3>
+
+</td>
+
+</tr>
