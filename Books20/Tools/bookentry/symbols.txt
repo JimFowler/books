@@ -45,6 +45,7 @@
 ī, Small letter i with macron
 Ĭ, Capital letter i with breve
 ĭ, Small letter i with breve
+Ł, Capitial letter L with stroke
 ł, Small letter l with stoke
 
 ñ, Small letter n with tilde
