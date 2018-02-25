@@ -16,6 +16,7 @@
   <br><a href="http://www.hollanders.com/">Hollanders</a>
   <br><a href="http://bookbinding.com/">BookBinding.com</a>
   <br><a href="http://ibookbinding.com/">iBookBinding.com</a>
+  <br><a href="http://www.edenworkshops.com/">Eden Workshops</a>
   <br><a href="https://guildofbookworkers.org/content/us-supplies-services">List of Suppliers</a>
 </td>
 
@@ -25,6 +26,7 @@
   <a href="https://www.youtube.com/channel/UCUaayO0NgrA4--4LU3fDL8w"> Bookbinders Chronicle</a>
   <br><a href="https://www.youtube.com/channel/UCTCkA8YbXGh6xqh9sVuF6eA">Amanda Buck - Fine Bindings</a>
   <br><a href="http://keithsmithbooks.com/">Keith Smith Books</a>
+  <br><a href="http://www.bl.uk/aboutus/stratpolprog/collectioncare/index.html">Collection Care</a>
 
   <br><a href="http://www.sagereynolds.com/">Sage Reynolds Workshop</a>
   <font size="2">
@@ -63,6 +65,8 @@
   <br><br>Soon to be more...
 
 </td>
+
+<tr valign="Top">
 
 <td width=250 height=250 valign="Top">
   <h3></h3>

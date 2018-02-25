@@ -13,7 +13,7 @@
   <br><a href="http://bookmanslog.blogspot.com/">Bookmans Log</a>
   <br><a href="http://library-cafe.org">Library Cafe</a>
   <br><a href="http://michaelmoonsbookshop.tumblr.com/">Michael Moon's Bookshop</a>
-  <br><a href="http://booksnbuildings.tumblr.com/"/">Books and Buildings</a>
+  <br><a href="http://booksnbuildings.tumblr.com/">Books and Buildings</a>
   <br><a href="https://twitter.com/CallumJBooks">Front Free Endpaper</a>
   <br><a href="http://bodleianlibs.tumblr.com/">Bodleian Library</a>
 </td>
@@ -57,6 +57,20 @@
 
 
 </td>
+
+<td width=250 height=250 valign="Top">
+  <h3>Book Binding Blogss Blogs</h3>
+
+  <a href="http://paperchipmunk.com//">Paper Chipmnunk</a>
+  <br><a href="http://blogs.bl.uk/collectioncare/index.htm">BL Collection Care</a>
+  <br><a href="http://myhandboundbooks.blogspot.com/">Handbound Books</a>
+  <br><a href="http://www.hewit.com/skin_deep/">Skin Deep</a> (spring and autumn)
+  <br><a href="http://papercutbindery.blogspot.com/">Paper Cut Bindery</a>
+	
+</td>
+
+</tr>
+<tr>
 
 <td>
   <br><br>Soon to be more...
