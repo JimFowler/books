@@ -19,7 +19,10 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = bibtex
 
-SERIES_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex uaspacescience.tex
+BUILT_TABLE_FILES = asslKluwer_table.tex
+TABLE_FILES = 
+SERIES_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex uaspacescience.tex asslKluwer.tex
+
 HANDBOOK_FILES = handbuch.tex
 
 BIBFILES = references.bib
@@ -28,7 +31,7 @@ BIBFILES = references.bib
 # Basic TeX processing
 #
 #	 ${BIBTEX} series.aux
-series: ${SERIES_FILES}
+series: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_FILES}
 	${LATEX} series.tex
 	${LATEX} series.tex
 	${LATEX} series.tex
@@ -39,6 +42,8 @@ handbuch handbook: handbuch.tex
 	${LATEX} handbuch.tex
 
 
+asslKluwer_table.tex: assl_table.py asslKluwerList.py
+	python assl_table.py > asslKluwer_table.tex
 
 #
 # lines: count how many lines we have written
@@ -52,7 +57,7 @@ clean:
 	rm -f *~
 
 veryclean: clean
-	rm -f *.aux *.log *.dvi *.lot *.toc *.out *.pdf
+	rm -f *.aux *.log *.dvi *.lot *.toc *.out *.pdf ${BUILT_TABLE_FILES}
 
 distclean: veryclean
 	rm -f Makefile Makefile.in
