@@ -37,7 +37,8 @@ least have available a \LaTeX\ class package.  It will be difficult if
 I need to convert these documents to Microsoft Word\texttrademark or
 some other formatting package.
 
-The books20 style package imports the following packages
+The books20 style package imports the following packages so they are
+not required in your \LaTeX\ documents
 
 \begin{itemize}
 \item hyperref.sty
@@ -81,7 +82,11 @@ The books20 style package imports the following packages
 
   This will be useful when I create \LaTeXe\ files from the database
   which is in UTF-8 encoding.
-  }
+}
+
+\item In emacs we can produce UTF-8 characters with C-x 8 mark letter.
+  For example, to produce ö use the key strokes C-x 8 \verb|"| o. Use C-x 8 C-h
+  to get a list of character encodings.
   
 \end{itemize}
 
@@ -95,12 +100,16 @@ The books20 style package imports the following packages
   e.g.\ separating phrases.
 
 \item Date format --- Use the
-  \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO-8601} style
+  \href{https://en.wikipedia.org/wiki/ISO\_8601}{ISO-8601} style
   YYYY-MM-DD for dates and hh:mm:ss for time.
 
 \item Tables should be in longtable style and should have a caption with two
   hlines after the heading and at the end.  All documents should include
   the package \verb|\usepackage{longtable}|.
+
+\item You may also use the functions in table.py in a python script to create
+  a table in \LaTeX\ longtable format.  I'll write some documentation someday
+  but for now you can look at ./Doc/Series/assl\_table.py.
 
 \item Use the serial comma --- for example, we write this, that, and the
   other things.
@@ -160,11 +169,6 @@ Here is an example document so you can see what the \LaTeX\ commands are.
 %%
 %%
 \documentclass{article}
-
-% Should these be included in books20.sty ??
-\usepackage{hyperref}
-\usepackage{longtable}
-\usepackage[utf8]{inputenc}
 
 \usepackage{books20}
 
