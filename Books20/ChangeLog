@@ -1,3 +1,8 @@
+2018-03-31  Jim Fowler  <jrf@biblion>
+
+	* Docs/Series/table.py: Created table.py to use python to
+	create longtables in LaTeX.
+
 2017-12-16  Jim Fowler  <jrf@biblion>
 
 	* Docs/Series/Makefile.am: created book series documentation.

@@ -1,7 +1,12 @@
-#
-# The listings to create the table
-#  asslKluwer_table.tex
-#
+'''
+ The listings to create the table
+  asslKluwer_table.tex
+
+  Should I add the editor/author distinction?
+  Should I add the ISBN number?
+  Should I add the full date of publication if known?
+'''
+
 tbl_comment = '''%%
 %%
 %% asslKluwer_table.tex
@@ -13,6 +18,7 @@ tbl_comment = '''%%
 %%   and Astrophysics in the 20th Century"
 %%
 '''
+
 tbl_copyright = r'''%%   Copyright 2018 James R. Fowler
 %%
 %%   All rights reserved. No part of this publication may be
@@ -34,7 +40,8 @@ tbl_footer = r''
 continue_footer = r''
 
 assl_book_list = [
-    #( volnum, title_list, copyright, [authors/editors list] )
+    #( volnum, [title_list], 'copyright',
+    # [authors/editors list], 'E|A', 'ISBN' )
     (216, ['Magnetohydrodynamics in',
            'Binary Stars'], 1997,
      ['C. G. Campbell']),
@@ -42,7 +49,8 @@ assl_book_list = [
     (217, ['Nonequilibrium Processes',
            'in the Planetary and Cometary',
            'Atmospheres'], 1997,
-     ['Valery I. Shematovich', 'Dmitry V. Bisikalo', 'Jean-Claude Gérard']),
+     ['Valery I. Shematovich', 'Dmitry V. Bisikalo',
+      'Jean-Claude Gérard']),
 
     (218, ['Astronomical Time Series'], 1997,
      ['Dan Maoz', 'Amiel Sternberg', 'Elia M. Leibowitz']),
@@ -53,13 +61,14 @@ assl_book_list = [
     (220, ['The Three Galileos:',
            'The Man, The Spacecraft,',
            'The Telescope'], 1997,
-     ['Cesare Barbiere', 'Jürgen H. Rahe', 'Torrence V. Johnson', 'Anita M. Sohus']),
+     ['Cesare Barbiere', 'Jürgen H. Rahe', 'Torrence V. Johnson',
+      'Anita M. Sohus']),
 
     (221, [], None, []),
 
     (222, ['Remembering Edith Alice Müller'], 1998,
-     ['Yves Chmielewski','Jean-Claude Pecker', 'Ramiro de la Reza', 'Gustav Tammann',
-      'Patrick A. Wayman']),
+     ['Yves Chmielewski', 'Jean-Claude Pecker', 'Ramiro de la Reza',
+      'Gustav Tammann', 'Patrick A. Wayman']),
 
     (223, ['Visual Double Stars: Formation,',
            'Dynamics and Evolutionary Tracks'], 1997,
@@ -155,7 +164,7 @@ assl_book_list = [
      ['Reza Mansouri', 'Robert Brandenberger']),
 
     (248, [], None, []),
-    
+
     (249, ['The Neutral Upper Atmosphere'], None,
      ['S. N. Gosh']),
 
@@ -187,7 +196,7 @@ assl_book_list = [
     (257, ['Stellar Pulsation -',
            'Nonlinear Studies'], 2001,
      ['Mine Takeuti', 'Dimitar D. Sasselov']),
-     
+
     (258, ['Electrohydrodynamics in Dusty',
            'and Dirty Plasmas:',
            'Gravito-Electrodynamics and EHD'], 2001,
@@ -208,7 +217,7 @@ assl_book_list = [
      ['Csaba Ferencz', 'Orsolya E. Ferencz', 'Dániel Hamar', 'János Lichtenberger']),
 
     (263, [], None, []),
-    
+
     (264, ['The Influence of Binaries',
            'on Stellar Population Studies'], 2001,
      ['Dany Vanbeveren']),
@@ -245,5 +254,105 @@ assl_book_list = [
 
     (273, ['Lunar Gavimetry'], 2002,
      ['Rune Floberghagen']),
-     
+
+    (274, ['New Quests in Stellar Astrophysics:',
+           'The Link Between Stars and Cosmolgy'], 2002,
+     ['Miguel Chávez', 'Alessandro Bressan',
+      'Alberto Buzzoni', 'Divakara Mayya']),
+
+    (275, ['History of Oriental Astronomy'], 2002,
+     ['S. M. Razaullah Ansari']),
+
+    (276, ['Modern Theoretical and',
+           'Observational Cosmology'], 2002,
+     ['Manolis Plinonis', 'Spiros Cotsakis']),
+
+    (277, ['The Sun and Space Weather'], 2002,
+     ['Arnold Hanslmeier']),
+
+    (278, ['Exploring the Secrets of the Aurora'], 2002,
+     ['Syun-Ichi Akasofu']),
+
+    (279, ['Plasma Astrophysics, 2nd edition'], 2002,
+     ['Arnold O. Benz']),
+
+    (280, ['Organizations and Strategies',
+           'in Astronomy III'], 2002,
+     ['Andrë Heck']),
+
+    (281, ['The IGM/Galaxy Connection'], 2002,
+     ['Jessica L. Rosenberg']),
+
+    (282, ['Radio Recombination Lines'], 2002,
+     ['M. A. Gordon', 'R. L. Sorochenko']),
+
+    (283, ['Mass-Losing Pulsation Stars',
+           'and Their Circumstellar Matter'], 2003,
+     ['Y. Nakado', 'M. Honma', 'M. Seki']),
+
+    (284, ['Light Pollution: The Global View'], 2003,
+     ['Hugo E. Schwartz']),
+
+    (285, ['Information Handling in Astronomy *',
+           'Historical Vistas'], 2003,
+     ['Andrë Heck']),
+
+    (286, ['Searching the Heavens and the Earth',
+           'The Early History of',
+           'Jesuit Observatories'], 2003,
+     ['Augustín Udías']),
+
+    ('287/8/9', ['The Future of Small Telescopes',
+                 'in the New Millennium'], 2003,
+     ['Terry D. Oswalt']),
+
+    (290, ['Astronomy Communications'], 2003,
+     ['Andrë Heck']),
+
+    (291, ['Dynamical Systems and Cosmology'], 2003,
+     ['Alan Coley']),
+
+    (292, ['Whatever Shines should be Observed'], 2003,
+     ['Susan M. P. McKenna']),
+
+    (293, ['Physics of the Solar System'], 2003,
+     ['Bruno Bertotti', 'Paolo Farinella', 'David Vohrouhlický']),
+
+    (294, ['An Introduction to Plasma',
+           'Astrophysics and',
+           'Magnetohydrodynamics'], 2003,
+     ['Marcel Goossens']),
+    
+    (295, ['Itegrable Problems of Celestial',
+           'Mechanics in Spaces of Constant',
+           'Curvature'], 2003,
+     ['T. G. Vozmischeva']),
+
+    (296, ['Organizations and Strategies',
+           'in Astronomy IV'], 2003,
+     ['André Heck']),
+
+    (297, ['Radiation Hazard in Space'], 2003,
+     ['Leonty I. Miroshnichenko']),
+
+    (298, ['Stellar Astrophysics - A',
+           'Tribute to Helmut A. Abt'], 2003,
+     ['K. S. Cheng', 'Kam Ching Leung', 'T. P. Li']),
+
+    (299, ['Open Issues in Local',
+           'Star Formation'], 2003,
+     ['Jacques Lépine', 'Jane Gregorio-Hetem']),
+
+    (300, ['Scientific Detectors',
+           'for Astronomy'], 2004,
+     ['Paola Amica', 'James W. Beletic', 'Jenna E. Beletic']),
+
+    (301, ['Multiwavelength Cosmology'], 2004,
+     ['Manolis Plionis']),
+
+    (302, ['Stellar Collapse'], 2004,
+     ['Chris L. Fryer']),
+
+    
+    
 ]
