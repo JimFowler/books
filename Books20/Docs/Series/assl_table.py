@@ -11,7 +11,7 @@ import table as tb
 from asslKluwerList import *
 
 def assl_print_books(book_list):
-    for volnum, title_list, year, author_list in book_list:
+    for volnum, title_list, year, author_list, ae_flag, isbn in book_list:
         len_title = len(title_list)
         len_author = len(author_list)
         max_loops = max(len_title, len_author, 1)
