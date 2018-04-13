@@ -42,8 +42,8 @@ handbuch handbook: handbuch.tex
 	${LATEX} handbuch.tex
 
 
-asslKluwer_table.tex: assl_table.py asslKluwerList.py
-	python assl_table.py > asslKluwer_table.tex
+asslKluwer_table.tex: asslKluwer_table.py
+	python asslKluwer_table.py > asslKluwer_table.tex
 
 #
 # lines: count how many lines we have written

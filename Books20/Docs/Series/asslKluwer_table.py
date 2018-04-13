@@ -1,11 +1,30 @@
 '''
- The listings to create the table
-  asslKluwer_table.tex
+  asslKluwer_table.py
 
-  Should I add the editor/author distinction?
-  Should I add the ISBN number?
-  Should I add the full date of publication if known?
+   Table listing of the book series Astrophysics and Space Science
+   Library published by Kluwer Academic 1965-1999 and by
+   Springer after 2000.  This is information used
+   with the book project "Some Important Books in Astronomy
+   and Astrophysics in the 20th Century"
+
+   Copyright 2018 James R. Fowler
+
+   All rights reserved. No part of this publication may be
+   reproduced, stored in a retrival system, or transmitted
+   in any form or by any means, electronic, mechanical,
+   photocopying, recording, or otherwise, without prior written
+   permission of the author.
+
+
+   This file creates the LaTeX longtable format
+   asslKluwer_table.tex
+
+   This information was gather from the back pages of
+   volumes 280 and 338.
 '''
+from __future__ import print_function
+
+import table as tb
 
 tbl_comment = '''%%
 %%
@@ -134,8 +153,8 @@ assl_book_list = [
      ['Anne Marie Hubert', 'Carlos Jaschek'],
      'E', '0-7923-5208-4'),
 
-    (234, ['Observational Evindence for Black Holes',
-           'in the Universe'], '1998-11',
+    (234, ['Observational Evindence for',
+           'Black Holes in the Universe'], '1998-11',
      ['Sandip K. Chakrabarti'],
      'E', '0-7923-5298-X'),
 
@@ -319,7 +338,7 @@ assl_book_list = [
      'A', '1-4020-0544-X'),
 
     (274, ['New Quests in Stellar Astrophysics:',
-           'The Link Between Stars and Cosmolgy'], '2002-06',
+           'The Link Between Stars and Cosmology'], '2002-06',
      ['Miguel Chávez', 'Alessandro Bressan',
       'Alberto Buzzoni', 'Divakara Mayya'],
      'E', '1-4020-0644-6'),
@@ -367,8 +386,8 @@ assl_book_list = [
      ['Hugo E. Schwartz'],
      'E', '1-4020-1174-1'),
 
-    (285, ['Information Handling in Astronomy *',
-           'Historical Vistas'], '2003-03',
+    (285, ['Information Handling in Astronomy',
+           '* Historical Vistas'], '2003-03',
      ['Andrë Heck'],
      'E', '1-4020-1178-4'),
 
@@ -441,5 +460,112 @@ assl_book_list = [
 
     (302, ['Stellar Collapse'], '2004-04',
      ['Chris L. Fryer'],
-     'E', '1-4020-1992-0'),    
+     'E', '1-4020-1992-0'),
+
+    (303, ["Cosmic rays in the Earth's",
+           "Atmosphere and Underground"], '2004-08',
+     ['L. I. Droman'],
+     'A', '1-4020-2071-6'),
+
+    (304, ['Cosmic Gamma-ray Sources'], '2004-09',
+     ['K. S. Cheng', 'G. E. Romero'],
+     'E', '1-4020-2255-7'),
+
+    (305, ['Astrobiology: Future Perspectives'], '2004-07',
+     ['P. Ehrenfreund', 'W. M. Irvine', 'T. Owen', 'L. Becker',
+      'J. Blank', 'J. R. Brucato', 'L. Colangeli', 'S. Derenne',
+      'A. Dutrey', 'D. Despois', 'A. Lazcano', 'F. Robert'],
+     'E', '1-40202304-9'),
+    
+    (306, ['Polytropes - Applications in',
+           'Astrophysics and Related Fields'], '2004-09',
+     ['G. P. Horedt'],
+     'A', '1-4020-2350-2'),
+
+    (307, ['Polarization in Spectral Lines'], '2004-08',
+     ["E. Landi Degl'Innocenti", 'M. Landolfi'],
+     'A', '1-40202414-2'),
+
+    (308, ['Supermasive Black Holes',
+           'in the Distant Universe'], '2004-08',
+     ['A. J. Barger'],
+     'E', '1-4020-2470-3'),
+
+    (309, ['Soft X-ray Emission from Cluster',
+           'of Galaxies and Related Phenomena'], '2004-09',
+     ['R. Lieu', 'J. Mittaz'],
+     'E', '1-4020-2563-7'),
+
+    (310, ['Oranizations and Strategies',
+           'in Astronomy 5'], '2004-09',
+     ['A. Heck'],
+     'E', '1-4020-2570-X'),
+
+    (311, ['The New ROSETTA Targets',
+           '-Observations, Simulations',
+           'and Instrument Performance'], '2004-09',
+     ['L. Colangeli', 'E. Mazzotta Epifani', 'P. Palumbo'],
+     'E', '1-4020-2572-6'),
+
+    (312, ['High-Velocity Clouds'], '2004-09',
+     ['H. van Woerden', 'U. Schwarz', 'B. Wakker'],
+     'E', '1-4020-2813-X'),
+
 ]
+
+
+def assl_print_books(book_list):
+    for volnum, title_list, year, author_list, ae_flag, isbn in book_list:
+        len_title = len(title_list)
+        len_author = len(author_list)
+        max_loops = max(len_title, len_author, 1)
+
+        raw_str = r''
+        
+        # Do first line
+        for index in range(1, max_loops+1):
+            if volnum is not None:
+                raw_str += r'''  {0} & '''.format(volnum)
+                volnum = None
+            else:
+                raw_str += r'''  & '''
+
+            if len_title >= index:
+                raw_str += r'''\bt{}{}{} & '''.format('{', title_list[index-1], '}')
+            else:
+                raw_str += r''' & '''
+
+            if len_author >= index:
+                raw_str += r'''{} & '''.format(author_list[index-1])
+            else:
+                raw_str += r''' & '''
+
+            if year is not None:
+                raw_str += r'''{} \\'''.format(year)
+                year = None
+            else:
+                raw_str += r''' \\'''
+
+            raw_str += '''
+'''
+        # Clean up for TeX and print() statement
+        raw_str2 = raw_str.replace( r'. ', r'.\ ')
+        safe_str = tb.protect_str(raw_str2)
+        # if more title and/or more authors
+        print(safe_str)
+    return
+
+if __name__ == '__main__':
+
+    tb.print_table_comment(tbl_comment)
+    tb.print_table_copyright(tbl_copyright)
+    tb.print_table_start(tbl_format)
+
+    tb.print_table_caption(tbl_caption)
+    tb.print_table_label(tbl_label)
+    tb.print_table_heading(4, tbl_heading, continue_label)
+    tb.print_table_footer(tbl_footer, continue_footer)
+
+    assl_print_books(assl_book_list)
+    tb.print_table_end()
+
