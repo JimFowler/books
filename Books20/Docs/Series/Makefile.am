@@ -32,13 +32,13 @@ BIBFILES = references.bib
 #
 #	 ${BIBTEX} series.aux
 series: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_FILES}
-	${LATEX} series.tex
-	${LATEX} series.tex
+	${LATEX} -draftmode series.tex
+	${LATEX} -draftmode series.tex
 	${LATEX} series.tex
 
 handbuch handbook: handbuch.tex
-	${LATEX} handbuch.tex
-	${LATEX} handbuch.tex
+	${LATEX} -draftmode handbuch.tex
+	${LATEX} -draftmode handbuch.tex
 	${LATEX} handbuch.tex
 
 
@@ -50,7 +50,6 @@ asslKluwer_table.tex: asslKluwer_table.py
 #
 lines:
 	wc ${TEXFILES} Makefile.am
-#	wc ${TEXFILES} ${BIBFILES} Makefile
 
 
 clean:
