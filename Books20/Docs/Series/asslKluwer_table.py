@@ -338,7 +338,8 @@ assl_book_list = [
      'A', '1-4020-0544-X'),
 
     (274, ['New Quests in Stellar Astrophysics:',
-           'The Link Between Stars and Cosmology'], '2002-06',
+           'The Link Between Stars',
+           'and Cosmology'], '2002-06',
      ['Miguel Chávez', 'Alessandro Bressan',
       'Alberto Buzzoni', 'Divakara Mayya'],
      'E', '1-4020-0644-6'),
@@ -511,6 +512,138 @@ assl_book_list = [
      ['H. van Woerden', 'U. Schwarz', 'B. Wakker'],
      'E', '1-4020-2813-X'),
 
+    (313, ['Adventures in Order and Chaos'], '2005-01',
+     ['G. Contopoulos'],
+     'A', '1-4020-3039-8'),
+
+    (314, ['Solar and Spade Weather',
+           'Radiophysics --- Current',
+           'Status and Future Developments'], '2004-08',
+     ['D. E. Gary', 'C. U. Keller'],
+     'E', '1-4020-2813-X'),
+
+    (315, ['How does the Galaxy Work',
+           '--- A Galactic Tertulia with',
+           'Don Cox and Ron Reynolds'], '2004-09',
+     ['E. J. Alfaro', 'E. Pérez', 'J. Franco'],
+     'E', '1-4020-2619-6'),
+
+    (316, ['Civic Astronomy ---',
+           "Albany's Dudley Observatory"], '2004-10',
+     ['G. Wise'],
+     'A', '1-4020-2677-3'),
+
+    (317, ['The Sun and the Heliosphere',
+           'as an Integrated System'], '2004-11',
+     ['G. Poletto', 'S. T. Suess'],
+     'E', '1-4020-2830-X'),
+
+    (318, ['Transfer of Polarized light',
+           'in Planetary Atmospheres'], '2004-11',
+     ['J. W. Hovenier', 'J. W. Domke', 'D. van der Mee'],
+     'A', '1-4020-2889-X'),
+
+    (319, ['Penetrating Bars through',
+           'Masks of Cosmic Dust'], '2004-12',
+     ['D. L. Block', 'I.Puerari', 'K. C. Freeman', 'R. Groess', 'E. K. Block'],
+     'E', '1-4020-2861-X'),
+
+    (320, ['Solar Magnetic Phenomena'], '2004-12',
+     ['A. Hanslmeier', 'A. Veronig', 'M. Messeroti'],
+     'E', '1-4020-2961-6'),
+
+    (321, ['Nonequilibrium Phenomena',
+           'in Plasmas'], '2004-12',
+     ['A. S. Shrama', 'P. K. Kaw'],
+     'E', '1-4020-3108-4'),
+    
+    (322, ['Light Pollution Handbook'], '2004-11',
+     ['K. Narisada', 'D. Schreuder'],
+     'A', '1-4020-2665-X'),
+
+    (323, ['Recollections of Tucson Operations'], '2004-11',
+     ['M. A. Gordon'],
+     'A', '1-4020-3235-8'),
+
+    (324, ['Cores to Clusters',
+           '--- Star Formation with',
+           'Next Generation Telescopes'], '2005-10',
+     ['M. S. Nanda Kumar', 'M. Tafalla', 'P. Caselli'],
+     'E', '0-387-26322-5'),
+
+    (325, ['Kristian Birkeland',
+           '--- The First Space Scientist'], '2005-04',
+    ['A. Egeland', 'W. J. Burke'],
+    'A', '1-4020-329305'),
+
+    (326, [], None,
+     [],
+     None, None),
+
+    (327, ['The Initial Mass Function',
+           '50 Years Later'], '2005-06',
+     ['E, Corbelli', 'F. Palla', 'H. Zinnecker'],
+     'E', '1-4020-3406-7'),
+
+    (328, ['Comets'], '2005-07',
+     ['J. A. Fernández'],
+     'A', '1-4020-3406-7'),
+
+    (329, ['Starbursts ---',
+           'From 30 Doradus',
+           'to Lyman Break Galaxies'], '2005-05',
+     ['R. de Grijs', 'R. M. González Delgado'],
+     'E', '1-4020-3538-1'),
+
+    (330, ['The Multinational History',
+           'of Stausborg Astronomical',
+           'Observatory'], '2005-06',
+     ['A. Heck'],
+     'A', '1-4020-3643-4'),
+
+    (331, ['Ultraviolet Radiation in',
+           'the Solar System'], '2005-11',
+     ['M. Vázquez', 'A. Hanslmeier'],
+     'A', '1-4020-3726-0'),
+
+    (332, ['White Dwarfs: Cosmological',
+           'and Galactic Probes'], '2005-09',
+     ['E. M. Sion', 'S. Vennes', 'H. L. Shipman'],
+     'E', '1-4020-3693-0'),
+
+    (333, ['Planet Mercury'], '2005-11',
+     ['P. Clark', 'S. McKenna-Lawlor'],
+     'A', '1-387-26358-6'),
+
+    (334, ['The New Astronomy:',
+           'Opening the Electromagnetic',
+           'Window and Expanding Our',
+           'View of Planet Earth'], '2005-8',
+     ['W. Orchiston'],
+     'E', '1-4020-3723-6'),
+
+    (335, ['Organization and Strategies',
+           'in Astronomy 6'], '2005-11',
+     ['A. Heck'],
+     'E', '1-4020-4055-5'),
+
+    (336, ['Scientific Detectors',
+           'for Astronomy 2005'], '2005-12',
+     ['J. E. Beletic', 'J. W. Beletic', 'P. Amico'],
+     'E', '1-4020-4329-5'),
+
+    (337, ['Progress in the Study',
+           'of Astrophysical Disks'], '2006-03',
+     ['A. M. Fridman', 'M. Y. Marov', 'I. G. Kovalenko'],
+     'E', '1-4020-4347-3'),
+
+    (338, ['Solar Journey:',
+           'The Significance of our',
+           'Galactic Environment for',
+           'the Heliosphere and Earth'], '2006-05',
+     ['P. C. Frisch'],
+     'E', '1-4020-4397-X'),
+
 ]
 
 
@@ -559,6 +692,7 @@ if __name__ == '__main__':
 
     tb.print_table_comment(tbl_comment)
     tb.print_table_copyright(tbl_copyright)
+    tb.print_table_preamble('')
     tb.print_table_start(tbl_format)
 
     tb.print_table_caption(tbl_caption)
