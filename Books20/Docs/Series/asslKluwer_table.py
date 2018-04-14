@@ -70,7 +70,7 @@ assl_book_list = [
     (217, ['Nonequilibrium Processes',
            'in the Planetary and Cometary',
            'Atmospheres'], '1997-09',
-     ['Valery I. Shematovich', 'Dmitry V. Bisikalo',
+     ['Mikhail Ya. Marov', 'Valery I. Shematovich', 'Dmitry V. Bisikalo',
       'Jean-Claude Gérard'],
      'A', '0-7923-4686-6'),
 
@@ -94,13 +94,13 @@ assl_book_list = [
      None, None),
 
     (222, ['Remembering Edith Alice Müller'], '1998-02',
-     ['Yves Chmielewski', 'Jean-Claude Pecker', 'Ramiro de la Reza',
+     ['Immo Appenzeller', 'Yves Chmielewski', 'Jean-Claude Pecker', 'Ramiro de la Reza',
       'Gustav Tammann', 'Patrick A. Wayman'],
      'E', '0-7923-4789-7'),
 
     (223, ['Visual Double Stars: Formation,',
            'Dynamics and Evolutionary Tracks'], '1997-11',
-     ['A. Elipe', 'H. McAlister'],
+     ['J. A. Docobo', 'A. Elipe', 'H. McAlister'],
      'E', '0-7923-4793-5'),
 
     (224, ['Electronic Publishing for',
@@ -111,7 +111,7 @@ assl_book_list = [
     (225, ["SCORe'96: Solar Convection",
            'and Oscillations and Their',
            'Relationship'], '1998-01',
-     ['F. P. Pijpers', 'Jøgen Christensen-Dalsbaard', 'C. S. Rosenthal'],
+     ['F. P. Pijpers', 'Jøgen Christensen-Dalsgaard', 'C. S. Rosenthal'],
      'E', '0-7923-4852-4'),
 
     (226, ['Observational Cosmology with',
@@ -146,7 +146,7 @@ assl_book_list = [
      'E', '0-7923-5074-X'),
 
     (232, ['The Brightest Binaries'], '1998-07',
-     ['Dany Vonbeveren', 'W. van Rensbergen', 'C. W. H. de Lorre'],
+     ['Dany Vanbeveren', 'W. van Rensbergen', 'C. W. H. de Loore'],
      'A', '0-7923-5155-X'),
 
     (233, ['B[e] Stars'], '1998-09',
@@ -190,7 +190,7 @@ assl_book_list = [
      'E', '0-7923-5581-4'),
 
     (242, ['Cosmic Perspectives in Space Physics'], '2000-06',
-     ['Skumar Biswas'],
+     ['Sukumar Biswas'],
      'A', '0-7923-5813-9'),
 
     (243, ['Solar Polarization'], '1999-07',
@@ -208,7 +208,7 @@ assl_book_list = [
 
     (246, ['The Legacy of J. C. Kapteyn:',
            'Studies on Kapteyn and the',
-           'Development of Modern Astrophysics'], '2000-08',
+           'Development of Modern Astronomy'], '2000-08',
      ['Piet C. van der Kruit', 'Klaas van Berkel'],
      'E', '0-7923-6393-0'),
 
@@ -252,11 +252,11 @@ assl_book_list = [
      'E', '0-7923-6679-4'),
 
     (256, ['Organizations and Strategies',
-           'on Astronomy'], '2000-11',
+           'in Astronomy'], '2000-11',
      ['André Heck'],
      'E', '0-7923-6671-9'),
 
-    (257, ['Stellar Pulsation -',
+    (257, ['Stellar Pulsation ---',
            'Nonlinear Studies'], '2001-03',
      ['Mine Takeuti', 'Dimitar D. Sasselov'],
      'E', '0-7923-6818-5'),
@@ -312,7 +312,7 @@ assl_book_list = [
 
     (268, ['Multielement System Design in',
            'Astronomy and Radio Science'], '2001-11',
-     ['Lazarus E. Koilovich', 'Leonid G. Sodin'],
+     ['Lazarus E. Kopilovich', 'Leonid G. Sodin'],
      'A', '1-4020-0069-3'),
 
     (269, ['Mechanics of Turbulence of',
@@ -350,7 +350,7 @@ assl_book_list = [
 
     (276, ['Modern Theoretical and',
            'Observational Cosmology'], '2002-09',
-     ['Manolis Plinonis', 'Spiros Cotsakis'],
+     ['Manolis Plionis', 'Spiros Cotsakis'],
      'E', '1-4020-0808-2'),
 
     (277, ['The Sun and Space Weather'], '2002-07',
@@ -361,7 +361,8 @@ assl_book_list = [
      ['Syun-Ichi Akasofu'],
      'A', '1-4020-0685-3'),
 
-    (279, ['Plasma Astrophysics, 2nd edition'], '2002-07',
+    (279, ['Plasma Astrophysics,',
+           '2nd edition'], '2002-07',
      ['Arnold O. Benz'],
      'A', '1-4020-0695-0'),
 
@@ -371,16 +372,16 @@ assl_book_list = [
      'E', '1-4020-0812-0'),
 
     (281, ['The IGM/Galaxy Connection'], '2002-04',
-     ['Jessica L. Rosenberg'],
+     ['Jessica L. Rosenberg', 'Mary E. Putnam'],
      'E', '1-4020-1289-6'),
 
     (282, ['Radio Recombination Lines'], '2002-11',
      ['M. A. Gordon', 'R. L. Sorochenko'],
      'A', '1-4020-1016-8'),
 
-    (283, ['Mass-Losing Pulsation Stars',
+    (283, ['Mass-Losing Pulsating Stars',
            'and Their Circumstellar Matter'], '2003-03',
-     ['Y. Nakado', 'M. Honma', 'M. Seki'],
+     ['Y. Nakada', 'M. Honma', 'M. Seki'],
      'E', '1-4020-1162-8'),
 
     (284, ['Light Pollution: The Global View'], '2003-04',
@@ -388,11 +389,11 @@ assl_book_list = [
      'E', '1-4020-1174-1'),
 
     (285, ['Information Handling in Astronomy',
-           '* Historical Vistas'], '2003-03',
+           '--- Historical Vistas'], '2003-03',
      ['Andrë Heck'],
      'E', '1-4020-1178-4'),
 
-    (286, ['Searching the Heavens and the Earth',
+    (286, ['Searching the Heavens and the Earth:',
            'The Early History of',
            'Jesuit Observatories'], '2003-10',
      ['Augustín Udías'],
@@ -404,7 +405,7 @@ assl_book_list = [
      'E', '1-4020-0951-8'),
 
     (290, ['Astronomy Communications'], '2003-07',
-     ['Andrë Heck', 'Claus Madsen'],
+     ['André Heck', 'Claus Madsen'],
      'E', '1-4020-1345-0'),
 
     (291, ['Dynamical Systems and Cosmology'], '2003-11',
@@ -412,7 +413,7 @@ assl_book_list = [
      'A', '1-4020-1403-1'),
 
     (292, ['Whatever Shines Should be Observed'], '2003-09',
-     ['Susan M. P. McKenna'],
+     ['Susan M. P. McKenna-Lawlor'],
      'A', '1-4020-1424-4'),
 
     (293, ['Physics of the Solar System'], '2003-08',
@@ -432,7 +433,7 @@ assl_book_list = [
      'A', '1-4020-1521-6'),
 
     (296, ['Organizations and Strategies',
-           'in Astronomy IV'], '2003-10',
+           'in Astronomy, volume 4'], '2003-10',
      ['André Heck'],
      'E', '1-4020-1526-7'),
 
@@ -440,7 +441,7 @@ assl_book_list = [
      ['Leonty I. Miroshnichenko'],
      'A', '1-4020-1538-0'),
 
-    (298, ['Stellar Astrophysics - A',
+    (298, ['Stellar Astrophysics --- A',
            'Tribute to Helmut A. Abt'], '2003-11',
      ['K. S. Cheng', 'Kam Ching Leung', 'T. P. Li'],
      'E', '1-4020-1683-2'),
@@ -457,7 +458,7 @@ assl_book_list = [
 
     (301, ['Multiwavelength Cosmology'], '2004-03',
      ['Manolis Plionis'],
-     'E', '1-4020-1971-3'),
+     'E', '1-4020-1971-8'),
 
     (302, ['Stellar Collapse'], '2004-04',
      ['Chris L. Fryer'],
@@ -465,7 +466,7 @@ assl_book_list = [
 
     (303, ["Cosmic rays in the Earth's",
            "Atmosphere and Underground"], '2004-08',
-     ['L. I. Droman'],
+     ['L. I. Dorman'],
      'A', '1-4020-2071-6'),
 
     (304, ['Cosmic Gamma-ray Sources'], '2004-09',
@@ -478,14 +479,14 @@ assl_book_list = [
       'A. Dutrey', 'D. Despois', 'A. Lazcano', 'F. Robert'],
      'E', '1-40202304-9'),
     
-    (306, ['Polytropes - Applications in',
+    (306, ['Polytropes --- Applications in',
            'Astrophysics and Related Fields'], '2004-09',
      ['G. P. Horedt'],
      'A', '1-4020-2350-2'),
 
     (307, ['Polarization in Spectral Lines'], '2004-08',
      ["E. Landi Degl'Innocenti", 'M. Landolfi'],
-     'A', '1-40202414-2'),
+     'A', '1-4020-2414-2'),
 
     (308, ['Supermasive Black Holes',
            'in the Distant Universe'], '2004-08',
@@ -497,13 +498,13 @@ assl_book_list = [
      ['R. Lieu', 'J. Mittaz'],
      'E', '1-4020-2563-7'),
 
-    (310, ['Oranizations and Strategies',
+    (310, ['Organizations and Strategies',
            'in Astronomy 5'], '2004-09',
      ['A. Heck'],
      'E', '1-4020-2570-X'),
 
     (311, ['The New ROSETTA Targets',
-           '-Observations, Simulations',
+           '--- Observations, Simulations',
            'and Instrument Performance'], '2004-09',
      ['L. Colangeli', 'E. Mazzotta Epifani', 'P. Palumbo'],
      'E', '1-4020-2572-6'),
@@ -516,7 +517,7 @@ assl_book_list = [
      ['G. Contopoulos'],
      'A', '1-4020-3039-8'),
 
-    (314, ['Solar and Spade Weather',
+    (314, ['Solar and Space Weather',
            'Radiophysics --- Current',
            'Status and Future Developments'], '2004-08',
      ['D. E. Gary', 'C. U. Keller'],
@@ -529,7 +530,8 @@ assl_book_list = [
      'E', '1-4020-2619-6'),
 
     (316, ['Civic Astronomy ---',
-           "Albany's Dudley Observatory"], '2004-10',
+           "Albany's Dudley Observatory",
+           "1852--2002"], '2004-10',
      ['G. Wise'],
      'A', '1-4020-2677-3'),
 
@@ -540,8 +542,8 @@ assl_book_list = [
 
     (318, ['Transfer of Polarized light',
            'in Planetary Atmospheres'], '2004-11',
-     ['J. W. Hovenier', 'J. W. Domke', 'D. van der Mee'],
-     'A', '1-4020-2889-X'),
+     ['J. W. Hovenier', 'J. W. Domke', 'C. van der Mee'],
+     'A', '1-4020-2855-5'),
 
     (319, ['Penetrating Bars through',
            'Masks of Cosmic Dust'], '2004-12',
@@ -549,7 +551,7 @@ assl_book_list = [
      'E', '1-4020-2861-X'),
 
     (320, ['Solar Magnetic Phenomena'], '2004-12',
-     ['A. Hanslmeier', 'A. Veronig', 'M. Messeroti'],
+     ['A. Hanslmeier', 'A. Veronig', 'M. Messerotti'],
      'E', '1-4020-2961-6'),
 
     (321, ['Nonequilibrium Phenomena',
@@ -565,16 +567,16 @@ assl_book_list = [
      ['M. A. Gordon'],
      'A', '1-4020-3235-8'),
 
-    (324, ['Cores to Clusters',
-           '--- Star Formation with',
-           'Next Generation Telescopes'], '2005-10',
+    (324, ['Cores to Clusters ---',
+           'Star Formation with',
+           'next Generation Telescopes'], '2005-10',
      ['M. S. Nanda Kumar', 'M. Tafalla', 'P. Caselli'],
      'E', '0-387-26322-5'),
 
-    (325, ['Kristian Birkeland',
-           '--- The First Space Scientist'], '2005-04',
+    (325, ['Kristian Birkeland ---',
+           'The First Space Scientist'], '2005-04',
     ['A. Egeland', 'W. J. Burke'],
-    'A', '1-4020-329305'),
+    'A', '1-4020-3293-5'),
 
     (326, [], None,
      [],
@@ -587,7 +589,7 @@ assl_book_list = [
 
     (328, ['Comets'], '2005-07',
      ['J. A. Fernández'],
-     'A', '1-4020-3406-7'),
+     'A', '1-4020-3490-3'),
 
     (329, ['Starbursts ---',
            'From 30 Doradus',
@@ -596,7 +598,7 @@ assl_book_list = [
      'E', '1-4020-3538-1'),
 
     (330, ['The Multinational History',
-           'of Stausborg Astronomical',
+           'of Stasborg Astronomical',
            'Observatory'], '2005-06',
      ['A. Heck'],
      'A', '1-4020-3643-4'),
@@ -618,7 +620,7 @@ assl_book_list = [
     (334, ['The New Astronomy:',
            'Opening the Electromagnetic',
            'Window and Expanding Our',
-           'View of Planet Earth'], '2005-8',
+           'View of Planet Earth'], '2005-10',
      ['W. Orchiston'],
      'E', '1-4020-3723-6'),
 
@@ -674,11 +676,15 @@ def assl_print_books(book_list):
                 raw_str += r''' & '''
 
             if year is not None:
-                raw_str += r'''{} \\'''.format(year)
+                raw_str += r'''{}'''.format(year)
                 year = None
-            else:
-                raw_str += r''' \\'''
 
+            if index == max_loops:
+                # at the end of a book allow a break and add spacing
+                raw_str += r''' \\[5pt]'''
+            else:
+                raw_str += r''' \\*'''
+                
             raw_str += '''
 '''
         # Clean up for TeX and print() statement
