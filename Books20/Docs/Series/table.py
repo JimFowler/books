@@ -32,6 +32,15 @@ def print_table_copyright(tbl_copyright):
     safe_copyright = protect_str(raw_copyright)
     print(safe_copyright)
 
+def print_table_preamble(tbl_preamble):
+    '''Print the preamble strings before the start of the
+    longtable environment
+    '''
+    raw_preamble = r'''\setlength\LTleft{0pt}'''
+    #\setlength\LTright{0pt}'''
+    safe_preamble = protect_str(raw_preamble)
+    print(safe_preamble)
+
 def print_table_start(tbl_format):
     '''Print the start of the table and the desired format.
     '''
