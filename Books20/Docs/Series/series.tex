@@ -17,21 +17,41 @@
 %%
 %%
 %%
-\documentclass{article}
+\documentclass[letterpaper]{article}
 
 \usepackage{books20}
+
+% need to set text width to soak up space
+% otherwise is is soaked up in the right hand margin
+% \paperwidth is 614.295pt (8.5in)
+% \textwidth = 345.0pt
+% \hoffset = 0
+% \oddsidemargin = 62pt
+% left/right margin is 72.27pt (1in) + \hoffset + \oddsidemargin
+%
+% so \paperwidth = 2 * (72.27 + \oddsidemargin) + \textwidth
+% or \textwidth = 614.295 - 2 * (72.27 + \oddsidemargin)
+%
+\setlength{\oddsidemargin}{13pt}
+\setlength{\evensidemargin}{13pt}
+\setlength{\textwidth}{443.0pt}
 
 \begin{document}
 
 %% Front matter
 \title{Books Series in Astronomy and Astrophysics}
 \author{James R. Fowler}
-\date{copy of \today}
+\date{last updated 13 April 2018\\ copy of \today}
 
-\maketitle
+%\begin{titlepage}
+  \maketitle
+%\end{titlepage}
 
 \tableofcontents
 \listoftables
+
+%\begin{abstract}
+%\end{abstract}
 
 \section{Introduction}
 
