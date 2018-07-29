@@ -13,12 +13,15 @@ install-sh
 missing
 *.aux
 *.bbl
+*.bcf
 *.blg
+*.bib.bak
 *.log
 *.dvi
 *.lot
 *.toc
 *.out
+*.run.xml
 COPYING
 Auxil/
 Books20/Makefile

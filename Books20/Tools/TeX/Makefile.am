@@ -17,7 +17,7 @@
 #
 TEX    = pdftex
 LATEX  = pdflatex
-BIBTEX = bibtex
+BIBTEX = biber
 
 TEXFILES = style_guide
 
@@ -31,6 +31,7 @@ INSTALLFILES = books20.sty
 style_guide: guide
 guide: ${TEXFILES}
 	${LATEX} style_guide.tex
+	${BIBTEX} style_guide.bcf
 	${LATEX} style_guide.tex
 	${LATEX} style_guide.tex
 
@@ -49,7 +50,7 @@ clean:
 	rm -f *~
 
 veryclean: clean
-	rm -f *.aux *.log *.dvi *.toc *.out *.pdf
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
 
 distclean: veryclean
 	rm -f Makefile Makefile.in

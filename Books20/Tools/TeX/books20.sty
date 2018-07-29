@@ -28,6 +28,12 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{hyperref}
 \RequirePackage{longtable}
+\RequirePackage{import}
+\RequirePackage[
+  backend=biber,
+  style=numeric,
+]{biblatex}
+\addglobalbib{/home/jrf/Documents/books/Books20/Docs/MasterBib.bib}
 
 %%
 %% Preliminary declarations
@@ -44,10 +50,12 @@
 %%
 
 % The Project Title
-\newcommand{\PTitle}{{\bf Books20}}
+\newcommand{\ProjectTitle}{{\bf Books20}}
+%\newcommand{\PTitle}{\ProjectTitle}
 
 % The Book Title
-\newcommand{\BTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
+\newcommand{\BookTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
+\newcommand{\NewBookTitle}{{\it Some Interesting Books in Astronomy and Astrophysics from the \Cen{20}}}
 
 % The command for writing a numeric century
 \newcommand{\Cen}[1]{\ensuremath{#1^{th}}\thinspace Century}
