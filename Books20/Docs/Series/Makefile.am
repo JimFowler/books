@@ -17,13 +17,13 @@
 #
 TEX    = pdftex
 LATEX  = pdflatex
-BIBTEX = bibtex
+BIBTEX = biber
 
 BUILT_TABLE_FILES = asslKluwer_table.tex
 TABLE_FILES = 
 SERIES_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex uaspacescience.tex asslKluwer.tex
 
-HANDBOOK_FILES = handbuch.tex
+HANDBOOK_FILES = hb.tex handbuch.tex
 
 BIBFILES = references.bib
 
@@ -36,10 +36,10 @@ series: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_FILES}
 	${LATEX} -draftmode series.tex
 	${LATEX} series.tex
 
-handbuch handbook: handbuch.tex
-	${LATEX} -draftmode handbuch.tex
-	${LATEX} -draftmode handbuch.tex
-	${LATEX} handbuch.tex
+handbuch handbook: hb.tex handbuch.tex
+	${LATEX} -draftmode hb.tex
+	${LATEX} -draftmode hb.tex
+	${LATEX} hb.tex
 
 
 asslKluwer_table.tex: asslKluwer_table.py
