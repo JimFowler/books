@@ -11,6 +11,7 @@ configure
 aclocal.m4
 install-sh
 missing
+.DS_Store
 *.aux
 *.bbl
 *.bcf
