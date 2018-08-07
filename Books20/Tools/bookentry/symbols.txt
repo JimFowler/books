@@ -102,6 +102,7 @@
 ʰ, Right ascension hours
 ᵐ, Right ascension minutes
 ˢ, Right ascension seconds
+ᵃ, Spanish raised a
 ᵉ, French raised letter e
 ˣ, power x
 ⁻, minus superscript
