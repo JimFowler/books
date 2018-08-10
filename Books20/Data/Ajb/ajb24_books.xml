@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<BookFile><Header>Entry format
+
+AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+
+Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
+
+For volume AJB 24 Index to the Literature of 1922, started 10 Aug 2018, finished, proofread
+
+
+</Header><Entries><Entry><Index><IndexName>AJB</IndexName><VolumeNumber>24</VolumeNumber><SectionNumber>3</SectionNumber><SubSectionNumber>0</SubSectionNumber><EntryNumber>12</EntryNumber></Index><Title>L'oeuvre scientifique de Laplace</Title><Authors><Author><Person><First>H.</First><Last>Andoyer</Last></Person></Author></Authors><Publishers><Publisher><Place>Paris</Place><Name>Payot &amp; Co.</Name></Publisher></Publishers><Year>1921</Year><Pagination>160p</Pagination></Entry></Entries></BookFile>
