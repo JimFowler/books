@@ -84,6 +84,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.acceptButton.released.connect( self.saveEntry )
       self.deleteButton.released.connect( self.deleteEntry )
       self.insertButton.released.connect( self.askInsertEntry )
+      #self.nextButton.released.connect(self.on_nextButton_released)
+      #self.prevButton.released.connect(self.on_prevButton_released)
       self.acceptButton.setEnabled(False)
       self.deleteButton.setEnabled(False)
       self.insertButton.setEnabled(False)
@@ -365,6 +367,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
       self.EntryToDisplay(self.tmpEntry)
       self.deleteButton.setEnabled(True)
       self.clearEntryDirty()
+
 
    def newprintEntry(self):
       """Print a postscript file of the current display."""
@@ -713,7 +716,8 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
                                  'Unknown field "%s:  %s"\n in entry %s\n "'%
                                  (field, entry[field], entry['Index']),
                                  QMessageBox.Ok)
-         
+      self.repaint()
+
    def DisplayToEntry(self):
       """Copy the display into a new entry and
       return the entry."""

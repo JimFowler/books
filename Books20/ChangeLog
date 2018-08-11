@@ -1,3 +1,34 @@
+2018-08-11  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
+
+	* Tools/bookentry/journalwindow.py (EntryToDisplay): Added
+	self.repaint() to force display update on the Macbook.
+
+	* Toos/booksentry/mainWindow.py (EntryToDisplay): added
+	self.repaint() to force display updates. There were not occurrng
+	on the Macbook.
+
+2018-08-10  Jim Fowler  <jrf@biblion>
+
+	* Tools/TeX/style_guide.tex: Revised the style guide from article
+	to book and created different files for diferent sections.
+	Created sections for python, sphinx, and autotools.
+
+2018-08-04  Jim Fowler  <jrf@biblion>
+
+	* Updated my Macbook to python 3.7.  Installed mactex and got it
+	working.  Found some differences in python and Qt behavior between
+	ubuntu and iOS.  Tested BibDesk but it is not quite the same as
+	Jabref.  Downloaded Jabraf but need to download Java as well.
+
+2018-04-29  Jim Fowler  <jrf@biblion>
+
+	* Dpcs/MasterBib.bib: Coverted bibliography to biblatex rather
+	than bibtex.  Had to install texlib-bibtex-extra as well as the
+	biber package on Biblion.
+
+	* Tools/TeX/books20sty: Added the biblatex package for use in
+	LaTeX documents,
+
 2018-03-31  Jim Fowler  <jrf@biblion>
 
 	* Docs/Series/table.py: Created table.py to use python to

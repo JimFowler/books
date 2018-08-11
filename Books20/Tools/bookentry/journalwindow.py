@@ -679,6 +679,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
                 astr += c
         self.CommentsEdit.setText(astr)
 
+        self.repaint()
+
 
     def DisplayToEntry(self):
         """Copy the display into a new entry and
