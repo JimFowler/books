@@ -19,7 +19,7 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = biber
 
-TEXFILES = style_guide
+STYLEILES = style_guide.tex style_latex.tex style_python.tex
 
 # This rather assumes I am installing in a home directory
 INSTALLDIR = $(prefix)/texmf/tex/latex/books20
@@ -28,8 +28,8 @@ INSTALLFILES = books20.sty
 #
 # Basic TeX processing
 #
-style_guide: guide
-guide: ${TEXFILES}
+guide: style_guide
+style_guide: ${STYLEFILES}
 	${LATEX} style_guide.tex
 	${BIBTEX} style_guide.bcf
 	${LATEX} style_guide.tex
@@ -41,7 +41,7 @@ guide: ${TEXFILES}
 # lines: count how many lines we have written
 #
 lines:
-	wc ${TEXFILES} Makefile.am
+	wc ${STYLEFILES} Makefile.am
 
 install:
 	install -m 444 ${INSTALLFILES} ${INSTALLDIR}

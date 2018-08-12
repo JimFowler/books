@@ -31,6 +31,41 @@
 
 \tableofcontents
 
+\chapter{English Grammer and Syntax}
+%\import{./}(style_grammer}
+\begin{itemize}
+
+\item Dashes and Hyphens --- The dash `-' is used for compound-words and for
+  hyphenation at the end of a line.  The en-dash `--' is used for a range
+  of numbers, 1 -- 10. The em-dash `---' is used for punctuation ---
+  e.g.\ separating phrases.
+
+\item Date format --- Use the ISO-8601\cite{isotime} style
+  YYYY-MM-DD for dates and hh:mm:ss for time. Use YYYY or YYYY-MM
+  and hh:mm for abbreviated year-month and hours-minutes.
+
+\item Tables should be in longtable style and should have a caption
+  with two hlines after the heading and at the end. The
+  \texttt{longtable} package is loaded in the \texttt{books20}
+  package.
+
+\item You may also use the functions in table.py in a python script to create
+  a table in \LaTeX\ longtable format.  I'll write some documentation someday
+  but for now you can look at ./Doc/Series/assl\_table.py.
+
+\item Use the serial comma --- for example, we write this, that, and
+  use a serial comma for the last item.
+
+\item Books title shall be in \bt{italics}. Use the command
+  \verb|\bt{My Book Title}| to produce \bt{My Book Title} in a
+  sentence. Note that \verb|\bt{}| can be changed in \texttt{books20}
+  packages to produce another style if necessary.
+
+ Other font choices?
+
+\end{itemize}
+
+
 \chapter{\LaTeX2e\ Documents}
 \import{./}{style_latex}
 
