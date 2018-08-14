@@ -1,5 +1,26 @@
+14 Aug 2018 Consider if it is worthwhile to switch
+   to eclipse. I have been using emacs since 1983
 
-  Build 'deweb' to strip html from text files
+14 Aug 2018 add .emacs file to Macbook
+
+14 Aug 2018 Run pylint on all python files and
+   correct any issues as required. Look for python
+   cleanup commands in emacs. Consider autopep8.el
+
+14 Aug 2018 Create copyright command in emacs
+   determine what type of file we are currently in
+     .tex, .py, .txt (default), .am, .ac, 
+   open temporary buffer with generic_copyright.txt
+   replace comment character with appropriate character
+   replace <filename> with full path name, strip out everything
+      before Books20
+   replace <Year> with current year
+   copy content
+   insert in current file at current location
+ 
+
+13 Aug 2018 Add autosave function to ajbbooks and journals
+
 
   Design data structure for AJB/AAA entry/book count by section
 
@@ -11,7 +32,7 @@
 
   Build project structure with autoconf/automake?
 
-  Define backup process.
+  -->  Define backup process.
 
   done -- Setup apache server
 
