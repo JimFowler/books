@@ -1,18 +1,18 @@
 %%
 %%
-%% style_tex.tex
+%%  ./Books20/Tools/TeX/style_tex.tex
 %%
-%%   The style that I will use for TeX documents in 
-%%   the book project "Some Important Books in Astronomy
-%%    and Astrophysics in the 20th Century"
+%%  The style that I will use for LaTeX 2e documents 
 %%
-%%   Copyright 2018 James R. Fowler
+%%  Part of the Books20 Project
 %%
-%%   All rights reserved. No part of this publication may be
-%%   reproduced, stored in a retrival system, or transmitted
-%%   in any form or by any means, electronic, mechanical,
-%%   photocopying, recording, or otherwise, without prior written
-%%   permission of the author.
+%%  Copyright 2018 James R. Fowler
+%%
+%%  All rights reserved. No part of this publication may be
+%%  reproduced, stored in a retrival system, or transmitted
+%%  in any form or by any means, electronic, mechanical,
+%%  photocopying, recording, or otherwise, without prior written
+%%  permission of the author.
 %%
 %%
 %%
@@ -36,12 +36,12 @@ The \texttt{books20} style package imports the following packages so they are
 not required in your \LaTeXe\ documents
 
 \begin{itemize}
-\item inputenc.sty \cite{Jeffrey2018} (with the utf8 option)
-\item hyperref.sty \cite{Rahtz2017}
-\item longtable.sty \cite{Carlisle2014}
-\item import.sty \cite{Arseneau2009}
-\item biblatex.sty \cite{Lehman2018} (with biber backend and MasterBib.bib as the master
-  bibliography file)
+\item inputenc \cite{Jeffrey2018} (with the utf8 option)
+\item hyperref \cite{Rahtz2017}
+\item longtable \cite{Carlisle2014}
+\item import \cite{Arseneau2009}
+\item biblatex \cite{Lehman2018} (with biber backend and
+  \texttt{./Books20/Docs/MasterBib.bib} as the master bibliography file)
 \end{itemize}
 
 
@@ -49,32 +49,32 @@ not required in your \LaTeXe\ documents
 
 \begin{itemize}
   
-\item The \LaTeXe\ style files books20.sty shall be used in all
+\item The \LaTeXe\ package \texttt{books20} shall be used in all
   \LaTeXe\ documents. To include it use \verb|\usepackage{books20}|, there
   are no options to this style file at this time. Note that books20.sty
   is designed for \LaTeXe\ and may not work with \LaTeX\ 2.09.
   
 
-\item The \texttt{import.sty} allows you to place sections in a
+\item The package \texttt{import} allows you to place sections in a
   separate file and use the \verb|\import{}{}| command in the document
-  file. The first argument is the directory and the second argument is
-  the file name. As an example, use \verb|\import{./}{style_tex}|.
-  This way it is possible to use the same text in a article or book in
-  different documents without having to clean up the document
-  commands. The \verb|\subimport{}{}| command has the same calling
-  syntax but the file locations are relative to the first
-  \verb|\import|. It is possible to nest \verb|\import| commands where
-  it is not possible to next \verb|\include| commands. This feature
-  shall be used in documents to allow greater flexibility in
-  reusing. The imported files may have \verb|\section| commands but
-  should not have \verb|\chapter| commands.
+  to include the file within the document. The first argument is the
+  directory path, the second argument is the file name. As an example,
+  use \verb|\import{./}{style_tex}|.  By using the \texttt{import}
+  package it is possible to use the same file in different documents
+  without having to clean up the file. The \verb|\subimport{}{}|
+  command has the same calling syntax but the file locations are
+  relative to the first \verb|\import|. It is possible to nest
+  \verb|\import| commands whereas it is not possible to nest
+  \verb|\include| commands. This feature shall be used inLaTeX2e\
+  documents to allow greater flexibility for reuse. The imported
+  files may have \verb|\section| commands but should not have
+  \verb|\chapter| commands.
 
-\item {The input encoding package \texttt{inputenc.sty} shall be used
+\item {The input encoding package \texttt{inputenc} shall be used
   so that UTF-8 character encoding can be utilized. Note that this
-  package is included automatically with the books20.sty file.
+  package is included automatically with in the \texttt{books20} package.
 
-  You can used UTF-8 characters by using the \texttt{inputenc.sty}
-  package.  Then a sentence might be written as
+  Then a sentence might be written as
   
   \verb| Das astronomische Weltbild gemäß jüngster Forshung|
   to produce
@@ -96,26 +96,27 @@ not required in your \LaTeXe\ documents
   For example, to produce ö use the key strokes C-x 8 \verb|"| o. Use C-x 8 C-h
   to get a list of character encoding.
   
-\item Use the \texttt{biblatex} package rather than the
-  \texttt{bibtex} package. This is provided in the \texttt{books20}
-  package.  For example, we can cite this book by Basbanes
-  \cite{basbanes:2003} from the global file and we can cite this web
-  page with the documentation for the \texttt{biblatex} package
-  \cite{Lehman2018} from the local file . The file
-  \texttt{./Docs/MasterBib.bib} is the global bibliography file which
-  must be included in the document useing the
-  \verb|\addglobalbib{../MasterBib.bib}| command. You may use
-  additional local biblography files as well with this package. Use
-  the command \verb|\addbibresource{loacalbib.bib}|. These commands
-  should be in the preface before the \verb|\begin{document}|
-    command. The choice of which references should be global and which
-    should be local will probably change with time.
+\item {Use the \texttt{biblatex} package rather than the
+    \texttt{bibtex} package. The \texttt{biblatex} package allows both
+    global and local bibliography files and is provided with the
+    \texttt{books20} package.  For example, we can cite this book by
+    Basbanes \cite{basbanes:2003} from the global file and we can cite
+    this web page with the documentation for the \texttt{biblatex}
+    package \cite{Lehman2018} from the local file. The file
+    \texttt{./Docs/MasterBib.bib} is the global bibliography file and
+    must be included in the document using the
+    \verb|\addglobalbib{../MasterBib.bib}| command. You may use
+    additional local biblography files as well with this package. Use
+    the command \verb|\addbibresource{loacalbib.bib}|. These commands
+    should be in the preface before the \verb|\begin{document}|
+      command. The choice of which references should be global and
+      which should be local will probably change with time.
 
-  Need to work out how to handle link resources and references in
-  footnotes, particular URLs in footnotes. Should all URLs be at the back
-  of the document in the bibliography?  This is possible if we use local
-  .bib files
-  
+      Need to work out how to handle link resources and references in
+      footnotes, particular URLs in footnotes. Should all URLs be at
+      the back of the document in the bibliography?  This is possible
+      if we use local .bib files }
+
 \item May wish to consider the use of the \texttt{subfiles} or
   \texttt{standalone} packages if the number of files gets
   large. These packages allow you to precompile files and avoid long
@@ -125,7 +126,7 @@ not required in your \LaTeXe\ documents
 
 \end{itemize}
 
-\section{Defined command in books20.sty}
+\section{Defined Commanda in books20.sty}
 
 \begin{itemize}
 
@@ -151,8 +152,20 @@ e.g.\ \bt{Book Title} is the title of a book.
 
 \begin{itemize}
 
+\item How to handle internal and external references.  Written
+  documents will be used both as paper documents and as on-line
+  eDocuments and the full link should be available in either
+  case. External references should be handled in the bibliography
+  package. Internal references need to be researched.  As an example,
+  there is a need for mutual references between this chapter and the
+  chapter on English Grammer and Style.
+
 \item Determine a good (useful) format style for citations and the
   bibliography.  Then figure out how to do it in \texttt{biblatex}.
+  Consider \texttt{(ref page \#)} which could be implemented as
+  \verb|\cite{Carlisle2014} page 34)| which should produce something
+  like this (\cite{Carlisle2014} page34). The exact appearance will
+  depend on the bibstyle file used with \texttt{biblatex}
 
 \item Work out other font formats as required. For example, an included
   file or package should be in teletype format using \verb|\texttt{}|.

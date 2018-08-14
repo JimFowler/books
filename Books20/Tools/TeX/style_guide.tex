@@ -1,18 +1,18 @@
 %%
 %%
-%% style_guide.tex
+%%  ./Books20/Tools/TeX/style_guide.tex
 %%
-%%   The style that I will use for for various aspects of 
-%%   the book project "Some Important Books in Astronomy
-%%    and Astrophysics in the 20th Century"
+%%  The style that I will use for for various aspects of the project
 %%
-%%   Copyright 2018 James R. Fowler
+%%  Part of the Books20 Project
 %%
-%%   All rights reserved. No part of this publication may be
-%%   reproduced, stored in a retrival system, or transmitted
-%%   in any form or by any means, electronic, mechanical,
-%%   photocopying, recording, or otherwise, without prior written
-%%   permission of the author.
+%%  Copyright 2018 James R. Fowler
+%%
+%%  All rights reserved. No part of this publication may be
+%%  reproduced, stored in a retrival system, or transmitted
+%%  in any form or by any means, electronic, mechanical,
+%%  photocopying, recording, or otherwise, without prior written
+%%  permission of the author.
 %%
 %%
 %%
@@ -31,39 +31,54 @@
 
 \tableofcontents
 
+\chapter{General Comments}
+
+\section{Purpose}
+This style guide is about maintaining consistency within the docments
+of my project \ProjectTitle. Consistency is for readablilty and
+helps avoid conflicting statements between documents. 
+
+\section{Copyright}
+
+The files within this project are currently under full coyright.  This
+may change at a later date but for now I want to protect whatever
+intellectual property there is.  Therefore all files in the project
+should contain the copyright notice below with the appropriate comment
+character for whatever langangue parser is used for that file; the
+example below uses the comment chacter for \LaTeX2e.  The
+\texttt{<filename>} should contain the path name relative to the top
+project directory. The \texttt{[file description]} should contain a
+quick description of the file contents. The copyright \texttt{<Year>}
+should be the year in which the file was created.
+
+\begin{verbatim}
+%%
+%%
+%%  <filename>
+%%
+%%  
+%%  [file description]
+%%
+%%  Part of Books20 Project
+%%
+%%  Copyright <Year> James R. Fowler
+%%
+%%  All rights reserved. No part of this publication may be
+%%  reproduced, stored in a retrival system, or transmitted
+%%  in any form or by any means, electronic, mechanical,
+%%  photocopying, recording, or otherwise, without prior written
+%%  permission of the author.
+%%
+%%
+%%
+\end{verbatim}
+
+Note that I need to change all the current file documents to match
+this copyright notice.
+
+
 \chapter{English Grammer and Syntax}
-%\import{./}(style_grammer}
-\begin{itemize}
-
-\item Dashes and Hyphens --- The dash `-' is used for compound-words and for
-  hyphenation at the end of a line.  The en-dash `--' is used for a range
-  of numbers, 1 -- 10. The em-dash `---' is used for punctuation ---
-  e.g.\ separating phrases.
-
-\item Date format --- Use the ISO-8601\cite{isotime} style
-  YYYY-MM-DD for dates and hh:mm:ss for time. Use YYYY or YYYY-MM
-  and hh:mm for abbreviated year-month and hours-minutes.
-
-\item Tables should be in longtable style and should have a caption
-  with two hlines after the heading and at the end. The
-  \texttt{longtable} package is loaded in the \texttt{books20}
-  package.
-
-\item You may also use the functions in table.py in a python script to create
-  a table in \LaTeX\ longtable format.  I'll write some documentation someday
-  but for now you can look at ./Doc/Series/assl\_table.py.
-
-\item Use the serial comma --- for example, we write this, that, and
-  use a serial comma for the last item.
-
-\item Books title shall be in \bt{italics}. Use the command
-  \verb|\bt{My Book Title}| to produce \bt{My Book Title} in a
-  sentence. Note that \verb|\bt{}| can be changed in \texttt{books20}
-  packages to produce another style if necessary.
-
- Other font choices?
-
-\end{itemize}
+\import{./}{style_english}
 
 
 \chapter{\LaTeX2e\ Documents}
