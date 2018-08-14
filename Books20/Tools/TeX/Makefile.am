@@ -19,7 +19,8 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = biber
 
-STYLEILES = style_guide.tex style_latex.tex style_python.tex
+STYLEILES = style_guide.tex style_latex.tex style_python.tex \
+	style_english.tex
 
 # This rather assumes I am installing in a home directory
 INSTALLDIR = $(prefix)/texmf/tex/latex/books20
