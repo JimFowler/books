@@ -1,14 +1,33 @@
-15 Aug 2018 ajbbooks has two different values ofr __version__, one in
-   ajbbooks and one in bookenty.mainWindow.py
+16 Aug 2018 What should be in the bookentry package? Any functions
+   should be very generic and not depand on the specifics of journals,
+   books, authors, etc. Consider name change of package to books20.
+   Will need to revise documentation to include package and programs.
 
+   Certainly parser.py, symbols.py, and symbols.txt. A copy of
+   version.py for the package.
+
+   Possibly some search tools as in search.py.
+
+   headerWindow is used for both ajbbooks and journals as is
+   entryselect.py
+
+   Make subfolders of bookentry for ajbbooks and journals?
+   Create branch to test this.
+   
+
+15 Aug 2018 ajbbooks has two different values of __version__, one in
+   ajbbooks and one in bookenty.mainWindow.py.  Need to distinguish
+   between programs versions and package versions.
+ 
 14 Aug 2018 Consider if it is worthwhile to switch
-   to eclipse. I have been using emacs since 1983
+   to eclipse. Note that I have been using emacs since 1983
 
 14 Aug 2018 add .emacs file to Macbook
 
 14 Aug 2018 Run pylint on all python files and
    correct any issues as required. Look for python
-   cleanup commands in emacs. Consider autopep8.el
+   cleanup commands in emacs. Consider autopep8 and
+   py-autopep8.el
 
 14 Aug 2018 Create copyright command in emacs
    determine what type of file we are currently in
