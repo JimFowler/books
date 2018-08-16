@@ -24,13 +24,29 @@ that will be needed for the \ProjectTitle\ project.
 \section{Required Python Packages}
 
 We currently use Python version 3.6 or greater with PyQt version 5.10.
+The standard packages that are used include \texttt{os}, \texttt{sys},
+\texttt{argparse}, \texttt{re}, \texttt{fileinput},\texttt{traceback},
+and \texttt{configparser}.
+
+\subsection{Additional Packages}
+
+In addtion to the standard packages normally included with the Python
+distribution, we are also us \texttt[PyQt}5 and\texttt{lxml}
+particularly \texttt{etree}. 
 
 \subsection{Auxillary Packages}
 The following third-party packages are required.
 
 \subsubsection{nameparser}
 
+Use to parse human names in the ajbbooks program.  Where did it come
+from? Refer to documentation if possible.
+
 \subsubsection{modgrammer}
+
+Used for parsing comment fields in version 1.0 of ajbbooks. This
+capability is no longer used however the ability to read/write
+text files with comments is still available. Where did it come from?
 
 \subsubsection{PyQt 5.x}
 
