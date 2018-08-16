@@ -1,3 +1,12 @@
+2018-08-15  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
+
+	* Tools/bookentry/version.py: created to have a standard place for
+	the version number.  I had multiple copies in various files and
+	needed to have a single source of truth.
+
+	* Tools/bookentry/parser.py (extra_flags): Started work on a
+	standard command line parser for all python programs.
+
 2018-08-11  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
 
 	* Tools/bookentry/journalwindow.py (EntryToDisplay): Added

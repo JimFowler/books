@@ -1,3 +1,6 @@
+15 Aug 2018 ajbbooks has two different values ofr __version__, one in
+   ajbbooks and one in bookenty.mainWindow.py
+
 14 Aug 2018 Consider if it is worthwhile to switch
    to eclipse. I have been using emacs since 1983
 
