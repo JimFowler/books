@@ -32,10 +32,47 @@ The following third-party packages are required.
 
 \subsubsection{modgrammer}
 
+\subsubsection{PyQt 5.x}
+
 \section{Installation Directory}
 
 The installation directory shall be my home directory on what ever machine
 I install on.
+
+\section{Standard Command Line Options and Flags}
+
+All python programs shall use the \texttt{argparse} package and
+support and accept the following command line options. Consider
+writing a stardard parser package for all of my python programs.
+
+\begin{itemize}
+
+  \item --version, -v -- print the version information for the program .
+   This requires a version variable in the creation of the
+   \texttt{argparse} parser.  [Add reference for the \texttt{argparse}
+   package.]
+
+  \item --help, -h -- display a window with or print some brief
+    description about the program. Requires a help string variable in the 
+    \texttt{argparse} parser 
+
+  \item --verbose -- print extra information. Programs don't
+    need to actually print extra information if this flag is found but
+    they must accept the flag on the command line. Note that 
+    there should be no short argument version of this flag
+\end{itemize}
+
+The following flags shall be used if needed in the program.
+
+\begin{itemize}
+  \item --input, -i -- specify the input file if needed or an alternate
+   input file if there is a default. Input files may be required on the
+   command line, in which case this flag is unnecessary.
+
+ \item --config, -c -- specify an alternate configuration file if one
+   is used.
+\end{itemize}
+
 
 \section{Specific Program Documentation}
 
