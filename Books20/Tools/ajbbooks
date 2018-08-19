@@ -7,53 +7,43 @@
 import sys
 import os
 import argparse
-try:
-   from PyQt5.QtCore import *
-   from PyQt5.QtGui  import *
-   from PyQt5.QtWidgets import *
-except:
-   from PyQt4.QtCore import *
-   from PyQt4.QtGui  import *
+from PyQt5 import QtGui, QtWidgets
 
-# Trouble shooting assistance
-from pprint import *
-pp = PrettyPrinter()
-
-import bookentry.ajb_rc
 import bookentry.mainWindow as mw
 
-__version__ = '1.9'
+__version__ = '2.0'
 
 #
 # Parse the command line arguments
 #
 def getargs():
-   parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.txt file')
+    """Parse the command line arguments."""
+    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.xml file')
 
-   parser.add_argument( '-V', '--version',
+    parser.add_argument('-V', '--version',
                         help='provide version info,',
                         action='store_true')
 
-   parser.add_argument( '-i', '--input', type=str,
+    parser.add_argument('-i', '--input', type=str,
                         action='append',
                         help='read the file INPUT for entries')
 
-   parser.add_argument( '-s', '--symbols', type=str,
+    parser.add_argument('-s', '--symbols', type=str,
                         help='use alternate symbol table,')
 
-   parser.add_argument( '-v', '--volume', type=str,
+    parser.add_argument('-v', '--volume', type=str,
                         help='default volume number,')
-                        
-   parser.add_argument( '-c', '--config', type=str,
+
+    parser.add_argument('-c', '--config', type=str,
                         help='alternate configuration file name.',
                         default='./ajbbooks.conf')
-   #parser.add_argument( 'filename', type=str,
-   #                     help='the name of the file to process.',
-   #                     action='append')
+    #parser.add_argument( 'filename', type=str,
+    #                     help='the name of the file to process.',
+    #                     action='append')
 
-   args = parser.parse_args()
+    args = parser.parse_args()
 
-   return args
+    return args
 
 
 #
@@ -61,41 +51,41 @@ def getargs():
 #
 
 def main():
+    """Set up the windows and start the event loop for ajbbooks."""
+    args = getargs()
 
-   args = getargs()
+    app = QtWidgets.QApplication(sys.argv)
+    app.setApplicationName('AJB Book Entry')
+    app.setWindowIcon(QtGui.QIcon(':/icon_ajb.svg'))
 
-   app = QApplication(sys.argv)
-   app.setApplicationName('AJB Book Entry')
-   app.setWindowIcon(QIcon(':/icon_ajb.svg'))
-   
-   form = mw.BookEntry()
-   app.focusChanged.connect( form.setFocusChanged)
+    form = mw.BookEntry()
+    app.focusChanged.connect(form.setFocusChanged)
 
-   if args.version:
-      hstr = form.helpString()
-      form.helpAbout()
-      sys.exit(0)
+    if args.version:
+        form.helpAbout()
+        sys.exit(app.exec_())
 
-   if args.volume is not None:
-      form.setDefaultVolumeNumber(args.volume)
-      form.newEntry()
+    if args.volume is not None:
+        form.setDefaultVolumeNumber(args.volume)
+        form.newEntry()
 
-   if args.symbols is not None:
-      form.setSymbolTableName(args.symbols)
+    if args.symbols is not None:
+        form.setSymbolTableName(args.symbols)
 
-   if args.input is not None:
-      fname = args.input[0]
-      if os.path.isfile(fname):
-         form.openFile(fname)
-      else:
-         form.openNewFile()
-         form.bf.setFileName(fname)
-         form.setWinTitle(form.bf.getBaseName())
-
-
-   form.show()
-   sys.exit(app.exec_())
+    if args.input is not None:
+        fname = args.input[0]
+        if os.path.isfile(fname):
+            form.openFile(fname)
+        else:
+            form.openNewFile()
+            form.bf.setFileName(fname)
+            form.setWinTitle(form.bf.getBaseName())
 
 
+    form.show()
+    sys.exit(app.exec_())
 
-main()
+
+if __name__ == '__main__':
+
+    main()

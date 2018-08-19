@@ -1,0 +1,102 @@
+%%
+%%
+%% style_python.tex
+%%
+%%   The style that I will use for Pythn code in 
+%%   the book project "Some Important Books in Astronomy
+%%    and Astrophysics in the 20th Century"
+%%
+%%   Copyright 2018 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%%
+\section{General Comments}
+
+I will be using Python \url{http://www.python.org} for much of the software
+that will be needed for the \ProjectTitle\ project.
+
+\section{Required Python Packages}
+
+We currently use Python version 3.6 or greater with PyQt version 5.10.
+The standard packages that are used include \texttt{os}, \texttt{sys},
+\texttt{argparse}, \texttt{re}, \texttt{fileinput},\texttt{traceback},
+and \texttt{configparser}.
+
+\subsection{Additional Packages}
+
+In addtion to the standard packages normally included with the Python
+distribution, we are also us \texttt[PyQt}5 and\texttt{lxml}
+particularly \texttt{etree}. 
+
+\subsection{Auxillary Packages}
+The following third-party packages are required.
+
+\subsubsection{nameparser}
+
+Use to parse human names in the ajbbooks program.  Where did it come
+from? Refer to documentation if possible.
+
+\subsubsection{modgrammer}
+
+Used for parsing comment fields in version 1.0 of ajbbooks. This
+capability is no longer used however the ability to read/write
+text files with comments is still available. Where did it come from?
+
+\subsubsection{PyQt 5.x}
+
+\section{Installation Directory}
+
+The installation directory shall be my home directory on what ever machine
+I install on.
+
+\section{Standard Command Line Options and Flags}
+
+All python programs shall use the \texttt{argparse} package and
+support and accept the following command line options. Consider
+writing a stardard parser package for all of my python programs.
+
+\begin{itemize}
+
+  \item --version, -v -- print the version information for the program .
+   This requires a version variable in the creation of the
+   \texttt{argparse} parser.  [Add reference for the \texttt{argparse}
+   package.]
+
+  \item --help, -h -- display a window with or print some brief
+    description about the program. Requires a help string variable in the 
+    \texttt{argparse} parser 
+
+  \item --verbose -- print extra information. Programs don't
+    need to actually print extra information if this flag is found but
+    they must accept the flag on the command line. Note that 
+    there should be no short argument version of this flag
+\end{itemize}
+
+The following flags shall be used if needed in the program.
+
+\begin{itemize}
+  \item --input, -i -- specify the input file if needed or an alternate
+   input file if there is a default. Input files may be required on the
+   command line, in which case this flag is unnecessary.
+
+ \item --config, -c -- specify an alternate configuration file if one
+   is used.
+\end{itemize}
+
+
+\section{Specific Program Documentation}
+
+Documentation detailing the specific of a python program shall be
+written in Sphinx.
+
+Use PEP-8  (\url{https://www.python.org/dev/peps/pep-0008/}) as a
+style standard for all Python programs. Use \texttt{pylint} to test
+code files againts PEP-8. 
+
+

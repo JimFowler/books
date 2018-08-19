@@ -1,0 +1,283 @@
+%%
+%%
+%%  ./Books20/Tools/TeX/style_tex.tex
+%%
+%%  The style that I will use for LaTeX 2e documents 
+%%
+%%  Part of the Books20 Project
+%%
+%%  Copyright 2018 James R. Fowler
+%%
+%%  All rights reserved. No part of this publication may be
+%%  reproduced, stored in a retrival system, or transmitted
+%%  in any form or by any means, electronic, mechanical,
+%%  photocopying, recording, or otherwise, without prior written
+%%  permission of the author.
+%%
+%%
+%%
+\section{General Comments}
+
+Documents for the \ProjectTitle\ project should be written in \LaTeXe\ and use
+the books20.sty package. Most documents will be articles but the
+manuscript should be in the books document class. The reasoning behind
+using \LaTeXe\ is that I expect academic publishers to prefer or at
+least have available a \LaTeXe\ class package.  It will be difficult if
+I need to convert these documents to Microsoft Word\texttrademark or
+some other formatting package.
+
+A good, general purpose on-line reference for \LaTeXe\ can be found at
+the Share \LaTeX\ web site,
+\href{http://www.sharelatex.com/learn}{www.sharelatex.com/learn}.
+More detailed information can be found at The Comprehensive
+\TeX\ Archive Network, \href{ctan.org}{ctan.org}
+
+The \texttt{books20} style package imports the following packages so they are
+not required in your \LaTeXe\ documents
+
+\begin{itemize}
+\item inputenc \cite{Jeffrey2018} (with the utf8 option)
+\item hyperref \cite{Rahtz2017}
+\item longtable \cite{Carlisle2014}
+\item import \cite{Arseneau2009}
+\item biblatex \cite{Lehman2018} (with biber backend and
+  \texttt{./Books20/Docs/MasterBib.bib} as the master bibliography file)
+\end{itemize}
+
+
+\subsection{Document Design}
+
+\begin{itemize}
+  
+\item The \LaTeXe\ package \texttt{books20} shall be used in all
+  \LaTeXe\ documents. To include it use \verb|\usepackage{books20}|, there
+  are no options to this style file at this time. Note that books20.sty
+  is designed for \LaTeXe\ and may not work with \LaTeX\ 2.09.
+  
+
+\item The package \texttt{import} allows you to place sections in a
+  separate file and use the \verb|\import{}{}| command in the document
+  to include the file within the document. The first argument is the
+  directory path, the second argument is the file name. As an example,
+  use \verb|\import{./}{style_tex}|.  By using the \texttt{import}
+  package it is possible to use the same file in different documents
+  without having to clean up the file. The \verb|\subimport{}{}|
+  command has the same calling syntax but the file locations are
+  relative to the first \verb|\import|. It is possible to nest
+  \verb|\import| commands whereas it is not possible to nest
+  \verb|\include| commands. This feature shall be used inLaTeX2e\
+  documents to allow greater flexibility for reuse. The imported
+  files may have \verb|\section| commands but should not have
+  \verb|\chapter| commands.
+
+\item {The input encoding package \texttt{inputenc} shall be used
+  so that UTF-8 character encoding can be utilized. Note that this
+  package is included automatically with in the \texttt{books20} package.
+
+  Then a sentence might be written as
+  
+  \verb| Das astronomische Weltbild gemäß jüngster Forshung|
+  to produce
+
+  Das astronomische Weltbild gemäß jüngster Forshung
+
+  But you can still use the standard \LaTeX\ encoding
+  
+  \verb| Das astronomische Weltbild gem\"{a}{\ss} j\"{u}ngster Forshung|
+  to produce the same thing.
+
+  Das astronomische Weltbild gem\"{a}{\ss} j\"{u}ngster Forshung
+
+  This will be useful when I create \LaTeXe\ files from the database
+  which is in UTF-8 encoding.
+}
+
+\item In Emacs we can produce UTF-8 characters with C-x 8 mark letter.
+  For example, to produce ö use the key strokes C-x 8 \verb|"| o. Use C-x 8 C-h
+  to get a list of character encoding.
+  
+\item {Use the \texttt{biblatex} package rather than the
+    \texttt{bibtex} package. The \texttt{biblatex} package allows both
+    global and local bibliography files and is provided with the
+    \texttt{books20} package.  For example, we can cite this book by
+    Basbanes \cite{basbanes:2003} from the global file and we can cite
+    this web page with the documentation for the \texttt{biblatex}
+    package \cite{Lehman2018} from the local file. The file
+    \texttt{./Docs/MasterBib.bib} is the global bibliography file and
+    must be included in the document using the
+    \verb|\addglobalbib{../MasterBib.bib}| command. You may use
+    additional local biblography files as well with this package. Use
+    the command \verb|\addbibresource{loacalbib.bib}|. These commands
+    should be in the preface before the \verb|\begin{document}|
+      command. The choice of which references should be global and
+      which should be local will probably change with time.
+
+      Need to work out how to handle link resources and references in
+      footnotes, particular URLs in footnotes. Should all URLs be at
+      the back of the document in the bibliography?  This is possible
+      if we use local .bib files }
+
+\item May wish to consider the use of the \texttt{subfiles} or
+  \texttt{standalone} packages if the number of files gets
+  large. These packages allow you to precompile files and avoid long
+  compiles, simlar to the \texttt{make} command in Unix.  However,
+  these packages may conflict with the \texttt{import} package.
+
+
+\end{itemize}
+
+\section{Defined Commanda in books20.sty}
+
+\begin{itemize}
+
+\item \verb|\Cen{19}| is used to produce century names,
+  e.g.\ \Cen{19}. Note that it works only for centuries that use the
+  \textsuperscript{th} format.  That is, it won't work for the
+  21\textsuperscript{st} Century, the 2\textsuperscript{nd} Century,
+  or the 3\textsuperscript{rd} Century, etc. I should probably fix
+  this issue.
+
+\item \verb|\bt{Book Title}| produces book titles in italic face,
+e.g.\ \bt{Book Title} is the title of a book.
+
+\item \verb|\ProjectTitle\ | produces the project title in bold face,
+  e.g.\ the \ProjectTitle\ project is the name of this project.
+
+\item \verb|\BookTitle\ | produces the book title in italic face,
+  e.g.\ \BookTitle\ or whatever I (or my editor) chooses for a title.
+
+\end{itemize}
+
+\section{Still to Do}
+
+\begin{itemize}
+
+\item How to handle internal and external references.  Written
+  documents will be used both as paper documents and as on-line
+  eDocuments and the full link should be available in either
+  case. External references should be handled in the bibliography
+  package. Internal references need to be researched.  As an example,
+  there is a need for mutual references between this chapter and the
+  chapter on English Grammer and Style.
+
+\item Determine a good (useful) format style for citations and the
+  bibliography.  Then figure out how to do it in \texttt{biblatex}.
+  Consider \texttt{(ref page \#)} which could be implemented as
+  \verb|\cite{Carlisle2014} page 34)| which should produce something
+  like this (\cite{Carlisle2014} page34). The exact appearance will
+  depend on the bibstyle file used with \texttt{biblatex}
+
+\item Work out other font formats as required. For example, an included
+  file or package should be in teletype format using \verb|\texttt{}|.
+  Although there will not be much call for such in the manuscript.
+
+\item Convert series.tex, handbuch.tex, the files in \texttt{./Docs}, as
+  well as the manuscript to use the \texttt{books20} package.
+
+\end{itemize}
+
+\section{An Example Document}
+
+Here is an example document so you can see what the \LaTeX\ commands are.
+
+\begin{verbatim}
+
+%%
+%%
+%% style_guide.tex
+%%
+%%   The style that I will used for 
+%%   the book project "Some Important Books in Astronomy
+%%    and Astrophysics in the 20th Century"
+%%
+%%   Copyright 2017 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%%
+\documentclass{book}
+
+\usepackage{books20}
+\addglobalbib{./../../Docs/MasterBib.bib}
+\addbibresource{localbib.bib}
+
+\begin{document}
+\title{Style Guide for the \ProjectTitle\ Project}
+\author{James R. Fowler}
+\date{2017-12-15}
+
+\maketitle
+\tableofcontents
+\listoftables 
+
+\Chapter{\LaTeX2e\ Documents}
+\import{./}{sytle_latex}
+
+\chapter{Python Programming}
+\import{./}{style_python}
+\end{document}
+
+\end{verbatim}
+
+ The following would be imported from  the style\_latex.tex document.
+
+\begin{verbatim}
+
+\section{General Comments}
+
+The first of many sections for the book \BookTitle.  You can cite 
+Basbanes \cite{basbanes:2003} book on libraries like this.
+
+\section{Using UTF-8}
+
+You can use UTF-8 characters by using the \textttusepackage[utf-8]inputenc}
+package.  Then a sentence might be written as
+
+Das astronomische Weltbild gemäß jüngster Forshung
+
+But you can still use the standard \LaTeXe\ encodings
+
+Der neuentdeckte Himmel; Das astronomische Weltbild gem\"{a}{\ss} j\'{u}ngster Forshung
+
+\subsection{Long Tables}
+
+You can make a table in longtable format.
+
+\begin{longtable}[p]{l l l}
+  \caption{\bf Harvard Observatory Monographs} \\
+  \label{HMA:1} \\
+
+  Title & Author(s) & Date \\
+  \hline\hline
+  \endfirsthead
+
+  \multicolumn{3}{c}{Continuation of Harvard Obs.\ Monographs} \\
+  Title & Author(s) & Date \\
+  \hline\hline
+  \endhead
+
+  \hline
+  \endfoot
+  
+  \hline\hline
+  \endlastfoot
+
+  1 \bt{Stellar Atmospheres} & Cecilia Payne & 1925 \\
+
+  2 \bt{Star Clusters} & Harlow Shapley & 1930 \\
+
+  3 \bt{The Stars of High Luminosity} & Cecilia Payne & 1930 \\
+
+  
+\end{longtable}
+
+\printbibliography
+
+%% End style_latex.tex
+\end{verbatim}
+
