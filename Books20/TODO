@@ -1,3 +1,5 @@
+20 Aug 2018 Add menu options and ^F/^B shortcuts for next/previous record.
+
 16 Aug 2018 What should be in the bookentry package? Any functions
    should be very generic and not depand on the specifics of journals,
    books, authors, etc. Consider name change of package to books20.
