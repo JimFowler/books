@@ -1,3 +1,11 @@
+2018-08-19  Jim Fowler  <jrf@biblion>
+
+	* Tools/TeX/books20.el: started creating an emacs command
+	file for the project. In particular I added a new function
+	named 'insert-copyright'
+
+	* Tools/Tex/generic-copyright.tex: renamed from .txt to .tex
+
 2018-08-15  James Fowler  <jrf12@James-Fowlers-MacBook-Pro.local>
 
 	* Tools/bookentry/version.py: created to have a standard place for
