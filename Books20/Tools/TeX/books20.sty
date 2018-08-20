@@ -1,11 +1,13 @@
 %%
 %%
-%% books20.sty
+%%  ./books/Books20/Tools/TeX/books20.sty
+%%  
+%%   The LaTeX 2e style file for the LaTeX documents
+%%   in the project.
 %%
-%%   A style file for my project
-%%  "Some Important Books in Astronomy and Astrophysics in the 20th Century"
+%%   Part of the Books20 Project
 %%
-%%   Copyright 2017 James R. Fowler
+%%   Copyright 2018 James R. Fowler
 %%
 %%   All rights reserved. No part of this publication may be
 %%   reproduced, stored in a retrival system, or transmitted
@@ -20,7 +22,7 @@
 %% Identification
 %%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{books20}[2017/12/17 Command used in my Books20 project]
+\ProvidesPackage{books20}[2017/12/17 Commands used in my Books20 project]
 
 %%
 %% Required packages for all Books20 documents
@@ -53,11 +55,18 @@
 %\newcommand{\PTitle}{\ProjectTitle}
 
 % The Book Title
-\newcommand{\BookTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
-\newcommand{\NewBookTitle}{{\it Some Interesting Books in Astronomy and Astrophysics from the \Cen{20}}}
+%\newcommand{\BookTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
+\newcommand{\BookTitle}{{\it Some Interesting Books in Astronomy and Astrophysics from the \Cen{20}}}
 
 % The command for writing a numeric century
-\newcommand{\Cen}[1]{\ensuremath{#1^{th}}\thinspace Century}
+\newcommand{\Cen}[1]{\IfEqCase{#1}{%
+    {1}{\ensuremath{#1^{st}}\thinspace Century}%
+    {21}{\ensuremath{#1^{st}}\thinspace Century}%
+    {2}{\ensuremath{#1^{nd}}\thinspace Century}%
+    {22}{\ensuremath{#1^{nd}}\thinspace Century}%
+    {3}{\ensuremath{#1^{rd}}\thinspace Century}%
+    {23}{\ensuremath{#1^{rd}}\thinspace Century}}%
+    [\ensuremath{#1^{th}}\thinspace Century]}
 
 % Print a book title
 \newcommand{\bt}[1]{{\it #1}}
