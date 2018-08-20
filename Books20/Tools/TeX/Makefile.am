@@ -19,18 +19,26 @@ TEX    = pdftex
 LATEX  = pdflatex
 BIBTEX = biber
 
-STYLEILES = style_guide.tex style_latex.tex style_python.tex \
+STYLEFILES = style_guide.tex style_latex.tex style_python.tex \
 	style_english.tex
 
 # This rather assumes I am installing in a home directory
-INSTALLDIR = $(prefix)/texmf/tex/latex/books20
-INSTALLFILES = books20.sty
+TEX_INSTALLDIR = $(prefix)/texmf/tex/latex/books20
+TEX_INSTALLFILES = books20.sty
+
+EMACS_INSTALLDIR = $(prefix)/Emacs
+EMACS_INSTALLFILES = books20.el generic_copyright.tex
+
+PDF_INSTALLDIR = ../../PDF
+PDF_INSTALLFILES = style_guide.pdf
+
 
 #
 # Basic TeX processing
 #
 guide: style_guide
-style_guide: ${STYLEFILES}
+style_guide: style_guide.pdf
+style_guide.pdf: ${STYLEFILES}
 	${LATEX} style_guide.tex
 	${BIBTEX} style_guide.bcf
 	${LATEX} style_guide.tex
@@ -42,10 +50,14 @@ style_guide: ${STYLEFILES}
 # lines: count how many lines we have written
 #
 lines:
-	wc ${STYLEFILES} Makefile.am
+	wc ${STYLEFILES} ${TEX_INSTALLFILES} ${EMACS_INSTALLFILES} Makefile.am
 
-install:
-	install -m 444 ${INSTALLFILES} ${INSTALLDIR}
+install: 
+	install -m 444 ${TEX_INSTALLFILES} ${TEX_INSTALLDIR}
+	install -m 444 ${EMACS_INSTALLFILES} ${EMACS_INSTALLDIR}
+
+install_pdf: ${PDF_INSTALLFILES}
+	install -m 444 ${PDF_INSTALLFILES} ${PDF_INSTALLDIR}
 
 clean:
 	rm -f *~
