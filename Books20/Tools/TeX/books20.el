@@ -45,6 +45,8 @@
 	((string= a "el") (replace-string "%%" ";;"))
 	((string= a "tex") (replace-string "%%" "%%"))
 	((string= a "bib") (replace-string "%%" "%%"))
+	((string= a "am") (replace-string "%%" "#"))
+	((string= a "ac") (replace-string "%%" "dnl"))
 	((string= a "txt") (replace-string "%%" ""))
 	)
   )
