@@ -1,0 +1,48 @@
+#
+#
+#  /home/jrf/Documents/books/Books20/Tools/TeX/Makefile_generic.am
+#  
+#   The generic feature of a Makefile.am.  All Makefiles
+#   should have these targets at a minimum. The targets don't
+#   need to do anything but `make` should not generate an error
+#   because the target does not exist.
+#
+#   Part of the Books20 Project
+#
+#   Copyright 2018 James R. Fowler
+#
+#   All rights reserved. No part of this publication may be
+#   reproduced, stored in a retrival system, or transmitted
+#   in any form or by any means, electronic, mechanical,
+#   photocopying, recording, or otherwise, without prior written
+#   permission of the author.
+#
+#
+#
+
+SUBDIRS=
+
+all:
+
+
+install:
+
+install_python:
+	$(PYTHON) setup.py install --home=@prefix@
+
+
+clean:
+	rm -f *~
+
+clean_tex:
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
+
+clean_c:
+	rm -f *.o
+
+clean_python:
+
+veryclean: clean clean_tex
+
+distclean: veryclean
+	rm -f Makefile Makefile.in

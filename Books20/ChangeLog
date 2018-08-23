@@ -1,3 +1,16 @@
+2018-08-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/TeX/Makefile.am
+	* Tools/TeX/style_guide.tex: include style_build.tex
+
+	* Tools/TeX/style_build.tex: this is the begining of the
+	style_guide for the use of autotool (aclocal, autoconf, automake)
+	as well as other possible build tools.
+
+2018-08-21  Jim Fowler  <jrf@biblion>
+
+	* Tools/TeX/Makefile_generic.am: started generic Makefile.am.
+
 2018-08-19  Jim Fowler  <jrf@biblion>
 
 	* Tools/TeX/books20.el: started creating an emacs command
@@ -20,7 +33,7 @@
 	* Tools/bookentry/journalwindow.py (EntryToDisplay): Added
 	self.repaint() to force display update on the Macbook.
 
-	* Toos/booksentry/mainWindow.py (EntryToDisplay): added
+	* Tools/booksentry/mainWindow.py (EntryToDisplay): added
 	self.repaint() to force display updates. There were not occurrng
 	on the Macbook.
 
