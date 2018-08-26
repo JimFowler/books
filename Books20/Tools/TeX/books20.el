@@ -56,7 +56,7 @@
   (interactive)
   (save-restriction 
     (narrow-to-region (point) (point))
-    (insert-file-contents (expand-file-name "~jrf/Emacs/Files/generic_copyright.tex"))
+    (insert-file-contents (expand-file-name "~/Emacs/Files/generic_copyright.tex"))
     (goto-char (point-min))
     (replace-comments)
     (goto-char (point-min))
