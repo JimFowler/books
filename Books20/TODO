@@ -31,18 +31,6 @@
    cleanup commands in emacs. Consider autopep8 and
    py-autopep8.el
 
-14 Aug 2018 Create copyright command in emacs
-   determine what type of file we are currently in
-     .tex, .py, .txt (default), .am, .ac, 
-   open temporary buffer with generic_copyright.txt
-   replace comment character with appropriate character
-   replace <filename> with full path name, strip out everything
-      before Books20
-   replace <Year> with current year
-   copy content
-   insert in current file at current location
- 
-
 13 Aug 2018 Add autosave function to ajbbooks and journals
 
 
@@ -56,7 +44,22 @@
 
   Build project structure with autoconf/automake?
 
-  -->  Define backup process.
+
+  done -- Define backup process. Using github 
+
+  done 19 Aug 2018
+   14 Aug 2018
+   Create copyright command in emacs
+   determine what type of file we are currently in
+     .tex, .py, .txt (default), .am, .ac, 
+   open temporary buffer with generic_copyright.txt
+   replace comment character with appropriate character
+   replace <filename> with full path name, strip out everything
+      before Books20
+   replace <Year> with current year
+   copy content
+   insert in current file at current location
+ 
 
   done -- Setup apache server
 
