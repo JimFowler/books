@@ -46,7 +46,6 @@ def createMenus( self, menuBar):
         
         openFileAction = createAction( self, '&Open File...',
                                        slot='self.askOpenFile',
-
                                        shortcut='Ctrl+O' )
         
         saveAction = createAction( self, '&Save File',
@@ -59,6 +58,14 @@ def createMenus( self, menuBar):
         newEntAction = createAction( self, 'New &Entry',
                                      slot='self.newEntry',
                                      shortcut='Ctrl+E')
+
+        nextEntAction = createAction( self, 'Next Entry',
+                                     slot='self.on_nextButton_released',
+                                      shortcut=None)
+
+        prevEntAction = createAction( self, 'Prev &Entry',
+                                     slot='self.on_prevButton_released',
+                                      shortcut=None)
 
         saveEntAction = createAction( self, 'Save Ent&ry', 
                                       slot='self.saveEntry',
@@ -80,6 +87,8 @@ def createMenus( self, menuBar):
         fileMenu.addAction(saveAsAction)
         fileMenu.addSeparator()
         fileMenu.addAction(newEntAction)
+        fileMenu.addAction(nextEntAction)
+        fileMenu.addAction(prevEntAction)
         fileMenu.addAction(saveEntAction)
         fileMenu.addAction(printAction)
         fileMenu.addSeparator()

@@ -1,4 +1,3 @@
-20 Aug 2018 Add menu options and ^F/^B shortcuts for next/previous record.
 
 16 Aug 2018 What should be in the bookentry package? Any functions
    should be very generic and not depand on the specifics of journals,
@@ -24,7 +23,6 @@
 14 Aug 2018 Consider if it is worthwhile to switch
    to eclipse. Note that I have been using emacs since 1983
 
-14 Aug 2018 add .emacs file to Macbook
 
 14 Aug 2018 Run pylint on all python files and
    correct any issues as required. Look for python
@@ -44,6 +42,10 @@
 
   Build project structure with autoconf/automake?
 
+
+  done 26 Aug 2018
+   14 Aug 2018 add .emacs file to Macbook
+   20 Aug 2018 Add menu options and ^F/^B shortcuts for next/previous record.
 
   done -- Define backup process. Using github 
 
