@@ -8,7 +8,7 @@ that are part of the Books20 project
 
 import argparse
 
-def standard_parser(pars)
+def standard_parser(pars):
     """Provides a standard parser that should be used by all python programs
     that are part of the Books20 project.  This parser provided the minimum
     required command line flags as defined in the Books20 style guide.
