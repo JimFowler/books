@@ -1,6 +1,0 @@
-include doc/*
-include bookentry/symbols.txt
-include bookentry/Makefile
-include bookentry/*.ui
-include bookentry/testheader
-include bookentry/atestfile.txt

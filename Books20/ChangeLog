@@ -1,3 +1,9 @@
+2018-08-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/[emacs,python]: Create emacs and python sub-directories.
+	Moved Tex/books20.el and TeX/generic_copyright.tex to emacs.
+	Moved all python code to Tools/python.
+
 2018-08-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/TeX/Makefile.am
