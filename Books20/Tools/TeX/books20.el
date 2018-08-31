@@ -71,3 +71,7 @@
     )
   )
 
+(defun replace-copyright ()
+  "Replace the existing copyright notice with a new one"
+  (interactive)
+  )
