@@ -25,9 +25,8 @@
 
 \documentclass{article}
 
-%----------------------------------------------------------
-\newcommand{\Cen}[1]{\ensuremath{#1^{th}} Century}
-%----------------------------------------------------------
+\usepackage{books20}
+\addglobalbib{./../../Docs/MasterBib.bib}
 
 \begin{document}
 
@@ -119,7 +118,6 @@ notes.
 %%\backmatter
 \vfil\eject
 
-\bibliographystyle{plain}
-\bibliography{MasterBib}
+\printbibliography
 
 \end{document}

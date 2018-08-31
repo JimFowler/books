@@ -23,6 +23,7 @@ AC_PROG_INSTALL()
 AC_OUTPUT(Makefile
       Docs/Makefile
       Docs/Series/Makefile
+      Docs/Notes/Makefile
       Tools/TeX/Makefile
       Manuscript/Makefile
       WebPages/Makefile
