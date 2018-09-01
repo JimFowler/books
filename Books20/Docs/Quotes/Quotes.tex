@@ -19,12 +19,17 @@
 %% on $Date$
 %%
 %%
-\documentstyle{book}
+\documentclass{article}
+
 \usepackage{books20}
+\addglobalbib{./../../Docs/MasterBib.bib}
 
 \begin{document}
 
-\mainmatter
+\title{Some Interesting Quotes}
+\author{James R. Fowler}
+\date{copy of \today}
+\maketitle
 
 \begin{quote}
 
@@ -51,9 +56,6 @@ Natural History.
  \url{http://www.facebook.com/photo.php?fbid=490576217674222&set=a.334832996581879.82450.334816523250193&type=1}
 \end{quote}
 
-\backmatter
-
-\bibliographystyle{plain}
-\bibliography{BooksRead}
+\printbibliography
 
 \end{document}

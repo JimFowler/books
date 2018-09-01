@@ -17,16 +17,19 @@
 #
 TEX    = pdftex
 LATEX  = pdflatex
-BIBTEX = bibtex
+BIBTEX = biber
 
 PUBLICHTML = $(htmldir)
 
+TEXFILES = DatabaseDesign.tex
 #
 # Basic TeX processing
 #
 docs: DatabaseDesign
 
 DatabaseDesign: DatabaseDesign.tex
+	${LATEX} DatabaseDesign.tex
+	${BIBTEX} DatabaseDesign.bcf
 	${LATEX} DatabaseDesign.tex
 	${LATEX} DatabaseDesign.tex
 
@@ -42,3 +45,13 @@ install_pdf: DatabaseDesign
 	@echo "Installing PDF files in ${PUBLICHTML}"
 	install -m 444 -p ./DatabaseDesign.pdf $(PUBLICHTML)
 
+clean:
+	rm -f *~
+
+clean_tex:
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
+
+veryclean: clean clean_tex
+
+distclean: veryclean
+	rm -f Makefile Makefile.in

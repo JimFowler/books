@@ -17,7 +17,7 @@
 #
 TEX    = pdftex
 LATEX  = pdflatex
-BIBTEX = bibtex
+BIBTEX = biber
 
 PUBLICHTML = $(htmldir)
 
@@ -30,7 +30,7 @@ docs: Quotes
 
 Quotes:
 	${LATEX} Quotes.tex
-	${BIBTEX} Quotes.aux
+	${BIBTEX} Quotes.bcf
 	${LATEX} Quotes.tex
 	${LATEX} Quotes.tex
 
@@ -46,3 +46,15 @@ lines:
 install_pdf: DatabaseDesign
 	@echo "Installing PDF files in ${PUBLICHTML}"
 
+#
+# Clean
+#
+
+clean:
+	rm -f *~
+
+veryclean: clean
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
+
+distclean: veryclean
+	rm -f Makefile Makefile.in
