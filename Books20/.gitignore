@@ -10,6 +10,8 @@ Docs/Style/Makefile
 Docs/Series/asslKluwer_table.tex
 Docs/Quotes/Quotes.pdf
 Docs/Quotes/Makefile
+Tools/emacs/Makefile
+Tools/TeX/test_sty.pdf
 Manuscript/books20.pdf
 Playground
 PDF

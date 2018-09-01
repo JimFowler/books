@@ -28,6 +28,7 @@ AC_OUTPUT(Makefile
       Docs/Series/Makefile
       Docs/Style/Makefile
       Tools/TeX/Makefile
+      Tools/emacs/Makefile
       Manuscript/Makefile
       WebPages/Makefile
       WebPages/Images/Makefile)
