@@ -33,6 +33,11 @@ PDF_INSTALLFILES =
 #
 # Basic TeX processing
 #
+test: test_sty.tex
+	${LATEX} test_sty.tex
+	${BIBTEX} test_sty.bcf
+	${LATEX} test_sty.tex
+	${LATEX} test_sty.tex
 
 #
 # lines: count how many lines we have written
@@ -52,6 +57,7 @@ clean:
 	rm -f *~
 
 veryclean: clean
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
 
 distclean: veryclean
 	rm -f Makefile Makefile.in
