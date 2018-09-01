@@ -22,7 +22,6 @@ BIBTEX = biber
 TEXFILES = astro_20.tex astro_pre.tex books20.tex intro.tex \
 	 preface.tex the_books.tex the_process.tex
 
-BIBFILES = references.bib
 
 #
 # Basic TeX processing
@@ -38,6 +37,15 @@ manuscript: ${TEXFILES} ${BIBFILES}
 # lines: count how many lines we have written
 #
 lines:
-	wc ${TEXFILES} ${BIBFILES} Makefile
+	wc ${TEXFILES} Makefile
 
+
+clean:
+	rm -f *~
+
+veryclean: clean
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.pdf *.run.xml
+
+distclean: veryclean
+	rm -f Makefile Makefile.in
 
