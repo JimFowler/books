@@ -17,7 +17,7 @@
 #
 TEX    = pdftex
 LATEX  = pdflatex
-BIBTEX = bibtex
+BIBTEX = biber
 
 TEXFILES = astro_20.tex astro_pre.tex books20.tex intro.tex \
 	 preface.tex the_books.tex the_process.tex
@@ -28,10 +28,10 @@ BIBFILES = references.bib
 # Basic TeX processing
 #
 manuscript: ${TEXFILES} ${BIBFILES}
-	${LATEX} books20.tex
-	${BIBTEX} books20.aux
-	${LATEX} books20.tex
-	${LATEX} books20.tex
+	${LATEX} books20
+	${BIBTEX} books20
+	${LATEX} books20
+	${LATEX} books20
 
 
 #

@@ -1,10 +1,8 @@
+%% Begin copyright
 %%
-%%
-%%  the_books.tex
-%%
-%%   The appendix 'The Books' for
-%%     the book "Some Important Books in Astronomy and
-%%      Astrophysics in the 20th Century"
+%%  /home/jrf/Documents/books/Books20/Manuscript/the_books.tex
+%%  
+%%   Part of the Books20 Project
 %%
 %%   Copyright 2008 James R. Fowler
 %%
@@ -13,16 +11,22 @@
 %%   in any form or by any means, electronic, mechanical,
 %%   photocopying, recording, or otherwise, without prior written
 %%   permission of the author.
-%% 
-%%
-%%   The last known changes were checked in by $Author$
-%%   as revision $LastChangedRevision$
-%%   on $Date$
 %%
 %%
+%% End copyright
+
 
 %%
-%% \bkentry{author}{year}{title}{publishing}{description}{references}
+%%   The appendix 'The Books' for
+%%     the book "Some Important Books in Astronomy and
+%%      Astrophysics in the 20th Century"
+
+%%
+%% \bkentry{year}{author}  #1 #2
+%% {title}       #3
+%% {publishing}  #4
+%% {description} #5
+%% {references}  #6
 %%
 \newcounter{bksctr}
 
@@ -30,12 +34,12 @@
 \stepcounter{bksctr}
 \vspace*{1 cm}
 \noindent
-{\bf\arabic{bksctr}  #2}\newline
-{\it\large #3\hfil}\newline
-{\bf #1}, #4\newline
-#5\newline
-#6\newline
-Comments:\newline
+\hbox{{\bf\arabic{bksctr}  #2 \hfil}}\newline
+\hbox{{\it\large #3\hfil}}\newline
+\hbox{{\bf #1}, #4 \hfil}\newline
+\hbox{#5\hfil}\newline
+\hbox{#6\hfil}\newline
+\hbox{Comments:\hfil}\newline
 }
 
 %
@@ -44,45 +48,50 @@ Comments:\newline
 \newcommand{\exbkentry}[6]{
 \vspace*{1 cm}
 \noindent
-{\bf Index  #2}\newline
-{\it\large #3}\newline
-{\bf #1}, #4
-#5\newline
-#6\newline
-Comments:\newline
+{\bf Index  #2}\hfil\newline
+{\it\large #3}\hfil\newline
+{\bf #1}, #4\hfil
+#5\hfil\newline
+#6\hfil\newline
+Comments:\hfil\newline
 }
 
 
-\chapter{The Books}
+{\textbf What order should the books be listed in? Alphabetic, by
+author or title? By subject, stellar, galactic, radio, visual? By
+date? I'm inclined to list them by date at this time.  What about
+multiple editions or first editions published in Europe and the USA?
+How do we list them under one book entry?}
 
-\textbf{What order should the books be listed in? Alphabetic, by author or title? By subject,
-stellar, galactic, radio, visual? By date? I'm inclined to list them by date at this time.
-What about multiple editions or first editions published in Europe and the USA?  How do
-we list them under one book entry?}
-
-The books are listed by date of publication in order to emphasize the historical
-development of astronomy.  Where there are multiple books
-published in a single year, they are listed alphabeticly by the author's last
-name.
+The books are listed by date of publication in order to emphasize the
+historical development of astronomy.  Where there are multiple books
+published in a single year, they are listed alphabeticly by the
+author's last name.
 
 The entries contain an index number, the author(s), title, date, place
-of publication, and publisher.  Also included is a bibliographic description of the 
-book.  This is followed by any references to other lists, if such exist. Finally
-a comment as to why the book is considered important as well as any publishing
-history known, e.g.\ number of edition, translation, etc.
+of publication, and publisher.  Also included is a bibliographic
+description of the book.  This is followed by any references to other
+lists, if such exist. Finally a comment as to why the book is
+considered important as well as any publishing history known, e.g.\
+number of edition, translation, etc.
 
 A book entry is formated as follows:
 
-\exbkentry{Year}{Author}{Title}{place of publication, Publisher}
-{Bibliographic description}{References to other lists}
+\exbkentry{Year}{Author}
+{Title}
+{place of publication, Publisher}
+{Bibliographic description}
+{References to other lists}
 Reasons why the book is important and any publishing history.
 
 \section*{References}
 References to other lists are as follows:
 \begin{itemize}
 \item AAA --- \emph{Astronomy and Astrophysics Abstracts}, \cite{aaa:1969},
-References are given as AAAvvv.sss.nnn, where vvv is the volume number, sss is the section number (usually 003, books), and nnn is the index number in the section.
-\item AJB --- \emph{Astronomischer Jahresbericht}, \cite{ajr:1900}
+References are given as AAAvvv.sss.nnn, where vvv is the volume
+number, sss is the section number (usually 003, books), and nnn is the
+index number in the section.
+\item AJB --- \emph{Astronomischer Jahresbericht}, \cite{ajb:1900}
 \item BEA --- \emph{Biographical Encyclopedia of Astronomy} [get citation]
 \item DeV --- DeVorkin, D., \emph{The History of Modern Astronomy and Astrophysics},
 \cite{devorkin:1982}
@@ -90,8 +99,9 @@ References are given as AAAvvv.sss.nnn, where vvv is the volume number, sss is t
 \item Kp --- Kemp, D.A., \emph{Astronomy and Astrophysics, a bibliographical guide}, \cite{kemp:1970}
 \end{itemize}
 
-\textbf{Need BEA and DSB entries for all authors. Do we want to give the doi: for any entries?
-What is a doi:?}
+{\textbf Need BEA and DSB entries for all authors. Need AJB and other
+bibliographies for the book Do we want to give the doi: for any
+entries.  What is a doi:?}
 \newpage
 
 \section*{Books}
@@ -101,8 +111,8 @@ What is a doi:?}
 \bkentry{1914}{Eddington, Arthur}
 {Stellar Movement and the Structure of the Universe}
 {London, Macmillian \& Co}
-{15 x 22.5 cm, xii, 266, (2) pp, 4 plates, 22 figures, index, 2 pages of advertisments
-in the back, blue cloth}
+{15 x 22.5 cm, xii, 266, (2) pp, 4 plates, 22
+figures, index, 2 pages of advertisments in the back, blue cloth}
 {}
 
 \bkentry{1929}{Jeans, James}
