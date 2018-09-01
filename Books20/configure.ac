@@ -22,6 +22,8 @@ AC_PROG_INSTALL()
 
 AC_OUTPUT(Makefile
       Docs/Makefile
+      Docs/DatabaseDesign/Makefile
+      Docs/Quotes/Makefile
       Docs/Notes/Makefile
       Docs/Series/Makefile
       Docs/Style/Makefile

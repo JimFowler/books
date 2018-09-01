@@ -1,12 +1,15 @@
 Data/AAA/
 Data/Ajb/Old/
 Data/Ajb/xml/
+Docs/DatabaseDesign/DatabaseDesign.pdf
+Docs/DatabaseDesign/Makefile
 Docs/Notes/Notes.pdf
 Docs/Notes/Makefile
-Docs/Style/Makefile
 Docs/Style/style_guide.pdf
-Docs/DatabaseDesign.pdf
+Docs/Style/Makefile
 Docs/Series/asslKluwer_table.tex
+Docs/Quotes/Quotes.pdf
+Docs/Quotes/Makefile
 Manuscript/books20.pdf
 Playground
 PDF
