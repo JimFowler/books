@@ -3,9 +3,10 @@ Data/Ajb/Old/
 Data/Ajb/xml/
 Docs/Notes/Notes.pdf
 Docs/Notes/Makefile
+Docs/Style/Makefile
+Docs/Style/style_guide.pdf
 Docs/DatabaseDesign.pdf
 Docs/Series/asslKluwer_table.tex
 Manuscript/books20.pdf
-Tools/TeX/style_guide.pdf
 Playground
 PDF
