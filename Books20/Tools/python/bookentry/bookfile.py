@@ -306,10 +306,10 @@ class BookFile():
     
         # read and validate the XML file
         try:
-            bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/bookentry/xml/bookfile.xsd')
+            bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/bookfile.xsd')
             Parser = etree.XMLParser(schema=bf_schema)
         except:
-            print('The schema is not well formed')
+            print('The schema is not well formed or can not be found')
             return 0
         try:
             bf_xml = etree.parse(self._fileName, parser=Parser)
@@ -412,7 +412,7 @@ if __name__ == "__main__":
     bf.writeFile_XML('ajb58_books.xml')
     print('We can read and validate a file with the parse() function')
     try:
-        bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/bookentry/xml/bookfile.xsd')
+        bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/bookfile.xsd')
         Parser = etree.XMLParser(schema=bf_schema)
         print('The schema is well formed')
     except:
