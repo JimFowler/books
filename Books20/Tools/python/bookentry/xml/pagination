@@ -3,7 +3,7 @@ Pagination (part of the physical description)
 
 30 May 2016
 
-The original pagination scheme was have '<front>+<main> pp'.  This
+The original pagination scheme was '<front>+<main> pp'.  This
 worked fine for use with Microsoft Word and text based entry. The 'pp'
 made it clear where the field was in the comma-separated
 list. However, it soon became clear that there was more information in
