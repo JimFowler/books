@@ -76,6 +76,9 @@ if __name__ == '__main__':
 
     # Test non-Roman characters
     print('''\nroman_to_int() quits after finding a non-Roman character
-    as in CXAAAIII which could be read as 110 or perhaps 113''')
+    as in CXAAAIII which could be read as 110 but perhaps 113 if we ignore
+    the 'AAA' string''')
     print('roman_to_int() returns:', roman_to_int('CXAAAIII'))
 
+    print('''Note that roman_to_int() will accept an 'illegal' roman
+    numeral such as MDDCXI which returns as''', roman_to_int('MDDCXI'))
