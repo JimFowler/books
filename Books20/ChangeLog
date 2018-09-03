@@ -1,9 +1,22 @@
+2018-09-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/bookentry/xml/pagination.xsd: Added
+	verified attribute to Pagination element
+
+2018-09-02  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/bookentry/xml/pagination.xsd: Created XML
+	schema and XML test file for page and element counts.
+
+	* Tools/python/bookentry/xml/pagination_xml.py: Created
+	to parse a pagination string to/from XML.
+
 2018-09-01  Jim Fowler  <jrf@biblion>
 
 	* Reorganise the LaTeX files in Docs. Moved style_guide from
 	Tools to Docs. Created \ProjectCopyright command in books20.sty.
 	Moved all LaTeX documents to LateX 2e and the books20 package.
-	
+
 2018-08-30  Jim Fowler  <jrf@biblion>
 
 	* Tools/[emacs,python]: Create emacs and python sub-directories.
