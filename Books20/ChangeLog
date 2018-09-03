@@ -1,5 +1,9 @@
 2018-09-03  Jim Fowler  <jrf@biblion>
 
+	* Docs/MasterBib.bib: Updated from bibtex to biblatex.  This
+	changed all the keys from name:date to Namedate. Modified all
+	affected *.tex documents.
+
 	* Tools/python/bookentry/xml/pagination.xsd: Added
 	verified attribute to Pagination element
 
