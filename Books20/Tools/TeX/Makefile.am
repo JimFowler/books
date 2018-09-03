@@ -34,10 +34,10 @@ PDF_INSTALLFILES =
 # Basic TeX processing
 #
 test: test_sty.tex
-	${LATEX} test_sty.tex
-	${BIBTEX} test_sty.bcf
-	${LATEX} test_sty.tex
-	${LATEX} test_sty.tex
+	${LATEX} test_sty
+	${BIBTEX} test_sty
+	${LATEX} test_sty
+	${LATEX} test_sty
 
 #
 # lines: count how many lines we have written

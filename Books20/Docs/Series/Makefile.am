@@ -25,21 +25,21 @@ SERIES_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex uaspacescience.
 
 HANDBOOK_FILES = hb.tex handbuch.tex
 
-BIBFILES = references.bib
-
 #
 # Basic TeX processing
 #
 #	 ${BIBTEX} series.aux
 series: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_FILES}
-	${LATEX} -draftmode series.tex
-	${LATEX} -draftmode series.tex
-	${LATEX} series.tex
+	${LATEX} -draftmode series
+	${BIBTEX} series
+	${LATEX} -draftmode series
+	${LATEX} series
 
 handbuch handbook: hb.tex handbuch.tex
-	${LATEX} -draftmode hb.tex
-	${LATEX} -draftmode hb.tex
-	${LATEX} hb.tex
+	${LATEX} -draftmode hb
+	${BIBTEX} hb
+	${LATEX} -draftmode hb
+	${LATEX} hb
 
 
 asslKluwer_table.tex: asslKluwer_table.py

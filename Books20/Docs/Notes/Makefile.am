@@ -27,10 +27,10 @@ PUBLICHTML = $(htmldir)
 docs: Notes
 
 Notes:
-	${LATEX} Notes.tex
-	${BIBTEX} Notes.bcf
-	${LATEX} Notes.tex
-	${LATEX} Notes.tex
+	${LATEX} Notes
+	${BIBTEX} Notes
+	${LATEX} Notes
+	${LATEX} Notes
 
 #
 # lines: count how many lines we have written

@@ -32,10 +32,10 @@ PDF_INSTALLFILES = style_guide.pdf
 guide: style_guide
 style_guide: style_guide.pdf
 style_guide.pdf: ${STYLEFILES}
-	${LATEX} style_guide.tex
-	${BIBTEX} style_guide.bcf
-	${LATEX} style_guide.tex
-	${LATEX} style_guide.tex
+	${LATEX} style_guide
+	${BIBTEX} style_guide
+	${LATEX} style_guide
+	${LATEX} style_guide
 
 
 

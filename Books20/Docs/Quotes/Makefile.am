@@ -29,10 +29,10 @@ TEXFILES = Quotes.tex
 docs: Quotes
 
 Quotes:
-	${LATEX} Quotes.tex
-	${BIBTEX} Quotes.bcf
-	${LATEX} Quotes.tex
-	${LATEX} Quotes.tex
+	${LATEX} Quotes
+	${BIBTEX} Quotes
+	${LATEX} Quotes
+	${LATEX} Quotes
 
 
 #
