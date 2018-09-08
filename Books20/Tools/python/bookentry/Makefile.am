@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Docs/Series/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/python/bookentry/Makefile.am
 #  
 #   Part of the Books20 Project
 #
@@ -29,16 +29,23 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = 
+SUB_DIRS = xml
 
-BUILT_TABLE_FILES = asslKluwer_table.tex
-TABLE_FILES = 
-SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
-	uaspacescience.tex asslKluwer.tex
+#
+# Definitions
+#
+PYUIC = pyuic5
+PYRCC = pyrcc5
+#PYRCC = pyrcc4 -py3
 
-HANDBUCH_TEX_FILES = hb.tex handbuch.tex
+#
+# Target lists
+#
+USER_INTERFACES = ui_BookEntry.py ui_HeaderEntry.py ui_OrigStr.py \
+		ui_EntrySelect.py ui_JournalSearch.py ui_JournalEntry.py
 
-BIB_FILES = 
+RESOURCE_FILES = ajb_rc.py
+
 #
 # Build any software and/or documents
 #
@@ -51,28 +58,42 @@ ${SUB_DIRS} :
 
 
 .PHONY: build_software
-build_software: ${SUB_DIRS}
-	@echo "Building software in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
+build_software: ${SUB_DIRS} ${USER_INTERFACES} ${RESOURCE_FILES}
+
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} series.pdf hb.pdf
+build_docs: ${SUB_DIRS}
+	@echo "Building docs in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
 
 
-series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
-	${LATEX} -draftmode series
-	${BIBTEX} series
-	${LATEX} -draftmode series
-	${LATEX} series
+#
+# Convert the XML designer files to Python files
+#
+ui_BookEntry.py: designer/ui_BookEntry.ui
+	$(PYUIC) -o ui_BookEntry.py designer/ui_BookEntry.ui
 
-hb.pdf: hb.tex handbuch.tex
-	${LATEX} -draftmode hb
-	${BIBER} hb
-	${LATEX} -draftmode hb
-	${LATEX} hb
+ui_HeaderEntry.py: designer/ui_HeaderEntry.ui
+	$(PYUIC) -o ui_HeaderEntry.py designer/ui_HeaderEntry.ui
 
-asslKluwer_table.tex: asslKluwer_table.py
-	python asslKluwer_table.py > asslKluwer_table.tex
+ui_OrigStr.py: designer/ui_OrigStr.ui
+	$(PYUIC) -o ui_OrigStr.py designer/ui_OrigStr.ui
+
+ui_EntrySelect.py: designer/ui_EntrySelect.ui
+	$(PYUIC) -o ui_EntrySelect.py designer/ui_EntrySelect.ui
+
+
+ui_JournalSearch.py: designer/ui_JournalSearch.ui
+	$(PYUIC) -o ui_JournalSearch.py designer/ui_JournalSearch.ui
+
+ui_JournalEntry.py: designer/ui_JournalEntry.ui
+	$(PYUIC) -o ui_JournalEntry.py designer/ui_JournalEntry.ui
+
+#
+# Convert the XML resource files to Python files
+#
+ajb_rc.py: Resources/ajb_rc.qrc
+	$(PYRCC) -o ajb_rc.py Resources/ajb_rc.qrc
 
 
 #
@@ -87,35 +108,23 @@ install_software: ${SUB_DIRS}
 	@echo "Nothing to install from  ${CURDIR}"
 
 .PHONY: install_docs
-install_docs: ${SUB_DIRS} build_docs install_pdf
-
-install_pdf:
-	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
-	install -m 444 -p ./Series.pdf ${PDF_INSTALL_DIR}
-	install -m 444 -p ./hb.pdf ${PDF_INSTALL_DIR}
-
-#
-# Other useful stuff
-#
-
-#
-# lines: count how many lines we have written
-#
-lines:
-	wc ${SERIES_TEX_FILES} ${HANDBUCH_TEX_FILES} ${BIB_FILES} Makefile
+install_docs: ${SUB_DIRS}
+	@echo "Installing docs from ${CURDIR}"
+	@echo "Nothing to install from  ${CURDIR}"
 
 
 #
 # Clean up the mess
 #
 .PHONY: clean
-clean: ${SUB_DIRS} clean_tex
+clean: ${SUB_DIRS}
 	@echo "Doing clean of ${CURDIR}"
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS} clean clean_pdf
-	${RM} -rf __pycache__
+veryclean: ${SUB_DIRS} clean clean_python
+	@echo "Doing veryclean of ${CURDIR}"
+	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 .PHONY: distclean
 distclean: ${SUB_DIRS} veryclean
@@ -133,7 +142,6 @@ install_python:
 .PHONY: clean_tex
 clean_tex:
 	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
-	${RM} -f ${BUILT_TABLE_FILES}
 
 .PHONY: clean_pdf
 clean_pdf:
@@ -145,7 +153,7 @@ clean_c:
 
 .PHONY: clean_python
 clean_python:
-	${RM} -f *.pyc
+	${RM} -rf *.pyc __pycache__
 
 
 #

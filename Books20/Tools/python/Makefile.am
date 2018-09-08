@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Docs/Series/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/python/Makefile.am
 #  
 #   Part of the Books20 Project
 #
@@ -29,16 +29,8 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = 
+SUB_DIRS = bookentry doc
 
-BUILT_TABLE_FILES = asslKluwer_table.tex
-TABLE_FILES = 
-SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
-	uaspacescience.tex asslKluwer.tex
-
-HANDBUCH_TEX_FILES = hb.tex handbuch.tex
-
-BIB_FILES = 
 #
 # Build any software and/or documents
 #
@@ -56,24 +48,9 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} series.pdf hb.pdf
-
-
-series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
-	${LATEX} -draftmode series
-	${BIBTEX} series
-	${LATEX} -draftmode series
-	${LATEX} series
-
-hb.pdf: hb.tex handbuch.tex
-	${LATEX} -draftmode hb
-	${BIBER} hb
-	${LATEX} -draftmode hb
-	${LATEX} hb
-
-asslKluwer_table.tex: asslKluwer_table.py
-	python asslKluwer_table.py > asslKluwer_table.tex
-
+build_docs: ${SUB_DIRS}
+	@echo "Building docs in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
 
 #
 # Install any software and/or documents
@@ -82,43 +59,30 @@ asslKluwer_table.tex: asslKluwer_table.py
 install: install_software install_docs
 
 .PHONY: install_software
-install_software: ${SUB_DIRS}
-	@echo "Installing software from ${CURDIR}"
-	@echo "Nothing to install from  ${CURDIR}"
+install_software: install_python
+
 
 .PHONY: install_docs
-install_docs: ${SUB_DIRS} build_docs install_pdf
-
-install_pdf:
-	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
-	install -m 444 -p ./Series.pdf ${PDF_INSTALL_DIR}
-	install -m 444 -p ./hb.pdf ${PDF_INSTALL_DIR}
-
-#
-# Other useful stuff
-#
-
-#
-# lines: count how many lines we have written
-#
-lines:
-	wc ${SERIES_TEX_FILES} ${HANDBUCH_TEX_FILES} ${BIB_FILES} Makefile
+install_docs: ${SUB_DIRS}
+	@echo "Installing docs from ${CURDIR}"
+	@echo "Nothing to install from  ${CURDIR}"
 
 
 #
 # Clean up the mess
 #
 .PHONY: clean
-clean: ${SUB_DIRS} clean_tex
+clean: ${SUB_DIRS}
 	@echo "Doing clean of ${CURDIR}"
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS} clean clean_pdf
-	${RM} -rf __pycache__
+veryclean: ${SUB_DIRS}
+	@echo "Doing veryclean of ${CURDIR}"
+	@echo "Nothing to do for veryclean in ${CURDIR}"
 
 .PHONY: distclean
-distclean: ${SUB_DIRS} veryclean
+distclean: ${SUB_DIRS}
 	@echo "Doing distclean of ${CURDIR}"
 	${RM} Makefile Makefile.in
 
@@ -127,13 +91,12 @@ distclean: ${SUB_DIRS} veryclean
 #
 .PHONY: install_python
 install_python:
-	$(PYTHON) setup.py install --prefix=${PYTHON_INSTALL_DIR}
+	python setup.py install --prefix=${PYTHON_INSTALL_DIR}
 
 
 .PHONY: clean_tex
 clean_tex:
 	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
-	${RM} -f ${BUILT_TABLE_FILES}
 
 .PHONY: clean_pdf
 clean_pdf:

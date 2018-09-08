@@ -1,3 +1,41 @@
+2018-09-08  Jim Fowler  <jrf@biblion>
+
+	* configure.ac: got all Makefile.am targets working except
+	Tools/python/doc.  The build for sphinx is broken at the moment.
+	Checked in updated Makefile.am and other files
+	
+2018-09-07  Jim Fowler  <jrf@biblion>
+
+	* configure.ac: installed Makefile.am in all relevant directories.
+	Tested generic targets prior to adding real targets. The Makefile
+	that are now being built are:
+
+	Makefile
+	Docs/Makefile
+	Docs/DatabaseDesign/Makefile
+	Docs/Quotes/Makefile
+	Docs/Notes/Makefile
+	Docs/Series/Makefile
+	Docs/Style/Makefile
+	Manuscript/Makefile
+	Tools/Makefile
+	Tools/build/Makefile
+	Tools/emacs/Makefile
+	Tools/python/Makefile
+	Tools/python/bookentry/Makefile
+	Tools/python/bookentry/xml/Makefile
+	Tools/python/doc/Makefile
+	Tools/TeX/Makefile
+	WebPages/Makefile
+	WebPages/Images/Makefile
+
+
+2018-09-06  Jim Fowler  <jrf@biblion>
+
+	* Makefile.am : began changing out Makefile.am for
+	Tools/build/Makefile_generic.am. Modifying configure.ac as I go
+	along.
+
 2018-09-03  Jim Fowler  <jrf@biblion>
 
 	* Docs/MasterBib.bib: Updated from bibtex to biblatex.  This

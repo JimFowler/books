@@ -1,34 +1,121 @@
+# Begin copyright
 #
-# Makefile.am
+#  /home/jrf/Documents/books/Books20/WebPages/Images/Makefile.am
+#  
+#   Part of the Books20 Project
 #
-#   This makefile contains the instructions for working with the
-#   webpages images for the book "Some Important Books in Astronomy and
-#   Astrophysics in the 20th Century"
-#
-#
-#   Copyright 2008 James R. Fowler
+#   Copyright 2018 James R. Fowler
 #
 #   All rights reserved. No part of this publication may be
 #   reproduced, stored in a retrival system, or transmitted
 #   in any form or by any means, electronic, mechanical,
 #   photocopying, recording, or otherwise, without prior written
 #   permission of the author.
-# 
 #
+#
+# End copyright
+
+#
+#   All Makefiles should have these targets at a minimum. The targets
+#   don't need to do anything but `make` should not generate an error
+#   because the target does not exist.
+#
+
+#
+# Include local definitions
+#
+include ${BOOKS20_ROOT}/makefile.local
+
+#
+# Run make in these sub-directories
+#
+SUB_DIRS = 
+
 PUBLICIMAGES = bookrow.jpg
+#
+# Build any software and/or documents
+#
+all: build_software build_docs
 
-PUBLICHTML = $(prefix)/public_html
+.PHONY: ${SUB_DIRS}
+${SUB_DIRS} :
+	@echo "Running make ${MAKECMDGOALS} in $@"
+	@${MAKE} -C $@ ${MAKECMDGOALS}
 
-install: install_images
+
+.PHONY: build_software
+build_software: ${SUB_DIRS}
+	@echo "Building software in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
+
+.PHONY: build_docs
+build_docs: ${SUB_DIRS}
+	@echo "Building docs in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
+
+#
+# Install any software and/or documents
+#
+.PHONY: install
+install: install_software install_docs
+
+.PHONY: install_software
+install_software: ${SUB_DIRS}
+	@echo "Installing software from ${CURDIR}"
+	@echo "Nothing to install from  ${CURDIR}"
+
+.PHONY: install_docs
+install_docs: ${SUB_DIRS} install_images
 
 install_images: ${PUBLICIMAGES}
-	@if [ ! -d ${htmldir}/Images ]; then \
-		echo "Making ${htmldir}/Images"; \
-		mkdir ${htmldir}/Images; \
+	@if [ ! -d ${PUBLIC_HTML_DIR}/Images ]; then \
+		echo "Making ${PUBLIC_HTML_DIR}/Images"; \
+		mkdir ${PUBLIC_HTML_DIR}/Images; \
 	fi
-	install -m 444 -p ${PUBLICIMAGES} ${htmldir}/Images
+	install -m 444 -p ${PUBLICIMAGES} ${PUBLIC_HTML_DIR}/Images
+#
+# Clean up the mess
+#
+.PHONY: clean
+clean: ${SUB_DIRS}
+	@echo "Doing clean of ${CURDIR}"
+	${RM} -f *~
+
+.PHONY: veryclean
+veryclean: ${SUB_DIRS} clean
+	@echo "Doing veryclean of ${CURDIR}"
+	@echo "Nothing to do for veryclean in ${CURDIR}"
+
+.PHONY: distclean
+distclean: ${SUB_DIRS} veryclean
+	@echo "Doing distclean of ${CURDIR}"
+	${RM} Makefile Makefile.in
 
 #
-# end of Makefile
+# Targets you might want in general
 #
+.PHONY: install_python
+install_python:
+	$(PYTHON) setup.py install --prefix=${PYTHON_INSTALL_DIR}
 
+
+.PHONY: clean_tex
+clean_tex:
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+
+.PHONY: clean_pdf
+clean_pdf:
+	${RM} -f *.pdf
+
+.PHONY: clean_c
+clean_c:
+	${RM} -f *.o .a 
+
+.PHONY: clean_python
+clean_python:
+	${RM} -f *.pyc
+
+
+#
+# End of Makefile
+#

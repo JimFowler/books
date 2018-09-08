@@ -1,10 +1,8 @@
+dnl Begin copyright
 dnl
-dnl Configure.am
-dnl
-dnl   This configure contains the instructions for building the
-dnl   building the stuff for the book "Some Important Books in Astronomy and
-dnl   Astrophysics in the 20th Century"
-dnl
+dnl  /home/jrf/Documents/books/Books20/configure.ac
+dnl  
+dnl   Part of the Books20 Project
 dnl
 dnl   Copyright 2008 James R. Fowler
 dnl
@@ -14,8 +12,13 @@ dnl   in any form or by any means, electronic, mechanical,
 dnl   photocopying, recording, or otherwise, without prior written
 dnl   permission of the author.
 dnl
+dnl
+dnl End copyright
+dnl
+dnl   This configure contains the instructions for building the
+dnl   stuff for the Books20 Project.
 
-AC_INIT([Books], [1.0])
+AC_INIT([Books], [2.0])
 AM_INIT_AUTOMAKE()
 
 AC_PROG_INSTALL()
@@ -27,8 +30,14 @@ AC_OUTPUT(Makefile
       Docs/Notes/Makefile
       Docs/Series/Makefile
       Docs/Style/Makefile
-      Tools/TeX/Makefile
-      Tools/emacs/Makefile
       Manuscript/Makefile
+      Tools/Makefile
+      Tools/build/Makefile
+      Tools/emacs/Makefile
+      Tools/python/Makefile
+      Tools/python/bookentry/Makefile
+      Tools/python/bookentry/xml/Makefile
+      Tools/python/doc/Makefile
+      Tools/TeX/Makefile
       WebPages/Makefile
       WebPages/Images/Makefile)

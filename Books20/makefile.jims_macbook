@@ -1,0 +1,121 @@
+%% Begin copyright
+%%
+%%  /home/jrf/Documents/books/Books20/makefile.jims_macbook
+%%  
+%%   Part of the Books20 Project
+%%
+%%   Copyright 2018 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%% End copyright
+
+##
+## The machine dependent locations for file installation
+##
+## Location of files on Jim's MacBook for Jim Fowler
+##
+
+
+#MAKEFLAGS += $(if $(value VERBOSE),,--no-print-directory)
+#.SILENT:
+
+##
+## Localhost is jims_macbook
+##
+LOCAL_HOST = jim_macbook
+
+##
+## C/C++
+##
+
+#CFLAGS=                -Wall -g3 -O
+#CXXFLAGS=	       -Wall -g3 -O
+
+#
+# The basic prefix for most everything.
+# This is normally set by 'configure'
+#
+prefix ?= /Users/jrf12
+
+
+##
+## Books20 Project
+##
+
+#
+# The location of the main source directory for the
+# Books20 project.
+#
+BOOKS20_DIR ?= ${prefix}/Documents/books/Books20
+
+
+##
+## Emacs
+##
+
+#
+# The location for emacs *.el files. Other files
+# that emacs may require should be in EMACS_FILES_DIR
+#
+EMACS_ELISP_DIR = ${prefix}/Emacs
+EMACS_FILE_DIR = ${prefix}/Emacs/Files
+
+
+##
+## Python
+##
+
+#
+# Location to install python files.  Should contain
+# the directories bin, lib, and possibly etc.
+#
+PYTHON_INSTALL_DIR = ${prefix}
+
+
+##
+## TeX/LaTeX
+##
+
+#
+# Program definitions
+TEX    = pdftex
+BIBTEX = bibtex
+
+LATEX  = pdflatex
+BIBER  = biber
+
+LATEX_STYLE_DIR = ${prefix}/texmf/tex/latex/books20
+
+
+##
+## Portable Document Format
+##
+
+#
+# The location of put *.pdf files
+#
+PDF_INSTALL_DIR = ${BOOKS20_DIR}/PDF
+
+
+##
+## *.html/*.php/webpages
+##
+
+#
+# The locations for web pages and associated files
+#
+PRIVATE_HTML_DIR =
+PUBLIC_HTML_DIR =  ${prefix}/public_html
+PUBLIC_IMAGE_DIR = ${PUBLIX_HTML_DIR}/Images
+
+
+##
+## end of makefile.local
+##
+

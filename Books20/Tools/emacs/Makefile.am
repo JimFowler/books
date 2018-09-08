@@ -1,66 +1,122 @@
+# Begin copyright
 #
-# Makefile
+#  /home/jrf/Documents/books/Books20/Tools/emacs/Makefile.am
+#  
+#   Part of the Books20 Project
 #
-#
-#   Copyright 2017 James R. Fowler
+#   Copyright 2018 James R. Fowler
 #
 #   All rights reserved. No part of this publication may be
 #   reproduced, stored in a retrival system, or transmitted
 #   in any form or by any means, electronic, mechanical,
 #   photocopying, recording, or otherwise, without prior written
 #   permission of the author.
-# 
+#
+#
+# End copyright
+
+#
+#   All Makefiles should have these targets at a minimum. The targets
+#   don't need to do anything but `make` should not generate an error
+#   because the target does not exist.
 #
 
 #
-#   This makefile contains the instructions for installing the LaTeX
-#   style package for the book "Some Important Books in Astronomy and
-#   Astrophysics in the 20th Century"
+# Include local definitions
 #
-
-TEX    = pdftex
-LATEX  = pdflatex
-BIBTEX = biber
-
-# This rather assumes I am installing in a home directory
-EMACS_INSTALLDIR = ${prefix}/Emacs
-EMACS_INSTALLFILES = books20.el
-
-PDF_INSTALLDIR = ../../PDF
-PDF_INSTALLFILES = 
-
+include ${BOOKS20_ROOT}/makefile.local
 
 #
-# Basic TeX processing
+# Run make in these sub-directories
 #
-test:
-	${LATEX}
-	${BIBTEX}
-	${LATEX} 
-	${LATEX} 
+SUB_DIRS =
+
+EMACS_FILES = books20.el
+FILE_FILES = generic_copyright.tex
 
 #
-# lines: count how many lines we have written
+# Build any software and/or documents
 #
-lines:
-	wc ${EMACS_INSTALLFILES} Makefile.am
+all: build_software build_docs
 
-install: install_emacs
+.PHONY: ${SUB_DIRS}
+${SUB_DIRS} :
+	@echo "Running make ${MAKECMDGOALS} in $@"
+	@${MAKE} -C $@ ${MAKECMDGOALS}
 
+
+.PHONY: build_software
+build_software: ${SUB_DIRS}
+	@echo "Building software in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
+
+.PHONY: build_docs
+build_docs: ${SUB_DIRS}
+	@echo "Building docs in ${CURDIR}"
+	@echo "Nothing to build in ${CURDIR}"
+
+#
+# Install any software and/or documents
+#
+.PHONY: install
+install: install_software install_docs
+
+.PHONY: install_software
+install_software: ${SUB_DIRS}
+	@echo "Installing software from ${CURDIR}"
+	@echo "Nothing to install from  ${CURDIR}"
+
+.PHONY: install_docs
+install_docs: ${SUB_DIRS} install_emacs
+
+.PHONY: install_emacs
 install_emacs: 
-	install -m 444 ${EMACS_INSTALLFILES} ${EMACS_INSTALLDIR}
-	install -m 444 generic_copyright.tex ${EMACS_INSTALLDIR}/Files
-
-install_pdf: ${PDF_INSTALLFILES}
-	install -m 444 ${PDF_INSTALLFILES} ${PDF_INSTALLDIR}
-
-clean:
-	rm -f *~
-
-veryclean: clean
+	install -m 444 ${EMACS_FILES} ${EMACS_ELISP_DIR}
+	install -m 444 ${FILE_FILES} ${EMACS_FILE_DIR}
 
 
-distclean: veryclean
-	rm -f Makefile Makefile.in
+#
+# Clean up the mess
+#
+.PHONY: clean
+clean: ${SUB_DIRS}
+	@echo "Doing clean of ${CURDIR}"
+	${RM} -f *~
+
+.PHONY: veryclean
+veryclean: ${SUB_DIRS} clean
+	${RM} -f *.elc
+
+.PHONY: distclean
+distclean: ${SUB_DIRS} veryclean
+	@echo "Doing distclean of ${CURDIR}"
+	${RM} Makefile Makefile.in
+
+#
+# Targets you might want in general
+#
+.PHONY: install_python
+install_python:
+	$(PYTHON) setup.py install --prefix=${PYTHON_INSTALL_DIR}
 
 
+.PHONY: clean_tex
+clean_tex:
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+
+.PHONY: clean_pdf
+clean_pdf:
+	${RM} -f *.pdf
+
+.PHONY: clean_c
+clean_c:
+	${RM} -f *.o .a 
+
+.PHONY: clean_python
+clean_python:
+	${RM} -f *.pyc
+
+
+#
+# End of Makefile
+#
