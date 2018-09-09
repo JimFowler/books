@@ -61,7 +61,7 @@ build_docs: ${SUB_DIRS} series.pdf hb.pdf
 
 series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
 	${LATEX} -draftmode series
-	${BIBTEX} series
+	${BIBER} series
 	${LATEX} -draftmode series
 	${LATEX} series
 
