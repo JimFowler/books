@@ -1,11 +1,26 @@
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/bookxml.py
+##  
+##   Part of the Books20 Project
+##
+##   Copyright 2018 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
+
 '''Tests for XML version of bookfile.  Ultimately need to read an XML file
 into a bookfile class and write a bookfile class to an XML file.
 
  We might also consider transforming the BookFile class, defined in
 bookfile.py, into an ElementTree and work 1n 'pure' XML.
 '''
-# -*- coding: UTF-8 -*-
-# -*- mode: Python;-*-
 
 import sys
 
