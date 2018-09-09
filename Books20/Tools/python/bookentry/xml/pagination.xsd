@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+<!-- Begin copyright
+
+  /home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/pagination.xsd
+  
+   Part of the Books20 Project
+
+   Copyright 2018 James R. Fowler
+
+   All rights reserved. No part of this publication may be
+   reproduced, stored in a retrival system, or transmitted
+   in any form or by any means, electronic, mechanical,
+   photocopying, recording, or otherwise, without prior written
+   permission of the author.
+
+
+ End copyright -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Testing"></xs:element>
+  
+  <xs:element name="Pagination" type="pagination"/>
+
+  
+  <!-- Note that all string elements may contain Roman numerals
+       for the page counts. If I find another element that needs
+       Roman numeral types, it will have to be changed to xs:string
+       as well. May need to change any Appendix type to a complexType
+       and include a Preface and Main under it.
+  -->
+  <xs:complexType name="pagination">
+    <xs:all>
+      <xs:element name="Preface"     type="xs:string"  minOccurs="0" />
+      <xs:element name="Main"        type="xs:string" minOccurs="0" />
+      <xs:element name="Afterword"   type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_A"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_B"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_C"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_D"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_E"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_F"  type="xs:string" minOccurs="0" />
+      <xs:element name="Appendix_G"  type="xs:string" minOccurs="0" />
+      <xs:element name="Models"      type="xs:integer" minOccurs="0" />
+      <xs:element name="Charts"      type="xs:integer" minOccurs="0" />
+      <xs:element name="Diagrams"    type="xs:integer" minOccurs="0" />
+      <xs:element name="Frontispiece"   type="xs:integer" minOccurs="0" />
+      <xs:element name="Figures"     type="xs:integer" minOccurs="0" />
+      <xs:element name="Illustrations"  type="xs:integer" minOccurs="0" />
+      <xs:element name="Woodcuts"    type="xs:integer" minOccurs="0" />
+      <xs:element name="Maps"        type="xs:integer" minOccurs="0" />
+      <xs:element name="Nomograms"   type="xs:integer" minOccurs="0" />
+      <xs:element name="BW_Plates"   type="xs:integer" minOccurs="0" />
+      <xs:element name="Colour_Plates"  type="xs:integer" minOccurs="0" />
+      <xs:element name="Plates"      type="xs:integer" minOccurs="0" />
+      <xs:element name="Tafeln"      type="xs:integer" minOccurs="0" />
+      <xs:element name="Tabellen"    type="xs:integer" minOccurs="0" />
+    </xs:all>
+    <xs:attribute name="verified" type="xs:boolean" default="false"/>
+  </xs:complexType>
+  
+</xs:schema>
