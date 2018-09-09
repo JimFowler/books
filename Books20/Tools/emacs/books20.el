@@ -53,6 +53,8 @@
 	((string= ext "txt") (setq ext-replace ""))
 	((string= ext "xml") (setq ext-replace ""))
 	((string= ext "xsd") (setq ext-replace ""))
+	((string= ext "php") (setq ext-replace ""))
+	((string= ext "html") (setq ext-replace ""))
 	(t (setq ext-replace "%%"))
 	)
   (while (search-forward "%%" nil t) (replace-match ext-replace))
@@ -78,7 +80,8 @@
     (goto-char (point-min))
     (while (search-forward "[Date]" nil t) (replace-match (substring (current-time-string) 0 10)))
     (goto-char (point-min))
-    (if (or (string= file-ext "xml") (string= file-ext "xsd"))
+    (if (or (string= file-ext "xml") (string= file-ext "xsd")
+	    (string= file-ext "html") (string= file-ext "php"))
 	(progn
 	  (goto-char (point-min))
 	  (while (search-forward "Begin Copyright" nil t 1) (replace-match "<!-- Begin Copyright"))
