@@ -90,7 +90,7 @@ BIBTEX = bibtex
 LATEX  = pdflatex
 BIBER  = biber
 
-LATEX_STYLE_DIR = ${prefix}/texmf/tex/latex/books20
+LATEX_STYLE_DIR = ${prefix}/Library/texmf/tex/latex/books20
 
 
 ##
