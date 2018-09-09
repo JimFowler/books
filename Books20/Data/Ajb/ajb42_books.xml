@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <BookFile><Header>Entry format
+Begin copyright
+
+  /home/jrf/Documents/books/Books20/Data/Ajb/ajb42_books.xml
+  
+   Part of the Books20 Project
+
+   Copyright 2018 James R. Fowler
+
+   All rights reserved. No part of this publication may be
+   reproduced, stored in a retrival system, or transmitted
+   in any form or by any means, electronic, mechanical,
+   photocopying, recording, or otherwise, without prior written
+   permission of the author.
+
+
+End copyright
 
 Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
 
