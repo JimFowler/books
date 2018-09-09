@@ -77,14 +77,14 @@ clean: ${SUB_DIRS}
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS}
+veryclean: ${SUB_DIRS} clean
 	@echo "Doing veryclean of ${CURDIR}"
 	@echo "Nothing to do for veryclean in ${CURDIR}"
 
 .PHONY: distclean
-distclean: ${SUB_DIRS}
+distclean: ${SUB_DIRS} veryclean
 	@echo "Doing distclean of ${CURDIR}"
-	${RM} Makefile Makefile.in
+	${RM} -rf build Makefile Makefile.in
 
 #
 # Targets you might want in general

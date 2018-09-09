@@ -6,3 +6,6 @@ on the information.
 Written by James R. Fowler
 Copyright 2012
 
+Changed name bo BookEntry to ajbbooks.
+James R. Fowler
+Copyright 2014
