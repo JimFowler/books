@@ -1,9 +1,26 @@
+2018-09-09  Jim Fowler  <jrf@biblion>
+
+	* all: added standard copyright to all files that require it.
+
+	* Tools/python/doc/journals/journalxml.rst: Also fixed title
+	syntax in journalxml.rst
+
+	* Tools/python/doc/journals/classes.rst: correct some file names
+	as well as syntax in the sphinx documents.
+
+	* Tools/emacs/books20.el (replace-comments): Corrected syntax and
+	added proper comments to html, php, xml, and xsd files.  These
+	comments now use "<!--" and "-->" to start and end comments.
+
+	* Tools/python/doc/Makefile.am: Corrected problem with the
+	documetation builds and installs.
+
 2018-09-08  Jim Fowler  <jrf@biblion>
 
 	* configure.ac: got all Makefile.am targets working except
 	Tools/python/doc.  The build for sphinx is broken at the moment.
 	Checked in updated Makefile.am and other files
-	
+
 2018-09-07  Jim Fowler  <jrf@biblion>
 
 	* configure.ac: installed Makefile.am in all relevant directories.
