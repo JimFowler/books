@@ -1,3 +1,20 @@
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/journalentry.py
+##  
+##   Part of the Books20 Project
+##
+##   Copyright 2018 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
+
 '''journalEntry provides a class which can convert between a an XML
 entry and a representation in python, typically a dictionary entry of
 the form Entry.entry().'''

@@ -1,4 +1,21 @@
-﻿"""Parse a comment line from an AJB text file.  Separate
+﻿## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/AJBcomments.py
+##  
+##   Part of the Books20 Project
+##
+##   Copyright 2018 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
+
+"""Parse a comment line from an AJB text file.  Separate
 out the different sections of the comment.  The calling
 function has to decide what to do with this information
 but an example of how to get that information is included

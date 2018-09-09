@@ -1,10 +1,26 @@
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/entry.py
+##  
+##   Part of the Books20 Project
+##
+##   Copyright 2018 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
+
+
 """An Entry defines a generic class for a book entry; Usually
 entry objects will be either entriesbook listings from
 Astronomisher Jahresbericht or Astronomy and Astrophysics
 Abstracts.  Specific entry types should be sub-classed from Entry.
 """
-# -*- coding: UTF-8 -*-
-# -*- mode: Python;-*-
 
 __version__ = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
 
