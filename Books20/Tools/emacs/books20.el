@@ -1,9 +1,7 @@
+;; Begin copyright
 ;;
-;;
-;;  /home/jrf/Documents/books/Books20/Tools/TeX/books20.el
+;;  /home/jrf/Documents/books/Books20/Tools/emacs/books20.el
 ;;  
-;;   Emacs commands that I use for my Books20 project.
-;;
 ;;   Part of the Books20 Project
 ;;
 ;;   Copyright 2018 James R. Fowler
@@ -15,8 +13,12 @@
 ;;   permission of the author.
 ;;
 ;;
-;;
+;; End copyright
 
+
+;;  
+;;   Emacs commands that I use for my Books20 project.
+;;
 ;; Will this work in AquaEmacs on a Mac as well
 ;; as emacs25 or XEmacs on a Linux system?
 ;;

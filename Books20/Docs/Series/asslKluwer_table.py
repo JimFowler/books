@@ -1,3 +1,19 @@
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Docs/Series/asslKluwer_table.py
+##  
+##   Part of the Books20 Project
+##
+##   Copyright 2018 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
 '''
   asslKluwer_table.py
 
@@ -7,21 +23,13 @@
    with the book project "Some Important Books in Astronomy
    and Astrophysics in the 20th Century"
 
-   Copyright 2018 James R. Fowler
-
-   All rights reserved. No part of this publication may be
-   reproduced, stored in a retrival system, or transmitted
-   in any form or by any means, electronic, mechanical,
-   photocopying, recording, or otherwise, without prior written
-   permission of the author.
-
-
    This file creates the LaTeX longtable format
    asslKluwer_table.tex
 
    This information was gather from the back pages of
    volumes 280 and 338.
 '''
+
 from __future__ import print_function
 
 import table as tb
