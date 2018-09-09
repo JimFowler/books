@@ -105,4 +105,4 @@ On the new host
    git config --global user.email jrf12@mac.com
 
    On the new host download the repository with
-   git clone ssh://github.com/JimFowler/books
+   git clone ssh://git@github.com/JimFowler/books
