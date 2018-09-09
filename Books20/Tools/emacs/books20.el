@@ -42,6 +42,7 @@
   (interactive)
   (defvar ext-replace "")
   (cond ((string= ext "py")  (setq ext-replace "##"))
+	((string= ext "rst") (setq ext-replace ".. "))
 	((string= ext "csh") (setq ext-replace "##"))
 	((string= ext "sh")  (setq ext-replace "##"))
 	((string= ext "el")  (setq ext-replace ";;"))
