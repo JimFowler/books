@@ -81,7 +81,7 @@ install_emacs:
 .PHONY: clean
 clean: ${SUB_DIRS}
 	@echo "Doing clean of ${CURDIR}"
-	${RM} -f *~
+	${RM} -f *~ *.elc
 
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean
