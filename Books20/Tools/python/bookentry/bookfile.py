@@ -1,3 +1,6 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/bookfile.py
