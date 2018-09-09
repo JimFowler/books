@@ -84,9 +84,9 @@
 	    (string= file-ext "html") (string= file-ext "php"))
 	(progn
 	  (goto-char (point-min))
-	  (while (search-forward "Begin Copyright" nil t 1) (replace-match "<!-- Begin Copyright"))
+	  (while (search-forward "Begin copyright" nil t 1) (replace-match "<!-- Begin copyright"))
 	  (goto-char (point-min))
-	  (while (search-forward "End Copyright" nil t 1) (replace-match "End Copyright -->"))
+	  (while (search-forward "End copyright" nil t 1) (replace-match "End copyright -->"))
 	  )
       )
     (goto-char (point-max))
