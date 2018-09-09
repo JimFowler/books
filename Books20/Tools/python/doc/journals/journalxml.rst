@@ -17,7 +17,7 @@
 
 
 JournalFile XML Style File
-***********************
+**************************
 
 Some verbage about the xsd and xml format
 

@@ -37,10 +37,10 @@ by your specific class.
     :members:
     :show-inheritance:
 
-journalEntry
+journalentry
 ____________
 
-.. automodule:: journalEntry
+.. automodule:: journalentry
     :members:
     :show-inheritance:
 
@@ -83,7 +83,7 @@ like:
 
 
 
-journalFile
+journalfile
 ___________ 
 
 journalFile object provides a link between a disk file and the entry
@@ -91,7 +91,7 @@ list.  The class provides methods to read and write DiskFiles, change the
 name of the file, and get/set the file header. With repect to the
 entry list we can get/replace entries, and add a new entry.
 
-.. automodule:: journalFile
+.. automodule:: journalfile
     :members:
     :show-inheritance:
 
@@ -120,14 +120,14 @@ used to insert unicode non-ascii charactor encodings. The default table is
 
 
 
-JournalEntry
-____________
+JournalWindow
+_____________
 
-The JournalEntry  object is the main  user interface to the  entries in a
-file.   It  is  defined  in ``journalWin.py``.   The  JournalEntry  class
+The JournalWindow  object is the main  user interface to the  entries in a
+file.   It  is  defined  in ``journalwin.py``.   The  JournalEntry  class
 contains a journalFile, header entry, and symbol table objects.
 
-.. automodule:: journalWin
+.. automodule:: journalwindow
     :members:
     :show-inheritance:
 

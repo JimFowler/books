@@ -49,17 +49,20 @@ build_software:
 
 .PHONY: build_docs
 build_docs: ajbbooks journals
-	@echo "Can't build latexpdf docs in Tools/python/doc!"
 
 .PHONY: ajbbooks
 ajbbooks:
+	@echo "Building ajbbooks html documentation"
 	${MAKE} -C ajbbooks html
-#	${MAKE} -C ajbbooks latexpdf
+	@echo "Building ajbbooks html documentation"
+	${MAKE} -C ajbbooks latexpdf
 
 .PHONY: journals
 journals:
+	@echo "Building journals html documentation"
 	${MAKE} -C journals html
-#	${MAKE} -C journals latexpdf
+	@echo "Building journals pdf documentation"
+	${MAKE} -C journals latexpdf
 
 
 #
@@ -75,14 +78,11 @@ install_software:
 
 .PHONY: install_docs
 install_docs: build_docs
-	@echo "Can't install HTML docs in Tools/python/doc!"
-
-.PHONY: dummy
-dummy:
+	@echo "Installing documentation"
 	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PDF_INSTALL_DIR}
-	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PUBLIC_HTML_DIR_DIR}/ajbbooks
-	${INSTALL} -m 444 -p ./journals/_build/latex/Journals.pdf ${PDF_INSTALL_DIR}
-	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PUBLIC_HTML_DIR_DIR}
+	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PUBLIC_HTML_DIR}
+	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PDF_INSTALL_DIR}
+	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PUBLIC_HTML_DIR}
 # install HTML web pages for ajbbooks and journals
 
 
@@ -95,12 +95,12 @@ clean: ${SUB_DIRS}
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS}
+veryclean: ${SUB_DIRS} clean
 	@echo "Doing veryclean of ${CURDIR}"
-	@echo "Nothing to do for veryclean in ${CURDIR}"
+	${RM} -rf ajbbooks/_build journals/_build
 
 .PHONY: distclean
-distclean: ${SUB_DIRS}
+distclean: ${SUB_DIRS} veryclean
 	@echo "Doing distclean of ${CURDIR}"
 	${RM} Makefile Makefile.in
 
