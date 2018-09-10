@@ -54,7 +54,7 @@ build_docs: ajbbooks journals
 ajbbooks:
 	@echo "Building ajbbooks html documentation"
 	${MAKE} -C ajbbooks html
-	@echo "Building ajbbooks html documentation"
+	@echo "Building ajbbooks pdf documentation"
 	${MAKE} -C ajbbooks latexpdf
 
 .PHONY: journals
@@ -83,7 +83,10 @@ install_docs: build_docs
 	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PUBLIC_HTML_DIR}
 	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PDF_INSTALL_DIR}
 	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PUBLIC_HTML_DIR}
-# install HTML web pages for ajbbooks and journals
+	mkdir -p  ${PUBLIC_HTML_DIR}/ajbbooks
+	cp -r ./ajbbooks/_build/html/* ${PUBLIC_HTML_DIR}/ajbbooks
+	mkdir -p  ${PUBLIC_HTML_DIR}/journal
+	cp -r ./journals/_build/html/* ${PUBLIC_HTML_DIR}/journal
 
 
 #

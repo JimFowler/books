@@ -68,12 +68,10 @@ test_sty.pdf: test_sty.tex
 install: install_software install_docs
 
 .PHONY: install_software
-install_software: ${SUB_DIRS}
-	@echo "Installing software from ${CURDIR}"
-	@echo "Nothing to install from  ${CURDIR}"
+install_software: ${SUB_DIRS} build_software install_tex
 
 .PHONY: install_docs
-install_docs: ${SUB_DIRS} build_docs install_tex install_pdf
+install_docs: ${SUB_DIRS} build_docs install_pdf
 
 .PHONY: install_text
 install_tex: 

@@ -22,7 +22,7 @@
 ##
 
 
-#MAKEFLAGS += $(if $(value VERBOSE),,--no-print-directory)
+MAKEFLAGS += $(if $(value VERBOSE),,--no-print-directory)
 #.SILENT:
 
 ##

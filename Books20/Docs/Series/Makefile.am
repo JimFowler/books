@@ -91,7 +91,7 @@ install_docs: ${SUB_DIRS} build_docs install_pdf
 
 install_pdf:
 	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
-	install -m 444 -p ./Series.pdf ${PDF_INSTALL_DIR}
+	install -m 444 -p ./series.pdf ${PDF_INSTALL_DIR}
 	install -m 444 -p ./hb.pdf ${PDF_INSTALL_DIR}
 
 #
