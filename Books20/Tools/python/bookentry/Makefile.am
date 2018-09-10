@@ -124,12 +124,12 @@ clean: ${SUB_DIRS}
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean clean_python
 	@echo "Doing veryclean of ${CURDIR}"
-	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 .PHONY: distclean
 distclean: ${SUB_DIRS} veryclean
 	@echo "Doing distclean of ${CURDIR}"
-	${RM} Makefile Makefile.in
+	${RM} -f Makefile Makefile.in
+	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 #
 # Targets you might want in general
