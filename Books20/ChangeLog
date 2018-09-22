@@ -1,3 +1,23 @@
+2018-09-22  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/bookentry/jsearch.py: rename journalsearch.py to
+	jsearch.py.  This cleared up an issue on the Mac with a conflict
+	between journalSearch.py and journalsearch.py.
+
+	* INSTALL: updated checkout and installation instructions.
+
+	* COPYING: added copyright and committed COPYING.
+
+	* Tools/xml: Moved Tools/python/bookentry/xml to Tools/xml.
+	Updated .gitignore and removed validation tests when reading
+	bookfiles or journalfiles.
+
+	* Tools/python/bookentry/journalfile.py (JournalFile.read_xml_file):
+	removed read of journalfile.xsd and the Parser variable.
+
+	* Tools/python/bookentry/bookfile.py (BookFile.readFile_XML):
+	removed read of bookfile.xsd and the Parser variable.
+
 2018-09-09  Jim Fowler  <jrf@biblion>
 
 	* all: added standard copyright to all files that require it.
