@@ -29,7 +29,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = xml
+SUB_DIRS =
 
 #
 # Definitions
