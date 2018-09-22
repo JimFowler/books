@@ -17,26 +17,26 @@ various installation targets:
 
 Commands to do installation:
 
- on Biblion
-    ./bootstrap           # if changes to any Makefile.am
-    ./configure --prefix=/home/jrf --htmldir=/home/jrf/public_html
-    cd Webpages
-    make install_html
+git clone ssh://git@github.com/JimFowler/books
+#
+# edit makefile.<machine> to match your installation
+# or create a new makefile.<machine>
+#
+ln -s makefile.<machine> makefile.local
+./bootstrap && ./configure --prefix=$HOME
+make build_software
+make install_software
+make build_docs
+make install_docs
+#
+# Both 'build' and 'install' can be run from the
+#  sub-directories but it is best to run these at
+#  the top level first in order to insure that
+#  the necessary files are installed.
+#
+#
+#
 
-
- on Het
-    ./bootstrap            # if changes to any Makefile.am
-    ./configure --prefix=/home/het/jrf --htmldir=/var/www/html/jrf
-    cd Webpages
-    make install_html
-
-
-on JRF Mac
-   ./bootstrap
-   ./configure --prefix=/home/jrf --htmldir=/home/jrf/public_html
-    cd Webpages
-    make install_html
-   
 
 Generic Installation Instructions
 *************************
