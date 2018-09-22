@@ -395,7 +395,7 @@ if __name__ == "__main__":
     import sys
 
     bf = BookFile()
-    print( "%d entries found\n" % bf.readFile("/home/jrf/Documents/books/Books20/Data/Ajb/ajb58_books.txt"))
+    print( "%d entries found\n" % bf.readFile("../../../Data/Ajb/ajb58_books.txt"))
 
     print( 'The header for %s' % bf.getFileName())
     print( bf.getHeader() )
@@ -423,7 +423,7 @@ if __name__ == "__main__":
     bf.writeFile_XML('ajb58_books.xml')
     print('We can read and validate a file with the parse() function')
     try:
-        bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/bookfile.xsd')
+        bf_schema = etree.XMLSchema(file='../../xml/bookfile.xsd')
         Parser = etree.XMLParser(schema=bf_schema)
         print('The schema is well formed')
     except:

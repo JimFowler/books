@@ -202,15 +202,7 @@ class JournalFile():
 
         # read and validate the XML file
         try:
-            jf_schema = etree.XMLSchema(file=self.schema_name)
-            parser = etree.XMLParser(schema=jf_schema)
-        except etree.XMLSchemaParseError:
-            # change to message Box but we don't have Qt loaded
-            # return indicator to journalWin that schema file is unreadable?
-            print('The schema {0} is not well formed'.format(self.schema_name))
-            return 0
-        try:
-            jf_xml = etree.parse(self._file_name, parser=parser)
+            jf_xml = etree.parse(self._file_name)
         except etree.XMLSyntaxError:
             # change to message Box but we don't have Qt loaded
             # return indicator to journalWin that xml file is unreadable?
@@ -275,15 +267,15 @@ if __name__ == "__main__":
         import sys
 
         jfile = JournalFile()
-        jfile.read_xml_file('./xml/JournalFile.xml')
+        jfile.read_xml_file('../../xml/JournalFile.xml')
 
         print('The header for %s' % jfile.get_file_name())
         print(jfile.get_header())
 
-        jfile.write_xml_file('journalfile_test.xml')
+        jfile.write_xml_file('JournalFile_test.xml')
         print('We can read and validate a file with the parse() function')
         try:
-            test_schema = etree.XMLSchema(file='./xml/journalfile.xsd')
+            test_schema = etree.XMLSchema(file='../../xml/journalfile.xsd')
             test_parser = etree.XMLParser(schema=test_schema)
             print('The schema is well formed')
         except etree.XMLSchemaParseError:
@@ -291,7 +283,7 @@ if __name__ == "__main__":
             sys.exit(1)
         try:
             # etree.parse() returns an Etree rather than an Element
-            etree.parse('./xml/JournalFile_test.xml', parser=test_parser)
+            etree.parse('./JournalFile_test.xml', parser=test_parser)
             print('The xml file is well formed and valid')
         except etree.XMLSyntaxError:
             print('The xml file is not well formed or is invalid')
