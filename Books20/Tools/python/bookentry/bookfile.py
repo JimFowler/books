@@ -321,15 +321,9 @@ class BookFile():
 
         count = 0
     
-        # read and validate the XML file
+        # read the XML file
         try:
-            bf_schema = etree.XMLSchema(file='/home/jrf/Documents/books/Books20/Tools/python/bookentry/xml/bookfile.xsd')
-            Parser = etree.XMLParser(schema=bf_schema)
-        except:
-            print('The schema is not well formed or can not be found')
-            return 0
-        try:
-            bf_xml = etree.parse(self._fileName, parser=Parser)
+            bf_xml = etree.parse(self._fileName)
         except:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             traceback.print_exception(exc_type, exc_value, exc_traceback,
