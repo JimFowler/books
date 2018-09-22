@@ -249,5 +249,5 @@ My current configuration file is::
   journal_file_dir = /home/jrf/Documents/books/Books20/Data
   journal_file_name = journals
   journal_file_ext = xml
-  journal_xsd = /home/jrf/Documents/books/Books20/Tools/bookentry/xml/journalfile.xsd
+  journal_xsd = /home/jrf/Documents/books/Books20/Tools/xml/journalfile.xsd
 
