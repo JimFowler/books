@@ -101,7 +101,7 @@ LATEX_STYLE_DIR = ${prefix}/texmf/tex/latex/books20
 #
 # The location of put *.pdf files
 #
-PDF_INSTALL_DIR = ${BOOKS20_DIR}/PDF
+PDF_INSTALL_DIR = ${prefix}/PDF
 
 
 ##
