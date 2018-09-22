@@ -23,8 +23,6 @@ missing
 *.toc
 *.out
 *.run.xml
-COPYING
-Auxil/
 Books20/Makefile
 Books20/*/Makefile
 Books20/WebPages/Images/Makefile
