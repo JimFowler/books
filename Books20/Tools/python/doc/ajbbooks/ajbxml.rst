@@ -21,7 +21,7 @@ Bookfile XML Style File
 
 Some verbage about the xsd and xml format
 
-.. literalinclude:: ../../bookentry/xml/bookfile.xsd
+.. literalinclude:: ../../../xml/bookfile.xsd
    :language: xml
    :linenos:
 

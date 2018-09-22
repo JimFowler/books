@@ -188,7 +188,7 @@ ____________
 
 This is the current schema for the external file format BookFileXml.
 
-.. literalinclude:: ../../bookentry/xml/bookfile2.xsd
+.. literalinclude:: ../../../xml/bookfile.xsd
    :language: xml
    :linenos:
 
