@@ -37,7 +37,7 @@ import bookentry.ui_JournalEntry as ui_journalentry
 import bookentry.journalfile as journalfile
 import bookentry.journalmenus as menus
 import bookentry.journalentry as journalentry
-import bookentry.journalsearch as journalsearch
+import bookentry.jsearch as journalsearch
 import bookentry.symbol as symbol
 import bookentry.headerWindow as hw
 import bookentry.entryselect as es
