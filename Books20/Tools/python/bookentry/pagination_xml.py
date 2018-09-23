@@ -72,7 +72,6 @@ __TAG_TO_XML_NAME__ = {
     'p'  : 'Main',
     'pa' : 'Afterword',
     # Other unknown sections
-    'pa' : 'OtherSec_1',
     'pb' : 'OtherSec_2',
     'pc' : 'OtherSec_3',
     'pd' : 'OtherSec_4',
