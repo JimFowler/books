@@ -1,3 +1,8 @@
+2018-09-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/setup.py: change validateXML to validate_xml
+	in the scripts line. Cleaned up to meet PEP-8 standards.
+
 2018-09-22  Jim Fowler  <jrf@biblion>
 
 	* Tools/python: ran upper level programs through pylint
