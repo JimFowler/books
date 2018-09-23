@@ -1,5 +1,14 @@
 2018-09-22  Jim Fowler  <jrf@biblion>
 
+	* Tools/python: ran upper level programs through pylint
+	and edited ajbbooks, journals, ppxml, and validate_xml
+	to meet PEP-8 standard.
+
+	* Tools/python/validate_xml: changed name of validateXML
+	to meet PEP-8 standard
+
+2018-09-21  Jim Fowler  <jrf@biblion>
+
 	* Tools/python/bookentry/jsearch.py: rename journalsearch.py to
 	jsearch.py.  This cleared up an issue on the Mac with a conflict
 	between journalSearch.py and journalsearch.py.

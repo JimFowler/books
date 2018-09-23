@@ -1,0 +1,145 @@
+#! /usr/bin/env python3
+# -*- mode: Python;-*-
+#
+# Begin copyright
+#
+#  /home/jrf/Documents/books/Books20/Tools/python/validateXML
+#
+#   Part of the Books20 Project
+#
+#   Copyright 2018 James R. Fowler
+#
+#   All rights reserved. No part of this publication may be
+#   reproduced, stored in a retrival system, or transmitted
+#   in any form or by any means, electronic, mechanical,
+#   photocopying, recording, or otherwise, without prior written
+#   permission of the author.
+#
+#
+# End copyright
+#
+'''Validate a set of XML files to a given schema.'''
+
+__VERSION__ = "version v1.0.0"
+
+__USAGE__ = '''%(prog)s [options] schemafile.xsd xmlfile.xml [...]
+The return values in $? are
+
+ 100 - not a failure, the --Version option was called,
+ 101 - no schema file was given on the command line,
+ 102 - no XML files were given on the command line,
+ 103 - the schema file is not well formed,
+   0 - the schema is well formed and all xml files successfully validated,
+   1, 2, 3... 'n' of the XML files did not validate correctly.
+'''
+
+__DESCRIPTION__ = '''Validate the XML files against the given schema. The
+program may be used stand-alone and provide human readable text output
+or in may be used in a script in which case the exit value in $? may
+be checked for success or failure.
+'''
+
+import sys
+import argparse
+import traceback as tb
+
+from lxml import etree
+
+
+def get_args():
+    '''Parse the command line flags and arguments.'''
+    _parser = argparse.ArgumentParser(
+        description=__DESCRIPTION__,
+        usage=__USAGE__)
+
+    _parser.add_argument('--verbose',
+                         help='provide user readable output.',
+                         action='store_true')
+
+    _parser.add_argument('-v', '--version',
+                         help='provide version info,',
+                         action='store_true')
+
+    _parser.add_argument('schemafile', nargs="?", default="")
+    _parser.add_argument('xmlfiles', nargs=argparse.REMAINDER)
+
+    _args = _parser.parse_args()
+
+    return _args
+
+def print_v(verbose, print_str):
+    '''Verbose print. Print only if verbose is True.'''
+    if verbose:
+        print(print_str)
+
+
+#
+# Main Action
+#
+def main():
+    '''Validate *.xml files agains a XSD schema.'''
+
+    args = get_args()
+
+    if args.version:
+        print(__VERSION__)
+        sys.exit(100)
+
+    if args.schemafile:
+        print_v(args.verbose,
+                'Schema file:\n   %s\n' % (args.schemafile))
+    else:
+        print_v(args.verbose,
+                'No schema file given.')
+        sys.exit(101)
+
+    #
+    # we have a Schema file
+    #
+    try:
+        schema = etree.XMLSchema(file=args.schemafile)
+        schema_parser = etree.XMLParser(schema=schema)
+        print_v(args.verbose,
+                'The schema in the file %s is well formed' % (args.schemafile))
+    except etree.XMLSchemaParseError:
+        if args.verbose:
+            exc_type, exc_value, exc_traceback = sys.exc_info()
+            tb.print_exception(exc_type, exc_value, exc_traceback,
+                               limit=2, file=sys.stdout)
+        print_v(args.verbose,
+                'This schema is not well formed')
+        sys.exit(103)
+
+
+    #
+    # Test any XML files
+    #
+    if not args.xmlfiles:
+        print_v(args.verbose, 'No XML files given.')
+        sys.exit(102)
+    else:
+        print_v(args.verbose, '\n\nXML files:')
+        for file_name in args.xmlfiles:
+            print_v(args.verbose, "   %s\n" % (file_name))
+
+    return_count = 0
+    for file_name in args.xmlfiles:
+        try:
+            etree.parse(file_name, parser=schema_parser)
+            print_v(args.verbose,
+                    'The XML file %s is valid against the schema' % (file_name))
+        except etree.XMLSyntaxError:
+            print_v(args.verbose,
+                    '\nThe XML file %s is NOT valid against the schema' % (file_name))
+            if args.verbose:
+                exc_type, exc_value, exc_traceback = sys.exc_info()
+                tb.print_exception(exc_type, exc_value, exc_traceback,
+                                   limit=2, file=sys.stdout)
+                print('\n')
+                return_count += 1
+
+    sys.exit(return_count)
+
+
+if __name__ == '__main__':
+    main()

@@ -5,7 +5,7 @@
 # Begin copyright
 #
 #  /home/jrf/Documents/books/Books20/Tools/python/ppxml
-#  
+#
 #   Part of the Books20 Project
 #
 #   Copyright 2018 James R. Fowler
@@ -23,40 +23,39 @@
 
 import sys
 import os
-import traceback
 import argparse
 from lxml import etree
 
 def getargs():
+    '''Parse the command line'''
 
-    parser = argparse.ArgumentParser(description='Pretty print an XML file')
+    _parser = argparse.ArgumentParser(description='Pretty print an XML file')
 
-    parser.add_argument( '-v', '--version',
+    _parser.add_argument('-v', '--version',
                          help='provide version info',
                          action='version',
                          version='%(prog) s v1.0 dtd 26 July 2015')
 
-    parser.add_argument( 'filename', help='file name to pretty print')
+    _parser.add_argument('filename', help='file name to pretty print')
 
-    args = parser.parse_args()
+    _args = _parser.parse_args()
 
-    return args, parser
+    return _args, _parser
 
 # Read command line
-args, parser = getargs()
+ARGS, PARSER = getargs()
 
-fname = args.filename
+FNAME = ARGS.filename
 
 # check if we can read the file
-if not os.path.isfile(fname):
-    print('ppxml error: %s does not exist' % (fname) )
+if not os.path.isfile(FNAME):
+    print('ppxml error: %s does not exist' % (FNAME))
     sys.exit(-2)
-elif not os.access(fname, os.R_OK):
-    print('ppxml error: %s not readable' % (fname))
+elif not os.access(FNAME, os.R_OK):
+    print('ppxml error: %s not readable' % (FNAME))
     sys.exit(-1)
 
 # ok, pretty print the file to stdout
-tree = etree.parse(args.filename)
-print(etree.tostring(tree, pretty_print=True,
+TREE = etree.parse(ARGS.filename)
+print(etree.tostring(TREE, pretty_print=True,
                      method='xml', encoding='unicode'))
-
