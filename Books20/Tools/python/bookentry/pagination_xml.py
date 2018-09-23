@@ -29,6 +29,7 @@ Example 12pp+203pm+23AA+3t+34i+12P  converts to
   <Tables>3</Tables>
   <Illustrations>34</Illustrations>
   <Plates>12</Plates>
+  ...
 </Pagination>
 
 '''
@@ -47,7 +48,7 @@ from lxml import etree
 # If you make changes to this list, you must also make a change to the
 # schema in bookfile.xsd.
 #
-__TAG_TO_XML_NAME = {
+__TAG_TO_XML_NAME__ = {
     'AA' : 'Appendix_A',
     'AB' : 'Appendix_B',
     'AC' : 'Appendix_C',
@@ -70,13 +71,19 @@ __TAG_TO_XML_NAME = {
     'pp' : 'Preface',
     'p'  : 'Main',
     'pa' : 'Afterword',
+    # Other unknown sections
+    'pa' : 'OtherSec_1',
+    'pb' : 'OtherSec_2',
+    'pc' : 'OtherSec_3',
+    'pd' : 'OtherSec_4',
+    'pe' : 'OtherSec_5',
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
     't'  : 'Tafeln',
     'T'  : 'Tabellen',
 }
 
-__XML_NAME_TO_TAG = {v: k for k, v in __TAG_TO_XML_NAME.items()}
+__XML_NAME_TO_TAG__ = {v: k for k, v in __TAG_TO_XML_NAME__.items()}
 
 #
 # The regular expression searches for
@@ -84,11 +91,11 @@ __XML_NAME_TO_TAG = {v: k for k, v in __TAG_TO_XML_NAME.items()}
 # exactly one or two word character string  \w{1,2} (the tag)
 # in a pagination string.
 #
-__COUNT_TAGS_RE = re.compile(r'([0-9]+|[IVXLCDM]+)([a-zA-Z]{1,2})')
+__COUNT_TAGS_RE__ = re.compile(r'([0-9]+|[IVXLCDM]+)([a-zA-Z]{1,2})')
 
 # Indices into the regular expression result list
-__RE_EXP_COUNT = 1
-__RE_EXP_TAG = 2
+__RE_EXP_COUNT__ = 1
+__RE_EXP_TAG__ = 2
 
 ##
 ## Public Functions
@@ -113,10 +120,10 @@ def pagination_string_to_xml(pagination_string):
     # check each part of the string
     #page_counter = 0
     for p_l in parts_list:
-        p_parts = __COUNT_TAGS_RE.split(p_l.strip())
+        p_parts = __COUNT_TAGS_RE__.split(p_l.strip())
 
-        p_name = __TAG_TO_XML_NAME[p_parts[__RE_EXP_TAG]]
-        p_count = p_parts[__RE_EXP_COUNT]
+        p_name = __TAG_TO_XML_NAME__[p_parts[__RE_EXP_TAG__]]
+        p_count = p_parts[__RE_EXP_COUNT__]
 
         part_xml = etree.SubElement(pagination_xml, p_name)
         part_xml.text = str(p_count)
@@ -132,15 +139,15 @@ def xml_to_pagination_string(elem):
     if elem is None or elem.tag != 'Pagination':
         return pagination_string
 
-    not_first = False
+    first = True
     for child in elem:
         count = child.text
-        tag = __XML_NAME_TO_TAG[child.tag]
+        tag = __XML_NAME_TO_TAG__[child.tag]
 
-        if not_first:
+        if not first:
             pagination_string += '+'
         else:
-            not_first = True
+            first = False
 
         pagination_string += '{count}{tag}'.format(count=count, tag=tag)
 
@@ -154,21 +161,22 @@ def xml_to_pagination_string(elem):
 if __name__ == '__main__':
 
     OLD_STR = '12p+203p+14i+23f+522P+10c'
-    NEW_STR = '12pp+203p+40AA+32AB+14i+23f+522P+10c'
+    NEW_STR = '12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c'
     ROM_STR = '5D+XIIIpp+203p+40AA+32AB+14i+23f+522P+10c'
     BAD_STR = '12pz+203p+14i+23f+522P+10c'
 
     def testit(test_string):
         '''test the XML to/from pagination strings'''
 
+        # Test transform from string to xml
         print('Testing string "{}"'.format(test_string))
         p_elem = pagination_string_to_xml(test_string)
         print(etree.tostring(p_elem, pretty_print=True,
                              method='xml', encoding='unicode'))
 
+        # Test transform from xml to string
         p_string = xml_to_pagination_string(p_elem)
-        print('and this maps back to:')
-        print(p_string)
+        print('and this maps back to:\n', p_string)
         if p_string == test_string:
             print('which matches the test string\n')
         else:
