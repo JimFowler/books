@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/mainWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/mainWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -33,14 +33,14 @@ from PyQt5.QtWidgets import *
    
 from nameparser import HumanName
 
-import bookentry.ui_BookEntry as ui_BookEntry
-import bookentry.bookfile as bf
-import bookentry.menus as menus
-import bookentry.headerWindow as hw
-import bookentry.AJBentry as AJBentry
-import bookentry.symbol as symbol
-import bookentry.origstrWindow as origstr
-import bookentry.entryselect as es
+import aabooks.ui_BookEntry as ui_BookEntry
+import aabooks.bookfile as bf
+import aabooks.menus as menus
+import aabooks.headerWindow as hw
+import aabooks.AJBentry as AJBentry
+import aabooks.symbol as symbol
+import aabooks.origstrWindow as origstr
+import aabooks.entryselect as es
 
 
 import os
@@ -391,7 +391,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    def printEntry(self):
       """Print a postscript file of the current display."""
       pr = QPrinter()
-      pr.setOutputFileName('BookEntry.pdf')
+      pr.setOutputFileName('book.pdf')
       pr.setFullPage(True)
       pr.setPaperSize(QPrinter.Letter)
       
@@ -417,7 +417,7 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
 
    def printPrinter(self):
       pr = QPrinter()
-      pr.setOutputFileName('BookEntry.pdf')
+      pr.setOutputFileName('book.pdf')
       pr.setFullPage(True)
       pr.setPaperSize(QPrinter.Letter)
       
@@ -529,12 +529,9 @@ class BookEntry( QMainWindow, ui_BookEntry.Ui_MainWindow ):
    # Methods to deal with various display aspects
    #
    def setWinTitle( self, name ):
-      """Creates the string 'BookEntry vx.x - name' and
+      """Creates the string 'AJB Book Entry vx.x - name' and
       places it into the window title.
       """
-      #self.setWindowTitle(QApplication.translate("MainWindow", 
-      #                            "AJB Book Entry  v %s   -   %s" % (__version__, name),
-      #                            None, QApplication.UnicodeUTF8))
       self.setWindowTitle(QApplication.translate("MainWindow", 
                                   "AJB Book Entry  v %s   -   %s" % (__version__, name),
                                   None))

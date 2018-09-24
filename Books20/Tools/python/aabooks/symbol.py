@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/symbol.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/symbol.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -24,7 +24,7 @@ in his blog
 http://richgriswold.wordpress.com/2009/10/17/character-picker/
 (last accessed Mar 2013)
 
-The packaged was modified for BookEntry.
+The packaged was modified for aabooks.
 """
 # -*- mode: Python; -*-
 
@@ -36,7 +36,7 @@ except:
     from PyQt4.QtCore import *
     from PyQt4.QtGui  import *
     
-import bookentry.ajb_rc
+import aabooks.ajb_rc
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,
@@ -64,7 +64,7 @@ class SymbolForm( QDialog ):
         
         try: 
             # would like to use resource here ':/Resources/symbols.txt'
-            #file = open( './bookentry/Resources/symbols.txt', 'r' )
+            #file = open( './aabooks/Resources/symbols.txt', 'r' )
             symfile = open( file_name, 'r')
         except IOError as ex:
             print(ex)

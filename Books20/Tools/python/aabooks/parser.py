@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/parser.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/parser.py
 ##  
 ##   Part of the Books20 Project
 ##

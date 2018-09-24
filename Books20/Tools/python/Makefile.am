@@ -29,7 +29,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = bookentry doc
+SUB_DIRS = aabooks doc
 
 #
 # Build any software and/or documents
@@ -108,7 +108,7 @@ clean_c:
 
 .PHONY: clean_python
 clean_python:
-	${RM} -f *.pyc
+	${RM} -f *.pyc __pycache__
 
 
 #

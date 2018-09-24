@@ -35,7 +35,7 @@ AC_OUTPUT(Makefile
       Tools/build/Makefile
       Tools/emacs/Makefile
       Tools/python/Makefile
-      Tools/python/bookentry/Makefile
+      Tools/python/aabooks/Makefile
       Tools/python/doc/Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile

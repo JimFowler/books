@@ -1,9 +1,8 @@
 #! /usr/bin/env python3
-# -*- coding: utf-8 -*-
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/bookfile.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/bookfile.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -25,7 +24,7 @@ import traceback
 import json
 from lxml import etree
 
-import bookentry.AJBentry as AJBentry
+import aabooks.AJBentry as AJBentry
 
 __version__ = 0.1
 
@@ -218,7 +217,7 @@ class BookFile():
 
     def writeFile(self, filename=None):
         '''Select a writer function depending on the filename
-        extension. If filename is not given, we use BookEntry._fileName
+        extension. If filename is not given, we use aabooks._fileName
         instead.
 
         Returns True if the file could be written or False otherwise.'''
@@ -277,7 +276,7 @@ class BookFile():
 
     def writeFile_Text(self):
         """Write the entry list and header to a .txt disk file.
-        if filename is not given, we use BookEntry._fileName instead.
+        if filename is not given, we use Aabooks._fileName instead.
 
         Returns True if the file could be written or False otherwise."""
 
@@ -352,7 +351,7 @@ class BookFile():
 
     def writeFile_XML(self, filename=None):
         """Write the entry list and header to a .xml disk file.
-        if filename is not given, we use BookEntry._fileName instead.
+        if filename is not given, we use aabooks._fileName instead.
 
         Returns True if the file could be written or False otherwise."""
 

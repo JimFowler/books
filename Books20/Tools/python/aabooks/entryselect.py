@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/entryselect.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/entryselect.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -27,7 +27,7 @@ except:
     from PyQt4.QtCore import *
     from PyQt4.QtGui import *
 
-import bookentry.ui_EntrySelect as ui_EntrySelect
+import aabooks.ui_EntrySelect as ui_EntrySelect
 
 class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
 

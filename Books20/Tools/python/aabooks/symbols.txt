@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Tools/python/bookentry/symbols.txt
+#  /home/jrf/Documents/books/Books20/Tools/python/aabooks/symbols.txt
 #  
 #   Part of the Books20 Project
 #

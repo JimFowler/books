@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/menus.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/menus.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -16,7 +16,7 @@
 ## End copyright
 
 
-"""Create the menus for the AJB BookEntry window
+"""Create the menus for the AJB Book Entry window
 """
 try:
     from PyQt5.QtCore import *

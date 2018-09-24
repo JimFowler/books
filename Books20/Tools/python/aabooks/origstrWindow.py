@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/origstrWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/origstrWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -26,7 +26,7 @@ except:
     from PyQt4.QtCore import *
     from PyQt4.QtGui  import *
     
-import bookentry.ui_OrigStr as ui_OrigStr
+import aabooks.ui_OrigStr as ui_OrigStr
 
 class OrigStrWindow(QDialog, ui_OrigStr.Ui_origstrDialog):
     def __init__(self, str=None):

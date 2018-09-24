@@ -1,5 +1,10 @@
 2018-09-23  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks: rename bookentry to aabooks.
+	Working in branch aabooks. Update all python files in
+	aabooks. Update ajbbooks, journals, Makefile.am, setup.py,
+	and Books20/configure.ac. Tested operations and installation.
+
 	* Tools/python/bookentry/pagination_xml.py: adde p1-5 for
 	unknown sections of a book.
 

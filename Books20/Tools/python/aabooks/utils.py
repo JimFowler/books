@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/utils.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/utils.py
 ##  
 ##   Part of the Books20 Project
 ##

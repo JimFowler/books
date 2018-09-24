@@ -28,7 +28,7 @@ import argparse
 
 from PyQt5 import QtWidgets
 
-import bookentry.journalwindow as mw
+import aabooks.journalwindow as mw
 
 #
 # Parse the command line arguments

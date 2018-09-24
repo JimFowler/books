@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/journalfile.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalfile.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -20,7 +20,7 @@
 import os
 from lxml import etree
 
-import bookentry.journalentry as journalentry
+import aabooks.journalentry as journalentry
 
 __version__ = 0.1
 
@@ -228,7 +228,7 @@ class JournalFile():
 
     def write_xml_file(self, filename=None):
         """Write the entry list and header to a disk file.
-        if filename is not given, we use BookEntry._file_name instead.
+        if filename is not given, we use aabooks._file_name instead.
 
         Returns True if the file could be written or False otherwise."""
 

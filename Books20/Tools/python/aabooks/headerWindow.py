@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/headerWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/headerWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -34,7 +34,7 @@ except:
     from PyQt4.QtCore import *
     from PyQt4.QtGui  import *
 
-import bookentry.ui_HeaderEntry as ui_HeaderEntry
+import aabooks.ui_HeaderEntry as ui_HeaderEntry
 
 class HeaderWindow(QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     def __init__(self, bf=None):

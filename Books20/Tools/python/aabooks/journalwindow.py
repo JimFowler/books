@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/journalwindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalwindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -33,15 +33,15 @@ from pprint import pprint
 
 from PyQt5 import QtCore, QtWidgets
 
-import bookentry.ui_JournalEntry as ui_journalentry
-import bookentry.journalfile as journalfile
-import bookentry.journalmenus as menus
-import bookentry.journalentry as journalentry
-import bookentry.jsearch as journalsearch
-import bookentry.symbol as symbol
-import bookentry.headerWindow as hw
-import bookentry.entryselect as es
-import bookentry.search as search
+import aabooks.ui_JournalEntry as ui_journalentry
+import aabooks.journalfile as journalfile
+import aabooks.journalmenus as menus
+import aabooks.journalentry as journalentry
+import aabooks.jsearch as journalsearch
+import aabooks.symbol as symbol
+import aabooks.headerWindow as hw
+import aabooks.entryselect as es
+import aabooks.search as search
 
 
 
@@ -385,7 +385,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
     def oldprint_entry(self):
         """Print a postscript file of the current display."""
         printer = QtWidgets.QPrinter()
-        printer.setOutputFileName('BookEntry.pdf')
+        printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
         printer.setPaperSize(QtWidgets.QPrinter.Letter)
 
@@ -435,7 +435,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
     def print_printer(self):
         printer = QtWidgets.QPrinter()
-        printer.setOutputFileName('BookEntry.pdf')
+        printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
         printer.setPaperSize(QtWidgets.QPrinter.Letter)
 

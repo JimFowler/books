@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/version.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/version.py
 ##  
 ##   Part of the Books20 Project
 ##

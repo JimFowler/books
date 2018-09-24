@@ -26,7 +26,7 @@ import os
 import argparse
 from PyQt5 import QtGui, QtWidgets
 
-import bookentry.mainWindow as mw
+import aabooks.mainWindow as mw
 
 __version__ = '2.0'
 

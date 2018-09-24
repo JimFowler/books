@@ -26,13 +26,13 @@
 
 from distutils.core import setup
 
-setup(name='bookentry',
+setup(name='aabooks',
       version='1.0.0',
-      description='AJB BooksEntry tool',
+      description='Books20 Project Tools',
       author='James R. Fowler',
       author_email='jrf12@mac.com',
       url='http://het.as.utexas.edu/jrf/20thCentury.html',
       platforms=['Ubuntu 18.04 LTS'],
-      packages=['bookentry'],
+      packages=['aabooks'],
       scripts=['ajbbooks', 'journals', 'ppxml', 'validate_xml'],
-      package_data={'bookentry': ['symbols.txt']},)
+      package_data={'aabooks': ['symbols.txt']},)
