@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalfile.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalfile.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -20,7 +20,7 @@
 import os
 from lxml import etree
 
-import aabooks.journalentry as journalentry
+import aabooks.journal.journalentry as journalentry
 
 __version__ = 0.1
 

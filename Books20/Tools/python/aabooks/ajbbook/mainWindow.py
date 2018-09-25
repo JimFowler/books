@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/mainWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/mainWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -33,14 +33,14 @@ from PyQt5.QtWidgets import *
    
 from nameparser import HumanName
 
-import aabooks.ui_BookEntry as ui_BookEntry
-import aabooks.bookfile as bf
-import aabooks.menus as menus
-import aabooks.headerWindow as hw
-import aabooks.AJBentry as AJBentry
-import aabooks.symbol as symbol
-import aabooks.origstrWindow as origstr
-import aabooks.entryselect as es
+import aabooks.ajbbook.ui_BookEntry as ui_BookEntry
+import aabooks.ajbbook.bookfile as bf
+import aabooks.ajbbook.menus as menus
+import aabooks.ajbbook.origstrWindow as origstr
+import aabooks.ajbbook.AJBentry as AJBentry
+import aabooks.lib.headerWindow as hw
+import aabooks.lib.symbol as symbol
+import aabooks.lib.entryselect as es
 
 
 import os

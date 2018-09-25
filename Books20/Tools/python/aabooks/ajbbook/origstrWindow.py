@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/origstrWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/origstrWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -18,15 +18,11 @@
 """A window for viewing the original string entry
 if it exists.
 """
-try:
-    from PyQt5.QtCore import *
-    from PyQt5.QtGui  import *
-    from PyQt5.QtWidgets import *
-except:
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui  import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
     
-import aabooks.ui_OrigStr as ui_OrigStr
+import aabooks.ajbbook.ui_OrigStr as ui_OrigStr
 
 class OrigStrWindow(QDialog, ui_OrigStr.Ui_origstrDialog):
     def __init__(self, str=None):

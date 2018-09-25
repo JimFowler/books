@@ -1,6 +1,7 @@
+# -*- mode: Python; -*-
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/symbol.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/symbol.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -26,17 +27,10 @@ http://richgriswold.wordpress.com/2009/10/17/character-picker/
 
 The packaged was modified for aabooks.
 """
-# -*- mode: Python; -*-
 
-try:
-    from PyQt5.QtCore import *
-    from PyQt5.QtGui  import *
-    from PyQt5.QtWidgets import *
-except:
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui  import *
-    
-import aabooks.ajb_rc
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
 
 class MyButton( QToolButton ):
     """Create a button with a associated text string,

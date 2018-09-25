@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Tools/python/aabooks/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/Makefile.am
 #  
 #   Part of the Books20 Project
 #
@@ -29,21 +29,21 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = lib ajbbook journal
+SUB_DIRS =
 
 #
 # Definitions
 #
 PYUIC = pyuic5
 PYRCC = pyrcc5
-#PYRCC = pyrcc4 -py3
 
 #
 # Target lists
 #
-USER_INTERFACES = 
+USER_INTERFACES = ui_BookEntry.py ui_OrigStr.py 
 
-RESOURCE_FILES = 
+RESOURCE_FILES = ajb_rc.py
+
 #
 # Build any software and/or documents
 #
@@ -57,9 +57,6 @@ ${SUB_DIRS} :
 
 .PHONY: build_software
 build_software: ${SUB_DIRS} ${USER_INTERFACES} ${RESOURCE_FILES}
-	@echo "Building software in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
-
 
 
 .PHONY: build_docs
@@ -71,6 +68,18 @@ build_docs: ${SUB_DIRS}
 #
 # Convert the XML designer files to Python files
 #
+ui_BookEntry.py: designer/ui_BookEntry.ui
+	$(PYUIC) -o ui_BookEntry.py designer/ui_BookEntry.ui
+
+ui_OrigStr.py: designer/ui_OrigStr.ui
+	$(PYUIC) -o ui_OrigStr.py designer/ui_OrigStr.ui
+
+#
+# Convert the XML resource files to Python files
+#
+ajb_rc.py: Resources/ajb_rc.qrc
+	$(PYRCC) -o ajb_rc.py Resources/ajb_rc.qrc
+
 
 #
 # Install any software and/or documents
@@ -100,6 +109,7 @@ clean: ${SUB_DIRS}
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean clean_python
 	@echo "Doing veryclean of ${CURDIR}"
+	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 .PHONY: distclean
 distclean: ${SUB_DIRS} veryclean

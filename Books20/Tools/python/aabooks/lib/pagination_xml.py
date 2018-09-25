@@ -2,7 +2,7 @@
 # -*- mode: Python;-*-
 # Begin copyright
 #
-# /home/jrf/Documents/books/Books20/Tools/python/aabooks/xml/pagination_XML.py
+# /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/pagination_XML.py
 #
 # Part of the Books20 Project
 #

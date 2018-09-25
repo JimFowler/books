@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalwindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalwindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -33,15 +33,15 @@ from pprint import pprint
 
 from PyQt5 import QtCore, QtWidgets
 
-import aabooks.ui_JournalEntry as ui_journalentry
-import aabooks.journalfile as journalfile
-import aabooks.journalmenus as menus
-import aabooks.journalentry as journalentry
-import aabooks.jsearch as journalsearch
-import aabooks.symbol as symbol
-import aabooks.headerWindow as hw
-import aabooks.entryselect as es
-import aabooks.search as search
+import aabooks.journal.ui_JournalEntry as ui_journalentry
+import aabooks.journal.journalfile as journalfile
+import aabooks.journal.journalmenus as menus
+import aabooks.journal.journalentry as journalentry
+import aabooks.journal.jsearch as journalsearch
+import aabooks.lib.symbol as symbol
+import aabooks.lib.headerWindow as hw
+import aabooks.lib.entryselect as es
+import aabooks.lib.search as search
 
 
 

@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/entryselect.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/entryselect.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -19,15 +19,11 @@
 """Choose an entry from the list."""
 
 
-try:
-    from PyQt5.QtCore import *
-    from PyQt5.QtGui import *
-    from PyQt5.QtWidgets import *
-except:
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-import aabooks.ui_EntrySelect as ui_EntrySelect
+import aabooks.lib.ui_EntrySelect as ui_EntrySelect
 
 class EntrySelect(QDialog, ui_EntrySelect.Ui_ShortTitleDisplay):
 

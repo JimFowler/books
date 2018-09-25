@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/version.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/version.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -25,7 +25,7 @@ Store the version here so:
  3) we can import it into your module module
 """
 
-__version_info__ = ('8', '16', '56')
+__version_info__ = ('2', '0', '0')
 __major__ = __version_info__[0]
 __minor__ = __version_info__[1]
 __micro__ = __version_info__[2]

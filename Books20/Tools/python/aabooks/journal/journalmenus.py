@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalmenus.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalmenus.py
 ##  
 ##   Part of the Books20 Project
 ##

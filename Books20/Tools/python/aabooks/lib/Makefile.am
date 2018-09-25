@@ -29,7 +29,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = lib ajbbook journal
+SUB_DIRS =
 
 #
 # Definitions
@@ -41,9 +41,10 @@ PYRCC = pyrcc5
 #
 # Target lists
 #
-USER_INTERFACES = 
+USER_INTERFACES = ui_HeaderEntry.py ui_EntrySelect.py
 
 RESOURCE_FILES = 
+
 #
 # Build any software and/or documents
 #
@@ -56,10 +57,7 @@ ${SUB_DIRS} :
 
 
 .PHONY: build_software
-build_software: ${SUB_DIRS} ${USER_INTERFACES} ${RESOURCE_FILES}
-	@echo "Building software in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
-
+build_software: ${SUB_DIRS} ${USER_INTERFACES}
 
 
 .PHONY: build_docs
@@ -71,6 +69,11 @@ build_docs: ${SUB_DIRS}
 #
 # Convert the XML designer files to Python files
 #
+ui_HeaderEntry.py: designer/ui_HeaderEntry.ui
+	$(PYUIC) -o ui_HeaderEntry.py designer/ui_HeaderEntry.ui
+
+ui_EntrySelect.py: designer/ui_EntrySelect.ui
+	$(PYUIC) -o ui_EntrySelect.py designer/ui_EntrySelect.ui
 
 #
 # Install any software and/or documents
@@ -105,6 +108,7 @@ veryclean: ${SUB_DIRS} clean clean_python
 distclean: ${SUB_DIRS} veryclean
 	@echo "Doing distclean of ${CURDIR}"
 	${RM} -f Makefile Makefile.in
+	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 #
 # Targets you might want in general

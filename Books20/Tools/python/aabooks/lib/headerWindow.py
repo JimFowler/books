@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/headerWindow.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/headerWindow.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -26,15 +26,11 @@ All text work done through the intermediate bookfile.
 Need to explicitly save this bookfile to disk in order
 to save your changed permenantly
 """
-try:
-    from PyQt5.QtCore import *
-    from PyQt5.QtGui  import *
-    from PyQt5.QtWidgets import *
-except:
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui  import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
 
-import aabooks.ui_HeaderEntry as ui_HeaderEntry
+import aabooks.lib.ui_HeaderEntry as ui_HeaderEntry
 
 class HeaderWindow(QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     def __init__(self, bf=None):

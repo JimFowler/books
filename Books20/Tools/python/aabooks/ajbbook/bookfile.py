@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/bookfile.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/bookfile.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -24,7 +24,7 @@ import traceback
 import json
 from lxml import etree
 
-import aabooks.AJBentry as AJBentry
+import aabooks.ajbbook.AJBentry as AJBentry
 
 __version__ = 0.1
 

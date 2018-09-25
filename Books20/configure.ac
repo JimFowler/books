@@ -36,6 +36,9 @@ AC_OUTPUT(Makefile
       Tools/emacs/Makefile
       Tools/python/Makefile
       Tools/python/aabooks/Makefile
+      Tools/python/aabooks/lib/Makefile
+      Tools/python/aabooks/ajbbook/Makefile
+      Tools/python/aabooks/journal/Makefile
       Tools/python/doc/Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile

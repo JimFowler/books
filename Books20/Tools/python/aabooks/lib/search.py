@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/search.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/search.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -52,7 +52,6 @@ would look something like
 }
 
 '''
-from pprint import pprint
 
 class SearchDict(dict):
     '''SearchDict is a dictionary whose keys are sub-strings of strings

@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalsearch.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalsearch.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -27,7 +27,7 @@
 '''
 from PyQt5 import QtWidgets
 
-import aabooks.ui_JournalSearch as ui_journalSearch
+import aabooks.journal.ui_JournalSearch as ui_journalSearch
 
 class JournalSearch(QtWidgets.QDialog, ui_journalSearch.Ui_JournalSearch):
     '''The main class to create a widget and allow searchs.'''

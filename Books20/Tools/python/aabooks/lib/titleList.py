@@ -2,7 +2,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/titleList.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/titleList.py
 ##  
 ##   Part of the Books20 Project
 ##

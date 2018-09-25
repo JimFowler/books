@@ -3,7 +3,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/AJBentry.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/AJBentry.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -28,9 +28,9 @@ from nameparser import HumanName
 import re
 from lxml import etree
 
-import aabooks.entry as entry
-import aabooks.AJBcomments as comments
-import aabooks.utils as utils
+import aabooks.lib.entry as entry
+import aabooks.lib.utils as utils
+import aabooks.ajbbook.AJBcomments as comments
 
 __ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 

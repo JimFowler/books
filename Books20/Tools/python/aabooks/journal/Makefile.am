@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Tools/python/aabooks/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/python/aabook/journal/Makefile.am
 #  
 #   Part of the Books20 Project
 #
@@ -29,7 +29,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = lib ajbbook journal
+SUB_DIRS =
 
 #
 # Definitions
@@ -41,9 +41,10 @@ PYRCC = pyrcc5
 #
 # Target lists
 #
-USER_INTERFACES = 
+USER_INTERFACES = ui_JournalSearch.py ui_JournalEntry.py
 
 RESOURCE_FILES = 
+
 #
 # Build any software and/or documents
 #
@@ -56,10 +57,7 @@ ${SUB_DIRS} :
 
 
 .PHONY: build_software
-build_software: ${SUB_DIRS} ${USER_INTERFACES} ${RESOURCE_FILES}
-	@echo "Building software in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
-
+build_software: ${SUB_DIRS} ${USER_INTERFACES} 
 
 
 .PHONY: build_docs
@@ -71,6 +69,12 @@ build_docs: ${SUB_DIRS}
 #
 # Convert the XML designer files to Python files
 #
+ui_JournalSearch.py: designer/ui_JournalSearch.ui
+	$(PYUIC) -o ui_JournalSearch.py designer/ui_JournalSearch.ui
+
+ui_JournalEntry.py: designer/ui_JournalEntry.ui
+	$(PYUIC) -o ui_JournalEntry.py designer/ui_JournalEntry.ui
+
 
 #
 # Install any software and/or documents
@@ -100,6 +104,7 @@ clean: ${SUB_DIRS}
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean clean_python
 	@echo "Doing veryclean of ${CURDIR}"
+	${RM} -f ${USER_INTERFACES} ${RESOURCE_FILES}
 
 .PHONY: distclean
 distclean: ${SUB_DIRS} veryclean

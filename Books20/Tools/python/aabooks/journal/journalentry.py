@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journalentry.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalentry.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -24,7 +24,7 @@ the form Entry.entry().'''
 
 from lxml import etree
 
-import aabooks.entry as entry
+import aabooks.lib.entry as entry
 
 __version__ = 'class JournalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
 

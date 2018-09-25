@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/menus.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/menus.py
 ##  
 ##   Part of the Books20 Project
 ##
@@ -18,13 +18,9 @@
 
 """Create the menus for the AJB Book Entry window
 """
-try:
-    from PyQt5.QtCore import *
-    from PyQt5.QtGui  import *
-    from PyQt5.QtWidgets import *
-except:
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui  import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui  import *
+from PyQt5.QtWidgets import *
     
 def createAction(self, text, slot=None, shortcut=None, icon=None,
                  tip=None, checkable=False, signal='triggered'):
