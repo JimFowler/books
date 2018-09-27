@@ -24,10 +24,13 @@ types should be sub-classed from Entry.
 
 
 class Entry(dict):
-    """The generic Entry class. The methods Entry.blank_entry(),
-    Entry.is_valid(), Entry.read_text_to_entry() and
-    Entry.write_text_from_entry() need to be provided by the
-    sub-class.
+    """The generic Entry class. The methods Entry.blank_entry() and
+    Entry.is_valid() need to be provided by the sub-class if they are
+    going to be used.
+
+    Note that this base class does very little.  I am keeping it
+    around in case I need to define any operation that might want to
+    be generic to all entry types.
 
     """
     _version = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
@@ -35,10 +38,7 @@ class Entry(dict):
     def __init__(self, _entry_str=None):
 
         super(Entry, self).__init__()
-        self.blank_entry()
 
-        if _entry_str:
-            self.read_text_to_entry(_entry_str)
 
     def version(self):
         """Return the version string for this class."""
@@ -58,23 +58,13 @@ class Entry(dict):
         must be set by the sub-class."""
         raise NotImplementedError('Implement me in subclass')
 
-    def read_text_to_entry(self, entry_str):
-        """Read string and parse entry items out of it. Should return
-        a boolean indicating whether the line was actually read correctly.
-        The sub-class must provide this function."""
-        raise NotImplementedError('Implement me in subclass')
-
-    def write_text_from_entry(self):
-        """Returns a string with the entry items. This string should one
-        that could be parsed by the read method. It is the responsiblity
-        of the sub-class to implement this funtion. The sub-class must
-        provide this function."""
-        raise NotImplementedError('Implement me in subclass')
 
 if __name__ == '__main__':
 
+    e = Entry()
+        
     try:
-        Entry()
+        e.is_valid()
     except NotImplementedError:
-        print("""Entry() class fails properly with an AssertionError
-        for no blank_entry() method.""")
+        print("""Entry() class fails properly with an NotImplementedError
+        for is_valid() method.""")

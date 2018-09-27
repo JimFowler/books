@@ -78,7 +78,14 @@ class AJBentry(entry.Entry):
 
     """
 
-    def blankEntry(self):
+    
+    def __init__(self, _entry_str=None):
+
+        super(AJBentry, self).__init__()
+
+        self.blank_entry()
+
+    def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
         """
@@ -143,10 +150,10 @@ class AJBentry(entry.Entry):
         st = st + name + ', ' + self['Title'] + '\n'
         return st
 
-    def isValid(self):
+    def is_valid(self):
         """AJB entries are valid if they have a valid AJB num
         and a Title."""
-        if self.isValidAjbNum() and self['Title'] != '':
+        if self.is_validAjbNum() and self['Title'] != '':
             return True
         else:
             return False
@@ -166,7 +173,7 @@ class AJBentry(entry.Entry):
         It should be the case that write(read(ajbstr)) == ajbstr up to
         the order of the comments and that read(write(ajbent)) == ajbent."""
 
-        if not self.isValid():
+        if not self.is_valid():
             return ''
 
         entryStr = self.numStr()[4:] + ' '
@@ -355,7 +362,7 @@ class AJBentry(entry.Entry):
         else:  # not if line and r1.match(line)
             return False
 
-    def isValidAjbNum(self):
+    def is_validAjbNum(self):
         """A valid AJB number has a volume number between 1-68
         and a section number between 1-150
         and an entry number > 0"""
@@ -556,7 +563,7 @@ class AJBentry(entry.Entry):
         '''Create an XML etree element with the root tag Entry from
         the entry.'''
 
-        if not self.isValid:
+        if not self.is_valid:
             return None
 
         # Title and Index are required of any entry
@@ -968,47 +975,47 @@ if __name__ == '__main__':
       print("Entry() class fails properly with no read() method.")
       
     allfieldajb = AJBentry(allfieldsstr)
-    print('\nThe all fields ajb entry isValid() is %d and looks like:' % allfieldajb.isValid())
+    print('\nThe all fields ajb entry is_valid() is %d and looks like:' % allfieldajb.is_valid())
     pprint(allfieldajb)
 
     ajb1 = AJBentry()
     print("\najb.py version:: %s \n" % ajb1.version())
-    print('The empty ajb entry isValid() is %d and looks like:' % ajb1.isValid())
+    print('The empty ajb entry is_valid() is %d and looks like:' % ajb1.is_valid())
     pprint(ajb1)
 
     ajb2 = AJBentry(ajbstr)
     print("\najb.py version " + ajb2.version())
-    print('The good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    print('The good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
     pprint(ajb2)
 
 
     ajb2 = AJBentry(ajbstra)
-    print('\nThe good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    print('\nThe good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
     pprint(ajb2)
 
     ajb2 = AJBentry(ajbstra1)
-    print('\nThe good ajb entry isValid() is %d and looks like:' % ajb2.isValid())
+    print('\nThe good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
     pprint(ajb2)
 
     ajb3 = AJBentry(badajbstr)
-    print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
+    print('\nThe bad ajb entry is_valid() is %d and looks like:' % ajb3.is_valid())
     
     # This currently throws an error.
     #ajb3 = AJBentry(badajbstrd)
-    #print('\nThe bad ajb entry isValid() is %d and looks like:' % ajb3.isValid())
+    #print('\nThe bad ajb entry is_valid() is %d and looks like:' % ajb3.is_valid())
     #pprint(ajb3)
 
     ajb4 = AJBentry(badtitlestr)
-    print('\nThe bad title ajb entry isValid() is %d and looks like:' % ajb4.isValid())
+    print('\nThe bad title ajb entry is_valid() is %d and looks like:' % ajb4.is_valid())
     pprint(ajb4)
 
     authorajb = AJBentry(authorstr)
-    print('\nThe author ajb entry isValid() is %d and looks like:' % authorajb.isValid())
+    print('\nThe author ajb entry is_valid() is %d and looks like:' % authorajb.is_valid())
     pprint(authorajb)
     print(authorajb.shortTitle())
 
     editorajb = AJBentry(editorstr)
-    print('\nThe editor ajb entry isValid() is %d and looks like:' % editorajb.isValid())
+    print('\nThe editor ajb entry is_valid() is %d and looks like:' % editorajb.is_valid())
     pprint(editorajb)
     print(editorajb.shortTitle())
 

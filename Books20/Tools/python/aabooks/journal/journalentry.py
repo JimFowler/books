@@ -37,10 +37,13 @@ class JournalEntry(entry.Entry):
     The JournalEntry XML definition can be found in journalfile.xsd
     """
 
-    def blankEntry(self):
-        """Hack until I can rewrite entry.py and AJBentry.py"""
+    def __init__(self, _entry_str=None):
+
+        super(JournalEntry, self).__init__()
+
         self.blank_entry()
 
+        
     def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
