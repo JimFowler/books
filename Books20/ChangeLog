@@ -1,3 +1,7 @@
+2018-09-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/versions: Tagged current HEAD as 'v2.1'
+
 2018-09-24  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks: created directories ajbbook, journal, and

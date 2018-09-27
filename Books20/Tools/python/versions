@@ -18,6 +18,8 @@ Version of ajbbooks (also version tags for the entire repository)
 
 2016-12-31 13:41:28 # git tag -a v2.0 -m "version 2.0 with Xml"                   df01ee9630d8df3f3874e6f8ac63c5c3e78ce1bb
 
+2018-09-25 18:47:01 # git tag -a v2.1 -m "Split python code into lib, ajbbook, and journal"   21e1854d39b81bc6c6eb9b4862fa830d1d25fd14
+
 
 git push origin --tags
 git push github --tags
