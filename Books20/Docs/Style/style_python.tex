@@ -99,8 +99,16 @@ The following flags shall be used if needed in the program.
 Documentation detailing the specific of a python program shall be
 written in Sphinx.
 
+
+\section{Python Style for \ProjectName}
+
 Use PEP-8  (\url{https://www.python.org/dev/peps/pep-0008/}) as a
 style standard for all Python programs. Use \texttt{pylint} to test
-code files againts PEP-8. 
+code files againts PEP-8.
 
-
+\begin{itemize}
+  \item Function names should be lower-case with underscores
+    separating words in accordance wit PEP-8.
+  \item Global variables shall be upper-case with two leading
+    underscores.
+\end{itemize}

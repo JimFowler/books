@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/entry.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -15,64 +15,66 @@
 ##
 ## End copyright
 
+"""An Entry defines a generic class for a book or journal entry;
+Usually entry objects will be either book listings from Astronomisher
+Jahresbericht or Astronomy and Astrophysics Abstracts.  Specific entry
+types should be sub-classed from Entry.
 
-"""An Entry defines a generic class for a book entry; Usually
-entry objects will be either entriesbook listings from
-Astronomisher Jahresbericht or Astronomy and Astrophysics
-Abstracts.  Specific entry types should be sub-classed from Entry.
 """
 
-__version__ = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
 
 class Entry(dict):
-    """The generic Entry class. Methods Entry.extract() and Entry.str()
-    need to be provided by the sub-class."""
+    """The generic Entry class. The methods Entry.blank_entry(),
+    Entry.is_valid(), Entry.read_text_to_entry() and
+    Entry.write_text_from_entry() need to be provided by the
+    sub-class.
 
-    def __init__(self, _entrystr=None):
+    """
+    _version = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
 
-        self.blankEntry()
+    def __init__(self, _entry_str=None):
 
-        if _entrystr :
-            self.read_Text_to_Entry(_entrystr)
+        super(Entry, self).__init__()
+        self.blank_entry()
+
+        if _entry_str:
+            self.read_text_to_entry(_entry_str)
 
     def version(self):
-        """Return the version string of the Entry class."""
-        return str(__version__)
-
-
+        """Return the version string for this class."""
+        return str(self._version)
     #
     # Functions to be provided by the sub-class
     #
-    def blankEntry(self):
+    def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields. The sub-class
         must provide this function.
         """
-        assert 0, 'Entry.blankEntry() needs to be defined'
+        raise NotImplementedError('Implement me in subclass')
 
-
-    def isValid(self):
+    def is_valid(self):
         """Return a boolean based on some criteria. The criteria
         must be set by the sub-class."""
-        assert 0, 'Entry.isValid() needs to be defined'
+        raise NotImplementedError('Implement me in subclass')
 
-    def read_Text_to_Entry(self, line):
+    def read_text_to_entry(self, entry_str):
         """Read string and parse entry items out of it. Should return
         a boolean indicating whether the line was actually read correctly.
         The sub-class must provide this function."""
-        assert 0, 'Entry.read() method required'
+        raise NotImplementedError('Implement me in subclass')
 
-    def write_Text_from_Entry(self):
-        """Returns a string with the  entry items. This string should one
+    def write_text_from_entry(self):
+        """Returns a string with the entry items. This string should one
         that could be parsed by the read method. It is the responsiblity
-        of the sub-class to implement this funtion. The sub-class must 
+        of the sub-class to implement this funtion. The sub-class must
         provide this function."""
-        assert 0, 'Entry.write() method required'
-
+        raise NotImplementedError('Implement me in subclass')
 
 if __name__ == '__main__':
 
     try:
-        badentry = Entry(ajbstr)
-    except:
-        print("Entry() class fails properly with no read() method.")
+        Entry()
+    except NotImplementedError:
+        print("""Entry() class fails properly with an AssertionError
+        for no blank_entry() method.""")
