@@ -20,8 +20,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../..'))
-sys.path.insert(0, os.path.abspath('../../bookentry'))
-sys.path.insert(0, os.path.abspath('../../bookentry/xml'))
+sys.path.insert(0, os.path.abspath('../../aabooks/ajbbook'))
 
 # -- General configuration -----------------------------------------------------
 
