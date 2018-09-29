@@ -31,7 +31,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-BUILT_TABLE_FILES = asslKluwer_table.tex
+BUILT_TABLE_FILES = asslKluwerTable.tex
 TABLE_FILES = 
 SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
 	uaspacescience.tex asslKluwer.tex
@@ -71,8 +71,8 @@ hb.pdf: hb.tex handbuch.tex
 	${LATEX} -draftmode hb
 	${LATEX} hb
 
-asslKluwer_table.tex: asslKluwer_table.py
-	python asslKluwer_table.py > asslKluwer_table.tex
+asslKluwerTable.tex: assl_kluwer_table.py
+	python assl_kluwer_table.py > asslKluwerTable.tex
 
 
 #

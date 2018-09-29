@@ -3,7 +3,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Docs/Series/table.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -17,11 +17,11 @@
 ##
 ## End copyright
 '''
- Definition for generic table printing
+ Definitions for generic table printing
  function using the LaTeX style longtable
 '''
 
-from __future__ import print_function
+#from __future__ import print_function
 
 def protect_str(raw_str):
     r'''Make a TeX string with \ and {} safe for
@@ -52,9 +52,12 @@ def print_table_preamble(tbl_preamble):
     '''Print the preamble strings before the start of the
     longtable environment
     '''
-    raw_preamble = r'''\setlength\LTleft{0pt}'''
-    #\setlength\LTright{0pt}'''
-    safe_preamble = protect_str(raw_preamble)
+    if tbl_preamble:
+        safe_preamble = protect_str(tbl_preamble)
+    else:
+        raw_preamble = r'''\setlength\LTleft{0pt}'''
+        #\setlength\LTright{0pt}'''
+        safe_preamble = protect_str(raw_preamble)
     print(safe_preamble)
 
 def print_table_start(tbl_format):

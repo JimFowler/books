@@ -3,8 +3,8 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Docs/Series/asslKluwer_table.py
-##  
+##  /home/jrf/Documents/books/Books20/Docs/Series/assl_kluwer_table.py
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -18,7 +18,7 @@
 ##
 ## End copyright
 '''
-  asslKluwer_table.py
+  assl_kluwer_table.py
 
    Table listing of the book series Astrophysics and Space Science
    Library published by Kluwer Academic 1965-1999 and by
@@ -27,19 +27,17 @@
    and Astrophysics in the 20th Century"
 
    This file creates the LaTeX longtable format
-   asslKluwer_table.tex
+   asslKluwerTable.tex
 
    This information was gather from the back pages of
    volumes 280 and 338.
 '''
 
-from __future__ import print_function
-
 import table as tb
 
-tbl_comment = '''%%
+TBL_COMMENT = '''%%
 %%
-%% asslKluwer_table.tex
+%% asslKluwerTable.tex
 %%
 %%   Table listing of the book series Astrophysics and Space Science
 %%   Library published by Kluwer Academic 1965-1999 and by
@@ -49,7 +47,7 @@ tbl_comment = '''%%
 %%
 '''
 
-tbl_copyright = r'''%%   Copyright 2018 James R. Fowler
+TBL_COPYRIGHT = r'''%%   Copyright 2018 James R. Fowler
 %%
 %%   All rights reserved. No part of this publication may be
 %%   reproduced, stored in a retrival system, or transmitted
@@ -61,15 +59,16 @@ tbl_copyright = r'''%%   Copyright 2018 James R. Fowler
 %%
 '''
 
-tbl_caption = r'\bf Kluwer \bt{Astrophysics and Space Science Library}'
-tbl_format = r'[p]{l l l l}'
-tbl_label = r'assl-kluwer:1'
-tbl_heading = r'Vol & Title & Author/Editor(s) & Date'
-continue_label = r'Continuation of \bt{Astrophysics and Space Science Library}'
-tbl_footer = r''
-continue_footer = r''
+TBL_CAPTION = r'\bf Kluwer/Springer \bt{Astrophysics and Space Science Library}'
+TBL_FORMAT = r'[p]{l l l l}'
+TBL_LABEL = r'assl-kluwer:1'
+TBL_HEADING = r'Vol & Title & Author/Editor(s) & Date'
+CONTINUE_LABEL = r'Continuation of \bt{Astrophysics and Space Science Library}'
+TBL_PREAMBLE = ''
+TBL_FOOTER = r''
+CONTINUE_FOOTER = r''
 
-assl_book_list = [
+ASSL_BOOK_LIST = [
     #( volnum, [title_list], 'copyright',
     # [authors/editors list],
     #'E|A', 'ISBN' )
@@ -91,7 +90,7 @@ assl_book_list = [
 
     (219, ['The Interstellar Medium in Galaxies'], '1997-10',
      ['J. M. van der Hulst'],
-     'E',  '0-7923-4676-9'),
+     'E', '0-7923-4676-9'),
 
     (220, ['The Three Galileos:',
            'The Man, The Spacecraft,',
@@ -146,7 +145,7 @@ assl_book_list = [
     (230, ['The Impact of Near Infrared',
            'Sky Surveys on Galactic and',
            'Extragalactic Astronomy'], '1998-06',
-      ['N. Epchtein'],
+     ['N. Epchtein'],
      'E', '0-7923-5025-1'),
 
     (231, ['The Evolving Universe:',
@@ -436,7 +435,7 @@ assl_book_list = [
            'Magnetohydrodynamics'], '2003-08',
      ['Marcel Goossens'],
      'A', '1-4020-1429-5'),
-    
+
     (295, ['Itegrable Problems of Celestial',
            'Mechanics in Spaces of Constant',
            'Curvature'], '2003-10',
@@ -489,7 +488,7 @@ assl_book_list = [
       'J. Blank', 'J. R. Brucato', 'L. Colangeli', 'S. Derenne',
       'A. Dutrey', 'D. Despois', 'A. Lazcano', 'F. Robert'],
      'E', '1-40202304-9'),
-    
+
     (306, ['Polytropes --- Applications in',
            'Astrophysics and Related Fields'], '2004-09',
      ['G. P. Horedt'],
@@ -569,7 +568,7 @@ assl_book_list = [
            'in Plasmas'], '2004-12',
      ['A. S. Shrama', 'P. K. Kaw'],
      'E', '1-4020-3108-4'),
-    
+
     (322, ['Light Pollution Handbook'], '2004-11',
      ['K. Narisada', 'D. Schreuder'],
      'A', '1-4020-2665-X'),
@@ -586,8 +585,8 @@ assl_book_list = [
 
     (325, ['Kristian Birkeland ---',
            'The First Space Scientist'], '2005-04',
-    ['A. Egeland', 'W. J. Burke'],
-    'A', '1-4020-3293-5'),
+     ['A. Egeland', 'W. J. Burke'],
+     'A', '1-4020-3293-5'),
 
     (326, [], None,
      [],
@@ -659,15 +658,16 @@ assl_book_list = [
 
 ]
 
-
 def assl_print_books(book_list):
+    '''Print the book list in assl_table in long table format.'''
+
     for volnum, title_list, year, author_list, ae_flag, isbn in book_list:
         len_title = len(title_list)
         len_author = len(author_list)
         max_loops = max(len_title, len_author, 1)
 
         raw_str = r''
-        
+
         # Do first line
         for index in range(1, max_loops+1):
             if volnum is not None:
@@ -682,7 +682,11 @@ def assl_print_books(book_list):
                 raw_str += r''' & '''
 
             if len_author >= index:
-                raw_str += r'''{} & '''.format(author_list[index-1])
+                raw_str += r'''{} '''.format(author_list[index-1])
+                if ae_flag == 'E' and index == 1:
+                    raw_str += r'''eds. & '''
+                else:
+                    raw_str += r'''& '''
             else:
                 raw_str += r''' & '''
 
@@ -690,33 +694,35 @@ def assl_print_books(book_list):
                 raw_str += r'''{}'''.format(year)
                 year = None
 
+            if isbn is not None:
+                isbn = None
+
+
             if index == max_loops:
                 # at the end of a book allow a break and add spacing
                 raw_str += r''' \\[5pt]'''
             else:
                 raw_str += r''' \\*'''
-                
+
             raw_str += '''
 '''
         # Clean up for TeX and print() statement
-        raw_str2 = raw_str.replace( r'. ', r'.\ ')
-        safe_str = tb.protect_str(raw_str2)
+        raw_str = raw_str.replace(r'. ', r'.\ ')
+        safe_str = tb.protect_str(raw_str)
         # if more title and/or more authors
         print(safe_str)
-    return
 
 if __name__ == '__main__':
 
-    tb.print_table_comment(tbl_comment)
-    tb.print_table_copyright(tbl_copyright)
-    tb.print_table_preamble('')
-    tb.print_table_start(tbl_format)
+    tb.print_table_comment(TBL_COMMENT)
+    tb.print_table_copyright(TBL_COPYRIGHT)
+    tb.print_table_preamble(TBL_PREAMBLE)
+    tb.print_table_start(TBL_FORMAT)
 
-    tb.print_table_caption(tbl_caption)
-    tb.print_table_label(tbl_label)
-    tb.print_table_heading(4, tbl_heading, continue_label)
-    tb.print_table_footer(tbl_footer, continue_footer)
+    tb.print_table_caption(TBL_CAPTION)
+    tb.print_table_label(TBL_LABEL)
+    tb.print_table_heading(4, TBL_HEADING, CONTINUE_LABEL)
+    tb.print_table_footer(TBL_FOOTER, CONTINUE_FOOTER)
 
-    assl_print_books(assl_book_list)
+    assl_print_books(ASSL_BOOK_LIST)
     tb.print_table_end()
-
