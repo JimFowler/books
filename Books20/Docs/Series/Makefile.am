@@ -33,7 +33,8 @@ SUB_DIRS =
 
 BUILT_TABLE_FILES = asslKluwerTable.tex
 TABLE_FILES = 
-SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
+SERIES_TEX_FILES = series.tex intro.tex other.tex \
+	HarvardBooksAstronomy.tex uchicago.tex \
 	uaspacescience.tex asslKluwer.tex
 
 BIB_FILES = 
