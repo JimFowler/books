@@ -36,8 +36,6 @@ TABLE_FILES =
 SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
 	uaspacescience.tex asslKluwer.tex
 
-HANDBUCH_TEX_FILES = hb.tex handbuch.tex
-
 BIB_FILES = 
 #
 # Build any software and/or documents
@@ -56,7 +54,7 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} series.pdf hb.pdf
+build_docs: ${SUB_DIRS} series.pdf
 
 
 series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
@@ -64,12 +62,6 @@ series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
 	${BIBER} series
 	${LATEX} -draftmode series
 	${LATEX} series
-
-hb.pdf: hb.tex handbuch.tex
-	${LATEX} -draftmode hb
-	${BIBER} hb
-	${LATEX} -draftmode hb
-	${LATEX} hb
 
 asslKluwerTable.tex: assl_kluwer_table.py
 	python assl_kluwer_table.py > asslKluwerTable.tex
@@ -92,7 +84,6 @@ install_docs: ${SUB_DIRS} build_docs install_pdf
 install_pdf:
 	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
 	install -m 444 -p ./series.pdf ${PDF_INSTALL_DIR}
-	install -m 444 -p ./hb.pdf ${PDF_INSTALL_DIR}
 
 #
 # Other useful stuff
@@ -102,7 +93,7 @@ install_pdf:
 # lines: count how many lines we have written
 #
 lines:
-	wc ${SERIES_TEX_FILES} ${HANDBUCH_TEX_FILES} ${BIB_FILES} Makefile
+	wc ${SERIES_TEX_FILES} ${BIB_FILES} Makefile
 
 
 #
