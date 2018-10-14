@@ -70,9 +70,9 @@ TBL_FOOTER = r''
 CONTINUE_FOOTER = r''
 
 ASSL_BOOK_LIST = [
-    #( volnum, [title_list], 'copyright',
+    #(volnum, [title_list], 'copyright',
     # [authors/editors list],
-    #'E|A', 'ISBN' ),
+    #'E|A', 'ISBN'),
     (1, ['The Solar Spectrum:', 'Proceedings of the Symposium held at',
          'the University of Utrecht 26–31', 'August 1963'], '1965', 
      ['C. De Jager'],
@@ -120,7 +120,7 @@ ASSL_BOOK_LIST = [
 
     (9, ['Electromagnetic Radiation in Space:',
          'Proceedings of the Third ESRO Summer',
-         'School in Space Physics, Help in',
+         'School in Space Physics, Held in',
          'Alpbach, Austria, from 19 July to 13', 'August, 1965'], '1967', 
      ['J. G. Emming'],
      'E', None),
@@ -135,7 +135,7 @@ ASSL_BOOK_LIST = [
      'A', None),
 
     (12, ['Meteorite Research:', 'Proceedings of a Symposium on',
-          'Meteorite Research Help in Vienna,',
+          'Meteorite Research Held in Vienna,',
           'Austria, 7–13 August 1968'], '1969', 
      ['Peter M. Millman'],
      'E', None),
@@ -162,9 +162,10 @@ ASSL_BOOK_LIST = [
      ['S. Fred Singer'],
      'E', None),
 
-    (17, ['Particles and Fields in the', 'Magnetosphere Proceedings of a',
-          'Symposium Organized by the Summer',
-          'Advanced Study Institute, Help at',
+    (17, ['Particles and Fields in the Magnetosphere',
+          'Proceedings of a Symposium',
+          'Organized by the Summer',
+          'Advanced Study Institute, Held at',
           'the University of California, Santa',
           'Barbara, California, August 4–15,', '1969'], '1970', 
      ['B. M. McCormac'],
@@ -183,8 +184,8 @@ ASSL_BOOK_LIST = [
 
     (20, ['Earthquake Displacement Fields and', 'the Rotation of the Earth:',
           'A NATO Advanced Study Institute', 'Conference Organized by the',
-          'Department of Geophysics, University',
-          'of Western Ontario, Canada, 22 June', '– 28 June 1969'], '1970', 
+          'Department of Geophysics,',
+          'University of Western Ontario, Canada',  '22 June – 28 June 1969'], '1970', 
      ['L. Mansinha', 'D. E. Smylie', 'A. E. Beck'],
      'E', None),
 
@@ -193,7 +194,7 @@ ASSL_BOOK_LIST = [
      'A', None),
 
     (22, ['Structure and Evolution of the', 'Galaxy:',
-          'Proceedings of the NATO Advanced', 'Study Institute Help in Athens,',
+          'Proceedings of the NATO Advanced', 'Study Institute Held in Athens,',
           'September 8–19, 1969'], '1971', 
      ['L. N. Mavridis'],
      'E', None),
@@ -233,14 +234,14 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (30, ['Infrared Detection Techniques for', 'Space Research:',
-          'Proceedings of the Fifty Eslab/Esrin',
+          'Proceedings of the Fifth Eslab/Esrin',
           'Symposium Held in Noordwijk, The',
           'Netherlands, June 8–11, 1971'], '1972', 
      ['V. Manno', 'J. Ring'],
      'E', None),
 
     (31, ['Gravitational N-Body Problem:', 'Proceedings of the IAU Colloquium',
-          'No. 10 Held in Cambidge, England', 'August 12–15, 1970'], '1972', 
+          'No. 10 Held in Cambridge, England', 'August 12–15, 1970'], '1972', 
      ['Myron Lecar'],
      'E', None),
 
@@ -295,7 +296,7 @@ ASSL_BOOK_LIST = [
 
     (40, ['Cosmochemistry:', 'Proceedings of the Symposium on',
           'Cosmochemistry, Held at the', 'Smithsonian Astrophysical',
-          'Observatory, Cambridge, Mass, August', '14–16, 1972'], '1973', 
+          'Observatory, Cambridge, Mass.,', ' August 14–16, 1972'], '1973', 
      ['A. G. W. Cameron'],
      'E', None),
 
@@ -344,13 +345,13 @@ ASSL_BOOK_LIST = [
      ['Z. Švestka', 'P. Simon'],
      'E', None),
 
-    (50, ['Mapping of the Moon:', ' Past and Present'], '1974', 
+    (50, ['Mapping of the Moon: Past and Present'], '1974', 
      ['Zdeněk Kopal', 'Robert W. Carder'],
      'A', None),
 
-    (51, ['Atmospheres of Earth and the', 'Planets:',
+    (51, ['Atmospheres of Earth and the Planets:',
           'Proceedings of the Summer Advanced', 'Study Institute, Held at the',
-          'University of Liège, Belgium, July', '29 – Ausgust 9, 1974'], '1975', 
+          'University of Liège, Belgium,', 'July 29 – Ausgust 9, 1974'], '1975', 
      ['B. M. McCormac'],
      'E', None),
 
@@ -371,7 +372,7 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (55, ['Solid State Astrophysics:', 'Proceedings of a Symposium Held at',
-          'the University College, Cardiff,', 'Wales, 9–12 July 1974'], '1976', 
+          'the University College, Cardiff, Wales', '9–12 July 1974'], '1976', 
      ['N. C. Wickramasinghe', 'D. J. Morgan'],
      'E', None),
 
@@ -411,13 +412,13 @@ ASSL_BOOK_LIST = [
 
     (62, ['Scientific Applications of Lunar', 'Laser Ranging:',
           'Proceedings of a Symposium Held in',
-          'Austin, Tex., U.S.A., 8–-10 June,', '1976'], '1977', 
+          'Austin, Tex., U.S.A.,', '8–-10 June,', '1976'], '1977', 
      ['J. Derral Mulholland', 'Creighton A. Burk', 'Eric C. Silverberg'],
      'E', None),
 
     (63, ['Infrared and Submillimeter', 'Astronomy:',
           'Proceedings of a Symposium Held in',
-          'Philadephia, Penn, U.S.A., Jun 8–10,', '1976'], '1977', 
+          'Philadephia, Penn., U.S.A.,', 'June 8–10, 1976'], '1977', 
      ['Giovanni G. Fazio'],
      'E', None),
 
@@ -486,27 +487,38 @@ ASSL_BOOK_LIST = [
      ['Peter J. Palmadesso', 'Konstantinos Papadopoulos'],
      'E', None),
 
-    (75, ['Stars and Star Systems:', 'Proceedings of the Fourth European', 'Regional Meeting in Astronomy Held', 'in Uppsala, Sweden, 7–12 August,', '1978'], '1979', 
+    (75, ['Stars and Star Systems:', 'Proceedings of the Fourth European',
+          'Regional Meeting in Astronomy Held', 'in Uppsala, Sweden,',
+          '7–12 August, 1978'], '1979', 
      ['Bengt E. Westerlund'],
      'E', None),
 
-    (76, ['Image Formation from Coherence', 'Functions in Astronomy:', 'Proceedings of the IAU Colloquium', 'No.49 on the Formation of Images', 'from Spatial Coherence Functions in', 'Astronomy, Held in Groningen, The', 'Netherlands, 10–12 August 1978'], '1979', 
+    (76, ['Image Formation from Coherence', 'Functions in Astronomy:',
+          'Proceedings of the IAU Colloquium', 'No.49 on the Formation of Images',
+          'from Spatial Coherence Functions in', 'Astronomy, Held in Groningen,',
+          'The Netherlands, 10–12 August 1978'], '1979', 
      ['Cornelis Van Schooneveld'],
      'E', None),
 
-    (77, ['Language of the Stars:', 'A Discourse on the Theory of the', 'Light Changes of Eclipsing Variables'], '1979', 
+    (77, ['Language of the Stars:', 'A Discourse on the Theory of the',
+          'Light Changes of Eclipsing Variables'], '1979', 
      ['Zdeněk Kopal'],
      'A', None),
 
-    (78, ['Dynamics of the Magnetosphere:', 'Proceedings of the A.G.U. Chapman', 'Conference ‘Magnetospheric Substorms', 'and Related Plasma Processes’ held', 'at Los Alamos Scientific Laboratory,', 'Los Alamos, N.M, U.S.A. October', '9–13, 1978'], '1980', 
+    (78, ['Dynamics of the Magnetosphere:', 'Proceedings of the A.G.U. Chapman',
+          'Conference ‘Magnetospheric Substorms', 'and Related Plasma Processes’ held',
+          'at Los Alamos Scientific Laboratory,', 'Los Alamos, N.M, U.S.A.', 'October 9–13, 1978'], '1980', 
      ['S.-I. Akasofu'],
      'E', None),
 
-    (79, ['Gravity, Particles, and', 'Astrophysics:', 'A Review of Modern Theories of', 'Gravity and G-variabilty, and their', 'Relation to Elementary Particle', 'Physics and Astrophysics'], '1980', 
+    (79, ['Gravity, Particles, and', 'Astrophysics:', 'A Review of Modern Theories of',
+          'Gravity and G-variabilty, and their', 'Relation to Elementary Particle',
+          'Physics and Astrophysics'], '1980', 
      ['Paul S. Wesson'],
      'E', None),
 
-    (80, ['Radio Recombination Lines:', 'Proceedings of a Workshop Held in', 'Ottawa, Ontario, Canada, August', '24–25, 1979'], '1980', 
+    (80, ['Radio Recombination Lines:', 'Proceedings of a Workshop Held in',
+          'Ottawa, Ontario, Canada,', 'August 24–25, 1979'], '1980', 
      ['P. A. Shaver'],
      'E', None),
 
@@ -549,7 +561,7 @@ ASSL_BOOK_LIST = [
           'Astrophysics Division of the', 'American Astronomical Society',
           'Meeting on X-Ray Astronomy held at',
           'the Harvard/Smithsonian Center for', 'Astrophysics, Cambridge,',
-          'Massachusetts, U.S.A., January', '28–30, 1980'], '1981', 
+          'Massachusetts, U.S.A.,', 'January 28–30, 1980'], '1981', 
      ['Riccardo Giacconi'],
      'E', None),
 
@@ -564,7 +576,7 @@ ASSL_BOOK_LIST = [
 
     (89, ['Effects of Mass Loss on Stellar', 'Evolution:',
           'IAU Colloquium no. 59 Held in',
-          'Miramare, Trieste, Italy, September', '15–19, 1980'], '1981', 
+          'Miramare, Trieste, Italy,', 'September 15–19, 1980'], '1981', 
      ['C. Chiosi', 'R. Stalio'],
      'E', None),
 
@@ -586,7 +598,7 @@ ASSL_BOOK_LIST = [
     (93, ['Regions of Recent Star Formation:', 'Proceedings of the Symposium on',
           '“Neutral Clouds near HII Regions ---',
           'Dynamics and Photochemistry”, Held',
-          'in Penticton, British Columbia, June', '24–26, 1981'], '1982', 
+          'in Penticton, British Columbia,', 'June 24–26, 1981'], '1982', 
      ['R. S. Roger', 'Peter E. Dewdney'],
      'E', None),
 
@@ -595,13 +607,14 @@ ASSL_BOOK_LIST = [
      ['O. Calame'],
      'E', None),
 
-    (95, ['The Nature of Symbiotic Stars:', 'Proceedings of IAU Colloquium No. 70', 'Held at the Observatoire De Haute', 'Provence, 26–28 August 1981'], '1982', 
+    (95, ['The Nature of Symbiotic Stars:', 'Proceedings of IAU Colloquium No. 70',
+          'Held at the Observatoire De Haute', 'Provence, 26–28 August 1981'], '1982', 
      ['Michael Friedjung', 'Roberto Viotti'],
      'E', None),
 
     (96, ['Sun and Planetary System:', 'Proceedings of the Sixth European',
           'Regional Meeting in Astronomy, Held',
-          'in Dubrovnik, Yugoslavia, 19–23', 'October 1981'], '1982', 
+          'in Dubrovnik, Yugoslavia,', '19--23 October 1981'], '1982', 
      ['W. Fricke', 'G. Teleki'],
      'E', None),
 
@@ -620,8 +633,8 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (99, ['Progress in Cosmology:', 'Proceedings of the Oxford',
-          'International Symposium Held in', 'Christ Church, Oxford, September',
-          '14–18, 1981'], '1982', 
+          'International Symposium Held in', 'Christ Church, Oxford,',
+          'September 14–18, 1981'], '1982', 
      ['A. W. Wolfendale'],
      'E', None),
 
@@ -640,7 +653,7 @@ ASSL_BOOK_LIST = [
 
     (102, ['Activity in Red-Dwarf Stars:', 'Proceedings of the 71st Colloquium',
            'of the International Astronomical',
-           'Union Held in Catania, Italy, August', '10–13, 1982'], '1983', 
+           'Union Held in Catania, Italy,', 'August 10–13, 1982'], '1983', 
      ['Patrick B. Byrne', 'Marcello Rodonò'],
      'E', None),
 
@@ -651,7 +664,7 @@ ASSL_BOOK_LIST = [
 
     (104, ['Solar-Terrestrial Physics:', 'Principles and Theoretical',
            'Foundations Based Upon the', 'Proceedings of the Theory Institute',
-           'Held at Boston College, August 9–26,', '1982'], '1983', 
+           'Held at Boston College,', 'August 9–26, 1982'], '1983', 
      ['R. L. Carovillano', 'J. M. Forbes'],
      'E', None),
 
@@ -665,7 +678,7 @@ ASSL_BOOK_LIST = [
            'Proceedings of the 74th Colloquium',
            'of the International Astronomical',
            'Union Held in Gerakini, Chalkidiki,',
-           'Greece, 30 August – 2 September,', '1982'], '1983', 
+           'Greece,', '30 August – 2 September, 1982'], '1983', 
      ['Vassilis V. Markellos', 'Yoshihide Kozai'],
      'E', None),
 
@@ -690,24 +703,24 @@ ASSL_BOOK_LIST = [
     (110, ['Astronomy with Schmidt-Type', 'Telescopes:',
            'Proceedings of the 78th Colloquium',
            'of the International Astronomical',
-           'Union, Asiago, Italy, August 30 –', 'September 2, 1983'], '1984', 
+           'Union, Asiago, Italy,', 'August 30 – September 2, 1983'], '1984', 
      ['Massimo Capaccioli'],
      'E', None),
 
     (111, ['Clusters and Groups of Galaxies:', 'International Meeting Held in',
-           'Trieste, Italy, September 13–16,', '1983'], '1984', 
+           'Trieste, Italy,', 'September 13–16, 1983'], '1984', 
      ['F. Mardirossian', 'G. Giuricin', 'M. Mezzetti'],
      'E', None),
 
     (112, ['Physics of Thermal Gaseous Nebulae:',
-           'Physical Proccesses in Gaseous', 'Nebulae'], '1984', 
+           'Physical Processes in Gaseous', 'Nebulae'], '1984', 
      ['Lawrence H. Aller'],
      'A', None),
 
     (113, ['Cataclysmic Variables and Low-Mass',
            'X-Ray Binaries:', 'Proceedings of the 7th North',
            'American Workshop held in Cambridge,',
-           'Massachusetts, U.S.A., January', '12–15, 1983'], '1985', 
+           'Massachusetts, U.S.A.,', 'January 12–15, 1983'], '1985', 
      ['Donald Q. Lamb', 'Joseph Patterson'],
      'E', None),
 
@@ -727,7 +740,7 @@ ASSL_BOOK_LIST = [
 
     (116, ['Radio Stars:', 'Proceedings of a Workshop on Stellar',
            'Continuum Radio Astronomy Held in',
-           'Boulder, Colorado, U.S.A., 8–10', 'August 1984'], '1985', 
+           'Boulder, Colorado, U.S.A.,', '8–10 August 1984'], '1985', 
      ['Robert M. Hjellming', 'David M. Gibson'],
      'E', None),
 
@@ -742,11 +755,15 @@ ASSL_BOOK_LIST = [
      ['Yataro Sekido', 'Harry Elliot'],
      'E', None),
 
-    (119, ['Properties and Interactions of', 'Interplanetary Dust:', 'Proceedings of the 85th Colloquium', 'of the International Astrnomical', 'Union, Marseille, France, July 9–12,', '1984'], '1985', 
+    (119, ['Properties and Interactions of', 'Interplanetary Dust:',
+           'Proceedings of the 85th Colloquium', 'of the International Astronomical',
+           'Union, Marseille, France,', 'July 9–12, 1984'], '1985', 
      ['R. H. Giese', 'P. Lamy'],
      'E', None),
 
-    (120, ['Birth and Evolution of Massive Stars', 'and Stellar Groups:', 'Proceedings of a Symposium held in', 'Dwinggeloo, The Netherlands, 24–25', 'September 1984'], '1985', 
+    (120, ['Birth and Evolution of Massive Stars', 'and Stellar Groups:',
+           'Proceedings of a Symposium held in', 'Dwingeloo, The Netherlands,',
+           '24–25 September 1984'], '1985', 
      ['Wilfried Boland', 'Hugo van Woerden'],
      'E', None),
 
@@ -754,19 +771,26 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (122, ['Spectral Evolution of Galaxies:', 'Proceedings of the Fourth Workshop', 'of the Advanced School of Astronomy', 'of the ‘Ettore Majorana” Centre for', 'Scientific Culture, Erice, Italy,', 'March 12–22, 1985'], '1986', 
+    (122, ['Spectral Evolution of Galaxies:', 'Proceedings of the Fourth Workshop',
+           'of the Advanced School of Astronomy', 'of the ‘Ettore Majorana” Centre for',
+           'Scientific Culture, Erice, Italy,', 'March 12–22, 1985'], '1986', 
      ['Cesare Chiosi', 'Alvio Renzini'],
      'E', None),
 
-    (123, ['The Sun and the Heliosphere in Three', 'Dimensions:', 'Proceedings of the XIXth ESLAB', 'Symposium, held in Les Diablerets,', 'Switzerland, 4–6 June 1985'], '1986', 
+    (123, ['The Sun and the Heliosphere in Three', 'Dimensions:',
+           'Proceedings of the XIXth ESLAB', 'Symposium, held in Les Diablerets,',
+           'Switzerland, 4–6 June 1985'], '1986', 
      ['R. G. Marsden'],
      'E', None),
 
-    (124, ['Light on Dark Matter:', 'Proceedings of the First IRAS', 'Conference, Held in Noordwijk, the', 'Netherlands, 10–14 June 1985'], '1986', 
+    (124, ['Light on Dark Matter:', 'Proceedings of the First IRAS',
+           'Conference, Held in Noordwijk, the', 'Netherlands, 10–14 June 1985'], '1986', 
      ['Frank P. Israel'],
      'E', None),
 
-    (125, ['Upper Main Sequence Stars with', 'Anomalous Abundances:', 'Proceedings of th 90th Colloquium of', 'the International Astronomical', 'Union, held in Crimea, U.S.S.R., May', '13–19, 1985'], '1986', 
+    (125, ['Upper Main Sequence Stars with', 'Anomalous Abundances:',
+           'Proceedings of th 90th Colloquium of', 'the International Astronomical',
+           'Union, held in Crimea, U.S.S.R.,', 'May 13–19, 1985'], '1986', 
      ['C. R. Cowley', 'M. M. Dworetsky', 'C. Mégessier'],
      'E', None),
 
@@ -774,16 +798,20 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (127, ['Space Dynamics and Celestial', 'Mechanics:', 'Proceedings of the International', 'Workshop, Delhi, India, 14–16', 'November 1985'], '1986', 
+    (127, ['Space Dynamics and Celestial', 'Mechanics:', 'Proceedings of the International',
+           'Workshop, Delhi, India,', '14–16 November 1985'], '1986', 
      ['K. B. Bhatnagar'],
      'E', None),
 
-    (128, ['Hydrogen Deficient Stars and Related', 'Objects:', 'Proceedings of the 87th Colloquium', 'of the International Astronomical', 'Union Held at Mysore, India, 10–15', 'November 1985'], '1986', 
+    (128, ['Hydrogen Deficient Stars and Related', 'Objects:',
+           'Proceedings of the 87th Colloquium', 'of the International Astronomical',
+           'Union Held at Mysore, India,', '10–15 November 1985'], '1986', 
      ['Kurt Hunger', 'Detlef Schönberner', 'N. Kameswara Rao'],
      'E', None),
 
     (129, ['Exploring the Universe with the IUE', 'Satellite'], '1987', 
-     ['Y. Kondo', 'W. Wamsteker', 'A. Boggess', 'M. Grewing', 'C. De Jager', 'A. L. Lane', 'J. L. Linksy', 'R. Wilson'],
+     ['Y. Kondo', 'W. Wamsteker', 'A. Boggess', 'M. Grewing', 'C. De Jager', 'A. L. Lane',
+      'J. L. Linksy', 'R. Wilson'],
      'E', None),
 
     (130, ['Jacobi Dynamics:', 'Many-Body Problem in Integral', 'Characteristics'], '1987', 
@@ -794,7 +822,8 @@ ASSL_BOOK_LIST = [
      ['Fionn Murtagh', 'André Heck'],
      'A', None),
 
-    (132, ['Late Stages of Stellar Evolution:', 'Proceedings of the Workshop Held in', 'Calgary, Canada, from 2–5 June, 1986'], '1987', 
+    (132, ['Late Stages of Stellar Evolution:', 'Proceedings of the Workshop Held in',
+           'Calgary, Canada, from 2–5 June, 1986'], '1987', 
      ['S. Kwok', 'S. R. Pottasch'],
      'E', None),
 
@@ -802,23 +831,32 @@ ASSL_BOOK_LIST = [
      ['A. A. Ruzmaikin', 'A. M. Shukurov', 'D. D. Sokoloff'],
      'A', None),
 
-    (134, ['Interstellar Processes:', 'Proceedings of the Symposium on', 'Interstellar Processes, Held in', 'Grand Teton National Park, July 1985'], '1987', 
+    (134, ['Interstellar Processes:', 'Proceedings of the Symposium on',
+           'Interstellar Processes, Held in', 'Grand Teton National Park, July 1985'], '1987', 
      ['David J. Hollenbach', 'Harley A. Thronson Jr.'],
      'E', None),
 
-    (135, ['Planetary and Proto-Planetary', 'Nebulae: From IRAS to ISO:', 'Proceedings of the Frascati Workshop', '1986, Vulcano Island, September', '8–12, 1986'], '1987', 
+    (135, ['Planetary and Proto-Planetary', 'Nebulae: From IRAS to ISO:',
+           'Proceedings of the Frascati Workshop', '1986, Vulcano Island,',
+           'September 8–12, 1986'], '1987', 
      ['Andrea Preite Martinez'],
      'E', None),
 
-    (136, ['Instabilities in Luminous Early Type', 'Stars:', 'Proceedings of a workshop in Honour', 'of Poefessor Cees De Jager on the', 'Occasion of his 65th Birthday held', 'in Lunteren, The Netherlands, 21–24', 'April 1986'], '1987', 
+    (136, ['Instabilities in Luminous Early Type', 'Stars:',
+           'Proceedings of a workshop in Honour', 'of Professor Cees De Jager on the',
+           'Occasion of his 65th Birthday held', 'in Lunteren, The Netherlands,',
+           '21–24 April 1986'], '1987', 
      ['Henny J. G. L. M. Lamers', 'Camiel W. H. De Loore'],
      'E', None),
 
-    (137, ['The Internal Solar Angular Velocity:', 'Theory, Observations and', 'Relationship to Solar Magnetic', 'Fields'], '1987', 
+    (137, ['The Internal Solar Angular Velocity:', 'Theory, Observations and',
+           'Relationship to Solar Magnetic', 'Fields'], '1987', 
      ['Bernard R. Durney', 'Sabatino Sofia'],
      'E', None),
 
-    (138, ['Physics of Formation of FeII Lines', 'Outside of LTE:', 'Proceedings of the 94th Colloquium', 'of the International Astronomical', 'Union Held in Anacapri, Capri', 'Islands, Italy, 4–8 July 1986'], '1988', 
+    (138, ['Physics of Formation of FeII Lines', 'Outside of LTE:',
+           'Proceedings of the 94th Colloquium', 'of the International Astronomical',
+           'Union Held in Anacapri, Capri', 'Islands, Italy, 4–8 July 1986'], '1988', 
      ['Roberto Viotto', 'Alberto Vittone', 'Michael Friedjung'],
      'E', None),
 
@@ -826,43 +864,60 @@ ASSL_BOOK_LIST = [
      ['Alan H. Batten'],
      'A', None),
 
-    (140, ['The Few Body Problem:', 'Proceedings of the 96th Colloquium', 'of the International Astronomical', 'Union Held in Turky, Finland, June', '14–19, 1987'], '1988', 
+    (140, ['The Few Body Problem:', 'Proceedings of the 96th Colloquium',
+           'of the International Astronomical', 'Union Held in Turky, Finland,',
+           'June 14–19, 1987'], '1988', 
      ['M. J. Valtonen'],
      'E', None),
 
-    (141, ['Towards Understanding Galaxies at', 'Large Redshift:', 'Proceedings of the Fifth Workshop of', 'the Advanced School of Astronomy of', 'the Ettore Majorana Centre for', 'Scientific Culture, Erice, Italy,', 'Juni 1–10, 1987'], '1988', 
+    (141, ['Towards Understanding Galaxies at', 'Large Redshift:',
+           'Proceedings of the Fifth Workshop of', 'the Advanced School of Astronomy of',
+           'the Ettore Majorana Centre for', 'Scientific Culture, Erice, Italy,',
+           'Juni 1–10, 1987'], '1988', 
      ['Richard G. Kron', 'Alvio Renzini'],
      'E', None),
 
-    (142, ['Mass Outflows from Stars and', 'Galactic Nuclei:', 'Proceedings of the Second Torino', 'Workshop, Held in Torino, Italy, May', '4–8, 1987'], '1988', 
+    (142, ['Mass Outflows from Stars and', 'Galactic Nuclei:',
+           'Proceedings of the Second Torino', 'Workshop, Held in Torino, Italy,',
+           'May, 4–8, 1987'], '1988', 
      ['Luciana Bianchi', 'Roberto Gilmozzi'],
      'E', None),
 
-    (143, ['Activity in Cool Star Envelopes:', 'Proceedings of the Midnight Sun', 'Confernence Held in Tromsø, Norway,', 'July 1–8, 1987'], '1988', 
+    (143, ['Activity in Cool Star Envelopes:', 'Proceedings of the Midnight Sun',
+           'Conference Held in Tromsø, Norway,', 'July 1–8, 1987'], '1988', 
      ['O. Havnes', 'B. R. Pettersen', 'J. H. M. M. Schmitt', 'J. E. Solheim'],
      'E', None),
 
-    (144, ['Bioastronomy — The Next Steps,', 'Proceedings of the 99th Colloquium', 'of the International Astronomical', 'Union held in Balaton, Hungary, June', '22–27, 1987'], '1988', 
+    (144, ['Bioastronomy — The Next Steps,', 'Proceedings of the 99th Colloquium',
+           'of the International Astronomical', 'Union held in Balaton, Hungary,',
+           'June 22–27, 1987'], '1988', 
      ['George Marx'],
      'E', None),
 
-    (145, ['The Symbiotic Phenomenon:', 'Proceedings of the 103rd Colloquium', 'of the International Astronomical', 'Union, Held in Torun, Poland, August', '18–20, 1987'], '1988', 
+    (145, ['The Symbiotic Phenomenon:', 'Proceedings of the 103rd Colloquium',
+           'of the International Astronomical', 'Union, Held in Torun, Poland,',
+           'August 18–20, 1987'], '1988', 
      ['Joanna Mikolajewska', 'Michael Friedjung', 'Scott J. Kenyon', 'Roberto Viotti'],
      'E', None),
 
-    (146, ['Rate Coefficients in Astrochemistry:', 'Proceedings of a Conference held in', 'Umis, Manchester, U.K., September', '21–24, 1987'], '1988', 
+    (146, ['Rate Coefficients in Astrochemistry:', 'Proceedings of a Conference held in',
+           'Umis, Manchester, U.K.,', 'September 21–24, 1987'], '1988', 
      ['T. J. Millar', 'D. A. Williams'],
      'E', None),
 
-    (147, ['Millimetre and Submillimetre', 'Astronomy:', 'Lectures Presented at a Summer', 'School Held in Stirling, Scotland,', 'June 21–27, 1987'], '1988', 
+    (147, ['Millimetre and Submillimetre', 'Astronomy:', 'Lectures Presented at a Summer',
+           'School Held in Stirling, Scotland,', 'June 21–27, 1987'], '1988', 
      ['R. D. Wolstencroft', 'W. B. Burton'],
      'E', None),
 
-    (148, ['Pulsation and Mass Loss in Stars:', 'Proceedings of a Workshop Held in', 'Trieste, Italy, September 14–18,', '1987'], '1988', 
+    (148, ['Pulsation and Mass Loss in Stars:', 'Proceedings of a Workshop Held in',
+           'Trieste, Italy,', 'September 14–18, 1987'], '1988', 
      ['R. Stalio', 'L. A. Willson'],
      'E', None),
 
-    (149, ['Experiments on Cosmic Dust', 'Analogues:', 'Proceedings of the Seconds', 'International Workshop of the', 'Astronomical Observatory of', 'Capodimonte (QAC 2), held at Capri,', 'Italy, September 8–12, 1987'], '1988', 
+    (149, ['Experiments on Cosmic Dust', 'Analogues:', 'Proceedings of the Seconds',
+           'International Workshop of the', 'Astronomical Observatory of',
+           'Capodimonte (QAC 2), held at Capri,', 'Italy, September 8–12, 1987'], '1988', 
      ['Ezio Bussoletti', 'Carlo Fusco', 'Giuseppe Longo'],
      'E', None),
 
@@ -870,7 +925,9 @@ ASSL_BOOK_LIST = [
      ['E. R. Priest'],
      'E', None),
 
-    (151, ['Large Scale Structure and Motions in', 'the Universe:', 'Proceedings of an International', 'Meeting Held in Trieste, Italy,', 'April 6–9, 1988'], '1989', 
+    (151, ['Large Scale Structure and Motions in', 'the Universe:',
+           'Proceedings of an International', 'Meeting Held in Trieste, Italy,',
+           'April 6–9, 1988'], '1989', 
      ['M. Mezzetti', 'G. Giuricin', 'F. Mardirossian', 'M. Ramella'],
      'E', None),
 
@@ -882,31 +939,43 @@ ASSL_BOOK_LIST = [
      ['M. R. Kundu', 'B. Woodgate', 'E. J. Schmahl'],
      'E', None),
 
-    (154, ['Reference Frames:', ' In Astronomy and Geophysics'], '1989', 
+    (154, ['Reference Frames:', 'In Astronomy and Geophysics'], '1989', 
      ['Dr Jean Kovalevsky', 'Prof Ivan I. Mueller', 'Dr Barbara Kolaczek'],
      'E', None),
 
-    (155, ['Astronomy, Cosmology and Fundamental', 'Physics:', 'Proceedings of the Third ESO-CERN', 'Symposium, Held in Bologna, Palazzo', 'Re Enzo, May 16–20, 1988'], '1989', 
+    (155, ['Astronomy, Cosmology and Fundamental', 'Physics:',
+           'Proceedings of the Third ESO-CERN', 'Symposium, Held in Bologna, Palazzo'
+           , 'Re Enzo, May 16–20, 1988'], '1989', 
      ['Michele Caffo', 'Roberto Fanti', 'Giorgio Giacomelli', 'Alvio Renzini'],
      'E', None),
 
-    (156, ['Accretion Disks and Magnetic Fields', 'in Astrophysics:', 'Proceedings of the European Physical', 'Society Study Conference, Held in', 'Noto (Sicily), Italy, June 16–21,', '1988'], '1989', 
+    (156, ['Accretion Disks and Magnetic Fields', 'in Astrophysics:',
+           'Proceedings of the European Physical', 'Society Study Conference, Held in',
+           'Noto (Sicily), Italy, June 16–21,', '1988'], '1989', 
      ['G. Belvedere'],
      'E', None),
 
-    (157, ['Physics of Luminous Blue Variables:', 'Proceedings of the 113th Colloquium', 'of the International Astronomical', 'Union, Held at Val Morin, Quebec', 'Province, Canada, August 15–18, 1988'], '1989', 
+    (157, ['Physics of Luminous Blue Variables:', 'Proceedings of the 113th Colloquium',
+           'of the International Astronomical', 'Union, Held at Val Morin, Quebec',
+           'Province, Canada, August 15–18, 1988'], '1989', 
      ['Kris Davidson', 'A. F. J. Moffat', 'H. J. G. L. M. Lamers'],
      'E', None),
 
-    (158, ['Submillimetre Astronomy:', 'Proceedings of the Kona Symposium on', 'Millimetre and Submillimetre', 'Astronomy, Held at Kona, Hawaii,', 'October 3–6, 1988'], '1990', 
+    (158, ['Submillimetre Astronomy:', 'Proceedings of the Kona Symposium on',
+           'Millimetre and Submillimetre', 'Astronomy, Held at Kona, Hawaii,',
+           'October 3–6, 1988'], '1990', 
      ['Graeme D. Watt', 'Adrian S.'],
      'E', None),
 
-    (159, ['Inside the Sun:', 'Proceedings of the 121st Colloquium', 'of the International Astronomical', 'Union, Held at Versailles, France,', 'May 22–26, 1989'], '1990', 
+    (159, ['Inside the Sun:', 'Proceedings of the 121st Colloquium',
+           'of the International Astronomical', 'Union, Held at Versailles, France,',
+           'May 22–26, 1989'], '1990', 
      ['Gabrielle Berthomieu', 'Michel Cribier'],
      'E', None),
 
-    (160, ['Windows on Galaxies:', 'Proceedings of the Sixth Workshop of', 'the Advanced School of Astronomy of', 'the Ettore Majorana Centre for', 'Scientific Culture, Erice, Italy,', 'May 21–31, 1989'], '1990', 
+    (160, ['Windows on Galaxies:', 'Proceedings of the Sixth Workshop of',
+           'the Advanced School of Astronomy of', 'the Ettore Majorana Centre for',
+           'Scientific Culture, Erice, Italy,', 'May 21–31, 1989'], '1990', 
      ['Giuseppina Fabbiano', 'John S. Gallagher', 'Alvio Renzini'],
      'E', None),
 
@@ -914,27 +983,40 @@ ASSL_BOOK_LIST = [
      ['Harley A. Thronson Jr.', 'J. Michael Shull'],
      'E', None),
 
-    (162, ['Physical Processes in Fragmentation', 'and Star Formation:', 'Proceedings of the Workshop on', '‘Physical Processes in Fragmentation', 'and Star Formation’, Held in', 'Monteporzio Catone,(Rome), Italy,', 'June 5–11, 1989'], '1990', 
+    (162, ['Physical Processes in Fragmentation', 'and Star Formation:',
+           'Proceedings of the Workshop on', '‘Physical Processes in Fragmentation',
+           'and Star Formation’, Held in', 'Monteporzio Catone,(Rome), Italy,',
+           'June 5–11, 1989'], '1990', 
      ['Roberto Capuzzo-Dolcetta', 'Cesare Chiosi', 'Alberto di Fazio'],
      'E', None),
 
-    (163, ['Radio Recombination Lines: 25 Years', 'of Investigation:', 'Proceedings fo the 125th Colloquium', 'of the International Astronomical', 'Union, Held in Puschino, U.S.S.R.,', 'September 11–16, 1989'], '1990', 
+    (163, ['Radio Recombination Lines: 25 Years', 'of Investigation:',
+           'Proceedings of the 125th Colloquium', 'of the International Astronomical',
+           'Union, Held in Puschino, U.S.S.R.,', 'September 11–16, 1989'], '1990', 
      ['M. A. Gordon', 'R. L. Sorochenko'],
      'E', None),
 
-    (164, ['The Cosmic Microwave Background: 25', 'Years Later:', 'Proceedings of the Meeting on ‘The', 'Cosmic Microwave Background: 25', 'Years Later’, Held in L’Aquila,', 'Italy, June 19–23, 1989'], '1990', 
+    (164, ['The Cosmic Microwave Background: 25', 'Years Later:',
+           'Proceedings of the Meeting on ‘The', 'Cosmic Microwave Background: 25',
+           'Years Later’, Held in L’Aquila,', 'Italy, June 19–23, 1989'], '1990', 
      ['N. Mandolesi', 'N. Vittorio'],
      'E', None),
 
-    (165, ['Dusty Objects in the Universe:', 'Proceedings of the Fourth', 'International Workshop of the', 'Astronomical Observatory of', 'Capodimonte (OAC 4), Held in Capri,', 'Italy, September 8–13, 1989'], '1990', 
+    (165, ['Dusty Objects in the Universe:', 'Proceedings of the Fourth',
+           'International Workshop of the', 'Astronomical Observatory of',
+           'Capodimonte (OAC 4), Held in Capri,', 'Italy, September 8–13, 1989'], '1990', 
      ['E. Bussoletti', 'A. A. Vittone'],
      'E', None),
 
-    (166, ['Observatories in Earth Orbit and', 'Beyond:', 'Proceedings of the 123rd Colloquium', 'of the International Astronomical', 'Union, Held in Greenbelt, Maryland,', 'U.S.A., April 24–27, 1990'], '1990', 
+    (166, ['Observatories in Earth Orbit and', 'Beyond:', 'Proceedings of the 123rd Colloquium',
+           'of the International Astronomical', 'Union, Held in Greenbelt, Maryland,',
+           'U.S.A., April 24–27, 1990'], '1990', 
      ['Y. Kondo'],
      'E', None),
 
-    (167, ['Comets in the Post-Halley Era:', 'Volume 1:', 'In Part Based on reviews Presented', 'at the 121st Colloquium of the', 'International Astronomical Union,', 'Held in Bamberg, Germany, April', '24–28, 1989'], '1991', 
+    (167, ['Comets in the Post-Halley Era:', 'Volume 1:', 'In Part Based on reviews Presented',
+           'at the 121st Colloquium of the', 'International Astronomical Union,',
+           'Held in Bamberg, Germany, April', '24–28, 1989'], '1991', 
      ['R. L. Newburn Jr.', 'M. Neugebauer', 'J. Rahe'],
      'E', None),
 
@@ -942,7 +1024,10 @@ ASSL_BOOK_LIST = [
      ['F. Hoyle', 'N. C. Wickramasinghe'],
      'A', None),
 
-    (169, ['Primordial Nucleosynthesis and', 'Evolution of Early Universe:', 'Proceedings of the International', 'Conference ‘Primordial', 'Nucleosynthesis and Evolution of the', 'Early Universe”, Held in Tokyo,', 'Japan, September 4–8, 1990'], '1991', 
+    (169, ['Primordial Nucleosynthesis and', 'Evolution of Early Universe:',
+           'Proceedings of the International', 'Conference ‘Primordial',
+           'Nucleosynthesis and Evolution of the', 'Early Universe”, Held in Tokyo,',
+           'Japan, September 4–8, 1990'], '1991', 
      ['K. Sato', 'J. Audouze'],
      'E', None),
 
@@ -958,15 +1043,19 @@ ASSL_BOOK_LIST = [
      ['Boris V. Somov'],
      'A', None),
 
-    (173, ['Origin and Evolution of', 'Interplanetary Dust:', 'Proceedings of the 126th Colloquium', 'of the International Astrononmical', 'Union, Held in Kyoto, Japan, August', '27–30, 1990'], '1991', 
+    (173, ['Origin and Evolution of', 'Interplanetary Dust:',
+           'Proceedings of the 126th Colloquium', 'of the International Astrononmical',
+           'Union, Held in Kyoto, Japan,', 'August 27–30, 1990'], '1991', 
      ['A. C. Levasseur-Regourd', 'H. Hasegawa'],
      'E', None),
 
-    (174, ['Digitised Optical Sky Surveys:', 'Proceedings of the Conference on', '“Digitised Optical Sky Surveys”,', 'Held in Edinburgh, Scotland, 18–21', 'June 1991'], '1992', 
+    (174, ['Digitised Optical Sky Surveys:', 'Proceedings of the Conference on',
+           '“Digitised Optical Sky Surveys”,', 'Held in Edinburgh, Scotland,',
+           '18–21 June 1991'], '1992', 
      ['H. T. MacGillivray', 'E. B. Thomson'],
      'E', None),
 
-    (175, ['Astronomical Photometry:', ' A Guide'], '1992', 
+    (175, ['Astronomical Photometry:', 'A Guide'], '1992', 
      ['Chr. Sterken', 'J. Manfroid'],
      'A', None),
 
@@ -978,7 +1067,10 @@ ASSL_BOOK_LIST = [
      ['J. Sahade', 'G. E. McCluskey Jr.', 'Y. Kondo'],
      'E', None),
 
-    (178, ['Morphological and Physical', 'Classification of Galaxies:', 'Proceedings of the Fifth', 'International Workshop of the', 'Osservatories Astronomico di', 'Capodimonite, Held in Sant’Agata Sui', 'Due Golfi, Italy, September 3–7,', '1990'], '1992', 
+    (178, ['Morphological and Physical', 'Classification of Galaxies:',
+           'Proceedings of the Fifth', 'International Workshop of the',
+           'Osservatories Astronomico di', 'Capodimonite, Held in Sant’Agata Sui',
+           'Due Golfi, Italy,', 'September 3–7, 1990'], '1992', 
      ['G. Longo', 'M. Capaccioli', 'G. Busarello'],
      'E', None),
 
@@ -994,11 +1086,14 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (182, ['Intelligent Information Retrieval:', 'The Case of Astronomy and Related', 'Space Sciences'], '1993', 
+    (182, ['Intelligent Information Retrieval:', 'The Case of Astronomy and Related',
+           'Space Sciences'], '1993', 
      ['A. Heck', 'F. Murtagh'],
      'E', None),
 
-    (183, ['Physics of Solar and Stellar', 'Coronae: G.S. Vaiana Memorial', 'Symposium:', 'Proceedings of a Conference of the', 'International Astronomical Union,', 'Held in Palermo., Italy, 22–26 June,', '1992'], '1993', 
+    (183, ['Physics of Solar and Stellar', 'Coronae: G.S. Vaiana Memorial', 'Symposium:',
+           'Proceedings of a Conference of the', 'International Astronomical Union,',
+           'Held in Palermo, Italy,', '22–26 June, 1992'], '1993', 
      ['Jeffrey F. Linsky', 'Salvatore Serio'],
      'E', None),
 
@@ -1006,27 +1101,33 @@ ASSL_BOOK_LIST = [
      ['Arnold Benz'],
      'A', None),
 
-    (185, ['Stability of Collisionless Stellar', 'Systems:', 'Mechanisms for the Dynamical', 'Structure of Galaxies'], '1994', 
+    (185, ['Stability of Collisionless Stellar', 'Systems:', 'Mechanisms for the Dynamical',
+           'Structure of Galaxies'], '1994', 
      ['P. L. Palmer'],
      'A', None),
 
-    (186, ['Stellar Jets and Bipolar Outflows:', 'Proceedings of the Sixth', 'International Workshop of the', 'Astronomical Observatory of', 'Capodimonte (OAC 6), Held at Capri,', 'Italy, September 18–21, 1991'], '1993', 
+    (186, ['Stellar Jets and Bipolar Outflows:', 'Proceedings of the Sixth',
+           'International Workshop of the', 'Astronomical Observatory of',
+           'Capodimonte (OAC 6), Held at Capri,', 'Italy, September 18–21, 1991'], '1993', 
      ['L. Errico', 'A. A. Vittone'],
      'E', None),
 
-    (187, ['Frontiers of Space And Ground-Based', 'Astronomy:', 'The Astrophysics of the 21st Century'], '1994', 
+    (187, ['Frontiers of Space And Ground-Based', 'Astronomy:',
+           'The Astrophysics of the 21st Century'], '1994', 
      ['W. Wamsteker', 'M. S. Longair', 'Y. Kondo'],
      'E', None),
 
-    (188, ['The Environment and Evolution of', 'Galaxies:', 'Proceedings of the Third Tetons', 'Summer School Held in Grand Tetons', 'National Park, Wyoming, U.S.A., July', '1992'], '1993', 
+    (188, ['The Environment and Evolution of', 'Galaxies:', 'Proceedings of the Third Tetons',
+           'Summer School Held in Grand Tetons',
+           'National Park, Wyoming, U.S.A.,', 'July 1992'], '1993', 
      ['J. Michael Shull', 'Harley A. Thronson Jr.'],
      'E', None),
 
-    (189, ['Solar Magnetic Fields:', ' Polarized Radiation Diagnostics'], '1994', 
+    (189, ['Solar Magnetic Fields:', 'Polarized Radiation Diagnostics'], '1994', 
      ['Jan Olof Stenflo'],
      'A', None),
 
-    (190, ['Infrared Astronomy with Arrays:', ' The Next Generation'], '1994', 
+    (190, ['Infrared Astronomy with Arrays:', 'The Next Generation'], '1994', 
      ['Ian S. McLean'],
      'E', None),
 
@@ -1086,11 +1187,14 @@ ASSL_BOOK_LIST = [
      ['V. V. Zheleznyakov'],
      'A', None),
 
-    (205, ['Cataclysmic Variables:', 'Proceedings of the Conference held', 'in Abano Terme, Italy, 20-24 June', '1994'], '1995', 
+    (205, ['Cataclysmic Variables:', 'Proceedings of the Conference held',
+           'in Abano Terme, Italy,', '20--24 June 1994'], '1995', 
      ['A. Bianchini', 'M. Della Valle', 'M. Orio'],
      'E', None),
 
-    (206, ['Cold Gas at High Redshift:', 'Proceedings of a Workshop', 'Celebrating the 25th Anniversary of', 'the Westerbork Synthesis Radio', 'Telescope, held in Hoogeveen, The', 'Netherlands, August 28--30, 1995'], '1996', 
+    (206, ['Cold Gas at High Redshift:', 'Proceedings of a Workshop',
+           'Celebrating the 25th Anniversary of', 'the Westerbork Synthesis Radio',
+           'Telescope, held in Hoogeveen, The', 'Netherlands, August 28--30, 1995'], '1996', 
      ['M. N. Bremer', 'P. P. van der Werf', 'H. J. A. Röttgering', 'C. L. Carilli'],
      'E', None),
 
@@ -1098,15 +1202,21 @@ ASSL_BOOK_LIST = [
      ['Ernst Raimond', 'René Genee'],
      'E', None),
 
-    (208, ['Cataclysmic Variables and Related', 'Objects:', 'Proceedings of the 158th Colloquium', 'of the International Astronomical', 'Union, Held at Keele, United', 'Kingdom, June 26-30 1995'], '1996', 
+    (208, ['Cataclysmic Variables and Related', 'Objects:', 'Proceedings of the 158th Colloquium',
+           'of the International Astronomical', 'Union, Held at Keele, United',
+           'Kingdom, June 26--30 1995'], '1996', 
      ['A. Evans', 'Janet H. Wood'],
      'E', None),
 
-    (209, ['New Extragalactic Perspectives in', 'the New South Africa:', 'Proceedings of the International', 'Conference on “Cold Dust and Galaxy', 'Morphology “ held in Johannesburg', 'South Africa January 22-26 1996'], '1996', 
+    (209, ['New Extragalactic Perspectives in', 'the New South Africa:',
+           'Proceedings of the International', 'Conference on “Cold Dust and Galaxy',
+           'Morphology" held in Johannesburg', 'South Africa January 22--26 1996'], '1996', 
      ['David L. BlockJ', '. Mayo Greenberg'],
      'E', None),
 
-    (210, ['The Impact of Large Scale Near-IR', 'Sky Surveys:', 'Proceedings of a Workshop held at', 'Puerto de la Cruz, Tenerife( Spain),', '22--26 April, 1996'], '1997', 
+    (210, ['The Impact of Large Scale Near-IR', 'Sky Surveys:',
+           'Proceedings of a Workshop held at', 'Puerto de la Cruz, Tenerife (Spain),',
+           '22--26 April, 1996'], '1997', 
      ['F. Garzón', 'N. Epchtein', 'A. Omont', 'B. Burton', 'P. Persi'],
      'E', None),
 
@@ -1114,19 +1224,25 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (212, ['Wide-Field Spectroscopy:', 'Proceedings of the 2nd Conference of', 'the Working Group of IAU Commission', '9 on “Wide-Field Imaging” held in', 'Athens, Greece, May 20---5, 1996'], '1997', 
+    (212, ['Wide-Field Spectroscopy:', 'Proceedings of the 2nd Conference of',
+           'the Working Group of IAU Commission 9', 'on “Wide-Field Imaging” held in',
+           'Athens, Greece, May 20--25, 1996'], '1997', 
      ['E. Kontizas', 'M. Kontizas', 'D. H. Morgan', 'G. P. Vettolani'],
      'E', None),
 
-    (213, ['The Letters and Papers of Jan', 'Hendrik Oort:', 'as Archived in the University', 'Library, Leiden'], '1997', 
+    (213, ['The Letters and Papers of Jan', 'Hendrik Oort:', 'as Archived in the University',
+           'Library, Leiden'], '1997', 
      ['J. K. Katgert-Merkelijn'],
      'A', None),
 
-    (214, ['White Dwarfs:', 'Proceedings of the 10th European', 'Workshop on White Dwards, help in', 'Blanes, Spain, 17–21 June 1996'], '1997', 
+    (214, ['White Dwarfs:', 'Proceedings of the 10th European',
+           'Workshop on White Dwarfs, held in', 'Blanes, Spain, 17--21 June 1996'], '1997', 
      ['J. Isern', 'M. Hernanz', 'E. García-Berro'],
      'E', None),
 
-    (215, ['Infrared Space Interferometry:', 'Astrophysics \& the Study of', 'Earth-Like Planets:', 'Proceedings of a Workshop held in', 'Toledo, Spain, March 11–14, 1996'], '1997', 
+    (215, ['Infrared Space Interferometry:', 'Astrophysics \& the Study of',
+           'Earth-Like Planets:', 'Proceedings of a Workshop held in',
+           'Toledo, Spain, March 11--14, 1996'], '1997', 
      ['C. Eiroa', 'A. Alberdi', 'H. Thronson', 'T. De Graauw', 'C. J. Schalinski'],
      'E', None),
 
@@ -1142,7 +1258,9 @@ ASSL_BOOK_LIST = [
       'Jean-Claude Gérard'],
      'A', '0-7923-4686-6'),
 
-    (218, ['Astronomical Time Series:', 'Proceedings of the Florence and', 'George Wise Observatory 25th', 'Anniversary Symposium help in', 'Tel-Aviv, Israil, 30 December 1996 –', '1 January 1997'], '1997', 
+    (218, ['Astronomical Time Series:', 'Proceedings of the Florence and',
+           'George Wise Observatory 25th', 'Anniversary Symposium held in',
+           'Tel-Aviv, Israel,', '30 December 1996 -- 1 January 1997'], '1997', 
      ['Dan Maoz', 'Amiel Sternberg', 'Elia M. Leibowitz'],
      'E', None),
 
@@ -1150,7 +1268,8 @@ ASSL_BOOK_LIST = [
      ['J. M. van der Hulst'],
      'E', None),
 
-    (220, ['The Three Galileos: The Man, the', 'Spacecraft, the Telescope:', 'Proceedings of the Conference held', 'in Padova, Italy on January 7-10,', '1997'], '1998', 
+    (220, ['The Three Galileos: The Man, the', 'Spacecraft, the Telescope:',
+           'Proceedings of the Conference held', 'in Padova, Italy on January 7--10,', '1997'], '1998', 
      ['Cesare Barbieri', 'Jürgen H. Rahe', 'Torrence V. Johnson', 'Anita M. Sohus'],
      'E', None),
 
@@ -1159,7 +1278,8 @@ ASSL_BOOK_LIST = [
      'A', None),
 
     (222, ['Remembering Edith Alice Müller'], '1998', 
-     ['I. Appenzeller', 'Y. Chmielewski', 'J.-C. Pecker', 'R. De la Reza', 'G. Tammann', 'P. Wayman'],
+     ['I. Appenzeller', 'Y. Chmielewski', 'J.-C. Pecker', 'R. De la Reza',
+      'G. Tammann', 'P. Wayman'],
      'E', None),
 
     (223, ['Visual Double Stars: Formation,', 'Dynamics and Evolutionary Tracks'], '1997', 
@@ -1174,15 +1294,20 @@ ASSL_BOOK_LIST = [
      ['F. P. Pijpers', 'J. Christensen-Dalsgaard', 'C. S. Rosenthal'],
      'E', None),
 
-    (226, ['Observational Cosmology:', 'With the New Radio Surveys', 'Proceedings of a Workshop held in', 'Puerto de la Cruz, Tenerife, Canary', 'Islands, Spain, 13-15 January 1997'], '1998', 
+    (226, ['Observational Cosmology', 'With the New Radio Surveys:',
+           'Proceedings of a Workshop held in', 'Puerto de la Cruz, Tenerife, Canary',
+           'Islands, Spain, 13-15 January 1997'], '1998', 
      ['M. N. Bremer', 'N. Jackson', 'I. Pérez-Fournon'],
      'E', None),
 
-    (227, ['Solar System Ices:', 'Based on Reviews Presented at the', 'International Symposium “Solar', 'System Ices” held in Toulouse,', 'France, on March 27-30, 1995'], '1998', 
+    (227, ['Solar System Ices:', 'Based on Reviews Presented at the',
+           'International Symposium “Solar', 'System Ices” held in Toulouse,',
+           'France, on March 27--30, 1995'], '1998', 
      ['B. Schmitt', 'C. De Bergh', 'M. Festou'],
      'E', None),
 
-    (228, ['Optical Detectors for Astronomy:', 'Proceedings of an ESO CCD Workshop', 'held in Garching, Germany, October', '8–10, 1996'], '1998', 
+    (228, ['Optical Detectors for Astronomy:', 'Proceedings of an ESO CCD Workshop',
+           'held in Garching, Germany,', 'October 8--10, 1996'], '1998', 
      ['James W. Beletic', 'Paola Amico'],
      'E', None),
 
@@ -1190,19 +1315,25 @@ ASSL_BOOK_LIST = [
      ['Tetsuya Watanabe', 'Takeo Kosugi', 'Alphonse C. Sterling'],
      'E', None),
 
-    (230, ['The Impact of Near-Infrared Sky', 'Surveys on Galactic and', 'Extragalactic Astronomy:', 'Proceedings of the 3rd', 'EUROCONFERENCE on Near-Infrared', 'Surveys held at Meudon Observatory,', 'Fance, June 19-20, 1997'], '1998', 
+    (230, ['The Impact of Near-Infrared Sky', 'Surveys on Galactic and',
+           'Extragalactic Astronomy:', 'Proceedings of the 3rd',
+           'EUROCONFERENCE on Near-Infrared', 'Surveys held at Meudon Observatory,',
+           'France, June 19-20, 1997'], '1998', 
      ['N. Epchtein'],
      'E', None),
 
-    (231, ['The Evolving Universe:', 'Selected Topics on Large-Scale', 'Structure and on the Properties of', 'Galaxies'], '1998', 
+    (231, ['The Evolving Universe:', 'Selected Topics on Large-Scale',
+           'Structure and on the Properties of', 'Galaxies'], '1998', 
      ['Donald Hamilton'],
      'E', None),
 
-    (233, ['B[e] Stars:', 'Proceedings of the Paris Workshop', 'help from 9--12 June, 1997'], '1998', 
+    (233, ['B[e] Stars:', 'Proceedings of the Paris Workshop',
+           'held from 9--12 June, 1997'], '1998', 
      ['Anne Marie Hubert', 'Carlos Jaschek'],
      'E', None),
 
-    (234, ['Observational Evidence for Black', 'Holes in the Universe:', 'Proceedings of a Conference held in', 'Calcutta, India, january 10-17, 1998'], '1999', 
+    (234, ['Observational Evidence for Black', 'Holes in the Universe:',
+           'Proceedings of a Conference held in', 'Calcutta, India, January 10-17, 1998'], '1999', 
      ['Sandip K. Chakrabarti'],
      'E', None),
 
@@ -1222,15 +1353,21 @@ ASSL_BOOK_LIST = [
      ['S. Kokubun', 'Y. Kamide'],
      'E', '0-7923-5465-6'),
 
-    (239, ['Motions in the Solar Atmosphere:', 'Proceedings of the Summer School and', 'Workshop held at the Solar', 'Observatory Kanzelhöhe Kärnten,', 'Austria, September 1-12, 1997'], '1999', 
+    (239, ['Motions in the Solar Atmosphere:', 'Proceedings of the Summer School and',
+           'Workshop held at the Solar', 'Observatory Kanzelhöhe Kärnten,',
+           'Austria, September 1-12, 1997'], '1999', 
      ['Arnold Hans', 'lmeier', 'Mauro Messerotti'],
      'E', None),
 
-    (240, ['Numerical Astrophysics:', 'Proceedings of the International', 'Conference on Numerical Astrophysics', '1998 (NAP98), held at the National', 'Olympic Memorial Youth Center,', 'Tokyo, Japan,March 10-13, 1998'], '1999', 
+    (240, ['Numerical Astrophysics:', 'Proceedings of the International',
+           'Conference on Numerical Astrophysics', '1998 (NAP98), held at the National',
+           'Olympic Memorial Youth Center,', 'Tokyo, Japan,March 10-13, 1998'], '1999', 
      ['Shoken M. Miyama', 'Kohji Tomisaka', 'Tomoyuki Hanawa'],
      'E', None),
 
-    (241, ['Millimeter-Wave Astronomy: Molecular', 'Chemistry \& Physics in Space:', 'Proceedings of the 1996 INAOE Summer', 'School of Millimeter-wave Astronomy', 'held at INAOE, Tonantzintla, Puebla,', 'Mexico, 15-31 July 1996'], '1999', 
+    (241, ['Millimeter-Wave Astronomy: Molecular', 'Chemistry \& Physics in Space:',
+           'Proceedings of the 1996 INAOE Summer', 'School of Millimeter-wave Astronomy',
+           'held at INAOE, Tonantzintla, Puebla,', 'Mexico, 15-31 July 1996'], '1999', 
      ['W. F. Wall', 'A. Carramiñana', 'L. Carrasco', 'P. F. Goldsmith'],
      'E', None),
 
@@ -1238,11 +1375,12 @@ ASSL_BOOK_LIST = [
      ['Sukumar Biswas'],
      'A', None),
 
-    (243, ['Solar Polarization:', 'Proceedings of an International', 'Workshop held in Bangalore, India,', '12-16 October, 1998'], '1999', 
+    (243, ['Solar Polarization:', 'Proceedings of an International',
+           'Workshop held in Bangalore, India,', '12-16 October, 1998'], '1999', 
      ['K. N. Nagendra', 'J. O. Stenflo'],
      'E', None),
 
-    (244, ['The Universe:', ' Visions and Perspectives'], '2000', 
+    (244, ['The Universe:', 'Visions and Perspectives'], '2000', 
      ['Naresh Dadhich', 'Ajit Kembhavi'],
      'E', None),
 
@@ -1250,7 +1388,8 @@ ASSL_BOOK_LIST = [
      ['Frank Verheest'],
      'A', None),
 
-    (246, ['The Legacy of J.C. Kapteyn:', 'Studies on Kapteyn and the', 'Development of Modern Astronomy'], '2000', 
+    (246, ['The Legacy of J.C. Kapteyn:', 'Studies on Kapteyn and the',
+           'Development of Modern Astronomy'], '2000', 
      ['P. C. Van Der Kruit', 'K. Van Berkel'],
      'A', None),
 
@@ -1274,7 +1413,8 @@ ASSL_BOOK_LIST = [
      ['Boris V. Somov'],
      'A', None),
 
-    (252, ['Optical Detectors For Astronomy II:', 'State of the Art at the Turn of the', 'Millenium'], '2000', 
+    (252, ['Optical Detectors For Astronomy II:', 'State of the Art at the Turn of the',
+           'Millenium'], '2000', 
      ['Paola Amico', 'James W. Beletic'],
      'E', None),
 
@@ -1282,7 +1422,8 @@ ASSL_BOOK_LIST = [
      ['Francesca Matteucci'],
      'A', None),
 
-    (254, ['Stellar Astrophysics:', 'Proceedings of the Pacific Rim', 'Conference held in Hong Kong, 1999'], '2000', 
+    (254, ['Stellar Astrophysics:', 'Proceedings of the Pacific Rim',
+           'Conference held in Hong Kong, 1999'], '2000', 
      ['K. S. Cheng', 'H. F. Chau', 'K. L. Chan', 'K. C. Leung'],
      'E', None),
 
@@ -1298,11 +1439,14 @@ ASSL_BOOK_LIST = [
      ['Mine Takeuti', 'Dimitar D. Sasselov'],
      'E', None),
 
-    (258, ['Electrohydrodynamics in Dusty and', 'Dirty Plasmas:', ' Gravito-Electrodynamics and EHD'], '2001', 
+    (258, ['Electrohydrodynamics in Dusty and', 'Dirty Plasmas:',
+           'Gravito-Electrodynamics and EHD'], '2001', 
      ['Hiroshi Kikuchi'],
      'A', None),
 
-    (259, ['The Dynamic Sun:', 'Proceedings of the Summer School and', 'Workshop held at the Solar', 'Observatory, Kanzelhöhe, Känten,', 'Austria, August 30 – September 10,', '1999'], '2001', 
+    (259, ['The Dynamic Sun:', 'Proceedings of the Summer School and',
+           'Workshop held at the Solar', 'Observatory, Kanzelhöhe, Känten,',
+           'Austria, August 30 – September 10,', '1999'], '2001', 
      ['Arnold Hanslmeier', 'Mauro Messerotti', 'Astrid Veronig'],
      'E', None),
 
@@ -1314,11 +1458,14 @@ ASSL_BOOK_LIST = [
      ['Mikhail Ya. Marov', 'Hans Rickman'],
      'E', None),
 
-    (262, ['Whistler Phenomena:', ' Short Impulse Propagation'], '2001', 
+    (262, ['Whistler Phenomena:', 'Short Impulse Propagation'], '2001', 
      ['Csaba Ferencz', 'Orsolya E. Ferencz', 'Dániel Hamar', 'János Lichtenberger'],
      'E', None),
 
-    (263, ['New Horizons of Computational', 'Science, Proceedings of the', 'International Symposium on', 'Supercomputing held in Tokyo, Japan,', 'September 1-3, 1997'], '2001', 
+    (263, ['New Horizons of Computational Science;',
+           'Proceedings of the International',
+           'Symposium on Supercomputing', 'held in Tokyo, Japan,',
+           'September 1-3, 1997'], '2001', 
      ['T. Ebisuzaki', 'J. Makino'],
      'E', None),
 
@@ -1326,7 +1473,8 @@ ASSL_BOOK_LIST = [
      ['Dany Vanbeveren'],
      'E', None),
 
-    (265, ['Post-AGB Objects as a Phase of', 'Stellar Evolution, Proceedsings of', 'the Toruń Workshop held July 5-7,', '2000'], '2001', 
+    (265, ['Post-AGB Objects as a Phase of', 'Stellar Evolution, Proceedsings of',
+           'the Toruń Workshop held July 5-7,', '2000'], '2001', 
      ['Ryszard Szczerba', 'Sławomir K. Górny'],
      'E', None),
 
@@ -1334,7 +1482,9 @@ ASSL_BOOK_LIST = [
      ['André Heck'],
      'E', None),
 
-    (267, ['The Nature of Unidentified Galactic', 'High-Energy Gamma-Ray Sources:', 'Proceedings of the Workshop held at', 'Tonantzintla, Puebla, Mexico, 9-11', 'October 2000'], '2001', 
+    (267, ['The Nature of Unidentified Galactic', 'High-Energy Gamma-Ray Sources:',
+           'Proceedings of the Workshop held at', 'Tonantzintla, Puebla, Mexico,',
+           '9 -- 11 October 2000'], '2001', 
      ['Alberto Carramiñana', 'Olaf Reimer', 'David J. Thompson'],
      'E', None),
 
@@ -1358,19 +1508,26 @@ ASSL_BOOK_LIST = [
      ['L. Feretti', 'I. M. Gioia', 'G. Giovannini'],
      'E', None),
 
-    (273, ['Lunar Gravimetry:', ' Revealing the Far Side'], '2002', 
+    (273, ['Lunar Gravimetry:', 'Revealing the Far Side'], '2002', 
      ['Rune Floberghagen'],
      'A', None),
 
-    (274, ['New Quests in Stellar Astrophysics:', 'The Link Between Stars and', 'Cosmology:', 'Proceedings of the International', 'Conference held in Puerto Vallarta,', 'Mexico, 26-30 March 2001'], '2002', 
+    (274, ['New Quests in Stellar Astrophysics:', 'The Link Between Stars and', 'Cosmology:',
+           'Proceedings of the International', 'Conference held in Puerto Vallarta,',
+           'Mexico, 26-30 March 2001'], '2002', 
      ['Miguel Chávez', 'Alessandro Bressan', 'Alberto Buzzoni', 'Divakara Mayya'],
      'E', None),
 
-    (275, ['History of Oriental Astronomy:', 'Proceedings of the Joint', 'Discussion-17 at the 23rd General', 'Assembly of the International', 'Astronomical Union, organinsed by', 'the Commission 41 (History of', 'Astronomy), held in Kyoto, August', '25-26, 1997'], '2002', 
+    (275, ['History of Oriental Astronomy:', 'Proceedings of the Joint',
+           'Discussion-17 at the 23rd General', 'Assembly of the International',
+           'Astronomical Union, organised by', 'Commission 41 (History of',
+           'Astronomy), held in Kyoto, August', '25-26, 1997'], '2002', 
      ['S. M. Razaullah Ansari'],
      'E', None),
 
-    (276, ['Modern Theoretical and Observational', 'Cosmology:', 'Proceedings of the 2md Hellenic', 'Cosmology Meetings, held at the', 'National Observatory of Athens,', 'Penteli, 19-20 April 2001'], '2002', 
+    (276, ['Modern Theoretical and Observational', 'Cosmology:',
+           'Proceedings of the 2md Hellenic', 'Cosmology Meetings, held at the',
+           'National Observatory of Athens,', 'Penteli, 19-20 April 2001'], '2002', 
      ['Manolis Plionis', 'Spiros Cotsakis'],
      'E', None),
 
@@ -1398,15 +1555,17 @@ ASSL_BOOK_LIST = [
      ['M.A. Gordon', 'R.L. Sorochenko'],
      'A', None),
 
-    (283, ['Mass-Losing Pulsating Stars and', 'their Circumstellar Matter:', ' Observations and Theory'], '2003', 
+    (283, ['Mass-Losing Pulsating Stars and', 'their Circumstellar Matter:',
+           'Observations and Theory'], '2003', 
      ['Y. Nakada', 'M. Honma', 'M. Seki'],
      'E', None),
 
-    (284, ['Light Pollution: The Global View:', 'Proceedings of the International', 'Conference on Light Pollution, La', 'Serena, Chile, held 5-7 March 2002'], '2003', 
+    (284, ['Light Pollution: The Global View:', 'Proceedings of the International',
+           'Conference on Light Pollution, La', 'Serena, Chile, held 5-7 March 2002'], '2003', 
      ['Hugo E. Schwarz'],
      'E', None),
 
-    (285, ['Information Handling in Astronomy -', 'Historical Vistas'], '2002', 
+    (285, ['Information Handling in Astronomy ---', 'Historical Vistas'], '2002', 
      ['André Heck'],
      'E', None),
 
@@ -1434,11 +1593,12 @@ ASSL_BOOK_LIST = [
      ['A. A. Coley'],
      'A', None),
 
-    (292, ['Whatever Shines Should be Observed:', ' Quicquid Nitet Notandum),'], '2003', 
+    (292, ['Whatever Shines Should be Observed:', 'Quicquid Nitet Notandum),'], '2003', 
      ['Susan M. P. McKenna-Lawlor'],
      'A', None),
 
-    (293, ['Physics of the Solar System:', 'Dynamics and Evolution, Space', 'Physics, and Spacetime Structure'], '2003', 
+    (293, ['Physics of the Solar System:', 'Dynamics and Evolution, Space',
+           'Physics, and Spacetime Structure'], '2003', 
      ['Bruno Bertotti', 'Paolo Farinella', 'David Vokrouhlický'],
      'A', None),
 
@@ -1446,7 +1606,8 @@ ASSL_BOOK_LIST = [
      ['Marcel Goossens'],
      'A', None),
 
-    (295, ['Integrable Problems of Celestial', 'Mechanics in Spaces of Constant', 'Curvature'], '2003', 
+    (295, ['Integrable Problems of Celestial', 'Mechanics in Spaces of Constant',
+           'Curvature'], '2003', 
      ['Tatiana G. Vozmischeva'],
      'A', None),
 
@@ -1466,11 +1627,12 @@ ASSL_BOOK_LIST = [
      ['Jacques Lépine', 'Jane Gregorio-Hetem'],
      'E', None),
 
-    (300, ['Scientific Detectors for Astronomy:', ' The Beginning of a New Era'], '2004', 
+    (300, ['Scientific Detectors for Astronomy:', 'The Beginning of a New Era'], '2004', 
      ['Paola Amico', 'James W. Beletic', 'Jenna E. Beletic'],
      'E', None),
 
-    (301, ['Multiwavelength Cosmology:', 'Proceedings of the “Multiwavelength', 'Cosmology” Conference, held on', 'Mykonos Island, Greece, 17–20 June,', '2003'], '2004', 
+    (301, ['Multiwavelength Cosmology:', 'Proceedings of the “Multiwavelength',
+           'Cosmology” Conference, held on', 'Mykonos Island, Greece,', '17–20 June, 2003'], '2004', 
      ['Manolis Plionis'],
      'E', None),
 
@@ -1510,7 +1672,8 @@ ASSL_BOOK_LIST = [
      ['André Heck'],
      'E', None),
 
-    (311, ['The New Rosetta Targets:', 'Observations, Simulations and', 'Instrument Performance'], '2004', 
+    (311, ['The New Rosetta Targets:', 'Observations, Simulations and',
+           'Instrument Performance'], '2004', 
      ['Luigi Colangeli', 'Elena Mazzotta Epifani', 'Pasquale Palumbo'],
      'E', None),
 
@@ -1518,19 +1681,21 @@ ASSL_BOOK_LIST = [
      ['Hugo van Woerden', 'Bart P. Wakker', 'Ulrich J. Schwarz', 'Klaas S. de Boer'],
      'E', None),
 
-    (313, ['Adventures in Order and Chaos:', ' A Scientific Autobiography'], '2004', 
+    (313, ['Adventures in Order and Chaos:', 'A Scientific Autobiography'], '2004', 
      ['George Contopoulos'],
      'A', None),
 
-    (314, ['Solar and Space Weather', 'Radiophysics:', 'Current Status and Future', 'Developments'], '2005', 
+    (314, ['Solar and Space Weather', 'Radiophysics:', 'Current Status and Future',
+           'Developments'], '2005', 
      ['Dale E. Gary', 'Christoph U. Keller'],
      'E', None),
 
-    (315, ['How does the Galaxy Work?:', 'A Galactic Tertulia with Don Cox and', 'Ron Reynolds'], '2005', 
+    (315, ['How does the Galaxy Work?:',
+           'A Galactic Tertulia with Don Cox and', 'Ron Reynolds'], '2005', 
      ['Emilio J. Alfaro', 'Enrique Pérez', 'José Franco'],
      'E', None),
 
-    (316, ['Civic Astronomy:', 'Albany’s Dudley Observatory,', '1852---2002'], '2004', 
+    (316, ['Civic Astronomy:', 'Albany’s Dudley Observatory,', '1852--2002'], '2004', 
      ['George Wise'],
      'A', None),
 
@@ -1538,15 +1703,18 @@ ASSL_BOOK_LIST = [
      ['Giannina Poletto', 'Steven T. Suess'],
      'E', None),
 
-    (318, ['Transfer of Polarized Light in', 'Planetary Atmospheres:', 'Basic Concepts and Practical Methods'], '2004', 
+    (318, ['Transfer of Polarized Light in', 'Planetary Atmospheres:',
+           'Basic Concepts and Practical Methods'], '2004', 
      ['Joop W. Hovenier', 'Cornelis Van Der Mee', 'Helmut Domke'],
      'A', None),
 
-    (319, ['Penetrating Bars through Masks of', 'Cosmic Dust:', 'The Hubble Tuning Fork strikes a New', 'Note'], '2004', 
+    (319, ['Penetrating Bars through Masks of', 'Cosmic Dust:',
+           'The Hubble Tuning Fork strikes a New', 'Note'], '2004', 
      ['David L. Block', 'Ivânio Puerari', 'Kenneth C. Freeman', 'Robert Groess', 'Elizabeth K. Block'],
      'E', None),
 
-    (320, ['Solar Magnetic Phenomena:', 'Proceedings of the 3rd Summer School', 'and Workshop held at the Solar', 'Observatory Kanzelhöhe, Känten,', 'Austria, August 25 --- September 5.', '2003'], '2005', 
+    (320, ['Solar Magnetic Phenomena:', 'Proceedings of the 3rd Summer School',
+           'and Workshop held at the Solar', 'Observatory Kanzelhöhe, Känten,', 'Austria, August 25 --- September 5.', '2003'], '2005', 
      ['Arnold Hanslmeier', 'Astrid Veronig', 'Mauro Messerotti'],
      'E', None),
 
@@ -1558,15 +1726,16 @@ ASSL_BOOK_LIST = [
      ['Kohei Narisada', 'Duco Schreuder'],
      'E', None),
 
-    (323, ['Recollections of “Tucson', 'Operations”:', 'The Millimeter-Wave Observatory of', 'the National Radio Astronomy', 'Observatory'], '2005', 
+    (323, ['Recollections of “Tucson', 'Operations”:', 'The Millimeter-Wave Observatory of',
+           'the National Radio Astronomy', 'Observatory'], '2005', 
      ['M. A. Gordon'],
      'A', None),
 
-    (324, ['Cores to Clusters:', ' A Scientific Autobiography'], '2005', 
+    (324, ['Cores to Clusters:', 'A Scientific Autobiography'], '2005', 
      ['M. S. N. Kumar', 'M. Tafalla', 'P. Caselli'],
      'E', None),
 
-    (325, ['Kristian Birkeland:', ' The First Space Scientist'], '2005', 
+    (325, ['Kristian Birkeland:', 'The First Space Scientist'], '2005', 
      ['Alv Egeland', 'William J. Burke'],
      'A', None),
 
@@ -1602,7 +1771,9 @@ ASSL_BOOK_LIST = [
      ['P. Clark', 'S. McKenna-Lawlor'],
      'A', '1-387-26358-6'),
 
-    (334, ['The New Astronomy: Opening the', 'Electromagnetic Window and Expanding', 'Our View of Planet Earth:', 'A Meetings to Honor Woody Sullivan', 'on his 60th Birthday'], '2005', 
+    (334, ['The New Astronomy: Opening the', 'Electromagnetic Window and Expanding',
+           'Our View of Planet Earth:', 'A Meetings to Honor Woody Sullivan',
+           'on his 60th Birthday'], '2005', 
      ['Wayne Orchiston'],
      'E', None),
 
@@ -1618,15 +1789,17 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (338, ['Solar Journey:', 'The Significance of our Galactic', 'Environment for the Heliosphere and', 'Earth'], '2006', 
+    (338, ['Solar Journey:', 'The Significance of our Galactic',
+           'Environment for the Heliosphere and', 'Earth'], '2006', 
      ['Priscilla C.Frisch'],
      'E', None),
 
-    (339, ['Cosmic Ray Interactions,', 'Propagation, and Acceleration in', 'Space Plasmas'], '2006', 
+    (339, ['Cosmic Ray Interactions,', 'Propagation, and Acceleration in',
+           'Space Plasmas'], '2006', 
      ['Lev I. Dorman'],
      'A', None),
 
-    (340, ['Plasma Astrophysics:', ' Part I,  Fundamentals and Practice'], '2006', 
+    (340, ['Plasma Astrophysics:', 'Part I,  Fundamentals and Practice'], '2006', 
      ['Boris V. Somov'],
      'A', None),
 
@@ -1646,7 +1819,7 @@ ASSL_BOOK_LIST = [
      ['Jean Lilensten'],
      'E', None),
 
-    (345, ['Canonical Perturbation Theories:', ' Degenerate Systems and Resonance'], '2007', 
+    (345, ['Canonical Perturbation Theories:', 'Degenerate Systems and Resonance'], '2007', 
      ['Sylvio Ferraz-Mello'],
      'A', None),
 
@@ -1658,11 +1831,13 @@ ASSL_BOOK_LIST = [
      ['Arnold Hanslmeier'],
      'A', None),
 
-    (348, ['The Paraboloidal Reflector Antenna', 'in Radio Astronomy and', 'Communication:', ' Theory and Practice'], '2007', 
+    (348, ['The Paraboloidal Reflector Antenna', 'in Radio Astronomy and', 'Communication:',
+           'Theory and Practice'], '2007', 
      ['Jacob W. M. Baars'],
      'A', None),
 
-    (349, ['Lasers, Clocks and Drag-Free', 'Control:', 'Exploration of Relativistic Gravity', 'in Space'], '2008', 
+    (349, ['Lasers, Clocks and Drag-Free', 'Control:', 'Exploration of Relativistic Gravity',
+           'in Space'], '2008', 
      ['Hansjorg Dittus', 'Claus Lammerzahl', 'Slava G. Turyshev'],
      'E', None),
 
@@ -1702,15 +1877,18 @@ ASSL_BOOK_LIST = [
      ['Lev Dorman'],
      'A', None),
 
-    (359, ['Physics of Relativistic Objects in', 'Compact Binaries: From Birth to', 'Coalescence'], '2009', 
-     ['Monica Colpi', 'Piergiorgio Casella', 'Vittorio Gorini', 'Ugo Moschella', 'Andrea Possenti'],
+    (359, ['Physics of Relativistic Objects in', 'Compact Binaries: From Birth to',
+           'Coalescence'], '2009', 
+     ['Monica Colpi', 'Piergiorgio Casella', 'Vittorio Gorini', 'Ugo Moschella',
+      'Andrea Possenti'],
      'E', None),
 
     (360, ['The Principles of Astronomical', 'Telescope Design'], '2009', 
      ['Jingquan Cheng'],
      'A', None),
 
-    (361, ['The Sun Recorded Through History:', 'Scientific Data Extracted from', 'Historical Documents'], '2009', 
+    (361, ['The Sun Recorded Through History:', 'Scientific Data Extracted from',
+           'Historical Documents'], '2009', 
      ['M. Vázquez', 'M. Vaquero'],
      'A', None),
 
@@ -1722,7 +1900,8 @@ ASSL_BOOK_LIST = [
      ['Prof. W. M. Goss', 'Dr. Richard X. McGee'],
      'E', None),
 
-    (364, ['Thermal Design and Thermal Behaviour', 'of Radio Telescopes and their', 'Enclosures'], '2010', 
+    (364, ['Thermal Design and Thermal Behaviour', 'of Radio Telescopes and their',
+           'Enclosures'], '2010', 
      ['Albert Greve', 'Michael Bremer'],
      'A', None),
 
@@ -1742,15 +1921,16 @@ ASSL_BOOK_LIST = [
      ['Arnold Hanslmeier'],
      'A', None),
 
-    (369, ['Jacobi Dynamics:', 'A Unified Theory with Applications', 'to Geophysics, Celestial Mechanics,', 'Astrophysics and Cosmology'], '2011', 
+    (369, ['Jacobi Dynamics:', 'A Unified Theory with Applications',
+           'to Geophysics, Celestial Mechanics,', 'Astrophysics and Cosmology'], '2011', 
      ['V.I. Ferronsky', 'S.A. Denisik', 'S.V. Ferronsky'],
      'A', None),
 
-    (370, ['Dark Matter and Dark Energy:', ' A Challenge to Modern Cosmology'], '2011', 
+    (370, ['Dark Matter and Dark Energy:', 'A Challenge to Modern Cosmology'], '2011', 
      ['Sabino Matarrese', 'Monica Colpi', 'Vittorio Gorini', 'Ugo Moschella'],
      'E', None),
 
-    (371, ['Linear Isentropic Oscillations of', 'Stars:', ' Theoretical Foundations'], '2010', 
+    (371, ['Linear Isentropic Oscillations of', 'Stars:', 'Theoretical Foundations'], '2010', 
      ['Paul Smeyers', 'Tim Van Hoolst'],
      'A', None),
 
@@ -1758,11 +1938,12 @@ ASSL_BOOK_LIST = [
      ['George V. Khazanov'],
      'A', None),
 
-    (373, ['Astronomical Photometry:', ' Past, Present, and Future'], '2011', 
+    (373, ['Astronomical Photometry:', 'Past, Present, and Future'], '2011', 
      ['Eugene F. Milone', 'C. Sterken'],
      'E', None),
 
-    (374, ['Heaven and Earth in Ancient Greek', 'Cosmology:', ' From Thales to Heraclides Ponticus'], '2011', 
+    (374, ['Heaven and Earth in Ancient Greek', 'Cosmology:',
+           'From Thales to Heraclides Ponticus'], '2011', 
      ['Dirk L. Couprie'],
      'A', None),
 
@@ -1770,7 +1951,7 @@ ASSL_BOOK_LIST = [
      ['Gennady P. Chernov'],
      'A', None),
 
-    (376, ['Coronal Mass Ejections:', ' An Introduction'], '2011', 
+    (376, ['Coronal Mass Ejections:', 'An Introduction'], '2011', 
      ['Timothy Howard'],
      'A', None),
 
@@ -1790,15 +1971,17 @@ ASSL_BOOK_LIST = [
      ['Françoise Launay'],
      'A', None),
 
-    (381, ['Taking the Back off the Watch:', ' A Personal Memoir'], '2012', 
+    (381, ['Taking the Back off the Watch:', 'A Personal Memoir'], '2012', 
      ['Thomas Gold aut.', 'Simon Mitton'],
      'E', None),
 
-    (382, ['A Brief History of Radio Astronomy', 'in the USSR:', ' A Collection of Scientific Essays'], '2012', 
+    (382, ['A Brief History of Radio Astronomy', 'in the USSR:',
+           'A Collection of Scientific Essays'], '2012', 
      ['S. Y. Braude', 'A. E. Salomonovich', 'V. A. Samanian', 'I. S. Shklovskii', 'R. L. Sorochenko', 'V. S. Troitskii', 'K. I. Kellermann', 'B. A. Dubinskii', 'N. L. Kaidanovskii', 'N. S. Kardashev', 'M. M. Kobrin', 'A. D. Kuzmin', 'A. P. Molchanov', 'Yu. N. Pariiskii', 'O. N. Rzhiga'],
      'E', None),
 
-    (383, ['Fundamental Questions of Practical', 'Cosmology:', ' Exploring the Realm of Galaxies'], '2012', 
+    (383, ['Fundamental Questions of Practical', 'Cosmology:',
+           'Exploring the Realm of Galaxies'], '2012', 
      ['Yurij Baryshev', 'Pekka Teerikorpi'],
      'A', None),
 
@@ -1810,35 +1993,38 @@ ASSL_BOOK_LIST = [
      ['Ingrid Mann', 'Nicole Meyer-Vernet', 'Andrzej Czechowski'],
      'E', None),
 
-    (386, ['Fifty Years of Quasars:', 'From Early Observations and Ideas to', 'Future Research'], '2012', 
+    (386, ['Fifty Years of Quasars:', 'From Early Observations and Ideas to',
+           'Future Research'], '2012', 
      ["Mauro D'Onofrio", 'Paola Marziani', 'Jack W. Sulentic'],
      'E', None),
 
-    (387, ['The Synthesis of the Elements:', 'The Astrophysical Quest for', 'Nucleosynthesis and What It Can Tell', 'Use About the Universe'], '2012', 
+    (387, ['The Synthesis of the Elements:', 'The Astrophysical Quest for',
+           'Nucleosynthesis and What It Can Tell', 'Us About the Universe'], '2012', 
      ['Giora Shaviv'],
      'A', None),
 
-    (388, ['Cosmic Electrodynamics:', 'Electrodynamics and Magnito', 'Hydrodynamics of Cosmic Plasma'], '2013', 
+    (388, ['Cosmic Electrodynamics:', 'Electrodynamics and Magnito',
+           'Hydrodynamics of Cosmic Plasma'], '2013', 
      ['Gregory D. Fleishman', 'Igor N. Toptygin'],
      'A', None),
 
-    (389, ['Turbulence and Self-Organization:', ' Modeling Astrophysical Objects'], '2013', 
+    (389, ['Turbulence and Self-Organization:', 'Modeling Astrophysical Objects'], '2013', 
      ['Mikhail Ya Marov', 'Aleksander V. Kolesnichenko'],
      'A', None),
 
-    (390, ['In Search of William Gascoigne:', ' Seventeenth Century Astronomer'], '2012', 
+    (390, ['In Search of William Gascoigne:', 'Seventeenth Century Astronomer'], '2012', 
      ['David Sellers'],
      'A', None),
 
-    (391, ['Plasma Astrophysics, Part I:', ' Fundamentals and Practice'], '2012', 
+    (391, ['Plasma Astrophysics, Part I:', 'Fundamentals and Practice'], '2012', 
      ['Boris V. Somov'],
      'A', None),
 
-    (392, ['Plasma Astrophysics, Part II:', ' Reconnection and Flares'], '2013', 
+    (392, ['Plasma Astrophysics, Part II:', 'Reconnection and Flares'], '2013', 
      ['Boris V. Somov'],
      'A', None),
 
-    (393, ['Carl Størmer:', ' Auroral Pioneer'], '2013', 
+    (393, ['Carl Størmer:', 'Auroral Pioneer'], '2013', 
      ['Alv Egeland', 'William J. Burke'],
      'A', None),
 
@@ -1862,7 +2048,8 @@ ASSL_BOOK_LIST = [
      ['Audouin Dollfus'],
      'A', None),
 
-    (399, ['The Stars of Galileo Galilei and the', 'Universal Knowledge of Athanasius', 'Kircher'], '2014', 
+    (399, ['The Stars of Galileo Galilei and the', 'Universal Knowledge of Athanasius',
+           'Kircher'], '2014', 
      ['Roberto Buonanno'],
      'A', None),
 
@@ -1870,7 +2057,8 @@ ASSL_BOOK_LIST = [
      ['Vladimir Kuznetsov'],
      'E', None),
 
-    (401, ['50 Years of Brown Dwarfs:', 'From Predictions to Discovery to', 'Forefront of Research'], '2014', 
+    (401, ['50 Years of Brown Dwarfs:', 'From Predictions to Discovery to',
+           'Forefront of Research'], '2014', 
      ['Viki Joergens'],
      'E', None),
 
@@ -1878,19 +2066,23 @@ ASSL_BOOK_LIST = [
      ['Walter F. Huebner', 'W. David Barfield'],
      'A', None),
 
-    (403, ['Dynamics of Magnetically Trapped', 'Particles:', 'Foundations of the Physics of', 'Radiation Belts and Space Plasmas'], '2014', 
+    (403, ['Dynamics of Magnetically Trapped', 'Particles:', 'Foundations of the Physics of',
+           'Radiation Belts and Space Plasmas'], '2014', 
      ['Juan G. Roederer', 'Hui Zhang'],
      'A', None),
 
-    (404, ['Advanced Interferometers and the', 'Search for Gravitational Waves:', 'Lectures from the Frist VESF School', 'on Advanced Detectors for', 'Gravitational Waves'], '2014', 
+    (404, ['Advanced Interferometers and the', 'Search for Gravitational Waves:',
+           'Lectures from the First VESF School', 'on Advanced Detectors for',
+           'Gravitational Waves'], '2014', 
      ['Massimo Bassan'],
      'E', None),
 
-    (405, ['Solar Cosmic Rays:', ' Fundamentals and Applications'], '2015', 
+    (405, ['Solar Cosmic Rays:', 'Fundamentals and Applications'], '2015', 
      ['Leonty Miroshnichenko'],
      'A', None),
 
-    (406, ['Eclipses, Transits, and Comets of', 'the Nineteenth Century:', 'How America’s Perception of the', 'Skies Changed'], '2015', 
+    (406, ['Eclipses, Transits, and Comets of', 'the Nineteenth Century:',
+           'How America’s Perception of the', 'Skies Changed'], '2015', 
      ['Stella Cottam', 'Wayne Orchiston'],
      'A', None),
 
@@ -1902,7 +2094,7 @@ ASSL_BOOK_LIST = [
      ['Thomas B. Ake', 'Elizabeth Griffin'],
      'E', None),
 
-    (409, ["Camille Flammarion's The Planet", 'Mars:', ' as translated by Patrick Moore'], '2015', 
+    (409, ["Camille Flammarion's The Planet", 'Mars:', 'as translated by Patrick Moore'], '2015', 
      ['William Sheehan'],
      'E', None),
 
@@ -1930,7 +2122,7 @@ ASSL_BOOK_LIST = [
      ['Jean-Claude Vial', 'Oddbjørn Engvold'],
      'E', None),
 
-    (416, ['Jacobus Cornelius Kapteyn:', ' Born Investigator of the Heavens'], '2015', 
+    (416, ['Jacobus Cornelius Kapteyn:', 'Born Investigator of the Heavens'], '2015', 
      ['Pieter C. van der Kruit'],
      'A', None),
 
@@ -1942,23 +2134,28 @@ ASSL_BOOK_LIST = [
      ['Eija Laurikainen', 'Reynier Peletier', 'Dimitri Gadotti'],
      'E', None),
 
-    (419, ['The Starlight Night:', 'The Sky in the Writings of', 'Shakespeare, Tennyson, and Hopkins'], '2016', 
+    (419, ['The Starlight Night:', 'The Sky in the Writings of',
+           'Shakespeare, Tennyson, and Hopkins'], '2016', 
      ['David H. Levy'],
      'A', None),
 
-    (420, ['Tidal Streams in the Local Group and', 'Beyond:', ' Observations and Implications'], '2016', 
+    (420, ['Tidal Streams in the Local Group and', 'Beyond:',
+           'Observations and Implications'], '2016', 
      ['Heidi Jo Newberg', 'Jeffrey L. Carlin'],
      'E', None),
 
-    (421, ['François Arago:', 'A 19th Century French Humanist and', 'Pioneer in Astronomy'], '2016', 
+    (421, ['François Arago:', 'A 19th Century French Humanist and',
+           'Pioneer in Astronomy'], '2016', 
      ['James Lequeux'],
      'A', None),
 
-    (422, ['Exploring the History of New Zealand', 'Astronomy:', 'Trials, Tribulations, Telescopes and', 'Transits'], '2016', 
+    (422, ['Exploring the History of New Zealand', 'Astronomy:',
+           'Trials, Tribulations, Telescopes and', 'Transits'], '2016', 
      ['Wayne Orchiston'],
      'A', None),
 
-    (423, ['Understanding the Epoch of Cosmic', 'Reionization:', ' Challenges and Progress'], '2016', 
+    (423, ['Understanding the Epoch of Cosmic', 'Reionization:',
+           'Challenges and Progress'], '2016', 
      ['Andrei Mesinger'],
      'E', None),
 
@@ -1974,11 +2171,12 @@ ASSL_BOOK_LIST = [
      [],
      None, None),
 
-    (427, ['Magnetic Reconnection:', ' Concepts and Applications'], '2016', 
+    (427, ['Magnetic Reconnection:', 'Concepts and Applications'], '2016', 
      ['Walter Gonzalez', 'Eugene Parker'],
      'E', None),
 
-    (428, ['Methods of Detecting Exoplanets:', '1st Advanced School on Exoplanetary', 'Science'], '2016', 
+    (428, ['Methods of Detecting Exoplanets:', '1st Advanced School on Exoplanetary',
+           'Science'], '2016', 
      ['Valerio Bozza', 'Luigi Mancini', 'Alessandro Sozzetti'],
      'E', None),
 
@@ -2006,7 +2204,8 @@ ASSL_BOOK_LIST = [
      ['Johan H. Knapen', 'Janice C. Lee', 'Armando Gil de Paz'],
      'E', None),
 
-    (435, ['From the Realm of the Nebulae to', 'Populations of Galaxies:', ' Dialogues on a Century of Research'], '2016', 
+    (435, ['From the Realm of the Nebulae to', 'Populations of Galaxies:',
+           'Dialogues on a Century of Research'], '2016', 
      ["Mauro D'Onofrio", 'Roberto Rampazzo', 'Simone Zaggia'],
      'E', None),
 
@@ -2022,27 +2221,33 @@ ASSL_BOOK_LIST = [
      ['George M. Simnett'],
      'A', None),
 
-    (439, ['Astronomy at High Angular', 'Resolution:', 'A Compendium of Techniques in the', 'Visible and Near-Infrared'], '2016', 
+    (439, ['Astronomy at High Angular', 'Resolution:', 'A Compendium of Techniques in the',
+           'Visible and Near-Infrared'], '2016', 
      ['Henri M. J. Boffin', 'Gaitee Hussain', 'Jean-Philippe Berger', 'Linda Schmidtobreick'],
      'E', None),
 
-    (440, ['Astrophysics of Black Holes:', 'From Fundamental Aspects to Latest', 'Developments'], '2016', 
+    (440, ['Astrophysics of Black Holes:', 'From Fundamental Aspects to Latest',
+           'Developments'], '2016', 
      ['Cosimo Bambi'],
      'E', None),
 
-    (441, ['The Lidov-Kozai Effect -', 'Applications in Exoplanet Research', 'and Dynamical Astronomy'], '2017', 
+    (441, ['The Lidov-Kozai Effect ---', 'Applications in Exoplanet Research',
+           'and Dynamical Astronomy'], '2017', 
      ['Ivan I. Shevchenko'],
      'A', None),
 
-    (442, ['A Dirty Window:', 'Diffuse and Translucent Molecular', 'Gas in the Interstellar Medium'], '2017', 
+    (442, ['A Dirty Window:', 'Diffuse and Translucent Molecular',
+           'Gas in the Interstellar Medium'], '2017', 
      ['Loris Magnani', 'Steven N. Shore'],
      'A', None),
 
-    (443, ['The Three-Body Problem and the', 'Equations of Dynamics:', 'Poincaré’s Foundational Work on', 'Dynamical Systems'], '2017', 
+    (443, ['The Three-Body Problem and the', 'Equations of Dynamics:',
+           'Poincaré’s Foundational Work on', 'Dynamical Systems'], '2017', 
      ['Henri Poincaré'],
      'A', None),
 
-    (444, ['Solar Particle Radiation Storms', 'Forecasting and Analysis:', 'The HESPERIA HORIZON 202 Project and', 'Beyond'], '2018', 
+    (444, ['Solar Particle Radiation Storms', 'Forecasting and Analysis:',
+           'The HESPERIA HORIZON 2020 Project and', 'Beyond'], '2018', 
      ['Dr. Olga E. Malandraki', 'Dr. Norma B. Crosby'],
      'E', None),
 
@@ -2054,11 +2259,13 @@ ASSL_BOOK_LIST = [
      ['Prof. Diego F. Torres'],
      'E', None),
 
-    (447, ['Radio Telescope Reflectors:', 'Historical Development of Design and', 'Construction'], '2018', 
+    (447, ['Radio Telescope Reflectors:', 'Historical Development of Design and',
+           'Construction'], '2018', 
      ['Dr. Jacob W. M. Baars', 'Dr. Hans J Kärcher'],
      'A', None),
 
-    (448, ['Magnetic Fields in the Solar System:', 'Planets, Moons and Solar Wind', 'Interaction'], '2018', 
+    (448, ['Magnetic Fields in the Solar System:', 'Planets, Moons and Solar Wind',
+           'Interaction'], '2018', 
      ['Hermann Lühr', 'Johannes Wicht', 'Stuart A. Gilder', 'Matthias Holschneider'],
      'E', None),
 
@@ -2066,7 +2273,8 @@ ASSL_BOOK_LIST = [
      ['Prof. Toshifumi Shimizu', 'Prof. Shinsuke Imada', 'Dr. Masahito Kubo'],
      'E', None),
 
-    (450, ['Astrophysics of Exoplanetary', 'Atmospheres:', '2nd Advanced School on Exoplanetary', 'Science'], '2018', 
+    (450, ['Astrophysics of Exoplanetary', 'Atmospheres:',
+           '2nd Advanced School on Exoplanetary', 'Science'], '2018', 
      ['Prof. Dr. Valerio Bozza', 'Dr. Luigi Mancini', 'Prof. Dr. Alessandro Sozzetti'],
      'E', None),
 ]
