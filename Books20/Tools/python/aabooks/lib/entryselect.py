@@ -16,7 +16,9 @@
 ## End copyright
 
 
-"""Choose an entry from the list."""
+"""Choose an entry from the list.
+
+Why don't we use a QListWidget here?"""
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -73,8 +75,6 @@ class EntrySelect(QtWidgets.QDialog, EntrySelect_ui.Ui_ShortTitleDisplay):
 
     def return_entry(self):
         ''' return Entry'''
-        # emit selection and close?
-        #print('selected: %s '% self.cursor.selectedText())
         emit_string = self.cursor.selectedText()
         self.lineEmit.emit((emit_string, ))
         self.close()
@@ -93,6 +93,8 @@ class EntrySelect(QtWidgets.QDialog, EntrySelect_ui.Ui_ShortTitleDisplay):
 
 
 if __name__ == '__main__':
+
+    import sys
 
     def print_me(_me):
         ''' print me '''
