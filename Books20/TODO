@@ -1,3 +1,18 @@
+15 Oct 2018
+  Consolidate .gitignore
+    move generic patterns from books/.gitignore to Books20/.gitignore
+    remove specific patterns
+    more specific patterns to directory .gitignore files
+    
+  Test QListWidget in aabooks branch
+
+  Add more Springer Series to series.tex
+  add cross links to other springer series if available
+
+  Continued cataloging AJB22
+
+  Make notes about database
+
 
 16 Aug 2018 What should be in the bookentry package? Any functions
    should be very generic and not depand on the specifics of journals,
