@@ -1,3 +1,8 @@
+2018-10-15  Jim Fowler  <jrf@biblion>
+
+	* .gitignore: placed generic patterns in toplevel files
+	and specific pattern in directory .gitignore files.
+
 2018-09-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/versions: Tagged current HEAD as 'v2.1'
