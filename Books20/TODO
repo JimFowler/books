@@ -1,5 +1,5 @@
 15 Oct 2018
-  Consolidate .gitignore
+  Consolidate .gitignore DONE 15 Oct 2018
     move generic patterns from books/.gitignore to Books20/.gitignore
     remove specific patterns
     more specific patterns to directory .gitignore files
