@@ -3,7 +3,7 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Docs/Series/assl_kluwer_table.py
+##  /home/jrf/Documents/books/Books20/Docs/Series/assl_table.py
 ##
 ##   Part of the Books20 Project
 ##
@@ -18,7 +18,7 @@
 ##
 ## End copyright
 '''
-  assl_kluwer_table.py
+  assl_table.py
 
    Table listing of the book series Astrophysics and Space Science
    Library published by Kluwer Academic 1965-1999 and by
@@ -27,10 +27,11 @@
    and Astrophysics in the 20th Century"
 
    This file creates the LaTeX longtable format
-   asslKluwerTable.tex
+   springerASSLtable.tex
 
    This information was gather from the back pages of
-   volumes 280 and 338.
+   volumes 280 and 338. The remaining data were collected
+   from the Springer-Nature web site
 '''
 
 import table as tb
@@ -38,7 +39,7 @@ from pprint import pprint
 
 TBL_COMMENT = '''%%
 %%
-%% asslKluwerTable.tex
+%% springerASSLtable.tex
 %%
 %%   Table listing of the book series Astrophysics and Space Science
 %%   Library published by Kluwer Academic 1965-1999 and by
@@ -60,9 +61,9 @@ TBL_COPYRIGHT = r'''%%   Copyright 2018 James R. Fowler
 %%
 '''
 
-TBL_CAPTION = r'\bf Kluwer/Springer \bt{Astrophysics and Space Science Library}'
+TBL_CAPTION = r'\bf Springer \bt{Astrophysics and Space Science Library}'
 TBL_FORMAT = r'[p]{l l l l}'
-TBL_LABEL = r'assl-kluwer:1'
+TBL_LABEL = r'assl-springer:1'
 TBL_HEADING = r'Vol & Title & Author/Editor(s) & Date'
 CONTINUE_LABEL = r'Continuation of \bt{Astrophysics and Space Science Library}'
 TBL_PREAMBLE = ''

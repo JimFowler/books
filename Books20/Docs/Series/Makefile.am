@@ -31,11 +31,10 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-BUILT_TABLE_FILES = asslKluwerTable.tex springerAALtable.tex
+BUILT_TABLE_FILES = springerASSLtable.tex springerAALtable.tex
 TABLE_FILES = 
 SERIES_TEX_FILES = series.tex intro.tex other.tex \
-	harvard.tex uchicago.tex \
-	uaspacescience.tex asslKluwer.tex springer.tex
+	harvard.tex uchicago.tex uarizona.tex springer.tex
 
 BIB_FILES = 
 #
@@ -64,8 +63,8 @@ series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
 	${LATEX} -draftmode series
 	${LATEX} series
 
-asslKluwerTable.tex: assl_kluwer_table.py
-	python assl_kluwer_table.py > asslKluwerTable.tex
+springerASSLtable.tex: assl_table.py
+	python assl_table.py > springerASSLtable.tex
 
 springerAALtable.tex: aal_table.py
 	python aal_table.py > springerAALtable.tex
