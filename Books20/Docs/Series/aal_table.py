@@ -68,7 +68,7 @@ AAL_BOOK_LIST = [
      ['Kenneth R. Lang'],
      'A', None),
 
-    (2, ['Galactic and Extragalactic Radio', 'Astronomy', '\Ord{2}{nd} ed.'], '1988', 
+    (2, ['Galactic and Extragalactic Radio', 'Astronomy, \Ord{2}{nd} ed.'], '1988', 
      ['Gerrit L. Verschuur', 'Kenneth I. Kellermann'],
      'E', None),
 
@@ -76,7 +76,7 @@ AAL_BOOK_LIST = [
      ['Helmut Scheffler', 'Hans Elsässer'],
      'A', None),
 
-    (4, ['Astrophysical Concepts', '\Ord{2}{nd} Edition'], '1988', 
+    (4, ['Astrophysical Concepts, \Ord{2}{nd} ed.'], '1988', 
      ['Martin Harwit'],
      'A', None),
 
@@ -121,7 +121,7 @@ AAL_BOOK_LIST = [
      ['Jean Kovalevsky'],
      'A', None),
 
-    (15, ['The Solar System', '\Ord{2}{nd} ed.'], '1995', 
+    (15, ['The Solar System, \Ord{2}{nd} ed.'], '1995', 
      ['Thérèse Encrenaz', 'Jean-Pierre Bibring'],
      'A', None),
 
@@ -142,7 +142,7 @@ AAL_BOOK_LIST = [
      ['Grigor A. Gurzadyan'],
      'A', None),
 
-    (20, ['Astrophysical Concepts', '\Ord{3}{rd} ed.'], '1998', 
+    (20, ['Astrophysical Concepts, \Ord{3}{rd} ed.'], '1998', 
      ['Martin Harwit'],
      'A', None),
 
@@ -150,7 +150,7 @@ AAL_BOOK_LIST = [
      ['Malcolm S. Longair'],
      'A', None),
 
-    (22, ['Observational Astrophysics', '\Ord{2}{nd} ed.'], '1998', 
+    (22, ['Observational Astrophysics, \Ord{2}{nd} ed.'], '1998', 
      ['Pierre Léna', 'François Lebrun', 'François Mignard'],
      'A', None),
 
@@ -196,11 +196,11 @@ AAL_BOOK_LIST = [
      ['Eberhard Grün', 'Bo Å. S. Gustafson', 'Stan Dermott', 'Hugo Fechtig'],
      'E', None),
 
-    (33, ['The Sun:', 'An Introduction, \Ord{2}{nd} ed.'], '2002', 
+    (33, ['The Sun: An Introduction, \Ord{2}{nd} ed.'], '2002', 
      ['Michael Stix'],
      'A', None),
 
-    (34, ['Modern Astrometry', '\Ord{2}{nd} ed.'], '2002', 
+    (34, ['Modern Astrometry, \Ord{2}{nd} ed.'], '2002', 
      ['Jean Kovalevsky'],
      'A', None),
 
@@ -232,7 +232,7 @@ AAL_BOOK_LIST = [
      ['Pierre Y. Bely'],
      'A', None),
 
-    (42, ['Tools of Radio Astronomy', '\Ord{4}{th} ed.'], '2004', 
+    (42, ['Tools of Radio Astronomy, \Ord{4}{th} ed.'], '2004', 
      ['K. Rohlfs', 'T. L. Wilson'],
      'A', None),
 
@@ -245,7 +245,7 @@ AAL_BOOK_LIST = [
      ['Carl J. Hansen', 'Steven D. Kawaler', 'Virginia Trimble'],
      'A', None),
 
-    (45, ['The Solar System', '\Ord{3}{rd} ed.'], '2004', 
+    (45, ['The Solar System, \Ord{3}{rd} ed.'], '2004', 
      ['Thérèse Encrenaz', 'Jean-Pierre Bibring', 'Michel Blanc', 'Maria-Antonietta Barucci',
       'Francoise Roques', 'Philippe Zarka'],
      'A', None),
@@ -277,11 +277,11 @@ AAL_BOOK_LIST = [
      ['Wolfgang Kundt'],
      'A', None),
 
-    (52, ['Astrophysical Concepts', '\Ord{4}{th} ed.'], '2006', 
+    (52, ['Astrophysical Concepts, \Ord{4}{th} ed.'], '2006', 
      ['Martin Harwit'],
      'A', None),
 
-    (53, ['Astronomical Image and Data Analysis', '\Ord{2}{nd} ed.'], '2006', 
+    (53, ['Astronomical Image and Data Analysis,', '\Ord{2}{nd} ed.'], '2006', 
      ['J.-L. Starck', 'F. Murtagh'],
      'A', None),
 
@@ -314,7 +314,7 @@ AAL_BOOK_LIST = [
      ['Eugene F. Milone', 'Willam J. F. Wilson'],
      'A', None),
 
-    (60, ['Galaxy Formation', '\Ord{2}{nd} ed.'], '2008', 
+    (60, ['Galaxy Formation, \Ord{2}{nd} ed.'], '2008', 
      ['Malcolm S. Longair'],
      'A', None),
 
@@ -330,7 +330,7 @@ AAL_BOOK_LIST = [
      ['Josef Kallrath', 'Eugene F. Milone'],
      'A', None),
 
-    (64, ['The Sun from Space', '\Ord{2}{nd} ed.'], '2009', 
+    (64, ['The Sun from Space, \Ord{2}{nd} ed.'], '2009', 
      ['Kenneth R. Lang'],
      'A', None),
 
@@ -338,7 +338,7 @@ AAL_BOOK_LIST = [
      ['André Maeder'],
      'A', None),
 
-    (66, ['Tools of Radio Astronomy', '\Ord{5}{th} ed.'], '2009', 
+    (66, ['Tools of Radio Astronomy, \Ord{5}{th} ed.'], '2009', 
      ['Thomas L. Wilson', 'Kristen Rohlfs', 'Susanne Hüttemeister'],
      'A', None),
 
@@ -374,7 +374,7 @@ AAL_BOOK_LIST = [
      'A', None),
 
     (74, ['Stellar Physics:', 'Part 2, Stellar Evolution and',
-          'Stability, \Ord{2}{nd} Edtion'], '2011', 
+          'Stability, \Ord{2}{nd} ed.'], '2011', 
      ['Gennady S. Bisnovatyi-Kogan'],
      'A', None),
 
@@ -391,11 +391,11 @@ AAL_BOOK_LIST = [
      ['Francesca Matteucci'],
      'A', None),
 
-    (78, ['Observational Astrophysics', '\Ord{3}{rd} ed.'], '2012', 
+    (78, ['Observational Astrophysics, \Ord{3}{rd} ed.'], '2012', 
      ['Pierre Léna', 'Daniel Rouan', 'François Lebrun', 'François Mignard', 'Didier Pelat'],
      'A', None),
 
-    (79, ['Stellar Structure and Evolution', '\Ord{2}{nd} ed.'], '2012', 
+    (79, ['Stellar Structure and Evolution, \Ord{2}{nd} ed.'], '2012', 
      ['Rudolf Kippenhahn', 'Alfred Weigert', 'Achim Weiss'],
      'A', None),
 
@@ -407,7 +407,7 @@ AAL_BOOK_LIST = [
      ['Michael Soffel', 'Ralf Langhans'],
      'A', None),
 
-    (82, ['Tools of Radio Astronomy', '\Ord{6}{th} ed.'], '2013', 
+    (82, ['Tools of Radio Astronomy, \Ord{6}{th} ed.'], '2013', 
      ['Thomas L. Wilson', 'Kristen Rohlfs', 'Susanne Hüttemeister'],
      'A', None),
 
@@ -450,7 +450,7 @@ AAL_BOOK_LIST = [
      ['George K. Parks'],
      'A', None),
 
-    (92, ['Tools of Radio Astronomy -',  'Problems and Solutions', '\Ord{2}{nd} ed.'], '2018', 
+    (92, ['Tools of Radio Astronomy -',  'Problems and Solutions, \Ord{2}{nd} ed.'], '2018', 
      ['T.L. Wilson', 'Susanne Hüttemeister'],
      'A', None),
     ]
