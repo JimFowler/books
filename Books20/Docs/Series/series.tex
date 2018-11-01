@@ -24,6 +24,7 @@
 \documentclass[letterpaper]{article}
 
 \usepackage{books20}
+\usepackage[toc,page,title]{appendix}
 
 % need to set text width to soak up space
 % otherwise is is soaked up in the right hand margin
@@ -57,23 +58,30 @@
 %\begin{abstract}
 %\end{abstract}
 
-\section{Introduction}
 \import{./}{intro}
 
-\import{./}{HarvardBooksAstronomy}
+\import{./}{harvard}
+
 \import{./}{uchicago}
+
 \import{./}{uaspacescience}
+
 \import{./}{asslKluwer}
-\section{Springer-Verlag Series}
+
 \import{./}{springer}
 
-\section{Other Series}
 \import{./}{other}
 
 \newpage
-\section{Additional Tables} \label{additional-tables:1}
+\appendixpage
+\begin{appendix}
 
-\import{./}{asslKluwerTable}
-\import{./}{springerAALtable}
+  \section{Astrophysics and Space Science Library}
+  \import{./}{asslKluwerTable}
+
+  \newpage
+  \section{Astronomy and Astrophysics Library}
+  \import{./}{springerAALtable}
+\end{appendix}
 
 \end{document}

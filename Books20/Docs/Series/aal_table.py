@@ -56,9 +56,7 @@ TBL_FORMAT = r'[p]{l l l}'
 TBL_LABEL = r'aal-springer:1'
 TBL_HEADING = r'Title & Author/Editor(s) & Date'
 CONTINUE_LABEL = r'Continuation of \bt{Astronomy and Astrophysics Library}'
-TBL_PREAMBLE = r'''\setlength\LTleft{0pt}
-\newpage
-'''
+TBL_PREAMBLE = r'''\setlength\LTleft{0pt}'''
 TBL_FOOTER = r''
 CONTINUE_FOOTER = r''
 
