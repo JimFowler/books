@@ -16,11 +16,10 @@
 <td width=250 height=250 valign="Top">
   <h3>Useful Vocabularies</h3>
 
-    rdf:&nbsp;&nbsp;http://www.w3.org/1999/02/22-rdf-syntax-ns#
-    <br>rdfs:&nbsp;&nbsp;http://www.w3.org/2001/01/rdf-schema#
-    <br>dc:&nbsp;&nbsp;http://purl.org/dc/elements/1.1
-    <br>foaf:&nbsp;&nbsp;http://xmlns.com/foaf/0.1
-    <br>vcard:&nbsp;&nbsp;http://www.w3.org/2006/vard/ns#
+    <a href="http://www.w3.org/2001/01/rdf-schema#">RDFS</a>
+    <br><a href="http://purl.org/dc/elements/1.1q">DC</a>
+    <br><a href="http://xmlns.com/foaf/0.1">FOAF</a>
+    <br><a href="http://www.w3.org/2006/vard/ns#">VCARD</a>
     <br><br>These are almost certainly obsolete...
 </td>
 </tr>
