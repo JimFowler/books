@@ -63,11 +63,11 @@ series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
 	${LATEX} -draftmode series
 	${LATEX} series
 
-springerASSLtable.tex: assl_table.py
-	python assl_table.py > springerASSLtable.tex
+springerASSLtable.tex: springer_assl_table.py
+	python springer_assl_table.py > springerASSLtable.tex
 
-springerAALtable.tex: aal_table.py
-	python aal_table.py > springerAALtable.tex
+springerAALtable.tex: springer_aal_table.py
+	python springer_aal_table.py > springerAALtable.tex
 
 #
 # Install any software and/or documents
