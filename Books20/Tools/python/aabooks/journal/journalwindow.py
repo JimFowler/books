@@ -164,17 +164,17 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         index = 0
         for entry in self.journal_file._entry_list:
             title = entry['Title']
-            self.sdict.addSubStrings(title, (title, index))
+            self.sdict.add_sub_strings(title, (title, index))
 
             sub_title = entry['subTitle']
-            self.sdict.addSubStrings(sub_title, (sub_title, index))
+            self.sdict.add_sub_strings(sub_title, (sub_title, index))
 
             subsub_title = entry['subsubTitle']
-            self.sdict.addSubStrings(subsub_title, (subsub_title, index))
+            self.sdict.add_sub_strings(subsub_title, (subsub_title, index))
 
             for abr in entry['Abbreviations']:
                 if abr is not None:
-                    self.sdict.addSubStrings(abr, (abr, index))
+                    self.sdict.add_sub_strings(abr, (abr, index))
             index += 1
 
 
