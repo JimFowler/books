@@ -14,8 +14,6 @@
 ##
 ##
 ## End copyright
-
-
 """Choose an entry from the list.
 
 Why don't we use a QListWidget here?"""
@@ -55,8 +53,8 @@ class EntrySelect(QtWidgets.QDialog, EntrySelect_ui.Ui_ShortTitleDisplay):
     def mouse_double_click(self, mouse_event):
         """Override the textBrowser's mouseDoubleClickEvent() function
         so we can choose the entry by double clicking."""
-        #if mouse_event:
-        self.return_entry()
+        if mouse_event:
+            self.return_entry()
 
     def set_text(self, text):
         '''set text'''
