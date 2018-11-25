@@ -2,7 +2,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/symbol.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -28,68 +28,70 @@ http://richgriswold.wordpress.com/2009/10/17/character-picker/
 The packaged was modified for aabooks.
 """
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui  import *
-from PyQt5.QtWidgets import *
+from PyQt5 import QtCore, QtGui, QtWidgets
 
-class MyButton( QToolButton ):
+class MyButton(QtWidgets.QToolButton):
     """Create a button with a associated text string,
     in our case a character. When the button is clicked
-    it emits the text string."""
+    it emits the text string.
+    """
 
-    sigClicked = pyqtSignal( object, name='sigClicked')
-    
-    def __init__( self, parent=None ):
-        QToolButton.__init__( self, parent )
-        self.clicked.connect( self.slotClicked )
+    sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
-    def slotClicked( self ):
-        self.sigClicked.emit( ( self.text(), )) 
+    def __init__(self, parent=None):
+        super(MyButton, self).__init__()
+        #QtWidgets.QToolButton.__init__(self, parent)
+        self.clicked.connect(self.slot_clicked)
 
-class SymbolForm( QDialog ):
+    def slot_clicked(self):
+        '''Emit the text if we are clicked.'''
+        self.sigClicked.emit((self.text(), ))
+
+class SymbolForm(QtWidgets.QDialog):
     """Create a table of buttons which emit their character
     when pressed."""
 
-    sigClicked = pyqtSignal( object, name='sigClicked')
+    sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
-    def __init__( self, file_name, font_family, font_size, parent=None ):
-        QWidget.__init__( self, parent )
+    def __init__(self, file_name, font_family, font_size, parent=None):
+        super(SymbolForm, self).__init__()
+        #QWidget.__init__(self, parent)
         self.setObjectName('symbolForm')
-        
-        try: 
+
+        try:
             # would like to use resource here ':/Resources/symbols.txt'
             #file = open( './aabooks/Resources/symbols.txt', 'r' )
-            symfile = open( file_name, 'r')
+            symfile = open(file_name, 'r')
         except IOError as ex:
             print(ex)
-            exit( 1 )
-            
-        self.setWindowTitle( 'Insert Symbol...' )
-        
+            exit(1)
+
+        self.setWindowTitle('Insert Symbol...')
+
         self.clicked = False
-        self.font = QFont( font_family, int( font_size ) )
-        
-        self.scrollArea = QScrollArea( self )
-        self.scrollArea.setWidgetResizable( True )
-        self.scrollAreaWidgetContents = QWidget( self.scrollArea )
-        self.gridLayout = QGridLayout( self.scrollAreaWidgetContents )
-        self.gridLayout.setSpacing( 0 )
-        self.scrollArea.setWidget( self.scrollAreaWidgetContents )
-        
-        self.buttonGroup = QButtonGroup()
-        self.buttonGroup.setExclusive( True )
+        self.font = QtGui.QFont(font_family, int(font_size))
+
+        self.scroll_area = QtWidgets.QScrollArea(self)
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area_widget_contents = QtWidgets.QWidget(self.scroll_area)
+        self.grid_layout = QtWidgets.QGridLayout(self.scroll_area_widget_contents)
+        self.grid_layout.setSpacing(0)
+        self.scroll_area.setWidget(self.scroll_area_widget_contents)
+
+        self.button_group = QtWidgets.QButtonGroup()
+        self.button_group.setExclusive(True)
         self.buttons = dict()
-        
+
         row = 0
         col_max = 0
-        id = 0
+        index = 0
         col = 0
 
         for line in symfile:
             line = line.strip()
 
             # start new row if line is empty
-            if len(line) < 1:
+            if not line:
                 row += 1
                 col = 0
                 continue
@@ -100,31 +102,34 @@ class SymbolForm( QDialog ):
 
             try:
                 char, tip = line.split(',')
-            except:
-                print('Symbol Table Error: "%s"' % line)
+            except ValueError as ex:
+                print('Symbol Table ValueError: "%s"' % line)
+                print(ex)
                 continue
 
-            button = MyButton( self.scrollAreaWidgetContents )
-            button.setCheckable( True )
-            button.setFont( self.font )
-            button.setSizePolicy( QSizePolicy.Expanding, QSizePolicy.Expanding )
-            button.setText( char )
+            button = MyButton(self.scroll_area_widget_contents)
+            button.setCheckable(True)
+            button.setFont(self.font)
+            button.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+            button.setText(char)
             button.setToolTip(tip)
-            button.setObjectName('%03d%03dButton'%(row,col))
-            self.gridLayout.addWidget( button, row, col, 1, 1 )
-            self.buttonGroup.addButton( button, id )
-            button.sigClicked.connect( self.slotClicked )
+            button.setObjectName('%03d%03dButton'%(row, col))
+            self.grid_layout.addWidget(button, row, col, 1, 1)
+            self.button_group.addButton(button, index)
+            button.sigClicked.connect(self.slot_clicked)
             self.buttons[row, col] = button
             col += 1
-            id += 1
+            index += 1
             if col > col_max:
                 col_max = col
 
-        spacerItem = QSpacerItem( 40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum )
-        self.gridLayout.addItem( spacerItem, 0, col_max, 1, 1 )
-        spacerItem = QSpacerItem( 20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding )
-        self.gridLayout.addItem( spacerItem, row, 0, 1, 1 )
-        self.setLayout(self.gridLayout)
+        spacer_item = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding,
+                                            QtWidgets.QSizePolicy.Minimum)
+        self.grid_layout.addItem(spacer_item, 0, col_max, 1, 1)
+        spacer_item = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum,
+                                            QtWidgets.QSizePolicy.Expanding)
+        self.grid_layout.addItem(spacer_item, row, 0, 1, 1)
+        self.setLayout(self.grid_layout)
 
         #def keyPressEvent( self, event ):
         #if type( event ) == QKeyEvent:
@@ -133,10 +138,11 @@ class SymbolForm( QDialog ):
         #else:
         #    event.ignore()
 
-    def slotClicked( self, obj ):
-        char =  obj[0]
+    def slot_clicked(self, obj):
+        '''Emit the object if we are clicked.'''
+        char = obj[0]
         self.clicked = True
-        self.sigClicked.emit( ( char, ) )
+        self.sigClicked.emit((char, ))
         self.clicked = False
 
 
@@ -144,12 +150,12 @@ class SymbolForm( QDialog ):
 if __name__ == "__main__":
     import sys
 
-    def PrintMe(s):
-        print('Char selected is', s[0])
-        
-    app = QApplication( sys.argv )
-    myapp = SymbolForm( 'symbols.txt', 'FreeSans', 14 )
-    myapp.show()
-    myapp.sigClicked.connect( PrintMe )
-    sys.exit( app.exec_() )
-                    
+    def print_me(character):
+        '''Print the selected character.'''
+        print('Char selected is', character[0])
+
+    APP = QtWidgets.QApplication(sys.argv)
+    MYFORM = SymbolForm('symbols.txt', 'FreeSans', 14)
+    MYFORM.show()
+    MYFORM.sigClicked.connect(print_me)
+    sys.exit(APP.exec_())
