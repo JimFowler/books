@@ -26,9 +26,9 @@ to save your changed permenantly
 """
 from PyQt5 import QtWidgets
 
-import aabooks.lib.ui_HeaderEntry as uhe
+import aabooks.lib.ui_HeaderEntry as HeaderEntry_ui
 
-class HeaderWindow(QtWidgets.QDialog, uhe.Ui_HeaderEdit):
+class HeaderWindow(QtWidgets.QDialog, HeaderEntry_ui.Ui_HeaderEdit):
     '''A window to edit the header text with.'''
     def __init__(self, bf=None):
         super(HeaderWindow, self).__init__()
