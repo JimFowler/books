@@ -4,7 +4,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/AJBentry.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -17,22 +17,18 @@
 ##
 ##
 ## End copyright
-
-
 """AJBentry provides a class which can convert between a unicode text
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
 
 
-from nameparser import HumanName
 import re
+from nameparser import HumanName
 from lxml import etree
 
 import aabooks.lib.entry as entry
 import aabooks.lib.utils as utils
 import aabooks.ajbbook.AJBcomments as comments
-
-__ajbVersion__ = 'class AJBentry(Entry) v1.0.0 dtd 5 Aug 2012'
 
 class AJBentry(entry.Entry):
 
@@ -43,17 +39,17 @@ class AJBentry(entry.Entry):
     A line looks like:
 
     Index AJB_Num Author, Title, Place, Publisher, Year, \
-    Pagination, Price, Reviews, Comments
-    
+    Pagination, Price, Reviews, Comments]
+
     No field need be present except Index, AJB_Num, and Title.
-    
+
     Field 1 Index AJB_Num Author has format
 
     Index AJB_Num [I. A. Author [jr.|III|...] [ and H. E. Another [and ...]]] \
        [ed.|comp.|something else]
 
     Field 2 Title
-       
+
     Field 3 Place
 
        [name | name-name[-name[-...]] Name may contain spaces
@@ -61,7 +57,7 @@ class AJBentry(entry.Entry):
     Field 4 Publisher
 
     Field 5 Year
-    
+
     Field 6 Pagination
 
     Field 7 Price
@@ -73,12 +69,11 @@ class AJBentry(entry.Entry):
        [Journal vol page [and Journal vol page [and ...]]]
 
     Field 9 Comment
-     
+
        See AJBcomments.py for a description of the comments grammer
 
     """
 
-    
     def __init__(self, _entry_str=None):
 
         super(AJBentry, self).__init__()
@@ -90,34 +85,31 @@ class AJBentry(entry.Entry):
         null values and deleting all other fields.
         """
         keys = list(self.keys())
-        for k in keys :
-            del(self[k])
+        for k in keys:
+            del self[k]
 
-        self[ 'Index'] =      -1
-        self[ 'Num'] =        {'volNum':-1,
-                               'sectionNum':-1,
-                               'subsectionNum':-1,
-                               'entryNum':-1,
-                               'entrySuf':'',
-                               'volume': ''}
-        self[ 'Authors'] =    []
-        self[ 'Editors'] =    []
-        self[ 'Compilers'] =  []
-        self[ 'Contributors'] = []
-        self[ 'Translators']= []
-        self[ 'Others']=      []
-        self[ 'Title'] =      ''
-        self[ 'Publishers'] = []
-        self[ 'Year'] =       ''
-        self[ 'Pagination'] = ''
-        self[ 'Price'] =      ''
-        self[ 'Reviews'] =    []
-        self[ 'Comments'] =   ''
-        self[ 'OrigStr'] =    ''
+        self['Index'] = -1
+        self['Num'] = {'volNum':-1,
+                       'sectionNum':-1,
+                       'subsectionNum':-1,
+                       'entryNum':-1,
+                       'entrySuf':'',
+                       'volume': ''}
+        self['Authors'] = []
+        self['Editors'] = []
+        self['Compilers'] = []
+        self['Contributors'] = []
+        self['Translators'] = []
+        self['Others'] = []
+        self['Title'] = ''
+        self['Publishers'] = []
+        self['Year'] = ''
+        self['Pagination'] = ''
+        self['Price'] = ''
+        self['Reviews'] = []
+        self['Comments'] = ''
+        self['OrigStr'] = ''
 
-
-    def version(self):
-        return __ajbVersion__ + ": " + super(AJBentry, self).version()
 
     def numStr(self):
         """Return a stringfied version of the Num entry,
@@ -158,7 +150,7 @@ class AJBentry(entry.Entry):
         else:
             return False
 
-    def notEmpty(self, key ):
+    def notEmpty(self, key):
         """Return the truth value of, 'key' existing
         in the entry and the key value is not empty."""
         if self.__contains__(key) and self[key]:
@@ -179,12 +171,12 @@ class AJBentry(entry.Entry):
         entryStr = self.numStr()[4:] + ' '
 
         if self.notEmpty('Authors'):
-            entryStr +=  utils.make_name_str(self['Authors'])
+            entryStr += utils.make_name_str(self['Authors'])
         elif self.notEmpty('Editors'):
-            entryStr +=  utils.make_name_str(self['Editors'])
+            entryStr += utils.make_name_str(self['Editors'])
             entryStr += ' ed.'
 
-        entryStr = entryStr + ', ' + self['Title'].replace(', ', ' comma ' )
+        entryStr = entryStr + ', ' + self['Title'].replace(', ', ' comma ')
 
         if self.notEmpty('Publishers'):
             entryStr += ', '
@@ -193,8 +185,8 @@ class AJBentry(entry.Entry):
 
             entryStr += ', '
             if self['Publishers'][0]['PublisherName']:
-                nm =  self['Publishers'][0]['PublisherName']
-                nm = nm.replace(', ', ' comma ' )
+                nm = self['Publishers'][0]['PublisherName']
+                nm = nm.replace(', ', ' comma ')
                 entryStr += nm
         else:
             entryStr += ', , '
@@ -214,7 +206,7 @@ class AJBentry(entry.Entry):
         entryStr += ', '
         if self.notEmpty('Reviews'):
             first = True
-            for r in self['Reviews']: 
+            for r in self['Reviews']:
                 if not first:
                     entryStr += ' and '
                 first = False
@@ -278,7 +270,8 @@ class AJBentry(entry.Entry):
                 if not first:
                     entryStr += ' and '
                 first = False
-                entryStr += '%s: %s' % (p['Place'].replace(', ', ' comma '), p['PublisherName'].replace(', ', ' comma '))
+                entryStr += '%s: %s' % (p['Place'].replace(', ', ' comma '),
+                                        p['PublisherName'].replace(', ', ' comma '))
             entryStr += ';'
 
         if self.notEmpty('Language'):
@@ -302,9 +295,9 @@ class AJBentry(entry.Entry):
 
     def read_Text_to_Entry(self, line):
         """Parse a line with an AJB entry in it placing the values in the
-        Entry dictionary. Returns True if this is a parsable line and 
+        Entry dictionary. Returns True if this is a parsable line and
         false if it is not."""
- 
+
         Place = ""
         PublisherName = ""
 
@@ -314,47 +307,47 @@ class AJBentry(entry.Entry):
         # seen, then we reject the line.
         #
         r1 = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
-    
+
         if line and r1.match(line):
             self['OrigStr'] = line
             #print(line)
             fields = line.split(',')
             fieldNum = -1
             for field in fields:
-                
+
                 fieldNum += 1
-                field = field.replace(' comma ', ', ' )
+                field = field.replace(' comma ', ', ')
                 field = field.strip()
                 if 0 == fieldNum:  # AJBnum and Authors
-                    self._parseField0( field )
-                    
+                    self._parseField0(field)
+
                 elif 1 == fieldNum:  # Title
-                    self['Title'] =  field 
-                    
+                    self['Title'] = field
+
                 elif 2 == fieldNum:  # place of publication
                     Place = "" + field
-                    
+
                 elif 3 == fieldNum:  # Publisher
                     PublisherName = "" + field
-                    self['Publishers'] = [ {'Place' : Place,
-                                             'PublisherName' : PublisherName}]
-                    
+                    self['Publishers'] = [{'Place' : Place,
+                                           'PublisherName' : PublisherName}]
+
                 elif 4 == fieldNum:   # Publication Year
                     self['Year'] = field
-                    
+
                 elif 5 == fieldNum:   # Page Count
-                    self['Pagination'] = field 
-                    
+                    self['Pagination'] = field
+
                 elif 6 == fieldNum:   # Price
-                    self['Price'] = field 
-                    
+                    self['Price'] = field
+
                 elif 7 == fieldNum:   # Reviews
                     if 0 < len(field):
-                        self['Reviews'] = field.split(' and ') 
+                        self['Reviews'] = field.split(' and ')
 
                 elif 8 == fieldNum:   # Comments and other material
                     self['Comments'] = field
-                    self._parseComments( field )
+                    self._parseComments(field)
                     continue
 
             return True
@@ -378,32 +371,32 @@ class AJBentry(entry.Entry):
             return False
 
 
-        
+
     #
     # Private functions
     #
-    def _parseField0( self, line ) : 
+    def _parseField0(self, line):
 
-        fields = line.split( ' ', 2)
+        fields = line.split(' ', 2)
         
-        self._parseFileIndex( fields[0] )
+        self._parseFileIndex(fields[0])
 
-        self['Num'] = self._parseAJBNum( fields[1] )
+        self['Num'] = self._parseAJBNum(fields[1])
 
-        if len(fields) > 2 :
-            self._parseAuthors( fields[2].strip() )
-      
+        if len(fields) > 2:
+            self._parseAuthors(fields[2].strip())
 
-                    
-    def _parseFileIndex(self, line ):
+
+
+    def _parseFileIndex(self, line):
         """
         Get the file Index value (i.e. what number is this entry
         in the file.)
         """
         self['Index'] = line.strip()
 
-    
-    def _parseAJBNum(self, line ):
+
+    def _parseAJBNum(self, line):
         """Get the Volume, Section, any possible subSection, and the
         section entry number.  The subSection defaults to zero
         if no subSection value exists. Returns a dictionary with the 
@@ -429,8 +422,8 @@ class AJBentry(entry.Entry):
             nums[0] ='AJB'
 
         if not nums[5]: # subsectionNum
-            nums[5] = 0 
-            
+            nums[5] = 0
+
         if not nums[7]: # entrySuf
             nums[7] = ''
 
@@ -443,7 +436,7 @@ class AJBentry(entry.Entry):
                 }
 
 
-    def _parseAuthors(self, line ) :
+    def _parseAuthors(self, line):
       """split out the authors/editors
       """
       ed = False
@@ -456,7 +449,7 @@ class AJBentry(entry.Entry):
         comp = True
         line = line.replace('comp.', '    ')
 
-      names = utils.make_name_list( line )
+      names = utils.make_name_list(line)
 
       if ed:
         self['Editors'] = names
@@ -467,9 +460,7 @@ class AJBentry(entry.Entry):
 
 
 
-
-
-    def _parseComments( self, field ):
+    def _parseComments(self, field):
         
         cParser = comments.Comment.parser()
         results = cParser.parse_text(field, reset=True, multi=True)
@@ -635,7 +626,7 @@ class AJBentry(entry.Entry):
                 ep = etree.SubElement(el, 'Price')
                 ep.text = price
 
-        if 0 < len(self['Reviews']):
+        if self['Reviews']:
             el = etree.SubElement(entryXML, 'Reviews')
             for rev in self['Reviews']:
                 er = etree.SubElement(el, 'Review')
@@ -649,7 +640,7 @@ class AJBentry(entry.Entry):
             el = etree.SubElement(entryXML, 'Language')
             el.text = str(self['Language'])
 
-        if 0 < len(self['Translators']):
+        if self['Translators']:
             el = etree.SubElement(entryXML, 'Translators')
             for trans in self['Translators']:
                 al = etree.SubElement(el, 'Translator')
@@ -657,7 +648,7 @@ class AJBentry(entry.Entry):
                 ae = self.makePerson_XML(trans)
                 al.append(ae)
 
-        if 0 < len(self['Compilers']):
+        if self['Compilers']:
             el = etree.SubElement(entryXML, 'Compilers')
             for compiler in self['Compilers']:
                 al = etree.SubElement(el, 'Compiler')
@@ -665,7 +656,7 @@ class AJBentry(entry.Entry):
                 ae = self.makePerson_XML(compiler)
                 al.append(ae)
 
-        if 0 < len(self['Contributors']):
+        if self['Contributors']:
             el = etree.SubElement(entryXML, 'Contributors')
             for contrib in self['Contributors']:
                 al = etree.SubElement(el, 'Contributor')
@@ -943,9 +934,12 @@ class AJBentry(entry.Entry):
 #
 if __name__ == '__main__':
 
-    ajbstr = '4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+    ajbstr = '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'''
 
-    ajbstra = '4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+    ajbstra = '''4 66.145(1).29a P. W. Hodge,
+The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,
+1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
+and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'''
 
     ajbstra1 = '4 66.145.29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
 
@@ -979,12 +973,10 @@ if __name__ == '__main__':
     pprint(allfieldajb)
 
     ajb1 = AJBentry()
-    print("\najb.py version:: %s \n" % ajb1.version())
     print('The empty ajb entry is_valid() is %d and looks like:' % ajb1.is_valid())
     pprint(ajb1)
 
     ajb2 = AJBentry(ajbstr)
-    print("\najb.py version " + ajb2.version())
     print('The good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
     pprint(ajb2)
 
