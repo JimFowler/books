@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/bookentry/__init__.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -14,5 +14,3 @@
 ##
 ##
 ## End copyright
-
-
