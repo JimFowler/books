@@ -30,6 +30,68 @@ The packaged was modified for aabooks.
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+def make_buttons(file_name, parent):
+    '''Make all the buttons for the parent window from the
+    symbol file in file_name.
+    '''
+    button_dict = dict()
+
+    row = 0
+    col = 0
+    col_max = 0
+    index = 0
+
+    try:
+        # would like to use resource here ':/Resources/symbols.txt'
+        #file = open( './aabooks/Resources/symbols.txt', 'r' )
+        symfile = open(file_name, 'r')
+    except IOError as ex:
+        print(ex)
+        return (row, col_max, button_dict)
+
+    for line in symfile:
+        line = line.strip()
+
+        # start new row if line is empty
+        if not line:
+            row += 1
+            col = 0
+            continue
+
+        # ignore comment line
+        if line[0] == '#':
+            continue
+
+        try:
+            char, tip = line.split(',')
+        except ValueError as ex:
+            print('Symbol Table ValueError: "%s"' % line)
+            print(ex)
+            continue
+
+        button = MyButton(parent.scroll_area_widget_contents)
+        button.setCheckable(True)
+        button.setFont(parent.font)
+        button.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        button.setText(char)
+        button.setToolTip(tip)
+        button.setObjectName('%03d%03dButton'%(row, col))
+
+        parent.grid_layout.addWidget(button, row, col, 1, 1)
+        parent.button_group.addButton(button, index)
+
+        button.sigClicked.connect(parent.slot_clicked)
+
+        button_dict[row, col] = button
+
+        col += 1
+        index += 1
+        if col > col_max:
+            col_max = col
+
+    return (row, col_max, button_dict)
+
+
 class MyButton(QtWidgets.QToolButton):
     """Create a button with a associated text string,
     in our case a character. When the button is clicked
@@ -38,9 +100,8 @@ class MyButton(QtWidgets.QToolButton):
 
     sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
-    def __init__(self, parent=None):
+    def __init__(self):
         super(MyButton, self).__init__()
-        #QtWidgets.QToolButton.__init__(self, parent)
         self.clicked.connect(self.slot_clicked)
 
     def slot_clicked(self):
@@ -53,18 +114,9 @@ class SymbolForm(QtWidgets.QDialog):
 
     sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
-    def __init__(self, file_name, font_family, font_size, parent=None):
+    def __init__(self, file_name, font_family, font_size):
         super(SymbolForm, self).__init__()
-        #QWidget.__init__(self, parent)
         self.setObjectName('symbolForm')
-
-        try:
-            # would like to use resource here ':/Resources/symbols.txt'
-            #file = open( './aabooks/Resources/symbols.txt', 'r' )
-            symfile = open(file_name, 'r')
-        except IOError as ex:
-            print(ex)
-            exit(1)
 
         self.setWindowTitle('Insert Symbol...')
 
@@ -80,63 +132,16 @@ class SymbolForm(QtWidgets.QDialog):
 
         self.button_group = QtWidgets.QButtonGroup()
         self.button_group.setExclusive(True)
-        self.buttons = dict()
-
-        row = 0
-        col_max = 0
-        index = 0
-        col = 0
-
-        for line in symfile:
-            line = line.strip()
-
-            # start new row if line is empty
-            if not line:
-                row += 1
-                col = 0
-                continue
-
-            # ignore comment line
-            if line[0] == '#':
-                continue
-
-            try:
-                char, tip = line.split(',')
-            except ValueError as ex:
-                print('Symbol Table ValueError: "%s"' % line)
-                print(ex)
-                continue
-
-            button = MyButton(self.scroll_area_widget_contents)
-            button.setCheckable(True)
-            button.setFont(self.font)
-            button.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-            button.setText(char)
-            button.setToolTip(tip)
-            button.setObjectName('%03d%03dButton'%(row, col))
-            self.grid_layout.addWidget(button, row, col, 1, 1)
-            self.button_group.addButton(button, index)
-            button.sigClicked.connect(self.slot_clicked)
-            self.buttons[row, col] = button
-            col += 1
-            index += 1
-            if col > col_max:
-                col_max = col
+        row_max, col_max, self.buttons = make_buttons(file_name, self)
 
         spacer_item = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding,
                                             QtWidgets.QSizePolicy.Minimum)
         self.grid_layout.addItem(spacer_item, 0, col_max, 1, 1)
         spacer_item = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum,
                                             QtWidgets.QSizePolicy.Expanding)
-        self.grid_layout.addItem(spacer_item, row, 0, 1, 1)
+        self.grid_layout.addItem(spacer_item, row_max, 0, 1, 1)
         self.setLayout(self.grid_layout)
 
-        #def keyPressEvent( self, event ):
-        #if type( event ) == QKeyEvent:
-        #    self.close()
-        #    event.accept()
-        #else:
-        #    event.ignore()
 
     def slot_clicked(self, obj):
         '''Emit the object if we are clicked.'''
