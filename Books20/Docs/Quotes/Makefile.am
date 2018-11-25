@@ -113,7 +113,7 @@ install_python:
 
 .PHONY: clean_tex
 clean_tex:
-	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.lot *.dvi *.toc *.out *.run.xml
 
 .PHONY: clean_pdf
 clean_pdf:

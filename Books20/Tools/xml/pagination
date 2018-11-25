@@ -58,7 +58,8 @@ we have an appendix C with Roman pagination, we have a conflict. Just
 such a situation occurs in 43.51(0).01. I used brackets around the
 page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p. Also
 brackets multiple collections of pages per appendix, as in the example
-above, Appendix C has 9 pages of introduction and 161 pages of material.
+above, Appendix C has 9 pages of introduction and 161 pages of
+material, this occurs also in 22.51(0).03.
 
 Code should provide
 element PaginationToXml(string)

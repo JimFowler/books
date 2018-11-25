@@ -31,12 +31,10 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-BUILT_TABLE_FILES = asslKluwer_table.tex
+BUILT_TABLE_FILES = springerASSLtable.tex springerAALtable.tex
 TABLE_FILES = 
-SERIES_TEX_FILES = series.tex HarvardBooksAstronomy.tex uchicago.tex \
-	uaspacescience.tex asslKluwer.tex
-
-HANDBUCH_TEX_FILES = hb.tex handbuch.tex
+SERIES_TEX_FILES = series.tex intro.tex other.tex \
+	harvard.tex uchicago.tex uarizona.tex springer.tex
 
 BIB_FILES = 
 #
@@ -56,7 +54,7 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} series.pdf hb.pdf
+build_docs: ${SUB_DIRS} series.pdf
 
 
 series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
@@ -65,15 +63,11 @@ series.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${SERIES_TEX_FILES}
 	${LATEX} -draftmode series
 	${LATEX} series
 
-hb.pdf: hb.tex handbuch.tex
-	${LATEX} -draftmode hb
-	${BIBER} hb
-	${LATEX} -draftmode hb
-	${LATEX} hb
+springerASSLtable.tex: springer_assl_table.py
+	python springer_assl_table.py > springerASSLtable.tex
 
-asslKluwer_table.tex: asslKluwer_table.py
-	python asslKluwer_table.py > asslKluwer_table.tex
-
+springerAALtable.tex: springer_aal_table.py
+	python springer_aal_table.py > springerAALtable.tex
 
 #
 # Install any software and/or documents
@@ -92,7 +86,6 @@ install_docs: ${SUB_DIRS} build_docs install_pdf
 install_pdf:
 	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
 	install -m 444 -p ./series.pdf ${PDF_INSTALL_DIR}
-	install -m 444 -p ./hb.pdf ${PDF_INSTALL_DIR}
 
 #
 # Other useful stuff
@@ -102,7 +95,7 @@ install_pdf:
 # lines: count how many lines we have written
 #
 lines:
-	wc ${SERIES_TEX_FILES} ${HANDBUCH_TEX_FILES} ${BIB_FILES} Makefile
+	wc ${SERIES_TEX_FILES} ${BIB_FILES} Makefile
 
 
 #
@@ -132,7 +125,7 @@ install_python:
 
 .PHONY: clean_tex
 clean_tex:
-	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.lot *.dvi *.toc *.out *.run.xml
 	${RM} -f ${BUILT_TABLE_FILES}
 
 .PHONY: clean_pdf
