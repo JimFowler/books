@@ -3,7 +3,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/parser.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -17,22 +17,26 @@
 ##
 ## End copyright
 
-"""A standard parser for all python programms. This parser
+"""A standard parser for all python programs. This parser
 contains the minimum required flags for all python programs
-that are part of the Books20 project
-"""
+that are part of the Books20 project.
 
+To Do:
+  Combine with config file parser
+
+  Consider proper use of extra flags. Do we need them all?
+"""
 import argparse
 
 def standard_parser(pars):
     """Provides a standard parser that should be used by all python programs
-    that are part of the Books20 project.  This parser provided the minimum
+    that are part of the Books20 project.  This parser provides the minimum
     required command line flags as defined in the Books20 style guide.
 
     """
-
-    pars.add_argument('-v', '--version', action='version',
-                      version='%(prog)s v{version}'.format(version=version))
+    pars.add_argument('-v', '--version',
+                      help='provide version information',
+                      action='store_true')
 
     pars.add_argument('--verbose',
                       help='provide extra info,',
@@ -64,16 +68,16 @@ def extra_flags(pars):
 if __name__ == '__main__':
 
     from pprint import pprint
-    from version import __version__
 
     print('argparse v{}'.format(argparse.__version__))
 
-    parser = argparse.ArgumentParser(description=description,
-                                     version=__version__)
-    standard_parser(parser)
+    DESCRIPTION = '''Test parser.py'''
 
-    extra_flags(parser)
+    PARSER = argparse.ArgumentParser(description=DESCRIPTION)
+    standard_parser(PARSER)
 
-    args = parser.parse_args()
+    extra_flags(PARSER)
 
-    pprint(args)
+    ARGS = PARSER.parse_args()
+
+    pprint(ARGS)
