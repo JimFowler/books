@@ -179,9 +179,9 @@ class AJBentry(entry.Entry):
         entryStr = self.numStr()[4:] + ' '
 
         if self.notEmpty('Authors'):
-            entryStr +=  utils.makeNameStr(self['Authors'])
+            entryStr +=  utils.make_name_str(self['Authors'])
         elif self.notEmpty('Editors'):
-            entryStr +=  utils.makeNameStr(self['Editors'])
+            entryStr +=  utils.make_name_str(self['Editors'])
             entryStr += ' ed.'
 
         entryStr = entryStr + ', ' + self['Title'].replace(', ', ' comma ' )
@@ -242,13 +242,13 @@ class AJBentry(entry.Entry):
 
         if self.notEmpty('Compilers'):
             entryStr += 'compiled by '
-            entryStr += utils.makeNameStr(self['Compilers'])
+            entryStr += utils.make_name_str(self['Compilers'])
             entryStr += ';'
 
 
         if self.notEmpty('Contributors'):
             entryStr += 'contributors '
-            entryStr += utils.makeNameStr(self['Contributors'])
+            entryStr += utils.make_name_str(self['Contributors'])
             entryStr += ';'
 
         # translated from by
@@ -259,14 +259,14 @@ class AJBentry(entry.Entry):
                 entryStr += self['TranslatedFrom']
             if self.notEmpty('Translators'):
                 entryStr += ' by '
-                entryStr += utils.makeNameStr(self['Translators'])
+                entryStr += utils.make_name_str(self['Translators'])
             entryStr += ';'
 
         # additional editors
         if self.notEmpty('Authors') and self.notEmpty('Editors'):
             # need to include editors in comments
             entryStr += 'edited by '
-            entryStr += utils.makeNameStr(self['Editors'])
+            entryStr += utils.make_name_str(self['Editors'])
             entryStr += ';'
 
         # additional publishers
@@ -456,7 +456,7 @@ class AJBentry(entry.Entry):
         comp = True
         line = line.replace('comp.', '    ')
 
-      names = utils.makeNameList( line )
+      names = utils.make_name_list( line )
 
       if ed:
         self['Editors'] = names
@@ -495,7 +495,7 @@ class AJBentry(entry.Entry):
 
                 elif 'Editors' == grmName:
                     line = str(result.find(comments.NameList))
-                    nm = utils.makeNameList( line )
+                    nm = utils.make_name_list( line )
                     if self.notEmpty('Editors'):
                         self['Editors'].extend( nm )
                     else:
@@ -503,7 +503,7 @@ class AJBentry(entry.Entry):
 
                 elif 'Contributors' == grmName:
                     line = str(result.find(comments.NameList))
-                    nm = utils.makeNameList( line )
+                    nm = utils.make_name_list( line )
                     if self.notEmpty('Contributors'):
                         self['Contributors'].extend( nm )
                     else:
@@ -511,7 +511,7 @@ class AJBentry(entry.Entry):
 
                 elif 'Compilers' == grmName:
                     line = str(result.find(comments.NameList))
-                    nm = utils.makeNameList( line )
+                    nm = utils.make_name_list( line )
                     if self.notEmpty('Compilers'):
                         self['Compilers'].extend( nm )
                     else:
@@ -528,7 +528,7 @@ class AJBentry(entry.Entry):
 
                     tmp = result.find(comments.NameList)
                     if tmp:
-                        nm = utils.makeNameList(str(tmp))
+                        nm = utils.make_name_list(str(tmp))
                         if self.notEmpty('Translators'):
                             self['Translators'].extend( nm )
                         else:
