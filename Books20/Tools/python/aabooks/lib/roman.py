@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
     print('This is one of the longest Roman numbers...')
     convert(8888)
-    print('...obviously numbers above 4000 or so do not work well in the Roman sytem.')
+    print('...obviously numbers above 4000 or so do not work well in the Roman system.')
 
     # test floating point values (should fail)
     print('\nUsing a floating point number like 10.4 should fail...')
