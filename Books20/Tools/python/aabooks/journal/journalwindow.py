@@ -39,7 +39,7 @@ import aabooks.journal.journalmenus as menus
 import aabooks.journal.journalentry as journalentry
 import aabooks.journal.jsearch as journalsearch
 import aabooks.lib.symbol as symbol
-import aabooks.lib.headerWindow as hw
+import aabooks.lib.headerwindow as hw
 import aabooks.lib.entryselect as es
 import aabooks.lib.search as search
 

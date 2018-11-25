@@ -38,7 +38,7 @@ import aabooks.ajbbook.bookfile as bf
 import aabooks.ajbbook.menus as menus
 import aabooks.ajbbook.origstrWindow as origstr
 import aabooks.ajbbook.AJBentry as AJBentry
-import aabooks.lib.headerWindow as hw
+import aabooks.lib.headerwindow as hw
 import aabooks.lib.symbol as symbol
 import aabooks.lib.entryselect as es
 
