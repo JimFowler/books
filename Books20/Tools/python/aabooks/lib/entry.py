@@ -61,10 +61,10 @@ class Entry(dict):
 
 if __name__ == '__main__':
 
-    e = Entry()
-        
+    TEST_ENTRY = Entry()
+
     try:
-        e.is_valid()
+        TEST_ENTRY.is_valid()
     except NotImplementedError:
         print("""Entry() class fails properly with an NotImplementedError
         for is_valid() method.""")
