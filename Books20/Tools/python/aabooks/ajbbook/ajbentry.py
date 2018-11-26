@@ -23,14 +23,23 @@ the form Entry.py.entry()."""
 
 
 import re
-from nameparser import HumanName
 from lxml import etree
 
-import aabooks.lib.entry as entry
-import aabooks.lib.utils as utils
+from nameparser import HumanName
+import aabooks.lib.entry as libentry
+import aabooks.lib.utils as libutils
 import aabooks.ajbbook.AJBcomments as comments
 
-class AJBentry(entry.Entry):
+#
+# Don't build the regular expression compilers everytime
+#  we build and entry.
+#
+__reg1__ = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
+__reg2__ = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
+__reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})',
+                      re.UNICODE)
+
+class AJBentry(libentry.Entry):
 
     """Read the information from a string and put the data in the
     AJBentry dictionary. The entry is valid if there was a valid AJB
@@ -80,6 +89,9 @@ class AJBentry(entry.Entry):
 
         self.blank_entry()
 
+        if _entry_str:
+            self.read_text_to_entry(_entry_str)
+
     def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
@@ -111,46 +123,43 @@ class AJBentry(entry.Entry):
         self['OrigStr'] = ''
 
 
-    def numStr(self):
+    def num_str(self):
         """Return a stringfied version of the Num entry,
         ex. 'AJB 68.01(0).20'
         """
-        a = self['Num']
-        if a:
-            st = str(a['volume'])
-            st = st + ' ' + '%02d'%a['volNum']
-            st = st + '.' + '%02d'%a['sectionNum']
-            if a['subsectionNum'] > -1:
-                st = st + '(' + str(a['subsectionNum']) + ')'
-            st = st + '.' + '%02d'%a['entryNum']
-            st = st + '%1s'%a['entrySuf']
-            return st
-        else:
-            return None
+        anum = self['Num']
+        if anum:
+            strnum = str(anum['volume'])
+            strnum = strnum + ' ' + '%02d'%anum['volNum']
+            strnum = strnum + '.' + '%02d'%anum['sectionNum']
+            if anum['subsectionNum'] > -1:
+                strnum = strnum + '(' + str(anum['subsectionNum']) + ')'
+            strnum = strnum + '.' + '%02d'%anum['entryNum']
+            strnum = strnum + '%1s'%anum['entrySuf']
+            return strnum
 
-    def shortTitle(self):
+        return None
+
+    def short_title(self):
         """Create a short title string for the entry. A short title
         is 'AJBnum 1stAuthor_lastname Title'."""
-        st = self.numStr() + ' '
-        if self.notEmpty('Authors'):
+        string = self.num_str() + ' '
+        if self.not_empty('Authors'):
             name = self['Authors'][0].last
-        elif self.notEmpty('Editors'):
+        elif self.not_empty('Editors'):
             name = self['Editors'][0].last
         else:
             name = 'noAuthor'
 
-        st = st + name + ', ' + self['Title'] + '\n'
-        return st
+        string = string + name + ', ' + self['Title'] + '\n'
+        return string
 
     def is_valid(self):
         """AJB entries are valid if they have a valid AJB num
         and a Title."""
-        if self.is_validAjbNum() and self['Title'] != '':
-            return True
-        else:
-            return False
+        return bool(self.is_valid_ajbnum() and self['Title'] != '')
 
-    def notEmpty(self, key):
+    def not_empty(self, key):
         """Return the truth value of, 'key' existing
         in the entry and the key value is not empty."""
         if self.__contains__(key) and self[key]:
@@ -160,7 +169,7 @@ class AJBentry(entry.Entry):
     #
     # Ascii comma separated variable file, read/write functions
     #
-    def write_Text_from_Entry(self):
+    def write_text_from_entry(self):
         """Write an AJBentry back into the string format that it came from.
         It should be the case that write(read(ajbstr)) == ajbstr up to
         the order of the comments and that read(write(ajbent)) == ajbent."""
@@ -168,227 +177,222 @@ class AJBentry(entry.Entry):
         if not self.is_valid():
             return ''
 
-        entryStr = self.numStr()[4:] + ' '
+        entrystr = self.num_str()[4:] + ' '
 
-        if self.notEmpty('Authors'):
-            entryStr += utils.make_name_str(self['Authors'])
-        elif self.notEmpty('Editors'):
-            entryStr += utils.make_name_str(self['Editors'])
-            entryStr += ' ed.'
+        if self.not_empty('Authors'):
+            entrystr += libutils.make_name_str(self['Authors'])
+        elif self.not_empty('Editors'):
+            entrystr += libutils.make_name_str(self['Editors'])
+            entrystr += ' ed.'
 
-        entryStr = entryStr + ', ' + self['Title'].replace(', ', ' comma ')
+        entrystr = entrystr + ', ' + self['Title'].replace(', ', ' comma ')
 
-        if self.notEmpty('Publishers'):
-            entryStr += ', '
+        if self.not_empty('Publishers'):
+            entrystr += ', '
             if self['Publishers'][0]['Place']:
-                entryStr += self['Publishers'][0]['Place']
+                entrystr += self['Publishers'][0]['Place']
 
-            entryStr += ', '
+            entrystr += ', '
             if self['Publishers'][0]['PublisherName']:
-                nm = self['Publishers'][0]['PublisherName']
-                nm = nm.replace(', ', ' comma ')
-                entryStr += nm
+                name = self['Publishers'][0]['PublisherName']
+                name = name.replace(', ', ' comma ')
+                entrystr += name
         else:
-            entryStr += ', , '
+            entrystr += ', , '
 
-        entryStr += ', '
-        if self.notEmpty('Year'):
-            entryStr += str(self['Year'])
+        entrystr += ', '
+        if self.not_empty('Year'):
+            entrystr += str(self['Year'])
 
-        entryStr += ', '
-        if self.notEmpty('Pagination'):
-            entryStr += str(self['Pagination'])
+        entrystr += ', '
+        if self.not_empty('Pagination'):
+            entrystr += str(self['Pagination'])
 
-        entryStr += ', '
-        if self.notEmpty('Price'):
-            entryStr += str(self['Price'])
+        entrystr += ', '
+        if self.not_empty('Price'):
+            entrystr += str(self['Price'])
 
-        entryStr += ', '
-        if self.notEmpty('Reviews'):
+        entrystr += ', '
+        if self.not_empty('Reviews'):
             first = True
-            for r in self['Reviews']:
+            for review in self['Reviews']:
                 if not first:
-                    entryStr += ' and '
+                    entrystr += ' and '
                 first = False
-                entryStr += r
+                entrystr += review
 
         # comments
-        entryStr += ', '
-        if self.notEmpty('Edition'):
-            entryStr += str(self['Edition'])
+        entrystr += ', '
+        if self.not_empty('Edition'):
+            entrystr += str(self['Edition'])
             num = int(self['Edition'])
             if  num == 1:
-                entryStr += 'st'
+                entrystr += 'st'
             elif num == 2:
-                entryStr += 'nd'
+                entrystr += 'nd'
             elif num == 3:
-                entryStr += 'rd'
+                entrystr += 'rd'
             else:
-                entryStr += 'th'
-            entryStr += ' edition;'
+                entrystr += 'th'
+            entrystr += ' edition;'
 
-        if self.notEmpty('Reprint'):
-            entryStr += 'reprint of '
-            entryStr += str(self['Reprint'])
-            entryStr += ';'
+        if self.not_empty('Reprint'):
+            entrystr += 'reprint of '
+            entrystr += str(self['Reprint'])
+            entrystr += ';'
 
-        if self.notEmpty('Compilers'):
-            entryStr += 'compiled by '
-            entryStr += utils.make_name_str(self['Compilers'])
-            entryStr += ';'
+        if self.not_empty('Compilers'):
+            entrystr += 'compiled by '
+            entrystr += libutils.make_name_str(self['Compilers'])
+            entrystr += ';'
 
 
-        if self.notEmpty('Contributors'):
-            entryStr += 'contributors '
-            entryStr += utils.make_name_str(self['Contributors'])
-            entryStr += ';'
+        if self.not_empty('Contributors'):
+            entrystr += 'contributors '
+            entrystr += libutils.make_name_str(self['Contributors'])
+            entrystr += ';'
 
         # translated from by
-        if self.notEmpty('Translators') or self.notEmpty('TranslatedFrom'):
-            entryStr += 'translated '
-            if self.notEmpty('TranslatedFrom'):
-                entryStr += 'from '
-                entryStr += self['TranslatedFrom']
-            if self.notEmpty('Translators'):
-                entryStr += ' by '
-                entryStr += utils.make_name_str(self['Translators'])
-            entryStr += ';'
+        if self.not_empty('Translators') or self.not_empty('TranslatedFrom'):
+            entrystr += 'translated '
+            if self.not_empty('TranslatedFrom'):
+                entrystr += 'from '
+                entrystr += self['TranslatedFrom']
+            if self.not_empty('Translators'):
+                entrystr += ' by '
+                entrystr += libutils.make_name_str(self['Translators'])
+            entrystr += ';'
 
         # additional editors
-        if self.notEmpty('Authors') and self.notEmpty('Editors'):
+        if self.not_empty('Authors') and self.not_empty('Editors'):
             # need to include editors in comments
-            entryStr += 'edited by '
-            entryStr += utils.make_name_str(self['Editors'])
-            entryStr += ';'
+            entrystr += 'edited by '
+            entrystr += libutils.make_name_str(self['Editors'])
+            entrystr += ';'
 
         # additional publishers
         if self['Publishers'].__len__() > 1:
-            extraPubl = self['Publishers'][1:]
-            entryStr += 'also published '
+            extrapubl = self['Publishers'][1:]
+            entrystr += 'also published '
             first = True
-            for p in extraPubl:
+            for publ in extrapubl:
                 if not first:
-                    entryStr += ' and '
+                    entrystr += ' and '
                 first = False
-                entryStr += '%s: %s' % (p['Place'].replace(', ', ' comma '),
-                                        p['PublisherName'].replace(', ', ' comma '))
-            entryStr += ';'
+                entrystr += '%s: %s' % (publ['Place'].replace(', ', ' comma '),
+                                        publ['PublisherName'].replace(', ', ' comma '))
+            entrystr += ';'
 
-        if self.notEmpty('Language'):
-            entryStr += 'in '
-            entryStr += self['Language']
-            entryStr += ';'
+        if self.not_empty('Language'):
+            entrystr += 'in '
+            entrystr += self['Language']
+            entrystr += ';'
 
         # others
-        if self.notEmpty('Others'):
-            for p in self['Others']:
-                entryStr += 'other %s' % str(p).replace(', ', ' comma ')
-                entryStr += '; '
+        if self.not_empty('Others'):
+            for other in self['Others']:
+                entrystr += 'other %s' % str(other).replace(', ', ' comma ')
+                entrystr += '; '
 
-        if self.notEmpty('Reference'):
-            entryStr += 'reference '
-            entryStr += self['Reference']
-            entryStr += ';'
+        if self.not_empty('Reference'):
+            entrystr += 'reference '
+            entrystr += self['Reference']
+            entrystr += ';'
 
 
-        return entryStr
+        return entrystr
 
-    def read_Text_to_Entry(self, line):
+    def read_text_to_entry(self, line):
         """Parse a line with an AJB entry in it placing the values in the
         Entry dictionary. Returns True if this is a parsable line and
         false if it is not."""
 
-        Place = ""
-        PublisherName = ""
+        place = ""
+        publishername = ""
 
         #
         # This regular expression is used to check the beginning of a line
         # for an item number, volnum and section number. If no numbers are
         # seen, then we reject the line.
         #
-        r1 = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
 
-        if line and r1.match(line):
+        if line and __reg1__.match(line):
             self['OrigStr'] = line
             #print(line)
             fields = line.split(',')
-            fieldNum = -1
+            fieldnum = -1
             for field in fields:
 
-                fieldNum += 1
+                fieldnum += 1
                 field = field.replace(' comma ', ', ')
                 field = field.strip()
-                if 0 == fieldNum:  # AJBnum and Authors
-                    self._parseField0(field)
+                if fieldnum == 0:  # AJBnum and Authors
+                    self._parse_field0(field)
 
-                elif 1 == fieldNum:  # Title
+                elif fieldnum == 1:  # Title
                     self['Title'] = field
 
-                elif 2 == fieldNum:  # place of publication
-                    Place = "" + field
+                elif fieldnum == 2:  # place of publication
+                    place = "" + field
 
-                elif 3 == fieldNum:  # Publisher
-                    PublisherName = "" + field
-                    self['Publishers'] = [{'Place' : Place,
-                                           'PublisherName' : PublisherName}]
+                elif fieldnum == 3:  # Publisher
+                    publishername = "" + field
+                    self['Publishers'] = [{'Place' : place,
+                                           'PublisherName' : publishername}]
 
-                elif 4 == fieldNum:   # Publication Year
+                elif fieldnum == 4:   # Publication Year
                     self['Year'] = field
 
-                elif 5 == fieldNum:   # Page Count
+                elif fieldnum == 5:   # Page Count
                     self['Pagination'] = field
 
-                elif 6 == fieldNum:   # Price
+                elif fieldnum == 6:   # Price
                     self['Price'] = field
 
-                elif 7 == fieldNum:   # Reviews
-                    if 0 < len(field):
+                elif fieldnum == 7:   # Reviews
+                    if field:
                         self['Reviews'] = field.split(' and ')
 
-                elif 8 == fieldNum:   # Comments and other material
+                elif fieldnum == 8:   # Comments and other material
                     self['Comments'] = field
-                    self._parseComments(field)
+                    self._parse_comments(field)
                     continue
 
             return True
 
-        else:  # not if line and r1.match(line)
-            return False
+        return False
 
-    def is_validAjbNum(self):
+    def is_valid_ajbnum(self):
         """A valid AJB number has a volume number between 1-68
         and a section number between 1-150
         and an entry number > 0"""
         num = self['Num']
 
-        if num['volNum'] > 0 and num['volNum'] < 69 \
-        and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
-        and num['entryNum'] > 0 \
-        and (num['entrySuf'] == '' or num['entrySuf'] == 'a' \
-                 or num['entrySuf'] == 'b' or num['entrySuf'] == 'c'):
-            return True
-        else:
-            return False
+        return bool(num['volNum'] > 0 and num['volNum'] < 69 \
+                    and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
+                    and num['entryNum'] > 0 \
+                    and (num['entrySuf'] == '' or num['entrySuf'] == 'a' \
+                         or num['entrySuf'] == 'b' or num['entrySuf'] == 'c'))
 
 
 
     #
     # Private functions
     #
-    def _parseField0(self, line):
+    def _parse_field0(self, line):
 
         fields = line.split(' ', 2)
-        
-        self._parseFileIndex(fields[0])
 
-        self['Num'] = self._parseAJBNum(fields[1])
+        self._parse_index(fields[0])
+
+        self['Num'] = self._parse_ajbnum(fields[1])
 
         if len(fields) > 2:
-            self._parseAuthors(fields[2].strip())
+            self._parse_authors(fields[2].strip())
 
 
 
-    def _parseFileIndex(self, line):
+    def _parse_index(self, line):
         """
         Get the file Index value (i.e. what number is this entry
         in the file.)
@@ -396,10 +400,10 @@ class AJBentry(entry.Entry):
         self['Index'] = line.strip()
 
 
-    def _parseAJBNum(self, line):
+    def _parse_ajbnum(self, line):
         """Get the Volume, Section, any possible subSection, and the
         section entry number.  The subSection defaults to zero
-        if no subSection value exists. Returns a dictionary with the 
+        if no subSection value exists. Returns a dictionary with the
         AJB number elements {'volume': 'AJB', 'volNum': int, 'sectionNum': int,
         'subsectionNum': int, 'entryNum': int, 'entrySuf': ''}.
         """
@@ -414,12 +418,11 @@ class AJBentry(entry.Entry):
         # item 4 and 5 will be empty strings and the subsection number defaults
         # to zero.
         #
-        r2 = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
-        nums = r2.split(line.strip())
+        nums = __reg3__.split(line.strip())
 
         if not nums[0]: # volume
-            nums[0] ='AJB'
+            nums[0] = 'AJB'
 
         if not nums[5]: # subsectionNum
             nums[5] = 0
@@ -436,47 +439,47 @@ class AJBentry(entry.Entry):
                 }
 
 
-    def _parseAuthors(self, line):
-      """split out the authors/editors
-      """
-      ed = False
-      comp = False
+    def _parse_authors(self, line):
+        """split out the authors/editors
+        """
+        edt = False
+        comp = False
 
-      if line.endswith('ed.') :
-        ed = True
-        line = line.replace('ed.', '   ')
-      elif line.endswith('comp.') :
-        comp = True
-        line = line.replace('comp.', '    ')
+        if line.endswith('ed.'):
+            edt = True
+            line = line.replace('ed.', '   ')
+        elif line.endswith('comp.'):
+            comp = True
+            line = line.replace('comp.', '    ')
 
-      names = utils.make_name_list(line)
+        names = libutils.make_name_list(line)
 
-      if ed:
-        self['Editors'] = names
-      elif comp :
-        self['Compilers'] = names
-      else :
-        self['Authors'] = names
+        if edt:
+            self['Editors'] = names
+        elif comp:
+            self['Compilers'] = names
+        else:
+            self['Authors'] = names
 
 
 
-    def _parseComments(self, field):
-        
-        cParser = comments.Comment.parser()
-        results = cParser.parse_text(field, reset=True, multi=True)
+    def _parse_comments(self, field):
+        """comment"""
+        cparser = comments.Comment.parser()
+        results = cparser.parse_text(field, reset=True, multi=True)
         #
         # Look for translators, language, edition, and other publishers
         #
         if results:
-             for result in results:
-                grmName = result.elements[0].grammar_name
-                if 'Edition' ==  grmName:
+            for result in results:
+                grammar_name = result.elements[0].grammar_name
+                if grammar_name == 'Edition':
                     self['Edition'] = result.elements[0].edition_num
 
-                elif 'Reference' == grmName:
+                elif grammar_name == 'Reference':
                     self['Reference'] = str(result.find(comments.AJBNum)).strip()
 
-                elif 'Reprint' == grmName:
+                elif grammar_name == 'Reprint':
                     tmp = result.find(comments.AJBNum)
                     if tmp:
                         self['Reprint'] = str(tmp).strip()
@@ -484,31 +487,31 @@ class AJBentry(entry.Entry):
                     if tmp:
                         self['Reprint'] = str(tmp).strip()
 
-                elif 'Editors' == grmName:
+                elif grammar_name == 'Editors':
                     line = str(result.find(comments.NameList))
-                    nm = utils.make_name_list( line )
-                    if self.notEmpty('Editors'):
-                        self['Editors'].extend( nm )
+                    name = libutils.make_name_list(line)
+                    if self.not_empty('Editors'):
+                        self['Editors'].extend(name)
                     else:
-                        self['Editors'] = nm
+                        self['Editors'] = name
 
-                elif 'Contributors' == grmName:
+                elif grammar_name == 'Contributors':
                     line = str(result.find(comments.NameList))
-                    nm = utils.make_name_list( line )
-                    if self.notEmpty('Contributors'):
-                        self['Contributors'].extend( nm )
+                    name = libutils.make_name_list(line)
+                    if self.not_empty('Contributors'):
+                        self['Contributors'].extend(name)
                     else:
-                        self['Contributors'] = nm
+                        self['Contributors'] = name
 
-                elif 'Compilers' == grmName:
+                elif grammar_name == 'Compilers':
                     line = str(result.find(comments.NameList))
-                    nm = utils.make_name_list( line )
-                    if self.notEmpty('Compilers'):
-                        self['Compilers'].extend( nm )
+                    name = libutils.make_name_list(line)
+                    if self.not_empty('Compilers'):
+                        self['Compilers'].extend(name)
                     else:
-                        self['Compilers'] = nm
+                        self['Compilers'] = name
 
-                elif 'Translation' == grmName :
+                elif grammar_name == 'Translation':
                     tmp = result.find(comments.FromLanguage)
                     if tmp:
                         self['TranslatedFrom'] = str(tmp.elements[1]).strip()
@@ -519,38 +522,38 @@ class AJBentry(entry.Entry):
 
                     tmp = result.find(comments.NameList)
                     if tmp:
-                        nm = utils.make_name_list(str(tmp))
-                        if self.notEmpty('Translators'):
-                            self['Translators'].extend( nm )
+                        name = libutils.make_name_list(str(tmp))
+                        if self.not_empty('Translators'):
+                            self['Translators'].extend(name)
                         else:
-                            self['Translators'] = nm 
+                            self['Translators'] = name
 
-                elif 'Publishers' == grmName:
+                elif grammar_name == 'Publishers':
                     tmp = str(result.find(comments.PublisherList))
-                    # the space chars in the split avoids problems with 
+                    # the space chars in the split avoids problems with
                     # e.g. Rand McNally & Sons
-                    list = tmp.split(' and ')
-                    for l in list:
-                        p = l.split(':')
-                        self['Publishers'].append( {'Place' : p[0].strip(),
-                                                    'PublisherName': p[1].strip()})
+                    tlist = tmp.split(' and ')
+                    for pub in tlist:
+                        parts = pub.split(':')
+                        self['Publishers'].append({'Place' : parts[0].strip(),
+                                                   'PublisherName': parts[1].strip()})
 
-                elif 'Language' == grmName:
+                elif grammar_name == 'Language':
                     self['Language'] = str(result.find(comments.uWord)).strip()
 
-                elif 'Other' == grmName:
-                    nm = str(result.find(comments.uWords)).strip()
-                    if not self.notEmpty('Others'):
+                elif grammar_name == 'Other':
+                    name = str(result.find(comments.uWords)).strip()
+                    if not self.not_empty('Others'):
                         self['Others'] = []
-                    self['Others'].append( nm )
+                    self['Others'].append(name)
 
                 else:
-                    print('Unknown grammer name %s' % grmName)
+                    print('Unknown grammer name %s' % grammar_name)
 
     #
     # XML create routines
     #
-    def write_XML_from_Entry(self):
+    def write_xml_from_entry(self):
         '''Create an XML etree element with the root tag Entry from
         the entry.'''
 
@@ -558,215 +561,221 @@ class AJBentry(entry.Entry):
             return None
 
         # Title and Index are required of any entry
-        entryXML = etree.Element('Entry')
-    
-        a = self['Num']
-        entryXML.append(self.makeAJBNum_XML(a))
-        
-        el = etree.SubElement(entryXML, 'Title')
-        el.text = self['Title']
+        entryxml = etree.Element('Entry')
+
+        anum = self['Num']
+        entryxml.append(self.make_ajbnum_xml(anum))
+
+        elm = etree.SubElement(entryxml, 'Title')
+        elm.text = self['Title']
 
         # This ends the required elements.  All further elements
         # may be missing or blank.
-        
-        if self.notEmpty('subTitle'):
-            el = etree.SubElement(entryXML, 'SubTitle')
-            el.text = self['subTitle']
+
+        if self.not_empty('subTitle'):
+            elm = etree.SubElement(entryxml, 'SubTitle')
+            elm.text = self['subTitle']
 
         # Create the people list, right now these lists are
         # only HumanNames but we need to add business names
         # in the future.
-        if 0 < len(self['Authors']):
-            el = etree.SubElement(entryXML, 'Authors')
+        if self['Authors']:
+            elm = etree.SubElement(entryxml, 'Authors')
             for author in self['Authors']:
-                al = etree.SubElement(el, 'Author')
+                autelm = etree.SubElement(elm, 'Author')
                 # all authors are humannames right now.
-                ae = self.makePerson_XML(author)
-                al.append(ae)
+                person = self.make_person_xml(author)
+                autelm.append(person)
 
-        if 0 < len(self['Editors']):
-            el = etree.SubElement(entryXML, 'Editors')
+        if self['Editors']:
+            elm = etree.SubElement(entryxml, 'Editors')
             for editor in self['Editors']:
-                al = etree.SubElement(el, 'Editor')
+                edelm = etree.SubElement(elm, 'Editor')
                 # all authors are humannames right now.
-                ae = self.makePerson_XML(editor)
-                al.append(ae)
+                person = self.make_person_xml(editor)
+                edelm.append(person)
 
-        if 0 < len(self['Publishers']):
-            el = etree.SubElement(entryXML, 'Publishers')
+        if self['Publishers']:
+            elm = etree.SubElement(entryxml, 'Publishers')
             for publ in self['Publishers']:
-                ep = etree.SubElement(el, 'Publisher')
-                epp = etree.Element('Place')
-                epp.text = publ['Place']
-                ep.append(epp)
+                epub = etree.SubElement(elm, 'Publisher')
+
+                eplace = etree.Element('Place')
+                eplace.text = publ['Place']
+                epub.append(eplace)
 
                 epn = etree.Element('Name')
                 epn.text = publ['PublisherName']
-                ep.append(epn)
+                epub.append(epn)
 
-        if self.notEmpty('Year'):
-            el = etree.SubElement(entryXML, 'Year')
-            el.text = str(self['Year'])
+        if self.not_empty('Year'):
+            elm = etree.SubElement(entryxml, 'Year')
+            elm.text = str(self['Year'])
 
-        if self.notEmpty('Edition'):
-            el = etree.SubElement(entryXML, 'Edition')
-            el.text = str(self['Edition'])
+        if self.not_empty('Edition'):
+            elm = etree.SubElement(entryxml, 'Edition')
+            elm.text = str(self['Edition'])
 
-        if self.notEmpty('Pagination'):
-            el = etree.SubElement(entryXML, 'Pagination')
-            el.text = str(self['Pagination'])
+        if self.not_empty('Pagination'):
+            elm = etree.SubElement(entryxml, 'Pagination')
+            elm.text = str(self['Pagination'])
 
         # The schema defines a price with currency and value
         # but we need to do some intellegent parsing of the prices
         # before we can use this.  For now we just naively use
         # the string.
-        if self.notEmpty('Price'):
-            el = etree.SubElement(entryXML, 'Prices')
+        if self.not_empty('Price'):
+            elm = etree.SubElement(entryxml, 'Prices')
             for price in self['Price'].split(' and '):
-                ep = etree.SubElement(el, 'Price')
-                ep.text = price
+                priceelm = etree.SubElement(elm, 'Price')
+                priceelm.text = price
 
         if self['Reviews']:
-            el = etree.SubElement(entryXML, 'Reviews')
+            elm = etree.SubElement(entryxml, 'Reviews')
             for rev in self['Reviews']:
-                er = etree.SubElement(el, 'Review')
-                er.text = str(rev)
+                revelm = etree.SubElement(elm, 'Review')
+                revelm.text = str(rev)
 
-        if self.notEmpty('TranslatedFrom'):
-            el = etree.SubElement(entryXML, 'TranslatedFrom')
-            el.text = str(self['TranslatedFrom'])
+        if self.not_empty('TranslatedFrom'):
+            elm = etree.SubElement(entryxml, 'TranslatedFrom')
+            elm.text = str(self['TranslatedFrom'])
 
-        if self.notEmpty('Language'):
-            el = etree.SubElement(entryXML, 'Language')
-            el.text = str(self['Language'])
+        if self.not_empty('Language'):
+            elm = etree.SubElement(entryxml, 'Language')
+            elm.text = str(self['Language'])
 
         if self['Translators']:
-            el = etree.SubElement(entryXML, 'Translators')
+            elm = etree.SubElement(entryxml, 'Translators')
             for trans in self['Translators']:
-                al = etree.SubElement(el, 'Translator')
+                aelm = etree.SubElement(elm, 'Translator')
                 # all translators are humannames right now.
-                ae = self.makePerson_XML(trans)
-                al.append(ae)
+                person = self.make_person_xml(trans)
+                aelm.append(person)
 
         if self['Compilers']:
-            el = etree.SubElement(entryXML, 'Compilers')
+            elm = etree.SubElement(entryxml, 'Compilers')
             for compiler in self['Compilers']:
-                al = etree.SubElement(el, 'Compiler')
+                aelm = etree.SubElement(elm, 'Compiler')
                 # all compilers are humannames right now.
-                ae = self.makePerson_XML(compiler)
-                al.append(ae)
+                person = self.make_person_xml(compiler)
+                aelm.append(person)
 
         if self['Contributors']:
-            el = etree.SubElement(entryXML, 'Contributors')
+            elm = etree.SubElement(entryxml, 'Contributors')
             for contrib in self['Contributors']:
-                al = etree.SubElement(el, 'Contributor')
+                aelm = etree.SubElement(elm, 'Contributor')
                 # all contributors are humannames right now.
-                ae = self.makePerson_XML(contrib)
-                al.append(ae)
+                person = self.make_person_xml(contrib)
+                aelm.append(person)
 
         # Sometimes the reprint can be just a year number rather than
         # an AJBnum.  An AJBnum should have decimal points in it and
         # Years should not, so we look for a decimal point to determine
         # which it is.
-        if self.notEmpty('Reprint'):
-            el = etree.SubElement(entryXML, 'ReprintOf')
-            if 1 == len(self['Reprint'].split('.')):
+        if self.not_empty('Reprint'):
+            elm = etree.SubElement(entryxml, 'ReprintOf')
+            if len(self['Reprint'].split('.')) == 1:
                 # Must be a year
-                ey = etree.SubElement(el, 'Year')
-                ey.text = self['Reprint']
+                eyear = etree.SubElement(elm, 'Year')
+                eyear.text = self['Reprint']
             else:
-                numDict = self._parseAJBNum(self['Reprint'])
-                ei = self.makeAJBNum_XML(numDict)
-                el.append(ei)
+                numdict = self._parse_ajbnum(self['Reprint'])
+                num = self.make_ajbnum_xml(numdict)
+                elm.append(num)
 
-        if self.notEmpty('Reference'):
-            el = etree.SubElement(entryXML, 'ReferenceOf')
-            numDict = self._parseAJBNum(self['Reference'])
-            aj = self.makeAJBNum_XML(numDict)
-            el.append(aj)
-            
+        if self.not_empty('Reference'):
+            elm = etree.SubElement(entryxml, 'ReferenceOf')
+            numdict = self._parse_ajbnum(self['Reference'])
+            ajbxml = self.make_ajbnum_xml(numdict)
+            elm.append(ajbxml)
 
-        if 0 < len(self['Others']):
-            el = etree.SubElement(entryXML, 'Comments')
+
+        if self['Others']:
+            elm = etree.SubElement(entryxml, 'Comments')
             for comment in self['Others']:
-                cl = etree.SubElement(el, 'Comment')
-                cl.text = comment
+                com = etree.SubElement(elm, 'Comment')
+                com.text = comment
 
         # return the root Entry element
-        return entryXML
+        return entryxml
 
 
-    def makeAJBNum_XML(self, ajbnum):
+    def make_ajbnum_xml(self, ajbnum):
         '''Write an XML version of an AJB number as an index
         element. The index argument must be a dictionary'''
-        index_XML = etree.Element('Index')
-        el = etree.SubElement(index_XML, 'IndexName')
-        el.text = str(ajbnum['volume']).strip()
-        el = etree.SubElement(index_XML, 'VolumeNumber')
-        el.text = str(ajbnum['volNum'])
-        el = etree.SubElement(index_XML, 'SectionNumber')
-        el.text = str(ajbnum['sectionNum'])
-        el = etree.SubElement(index_XML, 'SubSectionNumber')
-        el.text = str(ajbnum['subsectionNum'])
-        el = etree.SubElement(index_XML, 'EntryNumber')
-        el.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
-    
-        return index_XML
+        index_xml = etree.Element('Index')
+
+        elm = etree.SubElement(index_xml, 'IndexName')
+        elm.text = str(ajbnum['volume']).strip()
+
+        elm = etree.SubElement(index_xml, 'VolumeNumber')
+        elm.text = str(ajbnum['volNum'])
+
+        elm = etree.SubElement(index_xml, 'SectionNumber')
+        elm.text = str(ajbnum['sectionNum'])
+
+        elm = etree.SubElement(index_xml, 'SubSectionNumber')
+        elm.text = str(ajbnum['subsectionNum'])
+
+        elm = etree.SubElement(index_xml, 'EntryNumber')
+        elm.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
+
+        return index_xml
 
 
-    def makePerson_XML(self, nm):
-        '''Create a Person element from a HumanName object. Returns the
-        Person element.'''
+    def make_person_xml(self, hname):
+        '''Create a Person element from a HumanName object. Returns the Person
+        element.
 
-        person_XML = etree.Element('Person')
+        '''
 
-        if nm.title:
-            el = etree.SubElement(person_XML, 'Prefix')
-            el.text = nm.title
-            
-        if nm.first:
-            el = etree.SubElement(person_XML, 'First')
-            el.text = nm.first
+        person_xml = etree.Element('Person')
 
-        if nm.middle:
-            el = etree.SubElement(person_XML, 'Middle')
-            el.text = nm.middle
+        if hname.title:
+            elm = etree.SubElement(person_xml, 'Prefix')
+            elm.text = hname.title
 
-        if nm.last:
-            el = etree.SubElement(person_XML, 'Last')
-            el.text = nm.last
+        if hname.first:
+            elm = etree.SubElement(person_xml, 'First')
+            elm.text = hname.first
 
-        if nm.suffix:
-            el = etree.SubElement(person_XML, 'Suffix')
-            el.text = nm.suffix
+        if hname.middle:
+            elm = etree.SubElement(person_xml, 'Middle')
+            elm.text = hname.middle
 
-        return person_XML
+        if hname.last:
+            elm = etree.SubElement(person_xml, 'Last')
+            elm.text = hname.last
 
+        if hname.suffix:
+            elm = etree.SubElement(person_xml, 'Suffix')
+            elm.text = hname.suffix
 
-    def read_XML_to_Entry(self, elXML):
+        return person_xml
+
+    def read_xml_to_entry(self, elxml):
         '''Parse an XML element of an Entry and place the information
         into the AJBentry dictionary. This is a bit tricky.  XML entries
         contain more information than the AJBentry does.'''
 
-        r2 = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
-        for child in elXML:
+        for child in elxml:
             #print('child is ', child.tag)
 
             if child.tag == 'Index':
-                for el in child:
-                    if el.tag == 'IndexName':
-                        self['Num']['volume'] = el.text
-                    elif el.tag == 'VolumeNumber':
-                        self['Num']['volNum'] = int(el.text)
-                    elif el.tag == 'SectionNumber':
-                        self['Num']['sectionNum'] = int(el.text)
-                    elif el.tag == 'SubSectionNumber':
-                        self['Num']['subsectionNum'] = int(el.text)
-                    elif el.tag == 'EntryNumber':
+                for elm in child:
+                    if elm.tag == 'IndexName':
+                        self['Num']['volume'] = elm.text
+                    elif elm.tag == 'VolumeNumber':
+                        self['Num']['volNum'] = int(elm.text)
+                    elif elm.tag == 'SectionNumber':
+                        self['Num']['sectionNum'] = int(elm.text)
+                    elif elm.tag == 'SubSectionNumber':
+                        self['Num']['subsectionNum'] = int(elm.text)
+                    elif elm.tag == 'EntryNumber':
                         # need to split off the suffix, use regex
-                        m = r2.match(el.text)
-                        self['Num']['entryNum'] = int(m.group(1))
-                        self['Num']['entrySuf'] = m.group(2)
+                        mreg = __reg2__.match(elm.text)
+                        self['Num']['entryNum'] = int(mreg.group(1))
+                        self['Num']['entrySuf'] = mreg.group(2)
                     else:
                         pass
 
@@ -782,16 +791,16 @@ class AJBentry(entry.Entry):
 
             if child.tag == 'Authors':
                 for author in child:
-                    for g2 in author:
-                        if g2.tag == 'Person':
-                            self['Authors'].append(self.HumanNameFmXML(g2))
+                    for g2ent in author:
+                        if g2ent.tag == 'Person':
+                            self['Authors'].append(self.person_name_from_xml(g2ent))
 
             if child.tag == 'Editors':
                 # PersonInfo or CorporateBody
                 for editor in child:
-                    for g2 in editor:
-                        if g2.tag == 'Person':
-                            self['Editors'].append(self.HumanNameFmXML(g2))
+                    for g2ent in editor:
+                        if g2ent.tag == 'Person':
+                            self['Editors'].append(self.person_name_from_xml(g2ent))
 
             if child.tag == 'Publishers':
                 # Place and Name
@@ -803,7 +812,7 @@ class AJBentry(entry.Entry):
                                 publisher['Place'] = str(pub.text)
                             else:
                                 publisher['Place'] = ''
-                                
+
                         elif pub.tag == 'Name':
                             if pub.text is not None:
                                 publisher['PublisherName'] = str(pub.text)
@@ -813,7 +822,6 @@ class AJBentry(entry.Entry):
                         else:
                             pass
                     self['Publishers'].append(publisher)
-                    del(publisher)
 
             if child.tag == 'Year':
                 self['Year'] = child.text
@@ -829,11 +837,10 @@ class AJBentry(entry.Entry):
                 self['Price'] = ''
                 for price in child:
                     if first:
-                       first = False
+                        first = False
                     else:
                         self['Price'] += ' and '
                     self['Price'] += price.text
-                del first
 
             if child.tag == 'Reviews':
                 for review in child:
@@ -849,84 +856,84 @@ class AJBentry(entry.Entry):
             if child.tag == 'Translators':
                 # PersonInfo or CorporateBody
                 for trans in child:
-                    for g2 in trans:
-                        if g2.tag == 'Person':
-                            self['Translators'].append(self.HumanNameFmXML(g2))
+                    for g2ent in trans:
+                        if g2ent.tag == 'Person':
+                            self['Translators'].append(self.person_name_from_xml(g2ent))
 
             if child.tag == 'Compilers':
                 # PersonInfo or CorporateBody
                 for comp in child:
-                    for g2 in comp:
-                        if g2.tag == 'Person':
-                            self['Compilers'].append(self.HumanNameFmXML(g2))
+                    for g2ent in comp:
+                        if g2ent.tag == 'Person':
+                            self['Compilers'].append(self.person_name_from_xml(g2ent))
 
             if child.tag == 'Contributors':
                 # PersonInfo or CorporateBody
                 for contr in child:
-                    for g2 in contr:
-                        if g2.tag == 'Person':
-                            self['Contributors'].append(self.HumanNameFmXML(g2))
+                    for g2ent in contr:
+                        if g2ent.tag == 'Person':
+                            self['Contributors'].append(self.person_name_from_xml(g2ent))
 
             if child.tag == 'ReprintOf':
                 # Year or AJBnum but only one
-                for rp in child:
-                    if rp.tag == 'Year':
-                        self['Reprint'] = rp.text
-                    elif rp.tag == 'Index':
-                        self['Reprint'] = self.AJBstringFromIndex_XML(rp)
-                
+                for reprint in child:
+                    if reprint.tag == 'Year':
+                        self['Reprint'] = reprint.text
+                    elif reprint.tag == 'Index':
+                        self['Reprint'] = self.ajbstr_from_xml(reprint)
+
 
             if child.tag == 'ReferenceOf':
                 # AJBnum
-                subsectionNum = '0'
+                subsectionnum = '0'
                 for ell in child:
                     if ell.tag == 'Index':
-                        self['Reference'] = self.AJBstringFromIndex_XML(ell)
+                        self['Reference'] = self.ajbstr_from_xml(ell)
 
             if child.tag == 'Comments':
                 for comment in child:
                     self['Others'].append(comment.text)
 
-    def AJBstringFromIndex_XML( self, ell):
-        '''Return a AJB number as a string "AJB xx.xxx(xx).xx[a]" from 
+    def ajbstr_from_xml(self, ell):
+        '''Return a AJB number as a string "AJB xx.xxx(xx).xx[a]" from
         an XML Index element.'''
 
-        r2 = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
-        for el in ell:
-            if el.tag == 'IndexName':
-                aname = el.text
-            elif el.tag == 'VolumeNumber':
-                volNum = '%02d'%int(el.text)
-            elif el.tag == 'SectionNumber':
-                sectionNum = '%02d'%int(el.text)
-            elif el.tag == 'SubSectionNumber':
-                subsectionNum = el.text
-            elif el.tag == 'EntryNumber':
-                m = r2.match(el.text)
-                entryNum = '%02d'%int(m.group(1))
-                entrySuf = m.group(2)
-        return aname + ' ' + volNum + '.' + sectionNum + '.' + entryNum + entrySuf
-        
-        
-    def HumanNameFmXML(self, ell):
-        hn = HumanName()
-        for el in ell:
-            if el.tag == 'First':
-                hn.first = el.text
-            elif el.tag == 'Middle':
-                hn.middle = el.text
-            elif el.tag == 'Last':
-                hn.last = el.text
-            elif el.tag == 'Title':
-                hn.title = el.text
-            elif el.tag == 'Suffix':
-                hn.suffix = el.text
-            elif el.tag == 'NickName':
-                hn.nickname = el.text
+        for elm in ell:
+            if elm.tag == 'IndexName':
+                aname = elm.text
+            elif elm.tag == 'VolumeNumber':
+                volnum = '%02d'%int(elm.text)
+            elif elm.tag == 'SectionNumber':
+                sectionnum = '%02d'%int(elm.text)
+            elif elm.tag == 'SubSectionNumber':
+                subsectionnum = elm.text
+            elif elm.tag == 'EntryNumber':
+                mreg = __reg2__.match(elm.text)
+                entrynum = '%02d'%int(mreg.group(1))
+                entrysuf = mreg.group(2)
+        return aname + ' ' + volnum + '.' + sectionnum + '.' + entrynum + entrysuf
+
+
+    def person_name_from_xml(self, ell):
+        '''Create a person mane from an XML element.'''
+        hname = HumanName()
+        for elm in ell:
+            if elm.tag == 'First':
+                hname.first = elm.text
+            elif elm.tag == 'Middle':
+                hname.middle = elm.text
+            elif elm.tag == 'Last':
+                hname.last = elm.text
+            elif elm.tag == 'Title':
+                hname.title = elm.text
+            elif elm.tag == 'Suffix':
+                hname.suffix = elm.text
+            elif elm.tag == 'NickName':
+                hname.nickname = elm.text
             else:
                 pass
 
-        return hn
+        return hname
 
 
 #
@@ -934,102 +941,142 @@ class AJBentry(entry.Entry):
 #
 if __name__ == '__main__':
 
-    ajbstr = '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'''
+    from pprint import pprint
 
-    ajbstra = '''4 66.145(1).29a P. W. Hodge,
-The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,
-1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
-and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'''
+    TESTENT = {
+        'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of
+Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179
+pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
+Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-    ajbstra1 = '4 66.145.29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+        'ajbstra' : '''4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of
+Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179
+pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
+Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-    badajbstrd = '4 66.145.29d P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr9;'
+        'ajbstra1' : '''4 66.145.29a P. W. Hodge, The Physics comma and
+Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,
+1966, 179 pp, $2.95 and $4.95,
+Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
+and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-    authorstr = '4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the authorstr;'
+        'badajbstrd' : '''4 66.145.29d P. W. Hodge,
+The Physics comma and Astronomy of Galaxies and Cosmology,
+New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95
+and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
+and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-    editorstr = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;'
+        'authorstr' : '''4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other,
+The Physics comma and Astronomy of Galaxies and Cosmology, New York,
+McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American
+216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and
+Sky Tel. 33 164, other This is the authorstr;''',
 
-    allfieldsstr = '4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55b;'
+        'editorstr' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III
+and A. Other and A. V. de la Name ed.,
+The Physics comma and Astronomy of Galaxies and
+Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and
+$4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and
+Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment;
+edited by A. B. Name; translated from Italian into English by A. Trans;
+also published London: A Publishing Co.; other This is the editor string;''',
 
-    allfieldsstr2 = '4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55'
+        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author III
+and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and
+Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and
+$4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and
+Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment;
+3rd edition;
+edited by A. B. Name; translated from Italian into English by A. Trans;
+also published London: A Publishing Co.;
+other This is the editor string;
+contributors A. B. Contrib; compiled by A. B. Compiler;
+in French; reprint of 1956; reference AJB 59.144.55b;''',
 
-    badajbstr = '27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
+        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III
+and A. Other and A. V. de la Name,
+The Physics comma and Astronomy of Galaxies and Cosmology, , , , , ,
+Sci. American 216 Nr 2 142 and Sci. American 216
+Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55''',
 
-    badtitlestr = '27 66.145(1).309 P. W. Hodge, , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;'
+        'badajbstr' : '''27 xx.145(1).309 P. W. Hodge,
+The Physics comma and Astronomy of Galaxies and Cosmology ,
+New York, McGraw-Hill Book Company, 1966, 179 pp,
+$2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
+Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164,
+other This is the badstr;''',
+
+        'badtitlestr' : '''27 66.145(1).309 P. W. Hodge, , New York,
+McGraw-Hill Book Company,
+1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and
+Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164,
+other This is the badstr;''',
+        }
+
 
     try:
-        from pprint import pprint
-    except:
-        print('Pretty Print module unavailable')
-        sys.exit(0)
+        libentry.Entry(TESTENT['ajbstr'])
+    except NotImplementedError:
+        print("Entry() class fails properly with no read() method.")
 
-    try:
-      badentry = Entry(ajbstr)
-    except:
-      print("Entry() class fails properly with no read() method.")
-      
-    allfieldajb = AJBentry(allfieldsstr)
-    print('\nThe all fields ajb entry is_valid() is %d and looks like:' % allfieldajb.is_valid())
-    pprint(allfieldajb)
+    ENT = AJBentry()
+    print('The empty ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
 
-    ajb1 = AJBentry()
-    print('The empty ajb entry is_valid() is %d and looks like:' % ajb1.is_valid())
-    pprint(ajb1)
-
-    ajb2 = AJBentry(ajbstr)
-    print('The good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
-    pprint(ajb2)
+    ENT = AJBentry(TESTENT['ajbstr'])
+    print('The good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
 
 
-    ajb2 = AJBentry(ajbstra)
-    print('\nThe good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
-    pprint(ajb2)
+    ENT = AJBentry(TESTENT['ajbstra'])
+    print('\nThe good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
 
-    ajb2 = AJBentry(ajbstra1)
-    print('\nThe good ajb entry is_valid() is %d and looks like:' % ajb2.is_valid())
-    pprint(ajb2)
+    ENT = AJBentry(TESTENT['ajbstra1'])
+    print('\nThe good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
 
-    ajb3 = AJBentry(badajbstr)
-    print('\nThe bad ajb entry is_valid() is %d and looks like:' % ajb3.is_valid())
-    
-    # This currently throws an error.
-    #ajb3 = AJBentry(badajbstrd)
-    #print('\nThe bad ajb entry is_valid() is %d and looks like:' % ajb3.is_valid())
-    #pprint(ajb3)
+    ENT = AJBentry(TESTENT['badajbstr'])
+    print('\nThe bad ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
 
-    ajb4 = AJBentry(badtitlestr)
-    print('\nThe bad title ajb entry is_valid() is %d and looks like:' % ajb4.is_valid())
-    pprint(ajb4)
+    ENT = AJBentry(TESTENT['badtitlestr'])
+    print('\nThe bad title ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
 
-    authorajb = AJBentry(authorstr)
-    print('\nThe author ajb entry is_valid() is %d and looks like:' % authorajb.is_valid())
-    pprint(authorajb)
-    print(authorajb.shortTitle())
+    ENT = AJBentry(TESTENT['authorstr'])
+    print('\nThe author ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
+    print(ENT.short_title())
 
-    editorajb = AJBentry(editorstr)
-    print('\nThe editor ajb entry is_valid() is %d and looks like:' % editorajb.is_valid())
-    pprint(editorajb)
-    print(editorajb.shortTitle())
+    ENT = AJBentry(TESTENT['editorstr'])
+    print('\nThe editor ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
+    print(ENT.short_title())
 
-    print(editorajb.numStr())
-    eds = editorajb['Editors']
-    print(eds[0].full_name)
+    print(ENT.num_str())
+    EDS = ENT['Editors']
+    print(EDS[0].full_name)
 
-    print(editorajb._parseAJBNum('AJB 32.45(0).56'))
-    print(editorajb._parseAJBNum('32.45(0).56'))
+    ENT = AJBentry(TESTENT['allfieldsstr'])
+    print('\nThe all fields ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+    pprint(ENT)
+
+    print(ENT._parse_ajbnum('AJB 32.45(0).56'))
+    print(ENT._parse_ajbnum('32.45(0).56'))
 
     #
     # test XML routines
     #
     print('\n\nTesting XML routines\n')
     print('allfieldajb as entry:')
-    pprint(allfieldajb)
+    pprint(ENT)
 
     print('\nallfieldajb as XML')
-    et = allfieldajb.write_XML_from_Entry()
-    print(etree.tostring(et, pretty_print=True, encoding='unicode'))
+    XMLENT = ENT.write_xml_from_entry()
+    print(etree.tostring(XMLENT, pretty_print=True, encoding='unicode'))
 
     print('\nallfieldajb XML as entry')
-    eAll = AJBentry()
-    eAll.read_XML_to_Entry(et)
-    pprint(eAll)
+    ENT = AJBentry()
+    ENT.read_xml_to_entry(XMLENT)
+    print('entry.is_valid is %d' % (ENT.is_valid()))
+    pprint(ENT)
