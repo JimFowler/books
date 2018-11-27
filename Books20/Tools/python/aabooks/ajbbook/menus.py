@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/menus.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -18,151 +18,152 @@
 
 """Create the menus for the AJB Book Entry window
 """
-from PyQt5.QtCore import *
-from PyQt5.QtGui  import *
-from PyQt5.QtWidgets import *
-    
-def createAction(self, text, slot=None, shortcut=None, icon=None,
-                 tip=None, checkable=False, signal='triggered'):
-    """Usage: createAction( self, text, slot=None, shortcut=None, icon=None,
+from PyQt5 import QtGui, QtWidgets
+
+# pylint: disable=eval-used,too-many-arguments
+
+def create_action(self, text, slot=None, shortcut=None, icon=None,
+                  tip=None, checkable=False, signal='triggered'):
+    """Usage: create_action( self, text, slot=None, shortcut=None, icon=None,
                             tip=None, checkable=False, signal="triggered")
          Note: the vars 'slot', 'shortcut', 'icon', 'tip',
                and 'signal' should be of type string.
     """
-    action = QAction(text, self)                                  
-    if icon is not None:                                          
-        action.setIcon(QIcon(":/{0}.png".format(icon)))           
-    if shortcut is not None:                                      
-       action.setShortcut(shortcut)                              
-    if tip is not None:                                           
-        action.setToolTip(tip)                                    
-        action.setStatusTip(tip)                                  
-    if slot is not None:                                          
+    action = QtWidgets.QAction(text, self)
+    if icon is not None:
+        action.setIcon(QtGui.QIcon(":/{0}.png".format(icon)))
+    if shortcut is not None:
+        action.setShortcut(shortcut)
+    if tip is not None:
+        action.setToolTip(tip)
+        action.setStatusTip(tip)
+    if slot is not None:
         #self.connect(action, SIGNAL(signal), slot)
-        eval( 'action.' + signal + '.connect(' + slot + ')' )
+        eval('action.' + signal + '.connect(' + slot + ')')
     else:
         action.enabled = False
-    if checkable:                                                 
-        action.setCheckable(True)                                 
-    return action                                                 
+
+    action.setCheckable(checkable)
+    return action
 
 
-def createMenus( self, menuBar):
+def create_menus(self, menu_bar):
+    """Create all the menus for ajbbooks main window."""
 
-        # set up the File menus
-        fileMenu = menuBar.addMenu('&File')
-
-
-        newFileAction = createAction( self, '&New File',
-                                      slot='self.openNewFile',
-                                      shortcut='Ctrl+N' )
-        
-        openFileAction = createAction( self, '&Open File...',
-                                       slot='self.askOpenFile',
-                                       shortcut='Ctrl+O' )
-        
-        saveAction = createAction( self, '&Save File',
-                                   slot='self.saveFile',
-                                   shortcut='Ctrl+S')
-        
-        saveAsAction = createAction( self, 'Save File As...',
-                                     slot='self.saveFileAs' )
-        
-        newEntAction = createAction( self, 'New &Entry',
-                                     slot='self.newEntry',
-                                     shortcut='Ctrl+E')
-
-        nextEntAction = createAction( self, 'Next Entry',
-                                     slot='self.on_nextButton_released',
-                                      shortcut=None)
-
-        prevEntAction = createAction( self, 'Prev &Entry',
-                                     slot='self.on_prevButton_released',
-                                      shortcut=None)
-
-        saveEntAction = createAction( self, 'Save Ent&ry', 
-                                      slot='self.saveEntry',
-                                      shortcut='Ctrl+R' )
-
-        printAction = createAction( self, '&Print Entry',
-                                    slot='self.printEntry',
-                                    shortcut='Ctrl+P')
-        
-        exitAction = createAction(self, '&Quit',
-                                  slot='self.quit',
-                                  shortcut='Ctrl+Q',
-                                  icon='filequit',
-                                  tip='Close the Application')
-
-        fileMenu.addAction(newFileAction)
-        fileMenu.addAction(openFileAction)
-        fileMenu.addAction(saveAction)
-        fileMenu.addAction(saveAsAction)
-        fileMenu.addSeparator()
-        fileMenu.addAction(newEntAction)
-        fileMenu.addAction(nextEntAction)
-        fileMenu.addAction(prevEntAction)
-        fileMenu.addAction(saveEntAction)
-        fileMenu.addAction(printAction)
-        fileMenu.addSeparator()
-        fileMenu.addAction(exitAction)
+    create_file_menu(self, menu_bar)
+    create_edit_menu(self, menu_bar)
+    create_help_menu(self, menu_bar)
 
 
+def create_file_menu(self, menu_bar):
+    """Create the file menu/"""
+    file_menu = menu_bar.addMenu('&File')
+
+    new_action = create_action(self, '&New File',
+                               slot='self.open_new_file',
+                               shortcut='Ctrl+N')
+    file_menu.addAction(new_action)
+
+    new_action = create_action(self, '&Open File...',
+                               slot='self.ask_open_file',
+                               shortcut='Ctrl+O')
+    file_menu.addAction(new_action)
+
+    new_action = create_action(self, '&Save File',
+                               slot='self.save_file',
+                               shortcut='Ctrl+S')
+    file_menu.addAction(new_action)
+
+    new_action = create_action(self, 'Save File As...',
+                               slot='self.save_file_as')
+    file_menu.addAction(new_action)
+    file_menu.addSeparator()
 
 
-        # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
-        cutAction = createAction(self, 'Cu&t', shortcut='Ctrl+X')
-        cutAction.setEnabled(False)
-        copyAction = createAction(self, '&Copy', shortcut='Ctrl+C') 
-        copyAction.setEnabled(False)
-        pasteAction = createAction(self, '&Paste', shortcut='Ctrl+V')
-        pasteAction.setEnabled(False)
-        deleteAction = createAction(self, '&Delete', shortcut='Del')
-        deleteAction.setEnabled(False)
-        addInfoAction = createAction(self, 'Additional &Info...',
-                                     shortcut='Ctrl+T')
-        
-        symbolAction = createAction(self, '&Insert Symbol...',
-                                    slot='self.openSymbol',
-                                    shortcut='Ctrl+I')
-        
-        headerAction = createAction(self, 'Edit &Header...',
-                                    slot='self.editHeader',
-                                    shortcut='Ctrl+H')
-        
-        origstrAction = createAction(self, 'Show Original String',
-                                     slot='self.showOrigStr')
-        
-        setvolnumAction = createAction(self, 'Set Volume Number...',
-                                       slot='self.setVolumeNumberInteractive')
+    new_action = create_action(self, 'New &Entry',
+                               slot='self.new_entry',
+                               shortcut='Ctrl+E')
+    file_menu.addAction(new_action)
 
-        fontsizeAction = createAction(self, 'Set font size...')
-        fontsizeAction.setEnabled(False)
+    new_action = create_action(self, 'Next Entry',
+                               slot='self.on_nextButton_released',
+                               shortcut=None)
+    file_menu.addAction(new_action)
 
-        fonttypeAction = createAction(self, 'Set font...')
-        fonttypeAction.setEnabled(False)
+    new_action = create_action(self, 'Prev &Entry',
+                               slot='self.on_prevButton_released',
+                               shortcut=None)
+    file_menu.addAction(new_action)
+
+    new_action = create_action(self, 'Save Ent&ry',
+                               slot='self.save_entry',
+                               shortcut='Ctrl+R')
+    file_menu.addAction(new_action)
+
+    new_action = create_action(self, '&Print Entry',
+                               slot='self.print_entry',
+                               shortcut='Ctrl+P')
+    file_menu.addAction(new_action)
+    file_menu.addSeparator()
 
 
-        editMenu = menuBar.addMenu('&Edit')
-        editMenu.addAction( cutAction)
-        editMenu.addAction( copyAction ) 
-        editMenu.addAction( pasteAction )
-        editMenu.addAction( deleteAction)
-        editMenu.addSeparator()
-        editMenu.addAction( symbolAction)
-        editMenu.addAction( headerAction)
-        editMenu.addAction( origstrAction)
-        editMenu.addAction( setvolnumAction)
-        editMenu.addAction( fontsizeAction)
-        editMenu.addAction( fonttypeAction)
+    new_action = create_action(self, '&Quit',
+                               slot='self.quit',
+                               shortcut='Ctrl+Q',
+                               icon='filequit',
+                               tip='Close the Application')
+    file_menu.addAction(new_action)
 
 
 
-        # set up the Help menus
-        helpMenu = menuBar.addMenu('&Help')
-        aboutAction = createAction(self, '&About Book Entry...',
-                                   'self.helpAbout' )
-        helpMenu.addAction(aboutAction)
+def create_edit_menu(self, menu_bar):
+    """Create the edit menu."""
+    # set up the Edit menus, Cut, Copy, Paste, Delete  make gray
+    cut_action = create_action(self, 'Cu&t', shortcut='Ctrl+X')
+    cut_action.setEnabled(False)
+    copy_action = create_action(self, '&Copy', shortcut='Ctrl+C')
+    copy_action.setEnabled(False)
+    paste_action = create_action(self, '&Paste', shortcut='Ctrl+V')
+    paste_action.setEnabled(False)
+    delete_action = create_action(self, '&Delete', shortcut='Del')
+    delete_action.setEnabled(False)
+
+    symbol_action = create_action(self, '&Insert Symbol...',
+                                  slot='self.open_symbol',
+                                  shortcut='Ctrl+I')
+
+    header_action = create_action(self, 'Edit &Header...',
+                                  slot='self.edit_header',
+                                  shortcut='Ctrl+H')
+
+    origstr_action = create_action(self, 'Show Original String',
+                                   slot='self.show_orig_str')
+
+    setvolnum_action = create_action(self, 'Set Volume Number...',
+                                     slot='self.set_volume_number_interactive')
+
+
+    edit_menu = menu_bar.addMenu('&Edit')
+    edit_menu.addAction(cut_action)
+    edit_menu.addAction(copy_action)
+    edit_menu.addAction(paste_action)
+    edit_menu.addAction(delete_action)
+    edit_menu.addSeparator()
+    edit_menu.addAction(symbol_action)
+    edit_menu.addAction(header_action)
+    edit_menu.addAction(origstr_action)
+    edit_menu.addAction(setvolnum_action)
+
+
+def create_help_menu(self, menu_bar):
+    """Create the help menu."""
+
+    # set up the Help menus
+    help_menu = menu_bar.addMenu('&Help')
+    about_action = create_action(self, '&About Book Entry...',
+                                 'self.help_about')
+    help_menu.addAction(about_action)
+
 
 if __name__ == '__main__':
     print('No tests available yet')
