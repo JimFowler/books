@@ -1,34 +1,34 @@
 #! /usr/bin/env python3
 #
-## Begin copyright
+# Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/bookfile.py
-##  
-##   Part of the Books20 Project
+# /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/bookfile.py
 ##
-##   Copyright 2018 James R. Fowler
+# Part of the Books20 Project
 ##
-##   All rights reserved. No part of this publication may be
-##   reproduced, stored in a retrival system, or transmitted
-##   in any form or by any means, electronic, mechanical,
-##   photocopying, recording, or otherwise, without prior written
-##   permission of the author.
+# Copyright 2018 James R. Fowler
+##
+# All rights reserved. No part of this publication may be
+# reproduced, stored in a retrival system, or transmitted
+# in any form or by any means, electronic, mechanical,
+# photocopying, recording, or otherwise, without prior written
+# permission of the author.
 ##
 ##
-## End copyright
+# End copyright
 """Defines the class that handles disk files and entry lists"""
 
 import fileinput
-import os, sys
+import os
+import sys
 import traceback
-import json
 from lxml import etree
 
-import aabooks.ajbbook.AJBentry as AJBentry
+from aabooks.ajbbook import ajbentry
 
-__version__ = 0.1
+__VERSION__ = 0.1
 
-__defaultHeader__ = """Entry format
+__DEFAULTHEADER__ = """Entry format
 
 Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
 
@@ -50,306 +50,308 @@ class BookFile():
     for book lists from AJB/AAA. It handles all the translation
     between the disk file format and the AJBentry format."""
 
-    def __init__(self, parent=None):
-        self._header = __defaultHeader__
-        self._entryList = []
+    # pylint: disable=too-many-instance-attributes,too-many-public-methods
+    def __init__(self):
+        self._header = __DEFAULTHEADER__
+        self._entry_list = []
 
-        self._volumeNumber = -1
-        self._fileName = './document1'
-        self._dirName = './'
-        self._baseName = 'document1'
+        self._volume_number = -1
+        self._filename = './document1'
+        self._dirname = './'
+        self._basename = 'document1'
         self._extension = '.txt'
+        # 1 <= current_entry_index <= len(self._entry_list)
+        self.current_entry_index = -1
 
-        self.curEntryNumber = -1  # 1 <= curEntryNumber <= len(self._entryList)
-
-        self.setFileName('document1')
+        self.set_filename('document1')
         self._dirty = False
 
-
     # dirty (modified) file
-    def isDirty(self):
+
+    def is_dirty(self):
         """Returns a boolean. The value is True if any of the entries
         or the header has changed since the last read() or write().
         """
         return self._dirty
 
     # volume number
-    def setVolumeNumber( self, vol ):
-        self._volumeNumber = vol
+    def set_volume_number(self, vol):
+        """Set the default volume number for this file."""
+        self._volume_number = vol
 
-    def getVolumeNumber(self):
-        return self._volumeNumber
-
+    def get_volume_number(self):
+        """Return the current default volume number."""
+        return self._volume_number
 
     # file name
-    def setFileName(self, filename):
+
+    def set_filename(self, filename):
         """Set the name of the disk file. Thus one can read a file,
         set a new file name, and save the file. No validity checking
         is done at this stage."""
-        self._fileName = filename
-        self._dirName, _baseName = os.path.split(filename)
-        self._baseName, self._extension = os.path.splitext(_baseName)
+        self._filename = filename
+        self._dirname, _basename = os.path.split(filename)
+        self._basename, self._extension = os.path.splitext(_basename)
         self._dirty = True
 
-    def getFileName(self):
+    def get_filename(self):
         """Return the current value of the fileName."""
-        return self._fileName
+        return self._filename
 
-    def getDirName(self):
+    def get_dirname(self):
         """Returns the dirname() of the current filename."""
-        return self._dirName
+        return self._dirname
 
-    def getBaseName(self):
+    def get_basename(self):
         """Returns the basename() of the current filename."""
-        return self._baseName
+        return self._basename
 
-    def getBaseNameWithExtension(self):
+    def get_basename_with_extension(self):
         """Returns the baseName().extension() of the current filename."""
-        return self._baseName + self._extension
+        return self._basename + self._extension
 
-    def getExtension(self):
+    def get_extension(self):
         """Returns the extension() of the current filename."""
         return self._extension
 
-
     # header
-    def setHeader(self, headerStr):
+
+    def set_header(self, headerstr):
         """Set the header entry to be headerStr."""
         self._dirty = True
-        self._header = headerStr
+        self._header = headerstr
 
-    def getHeader(self):
+    def get_header(self):
         """Return the current header string."""
         return self._header
 
-
     # current entry
-    def getEntry(self, count=-1):
+
+    def get_entry(self, count=-1):
         """Returns the entry at position count. If count is less than 0
         or greater than the number of entries, 'None' is returned. Note
-        that 1 <= count <= len(self._entryList).
+        that 1 <= count <= len(self._entry_list).
         """
-        if count < 1 or count > len(self._entryList):
+        if count < 1 or count > len(self._entry_list):
             return None
 
-        self.curEntryNumber = count - 1
-        return self._entryList[self.curEntryNumber]
+        self.current_entry_index = count - 1
+        return self._entry_list[self.current_entry_index]
 
-    def setEntry(self, entry, count=-1):
-
+    def set_entry(self, entry, count=-1):
         """Write over the current entry or the entry at position
-        'count' if given.  Note that 1 <= count <= len(self._entryList).
+        'count' if given.  Note that 1 <= count <= len(self._entry_list).
         The dirty flag is set for the file."""
 
-        if not entry.isValid():
-            print('bookfile().setEntry count %d entry:'%count)
+        if not entry.is_valid():
+            print('bookfile().set_entry count %d entry:' % count)
             print(entry)
             return False
-    
-        if count < 1 or count > len(self._entryList):
+
+        if count < 1 or count > len(self._entry_list):
             return False
 
-        self.curEntryNum = count - 1
-        self._entryList[self.curEntryNum] = entry
+        self.current_entry_index = count - 1
+        self._entry_list[self.current_entry_index] = entry
         self._dirty = True
         return True
 
-    def setNewEntry(self, entry, count=-1):
-        """Append an entry to the list or insert before entry 'count' 
-        if that value is given. Note that 1 <= count <= len(self._entryList).
+    def set_new_entry(self, entry, count=-1):
+        """Append an entry to the list or insert before entry 'count'
+        if that value is given. Note that 1 <= count <= len(self._entry_list).
         The dirty flag is set for the file.
         """
 
-        if not entry.isValid():
+        if not entry.is_valid():
             return False
 
-        #print('bookfile', count, entry['Num'] )
-        if count < 1 or count > len(self._entryList):
-            self._entryList.append(entry)
+        if 1 > count < len(self._entry_list):
+            # count is within the list, insert the entry
+            self.current_entry_index = count - 1
+            self._entry_list.insert(self.current_entry_index, entry)
         else:
-            self.curEntryNumber = count - 1
-            self._entryList.insert(self.curEntryNumber, entry)
+            # count is not within the list, append the entry
+            self._entry_list.append(entry)
 
         self._dirty = True
         return True
 
-    def deleteEntry(self, entryNum):
+    def delete_entry(self, entrynum):
         '''Delete the (entryNum - 1) record in the list, if such exists.
         Return the length of the remaining list.'''
-        if entryNum > 0 and entryNum <= len(self._entryList):
-            self._entryList.pop(entryNum - 1)
+        if 0 < entrynum <= len(self._entry_list):
+            self._entry_list.pop(entrynum - 1)
             self._dirty = True
 
-        return len(self._entryList)
+        return len(self._entry_list)
 
-    def mkShortTitleList(self):
+    def make_short_title_list(self):
         '''Create a string of short titles from all entries in the list.
         A short title is "count AJBnum Title" and is used to look quickly
         at the list of titles.'''
 
-        shortTitleList = ''
+        short_title_list = ''
         count = 1
-        for e in self._entryList:
-            shortTitleList = shortTitleList + str(count) + ' ' + e.shortTitle()
+        for _ent in self._entry_list:
+            short_title_list = short_title_list + str(count) + ' ' + _ent.short_title()
             count += 1
 
-        return shortTitleList
-            
+        return short_title_list
+
     # file I/O
-    def readFile(self, filename=None):
+    def read_file(self, filename=None):
         '''Select a reader function depending on the filename
         extension.  Return the number of entries read.'''
         if filename:
-            self.setFileName(filename)
+            self.set_filename(filename)
 
-        if self._fileName == '' or not os.path.isfile(self._fileName):
-            return 0 # no records read
+        if self._filename == '' or not os.path.isfile(self._filename):
+            return 0  # no records read
 
         if self._extension == '.txt':
-            return self.readFile_Text()
-        elif self._extension == '.xml':
-            return self.readFile_XML()
-        else:
-            # return error to caller who should know about Qt message boxes.
-            print('Invalid file extension for %s' % self._fileName)
-            return 0
+            return self.read_file_text()
 
+        if self._extension == '.xml':
+            return self.read_file_xml()
 
-    def writeFile(self, filename=None):
+        # return error to caller who should know about Qt message boxes.
+        #print('Invalid file extension for %s' % self._filename)
+        return 0
+
+    def write_file(self, filename=None):
         '''Select a writer function depending on the filename
         extension. If filename is not given, we use aabooks._fileName
         instead.
 
         Returns True if the file could be written or False otherwise.'''
         if filename:
-            self.setFileName(filename)
+            self.set_filename(filename)
 
         if self._extension == '.txt':
-            return self.writeFile_Text()
-        elif self._extension == '.xml':
-            return self.writeFile_XML()
-        else:
-            # return error to caller who should know about Qt message boxes.
-            print('Invalid file extension for %s' % self._fileName)
-            return 0
+            return self.write_file_text()
 
+        if self._extension == '.xml':
+            return self.write_file_xml()
+
+        # return error to caller who should know about Qt message boxes.
+        #print('Invalid file extension for %s' % self._filename)
+        return 0
 
     # Specific file type I/O
-    def readFile_Text(self, filename=None ):
+
+    def read_file_text(self):
         """Open and read a .txt file and put the header stuff into
         _header and the entries into the entry list. The header is
         defined as everything before the first valid entry. If
         filename is not given, we use the value set in
-        BookFile.setFileName() if valid. Note that we do not care if
+        BookFile.set_filename() if valid. Note that we do not care if
         the entries or header have been modified; that is the job of
         the calling routine.
 
         Return value is the number of record entries read."""
 
         # if we have a good file, then clear the entryList and header
-        self._entryList = []
+        self._entry_list = []
         self._header = ''
         self._dirty = False
 
-        entTemp = AJBentry.AJBentry()
+        enttemp = ajbentry.AJBentry()
         count = 0
-        
-        for line in fileinput.input([self._fileName]):
+
+        for line in fileinput.input([self._filename]):
             line = line.strip()
             try:
-                if not entTemp.read_Text_to_Entry(line) and not count:
+                if not enttemp.read_text_to_entry(line) and not count:
                     self._header = self._header + line + '\n'
             except:
                 print(line + '\n')
                 traceback.print_exc()
                 print('\n\n')
-         
-            if entTemp.isValid():
+
+            if enttemp.is_valid():
                 count += 1
-                self._entryList.append(entTemp)
-                entTemp = AJBentry.AJBentry()
-         
-        self.curEntryNumber = 1
+                self._entry_list.append(enttemp)
+                enttemp = ajbentry.AJBentry()
+
+        self.current_entry_index = 1
 
         return count
 
-
-    def writeFile_Text(self):
+    def write_file_text(self):
         """Write the entry list and header to a .txt disk file.
         if filename is not given, we use Aabooks._fileName instead.
 
         Returns True if the file could be written or False otherwise."""
 
         try:
-            fd = open(self._fileName, 'w', encoding='UTF8')
+            file_fd = open(self._filename, 'w', encoding='UTF8')
         except:
             return False
 
-        if fd.newlines:
-            newline = fd.newlines + fd.newline
+        if file_fd.newlines:
+            newline = file_fd.newlines + file_fd.newline
         else:
             newline = '\n\n'
 
-
-        fd.write(self._header)
+        file_fd.write(self._header)
         count = 1
-        for ent in self._entryList:
-            fd.write(str(count) + ' ' + ent.write_Text_from_Entry() + newline)
+        for ent in self._entry_list:
+            file_fd.write(str(count) + ' ' + ent.write_text_from_entry() + newline)
             count += 1
 
-        fd.close()
+        file_fd.close()
         self._dirty = False
 
+        return True
 
-    def readFile_XML(self):
+    def read_file_xml(self):
         """Open and read the header stuff into _header and the entries
         into the entry list. If filename is not given, we use
-        the value set in BookFile.setFileName() if valid. Note that we
+        the value set in BookFile.set_filename() if valid. Note that we
         do not care if the entries or header have been modified; that is
         the job of the calling routine.
-    
+
         Return value is the number of record entries read."""
-    
-        if self._fileName == '' or not os.path.isfile(self._fileName):
-            return 0 # no records read
+
+        if self._filename == '' or not os.path.isfile(self._filename):
+            return 0  # no records read
 
         # if we have a good file, then clear the entryList and header
-        self._entryList = []
+        self._entry_list = []
         self._header = ''
         self._dirty = False
 
         count = 0
-    
+
         # read the XML file
         try:
-            bf_xml = etree.parse(self._fileName)
-        except:
+            bf_xml = etree.parse(self._filename)
+        except etree.XMLSyntaxError:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             traceback.print_exception(exc_type, exc_value, exc_traceback,
-                               limit=2, file=sys.stdout)
+                                      limit=2, file=sys.stdout)
             print('The xml file is not well formed or is invalid')
             return 0
 
-        bf = bf_xml.getroot()
-        for child in bf:
+        bfchildren = bf_xml.getroot()
+        for child in bfchildren:
             if child.tag == 'Header':
-                self.setHeader(child.text)
+                self.set_header(child.text)
 
             if child.tag == 'Entries':
                 for entry in child:
-                    entTemp = AJBentry.AJBentry()
-                    entTemp.read_XML_to_Entry(entry)
-                    if entTemp.isValid():
+                    enttemp = ajbentry.AJBentry()
+                    enttemp.read_xml_to_entry(entry)
+                    if enttemp.is_valid():
                         count += 1
-                        self._entryList.append(entTemp)
-                        entTemp = AJBentry.AJBentry()
-        
+                        self._entry_list.append(enttemp)
+                        enttemp = ajbentry.AJBentry()
+
         self._dirty = False
 
         return count
 
-
-    def writeFile_XML(self, filename=None):
+    def write_file_xml(self, filename=None):
         """Write the entry list and header to a .xml disk file.
         if filename is not given, we use aabooks._fileName instead.
 
@@ -357,82 +359,78 @@ class BookFile():
 
         try:
             if filename is not None:
-                fd = open(filename, 'w', encoding='UTF8')
+                file_fd = open(filename, 'w', encoding='UTF8')
                 # only set _filename if we are successful in opening
                 self._filename = filename
             else:
-                fd = open(self._fileName, 'w', encoding='UTF8')
-        except:
+                file_fd = open(self._filename, 'w', encoding='UTF8')
+        except (FileNotFoundError, PermissionError):
             # really should print the exception here
             return False
 
-
         # We do something clever here when we know how.
-        elBF = etree.Element('BookFile')
-        hdr = etree.SubElement(elBF, 'Header')
-        hdr.text = self.getHeader()
+        elbf = etree.Element('BookFile')
+        hdr = etree.SubElement(elbf, 'Header')
+        hdr.text = self.get_header()
 
-        ets = etree.SubElement(elBF, 'Entries')
-        for entry in self._entryList:
+        ets = etree.SubElement(elbf, 'Entries')
+        for entry in self._entry_list:
             # entry is of Class AJBentry
-            ee = entry.write_XML_from_Entry()
-            ets.append(ee)
+            ets.append(entry.write_xml_from_entry())
 
-        bStr = etree.tostring(elBF,
+        bstr = etree.tostring(elbf,
                               xml_declaration=True,
                               method='xml', encoding='UTF-8')
-        strStr = bStr.decode(encoding='UTF-8')
-        fd.write(strStr)
+        strstr = bstr.decode(encoding='UTF-8')
+        file_fd.write(strstr)
 
-        fd.close()
+        file_fd.close()
         self._dirty = False
+
+        return True
 
 
 if __name__ == "__main__":
 
-    from pprint import pprint
-    import sys
+    BF = BookFile()
+    print("%d entries found\n" % BF.read_file(
+        "../../../../Data/Ajb/Old/ajb58_books.txt"))
 
-    bf = BookFile()
-    print( "%d entries found\n" % bf.readFile("../../../Data/Ajb/ajb58_books.txt"))
+    print('The header for %s' % BF.get_filename())
+    print(BF.get_header())
 
-    print( 'The header for %s' % bf.getFileName())
-    print( bf.getHeader() )
+    BF.write_file("testfile.txt")
 
-    bf.writeFile("testfile.txt")
-
-    bf.readFile('testfile.txt')
-    bf.writeFile('testfile2.txt')
+    BF.read_file('testfile.txt')
+    BF.write_file('testfile2.txt')
     print(' run "diff testfile2.txt testfile.txt"')
 
-    ent = AJBentry.AJBentry('500 58.04.05 , An Amazing Book')
-    ent2 = AJBentry.AJBentry('500 58.04.06 , An Amazing Book Too')
-    bf.setNewEntry(ent) # append
-    bf.setNewEntry(ent2, 0) # append
-    bf.setNewEntry(ent, 1) # insert as entry 1
-    bf.setNewEntry(ent2, 5) # insert as entry 5
-    bf.setEntry(ent, 4) # replace entry 4
-    bf.writeFile('testfile3.txt')
-    bf.setNewEntry(ent, 5)
-    bf.deleteEntry(22)
-    bf.deleteEntry(0)
-    bf.deleteEntry(5)
+    ENT = ajbentry.AJBentry('500 58.04.05 , An Amazing Book')
+    ENT2 = ajbentry.AJBentry('500 58.04.06 , An Amazing Book Too')
+    BF.set_new_entry(ENT)  # append
+    BF.set_new_entry(ENT2, 0)  # append
+    BF.set_new_entry(ENT, 1)  # insert as ENTry 1
+    BF.set_new_entry(ENT2, 5)  # insert as ENTry 5
+    BF.set_entry(ENT, 4)  # replace ENTry 4
+    BF.write_file('testfile3.txt')
+    BF.set_new_entry(ENT, 5)
+    BF.delete_entry(22)
+    BF.delete_entry(0)
+    BF.delete_entry(5)
     print('testfile3.txt should have new entry 1 and 5 and replaced entry 4')
     print('\n\n')
-    bf.writeFile_XML('ajb58_books.xml')
-    print('We can read and validate a file with the parse() function')
+    BF.write_file_xml('ajb58_books.xml')
+    print('We can also read and validate an XML file with the parse() function')
     try:
-        bf_schema = etree.XMLSchema(file='../../xml/bookfile.xsd')
-        Parser = etree.XMLParser(schema=bf_schema)
+        BF_SCHEMA = etree.XMLSchema(file='../../../xml/bookfile.xsd')
+        PARSER = etree.XMLParser(schema=BF_SCHEMA)
         print('The schema is well formed')
-    except:
+    except etree.XMLSchemaParseError:
         print('The schema is not well formed')
         sys.exit(1)
     try:
         # etree.parse() returns an Etree rather than an Element
-        bf3 = etree.parse('ajb58_books.xml', parser=Parser)
+        BF3 = etree.parse('ajb58_books.xml', parser=PARSER)
         print('The xml file is well formed and valid')
-    except:
+    except etree.XMLSyntaxError:
         print('The xml file is not well formed or is invalid')
-
-
