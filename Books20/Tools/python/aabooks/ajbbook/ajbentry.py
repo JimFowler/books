@@ -26,9 +26,9 @@ import re
 from lxml import etree
 
 from nameparser import HumanName
-import aabooks.lib.entry as libentry
-import aabooks.lib.utils as libutils
-import aabooks.ajbbook.AJBcomments as comments
+from aabooks.lib import entry
+from aabooks.lib import utils
+from aabooks.ajbbook import AJBcomments as comments
 
 #
 # Don't build the regular expression compilers everytime
@@ -39,7 +39,7 @@ __reg2__ = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
 __reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})',
                       re.UNICODE)
 
-class AJBentry(libentry.Entry):
+class AJBentry(entry.Entry):
 
     """Read the information from a string and put the data in the
     AJBentry dictionary. The entry is valid if there was a valid AJB
@@ -180,9 +180,9 @@ class AJBentry(libentry.Entry):
         entrystr = self.num_str()[4:] + ' '
 
         if self.not_empty('Authors'):
-            entrystr += libutils.make_name_str(self['Authors'])
+            entrystr += utils.make_name_str(self['Authors'])
         elif self.not_empty('Editors'):
-            entrystr += libutils.make_name_str(self['Editors'])
+            entrystr += utils.make_name_str(self['Editors'])
             entrystr += ' ed.'
 
         entrystr = entrystr + ', ' + self['Title'].replace(', ', ' comma ')
@@ -243,13 +243,13 @@ class AJBentry(libentry.Entry):
 
         if self.not_empty('Compilers'):
             entrystr += 'compiled by '
-            entrystr += libutils.make_name_str(self['Compilers'])
+            entrystr += utils.make_name_str(self['Compilers'])
             entrystr += ';'
 
 
         if self.not_empty('Contributors'):
             entrystr += 'contributors '
-            entrystr += libutils.make_name_str(self['Contributors'])
+            entrystr += utils.make_name_str(self['Contributors'])
             entrystr += ';'
 
         # translated from by
@@ -260,14 +260,14 @@ class AJBentry(libentry.Entry):
                 entrystr += self['TranslatedFrom']
             if self.not_empty('Translators'):
                 entrystr += ' by '
-                entrystr += libutils.make_name_str(self['Translators'])
+                entrystr += utils.make_name_str(self['Translators'])
             entrystr += ';'
 
         # additional editors
         if self.not_empty('Authors') and self.not_empty('Editors'):
             # need to include editors in comments
             entrystr += 'edited by '
-            entrystr += libutils.make_name_str(self['Editors'])
+            entrystr += utils.make_name_str(self['Editors'])
             entrystr += ';'
 
         # additional publishers
@@ -452,7 +452,7 @@ class AJBentry(libentry.Entry):
             comp = True
             line = line.replace('comp.', '    ')
 
-        names = libutils.make_name_list(line)
+        names = utils.make_name_list(line)
 
         if edt:
             self['Editors'] = names
@@ -489,7 +489,7 @@ class AJBentry(libentry.Entry):
 
                 elif grammar_name == 'Editors':
                     line = str(result.find(comments.NameList))
-                    name = libutils.make_name_list(line)
+                    name = utils.make_name_list(line)
                     if self.not_empty('Editors'):
                         self['Editors'].extend(name)
                     else:
@@ -497,7 +497,7 @@ class AJBentry(libentry.Entry):
 
                 elif grammar_name == 'Contributors':
                     line = str(result.find(comments.NameList))
-                    name = libutils.make_name_list(line)
+                    name = utils.make_name_list(line)
                     if self.not_empty('Contributors'):
                         self['Contributors'].extend(name)
                     else:
@@ -505,7 +505,7 @@ class AJBentry(libentry.Entry):
 
                 elif grammar_name == 'Compilers':
                     line = str(result.find(comments.NameList))
-                    name = libutils.make_name_list(line)
+                    name = utils.make_name_list(line)
                     if self.not_empty('Compilers'):
                         self['Compilers'].extend(name)
                     else:
@@ -522,7 +522,7 @@ class AJBentry(libentry.Entry):
 
                     tmp = result.find(comments.NameList)
                     if tmp:
-                        name = libutils.make_name_list(str(tmp))
+                        name = utils.make_name_list(str(tmp))
                         if self.not_empty('Translators'):
                             self['Translators'].extend(name)
                         else:
@@ -1015,7 +1015,7 @@ other This is the badstr;''',
 
 
     try:
-        libentry.Entry(TESTENT['ajbstr'])
+        entry.Entry(TESTENT['ajbstr'])
     except NotImplementedError:
         print("Entry() class fails properly with no read() method.")
 
