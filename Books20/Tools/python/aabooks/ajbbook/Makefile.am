@@ -104,7 +104,7 @@ install_docs: ${SUB_DIRS}
 .PHONY: clean
 clean: ${SUB_DIRS}
 	@echo "Doing clean of ${CURDIR}"
-	${RM} -f *~
+	${RM} -f ajb58_books.xml *~
 
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean clean_python
