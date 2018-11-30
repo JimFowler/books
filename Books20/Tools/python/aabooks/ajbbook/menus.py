@@ -86,12 +86,12 @@ def create_file_menu(self, menu_bar):
     file_menu.addAction(new_action)
 
     new_action = create_action(self, 'Next Entry',
-                               slot='self.on_nextButton_released',
+                               slot='self.on_next_button_released',
                                shortcut=None)
     file_menu.addAction(new_action)
 
     new_action = create_action(self, 'Prev &Entry',
-                               slot='self.on_prevButton_released',
+                               slot='self.on_prev_button_released',
                                shortcut=None)
     file_menu.addAction(new_action)
 
