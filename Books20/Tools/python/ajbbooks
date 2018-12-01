@@ -26,7 +26,7 @@ import os
 import argparse
 from PyQt5 import QtGui, QtWidgets
 
-import aabooks.ajbbook.mainWindow as mw
+import aabooks.ajbbook.ajbwindow as mw
 
 __version__ = '2.0'
 
@@ -76,27 +76,27 @@ def main():
     #app.setWindowIcon(QtGui.QIcon(':/icon_ajb.svg'))
 
     form = mw.BookEntry()
-    app.focusChanged.connect(form.setFocusChanged)
+    app.focusChanged.connect(form.set_focus_changed)
 
     if args.version:
-        form.helpAbout()
+        form.help_about()
         sys.exit(app.exec_())
 
     if args.volume is not None:
-        form.setDefaultVolumeNumber(args.volume)
-        form.newEntry()
+        form.set_default_volume_number(args.volume)
+        form.new_entry()
 
     if args.symbols is not None:
-        form.setSymbolTableName(args.symbols)
+        form.set_symbol_table_name(args.symbols)
 
     if args.input is not None:
         fname = args.input[0]
         if os.path.isfile(fname):
-            form.openFile(fname)
+            form.open_file(fname)
         else:
-            form.openNewFile()
-            form.bf.setFileName(fname)
-            form.setWinTitle(form.bf.getBaseName())
+            form.open_new_file()
+            form.bf.set_filename(fname)
+            form.set_win_title(form.bf.get_basename())
 
 
     form.show()

@@ -72,7 +72,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.set_window_title('document1')
         self.insert_function = None
         self.default_volume_number = None
-        self.symbol_table_name = __DEFAULTUSYMBOL_TABLE_NAME__
+        self.symbol_table_name = __DEFAULT_SYMBOL_TABLE_NAME__
         self.symbol_table = None
 
         # Fields within an Entry that we know about already
@@ -165,7 +165,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     #
     def open_new_file(self):
         """Create a new bookfile saving the old one if it is dirty."""
-        if self.bf is not None:
+        if self.bookfile is not None:
             if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
                 return
 
@@ -221,21 +221,21 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         """Ignore dirty entries and just save the file."""
 
         if self.bookfile.get_filename() is None or self.bookfile.get_basename() == 'document1':
-            if self.save_fileAs() == QtWidgets.QMessageBox.Cancel:
+            if self.save_file_as() == QtWidgets.QMessageBox.Cancel:
                 return QtWidgets.QMessageBox.Cancel
 
         self.bookfile.write_file()
 
         self.statusbar.showMessage(
             'Saving file ' + self.bookfile.get_basename_with_extension())
-        QtWidgets.QTimer.singleShot(10000, self.statusbar.clearMessage)
+        QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
         return QtWidgets.QMessageBox.Save
 
     def save_file_as(self):
         """Ignore dirty entries and save the file as..."""
         fname, filterA = QtWidgets.QFileDialog.getSaveFileName(self,
-                                                               "%s -- Choose file" % QtGui.QApplication.applicationName(),
+                                                               "%s -- Choose file" % QtWidgets.QApplication.applicationName(),
                                                                self.bookfile.get_dirname(),
                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
 
@@ -361,7 +361,6 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         wrap around the index values.
         """
         self.prevButton.setEnabled(True)
-
         self.nextButton.setEnabled(True)
 
         if recnum < 1:
@@ -381,7 +380,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         # Display record count
         self.indexEntry.setText(str(self.current_entry_number))
 
-        self.EntryToDisplay(self.tmp_entry)
+        self.entry_to_display(self.tmp_entry)
         self.deleteButton.setEnabled(True)
         self.clear_entry_dirty()
 
@@ -435,7 +434,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     def open_symbol(self):
         """Open the symbol entry form."""
         self.symbol_table = symbol.SymbolForm(
-            self.symbol_table_name, 'FreeSans', 14, self)
+            self.symbol_table_name, 'FreeSans', 14)
         self.symbol_table.show()
         self.symbol_table.sigClicked.connect(self.insert_char)
 
@@ -778,7 +777,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             return None
 
         entry['Num'] = num
-        if not entry.is_valid_ajbNum():
+        if not entry.is_valid_ajbnum():
             QtWidgets.QMessageBox.warning(self, 'Invalid number',
                                           'Entry must have a valid AJB num in order to be valid',
                                           QtWidgets.QMessageBox.Ok)
