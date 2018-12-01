@@ -28,7 +28,7 @@ import os
 # Trouble shooting assistance
 from pprint import pprint
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, QtPrintSupport
 
 from nameparser import HumanName
 
@@ -73,8 +73,9 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.insert_function = None
         self.default_volume_number = None
         self.symbol_table_name = __DEFAULT_SYMBOL_TABLE_NAME__
-        self.symbol_table = None
-
+        self.symbol_window = None
+        self.header_window = None
+        
         # Fields within an Entry that we know about already
         self.known_entry_fields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
                                    'Publishers', 'Edition', 'Year',
@@ -100,8 +101,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.acceptButton.released.connect(self.save_entry)
         self.deleteButton.released.connect(self.delete_entry)
         self.insertButton.released.connect(self.ask_insert_entry)
-        # self.nextButton.released.connect(self.on_nextButton_released)
-        # self.prevButton.released.connect(self.on_prevButton_released)
+        self.nextButton.released.connect(self.on_next_button_released)
+        self.prevButton.released.connect(self.on_prev_button_released)
         self.acceptButton.setEnabled(False)
         self.deleteButton.setEnabled(False)
         self.insertButton.setEnabled(False)
@@ -312,7 +313,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             return
 
         entry_select = es.EntrySelect()
-        entry_select.setText(self.bookfile.make_short_title_list())
+        entry_select.set_text(self.bookfile.make_short_title_list())
 
         entry_select.show()
         entry_select.lineEmit.connect(self.insert_entry)
@@ -322,7 +323,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         the current display entry in front of this entry in the booklist."""
 
         words = line[0].split(' ')
-
+        
         try:
             num = int(words[0])
         except ValueError:
@@ -337,8 +338,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.current_entry_number = num
         self.set_max_entry_number(self.max_entry_number + 1)
         self.show_entry(self.current_entry_number)
-        pass
 
+        
     def delete_entry(self):
         """Delete the entry at the current_entry_number but
         ask the user first."""
@@ -390,10 +391,10 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def print_entry(self):
         """Print a postscript file of the current display."""
-        printer = QtGui.QPrinter()
+        printer = QtPrintSupport.QPrinter()
         printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
-        printer.setPaperSize(QtGui.QPrinter.Letter)
+        printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
 
         painter = QtGui.QPainter(printer)
         self.render(painter)
@@ -403,13 +404,19 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     # Set/Clear flags for Entry
     #
     def set_entry_dirty(self):
-        """Set the tmp_entry_dirty flag to True and enable the Save Entry button."""
+        """Set the tmp_entry_dirty flag to True and enable the Save Entry
+        button.
+
+        """
         self.tmp_entry_dirty = True
         self.acceptButton.setEnabled(True)
         # set menu item enable to True as well
 
     def clear_entry_dirty(self):
-        """Set the tmp_entry_dirty flag to False and disable the Save Entry button."""
+        """Set the tmp_entry_dirty flag to False and disable the Save Entry
+        button.
+
+        """
         self.tmp_entry_dirty = False
         self.acceptButton.setEnabled(False)
         # set menu item enable False as well.
@@ -417,26 +424,27 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def print_printer(self):
         """comment"""
-        printer = QtGui.QPrinter()
+        printer = QtPrintSupport.QPrinter()
         printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
-        printer.setPaperSize(QtGui.QPrinter.Letter)
+        printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
 
-        prt = QtGui.QPrintDialog(pr, self)
-        if prt.exec_():
-            painter = QtGui.QPainter(pr)
+        self.prt = QtPrintSupport.QPrintDialog(printer, self)
+        if self.prt.exec_():
+            painter = QtGui.QPainter(printer)
             self.render(painter)
             del painter
-
+        else:
+            print('print dialog does not return')
     #
     # Edit menu functions
     #
     def open_symbol(self):
         """Open the symbol entry form."""
-        self.symbol_table = symbol.SymbolForm(
+        self.symbol_window = symbol.SymbolForm(
             self.symbol_table_name, 'FreeSans', 14)
-        self.symbol_table.show()
-        self.symbol_table.sigClicked.connect(self.insert_char)
+        self.symbol_window.show()
+        self.symbol_window.sigClicked.connect(self.insert_char)
 
     def set_symbol_table_name(self, name):
         """Set the name of the symbol table to use in place of the
@@ -445,26 +453,26 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def edit_header(self):
         """Open the edit header form."""
-        header_window = hw.HeaderWindow(self)
-        header_window.set_book_file(self.bookfile)
-        header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
+        self.header_window = hw.HeaderWindow()
+        self.header_window.set_bookfile(self.bookfile)
+        self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
                                                                       "Edit Headers - %s" % (self.bookfile.get_basename_with_extension()), None))
-        header_window.set_header_text(self.bookfile.getHeader())
-        header_window.show()
+        self.header_window.set_header_text(self.bookfile.get_header())
+        self.header_window.show()
 
     def show_orig_str(self):
         """Open a dialog box with the original string entry."""
         self.origstr_window = origstr.OrigStrWindow()
 
         if self.tmp_entry.not_empty('Index'):
-            self.origstr_window.setFileName(self.tmp_entry['Index'])
+            self.origstr_window.set_filename(self.tmp_entry['Index'])
         else:
-            self.origstr_window.setFileName(-1)
+            self.origstr_window.set_filename(-1)
 
         if self.tmp_entry.not_empty('OrigStr'):
-            self.origstr_window.setOrigStrText(self.tmp_entry['OrigStr'])
+            self.origstr_window.set_origstr_text(self.tmp_entry['OrigStr'])
         else:
-            self.origstr_window.setOrigStrText(
+            self.origstr_window.set_origstr_text(
                 'Entry does not have the original string defined.')
         self.origstr_window.show()
 

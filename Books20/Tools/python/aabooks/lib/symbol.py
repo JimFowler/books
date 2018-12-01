@@ -69,7 +69,8 @@ def make_buttons(file_name, parent):
             print(ex)
             continue
 
-        button = MyButton(parent.scroll_area_widget_contents)
+        #button = MyButton(parent.scroll_area_widget_contents)
+        button = MyButton()
         button.setCheckable(True)
         button.setFont(parent.font)
         button.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)

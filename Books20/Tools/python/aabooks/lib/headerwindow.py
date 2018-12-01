@@ -43,7 +43,7 @@ class HeaderWindow(QtWidgets.QDialog, HeaderEntry_ui.Ui_HeaderEdit):
         self.cancelButton.released.connect(self.revert_header)
 
 
-    def set_file_name(self, file):
+    def set_filename(self, file):
         '''Set the window title with the file name being edited'''
         self.setWindowTitle('Edit Header - %s'%file)
 
@@ -54,7 +54,7 @@ class HeaderWindow(QtWidgets.QDialog, HeaderEntry_ui.Ui_HeaderEdit):
     def save_header_text(self):
         '''Save the current test in the bookfile object.'''
         if self.bookfile:
-            self.bookfile.setHeader(self.get_header_text())
+            self.bookfile.set_header(self.get_header_text())
             self.clear_dirty()
 
     def ask_and_close(self):
@@ -127,10 +127,10 @@ if __name__ == '__main__':
     EX = HeaderWindow()
     BF = Bookfile.BookFile()
     EX.set_bookfile(BF)
-    EX.set_file_name('New File')
-    EX.set_header_text(BF.getHeader())
+    EX.set_filename('New File')
+    EX.set_header_text(BF.get_header())
     EX.show()
     APP.exec_()
 
     print('The Header is:\n')
-    print(BF.getHeader())
+    print(BF.get_header())

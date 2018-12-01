@@ -1,3 +1,6 @@
+30 Nov 2018
+  Remove button short cuts in designer and add to menus.py
+  
 15 Oct 2018
   Consolidate .gitignore DONE 15 Oct 2018
     move generic patterns from books/.gitignore to Books20/.gitignore

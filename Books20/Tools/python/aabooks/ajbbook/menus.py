@@ -88,11 +88,14 @@ def create_file_menu(self, menu_bar):
     new_action = create_action(self, 'Next Entry',
                                slot='self.on_next_button_released',
                                shortcut=None)
+    #shortcut='Ctrl+F') # remove from designer
     file_menu.addAction(new_action)
 
     new_action = create_action(self, 'Prev &Entry',
                                slot='self.on_prev_button_released',
                                shortcut=None)
+    #shortcut='Ctrl+B') # remove from designer
+    
     file_menu.addAction(new_action)
 
     new_action = create_action(self, 'Save Ent&ry',

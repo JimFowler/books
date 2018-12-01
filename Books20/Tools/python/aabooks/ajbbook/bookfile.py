@@ -165,7 +165,7 @@ class BookFile():
         if not entry.is_valid():
             return False
 
-        if 1 > count < len(self._entry_list):
+        if 1 < count <= len(self._entry_list):
             # count is within the list, insert the entry
             self.current_entry_index = count - 1
             self._entry_list.insert(self.current_entry_index, entry)
