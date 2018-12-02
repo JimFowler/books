@@ -1,11 +1,43 @@
+2018-11-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook: Test and fix function
+	names in ajbbooks files.  The code correctly handles most
+	actions now.
+	
+2018-11-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/: began PIP-8 compliance
+	in ajbbook. Rename files in camel case to snake case.
+
+2018-11-25  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib: make PEP-8 compliance
+	for search.py, title_list.py, __init__.py, roman.py,
+	version.py, utils.py, symbol.py, parser.py, and others
+
 2018-10-15  Jim Fowler  <jrf@biblion>
 
 	* .gitignore: placed generic patterns in toplevel files
 	and specific pattern in directory .gitignore files.
 
+2018-10-14  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/entryselect.py: Began PEP-8 work
+
+2018-10-19  Jim Fowler  <jrf@biblion>
+
+	* Docs/*/Makefile.am: added .lot file to TeX clean
+
+2018-09-28  Jim Fowler  <jrf@biblion>
+
+	* Docs/Series/table.py: now PEP-8 compliant
+
 2018-09-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/versions: Tagged current HEAD as 'v2.1'
+
+	* Tools/python/aabooks/lib/entry.py: Began work on makeing
+	all python file PEP-8 compliant.
 
 2018-09-24  Jim Fowler  <jrf@biblion>
 
@@ -24,7 +56,7 @@
 	aabooks. Update ajbbooks, journals, Makefile.am, setup.py,
 	and Books20/configure.ac. Tested operations and installation.
 
-	* Tools/python/bookentry/pagination_xml.py: added p1-5 for
+	* Tools/python/bookentry/pagination_xml.py: added p1-p5 for
 	unknown sections of a book.
 
 	* Tools/python/setup.py: change validateXML to validate_xml
