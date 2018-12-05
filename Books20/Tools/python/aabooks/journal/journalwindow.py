@@ -3,7 +3,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalwindow.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -31,28 +31,29 @@ import configparser
 # Trouble shooting assistance
 from pprint import pprint
 
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, QtPrintSupport
 
-import aabooks.journal.ui_JournalEntry as ui_journalentry
-import aabooks.journal.journalfile as journalfile
-import aabooks.journal.journalmenus as menus
-import aabooks.journal.journalentry as journalentry
-import aabooks.journal.jsearch as journalsearch
-import aabooks.lib.symbol as symbol
-import aabooks.lib.headerwindow as hw
-import aabooks.lib.entryselect as es
-import aabooks.lib.search as search
+from aabooks.journal import ui_JournalEntry
+from aabooks.journal import journalmenus as menus
+from aabooks.journal import jsearch as journalsearch
+from aabooks.journal import journalfile
+from aabooks.journal import journalentry
+
+from aabooks.lib import headerwindow as hw
+from aabooks.lib import entryselect as es
+from aabooks.lib import search
+from aabooks.lib import symbol
 
 
 
 DIR_NAME, BASE_NAME = os.path.split(symbol.__file__)
-__default_symbol_table_name__ = DIR_NAME + '/symbols.txt'
+__DEFAULT_SYMBOL_TABLE_NAME__ = DIR_NAME + '/symbols.txt'
 del DIR_NAME
 del BASE_NAME
 
 __version__ = '1.0.0'
 
-class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
+class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     '''The main window for the journal program.'''
     def __init__(self, parent=None, config_name=None):
         super(JournalWindow, self).__init__(parent=parent)
@@ -66,11 +67,17 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         self.set_max_entry_count(0)
         self.set_window_title('document1')
         self.insert_func = None
-        self.set_symbol_table_name(__default_symbol_table_name__)
+        self.set_symbol_table_name(__DEFAULT_SYMBOL_TABLE_NAME__)
         self.entry_dirty = False
         self.search_flag = False
         self.current_search_list = []
         self.sdict = search.SearchDict()
+        self.temp_entry = None
+        self.entry_select = None
+        self.symbol_table = None
+        self.header_window = None
+        self.jsearch = None
+
 
         # Fields within an Entry that we know about already
         self.known_entry_fields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -129,6 +136,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
             self.open_file(jf_name)
 
     def set_max_entry_count(self, count):
+        """Comment"""
         if count < 0:
             count = 0
         self.max_entry_count = count
@@ -146,6 +154,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
     # Menu and button slots
     #
     def quit(self):
+        """Comment"""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
 
@@ -189,8 +198,6 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         self.jsearch = journalsearch.JournalSearch(parent=self, searchDict=self.sdict)
 
         self.jsearch.show()
-
-        return
 
     #
     # Menu and button slots for File actions
@@ -253,16 +260,16 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
     #
     def save_entry(self):
         """Save the entry to the current entry number in the bookfile."""
-        self.tmpEntry = self.DisplayToEntry()
-        if not self.tmpEntry:
+        self.temp_entry = self.DisplayToEntry()
+        if not self.temp_entry:
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
                                               "Entry invalid!  Not saved in journalfile!")
             return
 
         if self.cur_entry_number > self.max_entry_count:
-            ret = self.journal_file.set_new_entry(self.tmpEntry, self.cur_entry_number)
+            ret = self.journal_file.set_new_entry(self.temp_entry, self.cur_entry_number)
         else:
-            ret = self.journal_file.set_entry(self.tmpEntry, self.cur_entry_number)
+            ret = self.journal_file.set_entry(self.temp_entry, self.cur_entry_number)
 
         if not ret:
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
@@ -283,9 +290,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
             return
 
         self.clear_search_flag()
-        self.tmpEntry = journalentry.JournalEntry()
+        self.temp_entry = journalentry.JournalEntry()
         self.cur_entry_number = self.max_entry_count + 1
-        self.EntryToDisplay(self.tmpEntry)
+        self.EntryToDisplay(self.temp_entry)
         self.indexEntry.setText(str(self.cur_entry_number))
         self.titleEdit.setFocus()
         self.set_search_flag()
@@ -295,8 +302,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         """Open the entry_select form if we have a valid entry to insert.
         If the user selects an insertion location, then we execute the
         method insert_entry()"""
-        self.tmpEntry = self.DisplayToEntry()
-        if not self.tmpEntry or not self.tmpEntry.is_valid():
+        self.temp_entry = self.DisplayToEntry()
+        if not self.temp_entry or not self.temp_entry.is_valid():
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
                                               "Entry invalid!  Not saved in bookfile!")
             return
@@ -319,7 +326,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         if not num or num < 1 or num > self.max_entry_count:
             return
 
-        self.journal_file.set_new_entry(self.tmpEntry, num)
+        self.journal_file.set_new_entry(self.temp_entry, num)
         self.build_search_dictionary()
         self.cur_entry_number = num
         self.set_max_entry_count(self.max_entry_count + 1)
@@ -366,15 +373,15 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
             self.cur_entry_number = recnum
 
         # Display the actual entry data
-        self.tmpEntry = self.journal_file.get_entry(self.cur_entry_number)
+        self.temp_entry = self.journal_file.get_entry(self.cur_entry_number)
 
-        if not self.tmpEntry:
+        if not self.temp_entry:
             return
 
         # Display record count
         self.indexEntry.setText(str(self.cur_entry_number))
 
-        self.EntryToDisplay(self.tmpEntry)
+        self.EntryToDisplay(self.temp_entry)
         self.deleteButton.setEnabled(True)
         self.clear_entry_dirty()
 
@@ -384,12 +391,12 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
     def oldprint_entry(self):
         """Print a postscript file of the current display."""
-        printer = QtWidgets.QPrinter()
+        printer = QtPrintSupport.QPrinter()
         printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
-        printer.setPaperSize(QtWidgets.QPrinter.Letter)
+        printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
 
-        painter = QtWidgets.QPainter(printer)
+        painter = QtGui.QPainter(printer)
         self.render(painter)
         del printer
 
@@ -434,14 +441,15 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         # set Save File menu True
 
     def print_printer(self):
-        printer = QtWidgets.QPrinter()
+        """Comment"""
+        printer = QtPrintSupport.QPrinter()
         printer.setOutputFileName('book.pdf')
         printer.setFullPage(True)
-        printer.setPaperSize(QtWidgets.QPrinter.Letter)
+        printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
 
-        print_dialog = QtWidgets.QPrintDialog(printer, self)
+        print_dialog = QtPrintSupport.QPrintDialog(printer, self)
         if print_dialog.exec_():
-            painter = QtWidgets.QPainter(printer)
+            painter = QtGui.QPainter(printer)
             self.render(painter)
             del painter
 
@@ -451,7 +459,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
     #
     def open_symbol_dialog(self):
         """Open the symbol entry form."""
-        self.symbol_table = symbol.SymbolForm(self.symbol_table_name, 'FreeSans', 14, self)
+        self.symbol_table = symbol.SymbolForm(self.symbol_table_name, 'FreeSans', 14)
         self.symbol_table.sigClicked.connect(self.insert_char)
         self.symbol_table.show()
 
@@ -492,17 +500,18 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
     def edit_header(self):
         """Open the edit header form."""
         self.header_window = hw.HeaderWindow(self)
-        self.header_window.setBookFile(self.journal_file)
+        self.header_window.set_bookfile(self.journal_file)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
                                                                            "Edit heaaders - %s" % (self.journal_file.get_base_name()),
                                                                            None))
-        self.header_window.setHeaderText(self.journal_file.get_header())
+        self.header_window.set_header_text(self.journal_file.get_header())
         self.header_window.show()
 
     #
     # Help menu functions
     #
     def help_string(self):
+        """Create help string."""
         helpstring = """<b>Journals</b> v {0}
         <p>Author: J. R. Fowler
         <p>Copyright &copy; 2016
@@ -517,8 +526,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
         return helpstring
 
     def help_about(self):
-        hstr = self.help_string()
-        QtWidgets.QMessageBox.about(self, 'About Journals', hstr)
+        """Show help string."""
+        QtWidgets.QMessageBox.about(self, 'About Journals', self.help_string)
 
 
     #
@@ -706,23 +715,21 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
         # Titles
         a = self.titleEdit.toPlainText().strip()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             alist_len = len(alist)
-            if len(alist[0]) == 0:
+            if not alist:
                 return None
             entry['Title'] = alist[0]
-            if alist_len > 1 and 0 != alist[1]:
+            if alist_len > 1 and  alist[1] != 0:
                 entry['subTitle'] = alist[1]
-            if alist_len > 2 and 0 != alist[2]:
+            if alist_len > 2 and alist[2] != 0:
                 entry['subsubTitle'] = alist[2]
 
 
         # Publishers
         a = self.publisherEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 d = {}
@@ -743,8 +750,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
         # Abbreviations
         a = self.abbreviationsEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 entry['Abbreviations'].append(line.strip())
@@ -757,24 +763,21 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
         # link previous
         a = self.LinkPreviousEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 entry['linkprevious'].append(line.strip())
 
         # link next
         a = self.LinkNextEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 entry['linknext'].append(line.strip())
 
         # Designators
         a = self.designatorEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 flds = line.split(':')
@@ -783,8 +786,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_journalentry.Ui_JournalEntry):
 
         # Comments
         a = self.CommentsEdit.toPlainText()
-        alen = len(a)
-        if alen != 0:
+        if a:
             alist = a.split('\n')
             for line in alist:
                 entry['Comments'].append(line)

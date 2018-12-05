@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalmenus.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -19,6 +19,7 @@
 """Create the menus for the Journals window
 """
 # -*- mode: Python;-*-
+# pylint: disable=too-many-arguments,eval-used
 
 from PyQt5 import QtGui, QtWidgets
 

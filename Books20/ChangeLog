@@ -1,9 +1,21 @@
+2018-12-04  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py: Tested
+	the journal program.  Made three corrections to function
+	call to replace camelCase with snake_case.
+
+2018-12-02  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py: Cleaned up
+	journalentry.py, journalfile.py, journalmenus.py, jsearch.py,
+	and journalwindow.py.  Some files still need work.
+
 2018-11-30  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook: Test and fix function
 	names in ajbbooks files.  The code correctly handles most
 	actions now.
-	
+
 2018-11-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/: began PIP-8 compliance

@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalentry.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -24,7 +24,7 @@ the form Entry.entry().'''
 
 from lxml import etree
 
-import aabooks.lib.entry as entry
+from aabooks.lib import entry
 
 __version__ = 'class JournalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
 
@@ -43,7 +43,7 @@ class JournalEntry(entry.Entry):
 
         self.blank_entry()
 
-        
+
     def blank_entry(self):
         """Initialize a blank entry by setting known fields to
         null values and deleting all other fields.
@@ -104,7 +104,7 @@ class JournalEntry(entry.Entry):
         the entry.
         '''
 
-        if not self.isValid:
+        if not self.is_valid:
             return None
 
         # Title and Index are required of any entry

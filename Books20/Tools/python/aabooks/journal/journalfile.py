@@ -1,7 +1,7 @@
 ## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/journal/journalfile.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -20,7 +20,7 @@
 import os
 from lxml import etree
 
-import aabooks.journal.journalentry as journalentry
+from aabooks.journal import journalentry
 
 __version__ = 0.1
 
@@ -35,7 +35,7 @@ class JournalFile():
     for book lists from AJB/AAA. It handles all the translation
     between the disk file format and the AJBentry format."""
 
-    def __init__(self, parent=None):
+    def __init__(self):
         self._header = __defaultHeader__
         # a list of JournalEntry objects
         self._entry_list = []
@@ -86,16 +86,10 @@ class JournalFile():
         """Set the header entry to be header_string."""
         self._dirty = True
         self._header = header_string
-    def setHeader(self, header_string):
-        '''temporary hack until headerWindow.py is converted to PEP 8'''
-        self.set_header( header_string)
 
     def get_header(self):
         """Return the current header string."""
         return self._header
-    def getHeader(self):
-        '''temporary hack until headerWindow.py is converted to PEP 8'''
-        self.get_header()
 
     # current entry
     def get_entry(self, count=-1):
@@ -150,7 +144,7 @@ class JournalFile():
     def delete_entry(self, entry_number):
         '''Delete the (entry_number - 1) record in the list, if such exists.
         Return the length of the remaining list.'''
-        if entry_number > 0 and entry_number <= len(self._entry_list):
+        if 0 < entry_number <= len(self._entry_list):
             self._entry_list.pop(entry_number - 1)
             self._dirty = True
 
@@ -259,6 +253,7 @@ class JournalFile():
         file_descriptor.close()
         self._dirty = False
 
+        return True
 
 if __name__ == "__main__":
 
