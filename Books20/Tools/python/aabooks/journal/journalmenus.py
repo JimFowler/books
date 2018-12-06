@@ -16,7 +16,7 @@
 ## End copyright
 
 
-"""Create the menus for the Journals window
+"""Create the menus for the Journals window.
 """
 # -*- mode: Python;-*-
 # pylint: disable=too-many-arguments,eval-used
@@ -53,29 +53,29 @@ def create_menus(self, menu_bar):
     menu = menu_bar.addMenu('&File')
 
     action = create_action(self, '&New File',
-                           slot='self.open_new_file',
+                           slot='self._open_new_file',
                            shortcut='Ctrl+N')
     menu.addAction(action)
 
     action = create_action(self, '&Open File...',
-                           slot='self.ask_open_file',
+                           slot='self._ask_open_file',
                            shortcut='Ctrl+O')
     menu.addAction(action)
 
     action = create_action(self, '&Save File',
-                           slot='self.save_file',
+                           slot='self._save_file',
                            shortcut='Ctrl+S')
     menu.addAction(action)
 
     action = create_action(self, 'Save File &As...',
-                           slot='self.save_file_as',
+                           slot='self._save_file_as',
                            shortcut='Ctrl+A')
     menu.addAction(action)
 
     menu.addSeparator()
 
     action = create_action(self, '&Quit',
-                           slot='self.quit',
+                           slot='self._quit',
                            shortcut='Ctrl+Q',
                            icon='filequit',
                            tip='Close the Application')
@@ -108,12 +108,12 @@ def create_menus(self, menu_bar):
     #menu.addAction(action)
 
     action = create_action(self, '&Insert Symbol...',
-                           slot='self.open_symbol_dialog',
+                           slot='self._open_symbol_dialog',
                            shortcut='Ctrl+I')
     menu.addAction(action)
 
     action = create_action(self, 'Edit &Header...',
-                           slot='self.edit_header',
+                           slot='self._edit_header',
                            shortcut='Ctrl+H')
     menu.addAction(action)
 
@@ -123,26 +123,26 @@ def create_menus(self, menu_bar):
     menu = menu_bar.addMenu('Entry')
 
     action = create_action(self, 'New &Entry',
-                           slot='self.new_entry',
+                           slot='self._new_entry',
                            shortcut='Ctrl+E')
     menu.addAction(action)
 
     action = create_action(self, 'Save Ent&ry',
-                           slot='self.save_entry',
+                           slot='self._save_entry',
                            shortcut='Ctrl+R')
     menu.addAction(action)
 
     action = create_action(self, 'Insert Entry',
-                           slot='self.ask_insert_entry')
+                           slot='self._ask_insert_entry')
     menu.addAction(action)
 
     action = create_action(self, '&Delete Entry',
-                           slot='self.delete_entry',
+                           slot='self._delete_entry',
                            shortcut='Ctrl+D')
     menu.addAction(action)
 
     action = create_action(self, '&Print Entry',
-                           slot='self.print_entry',
+                           slot='self._print_entry',
                            shortcut='Ctrl+P')
     menu.addAction(action)
 
@@ -151,5 +151,5 @@ def create_menus(self, menu_bar):
     # set up the Help menus
     menu = menu_bar.addMenu('&Help')
     action = create_action(self, '&About Journals...',
-                           slot='self.help_about')
+                           slot='self._help_about')
     menu.addAction(action)

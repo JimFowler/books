@@ -1,3 +1,11 @@
+2018-12-05  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py
+	(JournalWindow._save_file): Replace all single character variable
+	names.  Made most functions for menus and buttons as semi-private
+	function i.e. _func().  Need to replace non-public instance attributes
+	with a dictionary of attributes.
+
 2018-12-04  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalwindow.py: Tested

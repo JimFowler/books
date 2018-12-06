@@ -24,6 +24,12 @@ Main window for journal entries from AAA/AJB
   New button or search brings up Entry window with an already open file
   redoing a search sets the index number in the current entry
   Search by full name, abbreviation, closeness (how to do this)
+
+
+To keep pylint happy,
+   encapsulate non-public instance attributes in a dictionary self._attr_dict
+   make all button/menu functions semi-private with _func()
+
 '''
 import os
 import platform
@@ -99,12 +105,12 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         menus.create_menus(self, self.menubar)
 
-        self.searchButton.released.connect(self.search_entry)
-        self.newButton.released.connect(self.new_entry)
-        self.saveButton.released.connect(self.save_entry)
-        self.insertButton.released.connect(self.ask_insert_entry)
-        self.deleteButton.released.connect(self.delete_entry)
-        self.quitButton.released.connect(self.quit)
+        self.searchButton.released.connect(self._search_entry)
+        self.newButton.released.connect(self._new_entry)
+        self.saveButton.released.connect(self._save_entry)
+        self.insertButton.released.connect(self._ask_insert_entry)
+        self.deleteButton.released.connect(self._delete_entry)
+        self.quitButton.released.connect(self._quit)
 
         self.saveButton.setEnabled(False)
         self.deleteButton.setEnabled(False)
@@ -112,15 +118,15 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         self.indexEntry.returnPressed.connect(self.index_changed)
 
-        self.titleEdit.textChanged.connect(self.set_entry_dirty)
-        self.publisherEdit.textChanged.connect(self.set_entry_dirty)
-        self.abbreviationsEdit.textChanged.connect(self.set_entry_dirty)
-        self.startDateEdit.textChanged.connect(self.set_entry_dirty)
-        self.endDateEdit.textChanged.connect(self.set_entry_dirty)
-        self.LinkPreviousEdit.textChanged.connect(self.set_entry_dirty)
-        self.LinkNextEdit.textChanged.connect(self.set_entry_dirty)
-        self.designatorEdit.textChanged.connect(self.set_entry_dirty)
-        self.CommentsEdit.textChanged.connect(self.set_entry_dirty)
+        self.titleEdit.textChanged.connect(self._set_entry_dirty)
+        self.publisherEdit.textChanged.connect(self._set_entry_dirty)
+        self.abbreviationsEdit.textChanged.connect(self._set_entry_dirty)
+        self.startDateEdit.textChanged.connect(self._set_entry_dirty)
+        self.endDateEdit.textChanged.connect(self._set_entry_dirty)
+        self.LinkPreviousEdit.textChanged.connect(self._set_entry_dirty)
+        self.LinkNextEdit.textChanged.connect(self._set_entry_dirty)
+        self.designatorEdit.textChanged.connect(self._set_entry_dirty)
+        self.CommentsEdit.textChanged.connect(self._set_entry_dirty)
 
         #
         # Read the config file
@@ -153,7 +159,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Menu and button slots
     #
-    def quit(self):
+    def _quit(self):
         """Comment"""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
@@ -166,7 +172,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Deal with the Search Dictionary
     #
-    def build_search_dictionary(self):
+    def _build_search_dictionary(self):
         '''Add all the titles and abbreviations to the search
         dictionary'''
         self.sdict.clear()
@@ -191,7 +197,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     # Search for an existing entry
     #  This function called when Search... button is pressed
     #
-    def search_entry(self):
+    def _search_entry(self):
         '''open search dialog
         link search to self.showSearchSelect()'''
 
@@ -202,7 +208,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Menu and button slots for File actions
     #
-    def open_new_file(self):
+    def _open_new_file(self):
         """Create a new bookfile saving the old one if it is dirty."""
         if self.journal_file is not None:
             if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
@@ -213,7 +219,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         self.journal_file = journalfile.JournalFile()
         self.set_max_entry_count(0)
-        self.new_entry()
+        self._new_entry()
 
     def open_file(self, name=None):
         """Open an existing file, get the count of entries, and display
@@ -224,19 +230,18 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if self.max_entry_count:
             self.statusbar.clearMessage()
             self.statusbar.showMessage('%d records found'%self.max_entry_count, 6000)
-            self.build_search_dictionary()
-            self.clear_search_flag()
+            self._build_search_dictionary()
+            self._clear_search_flag()
             self.show_entry(1)
-            self.clear_entry_dirty()
+            self._clear_entry_dirty()
         else:
             self.statusbar.showMessage('No records found in file %s' % name)
-            self.new_entry()
+            self._new_entry()
         self.set_window_title(self.journal_file.get_base_name())
 
 
-    def save_file(self):
+    def _save_file(self):
         """Ignore dirty entries and just save the file."""
-        #print("saving file %s"%self.journal_file.get_file_name())
         if self.journal_file.get_file_name() is None:
             self.save_file_as()
         else:
@@ -246,11 +251,11 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
 
-    def save_file_as(self):
+    def _save_file_as(self):
         """Ignore dirty entries and save the file as..."""
-        fname, filtera = QtWidgets.QFileDialog.getSaveFileName(self,
-                                                               "%s -- Choose file"%QtWidgets.QApplication.applicationName(),
-                                                               ".", "*.xml")
+        fname, dummy = QtWidgets.QFileDialog.getSaveFileName(self,
+                                                             "%s -- Choose file"%QtWidgets.QApplication.applicationName(),
+                                                             ".", "*.xml")
         if fname:
             self.journal_file.write_xml_file(fname)
             self.set_window_title(self.journal_file.get_base_name())
@@ -258,9 +263,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Menu and button slots for Entry Actions
     #
-    def save_entry(self):
+    def _save_entry(self):
         """Save the entry to the current entry number in the bookfile."""
-        self.temp_entry = self.DisplayToEntry()
+        self.temp_entry = self.display_to_entry()
         if not self.temp_entry:
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
                                               "Entry invalid!  Not saved in journalfile!")
@@ -281,42 +286,42 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         self.deleteButton.setEnabled(True)
         self.build_search_dictionary()
-        self.clear_search_flag()
-        self.clear_entry_dirty()
+        self._clear_search_flag()
+        self._clear_entry_dirty()
 
-    def new_entry(self):
+    def _new_entry(self):
         """Create a new entry, save the old one if it has been modified."""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
 
-        self.clear_search_flag()
+        self._clear_search_flag()
         self.temp_entry = journalentry.JournalEntry()
         self.cur_entry_number = self.max_entry_count + 1
-        self.EntryToDisplay(self.temp_entry)
+        self.entry_to_display(self.temp_entry)
         self.indexEntry.setText(str(self.cur_entry_number))
         self.titleEdit.setFocus()
-        self.set_search_flag()
-        self.clear_entry_dirty()
+        self._set_search_flag()
+        self._clear_entry_dirty()
 
-    def ask_insert_entry(self):
+    def _ask_insert_entry(self):
         """Open the entry_select form if we have a valid entry to insert.
         If the user selects an insertion location, then we execute the
         method insert_entry()"""
-        self.temp_entry = self.DisplayToEntry()
+        self.temp_entry = self.display_to_entry()
         if not self.temp_entry or not self.temp_entry.is_valid():
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
                                               "Entry invalid!  Not saved in bookfile!")
             return
 
         self.entry_select = es.EntrySelect()
-        self.entry_select.setText(self.journal_file.make_short_title_list())
+        self.entry_select.set_text(self.journal_file.make_short_title_list())
 
         self.entry_select.show()
         #self.connect(self.entry_select, SIGNAL('lineEmit'),
         #             self.insert_entry )
-        self.entry_select.lineEmit.connect(self.insert_entry)
+        self.entry_select.lineEmit.connect(self._insert_entry)
 
-    def insert_entry(self, line):
+    def _insert_entry(self, line):
         """Parse the short title line, get the index number and insert
         the current display entry in front of this entry in the booklist."""
 
@@ -332,7 +337,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self.set_max_entry_count(self.max_entry_count + 1)
         self.show_entry(self.cur_entry_number)
 
-    def delete_entry(self):
+    def _delete_entry(self):
         """Delete the entry at the cur_entry_number but
         ask the user first."""
         ans = QtWidgets.QMessageBox.warning(self, 'Delete Entry?',
@@ -381,24 +386,13 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         # Display record count
         self.indexEntry.setText(str(self.cur_entry_number))
 
-        self.EntryToDisplay(self.temp_entry)
+        self.entry_to_display(self.temp_entry)
         self.deleteButton.setEnabled(True)
-        self.clear_entry_dirty()
+        self._clear_entry_dirty()
 
-    def print_entry(self):
+    def _print_entry(self):
         """Print a postscript file of the current display."""
         pprint(self.journal_file.get_entry(self.cur_entry_number))
-
-    def oldprint_entry(self):
-        """Print a postscript file of the current display."""
-        printer = QtPrintSupport.QPrinter()
-        printer.setOutputFileName('book.pdf')
-        printer.setFullPage(True)
-        printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
-
-        painter = QtGui.QPainter(printer)
-        self.render(painter)
-        del printer
 
     def search(self, string):
         '''Search the existing Titles and abbreviations for any entries
@@ -407,7 +401,6 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         the index of the entry selected from the list and clear the
         searchflag.  Clear the search_flag if the users selects
         stopSearch.'''
-        print('searching for "' + string + '"', self.search_flag)
         try:
             self.current_search_list = self.sdict.search(string.strip())
         except KeyError:
@@ -417,22 +410,22 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Set/Clear flags for Entry
     #
-    def set_search_flag(self):
+    def _set_search_flag(self):
         """Set the  searchflag to True to enable searchs"""
         self.search_flag = True
 
-    def clear_search_flag(self):
+    def _clear_search_flag(self):
         """Set the search flag to False and disable searchs."""
         self.search_flag = False
 
-    def set_entry_dirty(self):
+    def _set_entry_dirty(self):
         """Set the entry_dirty flag to True and enable the Save Entry
         button."""
         self.entry_dirty = True
         self.saveButton.setEnabled(True)
         # set menu item enable to True as well
 
-    def clear_entry_dirty(self):
+    def _clear_entry_dirty(self):
         """Set the entry_dirty flag to False and disable the Save
         Entry button."""
         self.entry_dirty = False
@@ -457,7 +450,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     #
     # Edit menu functions
     #
-    def open_symbol_dialog(self):
+    def _open_symbol_dialog(self):
         """Open the symbol entry form."""
         self.symbol_table = symbol.SymbolForm(self.symbol_table_name, 'FreeSans', 14)
         self.symbol_table.sigClicked.connect(self.insert_char)
@@ -497,7 +490,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             self.insert_func = None
 
 
-    def edit_header(self):
+    def _edit_header(self):
         """Open the edit header form."""
         self.header_window = hw.HeaderWindow(self)
         self.header_window.set_bookfile(self.journal_file)
@@ -525,27 +518,30 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             platform.system())
         return helpstring
 
-    def help_about(self):
+    def _help_about(self):
         """Show help string."""
-        QtWidgets.QMessageBox.about(self, 'About Journals', self.help_string)
+        QtWidgets.QMessageBox.about(self, 'About Journals', self.help_string())
 
 
     #
     # Button slots and Signals
     #
     def on_prevButton_released(self):
+        """comment"""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
 
         self.show_entry(self.cur_entry_number - 1)
 
     def on_nextButton_released(self):
+        """comment"""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
 
         self.show_entry(self.cur_entry_number + 1)
 
     def index_changed(self):
+        """Comment"""
         enum = int(self.indexEntry.text())
 
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
@@ -562,7 +558,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if self.entry_dirty:
             ans = QtWidgets.QMessageBox.warning(self, 'Save Entry?',
                                                 'Entry has changed. Do you want to save it?',
-                                                QtWidgets.QMessageBox.Save|QtWidgets.QMessageBox.No|QtWidgets.QMessageBox.Cancel)
+                                                QtWidgets.QMessageBox.Save
+                                                | QtWidgets.QMessageBox.No
+                                                | QtWidgets.QMessageBox.Cancel)
 
             if ans == QtWidgets.QMessageBox.Save:
                 self.save_entry()
@@ -575,7 +573,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if self.journal_file.is_dirty():
             ans = QtWidgets.QMessageBox.warning(self, 'Save file?',
                                                 'The File has changed. Do you want to save it?',
-                                                QtWidgets.QMessageBox.Save|QtWidgets.QMessageBox.Discard|QtWidgets.QMessageBox.Cancel)
+                                                QtWidgets.QMessageBox.Save
+                                                | QtWidgets.QMessageBox.Discard
+                                                | QtWidgets.QMessageBox.Cancel)
 
             if ans == QtWidgets.QMessageBox.Save:
                 self.save_file()
@@ -583,7 +583,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         return ans
 
-    def ask_open_file(self):
+    def _ask_open_file(self):
         """Open an existing file saving the old one if it is dirty."""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
@@ -591,9 +591,11 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if self.ask_save_file() == QtWidgets.QMessageBox.Cancel:
             return
 
-        fname, filterA = QtWidgets.QFileDialog.getOpenFileName(self,
-                                                               "%s -- Choose new file"%QtWidgets.QApplication.applicationName(),
-                                                               self.journal_file.get_dir_name(), "*.xml")
+        fname, dummy = QtWidgets.QFileDialog.getOpenFileName(self,
+                                                             '%s -- Choose new file' %
+                                                             QtWidgets.QApplication.applicationName(),
+                                                             self.journal_file.get_dir_name(),
+                                                             '*.xml')
         if fname:
             self.open_file(fname)
 
@@ -604,12 +606,13 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         """Creates the string 'Journal Entry vx.x - name' and
         places it into the window title.
         """
-        title = QtWidgets.QApplication.translate("MainWindow",
-                                                 "Journal Entry  v %s   -   %s" % (__version__, name),
+        title = QtWidgets.QApplication.translate('MainWindow',
+                                                 'Journal Entry  v %s   -   %s' %
+                                                 (__version__, name),
                                                  None)
         self.setWindowTitle(title)
 
-    def EntryToDisplay(self, entry):
+    def entry_to_display(self, entry):
         """Given an entry, display the parts on the GUI display."""
 
         astr = ''
@@ -624,32 +627,32 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         astr = ''
         if entry.not_empty('Publishers'):
             first = True
-            for p in entry['Publishers']:
+            for mem in entry['Publishers']:
                 if not first:
                     astr += '\n'
                 first = False
-                if p.__contains__('Place'):
-                    astr += p['Place']
+                if mem.__contains__('Place'):
+                    astr += mem['Place']
                 astr += ' : '
-                if p.__contains__('Name'):
-                    astr += p['Name']
+                if mem.__contains__('Name'):
+                    astr += mem['Name']
                 astr += ' : '
-                if p.__contains__('startDate'):
-                    astr += p['startDate']
+                if mem.__contains__('startDate'):
+                    astr += mem['startDate']
                 astr += ' : '
-                if p.__contains__('endDate'):
-                    astr += p['endDate']
+                if mem.__contains__('endDate'):
+                    astr += mem['endDate']
         self.publisherEdit.setText(astr)
 
 
         astr = ''
         if entry.not_empty('Abbreviations'):
             first = True
-            for a in entry['Abbreviations']:
+            for mem in entry['Abbreviations']:
                 if not first:
                     astr += '\n'
                 first = False
-                astr += a
+                astr += mem
         self.abbreviationsEdit.setText(astr)
 
         astr = ''
@@ -665,58 +668,58 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         astr = ''
         if entry.not_empty('linkprevious'):
             first = True
-            for l in entry['linkprevious']:
+            for mem in entry['linkprevious']:
                 if not first:
                     astr += '\n'
                 first = False
-                astr += l
+                astr += mem
         self.LinkPreviousEdit.setText(astr)
 
         astr = ''
         if entry.not_empty('linknext'):
             first = True
-            for l in entry['linknext']:
+            for mem in entry['linknext']:
                 if not first:
                     astr += '\n'
                 first = False
-                astr += l
+                astr += mem
         self.LinkNextEdit.setText(astr)
 
         astr = ''
         if entry.not_empty('Designators'):
             first = True
-            for k in entry['Designators']:
+            for mem in entry['Designators']:
                 if not first:
                     astr += '\n'
                 first = False
-                astr += k
+                astr += mem
                 astr += ' : '
-                astr += entry['Designators'][k]
+                astr += entry['Designators'][mem]
         self.designatorEdit.setText(astr)
 
 
         astr = ''
         if entry.not_empty('Comments'):
             first = True
-            for c in entry['Comments']:
+            for mem in entry['Comments']:
                 if not first:
                     astr += '\n'
                 first = False
-                astr += c
+                astr += mem
         self.CommentsEdit.setText(astr)
 
         self.repaint()
 
 
-    def DisplayToEntry(self):
+    def display_to_entry(self):
         """Copy the display into a new entry and
         return the entry."""
         entry = journalentry.JournalEntry()
 
         # Titles
-        a = self.titleEdit.toPlainText().strip()
-        if a:
-            alist = a.split('\n')
+        mem = self.titleEdit.toPlainText().strip()
+        if mem:
+            alist = mem.split('\n')
             alist_len = len(alist)
             if not alist:
                 return None
@@ -728,30 +731,30 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
 
         # Publishers
-        a = self.publisherEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.publisherEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
-                d = {}
+                pubd = {}
                 fields = line.split(':')
                 num_fields = len(fields)
                 # Check len(flds) here, pop dialog if not 4
                 if num_fields > 0:
-                    d['Place'] = fields[0].strip()
+                    pubd['Place'] = fields[0].strip()
                 if num_fields > 1:
-                    d['Name'] = fields[1].strip()
+                    pubd['Name'] = fields[1].strip()
                 if num_fields > 2:
-                    d['startDate'] = fields[2].strip()
+                    pubd['startDate'] = fields[2].strip()
                 if num_fields > 3:
-                    d['endDate'] = fields[3].strip()
+                    pubd['endDate'] = fields[3].strip()
 
-                entry['Publishers'].append(d)
+                entry['Publishers'].append(pubd)
 
 
         # Abbreviations
-        a = self.abbreviationsEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.abbreviationsEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
                 entry['Abbreviations'].append(line.strip())
 
@@ -762,32 +765,32 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         entry['endDate'] = self.endDateEdit.text().strip()
 
         # link previous
-        a = self.LinkPreviousEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.LinkPreviousEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
                 entry['linkprevious'].append(line.strip())
 
         # link next
-        a = self.LinkNextEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.LinkNextEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
                 entry['linknext'].append(line.strip())
 
         # Designators
-        a = self.designatorEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.designatorEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
                 flds = line.split(':')
                 entry['Designators'][flds[0].strip()] = flds[1].strip()
 
 
         # Comments
-        a = self.CommentsEdit.toPlainText()
-        if a:
-            alist = a.split('\n')
+        mem = self.CommentsEdit.toPlainText()
+        if mem:
+            alist = mem.split('\n')
             for line in alist:
                 entry['Comments'].append(line)
 
