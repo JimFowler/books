@@ -26,9 +26,9 @@ to save your changed permenantly
 """
 from PyQt5 import QtWidgets
 
-import aabooks.lib.ui_HeaderEntry as HeaderEntry_ui
+from aabooks.lib import ui_HeaderEntry
 
-class HeaderWindow(QtWidgets.QDialog, HeaderEntry_ui.Ui_HeaderEdit):
+class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     '''A window to edit the header text with.'''
     def __init__(self, bf=None):
         super(HeaderWindow, self).__init__()
@@ -83,7 +83,7 @@ class HeaderWindow(QtWidgets.QDialog, HeaderEntry_ui.Ui_HeaderEdit):
     def revert_header(self):
         '''Reset the test to the existing bookfile header.'''
         # restore the current header before closing
-        self.set_header_text(self.bookfile.getHeader())
+        self.set_header_text(self.bookfile.get_header())
 
     def no_save_close(self):
         '''Don't save the text, just close the window.'''
