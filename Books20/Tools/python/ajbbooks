@@ -95,8 +95,8 @@ def main():
             form.open_file(fname)
         else:
             form.open_new_file()
-            form.bf.set_filename(fname)
-            form.set_win_title(form.bf.get_basename())
+            form.bookfile.set_filename(fname)
+            form.set_window_title(form.bookfile.get_basename())
 
 
     form.show()
