@@ -1,3 +1,15 @@
+2018-12-08  Jim Fowler  <jrf@biblion>
+
+	* aabooks: Merged changes from branch aabooks to master.  This
+	should pick up the changes to make the python code more compliant
+	with pylint and PEP-8.  Still need to install and test.
+
+	* Tools/python/aabooks/journal/journalwindow.py: Started to make
+	a dictionary for instance attributes but stopped before finishing.
+	This should be done in phase four when we refactor the structure
+	of the programs. For right now the python programs are mostly
+	compliant with PEP-8 and pylint.
+	
 2018-12-05  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalwindow.py
