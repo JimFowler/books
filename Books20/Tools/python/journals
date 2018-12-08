@@ -61,8 +61,9 @@ def getargs():
 #
 
 def main():
-    '''Do something with the command line arguments and
-    open the entry window.
+    '''Do something with the command line arguments and open the entry
+    window.
+
     '''
 
     args = getargs()
@@ -76,11 +77,17 @@ def main():
 
 
     if args.version:
-        form.help_about()
+        form._help_about()
         sys.exit(0)
 
     if args.symbols is not None:
         form.set_symbol_table_name(args.symbols)
+
+
+    if args.input is not None:
+        print('''Input file is broken at this time.  Will be fixed
+in phase two of the refactor of aabooks.''')
+        return
 
     if args.input is not None:
         fname = args.input
@@ -88,7 +95,9 @@ def main():
             form.open_file(fname)
             form.show_entry(1)
         else:
-            form.open_new_file()
+            # Should not access form.jf functions and indeed
+            # this is broken right now.
+            form._open_new_file()
             form.jf.setFileName(fname)
             form.set_window_title(form.jf.getBaseName())
             form.new_entry()

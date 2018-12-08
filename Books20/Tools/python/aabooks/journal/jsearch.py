@@ -45,7 +45,7 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
 
 
         self.closeButton.released.connect(self.close)
-        self.newButton.released.connect(self.parent.new_entry)
+        self.newButton.released.connect(self.parent._new_entry)
 
 
     #
@@ -78,14 +78,16 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
         self.searchEdit.textChanged.connect(self.search_edit_changed)
 
     def title_selected(self, search_title):
-        """If a title has been selected in the searchResults, then
-        find that title in the current_search_list, extract that record
-        number and show the entry with the relevant record number."""
+        """If a title has been selected in the searchResults, then find that
+        title in the current_search_list, extract that record number
+        and show the entry with the relevant record number.
+
+        """
         title_text = search_title.text()
         for title, index in self.current_search_list:
             if title == title_text:
                 self.parent.show_entry(index + 1)
                 return
 
-        self.parent.new_entry()
+        self.parent._new_entry()
         self.parent.titleEdit.setText(title_text)
