@@ -14,5 +14,7 @@
 <br><a href="http://www.thebookcollector.co.uk/">The Book Collector</a>
 <br><a href="http://www.nicholasbasbanes.com/">Nicholas A. Basbanes</a>
 <br><a href="http://www.booksourcemagazine.com/">Book Source Magazine</a>
+<br><a href="http://www.historyofscience.com/">History of Science</a>
+<br><a href="http://www.biblioastrology.com/en/index.aspx">Biblio Astrology</a>
 <!-- <br><a href="http://www.rarebookreviewcom/">Rare Book Review</a> -->
 <br>More...
