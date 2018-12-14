@@ -1,5 +1,9 @@
  status2018-12-13  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/lib/configuration.py: Began writing and
+	testing a skeleton configuration reader based on the write up I
+	did previously.
+
 	* Tools/python/doc/lib/configuration.rst: Begin write up about
 	configuration files and command line arguments. This was prior to
 	writing code so I basicly did a top-down construction sequence.
