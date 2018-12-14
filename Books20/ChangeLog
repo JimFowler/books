@@ -1,3 +1,9 @@
+ status2018-12-13  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/doc/lib/configuration.rst: Begin write up about
+	configuration files and command line arguments. This was prior to
+	writing code so I basicly did a top-down construction sequence.
+
 2018-12-05  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalwindow.py
