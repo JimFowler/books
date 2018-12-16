@@ -19,18 +19,19 @@ Configuration
 *************
 
 The ``configuration`` package provide a configuration mechanism for
-client programs. It utilizes the standard ``argparse`` and
-``configparser`` packages to work out what configuraton variables are
-needed and the primary object returned by ``get_config()`` is of
-type ``configparser.ConfigParser()``
+client programs. It utilizes the standard `argparse
+<https://docs.python.org/3/library/argparse.html>`_ and `configparser
+<https://docs.python.org/3/library/configparser.html>`_ packages to
+work out what configuraton variables are needed. The primary object
+returned by is of type ``configparser.ConfigParser()``.
 
 Program configuration may be done through a configuration file in a
 standard location, an alternate configuration file in a non-standard
 or standard location, or via the command line.  All configuration
-variable available in a configuration file are also available via the
-command line.  One may also specify default values in the event that
-the variable is not listed in a configuration file or on the command
-line. 
+variables available in a configuration file may also be available via
+the command line.  Specified default values are listed when building
+the ConfigParams object in the event that the variable is not listed
+in a configuration file or on the command line.
 
 Configuration Files
 ===================
@@ -57,7 +58,9 @@ Example
   from aabooks.lib import configuration as cf
 
   description = '''This is a short or long description of the program'''
-  cf.create_config(description)
+  cf.ConfigParams(description)
+  # cf.CONFIG_SEARCH_PATH is a list and may be added to
+  cf.CONFIG_SEARCH_PATH.append('mydirectory')
   cf.add_parameter('verbose', help='Be noisy about our actions',
                    default=True)
   cf.add_parameter('volume', help='The default volume number',
@@ -68,13 +71,15 @@ Example
   config = cf.read_config(config_file_name='configname.conf')
   defaultconf = config['DEFAULT']
   # config is of type configparser.ConfigParser()
+  # defaultconf is a dictionary of keyword/value from the DEFAULT
+  #   section of the configuration file
 
-  with open(defaultconf['input'], 'w') as infile:
-      # do something with the file
+  # do something with these configuration parameters
   ...
+  # save the configuration parameters in a config file
   cf.save_config(config_file_name='configfilename')
   
-Then the configuration file for `prog` will be `prog.conf` which would
+The configuration file for `prog` will be `prog.conf` which would
 look like this:
 
 .. parsed-literal::
@@ -92,6 +97,6 @@ package does not support this multi-depth capability at this time.
 configuration.py
 ================
 
-.. automodule:: config
+.. automodule:: configuration
     :members:
     :show-inheritance:
