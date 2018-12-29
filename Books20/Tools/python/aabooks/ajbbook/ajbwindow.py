@@ -442,7 +442,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     def open_symbol(self):
         """Open the symbol entry form."""
         self.symbol_window = symbol.SymbolForm(
-            self.symbol_table_name, 'FreeSans', 14)
+            self.symbol_table_name, 'FreeSans', 14, parent=self)
         self.symbol_window.show()
         self.symbol_window.sigClicked.connect(self.insert_char)
 
@@ -453,7 +453,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def edit_header(self):
         """Open the edit header form."""
-        self.header_window = hw.HeaderWindow()
+        self.header_window = hw.HeaderWindow(parent=self)
         self.header_window.set_bookfile(self.bookfile)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
                                                                       "Edit Headers - %s" % (self.bookfile.get_basename_with_extension()), None))

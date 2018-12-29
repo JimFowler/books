@@ -115,8 +115,8 @@ class SymbolForm(QtWidgets.QDialog):
 
     sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
-    def __init__(self, file_name, font_family, font_size):
-        super(SymbolForm, self).__init__()
+    def __init__(self, file_name, font_family, font_size, parent=None):
+        super(SymbolForm, self).__init__(parent)
         self.setObjectName('symbolForm')
 
         self.setWindowTitle('Insert Symbol...')

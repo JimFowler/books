@@ -465,7 +465,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     def _open_symbol_dialog(self):
         """Open the symbol entry form."""
         self._vardict['symbol_table'] = symbol.SymbolForm(\
-                                self._vardict['symbol_table_name'], 'FreeSans', 14)
+                self._vardict['symbol_table_name'], 'FreeSans', 14, parent=self)
         self._vardict['symbol_table'].sigClicked.connect(self.insert_char)
         self._vardict['symbol_table'].show()
 
@@ -505,7 +505,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _edit_header(self):
         """Open the edit header form."""
-        self._vardict['header_window'] = hw.HeaderWindow(self)
+        self._vardict['header_window'] = hw.HeaderWindow(self, parent=self)
         self._vardict['header_window'].set_bookfile(self._vardict['journal_file'])
         self._vardict['header_window'].setWindowTitle(\
                 QtWidgets.QApplication.translate("headerWindow",\
