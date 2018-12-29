@@ -20,7 +20,7 @@
    <string>document1 - BookEntry</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../Resources/ajb_rc.qrc">
+   <iconset>
     <normaloff>:/icon_ajb.svg</normaloff>:/icon_ajb.svg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -916,7 +916,7 @@
   <tabstop>indexEntry</tabstop>
  </tabstops>
  <resources>
-  <include location="../Resources/ajb_rc.qrc"/>
+  <include location="aabooks.ajbbook.ajb.qrc"/>
  </resources>
  <connections/>
 </ui>

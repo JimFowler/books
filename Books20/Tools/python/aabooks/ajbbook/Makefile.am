@@ -77,8 +77,8 @@ ui_OrigStr.py: designer/ui_OrigStr.ui
 #
 # Convert the XML resource files to Python files
 #
-ajb_rc.py: Resources/ajb_rc.qrc
-	$(PYRCC) -o ajb_rc.py Resources/ajb_rc.qrc
+ajb_rc.py: Resources/ajb.qrc
+	$(PYRCC) -o ajb_rc.py Resources/ajb.qrc
 
 
 #
