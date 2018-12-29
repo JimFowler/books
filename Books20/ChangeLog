@@ -2,7 +2,10 @@
 
 	* Tools/python/aabooks/journal/Resources/journals.qrc: Added
 	icon_journals.svg to journals program. Updated
-	designer/ui_JournalEntry.ui.
+	designer/ui_JournalEntry.ui. Added RESOURCE_FILE to Makefile.am.
+
+	* Tools/python/aabooks/ajbbook/Resources/ajb.qrc: Changed name of
+	ajb.qrc, updated designer/ui_BookEntry.ui and Makefile.am.
 
 2018-12-08  Jim Fowler  <jrf@biblion>
 
