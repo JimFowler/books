@@ -27,8 +27,10 @@ import os
 import argparse
 
 from PyQt5 import QtWidgets
+from PyQt5 import QtGui
 
 import aabooks.journal.journalwindow as mw
+import aabooks.journal.journal_rc
 
 #
 # Parse the command line arguments
@@ -70,7 +72,7 @@ def main():
 
     app = QtWidgets.QApplication(sys.argv)
     app.setApplicationName('Journal Search and Entry')
-    # app.setWindowIcon(QIcon(':/icon_journals.svg'))
+    app.setWindowIcon(QtGui.QIcon(':/icon_journals.svg'))
 
     form = mw.JournalWindow(config_name=args.config)
     app.focusChanged.connect(form.set_focus_changed)

@@ -43,7 +43,7 @@ PYRCC = pyrcc5
 #
 USER_INTERFACES = ui_JournalSearch.py ui_JournalEntry.py
 
-RESOURCE_FILES = journals_rc.py
+RESOURCE_FILES = journal_rc.py
 
 #
 # Build any software and/or documents
@@ -78,8 +78,8 @@ ui_JournalEntry.py: designer/ui_JournalEntry.ui
 #
 # Convert the XML resource files to Python files
 #
-journals_rc.py: Resources/journals.qrc
-	$(PYRCC) -o journals_rc.py Resources/journals.qrc
+journal_rc.py: Resources/journal.qrc
+	$(PYRCC) -o journal_rc.py Resources/journal.qrc
 
 
 #

@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>:/icon_journals.svg</normaloff>:/icon_journals.svg</iconset>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -733,8 +729,6 @@
   <tabstop>designatorEdit</tabstop>
   <tabstop>CommentsEdit</tabstop>
  </tabstops>
- <resources>
-  <include location="aabooks.journal.journals.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
