@@ -1,3 +1,9 @@
+2018-12-28  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/Resources/journals.qrc: Added
+	icon_journals.svg to journals program. Updated
+	designer/ui_JournalEntry.ui.
+
 2018-12-08  Jim Fowler  <jrf@biblion>
 
 	* aabooks: Merged changes from branch aabooks to master.  This
@@ -9,7 +15,7 @@
 	This should be done in phase four when we refactor the structure
 	of the programs. For right now the python programs are mostly
 	compliant with PEP-8 and pylint.
-	
+
 2018-12-05  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalwindow.py
