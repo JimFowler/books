@@ -1,3 +1,9 @@
+2018-12-29  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/ajbbooks: deleted resource file inclusion
+	and program icon from designer/ui_BookEntry.ui.  Added
+	icon inclusion in main program.
+
 2018-12-28  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/Resources/journals.qrc: Added

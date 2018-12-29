@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>911</width>
+    <width>915</width>
     <height>866</height>
    </rect>
   </property>
@@ -18,10 +18,6 @@
   </property>
   <property name="windowTitle">
    <string>document1 - BookEntry</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>:/icon_ajb.svg</normaloff>:/icon_ajb.svg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -884,7 +880,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>911</width>
+     <width>915</width>
      <height>25</height>
     </rect>
    </property>
