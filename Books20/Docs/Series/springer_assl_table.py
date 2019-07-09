@@ -107,9 +107,9 @@ ASSL_BOOK_LIST = [
      ['Anne B. Underhill'],
      'A', None),
 
-    (7, [], None, 
-     [],
-     None, None),
+    (7, ['Introduction to Celestial Mechanics'], '1967', 
+     ['Jean Kovalesky'],
+     'A', '90-277-0398-1'),
 
     (8, ['Measure of the Moon:', 'Proceedings of the Second',
          'International Conference on',
@@ -206,9 +206,11 @@ ASSL_BOOK_LIST = [
      ['André B. Muller'],
      'E', None),
 
-    (24, [], None, 
-     [],
-     None, None),
+    (24, ['The Radiating Atmosphere:', 'Proceedings of a Symposium Organized by',
+          'the Summer Advanced Study Institute,',
+          'Held at Queens University', 'Kingston, Ontario, Aug 3-14, 1970'], '1971', 
+     ['B. M. McCormac'],
+     'E', None),
 
     (25, ['Mesospheric Models and Related', 'Experiments:',
           'Proceedings of the Fourth', 'Esrin-Eslab Symposium Held in',
@@ -220,9 +222,12 @@ ASSL_BOOK_LIST = [
      ['I. Atanasijević'],
      'A', None),
 
-    (27, [], None, 
-     [],
-     None, None),
+    (27, ['Physics of the Solar Coronae:', 'Proceedings of the NATO Advanced',
+          'Study Institute on the Physics', 'of the Solar Coronae',
+          'Held in Cavouri-Vouliagmeni,', 'Athens, Greece'
+          '6-17 September 1970'], '1971', 
+     ['C. J. Macris'],
+     'E', None),
 
     (28, ['The Environment of the Earth'], '1971', 
      ['Francis Delobeau'],
@@ -277,7 +282,8 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (37, ['Photon and Particle Interactions', 'with Surfaces in Space:',
-          'Proceedings of the 6th Eslab', 'Symposium, Held at Noordwijk,', 'The Netherlands, 26–29 September, 1972'], '1973', 
+          'Proceedings of the 6th Eslab', 'Symposium, Held at Noordwijk,',
+          'The Netherlands, 26–29 September, 1972'], '1973', 
      ['R. J. L. Grard'],
      'E', None),
 
