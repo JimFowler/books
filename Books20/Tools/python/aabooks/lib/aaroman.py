@@ -86,7 +86,7 @@ Roman_Match = '''
 # Doesn't work yet...
 Roman_Find = '''
     (^               # beginning of string
-    (?=[MDCLXVI ])    # must contain one or all of these characters,
+    (?=[MDCLXVI])    # must contain one or all of these characters,
                      # no empty strings
     M{0,3}           # thousands -  3999 is the lagest Roman number in use
     (C[MD]|D?C{0,3}) # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
@@ -213,14 +213,14 @@ if __name__ == '__main__':
     interpreted in some system as 2111.'''.format(roman_to_int('MDDCXI')))
 
     print(RomanNumeral_match.match(''))
-    print(RomanNumeral_match.match('AMCX'))
+    print(RomanNumeral_match.match('MMCCXV'))
     print(RomanNumeral_match.match('mcX'))
 
     
     print('\nTesting the find function')
-    r = find_roman_numerals('MCX CX XIII')
+    r = find_roman_numerals('MCCXXIII')
     pprint(r)
-    for r in  find_roman_numerals('MCX CX XIII'):
+    for r in  find_roman_numerals('MCCXXIII'):
         pprint(r)
 
     test_conversion()
