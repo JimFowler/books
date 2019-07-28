@@ -32,7 +32,7 @@ include ${BOOKS20_ROOT}/makefile.local
 SUB_DIRS = 
 
 TABLE_FILES = 
-QUESTIONS_TEX_FILES = questions.tex
+QUESTIONS_TEX_FILES = Questions.tex
 
 BIB_FILES = 
 #
@@ -52,14 +52,14 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} questions.pdf
+build_docs: ${SUB_DIRS} Questions.pdf
 
 
-questions.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${QUESTIONS_TEX_FILES}
-	${LATEX} -draftmode questions
-	${BIBER} questions
-	${LATEX} -draftmode questions
-	${LATEX} questions
+Questions.pdf: ${TABLE_FILES} ${QUESTIONS_TEX_FILES}
+	${LATEX} -draftmode Questions
+	${BIBER} Questions
+	${LATEX} -draftmode Questions
+	${LATEX} Questions
 
 #x
 # Install any software and/or documents
@@ -77,7 +77,7 @@ install_docs: ${SUB_DIRS} build_docs install_pdf
 
 install_pdf:
 	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
-	install -m 444 -p ./questions.pdf ${PDF_INSTALL_DIR}
+	install -m 444 -p ./Questions.pdf ${PDF_INSTALL_DIR}
 
 #
 # Other useful stuff
