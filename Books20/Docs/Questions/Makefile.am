@@ -1,10 +1,10 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Docs/Makefile.am
+#  /home/jrf/Documents/books/Books20/Docs/Questions/Makefile.am
 #  
 #   Part of the Books20 Project
 #
-#   Copyright 2018 James R. Fowler
+#   Copyright 2019 James R. Fowler
 #
 #   All rights reserved. No part of this publication may be
 #   reproduced, stored in a retrival system, or transmitted
@@ -14,7 +14,6 @@
 #
 #
 # End copyright
-
 
 #
 #   All Makefiles should have these targets at a minimum. The targets
@@ -30,8 +29,12 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = DatabaseDesign Handbook Notes Questions Quotes Series Style 
+SUB_DIRS = 
 
+TABLE_FILES = 
+QUESTIONS_TEX_FILES = questions.tex
+
+BIB_FILES = 
 #
 # Build any software and/or documents
 #
@@ -49,11 +52,16 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS}
-	@echo "Building docs in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
+build_docs: ${SUB_DIRS} questions.pdf
 
-#
+
+questions.pdf: ${BUILT_TABLE_FILES} ${TABLE_FILES} ${QUESTIONS_TEX_FILES}
+	${LATEX} -draftmode questions
+	${BIBER} questions
+	${LATEX} -draftmode questions
+	${LATEX} questions
+
+#x
 # Install any software and/or documents
 #
 .PHONY: install
@@ -65,26 +73,37 @@ install_software: ${SUB_DIRS}
 	@echo "Nothing to install from  ${CURDIR}"
 
 .PHONY: install_docs
-install_docs: ${SUB_DIRS}
-	@echo "Installing docs from ${CURDIR}"
-	@echo "Nothing to install from  ${CURDIR}"
+install_docs: ${SUB_DIRS} build_docs install_pdf
+
+install_pdf:
+	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
+	install -m 444 -p ./questions.pdf ${PDF_INSTALL_DIR}
+
+#
+# Other useful stuff
+#
+
+#
+# lines: count how many lines we have written
+#
+lines:
+	wc ${QUESTIONS_TEX_FILES} ${BIB_FILES} Makefile
 
 
 #
 # Clean up the mess
 #
 .PHONY: clean
-clean: ${SUB_DIRS}
+clean: ${SUB_DIRS} clean_tex
 	@echo "Doing clean of ${CURDIR}"
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS}
-	@echo "Doing veryclean of ${CURDIR}"
-	@echo "Nothing to do for veryclean in ${CURDIR}"
+veryclean: ${SUB_DIRS} clean clean_pdf
+	${RM} -rf __pycache__
 
 .PHONY: distclean
-distclean: ${SUB_DIRS}
+distclean: ${SUB_DIRS} veryclean
 	@echo "Doing distclean of ${CURDIR}"
 	${RM} Makefile Makefile.in
 
@@ -98,7 +117,7 @@ install_python:
 
 .PHONY: clean_tex
 clean_tex:
-	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.lot *.dvi *.toc *.out *.run.xml
 
 .PHONY: clean_pdf
 clean_pdf:
