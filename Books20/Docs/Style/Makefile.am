@@ -55,7 +55,7 @@ build_software: ${SUB_DIRS}
 .PHONY: build_docs
 build_docs: ${SUB_DIRS} style_guide.pdf
 
-style_guide.pdf: ${TEX_FILES}
+pdf guide style_guide.pdf: ${TEX_FILES}
 	${LATEX} style_guide
 	${BIBER} style_guide
 	${LATEX} style_guide

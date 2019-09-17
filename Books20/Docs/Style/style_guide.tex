@@ -18,13 +18,16 @@
 %%
 %%  The style that I will use for for various aspects of the project
 %%
-\documentclass{book}
+\documentclass[twoside]{book}
 
 \usepackage{books20}
 \addglobalbib{./../../Docs/MasterBib.bib}
 \addbibresource{localbib.bib}
 
 \begin{document}
+
+\frontmatter
+
 \title{Style Guide for the \ProjectTitle\ Project}
 \author{James R. Fowler}
 \date{2017-12-15\\ updated 2018-07-29}
@@ -32,6 +35,8 @@
 \maketitle
 
 \tableofcontents
+
+\mainmatter
 
 \chapter{General Comments}
 
@@ -94,7 +99,14 @@ this copyright notice.
 \chapter{Building Tools}
 \import{./}{style_build}
 
+%%
+%% \appendix
+%%   would go before \backmatter
+%%
 \printbibliography
+
+
+\backmatter
 
 \end{document}
 

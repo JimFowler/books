@@ -1,3 +1,8 @@
+2019-09-15  Jim Fowler  <jrf@biblion>
+
+	* Docs/Style/style_guide.tex: minor updates to this and
+	style_python.tex.
+
 2019-03-10  Jim Fowler  <jrf@biblion>
 
 	* Tools/xml/books_tex.xsl: Started working on an XML Style Sheet
