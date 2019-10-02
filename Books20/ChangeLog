@@ -1,3 +1,13 @@
+2019-10-01  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/designer/ui_BookEntry.ui: Extended
+	item field.  Volume AJB 11 and earlier have sequential number of
+	entries so the item number may exceed 3 digits.  Also removed
+	shortcuts from the next/previous record buttons.
+
+	* Tools/python/aabooks/ajbbook/menus.py: Added Ctrl+F and Ctrl+B
+	as shortcuts to the next/prev entry menu items.
+
 2019-09-15  Jim Fowler  <jrf@biblion>
 
 	* Docs/Style/style_guide.tex: minor updates to this and
