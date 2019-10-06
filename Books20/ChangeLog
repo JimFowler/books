@@ -1,3 +1,13 @@
+2019-10-06  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py
+	(JournalWindow.ask_save_entry): Corrected function call from
+	self.save_entry() to self._save_entry().
+
+	* Tools/python/aabooks/journal/designer/ui_JournalEntry.ui:
+	Changed Publishing tool tip to reflect Place:Name... rather than
+	Name:Place...
+
 2019-10-01  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/designer/ui_BookEntry.ui: Extended

@@ -578,7 +578,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                                                 | QtWidgets.QMessageBox.Cancel)
 
             if ans == QtWidgets.QMessageBox.Save:
-                self.save_entry()
+                self._save_entry()
 
         return ans
 
