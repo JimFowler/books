@@ -25,30 +25,106 @@
 
 \usepackage{books20}
 \addglobalbib{./../../Docs/MasterBib.bib}
+\addbibresource{testbib.bib}
 
 \begin{document}
 
 %%\frontmatter
-\title{Test the biblatex}
+\title{Test the {\tt biblatex} package}
 \author{James R. Fowler}
 \date{copy of \today}
 \maketitle
 
+
 \section{Test my Knowledge}
 
-How does this biblatex thing work anyway? This file contains
+How does this {\tt biblatex} thing work anyway? This file contains
 tests and other material to explore that question.
 
-In the default biblatex citation style two different references
-to individual volumes of a multi-volume work will also add
-the multi-volume item to the bibliography.
 
+\section{Things to Do}
 
-\nocite{Tebbel1972}
-%\nocite{Tebbel1975}
-\nocite{Tebbel1978}
-%\nocite{Tebbel1981}
-%\nocite{Tebbel}
+\begin{enumerate}
+  \item Test series of books
+
+  \item Test books published in 1805 with a translation in 1910
+    but referenced by original author and date,
+    c.f. Laplace 1805. \cite{Laplace1805}
+
+  \item Test other options and citation styles.
+
+  \item Add information to the style guide because I am sure to forget
+    how to do it.
+
+  \item When the database gets built, add a hook to convert database
+    entries to {\tt biblatex} format.
+\end{enumerate}
+
+\section{How To}
+
+\subsection{Multi-volume books}
+
+For a multi-volume book, where multiple books are published,
+perhaps in different years, but they make a single complete work,
+use the {\tt @MvBook} type for the common information with a {\tt related}
+field entry to the individual volumes, with the individual volumes entered
+as {\tt @Book} types with the particular
+information and a {\tt crossref} field to the multi-volume entry.
+
+\begin{verbatim}
+@Book{Tebbel1972,
+  title    = {The Creating of an Industry 1630-1865},
+  date     = {1972},
+  volume   = {1},
+  crossref = {Tebbel},
+}
+
+@Book{Tebbel1975,
+  title    = {The Expansion of an Industry 1865-1919},
+  date     = {1975},
+  volume   = {2},
+  crossref = {Tebbel},
+}
+
+@Book{Tebbel1978,
+  title    = {The Golden Age between Two Wars 1920-1940},
+  date     = {1978},
+  volume   = {3},
+  crossref = {Tebbel},
+}
+
+@Book{Tebbel1981,
+  title    = {The Great Change 1940-1980},
+  date     = {1981},
+  volume   = {4},
+  crossref = {Tebbel},
+}
+
+@MvBook{Tebbel,
+  author        = {Tebbel, John William},
+  title         = {A History of Book Publishing in the United States},
+  volumes       = {4},
+  publisher     = {R. R. Bowker Co},
+  __markedentry = {[jrf:]},
+  address       = {New York},
+  groups        = {Books Noted},
+  lccn          = {Z473 T42},
+  owner         = {jrf},
+  related       = {Tebbel1972, Tebbel1975, Tebbel1978, Tebbel1981},
+  relatedtype   = {multivolume},
+  timestamp     = {2018-09-03},
+}
+\end{verbatim}
+
+In the default {\tt biblatex} citation style two different references
+to individual volumes of a multi-volume work will also add the
+multi-volume item to the bibliography. So if we reference only two
+volumes, say Tebbel, volume 1, {\it The Creation of an Industry
+  1630-1865}\cite{Tebbel1972} as well as Tebbel, volume 4. {\it The
+  Great Change 1940-1980}\cite{Tebbel1981}, then the bibliography will
+also show the the main entry in Tebbel as well. The number of volumes
+needed to show the main entry is set by the parameter.
+
 
 \vfil\eject
 
