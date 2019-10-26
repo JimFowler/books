@@ -1,3 +1,11 @@
+2019-10-24  Jim Fowler  <jrf@biblion>
+
+	* Docs/MasterBib.bib: Have spent the last three days cleaning
+	up the bibliography file.  Found the users guider to biblatex
+	and learned many useful things there.  Cleaned up author's names,
+	moved subtitles, use date instead of year, and put all dates
+	in ISO8601 format as recommended.
+
 2019-10-06  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalwindow.py
