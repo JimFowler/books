@@ -52,7 +52,7 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} Notes.pdf
 
 
-bibliography.pdf: ${TEX_FILES}
+bibliography.pdf: ${TEX_FILES} testbib.bib
 	${LATEX} bibliography
 	${BIBER} bibliography
 	${LATEX} bibliography

@@ -19,12 +19,15 @@
 %%   Tests and notes about biblatex and bibliographys
 %%   with the book project "Some Important Books in Astronomy
 %%    and Astrophysics in the 20th Century"
+
 %%
 
 \documentclass{article}
 
-\usepackage{books20}
-\addglobalbib{./../../Docs/MasterBib.bib}
+\usepackage[
+  backend=biber,
+  style=alphabetic-verb,
+]{biblatex}
 \addbibresource{testbib.bib}
 
 \begin{document}
@@ -38,29 +41,32 @@
 
 \section{Test my Knowledge}
 
-How does this {\tt biblatex} thing work anyway? This file contains
-tests and other material to explore that question.
+For my {\bf Books20} project I will be using the {\tt biblatex}\cite{Kime2019}
+package for the bibliography and citations.
+How does this {\tt biblatex} thing work anyway? This
+file contains tests and other material to explore that question.
 
 
 \section{Things to Do}
 
 \begin{enumerate}
-  \item Test series of books
-
   \item Test books published in 1805 with a translation in 1910
     but referenced by original author and date,
     c.f. Laplace 1805. \cite{Laplace1805}
 
-  \item Test other options and citation styles.
-
   \item Add information to the style guide because I am sure to forget
-    how to do it.
+    how to work with {\tt jabref} and {\tt biblatex}.
 
   \item When the database gets built, add a hook to convert database
     entries to {\tt biblatex} format.
 \end{enumerate}
 
 \section{How To}
+
+\subsection{Citation Styles}
+
+I like the citation style {\tt alphabetic-verb} which will
+list citation as {\tt Fow56} when citing a work like Fowler 1956.
 
 \subsection{Multi-volume books}
 
@@ -125,6 +131,31 @@ volumes, say Tebbel, volume 1, {\it The Creation of an Industry
 also show the the main entry in Tebbel as well. The number of volumes
 needed to show the main entry is set by the parameter.
 
+\subsection{Book Series}
+
+For books in a series simply use the {\tt series} field to give the
+name the series and the {\tt number} field if the series is
+numbered. For example, we can reference {\it Book 9} \cite{book09} and
+{\it Book 10} \cite{book10} from the series {\it An Amazing Series of
+  Books}.
+
+\begin{verbatim}
+@Book{series09,
+  title        = {Book 9},
+  ...
+  series       = {An Amazing Series of Books},
+  number       = {9},
+  ...
+}
+
+@Book{series10,
+  title        = {Book 10},
+  ...
+  series       = {An Amazing Series of Books},
+  number       = {10},
+  ...
+}
+\end{verbatim}
 
 \vfil\eject
 
