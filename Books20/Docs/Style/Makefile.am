@@ -56,9 +56,9 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} style_guide.pdf
 
 pdf guide style_guide.pdf: ${TEX_FILES}
-	${LATEX} style_guide
+	${LATEX} -draftmode style_guide
 	${BIBER} style_guide
-	${LATEX} style_guide
+	${LATEX} -draftmode style_guide
 	${LATEX} style_guide
 
 #
