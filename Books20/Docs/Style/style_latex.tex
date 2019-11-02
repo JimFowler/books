@@ -22,10 +22,10 @@
 
 Documents for the \ProjectTitle\ project should be written in \LaTeXe\ and use
 the books20.sty package. Most documents will be articles but the
-manuscript should be in the books document class. The reasoning behind
+manuscript should be in the book document class. The reasoning behind
 using \LaTeXe\ is that I expect academic publishers to prefer or at
 least have available a \LaTeXe\ class package.  It will be difficult if
-I need to convert these documents to Microsoft Word\texttrademark or
+I need to convert these documents to Microsoft Word\texttrademark\ or
 some other formatting package.
 
 A good, general purpose on-line reference for \LaTeXe\ can be found at
@@ -99,26 +99,26 @@ not required in your \LaTeXe\ documents
   to get a list of character encoding.
   
 \item {Use the \texttt{biblatex} package rather than the
-    \texttt{bibtex} package. The \texttt{biblatex} package allows both
-    global and local bibliography files and is provided with the
-    \texttt{books20} package.  For example, we can cite this book by
-    Basbanes \cite{Basbanes2003} from the global file and we can cite
-    this web page with the documentation for the \texttt{biblatex}
-    package \cite{Lehman2018} from the local file. The file
-    \texttt{./Docs/MasterBib.bib} is the global bibliography file and
-    must be included in the document using the
-    \verb|\addglobalbib{../MasterBib.bib}| command. You may use
-    additional local biblography files as well with this package. Use
-    the command \verb|\addbibresource{loacalbib.bib}|. These commands
-    should be in the preface before the \verb|\begin{document}|
-      command. The choice of which references should be global and
-      which should be local will probably change with time.
-
-      Need to work out how to handle link resources and references in
-      footnotes, particular URLs in footnotes. Should all URLs be at
-      the back of the document in the bibliography?  This is possible
-      if we use local .bib files }
-
+  \texttt{bibtex} package. The \texttt{biblatex} package allows both
+  global and local bibliography files and is provided with the
+  \texttt{books20} package.  For example, we can cite this book by
+  Basbanes \cite{Basbanes2003} from the global file and we can cite
+  this web page with the documentation for the \texttt{biblatex}
+  package \cite{Lehman2018} from the local file. The file
+  \texttt{./Docs/MasterBib.bib} is the global bibliography file and
+  must be included in the document using the
+  \verb|\addglobalbib{../MasterBib.bib}| command. You may use
+  additional local biblography files as well with this package. Use
+  the command \verb|\addbibresource{localbib.bib}|. These commands
+  should be in the preface before the \verb|\begin{document}|
+  command. The choice of which references should be global and
+  which should be local will probably change with time.
+  
+  Need to work out how to handle link resources and references in
+  footnotes, particular URLs in footnotes. Should all URLs be at
+  the back of the document in the bibliography?  This is possible
+  if we use local .bib files }
+  
 \item May wish to consider the use of the \texttt{subfiles} or
   \texttt{standalone} packages if the number of files gets
   large. These packages allow you to precompile files and avoid long
@@ -128,16 +128,15 @@ not required in your \LaTeXe\ documents
 
 \end{itemize}
 
-\section{Defined Commanda in books20.sty}
+\section{Defined Commands in books20.sty}
 
 \begin{itemize}
 
 \item \verb|\Cen{19}| is used to produce century names,
-  e.g.\ \Cen{19}. Note that it works only for centuries that use the
-  \textsuperscript{th} format.  That is, it won't work for the
-  21\textsuperscript{st} Century, the 2\textsuperscript{nd} Century,
-  or the 3\textsuperscript{rd} Century, etc. I should probably fix
-  this issue.
+  e.g.\ \Cen{19}. Note that it works only for the \Cen{1} through the
+  \Cen{30}. Other centuries that would use the superscript
+  \textsuperscript{th} are supported but not ones that want to use the
+  superscripts \textsuperscript{st} or \textsuperscript{nd}.
 
 \item \verb|\bt{Book Title}| produces book titles in italic face,
 e.g.\ \bt{Book Title} is the title of a book.
@@ -146,7 +145,7 @@ e.g.\ \bt{Book Title} is the title of a book.
   e.g.\ the \ProjectTitle\ project is the name of this project.
 
 \item \verb|\BookTitle\ | produces the book title in italic face,
-  e.g.\ \BookTitle\ or whatever I (or my editor) chooses for a title.
+  e.g.\ \BookTitle\ or whatever I (or my editor) choose for a title.
 
 \end{itemize}
 
@@ -240,11 +239,11 @@ Here is an example document so you can see what the \LaTeX\ commands are.
 \section{General Comments}
 
 The first of many sections for the book \BookTitle.  You can cite 
-Basbanes \cite{Basbanes2003} book on libraries like this.
+Basbanes' \cite{Basbanes2003} book on libraries like this.
 
 \section{Using UTF-8}
 
-You can use UTF-8 characters by using the \textttusepackage[utf-8]inputenc}
+You can use UTF-8 characters by using the \verb|usepackage[utf-8]{inputenc}|
 package.  Then a sentence might be written as
 
 Das astronomische Weltbild gemäß jüngster Forshung
@@ -258,7 +257,7 @@ Der neuentdeckte Himmel; Das astronomische Weltbild gem\"{a}{\ss} j\'{u}ngster F
 You can make a table in longtable format.
 
 \begin{longtable}[p]{l l l}
-  \caption{\bf Harvard Observatory Monographs} \\
+  \caption{\bfseries Harvard Observatory Monographs} \\
   \label{HMA:1} \\
 
   Title & Author(s) & Date \\
