@@ -36,7 +36,7 @@
 \RequirePackage[absolute]{textpos}
 \RequirePackage[
   backend=biber,
-  style=numeric,
+  style=authoryear,
 ]{biblatex}
 
 %%
@@ -54,12 +54,12 @@
 %%
 
 % The Project Title
-\newcommand{\ProjectTitle}{{\bf Books20}}
+\newcommand{\ProjectTitle}{{\bfseries Books20}}
 %\newcommand{\PTitle}{\ProjectTitle}
 
 % The Book Title
 %\newcommand{\BookTitle}{{\it Some Important Books in Astronomy and Astrophysics in the \Cen{20}}}
-\newcommand{\BookTitle}{{\it Some Interesting Books in Astronomy and Astrophysics from the \Cen{20}}}
+\newcommand{\BookTitle}{{\itshape Some Interesting Books in Astronomy and Astrophysics from the \Cen{20}}}
 
 % The command for writing a numeric century
 \newcommand{\Cen}[1]{\IfEqCase{#1}{%
@@ -79,7 +79,7 @@
 
 
 % Print a book title
-\newcommand{\bt}[1]{{\it #1}}
+\newcommand{\bt}[1]{{\itshape #1}}
 
 
 % My copyright notice for book for any printed documents
