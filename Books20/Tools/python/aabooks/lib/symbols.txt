@@ -36,8 +36,8 @@
 ã, Small letter a with tilde
 Ā, Capital letter A with macron
 ā, Small letter a with macron
-Ą, Capital letter A with cedilla
-ą, Small letter a with cedilla
+Ą, Capital letter A with ogonek
+ą, Small letter a with ogonek
 Ҫ, Capital letter C with cedilla
 ç, Small letter c with cedilla
 Č, Capital letter C with caron
@@ -52,8 +52,12 @@
 é, Small letter e with acute
 ě, Small letter e with caron
 ê, Small letter e with circumflex
-ę, Small letter e with cedilla
+Ę, Captial letter E with ogonek
+ę, Small letter e with ogonek
 ē, Small letter e with macron
+Ȩ, Captial letter E with cedilla
+ȩ, small letter E with cedilla
+
 Ḥ, Capital letter H with dot below
 ḥ, small letter h with dot below
 Ï, Capital letter I with diaeresis
