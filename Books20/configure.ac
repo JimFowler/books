@@ -29,6 +29,7 @@ AC_OUTPUT(Makefile
       Docs/Collecting/Makefile
       Docs/DatabaseDesign/Makefile
       Docs/Handbook/Makefile
+      Docs/History/Makefile
       Docs/Notes/Makefile
       Docs/Questions/Makefile
       Docs/Quotes/Makefile
