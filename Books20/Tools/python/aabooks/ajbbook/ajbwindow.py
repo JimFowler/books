@@ -494,7 +494,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         try:
             enum = int(self.indexEntry.text())
         except ValueError:
-            QtWidgets.QMessageBos.warning(self, 'Index Changed',
+            QtWidgets.QMessageBox.warning(self, 'Index Changed',
                                           'Invalid index entry {0}'.format(self.indexEntry.text()),
                                           QtWidgets.QMessageBox.Ok)
             return
