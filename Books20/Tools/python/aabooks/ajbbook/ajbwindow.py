@@ -731,10 +731,10 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         for field in entry.keys():
             if self.known_entry_fields.count(field) == 0:
-                QMessageBox.warning(self, 'Unknown Entry Field',
-                                    'Unknown field "%s:  %s"\n in entry %s\n "' %
-                                    (field, entry[field], entry['Index']),
-                                    QMessageBox.Ok)
+                QtWidgets.QMessageBox.warning(self, 'Unknown Entry Field',
+                                              'Unknown field "%s:  %s"\n in entry %s\n "' %
+                                              (field, entry[field], entry['Index']),
+                                              QtWidgets.QMessageBox.Ok)
         self.repaint()
 
     def display_to_entry(self):
@@ -760,7 +760,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                 tb_str = tb_str + s
             tb_str = tb_str + '\n\n Invalid Index number'
             QtWidgets.QMessageBox.warning(self, 'Invalid Index Num',
-                                          tb_str, QMessageBox.Ok)
+                                          tb_str, QtWidgets.QMessageBox.Ok)
             return None
 
         # AJB number
@@ -781,7 +781,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                 tb_str = tb_str + s
             tb_str = tb_str + '\n\n Invalid AJB Entry number'
             QtWidgets.QMessageBox.warning(self, 'Invalid AJB Num',
-                                          tb_str, QMessageBox.Ok)
+                                          tb_str, QtWidgets.QMessageBox.Ok)
             return None
 
         entry['Num'] = num
