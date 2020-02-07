@@ -51,7 +51,7 @@ TBL_COPYRIGHT = r'''%%   Copyright 2018 James R. Fowler
 %%
 '''
 
-TBL_CAPTION = r'\bf Springer \bt{Astronomy and Astrophysics Library}'
+TBL_CAPTION = r'\bfseries Springer \bt{Astronomy and Astrophysics Library}'
 TBL_FORMAT = r'[p]{l l l}'
 TBL_LABEL = r'aal-springer:1'
 TBL_HEADING = r'Title & Author/Editor(s) & Date'
