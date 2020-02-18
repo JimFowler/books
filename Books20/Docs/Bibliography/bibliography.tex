@@ -26,14 +26,14 @@
 
 \usepackage[
   backend=biber,
-  style=authoryear,
+  style=alphabetic,
 ]{biblatex}
 \addbibresource{testbib.bib}
 
 \begin{document}
 
 %%\frontmatter
-\title{Test the {\tt biblatex} package}
+\title{Test the {\ttfamily biblatex} package}
 \author{James R. Fowler}
 \date{copy of \today}
 \maketitle
@@ -41,41 +41,59 @@
 
 \section{Test my Knowledge}
 
-For my {\bf Books20} project I will be using the {\tt biblatex}\cite{Kime2019}
-package for the bibliography and citations.
-How does this {\tt biblatex} thing work anyway? This
-file contains tests and other material to explore that question.
+For my {\bfseries Books20} project I will be using the {\ttfamily
+  biblatex} \cite{Kime2019} package for the bibliography and citations.
+How does this {\ttfamily biblatex} thing work anyway? This file
+contains tests and other material to explore that question.  The
+descriptions of how to use the various feature should be incorporated
+into the {\bfseries Books20 Style Guide} when they are complete.
 
 
 \section{Things to Do}
 
 \begin{enumerate}
-  \item Test books published in 1805 with a translation in 1910
-    but referenced by original author and date,
-    c.f. Laplace 1805. \cite{Laplace1805}
+  \item Test books published in 1805 with a translation in 1910 but
+    referenced by original author and date, c.f. Laplace 1805
+    \cite{Laplace1805} if this is possible. I don't think it is!
 
   \item Add information to the style guide because I am sure to forget
-    how to work with {\tt jabref} and {\tt biblatex}.
+    how to work with {\ttfamily jabref} and {\ttfamily biblatex}.
 
+  \item What should be my required fields for each type of reference?
+
+  \item Add page references to the {\ttfamily biblatex} guide
+    \cite{Kime2019} where applicable.
+    
   \item When the database gets built, add a hook to convert database
-    entries to {\tt biblatex} format.
+    entries to {\ttfamily biblatex} format.
+
 \end{enumerate}
 
 \section{How To}
 
 \subsection{Citation Styles}
 
-I like the citation style {\tt alphabetic-verb} which will
-list citation as {\tt Fow56} when citing a work like \cite{Fowler1956}.
+I like the citation style {\ttfamily alphabetic} which is used in this
+document. The command \verb|\cite{Fowler1956}| will produce a
+citation as \cite{Fowler1956}. Note that square brackets are placed
+around the citation in this style so we do not need to use
+parenthesis. It is also possible to write a {\bfseries Books20}
+citation style (\cite{Kime2019}, section 4) but if this is
+commercially published the publisher may have their own style; that
+is, if they use \LaTeXe.  I have noted that many history books use a
+footnote style in the back of the volume to include references and
+notes. There are no history bibliography styles in the generic
+{\ttfamily biblatex} package.
 
 \subsection{Multi-volume books}
 
-For a multi-volume book, where multiple books are published,
-perhaps in different years, but they make a single complete work,
-use the {\tt @MvBook} type for the common information with a {\tt related}
-field entry to the individual volumes, with the individual volumes entered
-as {\tt @Book} types with the particular
-information and a {\tt crossref} field to the multi-volume entry.
+For a multi-volume book, where multiple books are published, perhaps
+in different years, but they make a single complete work, use the
+{\ttfamily @MvBook} type for the common information with a {\ttfamily
+  related} field entry to the individual volumes, with the individual
+volumes entered as {\ttfamily @Book} types with the particular
+information and a {\ttfamily crossref} field to the multi-volume
+entry.
 
 \begin{verbatim}
 @Book{Tebbel1972,
@@ -111,7 +129,6 @@ information and a {\tt crossref} field to the multi-volume entry.
   title         = {A History of Book Publishing in the United States},
   volumes       = {4},
   publisher     = {R. R. Bowker Co},
-  __markedentry = {[jrf:]},
   address       = {New York},
   groups        = {Books Noted},
   lccn          = {Z473 T42},
@@ -122,22 +139,26 @@ information and a {\tt crossref} field to the multi-volume entry.
 }
 \end{verbatim}
 
-In the default {\tt biblatex} citation style two different references
-to individual volumes of a multi-volume work will also add the
-multi-volume item to the bibliography. So if we reference only two
-volumes, say Tebbel, volume 1, {\it The Creation of an Industry
-  1630-1865}\cite{Tebbel1972} as well as Tebbel, volume 4. {\it The
-  Great Change 1940-1980}\cite{Tebbel1981}, then the bibliography will
-also show the the main entry in Tebbel as well. The number of volumes
-needed to show the main entry is set by the parameter ???.
+In the default {\ttfamily biblatex} citation style two different
+references to individual volumes of a multi-volume work will also add
+the multi-volume item to the bibliography. So if we reference only two
+volumes, say Tebbel, volume 1, {\itshape The Creation of an Industry
+  1630-1865} (\cite{Tebbel1972}) as well as Tebbel, volume
+4. {\itshape The Great Change 1940-1980} (\cite{Tebbel1981}), then the
+bibliography will also show the the main entry in Tebbel as well. The
+number of volumes needed to show the main entry is set by the package
+option {\ttfamily mincrossrefs}; the default value is two
+(\cite{Kime2019}, page 26).  One can also reference multiple works
+with one citation command such as \verb|\cite{Tebbel1972, Tebbel1981}|
+to produce \cite{Tebbel1972, Tebbel1981}.
 
 \subsection{Book Series}
 
-For books in a series simply use the {\tt series} field to give the
-name the series and the {\tt number} field if the series is
-numbered. For example, we can reference {\it Book 9} \cite{book09} and
-{\it Book 10} \cite{book10} from the series {\it An Amazing Series of
-  Books}.
+For books in a series simply use the {\ttfamily series} field to give
+the name the series and the {\ttfamily number} field if the series is
+numbered. For example, we can reference {\itshape Book 9}
+(\cite{book09}) and {\itshape Book 10} (\cite{book10}) from the series
+{\itshape An Amazing Series of Books}.
 
 \begin{verbatim}
 @Book{series09,
@@ -157,9 +178,44 @@ numbered. For example, we can reference {\it Book 9} \cite{book09} and
 }
 \end{verbatim}
 
-\vfil\eject
+
+\subsection{Books with chapter by different authors}
+\begin{verbatim}
+ @mvcollection
+ @collection
+ @incollection
+ @suppcollection
+\end{verbatim}
+
+\subsection{Conference Proceedings}
+\begin{verbatim}
+ @mvproceedings
+ @proceedings
+ @inproceedings
+\end{verbatim}
+
+\subsection{Online resources}
+\begin{verbatim}
+ @online
+\end{verbatim}
+
+\subsection{Journal articles}
+\begin{verbatim}
+ @article
+\end{verbatim}
+
+\subsection{Software}
+\begin{verbatim}
+ @software
+\end{verbatim}
+
+\subsection{Anything else}
+\begin{verbatim}
+ @misc
+\end{verbatim}
 
 %%\backmatter
 \printbibliography
 
+\vfil\eject
 \end{document}
