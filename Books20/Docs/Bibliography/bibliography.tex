@@ -59,7 +59,8 @@ into the {\bfseries Books20 Style Guide} when they are complete.
   \item Add information to the style guide because I am sure to forget
     how to work with {\ttfamily jabref} and {\ttfamily biblatex}.
 
-  \item What should be my required fields for each type of reference?
+  \item What should be my recommended fields for each type of reference?
+    The required fields are defined by the {\ttfamily biblatex} package.
 
   \item Add page references to the {\ttfamily biblatex} guide
     \cite{Kime2019} where applicable.
@@ -74,16 +75,19 @@ into the {\bfseries Books20 Style Guide} when they are complete.
 \subsection{Citation Styles}
 
 I like the citation style {\ttfamily alphabetic} which is used in this
-document. The command \verb|\cite{Fowler1956}| will produce a
-citation as \cite{Fowler1956}. Note that square brackets are placed
-around the citation in this style so we do not need to use
-parenthesis. It is also possible to write a {\bfseries Books20}
-citation style (\cite{Kime2019}, section 4) but if this is
-commercially published the publisher may have their own style; that
-is, if they use \LaTeXe.  I have noted that many history books use a
-footnote style in the back of the volume to include references and
-notes. There are no history bibliography styles in the generic
-{\ttfamily biblatex} package.
+document. The command \verb|\cite{Fowler1956}| will produce a citation
+as \cite{Fowler1956}. Note that square brackets are placed around the
+citation in this style so we do not need to use parenthesis. It is
+also possible to write our own {\bfseries Books20} citation style
+(\cite{Kime2019}, section 4) but if this work is commercially
+published the publisher may have their own style; that is, if they use
+\LaTeXe.  I have noted that many history books use a footnote style in
+the back of the volume to include both references and notes. There are
+no default history bibliography styles in the generic {\ttfamily
+  biblatex} package. Citation and bibliography styles are defined in
+the {\ttfamily biblatex} manual (\cite{Kime2019}, p. 72).  Entry types
+are described in the {\ttfamily biblatex} manual (\cite{Kime2019},
+p. 8).
 
 \subsection{Multi-volume books}
 
@@ -179,39 +183,145 @@ numbered. For example, we can reference {\itshape Book 9}
 \end{verbatim}
 
 
-\subsection{Books with chapter by different authors}
+\subsection{Books with chapters by different authors}
+
+Many works are written as monographs but they consist of chapters
+written different authors. Such works might be reference as the entire
+work or as single chapters by the individual authors. Citation for the
+overall works are referenced as {\ttfamily @Collection} or {\ttfamily
+  @MvCollection}, similar to the multi-volume books.  The individual
+chapter are referenced as {\ttfamily @InCollection}. As an example,
+here are the citations for the book {\bfseries Europa} and a chapter
+from that volume.  Note that the main volume is also part of the
+series {\bfseries Space Science series}. Note also that the {\ttfamily
+  @InCollection} item should appear in the bib file before the
+{\ttfamily @Collection} entry. As is the case with multi-volume books
+if you reference two or more chapters, the main work will be included
+in the bibliograpy as weil. Citing both chapters \cite{Alexander2009,
+  Canup2009} will show the main work {\bfseries Europa}. This behavior
+is again controlled by the value of the package option {\ttfamily
+  crossref}.
+
+
 \begin{verbatim}
- @mvcollection
- @collection
- @incollection
- @suppcollection
+@InCollection{Alexander2009,
+  author    = {Alexander, Claudia and Carlson, Robert},
+  title     = {The Exploration History of Europa},
+  booktitle = {Europa},
+  date      = {2009},
+  pages     = {3-26},
+  crossref  = {Pappalardo2009},
+  ...
+}
+
+@InCollection{Canup2009,
+  author    = {Canup, R. M. and Ward, R. M},
+  title     = {Origin of Europa and the Galilean Satellites},
+  booktitle = {Europa},
+  date      = {2009},
+  pages     = {59-84},
+  crossref  = {Pappalardo2009},
+  ...
+}
+
+@Collection{Pappalardo2009,
+  editor    = {Pappalardo, Robert T. and McKinnon, William B.},
+  title     = {Europa},
+  date      = {2009},
+  pagetotal = {727},
+  series    = {Space Science Series},
+  publisher = {University of Arizona Press},
+  ...
+}
 \end{verbatim}
 
 \subsection{Conference Proceedings}
-\begin{verbatim}
- @mvproceedings
- @proceedings
- @inproceedings
-\end{verbatim}
+
+Confernce proceedings are much like a multi-author books or
+collections.  There is the main proceedings volume or multi-volumes
+which are referenced as {\ttfamily @MvProceedings} or {\ttfamily
+  @Proceedings} and the individual articles which may be reference by
+{\ttfamily @InProceedings}.
 
 \subsection{Online resources}
+
+Online resources are meant for any resource that are intrinsically
+online only.  A required field in {\ttfamily @Online} types is one of
+either the {\ttfamily URL}, {\ttfamily DOI}, or {\ttfamily eprint}
+keyword. As an example, the manual for the {\ttfamily biblatex} system
+is an online resource \cite{Kime2019}. Note the {\ttfamily url} field
+as well as the access date in the {\ttfamily urldate}. This date
+string is normally given is ISO-8601 format as specified in the
+{\bfseries Books20 Style Guide}. Note that the description of ISO-8601
+is itself an online resource \cite{isotime}.
+
 \begin{verbatim}
- @online
+@Online{Kime2019,
+  author   = {Kime, Philip and Wemheuer, Moritz
+              and Lehman, Philipp},
+  title    = {The {\tt biblatex} Package},
+  date     = {2019-08-17},
+  url      = {http://mirrors.ibiblio.org/CTAN/macros/
+              latex/contrib/biblatex/doc/biblatex.pdf},
+  subtitle = {Programmable Bibliographies and Citations},
+  version  = {3.13},
+  urldate  = {2019-10-20},
+}
+
+@Online{isotime,
+  title    = {ISO 8601 Time},
+  url      = {https://en.wikipedia.org/wiki/ISO_8601},
+  urldate  = {2017-12-15},
+}
 \end{verbatim}
+
+The author/editor is normally a required field for online resources
+but in many cases it may not be possible to identify an
+author/editor. This doesn't matter if the bibliography style is
+{\ttfamily numeric} but the reference will show up with a strange
+format, if at all, in the style {\ttfamily alphabetic}.
 
 \subsection{Journal articles}
+
+Journal articles are referenced with the{\ttfamily @Article} entry
+type.  For example, Yan 2018 is \cite{Yan2018}, The only required
+fields are the {\ttfamily author}, {\ttfamily title}, {\ttfamily
+  date}, and {\ttfamily journaltitle}.  However, the {\ttfamily
+  volume}, {\ttfamily pages}, and perhaps {\ttfamily issue} should
+also be included or we will not be able to find the article in the
+library.
+
 \begin{verbatim}
- @article
+@Article{Yan2018,
+  author       = { Yan, Hong-Liang and Shi, Jian-Rong},
+  title        = {The nature of the lithium enrichment in
+                  the most Li-rich giant star}
+  journaltitle = {Nature Astronomy},
+  date         = {2018},
+  doi          = {https://doi-org.ezproxy.lib.utexas.edu/
+                  10.1038/s41550-018-0544-7}
+  volume       = {2},
+  issue        = {10},
+  pages        = {790-795},
+}
+
 \end{verbatim}
 
-\subsection{Software}
-\begin{verbatim}
- @software
-\end{verbatim}
+\subsection{Everything else}
+This is a catch-all category for anything not covered by the standard
+entry types.  The fields are {\ttfamily author}, {\ttfamily title},
+and {\ttfamily date} are normally required but the {\ttfamily
+  howpublished} field should be include as well to indicate how
+we might find the reference. For example, we reference the following
+as \cite{Smith1982}.
 
-\subsection{Anything else}
 \begin{verbatim}
- @misc
+@Misc{Smith1982,
+  author  = {Smith, William J.},
+  title   = {An Important Work},
+  date    = {1982},
+  howpublished = {privately published},
+}
 \end{verbatim}
 
 %%\backmatter
