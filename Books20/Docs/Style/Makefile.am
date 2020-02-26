@@ -31,8 +31,8 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-TEX_FILES = style_guide.tex style_latex.tex style_python.tex \
-	style_english.tex style_build.tex
+TEX_FILES = style_guide.tex style_latex.tex style_bibliography.tex \
+	style_python.tex style_english.tex style_build.tex
 
 BIB_FILES = localbib.bib
 
