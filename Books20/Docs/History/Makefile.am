@@ -33,7 +33,7 @@ SUB_DIRS =
 
 BUILT_TABLE_FILES = 
 TABLE_FILES = 
-TEX_FILES = history.tex history.bib notes.tex
+TEX_FILES = history.tex history.bib longair1995.tex
 
 BIB_FILES = 
 #
