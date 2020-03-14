@@ -36,7 +36,14 @@ More detailed information can be found at The Comprehensive
 
 \subsection{Font Conventions}
 
-italic, typewriter, bold
+Italics is used for book titles and is obtained with the command
+\verb|\textit{}| or with the command\verb|\bt{}|.
+
+Typewriter for computer commands and files and is obtained with the
+command \verb|\texttt{}|
+
+Bold is used for the project name and is obtained with the command
+\verb|\textbf{}|
 
 \section{Document Design with \texttt{books20.sty}}
 
@@ -120,6 +127,7 @@ do not need to explicitly add the to your \LaTeXe\ documents.
   \Cen{30}. Other centuries that would use the superscript
   \textsuperscript{th} are supported but not ones that want to use the
   superscripts \textsuperscript{st} or \textsuperscript{nd}.
+  Should this command be rewritten to use \verb|\textsuperscript{}|
 
 \item Other superscripts may be written with the command
   \verb|\Ord{}{}|.  For example, you may write \verb|\Ord{42}{nd}| to
