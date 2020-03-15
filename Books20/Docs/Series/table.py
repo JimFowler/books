@@ -99,7 +99,8 @@ def print_table_heading(numcol, tbl_heading, continue_label):
 
 '''.format(tbl_heading, '{', numcol, '}', '{c}', '{', continue_label, '}', tbl_heading)
     safe_heading = protect_str(raw_heading)
-    print('\n', safe_heading)
+    print(safe_heading)
+    #print('\n', safe_heading)
 
 def print_table_footer(tbl_footer, continue_footer):
     '''Print the footer for the first page of the table and
