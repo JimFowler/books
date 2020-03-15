@@ -31,11 +31,12 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-BUILT_TABLE_FILES = springerASSLtable.tex springerAALtable.tex cambCAPStable.tex
+BUILT_TABLE_FILES = springerASSLtable.tex springerAALtable.tex \
+                    cambCAPStable.tex intersciencetable.tex
 TABLE_FILES = 
 SERIES_TEX_FILES = series.tex intro.tex other.tex \
 	harvard.tex uchicago.tex uarizona.tex springer.tex \
-	cambridge.tex
+	cambridge.tex interscience.tex
 
 BIB_FILES = 
 #
@@ -72,6 +73,9 @@ springerAALtable.tex: springer_aal_table.py
 
 cambCAPStable.tex: camb_caps.py
 	python camb_caps.py > cambCAPStable.tex
+
+intersciencetable.tex: interscience_table.py
+	python interscience_table.py > intersciencetable.tex
 
 #
 # Install any software and/or documents
