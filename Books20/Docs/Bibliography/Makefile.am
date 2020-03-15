@@ -49,7 +49,7 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS} Notes.pdf
+build_docs: ${SUB_DIRS} bibliography.pdf
 
 
 bibliography.pdf: ${TEX_FILES} testbib.bib
