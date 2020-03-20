@@ -103,6 +103,7 @@
 ṯ, Small letter t with line below
 ţ, Small letter t with cedilla
 ť, Small letter t with caron
+
 Ü, Capital letter U with diaeresis
 ü, Small letter u with diaeresis
 ů, Small letter u with ring above
@@ -111,7 +112,6 @@
 ù, Small letter u with grave
 ú, Small letter u with accent
 û, Small letter u wit circumflex
-
 ÿ, Small letter y with diaeresis
 ý, Small letter y with acute
 Ź, Capital letter Z with acute
