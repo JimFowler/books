@@ -106,6 +106,8 @@
 Ü, Capital letter U with diaeresis
 ü, Small letter u with diaeresis
 ů, Small letter u with ring above
+Ù, Capital letter U with grave
+Ú, Capital letter u with accent
 ù, Small letter u with grave
 ú, Small letter u with accent
 û, Small letter u wit circumflex
