@@ -423,7 +423,7 @@ class AJBentry(entry.Entry):
 
         if len(nums) != 9:
             print('Bad AJB number {}\n'.format(line))
-            return:
+            return
             
         if not nums[0]: # volume
             nums[0] = 'AJB'
