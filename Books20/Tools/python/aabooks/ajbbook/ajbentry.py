@@ -421,6 +421,10 @@ class AJBentry(entry.Entry):
 
         nums = __reg3__.split(line.strip())
 
+        if len(nums) != 9:
+            print('Bad AJB number {}\n'.format(line))
+            return:
+            
         if not nums[0]: # volume
             nums[0] = 'AJB'
 
