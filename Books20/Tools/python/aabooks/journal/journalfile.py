@@ -148,8 +148,12 @@ class JournalFile():
             self._entry_list.pop(entry_number - 1)
             self._dirty = True
 
-        return len(self._entry_list)
+        return self.max_entries()
 
+    def max_entries(self):
+        '''Return the number of entries in the entry_list.'''
+        return len(self._entry_list)
+    
     def make_short_title_list(self):
         '''Create a string of short titles from all entries in the list.
         A short title is "count AJBnum Title" and is used to look quickly
