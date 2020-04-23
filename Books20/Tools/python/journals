@@ -51,7 +51,7 @@ def getargs():
 
     parser.add_argument('-c', '--config', type=str,
                         help='use alternate configuration file name,',
-                        default='./journals.conf')
+                        default=os.environ.get('HOME') + '/.config/journals.conf')
 
     args = parser.parse_args()
 
