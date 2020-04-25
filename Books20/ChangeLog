@@ -1,3 +1,11 @@
+2020-04-25  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/: create scripts directory under python.
+	Moved the high level scripts like ajbbooks, journals, ppxml, etc.
+	into scripts.  I was getting too many scripts at the top level.
+	Update various Makefile.am as well as ./configure.ac. Updated
+	documentation to find new directory.
+
 2019-10-24  Jim Fowler  <jrf@biblion>
 
 	* Docs/MasterBib.bib: Have spent the last three days cleaning

@@ -45,6 +45,7 @@ AC_OUTPUT(Makefile
       Tools/python/aabooks/ajbbook/Makefile
       Tools/python/aabooks/journal/Makefile
       Tools/python/doc/Makefile
+      Tools/python/scripts/Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile
       WebPages/Makefile

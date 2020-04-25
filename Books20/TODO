@@ -1,3 +1,16 @@
+25 April 2020
+
+  Add copyright notice to new AJB files
+  
+  Convert journalfile to subclass list. This make the object
+  name iterable
+
+  Create Tools/sqlite. Add Makfile.am, doc.  Add to configure.ac
+  
+  Create journal database. Convert xml file to sqlite database.
+  Test SQL statements on it.
+
+  Move Tools/python scripts to script directory
 30 Nov 2018
   Remove button short cuts in designer and add to menus.py
   
@@ -11,8 +24,6 @@
 
   Add more Springer Series to series.tex
   add cross links to other springer series if available
-
-  Continued cataloging AJB22
 
   Make notes about database
 

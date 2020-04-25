@@ -1,10 +1,10 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Tools/python/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/python/scripts/Makefile.am
 #  
 #   Part of the Books20 Project
 #
-#   Copyright 2018 James R. Fowler
+#   Copyright 2020 James R. Fowler
 #
 #   All rights reserved. No part of this publication may be
 #   reproduced, stored in a retrival system, or transmitted
@@ -16,8 +16,9 @@
 # End copyright
 
 #
-#   All Makefiles should have these targets at a minimum. The targets
-#   don't need to do anything but `make` should not generate an error
+#   The generic feature of a Makefile.am.  All Makefiles
+#   should have these targets at a minimum. The targets don't
+#   need to do anything but `make` should not generate an error
 #   because the target does not exist.
 #
 
@@ -29,7 +30,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = aabooks doc scripts
+SUB_DIRS = 
 
 #
 # Build any software and/or documents
@@ -59,8 +60,9 @@ build_docs: ${SUB_DIRS}
 install: install_software install_docs
 
 .PHONY: install_software
-install_software: install_python
-
+install_software: ${SUB_DIRS}
+	@echo "Installing software from ${CURDIR}"
+	@echo "Nothing to install from  ${CURDIR}"
 
 .PHONY: install_docs
 install_docs: ${SUB_DIRS}
@@ -77,26 +79,26 @@ clean: ${SUB_DIRS}
 	${RM} -f *~
 
 .PHONY: veryclean
-veryclean: ${SUB_DIRS} clean
+veryclean: ${SUB_DIRS}
 	@echo "Doing veryclean of ${CURDIR}"
 	@echo "Nothing to do for veryclean in ${CURDIR}"
 
 .PHONY: distclean
-distclean: ${SUB_DIRS} veryclean
+distclean: ${SUB_DIRS}
 	@echo "Doing distclean of ${CURDIR}"
-	${RM} -rf build Makefile Makefile.in
+	${RM} Makefile Makefile.in
 
 #
 # Targets you might want in general
 #
 .PHONY: install_python
 install_python:
-	python setup.py install --prefix=${PYTHON_INSTALL_DIR}
+	$(PYTHON) setup.py install --prefix=${PYTHON_INSTALL_DIR}
 
 
 .PHONY: clean_tex
 clean_tex:
-	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.dvi *.toc *.out *.run.xml
+	${RM} -f *.aux *.bbl *.bcf *.blg *.log *.lot *.dvi *.toc *.out *.run.xml
 
 .PHONY: clean_pdf
 clean_pdf:
@@ -108,7 +110,7 @@ clean_c:
 
 .PHONY: clean_python
 clean_python:
-	${RM} -f *.pyc __pycache__
+	${RM} -f *.pyc
 
 
 #
