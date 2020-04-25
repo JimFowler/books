@@ -1,0 +1,52 @@
+#! /usr/bin/env python
+# -*- mode: Python;-*-
+#
+#  Convert the journal file from xml
+#  to an sqlite3 database.
+#
+#
+
+import argparse
+
+from aabooks.journal import journalfile as jf
+
+from pprint import pprint
+
+
+def getargs():
+    '''Get the command line arguments.'''
+    parser = argparse.ArgumentParser(description='Convert a journals.xml to a sqlite3 database file')
+
+    parser.add_argument('-V', '--version',
+                        help='provide version info,',
+                        action='store_true')
+
+    parser.add_argument('--verbose',
+                        help='be noisy about our actions')
+    
+    parser.add_argument('-i', '--input', type=str,
+                        help='read the file INPUT for entries',
+                        default='/home/jrf/Documents/books/Books20/Data/journals.xml')
+
+    args = parser.parse_args()
+
+    return args
+
+def main():
+
+    args = getargs()
+    pprint(args)
+    
+    jfile = jf.JournalFile()
+    jfile.read_xml_file(args.input)
+
+    for e in jfile._entry_list:
+        print(e['Title'])
+        
+#
+# Main work
+#
+if __name__ == '__main__':
+
+    main()
+    
