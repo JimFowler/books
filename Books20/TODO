@@ -10,7 +10,6 @@
   Create journal database. Convert xml file to sqlite database.
   Test SQL statements on it.
 
-  Move Tools/python scripts to script directory
 30 Nov 2018
   Remove button short cuts in designer and add to menus.py
   
