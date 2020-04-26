@@ -1,9 +1,11 @@
 25 April 2020
 
   Add copyright notice to new AJB files
-  
-  Convert journalfile to subclass list. This make the object
-  name iterable
+
+  Create generic EntryList class in python/aabooks/lib.
+  Make EntryList to subclass list. This make the object
+  name iterable. EntryList the carries the generic metadata
+  for any list, file, filetype, ??
 
   Create Tools/sqlite. Add Makfile.am, doc.  Add to configure.ac
   
