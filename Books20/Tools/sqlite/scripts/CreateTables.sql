@@ -38,7 +38,7 @@ PRAGMA foreign_keys;
 -- Create the basic table for individual journal entries
 --
 -- Is it wise to keep the sub-titles and abbreviations
--- in the same table as titles?
+-- in the same table as titles? So far, yes.
 --
 -- 
 CREATE TABLE Journals
@@ -161,6 +161,7 @@ CREATE TABLE JournalDesignator
     KeyValue       TEXT NOT NULL
    )
 ;
+
 --
 -- Create the Publisher table.
 --
