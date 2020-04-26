@@ -57,6 +57,7 @@ CREATE TABLE Journals
     -- ParentId is a link to another JournalId. It will be zero or NULL
     -- if this is a main title or a valid JournalId if this is a
     -- sub-title or abbreviation.
+    --
     ParentId	    INTEGER NULL,
 
     --
@@ -152,7 +153,7 @@ CREATE TABLE JournalDesignator
     --
     -- The key word for the designator ISSN, DDCN, ADS, etc.
     --
-    KeyName	  TEXT NOT NULL,
+    KeyName	   TEXT NOT NULL,
 
     --
     -- The value for the key word.
@@ -168,7 +169,7 @@ CREATE TABLE Publishers
     --
     -- Unique Id.
     --
-    PublisherId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    PublisherId    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
     -- The name of the publisher.
@@ -188,7 +189,7 @@ CREATE TABLE Publishers
     --
     -- Ramblings about the publisher.
     --
-    Comments	     TEXT NULL
+    Comments	   TEXT NULL
    )
 ;
 
@@ -207,7 +208,7 @@ CREATE TABLE JournalPublisher
     --
     -- The title id for the Title being referenced.    
     --
-    JournalId        INTEGER UNSIGNED NOT NULL REFERENCES Journal(JournalId),
+    JournalId      INTEGER UNSIGNED NOT NULL REFERENCES Journal(JournalId),
 
     --
     -- The publisher id for the publisher being referenced.

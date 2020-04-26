@@ -1,7 +1,7 @@
 --
 -- DeleteTables.sql
 --
--- Created 24 November 2015
+-- Created 24 November 2015 for the Collections database
 --   James R. Fowler
 --
 -- Modified 25 April 2020 for Journal database
