@@ -246,12 +246,12 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     def _save_file(self):
         """Ignore dirty entries and just save the file."""
         if self._vardict['journal_file'].get_file_name() is None:
-            self.save_file_as()
+            self._save_file_as()
         else:
             self._vardict['journal_file'].write_xml_file()
 
         self.statusbar.showMessage('Saving file ' \
-                                   + self._vardict['journal_file'].get_base_name())
+                    + self._vardict['journal_file'].get_base_name())
         QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
 
@@ -465,7 +465,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     def _open_symbol_dialog(self):
         """Open the symbol entry form."""
         self._vardict['symbol_table'] = symbol.SymbolForm(\
-                                self._vardict['symbol_table_name'], 'FreeSans', 14)
+                self._vardict['symbol_table_name'], 'FreeSans', 14, parent=self)
         self._vardict['symbol_table'].sigClicked.connect(self.insert_char)
         self._vardict['symbol_table'].show()
 
@@ -505,7 +505,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _edit_header(self):
         """Open the edit header form."""
-        self._vardict['header_window'] = hw.HeaderWindow(self)
+        self._vardict['header_window'] = hw.HeaderWindow(self, parent=self)
         self._vardict['header_window'].set_bookfile(self._vardict['journal_file'])
         self._vardict['header_window'].setWindowTitle(\
                 QtWidgets.QApplication.translate("headerWindow",\
@@ -578,7 +578,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                                                 | QtWidgets.QMessageBox.Cancel)
 
             if ans == QtWidgets.QMessageBox.Save:
-                self.save_entry()
+                self._save_entry()
 
         return ans
 
@@ -586,14 +586,14 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         """Ask if we should save the dirty file."""
         ans = None
         if self._vardict['journal_file'].is_dirty():
-            ans = QtWidgets.QMessageBox.warning(self, 'Save file?',
-                                                'The File has changed. Do you want to save it?',
-                                                QtWidgets.QMessageBox.Save
-                                                | QtWidgets.QMessageBox.Discard
-                                                | QtWidgets.QMessageBox.Cancel)
+            ans = QtWidgets.QMessageBox.warning(self, 'Save file?',\
+                        'The File has changed. Do you want to save it?',\
+                        QtWidgets.QMessageBox.Save\
+                        | QtWidgets.QMessageBox.Discard\
+                        | QtWidgets.QMessageBox.Cancel)
 
             if ans == QtWidgets.QMessageBox.Save:
-                self.save_file()
+                self._save_file()
                 # set save file menu enable to False
 
         return ans

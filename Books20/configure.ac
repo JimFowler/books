@@ -25,9 +25,13 @@ AC_PROG_INSTALL()
 
 AC_OUTPUT(Makefile
       Docs/Makefile
+      Docs/Bibliography/Makefile
+      Docs/Collecting/Makefile
       Docs/DatabaseDesign/Makefile
       Docs/Handbook/Makefile
+      Docs/History/Makefile
       Docs/Notes/Makefile
+      Docs/Questions/Makefile
       Docs/Quotes/Makefile
       Docs/Series/Makefile
       Docs/Style/Makefile
@@ -41,6 +45,7 @@ AC_OUTPUT(Makefile
       Tools/python/aabooks/ajbbook/Makefile
       Tools/python/aabooks/journal/Makefile
       Tools/python/doc/Makefile
+      Tools/python/scripts/Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile
       WebPages/Makefile

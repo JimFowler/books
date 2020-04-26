@@ -56,6 +56,11 @@
       <xs:element name="Plates"      type="xs:integer" minOccurs="0" />
       <xs:element name="Tafeln"      type="xs:integer" minOccurs="0" />
       <xs:element name="Tabellen"    type="xs:integer" minOccurs="0" />
+      <xs:element name="Woodcut"     type="xs:integer" minOccurs="0" />
+      <xs:element name="OtherSec_2"  type="xs:integer" minOccurs="0" />
+      <xs:element name="OtherSec_3"  type="xs:integer" minOccurs="0" />
+      <xs:element name="OtherSec_4"  type="xs:integer" minOccurs="0" />
+      <xs:element name="OtherSec_5"  type="xs:integer" minOccurs="0" />
     </xs:all>
     <xs:attribute name="verified" type="xs:boolean" default="false"/>
   </xs:complexType>

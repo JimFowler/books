@@ -31,8 +31,8 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 SUB_DIRS = 
 
-TEX_FILES = style_guide.tex style_latex.tex style_python.tex \
-	style_english.tex style_build.tex
+TEX_FILES = style_guide.tex style_latex.tex style_bibliography.tex \
+	style_python.tex style_english.tex style_build.tex
 
 BIB_FILES = localbib.bib
 
@@ -55,10 +55,10 @@ build_software: ${SUB_DIRS}
 .PHONY: build_docs
 build_docs: ${SUB_DIRS} style_guide.pdf
 
-style_guide.pdf: ${TEX_FILES}
-	${LATEX} style_guide
+pdf guide style_guide.pdf: ${TEX_FILES}
+	${LATEX} -draftmode style_guide
 	${BIBER} style_guide
-	${LATEX} style_guide
+	${LATEX} -draftmode style_guide
 	${LATEX} style_guide
 
 #

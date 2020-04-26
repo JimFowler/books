@@ -68,7 +68,7 @@ ________
 The AJBentry class provides the specific methods for read and write
 entries from the Astronomische Jahresbericht.
 
-.. automodule:: AJBentry
+.. automodule:: ajbentry
     :members:
     :show-inheritance:
 
@@ -80,6 +80,10 @@ ____________
     :members:
     :show-inheritance:
 
+This module was obselete in version 2.0 when we switched to XML
+instead of CSV format.  It is retained for reading very old files
+but is not backwards compatible with the XML format.  The XML format
+contains additional information that the CSV format does not.
 
 AJB entries have much common information however there are entries
 that have additional information that is not common enough to have an
@@ -142,7 +146,7 @@ ___________
 The HeaderEntry object provides a graphical text entry window for the
 bookfile header information.
 
-.. automodule:: headerWindow
+.. automodule:: headerwindow
     :members:
     :show-inheritance:
 
@@ -164,7 +168,7 @@ _______________
 
 Displays the original file string if the entry came from an existing file.
 
-.. automodule:: origstrWindow
+.. automodule:: origstrwindow
     :members:
     :show-inheritance:
 
@@ -173,10 +177,10 @@ BookEntry
 _________
 
 The BookEntry  object is the main  user interface to the  entries in a
-file.   It  is  defined  in ``mainWindow.py``.   The  BookEntry  class
+file.   It  is  defined  in ``ajbwindow.py``.   The  BookEntry  class
 contains a bookfile, header entry, and symbol table objects.
 
-.. automodule:: mainWindow
+.. automodule:: ajbwindow
     :members:
     :show-inheritance:
 

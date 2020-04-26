@@ -20,13 +20,13 @@
 %%
 \section{General Comments}
 
-Documents for the \ProjectTitle\ project should be written in \LaTeXe\ and use
-the books20.sty package. Most documents will be articles but the
-manuscript should be in the books document class. The reasoning behind
-using \LaTeXe\ is that I expect academic publishers to prefer or at
-least have available a \LaTeXe\ class package.  It will be difficult if
-I need to convert these documents to Microsoft Word\texttrademark or
-some other formatting package.
+Documents for the \ProjectTitle\ project should be written in
+\LaTeXe. Most documents will be articles but the manuscript (and this
+style guide) should be in the book document class. The reasoning
+behind using \LaTeXe\ is that I expect academic publishers to prefer
+or at least have available a \LaTeXe\ class package.  It will be
+difficult if I need to convert these documents to Microsoft
+Word\texttrademark\ or some other formatting package.
 
 A good, general purpose on-line reference for \LaTeXe\ can be found at
 the Share \LaTeX\ web site,
@@ -34,34 +34,45 @@ the Share \LaTeX\ web site,
 More detailed information can be found at The Comprehensive
 \TeX\ Archive Network, \href{ctan.org}{ctan.org}
 
-The \texttt{books20} style package imports the following packages so they are
-not required in your \LaTeXe\ documents
+\subsection{Font Conventions}
+
+Italics is used for book titles and is obtained with the command
+\verb|\textit{}| or with the command\verb|\bt{}|.
+
+Typewriter for computer commands and files and is obtained with the
+command \verb|\texttt{}|
+
+Bold is used for the project name and is obtained with the command
+\verb|\textbf{}|
+
+\section{Document Design with \texttt{books20.sty}}
+
+The \texttt{books20.sty} style package was written to support
+\ProjectTitle\ documents and shall be used in all project
+\LaTeXe\ documents. To include it in your document add
+\verb|\usepackage{books20}| in the preamble of the file, there are no
+options to the style file at this time. Note that \texttt{books20.sty}
+is designed for \LaTeXe\ and may not work with \LaTeX\ 2.09.
+
+The package imports the following additional packages so you
+do not need to explicitly add the to your \LaTeXe\ documents.
 
 \begin{itemize}
 \item inputenc \cite{Jeffrey2018} (with the utf8 option)
 \item hyperref \cite{Rahtz2017}
 \item longtable \cite{Carlisle2014}
 \item import \cite{Arseneau2009}
-\item biblatex \cite{Lehman2018} (with biber backend and
-  \texttt{./Books20/Docs/MasterBib.bib} as the master bibliography file)
+\item biblatex \cite{Lehman2018} (with biber backend option and the
+  master bibliography file \texttt{./Books20/Docs/MasterBib.bib})
 \end{itemize}
 
 
-\subsection{Document Design}
-
 \begin{itemize}
-  
-\item The \LaTeXe\ package \texttt{books20} shall be used in all
-  \LaTeXe\ documents. To include it use \verb|\usepackage{books20}|, there
-  are no options to this style file at this time. Note that books20.sty
-  is designed for \LaTeXe\ and may not work with \LaTeX\ 2.09.
-  
-
-\item The package \texttt{import} allows you to place sections in a
+\item The \texttt{import} package allows you to place sections in a
   separate file and use the \verb|\import{}{}| command in the document
   to include the file within the document. The first argument is the
   directory path, the second argument is the file name. As an example,
-  use \verb|\import{./}{style_tex}|.  By using the \texttt{import}
+  use \verb|\import{./}{style_latex}|.  By using the \texttt{import}
   package it is possible to use the same file in different documents
   without having to clean up the file. The \verb|\subimport{}{}|
   command has the same calling syntax but the file locations are
@@ -81,44 +92,23 @@ not required in your \LaTeXe\ documents
   \verb| Das astronomische Weltbild gemäß jüngster Forshung|
   to produce
 
-  Das astronomische Weltbild gemäß jüngster Forshung
+  Das astronomische Weltbild gemäß jüngster Forshung.
 
   But you can still use the standard \LaTeX\ encoding
   
   \verb| Das astronomische Weltbild gem\"{a}{\ss} j\"{u}ngster Forshung|
-  to produce the same thing.
+  to produce the same thing, e.g.
 
-  Das astronomische Weltbild gem\"{a}{\ss} j\"{u}ngster Forshung
+  Das astronomische Weltbild gem\"{a}{\ss} j\"{u}ngster Forshung.
 
-  This will be useful when I create \LaTeXe\ files from the database
+  This will be useful when creating \LaTeXe\ files from the database
   which is in UTF-8 encoding.
 }
 
 \item In Emacs we can produce UTF-8 characters with C-x 8 mark letter.
-  For example, to produce ö use the key strokes C-x 8 \verb|"| o. Use C-x 8 C-h
-  to get a list of character encoding.
+  For example, to produce ö use the key strokes C-x 8 \verb|"| o. Use
+  C-x 8 C-h to get a list of character encoding.
   
-\item {Use the \texttt{biblatex} package rather than the
-    \texttt{bibtex} package. The \texttt{biblatex} package allows both
-    global and local bibliography files and is provided with the
-    \texttt{books20} package.  For example, we can cite this book by
-    Basbanes \cite{Basbanes2003} from the global file and we can cite
-    this web page with the documentation for the \texttt{biblatex}
-    package \cite{Lehman2018} from the local file. The file
-    \texttt{./Docs/MasterBib.bib} is the global bibliography file and
-    must be included in the document using the
-    \verb|\addglobalbib{../MasterBib.bib}| command. You may use
-    additional local biblography files as well with this package. Use
-    the command \verb|\addbibresource{loacalbib.bib}|. These commands
-    should be in the preface before the \verb|\begin{document}|
-      command. The choice of which references should be global and
-      which should be local will probably change with time.
-
-      Need to work out how to handle link resources and references in
-      footnotes, particular URLs in footnotes. Should all URLs be at
-      the back of the document in the bibliography?  This is possible
-      if we use local .bib files }
-
 \item May wish to consider the use of the \texttt{subfiles} or
   \texttt{standalone} packages if the number of files gets
   large. These packages allow you to precompile files and avoid long
@@ -128,16 +118,20 @@ not required in your \LaTeXe\ documents
 
 \end{itemize}
 
-\section{Defined Commanda in books20.sty}
+\subsection{Defined Commands}
 
 \begin{itemize}
 
 \item \verb|\Cen{19}| is used to produce century names,
-  e.g.\ \Cen{19}. Note that it works only for centuries that use the
-  \textsuperscript{th} format.  That is, it won't work for the
-  21\textsuperscript{st} Century, the 2\textsuperscript{nd} Century,
-  or the 3\textsuperscript{rd} Century, etc. I should probably fix
-  this issue.
+  e.g.\ \Cen{19}. Note that it works only for the \Cen{1} through the
+  \Cen{30}. Other centuries that would use the superscript
+  \textsuperscript{th} are supported but not ones that want to use the
+  superscripts \textsuperscript{st} or \textsuperscript{nd}.
+  Should this command be rewritten to use \verb|\textsuperscript{}|
+
+\item Other superscripts may be written with the command
+  \verb|\Ord{}{}|.  For example, you may write \verb|\Ord{42}{nd}| to
+  produce \Ord{42}{nd}.
 
 \item \verb|\bt{Book Title}| produces book titles in italic face,
 e.g.\ \bt{Book Title} is the title of a book.
@@ -146,7 +140,7 @@ e.g.\ \bt{Book Title} is the title of a book.
   e.g.\ the \ProjectTitle\ project is the name of this project.
 
 \item \verb|\BookTitle\ | produces the book title in italic face,
-  e.g.\ \BookTitle\ or whatever I (or my editor) chooses for a title.
+  e.g.\ \BookTitle\ or whatever I (or my editor) choose for a title.
 
 \end{itemize}
 
@@ -158,23 +152,18 @@ e.g.\ \bt{Book Title} is the title of a book.
   documents will be used both as paper documents and as on-line
   eDocuments and the full link should be available in either
   case. External references should be handled in the bibliography
-  package. Internal references need to be researched.  As an example,
+  package. Internal references, both URLs and links to pages in the
+  document, need to be researched.  As an example,
   there is a need for mutual references between this chapter and the
-  chapter on English Grammer and Style.
-
-\item Determine a good (useful) format style for citations and the
-  bibliography.  Then figure out how to do it in \texttt{biblatex}.
-  Consider \texttt{(ref page \#)} which could be implemented as
-  \verb|\cite{Carlisle2014} page 34)| which should produce something
-  like this (\cite{Carlisle2014} page34). The exact appearance will
-  depend on the bibstyle file used with \texttt{biblatex}
+  chapter on English Grammer and Style. Question, should we use
+  the bibliography for external URLs (web sites) or should the
+  be placed in a footnote?  The choice may depend on the specific
+  context of the document.
 
 \item Work out other font formats as required. For example, an included
   file or package should be in teletype format using \verb|\texttt{}|.
-  Although there will not be much call for such in the manuscript.
-
-\item Convert series.tex, handbuch.tex, the files in \texttt{./Docs}, as
-  well as the manuscript to use the \texttt{books20} package.
+  Although there will not be much call for such in the manuscript. Also
+  consider the use of the NFSS font selection system within \LaTeXe.
 
 \end{itemize}
 
@@ -226,32 +215,41 @@ Here is an example document so you can see what the \LaTeX\ commands are.
 
 \end{verbatim}
 
- The following would be imported from  the style\_latex.tex document.
+The following would be imported from  the style\_latex.tex document.
 
 \begin{verbatim}
 
 \section{General Comments}
 
-The first of many sections for the book \BookTitle.  You can cite 
-Basbanes \cite{Basbanes2003} book on libraries like this.
+The first of many sections for the book \BookTitle.  You
+can cite Basbanes' \cite{Basbanes2003} book on libraries
+like this.
 
 \section{Using UTF-8}
 
-You can use UTF-8 characters by using the \textttusepackage[utf-8]inputenc}
-package.  Then a sentence might be written as
+You can use UTF-8 characters by using the
+ \verb|usepackage[utf-8]{inputenc}| package.
 
-Das astronomische Weltbild gemäß jüngster Forshung
+Then a sentence might be written as
 
-But you can still use the standard \LaTeXe\ encodings
+\verb|Das astronomische Weltbild gemäß jüngster Forshung|
+to produce
 
-Der neuentdeckte Himmel; Das astronomische Weltbild gem\"{a}{\ss} j\'{u}ngster Forshung
+Das astronomische Weltbild gemäß jüngster Forshung.
+
+But you can still use the standard \LaTeX\ encodings
+
+\verb|Das astronomische Weltbild gem\"{a}{\ss j\'{u}ngster
+       Forshung| to produce the same thing, e.g.
+
+Das astronomische Weltbild gem\"{a}{\ss} j\'{u}ngster Forshung.
 
 \subsection{Long Tables}
 
 You can make a table in longtable format.
 
 \begin{longtable}[p]{l l l}
-  \caption{\bf Harvard Observatory Monographs} \\
+  \caption{\bfseries Harvard Observatory Monographs} \\
   \label{HMA:1} \\
 
   Title & Author(s) & Date \\

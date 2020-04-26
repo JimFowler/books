@@ -32,7 +32,7 @@ include ${BOOKS20_ROOT}/makefile.local
 SUB_DIRS = 
 
 TEX_FILES = 18Cent.tex book_notes.tex Notes.tex world_history_notes.tex \
-	biblio_notes.tex history_notes.tex socsci_notes.tex
+	biblio_notes.tex history_notes.tex socsci_notes.tex book_references.tex
 #
 # Build any software and/or documents
 #
@@ -53,7 +53,7 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} Notes.pdf
 
 
-Notes.pdf: Notes.tex
+Notes.pdf: Notes.tex ${TEX_FILES}
 	${LATEX} Notes
 	${BIBER} Notes
 	${LATEX} Notes

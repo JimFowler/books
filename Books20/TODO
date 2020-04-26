@@ -1,3 +1,17 @@
+25 April 2020
+
+  Add copyright notice to new AJB files
+
+  Create generic EntryList class in python/aabooks/lib.
+  Make EntryList to subclass list. This make the object
+  name iterable. EntryList the carries the generic metadata
+  for any list, file, filetype, ??
+
+  Create Tools/sqlite. Add Makfile.am, doc.  Add to configure.ac
+  
+  Create journal database. Convert xml file to sqlite database.
+  Test SQL statements on it.
+
 30 Nov 2018
   Remove button short cuts in designer and add to menus.py
   
@@ -11,8 +25,6 @@
 
   Add more Springer Series to series.tex
   add cross links to other springer series if available
-
-  Continued cataloging AJB22
 
   Make notes about database
 

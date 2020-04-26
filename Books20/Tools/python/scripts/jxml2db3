@@ -1,0 +1,127 @@
+#! /usr/bin/env python
+# -*- mode: Python;-*-
+#
+#  Convert the journal file from xml
+#  to an sqlite3 database.
+#
+#
+
+import os, sys
+import argparse
+
+import sqlite3
+from aabooks.journal import journalfile as jf
+
+from pprint import pprint
+
+
+def getargs():
+    '''Get the command line arguments.'''
+    parser = argparse.ArgumentParser(description='Convert a journals.xml to a sqlite3 database file')
+
+    parser.add_argument('--version',
+                        action='version',
+                        version='%(prog) s v1.0 dtd 25 April 2020')
+
+
+    parser.add_argument('--verbose',
+                        help='be noisy about our actions',
+                        default='false',
+                        action='store_true')
+    
+    parser.add_argument('--debug',
+                        help='print out debugging information',
+                        default='false',
+                        action='store_true')
+    
+    parser.add_argument('-i', '--input', type=str,
+                        help='read the xml file INPUT for entries',
+                        default='/home/jrf/Documents/books/Books20/Data/journals.xml')
+
+    parser.add_argument('-d', '--database', type=str,
+                        help='the database to write into',
+                        default='/home/jrf/Documents/books/Books20/Data/Journals.db3')
+    
+    args = parser.parse_args()
+
+    return args
+
+def insert_title(connection, title, parent, level):
+
+    cmd = 'INSERT INTO Journals (Title, ParentId, TitleLevel) VALUES ("{}", {}, {});'.format(title, parent, level)
+    connection.execute(cmd)
+    connection.commit()
+                
+def insert_info(connection, journalId, startT, endT, nextId, prevId, comments):
+
+    cmd = 'INSERT INTO INFO (JournalId, StartDate, EndDate, NextId, PrevId, Comment) VALUES ({}, {}, {}, {}, {}, "{}");'.format(journalId, startT, endT, nextId, prevId, comments)
+    print(cmd)
+
+    
+def main():
+
+    args = getargs()
+    pprint(args)
+    
+    jfile = jf.JournalFile()
+    jfile.read_xml_file(args.input)
+
+    dbconn = sqlite3.connect(args.database)
+    dbcursor = dbconn.cursor()
+    
+    count = 0
+    for entry in jfile._entry_list:
+        if count < 10:
+            '''
+            # Insert titles
+            insert_title(dbconn, entry['Title'], 0, 0)
+            '''
+            # Find out what TitleIndex this entry was given
+            cmd = 'SELECT * FROM Journals WHERE Journals.Title == "{}";'.format(entry['Title'])
+            JournalId = dbconn.execute(cmd).fetchone()[0]
+            pprint(JournalId)
+            '''
+            # Insert sub-titles and associate with the JournalId
+            subT = entry.get('subTitle')
+            if subT:
+                insert_title(dbconn, subT, JournalId, 1)
+                
+            # Insert sub-sub-title and associate with the JournalId
+            subT = entry.get('subsubTitle')
+            if subT:
+                insert_title(dbconn, subT, JournalId, 2)
+
+            # Insert abbreviations and associate with the JournalId
+            abbrevs = entry.get('Abbreviations')
+            if abbrevs:
+                for abrv in abbrevs:
+                    insert_title(dbconn, abrv, JournalId, -1)
+            '''
+
+            # Insert publishers into Publisher table, if new publisher
+            # get PublisherId
+
+            # And create entry in JournalPublisher table associated
+            # with the Place,  JournalId  and publisher Id
+            
+            # Insert Start, End, Prev, Next, and Comments into JournalInfo table
+            startT = entry.get('startDate')
+            endT = entry.get('endData')
+            nextId = entry.get('linknext')
+            prevId = entry.get('linkprevious')
+            comments = entry.get('Comments')
+            insert_info(dbconn, JournalId, startT, endT, nextId, prevId, comments)
+            
+            # Insert Designators into JournalDesignator table and associate with the JournalId
+
+        count += 1
+
+        
+        
+#
+# Main work
+#
+if __name__ == '__main__':
+
+    main()
+    

@@ -27,6 +27,7 @@ import argparse
 from PyQt5 import QtGui, QtWidgets
 
 import aabooks.ajbbook.ajbwindow as mw
+import aabooks.ajbbook.ajb_rc
 
 __version__ = '2.0'
 
@@ -73,7 +74,7 @@ def main():
 
     app = QtWidgets.QApplication(sys.argv)
     app.setApplicationName('AJB Book Entry')
-    #app.setWindowIcon(QtGui.QIcon(':/icon_ajb.svg'))
+    app.setWindowIcon(QtGui.QIcon(':/icon_ajb.svg'))
 
     form = mw.BookEntry()
     app.focusChanged.connect(form.set_focus_changed)

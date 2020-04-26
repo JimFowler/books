@@ -1,5 +1,71 @@
- status2018-12-13  Jim Fowler  <jrf@biblion>
+2020-04-25  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/scripts/: create scripts directory under python.
+	Moved the high level scripts like ajbbooks, journals, ppxml, etc.
+	into scripts.  I was getting too many scripts at the top level.
+	Update various Makefile.am as well as ./configure.ac. Updated
+	documentation to find new directory.
+
+2019-10-24  Jim Fowler  <jrf@biblion>
+
+	* Docs/MasterBib.bib: Have spent the last three days cleaning
+	up the bibliography file.  Found the users guider to biblatex
+	and learned many useful things there.  Cleaned up author's names,
+	moved subtitles, use date instead of year, and put all dates
+	in ISO8601 format as recommended.
+
+2019-10-06  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py
+	(JournalWindow.ask_save_entry): Corrected function call from
+	self.save_entry() to self._save_entry().
+
+	* Tools/python/aabooks/journal/designer/ui_JournalEntry.ui:
+	Changed Publishing tool tip to reflect Place:Name... rather than
+	Name:Place...
+
+2019-10-01  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/designer/ui_BookEntry.ui: Extended
+	item field.  Volume AJB 11 and earlier have sequential number of
+	entries so the item number may exceed 3 digits.  Also removed
+	shortcuts from the next/previous record buttons.
+
+	* Tools/python/aabooks/ajbbook/menus.py: Added Ctrl+F and Ctrl+B
+	as shortcuts to the next/prev entry menu items.
+
+2019-09-15  Jim Fowler  <jrf@biblion>
+
+	* Docs/Style/style_guide.tex: minor updates to this and
+	style_python.tex.
+
+2019-03-10  Jim Fowler  <jrf@biblion>
+
+	* Tools/xml/books_tex.xsl: Started working on an XML Style Sheet
+	to convert XML BookFile to LaTeX \bkentry formats.
+
+	* Tools/emacs/Books20.el: added .xsl to the XML style entries
+	in order to get the correct comment formatting.
+
+2018-12-29  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/ajbbooks: deleted resource file inclusion
+	and program icon from designer/ui_BookEntry.ui.  Added
+	icon inclusion in main program.
+
+2018-12-28  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/Resources/journals.qrc: Added
+	icon_journals.svg to journals program. Updated
+	designer/ui_JournalEntry.ui. Added RESOURCE_FILE to Makefile.am.
+
+	* Tools/python/aabooks/ajbbook/Resources/ajb.qrc: Changed name of
+	ajb.qrc, updated designer/ui_BookEntry.ui and Makefile.am.
+
+2018-12-13  Jim Fowler  <jrf@biblion>
+
+	on branch aabooks.
+	
 	* Tools/python/aabooks/lib/configuration.py: Began writing and
 	testing a skeleton configuration reader based on the write up I
 	did previously.
@@ -7,6 +73,18 @@
 	* Tools/python/doc/lib/configuration.rst: Begin write up about
 	configuration files and command line arguments. This was prior to
 	writing code so I basicly did a top-down construction sequence.
+2018-12-08  Jim Fowler  <jrf@biblion>
+
+	* aabooks: Merged changes from branch aabooks to master.  This
+	should pick up the changes to make the python code more compliant
+	with pylint and PEP-8.  Still need to install and test.
+
+	* Tools/python/aabooks/journal/journalwindow.py: Started to make
+	a dictionary for instance attributes but stopped before finishing.
+	This should be done in phase four when we refactor the structure
+	of the programs. For right now the python programs are mostly
+	compliant with PEP-8 and pylint.
+>>>>>>> master
 
 2018-12-05  Jim Fowler  <jrf@biblion>
 

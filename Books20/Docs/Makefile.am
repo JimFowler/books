@@ -30,7 +30,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = DatabaseDesign Handbook Notes Quotes Series Style
+SUB_DIRS = DatabaseDesign Handbook Notes Questions Quotes Series Style 
 
 #
 # Build any software and/or documents

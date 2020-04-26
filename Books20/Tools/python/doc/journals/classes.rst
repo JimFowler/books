@@ -102,7 +102,7 @@ ___________
 The HeaderEntry object provides a graphical text entry window for the
 journalFile header information.
 
-.. automodule:: headerWindow
+.. automodule:: headerwindow
     :members:
     :show-inheritance:
 
@@ -124,7 +124,7 @@ JournalWindow
 _____________
 
 The JournalWindow  object is the main  user interface to the  entries in a
-file.   It  is  defined  in ``journalwin.py``.   The  JournalEntry  class
+file.   It  is  defined  in ``journalwindow.py``.   The  JournalEntry  class
 contains a journalFile, header entry, and symbol table objects.
 
 .. automodule:: journalwindow

@@ -1,7 +1,7 @@
 <h3>Bibliographies</h3>
 
 <br><a href="https://zah.uni-heidelberg.de/institutes/ari/databases/aribib/">AAA and AJB<a>
-<br><a href="http://adswww.harvard.edu/">Astrophysics Data System</a>
+<br><a href="https://ui.adsabs.harvard.edu/">Astrophysics Data System</a>
 <br><a href="http://cdsweb.u-strasbg.fr/CDS.html">Simbad</a>
 <br><a href="http://xxx.lanl.gov/">arXiv</a>
 <br>More...

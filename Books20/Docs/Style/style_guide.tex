@@ -18,38 +18,43 @@
 %%
 %%  The style that I will use for for various aspects of the project
 %%
-\documentclass{book}
+\documentclass[twoside]{book}
 
 \usepackage{books20}
 \addglobalbib{./../../Docs/MasterBib.bib}
 \addbibresource{localbib.bib}
 
 \begin{document}
+
+\frontmatter
+
 \title{Style Guide for the \ProjectTitle\ Project}
 \author{James R. Fowler}
-\date{2017-12-15\\ updated 2018-07-29}
+\date{2017-12-15\\ updated 2020-03-14\\ copy of \today}
 
 \maketitle
 
 \tableofcontents
 
+\mainmatter
+
 \chapter{General Comments}
 
 \section{Purpose}
-This style guide is about maintaining consistency within the docments
+This style guide is about maintaining consistency within the documents
 of my project \ProjectTitle. Consistency is for readablilty and
 helps avoid conflicting statements between documents. 
 
 \section{Copyright}
 
-The files within this project are currently under full coyright.  This
+The files within this project are currently under full copyright.  This
 may change at a later date but for now I want to protect whatever
 intellectual property there is.  Therefore all files in the project
 should contain the copyright notice below with the appropriate comment
 character for whatever langangue parser is used for that file; the
-example below uses the comment chacter for \LaTeX2e.  The
+example below uses the comment chacter for \LaTeXe.  The
 \texttt{<filename>} should contain the path name relative to the top
-project directory. The \texttt{[file description]} should contain a
+project directory. The \texttt{<file description>} should contain a
 quick description of the file contents. The copyright \texttt{<Year>}
 should be the year in which the file was created.
 
@@ -75,15 +80,13 @@ should be the year in which the file was created.
 %%
 \end{verbatim}
 
-Note that I need to change all the current file documents to match
-this copyright notice.
-
 
 \chapter{English Grammer and Syntax}
 \import{./}{style_english}
 
 \chapter{\LaTeX2e\ Documents}
 \import{./}{style_latex}
+\import{./}{style_bibliography}
 
 \chapter{Python Programming}
 \import{./}{style_python}
@@ -94,7 +97,14 @@ this copyright notice.
 \chapter{Building Tools}
 \import{./}{style_build}
 
+%%
+%% \appendix
+%%   would go before \backmatter
+%%
 \printbibliography
+
+
+\backmatter
 
 \end{document}
 

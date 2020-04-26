@@ -27,10 +27,11 @@ that will be needed for the \ProjectTitle\ project.
 
 \section{Required Python Packages}
 
-We currently use Python version 3.6 or greater with PyQt version 5.10.
-The standard packages that are used include \texttt{os}, \texttt{sys},
-\texttt{argparse}, \texttt{re}, \texttt{fileinput},\texttt{traceback},
-and \texttt{configparser}.
+The project started with Python version 2.7 but quickly moved to
+Python 3.x. We currently (2020-03) use Python version 3.6 or greater
+with PyQt version 5.10.  The standard packages that are used include
+\texttt{os}, \texttt{sys}, \texttt{argparse}, \texttt{re},
+\texttt{fileinput},\texttt{traceback}, and \texttt{configparser}.
 
 \subsection{Additional Packages}
 
@@ -53,6 +54,10 @@ capability is no longer used however the ability to read/write
 text files with comments is still available. Where did it come from?
 
 \subsubsection{PyQt 5.x}
+
+The graphics in Python use the Qt 5.9 and PyQt 5.9 libraries. These
+libraries are available in the standard Anaconda (need reference)
+distributions
 
 \section{Installation Directory}
 
@@ -100,7 +105,7 @@ Documentation detailing the specific of a python program shall be
 written in Sphinx.
 
 
-\section{Python Style for \ProjectName}
+\section{Python Style}
 
 Use PEP-8  (\url{https://www.python.org/dev/peps/pep-0008/}) as a
 style standard for all Python programs. Use \texttt{pylint} to test

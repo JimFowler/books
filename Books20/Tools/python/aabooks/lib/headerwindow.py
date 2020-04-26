@@ -30,8 +30,8 @@ from aabooks.lib import ui_HeaderEntry
 
 class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     '''A window to edit the header text with.'''
-    def __init__(self, bf=None):
-        super(HeaderWindow, self).__init__()
+    def __init__(self, bf=None, parent=None):
+        super(HeaderWindow, self).__init__(parent)
 
         self.setupUi(self)
         self.set_bookfile(bf)

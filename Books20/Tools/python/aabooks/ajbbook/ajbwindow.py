@@ -442,7 +442,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     def open_symbol(self):
         """Open the symbol entry form."""
         self.symbol_window = symbol.SymbolForm(
-            self.symbol_table_name, 'FreeSans', 14)
+            self.symbol_table_name, 'FreeSans', 14, parent=self)
         self.symbol_window.show()
         self.symbol_window.sigClicked.connect(self.insert_char)
 
@@ -453,7 +453,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def edit_header(self):
         """Open the edit header form."""
-        self.header_window = hw.HeaderWindow()
+        self.header_window = hw.HeaderWindow(parent=self)
         self.header_window.set_bookfile(self.bookfile)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
                                                                       "Edit Headers - %s" % (self.bookfile.get_basename_with_extension()), None))
@@ -494,7 +494,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         try:
             enum = int(self.indexEntry.text())
         except ValueError:
-            QtWidgets.QMessageBos.warning(self, 'Index Changed',
+            QtWidgets.QMessageBox.warning(self, 'Index Changed',
                                           'Invalid index entry {0}'.format(self.indexEntry.text()),
                                           QtWidgets.QMessageBox.Ok)
             return
@@ -731,10 +731,10 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         for field in entry.keys():
             if self.known_entry_fields.count(field) == 0:
-                QMessageBox.warning(self, 'Unknown Entry Field',
-                                    'Unknown field "%s:  %s"\n in entry %s\n "' %
-                                    (field, entry[field], entry['Index']),
-                                    QMessageBox.Ok)
+                QtWidgets.QMessageBox.warning(self, 'Unknown Entry Field',
+                                              'Unknown field "%s:  %s"\n in entry %s\n "' %
+                                              (field, entry[field], entry['Index']),
+                                              QtWidgets.QMessageBox.Ok)
         self.repaint()
 
     def display_to_entry(self):
@@ -760,7 +760,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                 tb_str = tb_str + s
             tb_str = tb_str + '\n\n Invalid Index number'
             QtWidgets.QMessageBox.warning(self, 'Invalid Index Num',
-                                          tb_str, QMessageBox.Ok)
+                                          tb_str, QtWidgets.QMessageBox.Ok)
             return None
 
         # AJB number
@@ -781,7 +781,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                 tb_str = tb_str + s
             tb_str = tb_str + '\n\n Invalid AJB Entry number'
             QtWidgets.QMessageBox.warning(self, 'Invalid AJB Num',
-                                          tb_str, QMessageBox.Ok)
+                                          tb_str, QtWidgets.QMessageBox.Ok)
             return None
 
         entry['Num'] = num

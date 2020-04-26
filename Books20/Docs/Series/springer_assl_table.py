@@ -61,7 +61,7 @@ TBL_COPYRIGHT = r'''%%   Copyright 2018 James R. Fowler
 %%
 '''
 
-TBL_CAPTION = r'\bf Springer \bt{Astrophysics and Space Science Library}'
+TBL_CAPTION = r'\bfseries Springer \bt{Astrophysics and Space Science Library}'
 TBL_FORMAT = r'[p]{l l l l}'
 TBL_LABEL = r'assl-springer:1'
 TBL_HEADING = r'Vol & Title & Author/Editor(s) & Date'
@@ -107,9 +107,9 @@ ASSL_BOOK_LIST = [
      ['Anne B. Underhill'],
      'A', None),
 
-    (7, [], None, 
-     [],
-     None, None),
+    (7, ['Introduction to Celestial Mechanics'], '1967', 
+     ['Jean Kovalesky'],
+     'A', '90-277-0398-1'),
 
     (8, ['Measure of the Moon:', 'Proceedings of the Second',
          'International Conference on',
@@ -206,9 +206,11 @@ ASSL_BOOK_LIST = [
      ['André B. Muller'],
      'E', None),
 
-    (24, [], None, 
-     [],
-     None, None),
+    (24, ['The Radiating Atmosphere:', 'Proceedings of a Symposium Organized by',
+          'the Summer Advanced Study Institute,',
+          'Held at Queens University', 'Kingston, Ontario, Aug 3-14, 1970'], '1971', 
+     ['B. M. McCormac'],
+     'E', None),
 
     (25, ['Mesospheric Models and Related', 'Experiments:',
           'Proceedings of the Fourth', 'Esrin-Eslab Symposium Held in',
@@ -220,9 +222,12 @@ ASSL_BOOK_LIST = [
      ['I. Atanasijević'],
      'A', None),
 
-    (27, [], None, 
-     [],
-     None, None),
+    (27, ['Physics of the Solar Coronae:', 'Proceedings of the NATO Advanced',
+          'Study Institute on the Physics', 'of the Solar Coronae',
+          'Held in Cavouri-Vouliagmeni,', 'Athens, Greece'
+          '6-17 September 1970'], '1971', 
+     ['C. J. Macris'],
+     'E', None),
 
     (28, ['The Environment of the Earth'], '1971', 
      ['Francis Delobeau'],
@@ -277,7 +282,8 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (37, ['Photon and Particle Interactions', 'with Surfaces in Space:',
-          'Proceedings of the 6th Eslab', 'Symposium, Held at Noordwijk,', 'The Netherlands, 26–29 September, 1972'], '1973', 
+          'Proceedings of the 6th Eslab', 'Symposium, Held at Noordwijk,',
+          'The Netherlands, 26–29 September, 1972'], '1973', 
      ['R. J. L. Grard'],
      'E', None),
 
@@ -768,9 +774,9 @@ ASSL_BOOK_LIST = [
      ['Wilfried Boland', 'Hugo van Woerden'],
      'E', None),
 
-    (121, [], None, 
-     [],
-     None, None),
+    (121, ['Structure and Evolution of', 'Active Galactic Nuclei'], '1986', 
+     ['G. Giuricin', 'F. Mardirossian', 'M. Mezzetti', 'M. Ramella'],
+     'E', '978-90-277-2155-6'),
 
     (122, ['Spectral Evolution of Galaxies:', 'Proceedings of the Fourth Workshop',
            'of the Advanced School of Astronomy', 'of the ‘Ettore Majorana” Centre for',
@@ -1527,7 +1533,7 @@ ASSL_BOOK_LIST = [
      'E', None),
 
     (276, ['Modern Theoretical and Observational', 'Cosmology:',
-           'Proceedings of the 2md Hellenic', 'Cosmology Meetings, held at the',
+           'Proceedings of the 2nd Hellenic', 'Cosmology Meetings, held at the',
            'National Observatory of Athens,', 'Penteli, 19-20 April 2001'], '2002', 
      ['Manolis Plionis', 'Spiros Cotsakis'],
      'E', None),
@@ -2168,9 +2174,10 @@ ASSL_BOOK_LIST = [
      ['Vladislav Shevchenko', 'Zhanna Rodionova', 'Gregory Michael'],
      'A', None),
 
-    (426, [], None, 
-     [],
-     None, None),
+    (426, ['Low Frequency Radio Astronomy',
+           'and the LOFAR Observatory'], '2019', 
+     ['George Heald', 'John McKean', 'Roberto Pizzo'],
+     'E', '978-3-319-23433-5'),
 
     (427, ['Magnetic Reconnection:', 'Concepts and Applications'], '2016', 
      ['Walter Gonzalez', 'Eugene Parker'],
@@ -2272,12 +2279,52 @@ ASSL_BOOK_LIST = [
 
     (449, ['First Ten Years of Hinode Solar', 'On-Orbit Observatory'], '2018', 
      ['Prof. Toshifumi Shimizu', 'Prof. Shinsuke Imada', 'Dr. Masahito Kubo'],
-     'E', None),
+     'E', '978-981-10-7741-8'),
 
     (450, ['Astrophysics of Exoplanetary', 'Atmospheres:',
            '2nd Advanced School on Exoplanetary', 'Science'], '2018', 
      ['Prof. Dr. Valerio Bozza', 'Dr. Luigi Mancini', 'Prof. Dr. Alessandro Sozzetti'],
-     'E', None),
+     'E', '978-3-319-89700-4'),
+
+    (451, ['Laboratory Astrophyscs'], '2018',
+     ['Caro Mu\~{n}oz', 'M. Guillermo', 'Rafael Escribano'],
+     'E', '978-3-319-90019-3'),
+
+    (452, [], None,
+     [],
+     None, None),
+
+    (453, ['Astrophysics with Radioactive Isotopes'], '2018',
+     ['Roland Diehl', 'Dieter Hartmann', 'Nikos Prantzos'],
+     'E', '978-3-319-91928-7'),
+
+    (454, ['Accretion Flows in Astrophysics'], '2018',
+     ['Nikolay Shakura'],
+     'E', '978-3-319-93008-4'),
+
+    (455, ['Physics of Magnetic Flux Tubes'], '2018',
+     ['Margarita Ryutova'],
+     'A', '978-3-319-96360-0'),
+
+    (456, ['Magnetohydodynamics in Binary Stars'], '2018',
+     ['C. G. Campell'],
+     'A', '978-3-319-97654-7'),
+
+    (457, ['The Physics and Astrophysics of Neutron Stars'], '2018',
+     ['L. Rezzolla', 'P. Pizzochero', 'D.~I. Jones', 'N. Rea', 'I. Vidana'],
+     'E', '978-3-319-97615-0'),
+
+    (458, ['New Millennium Solar Physics'], '2019',
+     ['Markus J. Aschwanden'],
+     'A', '978-3-030-13954-4'),
+
+    (459, ['Jan Hendrik Oort:', 'Master of the Galactic System'], '2019',
+     ['Pieter C. van der Kruit'],
+     'A', '978-3-030-17800-0'),
+
+    (460, ['Astronomical Polarization from', 'Infrared to Gamma Rays'], '2019',
+     ['R. Mignani', 'A. Shearer', 'A. Slowikowska', 'S. Zane'],
+     'E', '978-3-030-19714-8'),
 ]
 
 def assl_print_books(book_list):
