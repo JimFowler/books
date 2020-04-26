@@ -50,6 +50,7 @@
 	((string= ext "bib") (setq ext-replace "%%"))
 	((string= ext "am")  (setq ext-replace "#"))
 	((string= ext "ac")  (setq ext-replace "dnl"))
+	((string= ext "sql") (setq ext-replace "--"))
 	((string= ext "txt") (setq ext-replace ""))
 	((string= ext "xml") (setq ext-replace ""))
 	((string= ext "xsd") (setq ext-replace ""))
