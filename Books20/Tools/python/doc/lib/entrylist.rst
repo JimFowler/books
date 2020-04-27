@@ -43,10 +43,6 @@ metadate
 
 Function
 
-.. automodule:: entrylist.py
-   :members:
-   :show-inheritances:
-
   * def __init__(self):
 
   * def is_dirty(self):
@@ -82,5 +78,10 @@ Function
   * def read_file(self, filename=None):
 
   * def write_file(self, filename=None):
+
+.. automodule:: entrylist
+   :members:
+   :show-inheritance:
+
 
 

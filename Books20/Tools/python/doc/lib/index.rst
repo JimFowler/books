@@ -13,7 +13,7 @@ Welcome to aabooks_lib's documentation!
    introduction
    installation
    configuration
-   
+   entrylist
 
 Indices and tables
 ==================
