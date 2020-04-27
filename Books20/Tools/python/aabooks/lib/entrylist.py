@@ -17,8 +17,44 @@
 ##
 ## End copyright
 
+"""The file entrylist.py contains the generic class EntryList which is
+a sub-class of <list>. This class is a container for a list of entries
+as well as the metadata associated with the entries.  The entries are
+typically defined by event.py but may be defined as something else. An
+EntryList typically consists of a header and a list of entries.
 
-"""Defines the generic class that handles disk files and entry lists"""
+For the user of this class, the entries are counted from 1 to
+max_entries(), however, the normal list style is to count from 0 to
+max_entries() - 1. This will certainly change in the future to be
+more pythonic.  Will need to update the documentation and unit tests
+when I do.
+
+The generic metadate that are associated with entries are
+
+  * dirty_flag - has the list been modified since the last write to disk
+
+  * header - any header information associated with the file
+
+  * filename - the full file name
+
+  * dirname - this directory the file is located in 
+
+  * basename - the base name of the file
+
+  * extension - the file extension or type (e.g .xml, .txt)
+
+Users are free to add their own metadata to their sub-class.
+
+Note also that users must provide the functions to read/write entry
+files from/to disk.  The generic read_file()/write_file() functions
+are available but they are simply stubs that try to call
+read_file_<extension>() where extension is the file extension.  For
+example, the file file is entries.xml, then read_file() will try to
+run read_file_xml(). The same is true for the write_file() function.
+Users are not required to use the read_file()/write_file() functions
+and may provide their own reader and writer.
+
+"""
 
 import os
 
@@ -199,7 +235,7 @@ class EntryList(list):
         return self[self.current_entry_index]
 
     def delete_entry(self, entrynum):
-        """Delete the (entryNum - 1) record in the list, if such exists.
+        """Delete the entryNum record in the list, if such exists.
         Return the length of the remaining list.
 
         """
