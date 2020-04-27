@@ -308,9 +308,25 @@ if __name__ == "__main__":
 
 
     class EntryListTestCase(unittest.TestCase):
-        """Set up the unittests"""
+        """Set up the unit tests"""
         def setUp(self):
-            """Initialize any local stuff."""
+            """Start with a fresh EntryList and Entry's for
+            each test."""
+
+            self.ev_list = EntryList()
+            self.entry1 = MyEntry('The quick brown fox')
+            self.entry2 = MyEntry('jumped over the')
+            self.entry3 = MyEntry('lazy dogs back')
+            self.entry4 = MyEntry() # invalid entry
+
+        def tearDown(self):
+            """Delete the class variables at the end of each test."""
+            
+            del self.ev_list
+            del self.entry1
+            del self.entry2
+            del self.entry3
+            del self.entry4
 
         def test_initialize(self):
             """Test that the EntryList is initialized correctly.
@@ -325,38 +341,34 @@ if __name__ == "__main__":
 
             """
 
-            ev_list = EntryList()
-            self.assertIsNone(ev_list.get_header())
-            self.assertEqual(ev_list.get_filename(), './document1.txt')
-            self.assertEqual(ev_list.get_dirname(), './')
-            self.assertEqual(ev_list.get_basename(), 'document1')
-            self.assertEqual(ev_list.get_extension(), '.txt')
-            self.assertEqual(ev_list.get_basename_with_extension(),
+            self.assertIsNone(self.ev_list.get_header())
+            self.assertEqual(self.ev_list.get_filename(), './document1.txt')
+            self.assertEqual(self.ev_list.get_dirname(), './')
+            self.assertEqual(self.ev_list.get_basename(), 'document1')
+            self.assertEqual(self.ev_list.get_extension(), '.txt')
+            self.assertEqual(self.ev_list.get_basename_with_extension(),
                              'document1.txt')
-            self.assertFalse(ev_list.is_dirty())
+            self.assertFalse(self.ev_list.is_dirty())
 
-            del ev_list
 
         def test_set_filename(self):
             """Test set_filename and all the get_*name functions
 
             """
 
-            ev_list = EntryList()
-            self.assertTrue(ev_list.set_filename('./files/test_file.xml'))
-            self.assertEqual(ev_list.get_filename(), './files/test_file.xml')
-            self.assertEqual(ev_list.get_dirname(), './files')
-            self.assertEqual(ev_list.get_basename(), 'test_file')
-            self.assertEqual(ev_list.get_extension(), '.xml')
-            self.assertEqual(ev_list.get_basename_with_extension(),
+            self.assertTrue(self.ev_list.set_filename('./files/test_file.xml'))
+            self.assertEqual(self.ev_list.get_filename(), './files/test_file.xml')
+            self.assertEqual(self.ev_list.get_dirname(), './files')
+            self.assertEqual(self.ev_list.get_basename(), 'test_file')
+            self.assertEqual(self.ev_list.get_extension(), '.xml')
+            self.assertEqual(self.ev_list.get_basename_with_extension(),
                              'test_file.xml')
-            self.assertTrue(ev_list.is_dirty())
+            self.assertTrue(self.ev_list.is_dirty())
 
             # should not be able to set a non-string as the filename
-            self.assertFalse(ev_list.set_filename(5))
-            self.assertEqual(ev_list.get_filename(), './files/test_file.xml')
+            self.assertFalse(self.ev_list.set_filename(5))
+            self.assertEqual(self.ev_list.get_filename(), './files/test_file.xml')
 
-            del ev_list
 
         def test_header(self):
             """Test header manipulation.
@@ -367,20 +379,18 @@ if __name__ == "__main__":
               invalid header
             """
 
-            ev_list = EntryList()
             header = """This is the new header.
 
 It contains three lines."""
-            self.assertTrue(ev_list.set_header(header))
-            self.assertEqual(ev_list.get_header(), header)
-            self.assertTrue(ev_list.is_dirty())
-            del ev_list
+            self.assertTrue(self.ev_list.set_header(header))
+            self.assertEqual(self.ev_list.get_header(), header)
+            self.assertTrue(self.ev_list.is_dirty())
+            del self.ev_list
 
             # should not be able to write a non-string to the header
-            ev_list = EntryList()
-            self.assertFalse(ev_list.set_header(5))
-            self.assertFalse(ev_list.is_dirty())
-            del ev_list
+            self.ev_list = EntryList()
+            self.assertFalse(self.ev_list.set_header(5))
+            self.assertFalse(self.ev_list.is_dirty())
 
 
         def test_entry(self):
@@ -394,76 +404,65 @@ It contains three lines."""
             #  insert an entry
             #  invalid entry
 
-            ev_list = EntryList()
-            entry1 = MyEntry('The quick brown fox')
-            entry2 = MyEntry('jumped over the')
-            entry3 = MyEntry('lazy dogs back')
-            entry4 = MyEntry() # invalid entry
-
-            # verify that ev_list is clean initially
-            self.assertFalse(ev_list.is_dirty())
+            # verify that self.ev_list is clean initially
+            self.assertFalse(self.ev_list.is_dirty())
 
             # test set_new_entry with valid entry and check dirty flag set 1
-            self.assertTrue(ev_list.set_new_entry(entry1))
-            self.assertEqual(ev_list.get_entry(1), entry1)
-            self.assertTrue(ev_list.is_dirty())
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+            self.assertEqual(self.ev_list.get_entry(1), self.entry1)
+            self.assertTrue(self.ev_list.is_dirty())
 
             # test set_new_entry with second valid entry 12
-            self.assertTrue(ev_list.set_new_entry(entry2))
-            self.assertEqual(ev_list.get_entry(2), entry2)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
+            self.assertEqual(self.ev_list.get_entry(2), self.entry2)
 
             # test set_new_entry insertion of entry 312
-            self.assertTrue(ev_list.set_new_entry(entry3, 1))
-            self.assertEqual(ev_list.get_entry(1), entry3)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 1))
+            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
 
             # test set_new_entry insertion of entry with invalid count 3121
-            self.assertTrue(ev_list.set_new_entry(entry1, 4))
-            self.assertEqual(ev_list.get_entry(4), entry1)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 4))
+            self.assertEqual(self.ev_list.get_entry(4), self.entry1)
 
             # test set_new_entry with invalid entry
-            self.assertFalse(ev_list.set_new_entry(entry4))
+            self.assertFalse(self.ev_list.set_new_entry(self.entry4))
 
             
             # test get_entry with counts inside and outside of invalid values
-            self.assertIsNone(ev_list.get_entry(0))
-            self.assertIsNone(ev_list.get_entry(ev_list.max_entries()+1))
-            self.assertEqual(ev_list.get_entry(1), entry3)
-            self.assertEqual(ev_list.get_entry(ev_list.max_entries()), entry1)
+            self.assertIsNone(self.ev_list.get_entry(0))
+            self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()+1))
+            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry1)
 
             # Test set_entry
 
             # test set_entry with replacement of entry just inside valid counts 2121
-            self.assertTrue(ev_list.set_entry(entry2, 1))
-            self.assertEqual(ev_list.get_entry(1), entry2)
-            self.assertTrue(ev_list.set_entry(entry3, ev_list.max_entries())) # 2123
-            self.assertEqual(ev_list.get_entry(ev_list.max_entries()), entry3)
+            self.assertTrue(self.ev_list.set_entry(self.entry2, 1))
+            self.assertEqual(self.ev_list.get_entry(1), self.entry2)
+            self.assertTrue(self.ev_list.set_entry(self.entry3, self.ev_list.max_entries())) # 2123
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry3)
 
             # test set_entry with invalid entry
-            self.assertFalse(ev_list.set_entry(entry4, 2))
-            self.assertEqual(ev_list.get_entry(4), entry3)
+            self.assertFalse(self.ev_list.set_entry(self.entry4, 2))
+            self.assertEqual(self.ev_list.get_entry(4), self.entry3)
 
             # test set_entry with invalid count
-            self.assertFalse(ev_list.set_entry(entry2, 0))
-            self.assertFalse(ev_list.set_entry(entry2, ev_list.max_entries()+1))
+            self.assertFalse(self.ev_list.set_entry(self.entry2, 0))
+            self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()+1))
 
             # test delete_entry 123
-            self.assertEqual(ev_list.max_entries(), 4)
-            self.assertEqual(ev_list.delete_entry(1), 3)
+            self.assertEqual(self.ev_list.max_entries(), 4)
+            self.assertEqual(self.ev_list.delete_entry(1), 3)
 
             # test delete_entry with invalid count 123
-            self.assertEqual(ev_list.delete_entry(0), 3)
-            self.assertEqual(ev_list.delete_entry(ev_list.max_entries()+1), 3)
+            self.assertEqual(self.ev_list.delete_entry(0), 3)
+            self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
 
-            del ev_list
-            del entry1
-            del entry2
-            del entry3
 
         def test_read_file(self):
             """Test the read_file stub.
 
             """
-            ev_list = EntryList()
 
             filename = 'bogon.xml'
             # test read_file with bogus file name
@@ -472,35 +471,31 @@ It contains three lines."""
             except FileNotFoundError:
                 pass
 
-            self.assertEqual(ev_list.read_file(filename), 0)
+            self.assertEqual(self.ev_list.read_file(filename), 0)
 
             # test read_file with real (but empty) filename
             Path('bogon.xml').touch()
             with self.assertRaises(AttributeError):
-                ev_list.read_file('bogon.xml')
+                self.ev_list.read_file('bogon.xml')
 
             # test that _filename was updated
-            self.assertEqual(ev_list.get_filename(), 'bogon.xml')
+            self.assertEqual(self.ev_list.get_filename(), 'bogon.xml')
             try:
                 os.remove('bogon.xml')
             except FileNotFoundError:
                 pass
 
-            del ev_list
 
         def test_write_file(self):
             """test the write_file stub
 
             """
-            ev_list = EntryList()
             filename = 'bogon.xml'
 
             with self.assertRaises(AttributeError):
-                ev_list.write_file(filename)
+                self.ev_list.write_file(filename)
 
-            self.assertEqual(ev_list.get_filename(), filename)
-
-            del ev_list
+            self.assertEqual(self.ev_list.get_filename(), filename)
 
 
     unittest.main()

@@ -18,6 +18,10 @@
 Entry
 *****
 
+.. automodule:: entry
+   :members:
+   :show-inheritance:
+
  
 EntryList
 *********
