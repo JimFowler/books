@@ -1,3 +1,8 @@
+2020-04-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/entrylist.py: Created EntryList
+	class. Still need to update ajbbooks, journal, and jxml2db3.
+
 2020-04-25  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/: create scripts directory under python.
