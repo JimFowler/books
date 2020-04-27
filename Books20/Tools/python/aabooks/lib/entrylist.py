@@ -243,7 +243,8 @@ if __name__ == "__main__":
     import unittest
     from pathlib import Path
     import aabooks.lib.entry as en
-
+    from pprint import pprint
+    
     class MyEntry(en.Entry):
         """A simple entry class for testing.
         The entry consists of a single entry
@@ -366,47 +367,56 @@ It contains three lines."""
             # verify that ev_list is clean initially
             self.assertFalse(ev_list.is_dirty())
 
-            # test set_new_entry with valid entry and check dirty flag set
+            # test set_new_entry with valid entry and check dirty flag set 1
             self.assertTrue(ev_list.set_new_entry(entry1))
             self.assertEqual(ev_list.get_entry(1), entry1)
             self.assertTrue(ev_list.is_dirty())
 
-            # test set_new_entry with second valid entry
+            # test set_new_entry with second valid entry 12
             self.assertTrue(ev_list.set_new_entry(entry2))
             self.assertEqual(ev_list.get_entry(2), entry2)
 
-            # test set_new_entry insertion of entry
-            self.assertTrue(ev_list.set_new_entry(entry3, 2))
-            self.assertEqual(ev_list.get_entry(2), entry3)
+            # test set_new_entry insertion of entry 312
+            self.assertTrue(ev_list.set_new_entry(entry3, 1))
+            self.assertEqual(ev_list.get_entry(1), entry3)
+
+            # test set_new_entry insertion of entry with invalid count 3121
+            self.assertTrue(ev_list.set_new_entry(entry1, 4))
+            self.assertEqual(ev_list.get_entry(4), entry1)
 
             # test set_new_entry with invalid entry
             self.assertFalse(ev_list.set_new_entry(entry4))
 
-            # test get_entry with invalid count on both sides
+            
+            # test get_entry with counts inside and outside of invalid values
             self.assertIsNone(ev_list.get_entry(0))
             self.assertIsNone(ev_list.get_entry(ev_list.max_entries()+1))
+            self.assertEqual(ev_list.get_entry(1), entry3)
+            self.assertEqual(ev_list.get_entry(ev_list.max_entries()), entry1)
 
             # Test set_entry
 
-            # test set_entry with replacement of entry
-            self.assertTrue(ev_list.set_entry(entry2, 2))
-            self.assertEqual(ev_list.get_entry(2), entry2)
+            # test set_entry with replacement of entry just inside valid counts 2121
+            self.assertTrue(ev_list.set_entry(entry2, 1))
+            self.assertEqual(ev_list.get_entry(1), entry2)
+            self.assertTrue(ev_list.set_entry(entry3, ev_list.max_entries())) # 2123
+            self.assertEqual(ev_list.get_entry(ev_list.max_entries()), entry3)
 
             # test set_entry with invalid entry
             self.assertFalse(ev_list.set_entry(entry4, 2))
-            self.assertEqual(ev_list.get_entry(2), entry2)
+            self.assertEqual(ev_list.get_entry(4), entry3)
 
             # test set_entry with invalid count
             self.assertFalse(ev_list.set_entry(entry2, 0))
             self.assertFalse(ev_list.set_entry(entry2, ev_list.max_entries()+1))
 
-            # test delete_entry
-            self.assertEqual(ev_list.max_entries(), 3)
-            self.assertEqual(ev_list.delete_entry(1), 2)
+            # test delete_entry 123
+            self.assertEqual(ev_list.max_entries(), 4)
+            self.assertEqual(ev_list.delete_entry(1), 3)
 
-            # test delete_entry with invalid count
-            self.assertEqual(ev_list.delete_entry(0), 2)
-            self.assertEqual(ev_list.delete_entry(ev_list.max_entries()+1), 2)
+            # test delete_entry with invalid count 123
+            self.assertEqual(ev_list.delete_entry(0), 3)
+            self.assertEqual(ev_list.delete_entry(ev_list.max_entries()+1), 3)
 
             del ev_list
             del entry1
