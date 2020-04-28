@@ -44,7 +44,8 @@ who use such alternate styles.
 
 
 This regular expression for finding Roman numerals was taken from
-`stackoverflow.com <https://stackoverflow.com/questions/267399/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression>`_.
+stackoverflow.com 
+https://stackoverflow.com/questions/267400/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
 
 .. code-block:: python
 
