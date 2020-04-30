@@ -18,6 +18,9 @@
 
 '''.. py:module:: aaroman
 
+Introduction
+____________
+
 Roman numerals are a numbering system, developed in ancient Rome,
 which were used extensively until the late middle ages at which time
 they were gradually replaced by Arabic numbers. Roman numerals are
@@ -29,7 +32,7 @@ introduction with many additional references can be found in the
 `Wikepedia <https://en.wikipedia.org/wiki/Roman_numerals>`_ on Roman
 Numerals.
 
-In the fields of astronomical writing, publishing, and reading the use
+In the fields of writing, publishing, and reading the use
 of Roman numberals is still common. For example, they are used in
 preface or front matter page numbering and page counts. They are used
 in suffixes of names or titles. They are also used in numbering
@@ -41,11 +44,17 @@ IV instead of IIII and CD instead of CCCC. This may be expanded to
 alternate usage styles in the future if we find publishers or authors
 who use such alternate styles.
 
+Description
+___________
+
+A regular expression shown below is used to determine if a string is a valid
+Roman numeral.
+
 .. code-block:: python
 
   import re
 
-romanNumeralPattern = re.compile("""
+  romanNumeralPattern = re.compile("""
     ^                   # beginning of string
     M{0,4}              # thousands - 0 to 4 M's
     (CM|CD|D?C{0,3})    # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
@@ -57,34 +66,57 @@ romanNumeralPattern = re.compile("""
     $                   # end of string
     """ ,re.VERBOSE)
 
-This code as lifted from the roman.py package, v3.2,  maintained by
-Mark Pilgim and available on `PyPi <https://pypi.org/project/roman>`_
+In addition three exception classes are defined and returned by
+``toRoman()`` and ``fromRoman()`` in the event of an error.  These
+exceptions are ``OutOfRangeError`` returned from ``toRoman()`` if the
+argument is not between 1 and 4999 inclusive, ``NotIntegerError``
+returned by ``toRoman()`` if the argument is not an integer type, and
+``InvalidRomanNumeralError`` returned by ``fromRoman()`` if the string
+is not a valid Roman numeral.
+
+The function ``isRoman()`` returns True or False.
+
+Original Source
+_______________
+
+This code was lifted from the roman.py package, v3.2, maintained by
+Mark Pilgim and available on `PyPi <https://pypi.org/project/roman>`_.
 I have added the ``isRoman()`` function.
 
-The original header is below.
+The original header from his file is given below.
 
-This program is part of "Dive Into Python", a free Python tutorial for
-experienced programmers.  Visit http://diveintopython.org/ for the
-latest version.  [NOTE: the diveintopython.org domain no longer exists
-as of 2020-04-28 when I last checked.
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the Python 2.1.1 license, available at
-http://www.python.org/2.1.1/license.html
+  This program is part of "Dive Into Python", a free Python tutorial for
+  experienced programmers.  Visit http://diveintopython.org/ for the
+  latest version.  [NOTE: the diveintopython.org domain no longer exists
+  as of 2020-04-28 when I last checked.]
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the Python 2.1.1 license, available at
+  http://www.python.org/2.1.1/license.html
+
+
+Functions and Exceptions
+________________________
 
 '''
 
 import re
 
-# pylint: disable=missing-class-docstring, invalid-name, multiple-statements
+# pylint: disable=invalid-name
 
-#Define exceptions
-class RomanError(Exception): pass
-class OutOfRangeError(RomanError): pass
-class NotIntegerError(RomanError): pass
-class InvalidRomanNumeralError(RomanError): pass
+class RomanError(Exception):
+    '''The base class for the Roman numeral conversion module.'''
 
-# pylint enable=missing-class-docstring, multiple-statements
+class OutOfRangeError(RomanError):
+    '''The argument passed in is not between 1 and 4999 inclusive.'''
+
+class NotIntegerError(RomanError):
+    '''The argument passed in is not an integer.'''
+
+class InvalidRomanNumeralError(RomanError):
+    '''The string argument is not a valid Roman numeral.'''
+
 
 #Define digit mapping
 __romanNumeral_Map = tuple(zip(

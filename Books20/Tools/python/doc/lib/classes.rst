@@ -15,8 +15,11 @@
 .. 
 ..  End copyright
 
+Classes and Functions
+*********************
+
 Entry
-*****
+=====
 
 .. automodule:: entry
    :members:
@@ -24,11 +27,29 @@ Entry
 
  
 EntryList
-*********
+=========
 
 .. automodule:: entrylist
    :members:
    :show-inheritance:
+
+
+Roman
+=====
+
+Functions to deal with Roman numerals can be found in the file
+roman.py.  This file provides a test function to determine if
+a string is a valid Roman number as well as functions to convert
+to and from integers.
+
+.. code-block:: python
+
+  import aabooks.lib.roman
+
+.. automodule:: roman
+   :members:
+   :show-inheritance:
+
 
 
 
