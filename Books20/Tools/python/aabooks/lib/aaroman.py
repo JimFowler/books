@@ -16,8 +16,7 @@
 ##
 ## End copyright
 
-'''
-.. py:module:: aaroman
+'''.. py:module:: aaroman
 
 Roman numerals are a numbering system, developed in ancient Rome,
 which were used extensively until the late middle ages at which time
@@ -37,192 +36,180 @@ in suffixes of names or titles. They are also used in numbering
 planetary satellites, eg, Titan is also called Saturn VI.
 
 This module utilizes the 'modern' interpretation of Roman
-numerals. Numbers are restricted to between 1-3999 inclusive; we use
+numerals. Numbers are restricted to between 1-4999 inclusive; we use
 IV instead of IIII and CD instead of CCCC. This may be expanded to
 alternate usage styles in the future if we find publishers or authors
 who use such alternate styles.
-
-
-This regular expression for finding Roman numerals was taken from
-stackoverflow.com 
-https://stackoverflow.com/questions/267400/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
 
 .. code-block:: python
 
   import re
 
-  Roman_Match = """
-      ^                # beginning of string
-      (?=[MDCLXVI])    # must contain one or all of these characters,
-                       # no empty strings
-      M{0,3}           # thousands -  3999 is the largest Roman number in use
-      (C[MD]|D?C{0,3}) # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
-                       #            or 500-800 (D, followed by 0 to 3 C's)
-      (X[CL]|L?X{0,3}) # tens - 90 (XC), 40 (XL), 0-30 (0 to 3 X's),
-                       #        or 50-80 (L, followed by 0 to 3 X's)
-      (I[XV]|V?I{0,3}) # ones - 9 (IX), 4 (IV), 0-3 (0 to 3 I's),
-                       #        or 5-8 (V, followed by 0 to 3 I's)
-      $                # end of string
-  """
-  RomanNumeral_match = re.compile(Roman_Pattern, re.VERBOSE|re.IGNORECASE)
+romanNumeralPattern = re.compile("""
+    ^                   # beginning of string
+    M{0,4}              # thousands - 0 to 4 M's
+    (CM|CD|D?C{0,3})    # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
+                        #            or 500-800 (D, followed by 0 to 3 C's)
+    (XC|XL|L?X{0,3})    # tens - 90 (XC), 40 (XL), 0-30 (0 to 3 X's),
+                        #        or 50-80 (L, followed by 0 to 3 X's)
+    (IX|IV|V?I{0,3})    # ones - 9 (IX), 4 (IV), 0-3 (0 to 3 I's),
+                        #        or 5-8 (V, followed by 0 to 3 I's)
+    $                   # end of string
+    """ ,re.VERBOSE)
+
+This code as lifted from the roman.py package, v3.2,  maintained by
+Mark Pilgim and available on `PyPi <https://pypi.org/project/roman>`_
+I have added the ``isRoman()`` function.
+
+The original header is below.
+
+This program is part of "Dive Into Python", a free Python tutorial for
+experienced programmers.  Visit http://diveintopython.org/ for the
+latest version.  [NOTE: the diveintopython.org domain no longer exists
+as of 2020-04-28 when I last checked.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the Python 2.1.1 license, available at
+http://www.python.org/2.1.1/license.html
 
 '''
 
 import re
 
-Roman_Match = '''
-    ^                # beginning of string
-    (?=[MDCLXVI])    # must contain one or all of these characters,
-                     # no empty strings
-    M{0,3}           # thousands -  3999 is the lagest Roman number in use
-    (C[MD]|D?C{0,3}) # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
-                     #            or 500-800 (D, followed by 0 to 3 C's)
-    (X[CL]|L?X{0,3}) # tens - 90 (XC), 40 (XL), 0-30 (0 to 3 X's),
-                     #        or 50-80 (L, followed by 0 to 3 X's)
-    (I[XV]|V?I{0,3}) # ones - 9 (IX), 4 (IV), 0-3 (0 to 3 I's),
-                     #        or 5-8 (V, followed by 0 to 3 I's)
-    $                # end of string
-'''
+# pylint: disable=missing-class-docstring, invalid-name, multiple-statements
 
-# Doesn't work yet...
-Roman_Find = '''
-    (^               # beginning of string
-    (?=[MDCLXVI])    # must contain one or all of these characters,
-                     # no empty strings
-    M{0,3}           # thousands -  3999 is the lagest Roman number in use
-    (C[MD]|D?C{0,3}) # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
-                     #            or 500-800 (D, followed by 0 to 3 C's)
-    (X[CL]|L?X{0,3}) # tens - 90 (XC), 40 (XL), 0-30 (0 to 3 X's),
-                     #        or 50-80 (L, followed by 0 to 3 X's)
-    (I[XV]|V?I{0,3}) # ones - 9 (IX), 4 (IV), 0-3 (0 to 3 I's),
-                     #        or 5-8 (V, followed by 0 to 3 I's)
-    $)               # end of string
-'''
+#Define exceptions
+class RomanError(Exception): pass
+class OutOfRangeError(RomanError): pass
+class NotIntegerError(RomanError): pass
+class InvalidRomanNumeralError(RomanError): pass
 
-RomanNumeral_match = re.compile(Roman_Match, re.VERBOSE|re.IGNORECASE)
-RomanNumeral_find = re.compile(Roman_Find, re.VERBOSE|re.IGNORECASE)
+# pylint enable=missing-class-docstring, multiple-statements
 
-
-NUMERAL_MAP = tuple(zip(
-    (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1),
-    ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
+#Define digit mapping
+__romanNumeral_Map = tuple(zip(
+    ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'),
+    (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
 ))
 
 
-def is_roman_numeral(test_str):
-    '''Return True if 'test_str' matches the Roman Numeral regular
-    expression given above.'''
-    if RomanNumeral_match.match(test_str):
-        return True
-
-    return False
-
-def find_roman_numerals(test_str):
-    '''Find a list of all the Roman Numerals in the test_str. If there are
-    none, then an empty list is returned.
-
-    '''
-    print('''find_roman_numerals: input string '{}' '''.format(test_str))
-    return RomanNumeral_find.finditer(test_str)
+#Define pattern to detect valid Roman numerals
+romanNumeralPattern = re.compile("""
+    ^                   # beginning of string
+    M{0,4}              # thousands - 0 to 4 M's
+    (CM|CD|D?C{0,3})    # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
+                        #            or 500-800 (D, followed by 0 to 3 C's)
+    (XC|XL|L?X{0,3})    # tens - 90 (XC), 40 (XL), 0-30 (0 to 3 X's),
+                        #        or 50-80 (L, followed by 0 to 3 X's)
+    (IX|IV|V?I{0,3})    # ones - 9 (IX), 4 (IV), 0-3 (0 to 3 I's),
+                        #        or 5-8 (V, followed by 0 to 3 I's)
+    $                   # end of string
+    """, re.VERBOSE)
 
 
-''' The conversion between Arabic and Roman numerals was found at
-`activestate.com <http://code.activestate.com/recipes/81611-roman-numerals/>`_
-submitted by din385. Last read on 30 May 2016
-'''
-def int_to_roman(i):
-    '''Convert an integer to a Roman numeral string'''
-    result = []
-    for integer, numeral in NUMERAL_MAP:
-        count = i // integer
-        result.append(numeral * count)
-        i -= integer * count
-    return ''.join(result)
+def isRoman(s):
+    """test to verify is a string is a roman numeral."""
+
+    if not s or not romanNumeralPattern.search(s):
+        return False
+
+    return True
 
 
-def roman_to_int(roman):
-    '''Convert a string of Roman numerals to an integer.'''
+def toRoman(n):
+    """convert integer to Roman numeral"""
 
-    if not is_roman_numeral(roman):
-        return None
-    
-    i = result = 0
-    for integer, numeral in NUMERAL_MAP:
-        while roman[i:i + len(numeral)] == numeral:
-            result += integer
-            i += len(numeral)
+    if not isinstance(n, int):
+        raise NotIntegerError("decimals can not be converted")
+    if not -1 < n < 5000:
+        raise OutOfRangeError("number out of range (must be 0..4999)")
+
+    # special case
+    if n == 0:
+        return 'N'
+
+    result = ""
+    for numeral, integer in __romanNumeral_Map:
+        while n >= integer:
+            result += numeral
+            n -= integer
     return result
 
 
+def fromRoman(s):
+    """convert Roman numeral to integer"""
+    if not s:
+        raise InvalidRomanNumeralError('Input can not be blank')
 
+    # special case
+    if s == 'N':
+        return 0
+
+    if not romanNumeralPattern.search(s):
+        raise InvalidRomanNumeralError('Invalid Roman numeral: %s' % s)
+
+    result = 0
+    index = 0
+    for numeral, integer in __romanNumeral_Map:
+        while s[index:index+len(numeral)] == numeral:
+            result += integer
+            index += len(numeral)
+    return result
+
+
+#
+# Unit tests also taken from Mark Pilgrim
+#
 if __name__ == '__main__':
 
-    from pprint import pprint
-    import argparse
+    import unittest
 
-    parser = argparse
-    
-    def convert(input_numeral):
-        '''Converts an integer to a Roman numeral and back again.
-        We print all the values so the user can check for validity'''
+    TEST_MAP = ((1, 'I'), (3, 'III'), (4, 'IV'), (9, 'IX'), (10, 'X'),
+                (14, 'XIV'), (19, 'XIX'), (24, 'XXIV'), (40, 'XL'),
+                (49, 'XLIX'), (90, 'XC'), (99, 'XCIX'), (100, 'C'),
+                (400, 'CD'), (490, 'CDXC'), (499, 'CDXCIX'), (500, 'D'),
+                (900, 'CM'), (990, 'CMXC'), (998, 'CMXCVIII'),
+                (999, 'CMXCIX'), (1000, 'M'), (2013, 'MMXIII'))
 
-        roman_numeral = int_to_roman(input_numeral)
-        arabic_numeral = roman_to_int(roman_numeral)
+    NOT_ROMAN = ('AA', 'mxvi', 'MMaVI', '', 'SPQR', 'MMXiii', 'MXCD')
 
-        print('%4d, %9s, %4d' % (input_numeral, roman_numeral, arabic_numeral))
+    class TestRoman(unittest.TestCase):
+        '''Run the unit tests for Roman number functions.'''
 
-    def test_conversion():
-        for test_number in range(1,4000):
-            roman_numeral = int_to_roman(test_number)
-            arabic_number = roman_to_int(roman_numeral)
-            if arabic_number != test_number:
-                print('Conversion failed: {} does not match {} or {}'.format(test_number, arabic_number, roman_numeral))
+        def test_isRoman(self):
+            '''Test valid strings in isRoman().'''
+            for _, num_roman in TEST_MAP:
+                self.assertTrue(isRoman(num_roman),
+                                '"%s" should be a valid Roman' % (num_roman))
+
+        def test_isRoman_errors(self):
+            '''Test invalid strings in isRoman().'''
+            for s in NOT_ROMAN:
+                self.assertFalse(isRoman(s),
+                                 '"%s" should not be Roman' % (s))
+
+        def test_toRoman(self):
+            '''Test valid numbers in toRoman().'''
+            for num_arabic, num_roman in TEST_MAP:
+                self.assertEqual(toRoman(num_arabic), num_roman,
+                                 '%s should be %s' % (num_arabic, num_roman))
+
+        def test_toRoman_errors(self):
+            '''Test invalid numbers in toRoman().'''
+            self.assertRaises(OutOfRangeError, toRoman, 100000)
+            self.assertRaises(NotIntegerError, toRoman, '1')
+
+        def test_fromRoman(self):
+            '''Test valid Roman numerals fromRoman().'''
+            for num_arabic, num_roman in TEST_MAP:
+                self.assertEqual(fromRoman(num_roman), num_arabic,
+                                 '%s should be %s' % (num_roman, num_arabic))
+
+        def test_fromRoman_errors(self):
+            '''Test invalid strings in fromRoman().'''
+            for s in NOT_ROMAN:
+                self.assertRaises(
+                    InvalidRomanNumeralError, fromRoman, s)
 
 
-            
-    '''
-    print('   i,     Roman,  Arabic')
-    for d in range(1, 21):
-        convert(d)
-
-    for d in range(88, 132):
-        convert(d)
-
-    convert(932)
-
-    print('This is one of the longest Roman numbers...')
-    convert(8888)
-    print('...obviously numbers above 4000 or so do not work well in the Roman system.')
-    '''
-    
-    print('\nTrying to convert a floating point number like 10.4 should fail...')
-    try:
-        int_to_roman(10.4)
-    except TypeError as exc:
-        print('...and it does with TypeError:', str(exc))
-    else:
-        print('...but it does not!')
-
-
-    # Test non-Roman characters
-    print('''\nThe function roman_to_int() fails if it finds a non-Roman character,
-    as in {0} which could be read as 110 but perhaps 113 if we ignore
-    the 'AAA' string\n    roman_to_int({0}) returns: {1}'''.format('CXAAAIII', roman_to_int('CXAAAIII')))
-
-    print('''\nNote that roman_to_int() will not accept an 'illegal' roman
-    numeral such as MDDCXI which returns as '{}' although it might be 
-    interpreted in some system as 2111.'''.format(roman_to_int('MDDCXI')))
-
-    print(RomanNumeral_match.match(''))
-    print(RomanNumeral_match.match('MMCCXV'))
-    print(RomanNumeral_match.match('mcX'))
-
-    
-    print('\nTesting the find function')
-    r = find_roman_numerals('MCCXXIII')
-    pprint(r)
-    for r in  find_roman_numerals('MCCXXIII'):
-        pprint(r)
-
-    test_conversion()
-
+    unittest.main()
