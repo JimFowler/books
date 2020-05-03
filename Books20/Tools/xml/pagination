@@ -16,11 +16,47 @@ the information.  Starting with volume 42 I created the following
 pagination codes.  These are still stored as a string in the XML file
 until I create the parsers to read them.
 
+At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08 what do the
+brackets mean?
+
+There are at least a few cases where the pagination is listed as
+"<count>+<count>+A<count>+B<count> pp" where A, B, etc., indicate
+appendices that are separately numbered.
+
+Some page counts use Roman numerals so the characters I, V, X, L, C,
+D, and M should not be used for the code suffix or prefix. However, if
+we have an appendix C with Roman pagination, we have a conflict. Just
+such a situation occurs in 43.51(0).01. I used brackets around the
+page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p. Also
+brackets multiple collections of pages per appendix, as in the example
+above, Appendix C has 9 pages of introduction and 161 pages of
+material, this occurs also in 22.51(0).03.
+
+A most interesting pagination string can be found in AJB 06.35.1007
+Astronomical and Meteorological Observations made at the Royal Observatory,
+Greenwich  in the Year 1900.
+17+CXXXV+[139]+(130)+{123}+187+[{\it 101}]+({\it 90}
++xix_{72}+{/it 39}+8+lvii+({\sm cxvii})+13+7+27 S. 
+Which I have not idea what this means.
+
+Another interesting one is AJB 06.35.1015
+Annales de l'Observatoire de Paris; Observations 1899
+X+A.84+B.100+C.94+D.24+E.27+F.187+G.17
+Which probably refers to the introduction and seven appendices
+
+
+Code should provide
+element PaginationToXml(string)
+string XmlToPagination(element)
+  but who allocates the memory??
+  who frees the memory??
+
+
 Pagination codes
 
 <count><code>[+<count><code>[+...]]
 
-<count>p+<count>p shows pagination for the front matter and the main
+<count>pp+<count>p shows pagination for the front matter and the main
 matter.
 
 German,        English, code
@@ -46,24 +82,3 @@ zeichnungn,    drawings, d
 modellbogen,     models, b  cf 40.11.04
 nomogrammen,   nomogram  n
 
-At least one occurrence of 8p+529p+[27]p; c.f. 43.21(0).08 what do the
-brackets mean?
-
-There are at least a few cases where the pagination is listed as
-"<count>+<count>+A<count>+B<count> pp" where A, B, etc., indicate
-appendices that are separately numbered.
-
-Some page counts use Roman numerals so the characters I, V, X, L, C,
-D, and M should not be used for the code suffix or prefix. However, if
-we have an appendix C with Roman pagination, we have a conflict. Just
-such a situation occurs in 43.51(0).01. I used brackets around the
-page count as VIIIp+A78p+B16p+C[IXp+161p]+D66p+E46p+F38p. Also
-brackets multiple collections of pages per appendix, as in the example
-above, Appendix C has 9 pages of introduction and 161 pages of
-material, this occurs also in 22.51(0).03.
-
-Code should provide
-element PaginationToXml(string)
-string XmlToPagination(element)
-  but who allocates the memory??
-  who frees the memory??
