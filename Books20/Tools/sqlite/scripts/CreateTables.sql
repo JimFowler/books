@@ -54,23 +54,40 @@ CREATE TABLE Journals
     Title           TEXT NOT NULL,
 
     --
-    -- ParentId is a link to another JournalId. It will be zero or NULL
+    -- ParentId is a link to another JournalId. It will be zero 
     -- if this is a main title or a valid JournalId if this is a
     -- sub-title or abbreviation.
     --
-    ParentId	    INTEGER NULL,
+    ParentId	    INTEGER NOT NULL,
 
     --
-    -- TitleLevel is 0 or NULL for a main title, , >=1 if this is a
+    -- TitleLevel is 0 for a main title, , >=1 if this is a
     -- sub-title (first sub-title, second sub-title, etc.), or -1 if
     -- this is a abbreviation for the main title.
     --
-    TitleLevel      INTEGER NULL,
-    
+    TitleLevel      INTEGER NOT NULL,
+    )
+;
+
+
+CREATE TABLE Comments
+    (
+    --
+    -- Unique key.
+    --
+    CommentId     INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+
+    --
+    -- Title is the only required field. This is a link to the
+    -- entries in the Title table.
+    --
+    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId),
+
     --
     -- Rambling words about the journal
     --
-    Comments        TEXT NULL
+    Comments        TEXT NOT NULL
 
    )
 ;
@@ -86,7 +103,7 @@ CREATE TABLE Journals
 -- would have a lot of empty fields.
 --
 CREATE TABLE JournalInfo
-   (
+    (
     --
     -- Unique key.
     --
@@ -99,34 +116,30 @@ CREATE TABLE JournalInfo
     JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId),
 
     --
-    -- The start date for this journal title.
-    -- Dates should be YYYY[-MM[-DD]].
+    -- The date for this transaction. It will be the StartDate
+    -- if this is a 'Prev" transaction, or an EndDate if this is
+    -- a 'Next' transaction. Dates should be YYYY[-MM[-DD]].
     --
-    StartDate     TEXT NULL,
+    DateStamp     TEXT NOT NULL,
 
     --
-    -- The end date for this journal title.
-    -- Dates should be YYYY[-MM[-DD]].
-    --
-    EndDate       TEXT NULL,
-
-    --
-    -- NextId is the title of the journal this journal
+    -- JRefId is the title of the journal this journal
     -- was merged or renamed as.
     --
-    NextId        INTEGER NULL REFERENCES Journals(JournalId),
+    JRefId        INTEGER NULL REFERENCES Journals(JournalId),
 
     --
-    -- PrevId is the title of the journal this journal
-    -- was merged or renamed from.
+    -- RefType is the type of transaction this is.
+    -- It can be either a reference to the 'Next'
+    -- title or the 'Prev' title.
     --
-    PrevId        INTEGER NULL REFERENCES Journals(JournalId),
+    RefType       INTEGER NULL CHOICES ('Next', 'Prev')
 
     --
-    -- Rambling statement about this journal.
+    -- Rambling statement about this reference info.
     --
     Comments      TEXT NULL
-   )
+    )
 ;
 
 --
@@ -146,7 +159,7 @@ CREATE TABLE JournalDesignator
     JournalDesigId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- The title id that this entry is for.
+    -- The journal id that this entry is for.
     -- 
     JournalId      INTEGER NOT NULL REFERENCES Journals(JournalId),
 
@@ -207,14 +220,14 @@ CREATE TABLE JournalPublisher
     JournalPublId  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- The title id for the Title being referenced.    
+    -- The journal id for the Title being referenced.    
     --
     JournalId      INTEGER UNSIGNED NOT NULL REFERENCES Journal(JournalId),
 
     --
     -- The publisher id for the publisher being referenced.
     --
-    PublisherId    INTEGER UNSIGNED NOT NULL REFERENCES Publisher(PublisherId),
+    PublisherId    INTEGER UNSIGNED NULL REFERENCES Publisher(PublisherId),
 
     --
     -- Place of publication.
@@ -222,13 +235,13 @@ CREATE TABLE JournalPublisher
     Place	   TEXT NULL,
 
     --
-    -- The start date for this title/publisher combination
+    -- The start date for this title/publisher combination.
     -- Dates should be YYYY[-MM[-DD]].
     --
     StartDate      TEXT NULL,
 
     --
-    -- The end date for this title/publisher combination
+    -- The end date for this title/publisher combination.
     -- Dates should be YYYY[-MM[-DD]].
     --
     EndDate        TEXT NULL
@@ -246,17 +259,17 @@ CREATE TABLE ToDo
     ToDoId        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- Short Summary of task
+    -- Short Summary of task.
     --
     Summary       TEXT NOT NULL,
 
     --
-    -- Longer description of the task
+    -- Longer description of the task.
     --
     Task          TEXT NULL,
 
     --
-    -- Dates should be YYYY-MM-DD
+    -- Dates should be YYYY-MM-DD.
     --
     DateOfEntry   TEXT NOT NULL,
     DateCompleted TEXT NULL
@@ -264,5 +277,5 @@ CREATE TABLE ToDo
 ;
 
 --
--- end of CreateTables.sql
+-- end of CreateTables.sql.
 --

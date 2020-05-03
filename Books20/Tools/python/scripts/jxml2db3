@@ -1,11 +1,43 @@
 #! /usr/bin/env python
-# -*- mode: Python;-*-
-#
-#  Convert the journal file from xml
-#  to an sqlite3 database.
-#
-#
+## -*- mode: Python;-*-
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/scripts/jxml2db3
+##
+##   Part of the Books20 Project
+##
+##   Copyright 2020 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
 
+
+'''Convert a journal file from XML to an sqlite3 database.  We use
+the JournalEntry class to convert from XML to a python
+data object.  Then we add this entry to the database.  Each
+JournaEntry is of the form
+
+..code:: python
+
+  {'Abbreviations': ['Ark Mat Astr Fys'],
+   'Comments': ['first comment', 'second comment'],
+   'Designators': {'ADS': 'ArMAF', 'ISSN' : '12345'},
+   'Publishers': [{'Place': 'Stockholm', 'Publisher' : 'A Great Publisher'}],
+   'Title': 'Arkiv för Matematik, Astronomi och Fysik',
+   'endDate': '1945',
+   'linknext': [12],
+   'linkprevious': [10, 9],
+   'startDate': '1901',
+   'subTitle': '',
+   'subsubTitle': ''}
+
+'''
 import os, sys
 import argparse
 
@@ -48,16 +80,62 @@ def getargs():
 
 def insert_title(connection, title, parent, level):
 
-    cmd = 'INSERT INTO Journals (Title, ParentId, TitleLevel) VALUES ("{}", {}, {});'.format(title, parent, level)
-    connection.execute(cmd)
-    connection.commit()
-                
-def insert_info(connection, journalId, startT, endT, nextId, prevId, comments):
+    if title:
+        cmd = 'INSERT INTO Journals (Title, ParentId, TitleLevel) VALUES ("{}", {}, {});'.format(title, parent, level)
+        #connection.execute(cmd)
+        #connection.commit()
+        print('insert_title;', cmd)
 
-    cmd = 'INSERT INTO INFO (JournalId, StartDate, EndDate, NextId, PrevId, Comment) VALUES ({}, {}, {}, {}, {}, "{}");'.format(journalId, startT, endT, nextId, prevId, comments)
-    print(cmd)
+def insert_abbreviations(connection, jid, abbrevs):
+    '''abbrevs are a list of strings.'''
+    try:
+        for abrv in abbrevs:
+            insert_title(dbconn, abrv, JournalId, -1)
+    except:
+        pass
+    
+def insert_info(connection, journalId, startT, endT):
+
+    cmd = 'INSERT INTO INFO (JournalId, StartDate, EndDate) VALUES ({}, {}, {});'.format(journalId, startT, endT)
+    print('insert_info:', cmd)
+
+def insert_publishers(connection, jid, publishers):
+    '''Publishers is a list of dictionaries with a place, name,
+    start date, and end date.  The Publisher name should 
+    go into the publisher table. The place, start date, and
+    end date should go into a title-publisher table.'''
+    
+    print('publishers:')
+    pprint(publishers)        
+    
+def insert_links(connection, jid, links, type):
+    '''Links are a list of journal names.'''
+    
+    try:
+        for l in links:
+            print('insert_links:', l, type)
+    except:
+        pass
 
     
+def insert_designators(connection, jid, desig):
+    '''desig is a dictionary of key:value.'''
+    
+    try:
+        for key in desig.keys():
+            print('insert_designator: "{}" : "{}"'.format(key, desig[key]))
+    except:
+        pass
+
+def insert_comments(connection, jid, comments):
+    '''comments are a list of strings.'''
+    try:
+        for c in comments:
+            print('insert_comment:', c)
+    except:
+        pass
+
+
 def main():
 
     args = getargs()
@@ -71,49 +149,46 @@ def main():
     
     count = 0
     for entry in jfile._entry_list:
-        if count < 10:
-            '''
+        if count < 400:
+            #pprint(entry)
             # Insert titles
             insert_title(dbconn, entry['Title'], 0, 0)
-            '''
+
             # Find out what TitleIndex this entry was given
             cmd = 'SELECT * FROM Journals WHERE Journals.Title == "{}";'.format(entry['Title'])
-            JournalId = dbconn.execute(cmd).fetchone()[0]
-            pprint(JournalId)
-            '''
+            #JournalId = dbconn.execute(cmd).fetchone()[0]
+            JournalId = count
+            print('Journal: ', JournalId)
+
             # Insert sub-titles and associate with the JournalId
-            subT = entry.get('subTitle')
-            if subT:
-                insert_title(dbconn, subT, JournalId, 1)
+            insert_title(dbconn, entry.get('subTitle'), JournalId, 1)
                 
             # Insert sub-sub-title and associate with the JournalId
-            subT = entry.get('subsubTitle')
-            if subT:
-                insert_title(dbconn, subT, JournalId, 2)
+            insert_title(dbconn, entry.get('subsubTitle'), JournalId, 2)
 
             # Insert abbreviations and associate with the JournalId
-            abbrevs = entry.get('Abbreviations')
-            if abbrevs:
-                for abrv in abbrevs:
-                    insert_title(dbconn, abrv, JournalId, -1)
-            '''
+            insert_abbreviations( dbconn, JournalId, entry.get('Abbreviations'))
 
             # Insert publishers into Publisher table, if new publisher
             # get PublisherId
-
             # And create entry in JournalPublisher table associated
             # with the Place,  JournalId  and publisher Id
-            
+            insert_publishers(dbconn, JournalId, entry.get('Publishers'))
+
             # Insert Start, End, Prev, Next, and Comments into JournalInfo table
             startT = entry.get('startDate')
-            endT = entry.get('endData')
-            nextId = entry.get('linknext')
-            prevId = entry.get('linkprevious')
-            comments = entry.get('Comments')
-            insert_info(dbconn, JournalId, startT, endT, nextId, prevId, comments)
-            
-            # Insert Designators into JournalDesignator table and associate with the JournalId
+            endT = entry.get('endDate')
+            insert_info(dbconn, JournalId, startT, endT)
 
+            # comments, linknext, linkprevious are multi-element lists
+            insert_links(dbconn, JournalId, entry.get('linknext'), 'next')
+            insert_links(dbconn, JournalId, entry.get('linkprevious'), 'previous')
+
+            insert_designators(dbconn, JournalId, entry.get('Designators'))
+            insert_comments(dbconn, JournalId, entry.get('Comments'))
+
+            print('\n')
+            
         count += 1
 
         
