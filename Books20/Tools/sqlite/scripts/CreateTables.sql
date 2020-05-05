@@ -58,14 +58,15 @@ CREATE TABLE Journals
     -- if this is a main title or a valid JournalId if this is a
     -- sub-title or abbreviation.
     --
-    ParentId	    INTEGER NOT NULL,
+    ParentId	    INTEGER NULL REFERENCES Journals(JournalId)
+                    ON UPDATE CASCADE,
 
     --
     -- TitleLevel is 0 for a main title, , >=1 if this is a
     -- sub-title (first sub-title, second sub-title, etc.), or -1 if
     -- this is a abbreviation for the main title.
     --
-    TitleLevel      INTEGER NOT NULL,
+    TitleLevel      INTEGER NOT NULL
     )
 ;
 
@@ -82,7 +83,9 @@ CREATE TABLE Comments
     -- Title is the only required field. This is a link to the
     -- entries in the Title table.
     --
-    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId),
+    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId)
+                  ON UPDATE CASCADE
+                  ON DELETE CASCADE,
 
     --
     -- Rambling words about the journal
@@ -113,7 +116,9 @@ CREATE TABLE JournalInfo
     -- Title is the only required field. This is a link to the
     -- entries in the Title table.
     --
-    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId),
+    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId)
+                  ON UPDATE CASCADE
+                  ON DELETE CASCADE,
 
     --
     -- The date for this transaction. It will be the StartDate
@@ -126,14 +131,17 @@ CREATE TABLE JournalInfo
     -- JRefId is the title of the journal this journal
     -- was merged or renamed as.
     --
-    JRefId        INTEGER NULL REFERENCES Journals(JournalId),
+    JRefId        INTEGER NULL REFERENCES Journals(JournalId)
+                  ON UPDATE CASCADE
+                  ON DELETE CASCADE,
 
     --
     -- RefType is the type of transaction this is.
     -- It can be either a reference to the 'Next'
     -- title or the 'Prev' title.
+    -- Choices are 'Start', 'Next', 'Prev', and 'End'
     --
-    RefType       INTEGER NULL CHOICES ('Next', 'Prev')
+    RefType       TEXT NOT NULL,
 
     --
     -- Rambling statement about this reference info.
@@ -161,7 +169,9 @@ CREATE TABLE JournalDesignator
     --
     -- The journal id that this entry is for.
     -- 
-    JournalId      INTEGER NOT NULL REFERENCES Journals(JournalId),
+    JournalId      INTEGER NOT NULL REFERENCES Journals(JournalId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- The key word for the designator ISSN, DDCN, ADS, etc.
@@ -222,12 +232,17 @@ CREATE TABLE JournalPublisher
     --
     -- The journal id for the Title being referenced.    
     --
-    JournalId      INTEGER UNSIGNED NOT NULL REFERENCES Journal(JournalId),
+    JournalId      INTEGER NOT NULL REFERENCES Journal(JournalId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- The publisher id for the publisher being referenced.
+    --  What to do if the Publisher is deleted?
     --
-    PublisherId    INTEGER UNSIGNED NULL REFERENCES Publisher(PublisherId),
+    PublisherId    INTEGER NOT NULL REFERENCES Publisher(PublisherId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- Place of publication.

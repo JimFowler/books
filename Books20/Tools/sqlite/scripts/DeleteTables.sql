@@ -18,12 +18,13 @@
 --
 -- Drop the tables...
 --
+DROP TABLE IF EXISTS ToDo;
 DROP TABLE IF EXISTS JournalPublisher;
-DROP TABLE IF EXISTS JournalInfo;
 DROP TABLE IF EXISTS Publishers;
 DROP TABLE IF EXISTS JournalDesignator;
+DROP TABLE IF EXISTS JournalInfo;
+DROP TABLE IF EXISTS Comments;
 DROP TABLE IF EXISTS Journals;
-DROP TABLE IF EXISTS ToDo;
 --
 -- end of DeleteTables.sql
 --
