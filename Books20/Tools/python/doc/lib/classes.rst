@@ -34,6 +34,21 @@ EntryList
    :show-inheritance:
 
 
+EntrySelect
+===========
+
+.. automodule:: entryselect
+   :members:
+   :show-inheritance:
+
+HeaderWindow
+============
+
+.. automodule:: headerwindow
+   :members:
+   :show-inheritance:
+
+
 Roman
 =====
 
@@ -50,6 +65,26 @@ to and from integers.
    :members:
    :show-inheritance:
 
+Search
+======
+
+.. automodule:: search
+   :members:
+   :show-inheritance:
 
 
+Symbol
+======
+
+.. automodule:: symbol
+   :members:
+   :show-inheritance:
+
+
+Utils
+=====
+
+.. automodule:: utils
+   :members:
+   :show-inheritance:
 
