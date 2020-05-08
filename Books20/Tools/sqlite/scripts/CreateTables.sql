@@ -42,7 +42,7 @@ PRAGMA foreign_keys;
 --
 -- 
 CREATE TABLE Journals
-    (
+   (
     --
     -- Unique key.
     --
@@ -67,12 +67,12 @@ CREATE TABLE Journals
     -- this is a abbreviation for the main title.
     --
     TitleLevel      INTEGER NOT NULL
-    )
+   )
 ;
 
 
-CREATE TABLE Comments
-    (
+CREATE TABLE JournalComments
+   (
     --
     -- Unique key.
     --
@@ -90,8 +90,7 @@ CREATE TABLE Comments
     --
     -- Rambling words about the journal
     --
-    Comments        TEXT NOT NULL
-
+    Comment       TEXT NOT NULL
    )
 ;
 
@@ -106,7 +105,7 @@ CREATE TABLE Comments
 -- would have a lot of empty fields.
 --
 CREATE TABLE JournalInfo
-    (
+   (
     --
     -- Unique key.
     --
@@ -147,7 +146,7 @@ CREATE TABLE JournalInfo
     -- Rambling statement about this reference info.
     --
     Comments      TEXT NULL
-    )
+   )
 ;
 
 --
@@ -160,7 +159,7 @@ CREATE TABLE JournalInfo
 -- determined. They may be 0 or many entries for a particular title.
 --
 CREATE TABLE JournalDesignator
-  (
+   (
     --
     -- The unique id.
     --
@@ -260,9 +259,7 @@ CREATE TABLE JournalPublisher
     -- Dates should be YYYY[-MM[-DD]].
     --
     EndDate        TEXT NULL
-
-)
-
+   )
 ;
 
 
