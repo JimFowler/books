@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'JournalDatabase'
+project = 'Books20 Database'
 copyright = '2020, James R. Fowler'
 author = 'James R. Fowler'
 
