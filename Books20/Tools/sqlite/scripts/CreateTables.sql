@@ -127,7 +127,7 @@ CREATE TABLE JournalInfo
     DateStamp     TEXT NOT NULL,
 
     --
-    -- JRefId is the title of the journal this journal
+    -- JRefId is the Id of the journal this journal
     -- was merged or renamed as.
     --
     JRefId        INTEGER NULL REFERENCES Journals(JournalId)
@@ -135,10 +135,20 @@ CREATE TABLE JournalInfo
                   ON DELETE CASCADE,
 
     --
+    -- JRefName is the title of the journal this journal
+    -- was merged or renamed as.
+    --
+    JRefName      TEXT,
+    
+    --
     -- RefType is the type of transaction this is.
     -- It can be either a reference to the 'Next'
     -- title or the 'Prev' title.
-    -- Choices are 'Start', 'Next', 'Prev', and 'End'
+    -- Choices are 'Start' and 'End'. 'Start'ing journals
+    -- may have been merged from other journals. 'End'ing
+    -- journals may merge into other journals. For example,
+    -- Sky & Telescope was created as a merger of The Sky
+    -- and The Telescope journals.
     --
     RefType       TEXT NOT NULL,
 
