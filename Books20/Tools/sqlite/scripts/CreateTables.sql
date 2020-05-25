@@ -130,9 +130,9 @@ CREATE TABLE JournalInfo
     -- JRefId is the Id of the journal this journal
     -- was merged or renamed as.
     --
-    JRefId        INTEGER NULL REFERENCES Journals(JournalId)
-                  ON UPDATE CASCADE
-                  ON DELETE CASCADE,
+    JRefId     INTEGER NULL REFERENCES Journals(JournalId)
+               ON UPDATE CASCADE
+               ON DELETE CASCADE,
 
     --
     -- JRefName is the title of the journal this journal
@@ -297,6 +297,77 @@ CREATE TABLE ToDo
     DateCompleted TEXT NULL
    )
 ;
+
+--
+-- Bib_Count is a listing of item counts in
+-- the various section of bibliographies.
+-- The bibliographies are currently AJB and AAA
+-- but the table is written genericly to support
+-- other bibliographies if I find them.  Bibliographies
+-- are usually in a series with a volume number and may
+-- be for year or years other than the year published.
+--
+CREATE TABLE BibCount
+    (
+     --
+     -- Unique Id
+     --
+     BibCountId    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+     --
+     -- AJB or AAA or ...
+     --
+     Series	TEXT NOT NULL,
+
+     LitYear	TEXT,
+     Volume	INTEGER,
+     Part	INTEGER
+     SubPart	TEXT,
+     Section	INTEGER,
+     SubSection  INTEGER,
+
+     --
+     -- The number of entries in this Vol/Part/Section
+     --
+     EntryCount	INTEGER
+    )
+;
+
+--
+-- Bib_Link is a One-to-Many table.
+--
+--   A particular BibCountId may have multiple Next and
+--   Previous links to other BibCountId.
+--
+CREATE TABLE BibLinks
+    (
+     --
+     -- Unique Id
+     --
+     BibLinkId    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+     --
+     -- The item id in the table BibCount that this record refers to
+     --
+     BibCountId	  INTEGER NOT NULL REFERENCES BibCount(BibCountId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
+
+
+     --
+     --  The type of link, either Next or Previous
+     --
+     LinkType	  TEXT NOT NULL,
+
+     --
+     -- The BibCount table Id that the link goes to
+     --
+     LinkTo_BibCountId	  INTEGER NOT NULL REFERENCES BibCount(BibCountId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE
+    )
+;
+
 
 --
 -- end of CreateTables.sql.

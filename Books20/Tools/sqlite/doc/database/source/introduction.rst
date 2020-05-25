@@ -78,7 +78,7 @@ are needed.
 
   Q1. Show all information about Book|Person|Journal|Organization XXX
 
-  Q2. Select all books by author A.
+  Q2. Select all books by author/translator/person A or publisher P
 
   
 
