@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<BookFile><Header>Entry format
+
+
+Save as Unicode UTF-8 text encoding. Skip section 2 in Part 1
+
+For volume AJB 03 Index to the Literature of 1901, started 18 June 2020, finished, proofread
+
+
+</Header><Entries><Entry><Index><IndexName>AJB</IndexName><VolumeNumber>3</VolumeNumber><SectionNumber>1</SectionNumber><SubSectionNumber>3</SubSectionNumber><EntryNumber>66</EntryNumber></Index><Title>Comptes-Rendus des séances de la treizième conférence générale de l'association géodésiques internationale; Verhandlungen der vom 25 September bis 6 OCtober 1900 in Paris abgehaltenen dreizehnten allgemeinen Conferenze der International Erdmessung; 1 Theil, Sitzungsberichte und Landesberichte über die Arbeiten in den einzelnen Staaten</Title><Authors><Author><Person><First>H.</First><Middle>G. van de Sande</Middle><Last>Bakhuyzen</Last></Person></Author></Authors><Publishers><Publisher><Place>Berlin</Place><Name>Georg Reimer</Name></Publisher></Publishers><Year>1901</Year><Pagination>297p</Pagination></Entry><Entry><Index><IndexName>AJB</IndexName><VolumeNumber>3</VolumeNumber><SectionNumber>3</SectionNumber><SubSectionNumber>1</SubSectionNumber><EntryNumber>138</EntryNumber></Index><Title>Tychonis Brahe, Astronomiew instauratae Mechanica</Title><Publishers><Publisher><Place>Wandesburgi</Place><Name></Name></Publisher></Publishers><Comments><Comment>a photographic reproductions</Comment></Comments></Entry><Entry><Index><IndexName>AJB</IndexName><VolumeNumber>3</VolumeNumber><SectionNumber>3</SectionNumber><SubSectionNumber>1</SubSectionNumber><EntryNumber>139</EntryNumber></Index><Title>Tychonis Brahe Dani Die XXIV Octrobris AD MDCI defuncti operum primitias De Nova Stella summe civis memor deno edidit regia societas scientiarum danica — Insunt effigies et manus specimen Tychonis</Title><Publishers><Publisher><Place>Hauniae</Place><Name></Name></Publisher></Publishers><Year>1901</Year><Pagination>16pp+104p+30AA</Pagination><Reviews><Review>Astr. Rund. 3 313 :</Review></Reviews></Entry></Entries></BookFile>
