@@ -116,7 +116,7 @@ def main():
     # annotate the plot with interesting events
     annotate_list = [
         ('2007-07-25', 80, 'stroke'),
-        ('2008-11-09', 85, 'begin project'),
+        ('2008-11-09', 75, 'begin project'),
         ('2010-09-28', 70, 'begin AJB catalogue'),
         ('2013-03-01', 60, 'ajbbooks v1.0'),
         ('2016-04-11', 45, 'v2.0 convert to XML'),
