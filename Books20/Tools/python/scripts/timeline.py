@@ -120,6 +120,8 @@ def main():
         ('2010-09-28', 70, 'begin AJB catalogue'),
         ('2013-03-01', 60, 'ajbbooks v1.0'),
         ('2016-04-11', 45, 'v2.0 convert to XML'),
+        ('2017-07-30', 38, 'journals v1.0'),
+        ('2020-03-16', 10, 'COVID-19'),
     ]
     
     for a in annotate_list:
