@@ -28,8 +28,10 @@
 ä, Small letter a with diaeresis
 Å, Capital letter A with ring above
 å, Small letter a with ring above
-à, small letter a with grave
-á, small letter a with acute
+À, Capital letter A with grave
+Á, Capital letter A with acute
+à, Small letter a with grave
+á, Small letter a with acute
 ǎ, Small letter a with caron
 â, Small letter a with circumflex
 ă, Small letter a with breve
