@@ -1,3 +1,19 @@
+2020-07-25  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/journals (main): Switch to configargparse in
+	place of the argparse package
+
+	* Tools/python/aabooks/journal/journalwindow.py: removed explicit
+	configuration file parsing.
+
+	* Tools/python/scripts/example_config.py: Wrote example config
+	file and command line parser.  It uses example_config.conf.
+
+	* Tools/python/scripts/ajbbooks (main): Changed from argparse to
+	configargparse.  This adds a configuration file option to the
+	command line parser.  Something I have been trying to work out
+	since 2018.
+
 2020-04-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/lib/entrylist.py: Created EntryList

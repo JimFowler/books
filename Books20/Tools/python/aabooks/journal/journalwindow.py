@@ -61,7 +61,7 @@ __version__ = '1.0.0'
 
 class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     '''The main window for the journal program.'''
-    def __init__(self, parent=None, config_name=None):
+    def __init__(self, parent=None):
         super(JournalWindow, self).__init__(parent=parent)
         self.setupUi(self)
 
@@ -130,18 +130,6 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self.designatorEdit.textChanged.connect(self._set_entry_dirty)
         self.CommentsEdit.textChanged.connect(self._set_entry_dirty)
 
-        #
-        # Read the config file
-        #
-        self.config = configparser.ConfigParser()
-        self.config.read(config_name)
-        self._vardict['journal_file'].set_schema_name(self.config['DEFAULT']['journal_xsd'])
-        jf_name = self.config['DEFAULT']['journal_file_dir'] + '/' + \
-                  self.config['DEFAULT']['journal_file_name'] + '.' + \
-                  self.config['DEFAULT']['journal_file_ext']
-
-        if jf_name is not None and os.path.isfile(jf_name):
-            self.open_file(jf_name)
 
     def set_max_entry_count(self, count):
         """Comment"""
