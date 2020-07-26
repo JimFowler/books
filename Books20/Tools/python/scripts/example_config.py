@@ -4,19 +4,20 @@
 #  file, default values, and command line values
 #
 # TODO:
-#   Merge master with aabooks
+#   Done Merge master with aabooks
 #   in Tools/python/aabooks/lib
-#    delete configuration.py and any other config files
+#    Done delete configuration.py and any other config files
 #    add standard_parser_args() to utils
-#   Add example_conf.py and example_conf.conf to scripts but don't install
+#   Done Add example_conf.py and example_conf.conf to scripts but don't install
 #   Modify programs to use configargparse and utils.standard_parser_args()
-#   Remove .conf files from .gitignore
+#   Done Remove .conf files from .gitignore
 #   What else??
+#    how to make args available to all functions?
 #
 
 # This example program can use argparse or configargparse
-#import argparse as argp
-import configargparse as argp
+import argparse as argp
+#import configargparse as argp
 
 from pprint import pprint
 
@@ -31,7 +32,7 @@ def standard_parser_args(parser):
 
     '''
     
-    parser.add_argument('-V',
+    parser.add_argument('-V', '--version',
                         help='show the version information and exit',
                         default=False,
                         action='store_true')
@@ -72,7 +73,7 @@ def getargs():
 
     try:
         parser = argp.ArgumentParser(description=__description,
-                                    default_config_files=['~/.config/Books20/ajbbooks.conf'])
+                                    default_config_files=['~/example_config.conf'])
     except TypeError:
         parser = argp.ArgumentParser(description=__description)
 
@@ -88,8 +89,8 @@ def getargs():
     parser.add_argument('-v', '--volume', type=int,
                         default=-1,
                         help='default volume number,')
-    
-    return parser.parse_known_args()
+
+    return parser.parse_known_args()[0] # pick up only the known args
 
 
     
@@ -99,3 +100,10 @@ if __name__ == '__main__':
 
     print('\nFinal results')
     pprint(args)
+
+    if args.version:
+        print('version info requested')
+
+    print('input file is:', args.input)
+    print('symbol table is:', args.symbols)
+    print('the debug flag is', args.debug)
