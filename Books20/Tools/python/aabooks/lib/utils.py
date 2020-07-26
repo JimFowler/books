@@ -61,7 +61,7 @@ def standard_parser_args(parser):
 
     '''
     
-    parser.add_argument('-V',
+    parser.add_argument('--version',
                         help='show the version information and exit',
                         default=False,
                         action='store_true')
