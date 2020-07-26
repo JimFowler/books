@@ -1,14 +1,46 @@
 #! /usr/bin/env python
-# -*- mode: Python;-*-
-#
-#  Convert the journal file from xml
-#  to an sqlite3 database.
-#
-#
+## -*- mode: Python;-*-
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/scripts/jxml2db3
+##
+##   Part of the Books20 Project
+##
+##   Copyright 2020 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
 
+
+'''Convert a journal file from XML to an sqlite3 database.  We use
+the JournalEntry class to convert from XML to a python
+data object.  Then we add this entry to the database.  Each
+JournaEntry is of the form
+
+..code:: python
+
+  {'Abbreviations': ['Ark Mat Astr Fys'],
+   'Comments': ['first comment', 'second comment'],
+   'Designators': {'ADS': 'ArMAF', 'ISSN' : '12345'},
+   'Publishers': [{'Place': 'Stockholm', 'Publisher' : 'A Great Publisher'}],
+   'Title': 'Arkiv för Matematik, Astronomi och Fysik',
+   'endDate': '1945',
+   'linknext': [12],
+   'linkprevious': [10, 9],
+   'startDate': '1901',
+   'subTitle': '',
+   'subsubTitle': ''}
+
+'''
 import os, sys
 import argparse
-
+import datetime as dt
 import sqlite3
 from aabooks.journal import journalfile as jf
 
@@ -26,13 +58,13 @@ def getargs():
 
     parser.add_argument('--verbose',
                         help='be noisy about our actions',
-                        default='false',
+                        default=False,
                         action='store_true')
     
     parser.add_argument('--debug',
                         help='print out debugging information',
-                        default='false',
-                        action='store_true')
+                        default=0,
+                        action='store')
     
     parser.add_argument('-i', '--input', type=str,
                         help='read the xml file INPUT for entries',
@@ -46,75 +78,161 @@ def getargs():
 
     return args
 
+
+
 def insert_title(connection, title, parent, level):
 
-    cmd = 'INSERT INTO Journals (Title, ParentId, TitleLevel) VALUES ("{}", {}, {});'.format(title, parent, level)
-    connection.execute(cmd)
-    connection.commit()
-                
-def insert_info(connection, journalId, startT, endT, nextId, prevId, comments):
+    if title:
+        connection.execute('INSERT INTO Journals (Title, ParentId, TitleLevel) VALUES (?, ?, ?);', (title, parent, level))
+        
+def get_title(connection, title):
 
-    cmd = 'INSERT INTO INFO (JournalId, StartDate, EndDate, NextId, PrevId, Comment) VALUES ({}, {}, {}, {}, {}, "{}");'.format(journalId, startT, endT, nextId, prevId, comments)
-    print(cmd)
+    return connection.execute('SELECT * FROM Journals WHERE Title=?;', (title,))
+
+
+def insert_abbreviations(connection, jid, abbrevs):
+    '''abbrevs are a list of strings.'''
+
+    for abrv in abbrevs:
+        insert_title(connection, abrv, jid, -1)
+    
+def insert_info(connection, journalId, startT, endT):
+
+    if startT:
+        connection.execute('INSERT INTO JournalInfo (JournalId, DateStamp, RefType) VALUES (?, ?, ?);', (journalId, startT, 'Start'))
+
+    if endT:
+        connection.execute('INSERT INTO JournalInfo (JournalId, DateStamp, RefType) VALUES (?, ?, ?);', (journalId, endT, 'End'))
+
+    
+def insert_designators(connection, jid, desig):
+    '''desig is a dictionary of key:value.'''
+    
+    for key, value in desig.items():
+        connection.execute('INSERT INTO JournalDesignator (JournalId, KeyName, KeyValue) VALUES (?, ?, ?);', (jid, key, value))
+
+    
+def insert_comments(connection, jid, comments):
+    '''comments are a list of strings.'''
+
+    for c in comments:
+        connection.execute('INSERT INTO JournalComments (JournalId, Comment) VALUES (?, ?);', (jid, c))
+
+
+# don't know how to do these two yet
+def insert_links(connection, jid, links, reftype):
+    '''Links are a list of journal names.'''
+    
+    for l in links:
+        print('insert_links:', l, type)
+    
+
+def insert_journal_publishers(connection, jid, pid, place=None, start=None, end=None, comment=None):
+    '''Add a JournalId, PublisherId with a start/end date, place, and a comment
+    to the JournalPublisher table. The minimum pieces of information are jid and pid.
+
+    '''
+    pass
+
+
+def insert_publishers(connection, jid, publishers):
+    '''Publishers is a list of dictionaries with a place, name,
+    start date, and end date.  The Publisher name should 
+    go into the publisher table. The place, start date, and
+    end date should go into a title-publisher table.'''
+
+    # if publisher exists, don't insert, return pid value
+    # else insert new publisher, return pid value
+    pass
+
+def insert_todo(connection, summary, task):
+    '''Use current time for DateOfEntry'''
+
+    startdt = dt.datetime.now()
+    connection.execute('INSERT INTO ToDo (Summary, Task, DateOfEntry) VALUES (?, ?, ?);', (summary, task,startdt))
+    
+
+
+def write_db3_file(self, connection, debug=0, verbose=False):
+
+    # we don't have to write the file header
+    # We assume the database is open already through the connection
+    # and also that the database may have existing entries already.
+    # This was not the case with the XML files
+    
+    for entry in self._entry_list:
+        insert_db3_from_entry(entry, connection, debug, verbose)
+
+        
+def insert_db3_from_entry(self, connection, debug=0, verbose=False):
+    '''Insert a journal entry into a sqlite3 database. We are assuming
+    that the entry does not exist and that we can freely insert it.
+    Use update_db3_from_entry() to perform an update.
+
+    '''
+
+    if not self.is_valid():
+        return False
+
+    if verbose:
+        print('Working on Journal entry:')
+        pprint(self)
+        
+    # Insert titles
+    title = self.get('Title')
+    insert_title(connection, title, 0, 0)
+    connection.commit()
+
+    
+    # Find out what TitleIndex this entry was given
+    JournalId = get_title(connection, title).fetchone()[0]
+
+    connection.execute('BEGIN TRANSACTION;')
+    # Insert sub-titles and associate with the JournalId
+    insert_title(connection, self.get('subTitle'), JournalId, 1)
+            
+    # Insert sub-sub-title and associate with the JournalId
+    insert_title(connection, self.get('subsubTitle'), JournalId, 2)
+
+    # Insert abbreviations and associate with the JournalId
+    insert_abbreviations( connection, JournalId, self.get('Abbreviations'))
+
+    # Insert publishers into Publisher table, if new publisher
+    # get PublisherId
+    # And create entry in JournalPublisher table associated
+    # with the Place,  JournalId  and publisher Id
+    insert_publishers(connection, JournalId, self.get('Publishers'))
+
+    # Insert Start, End, Prev, Next, and Comments into JournalInfo table
+    startT = self.get('startDate')
+    endT = self.get('endDate')
+    insert_info(connection, JournalId, startT, endT)
+
+    # comments, linknext, linkprevious are multi-element lists
+    insert_links(connection, JournalId, self.get('linknext'), 'next')
+    insert_links(connection, JournalId, self.get('linkprevious'), 'previous')
+
+    insert_designators(connection, JournalId, self.get('Designators'))
+    insert_comments(connection, JournalId, self.get('Comments'))
+
+    connection.execute('COMMIT TRANSACTION;')
+    return True
 
     
 def main():
 
     args = getargs()
-    pprint(args)
+
+    if args.debug:
+        pprint(args)
     
     jfile = jf.JournalFile()
     jfile.read_xml_file(args.input)
 
-    dbconn = sqlite3.connect(args.database)
-    dbcursor = dbconn.cursor()
+    dbconnection = sqlite3.connect(args.database)
+
+    write_db3_file(jfile, dbconnection)
     
-    count = 0
-    for entry in jfile._entry_list:
-        if count < 10:
-            '''
-            # Insert titles
-            insert_title(dbconn, entry['Title'], 0, 0)
-            '''
-            # Find out what TitleIndex this entry was given
-            cmd = 'SELECT * FROM Journals WHERE Journals.Title == "{}";'.format(entry['Title'])
-            JournalId = dbconn.execute(cmd).fetchone()[0]
-            pprint(JournalId)
-            '''
-            # Insert sub-titles and associate with the JournalId
-            subT = entry.get('subTitle')
-            if subT:
-                insert_title(dbconn, subT, JournalId, 1)
-                
-            # Insert sub-sub-title and associate with the JournalId
-            subT = entry.get('subsubTitle')
-            if subT:
-                insert_title(dbconn, subT, JournalId, 2)
-
-            # Insert abbreviations and associate with the JournalId
-            abbrevs = entry.get('Abbreviations')
-            if abbrevs:
-                for abrv in abbrevs:
-                    insert_title(dbconn, abrv, JournalId, -1)
-            '''
-
-            # Insert publishers into Publisher table, if new publisher
-            # get PublisherId
-
-            # And create entry in JournalPublisher table associated
-            # with the Place,  JournalId  and publisher Id
-            
-            # Insert Start, End, Prev, Next, and Comments into JournalInfo table
-            startT = entry.get('startDate')
-            endT = entry.get('endData')
-            nextId = entry.get('linknext')
-            prevId = entry.get('linkprevious')
-            comments = entry.get('Comments')
-            insert_info(dbconn, JournalId, startT, endT, nextId, prevId, comments)
-            
-            # Insert Designators into JournalDesignator table and associate with the JournalId
-
-        count += 1
 
         
         

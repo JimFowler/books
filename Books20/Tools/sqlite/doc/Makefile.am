@@ -29,7 +29,7 @@ include ${BOOKS20_ROOT}/makefile.local
 #
 # Run make in these sub-directories
 #
-SUB_DIRS = 
+SUB_DIRS = database
 
 #
 # Build any software and/or documents
@@ -48,25 +48,18 @@ build_software:
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs
+build_docs: database
 	@echo "Building docs in ${CURDIR}"
 	@echo "Nothing to build in ${CURDIR}"
 
 
 # Examples from ../python/docs
-.PHONY: ajbbooks
-ajbbooks:
-	@echo "Building ajbbooks html documentation"
-	${MAKE} -C ajbbooks html
-	@echo "Building ajbbooks pdf documentation"
-	${MAKE} -C ajbbooks latexpdf
-
-.PHONY: journals
-journals:
+.PHONY: database
+database:
 	@echo "Building journals html documentation"
-	${MAKE} -C journals html
+	${MAKE} -C database html
 	@echo "Building journals pdf documentation"
-	${MAKE} -C journals latexpdf
+	${MAKE} -C database latexpdf
 
 
 #
@@ -86,14 +79,10 @@ install_docs: build_docs
 .PHONY: install_docs_example
 install_docs_example:
 	@echo "Installing documentation"
-	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PDF_INSTALL_DIR}
-	${INSTALL} -m 444 -p ./ajbbooks/_build/latex/AJBbooks.pdf ${PUBLIC_HTML_DIR}
-	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PDF_INSTALL_DIR}
-	${INSTALL} -m 444 -p ./journals/_build/latex/Journal.pdf ${PUBLIC_HTML_DIR}
-	mkdir -p  ${PUBLIC_HTML_DIR}/ajbbooks
-	cp -r ./ajbbooks/_build/html/* ${PUBLIC_HTML_DIR}/ajbbooks
-	mkdir -p  ${PUBLIC_HTML_DIR}/journal
-	cp -r ./journals/_build/html/* ${PUBLIC_HTML_DIR}/journal
+	${INSTALL} -m 444 -p ./database/build/latex/Journal.pdf ${PDF_INSTALL_DIR}
+	${INSTALL} -m 444 -p ./database/build/latex/Journal.pdf ${PUBLIC_HTML_DIR}
+	mkdir -p  ${PUBLIC_HTML_DIR}/database
+	cp -r ./database/build/html/* ${PUBLIC_HTML_DIR}/database
 
 
 #
@@ -107,7 +96,7 @@ clean: ${SUB_DIRS}
 .PHONY: veryclean
 veryclean: ${SUB_DIRS} clean
 	@echo "Doing veryclean of ${CURDIR}"
-#	${RM} -rf ajbbooks/_build journals/_build
+#	${RM} -rf database/build
 
 .PHONY: distclean
 distclean: ${SUB_DIRS} veryclean

@@ -42,7 +42,7 @@ PRAGMA foreign_keys;
 --
 -- 
 CREATE TABLE Journals
-    (
+   (
     --
     -- Unique key.
     --
@@ -54,24 +54,43 @@ CREATE TABLE Journals
     Title           TEXT NOT NULL,
 
     --
-    -- ParentId is a link to another JournalId. It will be zero or NULL
+    -- ParentId is a link to another JournalId. It will be zero 
     -- if this is a main title or a valid JournalId if this is a
     -- sub-title or abbreviation.
     --
-    ParentId	    INTEGER NULL,
+    ParentId	    INTEGER NULL REFERENCES Journals(JournalId)
+                    ON UPDATE CASCADE,
 
     --
-    -- TitleLevel is 0 or NULL for a main title, , >=1 if this is a
+    -- TitleLevel is 0 for a main title, , >=1 if this is a
     -- sub-title (first sub-title, second sub-title, etc.), or -1 if
     -- this is a abbreviation for the main title.
     --
-    TitleLevel      INTEGER NULL,
-    
+    TitleLevel      INTEGER NOT NULL
+   )
+;
+
+
+CREATE TABLE JournalComments
+   (
+    --
+    -- Unique key.
+    --
+    CommentId     INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+
+    --
+    -- Title is the only required field. This is a link to the
+    -- entries in the Title table.
+    --
+    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId)
+                  ON UPDATE CASCADE
+                  ON DELETE CASCADE,
+
     --
     -- Rambling words about the journal
     --
-    Comments        TEXT NULL
-
+    Comment       TEXT NOT NULL
    )
 ;
 
@@ -96,34 +115,45 @@ CREATE TABLE JournalInfo
     -- Title is the only required field. This is a link to the
     -- entries in the Title table.
     --
-    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId),
+    JournalId     INTEGER NOT NULL REFERENCES Journals(JournalId)
+                  ON UPDATE CASCADE
+                  ON DELETE CASCADE,
 
     --
-    -- The start date for this journal title.
-    -- Dates should be YYYY[-MM[-DD]].
+    -- The date for this transaction. It will be the StartDate
+    -- if this is a 'Prev" transaction, or an EndDate if this is
+    -- a 'Next' transaction. Dates should be YYYY[-MM[-DD]].
     --
-    StartDate     TEXT NULL,
+    DateStamp     TEXT NOT NULL,
 
     --
-    -- The end date for this journal title.
-    -- Dates should be YYYY[-MM[-DD]].
-    --
-    EndDate       TEXT NULL,
-
-    --
-    -- NextId is the title of the journal this journal
+    -- JRefId is the Id of the journal this journal
     -- was merged or renamed as.
     --
-    NextId        INTEGER NULL REFERENCES Journals(JournalId),
+    JRefId     INTEGER NULL REFERENCES Journals(JournalId)
+               ON UPDATE CASCADE
+               ON DELETE CASCADE,
 
     --
-    -- PrevId is the title of the journal this journal
-    -- was merged or renamed from.
+    -- JRefName is the title of the journal this journal
+    -- was merged or renamed as.
     --
-    PrevId        INTEGER NULL REFERENCES Journals(JournalId),
+    JRefName      TEXT,
+    
+    --
+    -- RefType is the type of transaction this is.
+    -- It can be either a reference to the 'Next'
+    -- title or the 'Prev' title.
+    -- Choices are 'Start' and 'End'. 'Start'ing journals
+    -- may have been merged from other journals. 'End'ing
+    -- journals may merge into other journals. For example,
+    -- Sky & Telescope was created as a merger of The Sky
+    -- and The Telescope journals.
+    --
+    RefType       TEXT NOT NULL,
 
     --
-    -- Rambling statement about this journal.
+    -- Rambling statement about this reference info.
     --
     Comments      TEXT NULL
    )
@@ -139,16 +169,18 @@ CREATE TABLE JournalInfo
 -- determined. They may be 0 or many entries for a particular title.
 --
 CREATE TABLE JournalDesignator
-  (
+   (
     --
     -- The unique id.
     --
     JournalDesigId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- The title id that this entry is for.
+    -- The journal id that this entry is for.
     -- 
-    JournalId      INTEGER NOT NULL REFERENCES Journals(JournalId),
+    JournalId      INTEGER NOT NULL REFERENCES Journals(JournalId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- The key word for the designator ISSN, DDCN, ADS, etc.
@@ -207,14 +239,19 @@ CREATE TABLE JournalPublisher
     JournalPublId  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- The title id for the Title being referenced.    
+    -- The journal id for the Title being referenced.    
     --
-    JournalId      INTEGER UNSIGNED NOT NULL REFERENCES Journal(JournalId),
+    JournalId      INTEGER NOT NULL REFERENCES Journal(JournalId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- The publisher id for the publisher being referenced.
+    --  What to do if the Publisher is deleted?
     --
-    PublisherId    INTEGER UNSIGNED NOT NULL REFERENCES Publisher(PublisherId),
+    PublisherId    INTEGER NOT NULL REFERENCES Publisher(PublisherId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
 
     --
     -- Place of publication.
@@ -222,19 +259,17 @@ CREATE TABLE JournalPublisher
     Place	   TEXT NULL,
 
     --
-    -- The start date for this title/publisher combination
+    -- The start date for this title/publisher combination.
     -- Dates should be YYYY[-MM[-DD]].
     --
     StartDate      TEXT NULL,
 
     --
-    -- The end date for this title/publisher combination
+    -- The end date for this title/publisher combination.
     -- Dates should be YYYY[-MM[-DD]].
     --
     EndDate        TEXT NULL
-
-)
-
+   )
 ;
 
 
@@ -246,17 +281,17 @@ CREATE TABLE ToDo
     ToDoId        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 
     --
-    -- Short Summary of task
+    -- Short Summary of task.
     --
     Summary       TEXT NOT NULL,
 
     --
-    -- Longer description of the task
+    -- Longer description of the task.
     --
     Task          TEXT NULL,
 
     --
-    -- Dates should be YYYY-MM-DD
+    -- Dates should be YYYY-MM-DD.
     --
     DateOfEntry   TEXT NOT NULL,
     DateCompleted TEXT NULL
@@ -264,5 +299,76 @@ CREATE TABLE ToDo
 ;
 
 --
--- end of CreateTables.sql
+-- Bib_Count is a listing of item counts in
+-- the various section of bibliographies.
+-- The bibliographies are currently AJB and AAA
+-- but the table is written genericly to support
+-- other bibliographies if I find them.  Bibliographies
+-- are usually in a series with a volume number and may
+-- be for year or years other than the year published.
+--
+CREATE TABLE BibCount
+    (
+     --
+     -- Unique Id
+     --
+     BibCountId    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+     --
+     -- AJB or AAA or ...
+     --
+     Series	TEXT NOT NULL,
+
+     LitYear	TEXT,
+     Volume	INTEGER,
+     Part	INTEGER
+     SubPart	TEXT,
+     Section	INTEGER,
+     SubSection  INTEGER,
+
+     --
+     -- The number of entries in this Vol/Part/Section
+     --
+     EntryCount	INTEGER
+    )
+;
+
+--
+-- Bib_Link is a One-to-Many table.
+--
+--   A particular BibCountId may have multiple Next and
+--   Previous links to other BibCountId.
+--
+CREATE TABLE BibLinks
+    (
+     --
+     -- Unique Id
+     --
+     BibLinkId    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+     --
+     -- The item id in the table BibCount that this record refers to
+     --
+     BibCountId	  INTEGER NOT NULL REFERENCES BibCount(BibCountId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE,
+
+
+     --
+     --  The type of link, either Next or Previous
+     --
+     LinkType	  TEXT NOT NULL,
+
+     --
+     -- The BibCount table Id that the link goes to
+     --
+     LinkTo_BibCountId	  INTEGER NOT NULL REFERENCES BibCount(BibCountId)
+                   ON UPDATE CASCADE
+                   ON DELETE CASCADE
+    )
+;
+
+
+--
+-- end of CreateTables.sql.
 --

@@ -55,6 +55,35 @@ def entries_match(entry_I, entry_J):
 
     return False
 
+def dup_titles(elist):
+
+    max_entry = elist.max_entries() + 1
+
+    for i in range(1, max_entry):
+        entry_I = elist.get_entry(i)
+        
+        for j in range(i+1, max_entry):
+            entry_J = elist.get_entry(j)
+
+            if entries_match(entry_I, entry_J):
+                print('Titles for entry {} matches entry {}'.format(i, j))
+
+                
+def list_publishers(elist):
+    
+
+    max_entry = elist.max_entries() + 1
+
+    for i in range(1, max_entry):
+        entry_I = elist.get_entry(i)
+        publist = entry_I['Publishers']
+
+        try:
+            for p in publist:
+                print('{},  {}'.format(p['Place'], p['Name']))
+        except:
+            pass
+        
 #
 # Main work
 #
@@ -66,13 +95,6 @@ if __name__ == '__main__':
 
     _JF.read_xml_file(args.input)
 
-    max_entry = _JF.max_entries()
 
-    for i in range(1, max_entry):
-        entry_I = _JF.get_entry(i)
-        
-        for j in range(i+1, max_entry):
-            entry_J = _JF.get_entry(j)
-
-            if entries_match(entry_I, entry_J):
-                print('Titles for entry {} matches entry {}'.format(i, j))
+    #dup_titles(_JF)
+    list_publishers(_JF)
