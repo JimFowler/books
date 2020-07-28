@@ -23,27 +23,29 @@
 
 import sys
 import os
-import argparse
+import configargparse as argp
 from PyQt5 import QtGui, QtWidgets
 
 import aabooks.ajbbook.ajbwindow as mw
 import aabooks.ajbbook.ajb_rc
+import aabooks.lib.utils as aautils
 
-__version__ = '2.0'
+from pprint import pprint
 
+__VERSION__ = '2.0'
+
+__DESCRIPTION__ = 'Create or edit an ajb??_books.xml file'
 #
 # Parse the command line arguments
 #
 def getargs():
     """Parse the command line arguments."""
-    parser = argparse.ArgumentParser(description='Create or edit an ajb??_books.xml file')
-
-    parser.add_argument('-V', '--version',
-                        help='provide version info,',
-                        action='store_true')
-
+    parser = argp.ArgumentParser(description=__DESCRIPTION__,
+                                 default_config_files=['~/.config/Books20/ajbbooks.conf'])
+                                 
+    aautils.standard_parser_args(parser)
+    
     parser.add_argument('-i', '--input', type=str,
-                        action='append',
                         help='read the file INPUT for entries')
 
     parser.add_argument('-s', '--symbols', type=str,
@@ -52,16 +54,7 @@ def getargs():
     parser.add_argument('-v', '--volume', type=str,
                         help='default volume number,')
 
-    parser.add_argument('-c', '--config', type=str,
-                        help='alternate configuration file name.',
-                        default='./ajbbooks.conf')
-    #parser.add_argument( 'filename', type=str,
-    #                     help='the name of the file to process.',
-    #                     action='append')
-
-    args = parser.parse_args()
-
-    return args
+    return parser.parse_known_args()[0]
 
 
 #
@@ -81,7 +74,7 @@ def main():
 
     if args.version:
         form.help_about()
-        sys.exit(app.exec_())
+        sys.exit()
 
     if args.volume is not None:
         form.set_default_volume_number(args.volume)
@@ -91,7 +84,7 @@ def main():
         form.set_symbol_table_name(args.symbols)
 
     if args.input is not None:
-        fname = args.input[0]
+        fname = args.input
         if os.path.isfile(fname):
             form.open_file(fname)
         else:

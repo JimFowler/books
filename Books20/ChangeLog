@@ -1,3 +1,24 @@
+2020-07-25  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/journals (main): Switch to configargparse in
+	place of the argparse package
+
+	* Tools/python/aabooks/journal/journalwindow.py: removed explicit
+	configuration file parsing.
+
+	* Tools/python/scripts/example_config.py: Wrote example config
+	file and command line parser.  It uses example_config.conf.
+
+	* Tools/python/scripts/ajbbooks (main): Changed from argparse to
+	configargparse.  This adds a configuration file option to the
+	command line parser.  Something I have been trying to work out
+	since 2018.
+
+2020-04-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/entrylist.py: Created EntryList
+	class. Still need to update ajbbooks, journal, and jxml2db3.
+
 2020-04-25  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/: create scripts directory under python.
@@ -62,6 +83,17 @@
 	* Tools/python/aabooks/ajbbook/Resources/ajb.qrc: Changed name of
 	ajb.qrc, updated designer/ui_BookEntry.ui and Makefile.am.
 
+2018-12-13  Jim Fowler  <jrf@biblion>
+
+	on branch aabooks.
+	
+	* Tools/python/aabooks/lib/configuration.py: Began writing and
+	testing a skeleton configuration reader based on the write up I
+	did previously.
+
+	* Tools/python/doc/lib/configuration.rst: Begin write up about
+	configuration files and command line arguments. This was prior to
+	writing code so I basicly did a top-down construction sequence.
 2018-12-08  Jim Fowler  <jrf@biblion>
 
 	* aabooks: Merged changes from branch aabooks to master.  This
@@ -73,6 +105,7 @@
 	This should be done in phase four when we refactor the structure
 	of the programs. For right now the python programs are mostly
 	compliant with PEP-8 and pylint.
+>>>>>>> master
 
 2018-12-05  Jim Fowler  <jrf@biblion>
 

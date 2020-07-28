@@ -24,36 +24,33 @@ Journals entries from AAA/AJB
 
 import sys
 import os
-import argparse
+import configargparse as argp
 
 from PyQt5 import QtWidgets
 from PyQt5 import QtGui
 
 import aabooks.journal.journalwindow as mw
 import aabooks.journal.journal_rc
-
+import aabooks.lib.utils as aautils
 #
 # Parse the command line arguments
 #
 def getargs():
     '''Get the command line arguments.'''
-    parser = argparse.ArgumentParser(description='Create or edit a journals.xml file')
+    
+    parser = argp.ArgumentParser(description='Create or edit a journals.xml file',
+                                 default_config_files=['~/.config/Books20/journals.conf'])
 
-    parser.add_argument('-V', '--version',
-                        help='provide version info,',
-                        action='store_true')
-
+    aautils.standard_parser_args(parser)
+    
     parser.add_argument('-i', '--input', type=str,
                         help='read the file INPUT for entries')
 
     parser.add_argument('-s', '--symbols', type=str,
                         help='use alternate symbol table,')
 
-    parser.add_argument('-c', '--config', type=str,
-                        help='use alternate configuration file name,',
-                        default=os.environ.get('HOME') + '/.config/journals.conf')
 
-    args = parser.parse_args()
+    args = parser.parse_known_args()[0]
 
     return args
 
@@ -74,7 +71,7 @@ def main():
     app.setApplicationName('Journal Search and Entry')
     app.setWindowIcon(QtGui.QIcon(':/icon_journals.svg'))
 
-    form = mw.JournalWindow(config_name=args.config)
+    form = mw.JournalWindow()
     app.focusChanged.connect(form.set_focus_changed)
 
 
@@ -87,11 +84,6 @@ def main():
 
 
     if args.input is not None:
-        print('''Input file is broken at this time.  Will be fixed
-in phase two of the refactor of aabooks.''')
-        return
-
-    if args.input is not None:
         fname = args.input
         if os.path.isfile(fname):
             form.open_file(fname)
@@ -100,9 +92,9 @@ in phase two of the refactor of aabooks.''')
             # Should not access form.jf functions and indeed
             # this is broken right now.
             form._open_new_file()
-            form.jf.setFileName(fname)
-            form.set_window_title(form.jf.getBaseName())
-            form.new_entry()
+            form._vardict['journal_file'].set_file_name(fname)
+            form.set_window_title(form._vardict['journal_file'].get_base_name())
+            form._new_entry()
 
     form.show()
     sys.exit(app.exec_())

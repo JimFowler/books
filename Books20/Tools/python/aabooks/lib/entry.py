@@ -4,7 +4,7 @@
 ##
 ##   Part of the Books20 Project
 ##
-##   Copyright 2018 James R. Fowler
+##   Copyright 2012 James R. Fowler
 ##
 ##   All rights reserved. No part of this publication may be
 ##   reproduced, stored in a retrival system, or transmitted
@@ -15,10 +15,11 @@
 ##
 ## End copyright
 
-"""An Entry defines a generic class for a book or journal entry;
-Usually entry objects will be either book listings from Astronomisher
-Jahresbericht or Astronomy and Astrophysics Abstracts.  Specific entry
-types should be sub-classed from Entry.
+"""An Entry defines a generic class, typically for a book or journal entry.
+The Entry class is a sub-class of dictionary.  Since this class does
+not defined much it is always possible to define your own type of
+entry.  The blank_entry() and is_valid() function would normally be
+expected to occur in custom Entry declaration.
 
 """
 
@@ -33,7 +34,7 @@ class Entry(dict):
     be generic to all entry types.
 
     """
-    _version = "class: Entry(dict) v1.0.0 dtd 27 Sep 2012"
+    _version = 'class: Entry(dict) v1.0.0 dtd 27 Sep 2012'
 
     def __init__(self, _entry_str=None):
 
@@ -61,10 +62,37 @@ class Entry(dict):
 
 if __name__ == '__main__':
 
-    TEST_ENTRY = Entry()
+    import unittest
 
-    try:
-        TEST_ENTRY.is_valid()
-    except NotImplementedError:
-        print("""Entry() class fails properly with an NotImplementedError
-        for is_valid() method.""")
+    class EntryTestCase(unittest.TestCase):
+        """Set up the unit tests"""
+
+        def setUp(self):
+            """Initialize local stuff. We start with a fresh Entry object
+            for every test."""
+            self.test_entry = Entry()
+
+        def tearDown(self):
+            """Displose of the Entry object at the end of every test."""
+            del self.test_entry
+
+        def test_is_valid(self):
+            """Test the Entry.is_valid() function. Should raise
+            NotImplementedError."""
+
+            with self.assertRaises(NotImplementedError):
+                self.test_entry.is_valid()
+
+        def test_blank_entry(self):
+            """Test the Entry.blank_entry() function. Should raise
+            NotImplementedError."""
+
+            with self.assertRaises(NotImplementedError):
+                self.test_entry.blank_entry()
+
+        def test_version(self):
+            """Test the Entry.version() function."""
+
+            self.assertEqual(self.test_entry.version(), 'class: Entry(dict) v1.0.0 dtd 27 Sep 2012')
+
+    unittest.main()

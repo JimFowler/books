@@ -21,9 +21,9 @@ associated value.
 
 Given a list of strings and return values, we create another set of
 sub-strings from the strings and associate the sub-strings and the
-return value in a dictionary. The sub-strings are keys to the dictionary
-and the values are a list of the various return values that are associated
-with the string that the sub-string was created from.
+return value in a dictionary. The sub-strings are keys to the
+dictionary and the values are a list of the various return values that
+are associated with the string that the sub-string was created from.
 
 Looking up a the key returns a list of tuples of (title, returnvalue).
 
@@ -31,27 +31,28 @@ The sub-strings and search string are case-sensitive.
 
 Ideally the tuples should be in a weighted order scheme, e.g. the
 sub-string is closer to the beginning of the list if the sub-string
-appears closer to the start of the string. Alternatively, we can remove
-the articles from the string before creating the sub-strings.  This may
-best be left to the user.
+appears closer to the start of the string. Alternatively, we can
+remove the articles from the string before creating the sub-strings.
+This may best be left to the user.
 
 As an example; a dictionary created from the strings
-('British Astronomy Journal', retVal1),
-('Americal Astronomy Journal', retVal2),
-('Astronomy Journal of Pakistan', retVal3),
-('The Astronomical Journal', retVal4)
-...
+
+  | ('British Astronomy Journal', retVal1),
+  | ('Americal Astronomy Journal', retVal2),
+  | ('Astronomy Journal of Pakistan', retVal3),
+  | ('The Astronomical Journal', retVal4)
+  | ...
 
 would look something like
 
-{ 'Astr' : [('British Astronomy Journal', retVal1),
-            ('The Astronomical Journal', retVal4), ...],
-  'Astro' : [('British Astronomy Journal', retVal1),
-             ('Astronomy Journal of Pakistan', retVal3), ...],
-  'Astronomy Jou' : [('British Astronomy Journal', retVal1),
-                     ('Ameican Astronomy Journal', retVal2), ...],
-  ...
-}
+  | { 'Astr' : [('British Astronomy Journal', retVal1),
+  |             ('The Astronomical Journal', retVal4), ...],
+  |   'Astro' : [('British Astronomy Journal', retVal1),
+  |              ('Astronomy Journal of Pakistan', retVal3), ...],
+  |   'Astronomy Jou' : [('British Astronomy Journal', retVal1),
+  |                      ('Ameican Astronomy Journal', retVal2), ...],
+  |   ...
+  | }
 
 '''
 
@@ -61,6 +62,7 @@ def __get_sub_strings__(string, min_length=3, max_length=10):
     we set the maximum to be the length of the string.
 
     Returns a set of sub-strings.
+
     '''
 
     len_string = len(string) # the length of the input string
@@ -129,6 +131,7 @@ class SearchDict(dict):
         python type.
 
         '''
+
         for substring in __split_string__(string, return_value):
             if substring[0] != '':
                 self._add(substring)
@@ -142,7 +145,10 @@ class SearchDict(dict):
         dictionary. If the sub-string already exists in the dictionary,
         then add the returnVal to that key. If the sub-string does
         not exist as a key, then add a new key with the returnVal as the first
-        element in the value list.'''
+        element in the value list.
+
+        '''
+
         if tstr[0] in self.keys():
             self[tstr[0]].append(tstr[1])
         else:

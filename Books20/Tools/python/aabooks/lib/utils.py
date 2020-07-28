@@ -53,5 +53,40 @@ def make_name_str(name_list, sep=' and '):
 
     return name_str
 
+def standard_parser_args(parser):
+    '''The configuration flags that every program should use.  This
+    function is in the Books20 library utils.py and should be called
+    after creating the parser.  This function may be used with either
+    the argparse or configargparse packages.
+
+    '''
+    
+    parser.add_argument('--version',
+                        help='show the version information and exit',
+                        default=False,
+                        action='store_true')
+    try:
+        # use only with configargparser
+        parser.add_argument('-c', '--config-path',
+                            is_config_file=True,
+                            metavar='CONF',
+                            help='path to the alternate configuration file.')
+    except TypeError:
+        pass
+    
+    parser.add_argument('--verbose',
+                        help='be noisy about our actions',
+                        default=False,
+                        action='store_true')
+    
+    parser.add_argument('--debug',
+                        help='turn on debugging information',
+                        default=False,
+                        action='store_true')
+    
+
+    return parser
+
+
 if __name__ == '__main__':
     print('No tests available yet')
