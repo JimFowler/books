@@ -44,11 +44,13 @@ from aabooks.journal import journalmenus as menus
 from aabooks.journal import jsearch as journalsearch
 from aabooks.journal import journalfile
 from aabooks.journal import journalentry
+from aabooks.journal import version as jourver
 
 from aabooks.lib import headerwindow as hw
 from aabooks.lib import entryselect as es
 from aabooks.lib import search
 from aabooks.lib import symbol
+from aabooks.lib import version as libver
 
 
 
@@ -510,13 +512,16 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         """Create help string."""
         helpstring = """<b>Journals</b> v {0}
         <p>Author: J. R. Fowler
-        <p>Copyright &copy; 2016
+        <p>Copyright &copy; 2016 -- 2020
         <p>All rights reserved.
         <p>This application is used to create and visualize
         the XML files with the Journals found in the annual
         bibliographies of <b>Astronomischer Jahresbericht</b>.
-        <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(
-            __version__, platform.python_version(),
+        <p>aabook/lib v {1}
+        <p>Python {2} - Qt {3} - PyQt {4} on {5}""".format(
+            jourver.__version__,
+            libver.__version__,
+            platform.python_version(),
             QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
             platform.system())
         return helpstring

@@ -37,9 +37,11 @@ from aabooks.ajbbook import bookfile as bf
 from aabooks.ajbbook import menus
 from aabooks.ajbbook import origstrwindow as origstr
 from aabooks.ajbbook import ajbentry
+from aabooks.ajbbook import version as ajbver
 from aabooks.lib import headerwindow as hw
 from aabooks.lib import symbol
 from aabooks.lib import entryselect as es
+from aabooks.lib import version as libver
 
 __DIRNAME, __BASENAME = os.path.split(symbol.__file__)
 __DEFAULT_SYMBOL_TABLE_NAME__ = __DIRNAME + '/symbols.txt'
@@ -973,12 +975,14 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         """comment"""
         help_str = """<b>AJB Book Entry</b> v {0}
       <p>Author: J. R. Fowler
-      <p>Copyright &copy; 2012-2017
+      <p>Copyright &copy; 2012-2020
       <p>All rights reserved.
       <p>This application is used to create and visualize
       the text files with the books found in the annual
       bibliographies of <b>Astronomischer Jahresbericht</b>.
-      <p>Python {1} - Qt {2} - PyQt {3} on {4}""".format(__version__,
+      <p>aabooks/lib v {1}
+      <p>Python {2} - Qt {3} - PyQt {4} on {5}""".format(ajbver.__version__,
+                                                         libver.__version__,
                                                          platform.python_version(),
                                                          QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
                                                          platform.system())
