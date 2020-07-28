@@ -26,4 +26,4 @@ Version of ajbbooks (also version tags for the entire repository)
 git tag -m "<msg>" -a vX.Y
 git push origin --tags
 git push github --tags
-git log -1 --format=\%ai <MY_TAG_NAME>
+git log -1 --format=medium <MY_TAG_NAME>
