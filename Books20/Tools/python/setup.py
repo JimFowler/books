@@ -27,7 +27,7 @@
 from distutils.core import setup
 
 # get the master version number for the module
-exec(open('aabook/version.py').read())
+exec(open('aabooks/version.py').read())
 
 setup(name='aabooks',
       version=__version__,
