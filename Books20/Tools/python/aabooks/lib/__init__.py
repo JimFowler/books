@@ -14,3 +14,4 @@
 ##
 ##
 ## End copyright
+from .version import __version__

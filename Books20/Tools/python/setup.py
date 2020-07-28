@@ -26,8 +26,11 @@
 
 from distutils.core import setup
 
+# get the master version number for the module
+exec(open('aabook/version.py').read())
+
 setup(name='aabooks',
-      version='1.0.0',
+      version=__version__,
       description='Books20 Project Tools',
       author='James R. Fowler',
       author_email='jrf12@mac.com',

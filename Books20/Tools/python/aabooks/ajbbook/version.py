@@ -2,11 +2,11 @@
 #
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/lib/version.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/version.py
 ##
 ##   Part of the Books20 Project
 ##
-##   Copyright 2018 James R. Fowler
+##   Copyright 2020 James R. Fowler
 ##
 ##   All rights reserved. No part of this publication may be
 ##   reproduced, stored in a retrival system, or transmitted
@@ -17,7 +17,7 @@
 ##
 ## End copyright
 
-"""The version number for Books20 python programs.
+"""The version number for Books20 aabook/ajbbook modules
 
 Store the version here so:
  1) we don't load dependencies by storing it in __init__.py
@@ -28,7 +28,7 @@ Found this at
 https://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package
 """
 
-__version_info__ = ('2', '0', '0')
+__version_info__ = ('2', '2', '0')
 __major__ = __version_info__[0]
 __minor__ = __version_info__[1]
 __micro__ = __version_info__[2]
