@@ -1,35 +1,52 @@
 25 April 2020
 
-  Add copyright notice to new AJB files
+  Add copyright notice to new AJB files, fix spelling mistake
 
   Create generic EntryList class in python/aabooks/lib.
   Make EntryList to subclass list. This make the object
   name iterable. EntryList the carries the generic metadata
   for any list, file, filetype, ??
 
-  Create Tools/sqlite. Add Makfile.am, doc.  Add to configure.ac
-  
-  Create journal database. Convert xml file to sqlite database.
-  Test SQL statements on it.
 
 30 Nov 2018
   Remove button short cuts in designer and add to menus.py
   
 15 Oct 2018
-  Consolidate .gitignore DONE 15 Oct 2018
-    move generic patterns from books/.gitignore to Books20/.gitignore
-    remove specific patterns
-    more specific patterns to directory .gitignore files
-    
-  Test QListWidget in aabooks branch
+
+Test QListWidget in aabooks branch
 
   Add more Springer Series to series.tex
   add cross links to other springer series if available
+ 
+14 Aug 2018 Consider if it is worthwhile to switch
+   to eclipse. Note that I have been using emacs since 1983
 
-  Make notes about database
+
+13 Aug 2018 Add autosave function to ajbbooks and journals
 
 
-16 Aug 2018 What should be in the bookentry package? Any functions
+  Design data structure for AJB/AAA entry/book count by section
+
+  Test MySql/PHP with copy of current book collection
+
+  Define mysql database
+
+  Define appearance of web (php) forms
+
+  Build project structure with autoconf/automake?
+
+  done 25 April 2020
+  Create Tools/sqlite. Add Makfile.am, doc.  Add to configure.ac
+  
+  Create journal database. Convert xml file to sqlite database.
+  Test SQL statements on it.
+
+
+
+Completed Tasks
+
+   done 26 July 2020
+   16 Aug 2018 What should be in the bookentry package? Any functions
    should be very generic and not depand on the specifics of journals,
    books, authors, etc. Consider name change of package to books20.
    Will need to revise documentation to include package and programs.
@@ -46,33 +63,16 @@
    Create branch to test this.
    
 
-15 Aug 2018 ajbbooks has two different values of __version__, one in
+  done 26 July 2020
+  15 Aug 2018 ajbbooks has two different values of __version__, one in
    ajbbooks and one in bookenty.mainWindow.py.  Need to distinguish
    between programs versions and package versions.
- 
-14 Aug 2018 Consider if it is worthwhile to switch
-   to eclipse. Note that I have been using emacs since 1983
-
-
-14 Aug 2018 Run pylint on all python files and
-   correct any issues as required. Look for python
-   cleanup commands in emacs. Consider autopep8 and
-   py-autopep8.el
-
-13 Aug 2018 Add autosave function to ajbbooks and journals
-
-
-  Design data structure for AJB/AAA entry/book count by section
-
-  Test MySql/PHP with copy of current book collection
-
-  Define mysql database
-
-  Define appearance of web (php) forms
-
-  Build project structure with autoconf/automake?
-
-
+  done 15 Oct 2018
+  Consolidate .gitignore DONE 15 Oct 2018
+    move generic patterns from books/.gitignore to Books20/.gitignore
+    remove specific patterns
+    more specific patterns to directory .gitignore files
+    
   done 26 Aug 2018
    14 Aug 2018 add .emacs file to Macbook
    20 Aug 2018 Add menu options and ^F/^B shortcuts for next/previous record.
