@@ -7,7 +7,7 @@
 ..    Copyright 2020 James R. Fowler
 .. 
 ..    All rights reserved. No part of this publication may be
-..    reproduced, stored in a retrival system, or transmitted
+..    reproduced, stored in a retrieval system, or transmitted
 ..    in any form or by any means, electronic, mechanical,
 ..    photocopying, recording, or otherwise, without prior written
 ..    permission of the author.
@@ -41,10 +41,19 @@ EntrySelect
    :members:
    :show-inheritance:
 
+		   
 HeaderWindow
 ============
 
 .. automodule:: headerwindow
+   :members:
+   :show-inheritance:
+
+
+Pagination
+==========
+
+.. automodule:: pagination_xml
    :members:
    :show-inheritance:
 
@@ -87,4 +96,13 @@ Utils
 .. automodule:: utils
    :members:
    :show-inheritance:
+
+
+Version
+=======
+
+.. automodule:: version
+   :members:
+   :show-inheritance:
+
 

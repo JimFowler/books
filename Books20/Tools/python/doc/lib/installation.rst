@@ -1,6 +1,6 @@
 ..  Begin copyright
 .. 
-..   /home/jrf/Documents/books/Books20/Tools/python/doc/journals/installation.rst
+..   /home/jrf/Documents/books/Books20/Tools/python/doc/lib/installation.rst
 ..   
 ..    Part of the Books20 Project
 .. 

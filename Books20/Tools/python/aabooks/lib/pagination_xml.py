@@ -9,30 +9,73 @@
 # Copyright 2018 James R. Fowler
 #
 # All rights reserved. No part of this publication may be
-# reproduced, stored in a retrival system, or transmitted
+# reproduced, stored in a retrieval system, or transmitted
 # in any form or by any means, electronic, mechanical,
 # photocopying, recording, or otherwise, without prior written
 # permission of the author.
 #
 #
 # End copyright
-'''Convert pagination string of the form
-<count><code>[+<count><code>[+...]] to XML pagination elements and the
-reverse.
+'''
+Convert a pagination string of the form
 
-Example 12pp+203pm+23AA+3t+34i+12P  converts to
+<count><code>[+<count><code>[+...]]
 
-<Pagination>
-  <Preface>12</Preface>
-  <Main>203</Main>
-  <Appendix_A>23</Appendix_A>
-  <Tables>3</Tables>
-  <Illustrations>34</Illustrations>
-  <Plates>12</Plates>
-  ...
-</Pagination>
+to XML pagination elements and the reverse.
+
+Example 12pp+203pm+23AA+3t+34i+12P  converts to::
+
+  <Pagination>
+    <Preface>12</Preface>
+    <Main>203</Main>
+    <Appendix_A>23</Appendix_A>
+    <Tables>3</Tables>
+    <Illustrations>34</Illustrations>
+    <Plates>12</Plates>
+    ...
+  </Pagination>
+
+
+Known text codes and their matching XML tags are::
+
+  __TAG_TO_XML_NAME__ = {
+    'AA' : 'Appendix_A',
+    'AB' : 'Appendix_B',
+    'AC' : 'Appendix_C',
+    'AD' : 'Appendix_D',
+    'AE' : 'Appendix_E',
+    'AF' : 'Appendix_F',
+    'AG' : 'Appendix_G',
+    'b'  : 'Models',
+    'c'  : 'Charts',
+    'D'  : 'Diagrams',
+    'd'  : 'Drawings',
+    'F'  : 'Frontispiece',
+    'f'  : 'Figures',
+    'i'  : 'Illustrations',
+    'h'  : 'Woodcuts',
+    'M'  : 'Maps',
+    'n'  : 'Nomograms',
+    'bP' : 'BW_Plates',
+    'cP' : 'Colour_Plates',
+    'P'  : 'Plates',
+    'pp' : 'Preface',
+    'p'  : 'Main',
+    'pa' : 'Afterword',
+    # Other unknown sections
+    'pb' : 'OtherSec_2',
+    'pc' : 'OtherSec_3',
+    'pd' : 'OtherSec_4',
+    'pe' : 'OtherSec_5',
+    # Not sure how these last two names are used so I am sticking with
+    # the German words for now.
+    't'  : 'Tafeln',
+    'T'  : 'Tabellen',
+  }
+
 
 '''
+
 import re
 from lxml import etree
 
@@ -101,9 +144,16 @@ __RE_EXP_TAG__ = 2
 ## Public Functions
 ##
 def pagination_string_to_xml(pagination_string):
-    '''Convert a pagination string to a XML pagination element. A
+    '''
+    Convert a pagination string to a XML pagination element. A
     pagination string is a string of counts and tags separated by '+'
     character.
+
+    Returns an lxml.etree.Element with at least::
+
+      <Pagination>
+      </Pagination>
+
 
     '''
 
@@ -132,7 +182,13 @@ def pagination_string_to_xml(pagination_string):
 
 
 def xml_to_pagination_string(elem):
-    '''Convert an XML Pagination element to a pagination string'''
+    '''
+    Convert an lml.etree.Element XML Pagination element to a pagination
+    string.
+
+    Returns a string
+
+    '''
 
     pagination_string = ''
 
@@ -157,6 +213,7 @@ def xml_to_pagination_string(elem):
 
 ##
 ## Test everything
+## convert to unit tests
 ##
 if __name__ == '__main__':
 

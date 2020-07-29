@@ -9,7 +9,7 @@
 ##   Copyright 2020 James R. Fowler
 ##
 ##   All rights reserved. No part of this publication may be
-##   reproduced, stored in a retrieval system, or transmitted
+##   reproduced, stored in a retrival system, or transmitted
 ##   in any form or by any means, electronic, mechanical,
 ##   photocopying, recording, or otherwise, without prior written
 ##   permission of the author.
@@ -23,11 +23,8 @@ as well as the metadata associated with the entries.  The entries are
 typically defined by event.py but may be defined as something else. An
 EntryList typically consists of a header and a list of entries.
 
-For the user of this class, the entries are counted from 1 to
-max_entries(), however, the normal list style is to count from 0 to
-max_entries() - 1. This will certainly change in the future to be
-more pythonic.  Will need to update the documentation and unit tests
-when I do.
+The list internally has 0-based indexing and does allow the use of
+indexing from the end of the list with -1, etc.
 
 The generic metadate that are associated with entries are
 
@@ -84,8 +81,8 @@ class EntryList(list):
         self._basename = 'document1'
         self._extension = '.txt'
 
-        # 1 <= current_entry_index <= len(self.)
-        self.current_entry_index = -1
+        # the index of the current entry (record)
+        self._current_index = 0
 
         self._dirty = False
 
@@ -96,12 +93,33 @@ class EntryList(list):
         """
         return self._dirty
 
-    def max_entries(self):
-        '''Return the number of entries in the entry_list.
+    def set_current_index(self, index):
+        '''Set the current_index to index, if count is
+        a legal list index, i.e. -n <= count < n, where n is
+        the length of the list.
+
+        returns True or False
 
         '''
-        return len(self)
 
+        length = len(self)
+        if -length <= index < 0:
+            self._current_index = length - index
+            return True
+        elif 0 <= index < length:
+            self._current_index = index
+            return True
+
+        return False
+
+    def get_current_index(self):
+        """Get the value of the metadata current_index. This indicates
+        what entry (record) we are working on currently.
+
+        """
+        return self.current_index
+
+    
     # Functions dealing with the file name
 
     def set_filename(self, filename):
@@ -174,23 +192,25 @@ class EntryList(list):
 
     # current entry
 
-    def set_new_entry(self, entry, count=-1):
-        """Append an entry to the list or insert before entry 'count',
-        if that value is given. Note that 1 <= count <= len(self.).
+    def set_new_entry(self, entry, index=None):
+        """Append an entry to the list or insert before entry 'index',
+        if that value is given. Note that -len(self) <= index < len(self).
         The dirty flag is set for the file.
 
+        This does the insert and append actions
         """
 
         if not entry.is_valid():
             return False
 
-        if 1 <= count <= len(self):
-            # count is within the list, insert the entry
-            self.current_entry_index = count - 1
-            self.insert(self.current_entry_index, entry)
-        else:
-            # count is not within the list, append the entry
+        if count is None or -len(self) <= count < len(self):
+            # index is not within the list, append the entry
             self.append(entry)
+            self.set_current_index(len(self))
+        else:
+            # count is within the list, insert the entry
+            self.current_index = count
+            self.insert(self.current_entry_index, entry)
 
         self._dirty = True
 
@@ -206,42 +226,45 @@ class EntryList(list):
 
         Should we consider generating an exception if we can't write?
 
+        This does the replace action.
+
         """
         if not entry.is_valid():
             return False
 
-        if count != -1 and not 1 <= count <= len(self):
+        if count != -1 and not 0 <= count < len(self):
             return False
 
         if count != -1:
-            self.current_entry_index = count - 1
+            self.current_entry_index = count
 
         self[self.current_entry_index] = entry
         self._dirty = True
 
         return True
 
-    def get_entry(self, count=-1):
+    def get_entry(self, count=None):
         """Returns the entry at position count. If count is less than 1
         or greater than the number of entries, 'None' is returned. Note
         that 1 <= count <= len(self.).
 
         """
-        if count < 1 or count > len(self):
-            return None
-
-        # the list actually counts with a zero-based index
-        self.current_entry_index = count - 1
+        #if count < 1 or count > len(self):
+        if count is not None:
+            self._set_index_count(count)
+            
         return self[self.current_entry_index]
 
     def delete_entry(self, entrynum):
         """Delete the entryNum record in the list, if such exists.
         Return the length of the remaining list.
 
+        This does the delete action
+
         """
-        if 0 < entrynum <= len(self):
-            self.pop(entrynum - 1)
-            self._dirty = True
+
+        self.pop(entrynum)
+        self._dirty = True
 
         return len(self)
 
@@ -409,30 +432,30 @@ It contains three lines."""
 
             # test set_new_entry with valid entry and check dirty flag set 1
             self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(0), self.entry1)
             self.assertTrue(self.ev_list.is_dirty())
 
             # test set_new_entry with second valid entry 12
             self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertEqual(self.ev_list.get_entry(2), self.entry2)
+            self.assertEqual(self.ev_list.get_entry(1), self.entry2)
 
             # test set_new_entry insertion of entry 312
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 0))
+            self.assertEqual(self.ev_list.get_entry(0), self.entry3)
 
             # test set_new_entry insertion of entry with invalid count 3121
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 4))
-            self.assertEqual(self.ev_list.get_entry(4), self.entry1)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 3))
+            self.assertEqual(self.ev_list.get_entry(3), self.entry1)
 
             # test set_new_entry with invalid entry
             self.assertFalse(self.ev_list.set_new_entry(self.entry4))
 
             
             # test get_entry with counts inside and outside of invalid values
-            self.assertIsNone(self.ev_list.get_entry(0))
-            self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()+1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry1)
+            self.assertIsNone(self.ev_list.get_entry(-1))
+            self.assertIsNone(self.ev_list.get_entry(len(self.ev_list)))
+            self.assertEqual(self.ev_list.get_entry(0), self.entry3)
+            self.assertEqual(self.ev_list.get_entry(-1), self.entry1)
 
             # Test set_entry
 
@@ -448,7 +471,7 @@ It contains three lines."""
 
             # test set_entry with invalid count
             self.assertFalse(self.ev_list.set_entry(self.entry2, 0))
-            self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()+1))
+            self.assertFalse(self.ev_list.set_entry(self.entry2, len(self.ev_list)))
 
             # test delete_entry 123
             self.assertEqual(self.ev_list.max_entries(), 4)
@@ -456,7 +479,7 @@ It contains three lines."""
 
             # test delete_entry with invalid count 123
             self.assertEqual(self.ev_list.delete_entry(0), 3)
-            self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
+            self.assertEqual(self.ev_list.delete_entry(len(self.ev_list), 3))
 
 
         def test_read_file(self):
