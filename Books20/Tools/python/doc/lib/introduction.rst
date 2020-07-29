@@ -1,13 +1,13 @@
 ..  Begin copyright
 .. 
-..   /home/jrf/Documents/books/Books20/Tools/python/doc/journals/introduction.rst
+..   /home/jrf/Documents/books/Books20/Tools/python/doc/lib/introduction.rst
 ..   
 ..    Part of the Books20 Project
 .. 
-..    Copyright 2016 James R. Fowler
+..    Copyright 2020 James R. Fowler
 .. 
 ..    All rights reserved. No part of this publication may be
-..    reproduced, stored in a retrival system, or transmitted
+..    reproduced, stored in a retrieval system, or transmitted
 ..    in any form or by any means, electronic, mechanical,
 ..    photocopying, recording, or otherwise, without prior written
 ..    permission of the author.
@@ -22,16 +22,14 @@ Introduction
 Overview
 ========
 
-The **journals** program is part of the *Books20* project, which is
-designed to catalog books published in Astronomy and Astrophysics
-during the 20th Century. **journals** is designed to ease the
-cataloging of journalentries found in the annual bibliographies
-*Astronomischer Jahrsbericht* by providing a graphical interface that
-focuses on the information and not on the formatting.
+The **aabooks.lib** module is part of the **aabooks** python module in
+the *Books20* project. The project is designed to catalog books
+published in Astronomy and Astrophysics during the 20th
+Century. **aabooks.lib** contains the common python files used
+by the various programs in the project
 
-**journals** was initially developed in Python 3.4.3 under Ubuntu 14.04
-and uses Qt 4.8.6 with PyQt 4.10.4 for the graphical portions of the
-software.
+**aabooks.lib** was initially developed in 2018 Python 3.5 under Ubuntu 18.04.
+It currently runs under Python 3.7.
 
 The *Astronomischer Jahrsbericht* (AJB) is an annual publication which
 indexes all publications in Astronomy and Astrophysics for the
@@ -47,19 +45,15 @@ English, as English had become the dominant language in Astronomy
 after World War Two, and was published until 2000 when the online
 versions became the dominant mechanism for literature searches.
 
-The AJB volumes contain a list of the journals reviewed for that
-particular volume and year. The *Books20* needs references to these
-journals so that the book reviews may be linked more information about
-the journal
-
 
 History
 =======
 
-Although initial cataloging of books was started with AJB volume 68 in
-late September of 2010, I did not have a need for the journal entries
-until 2016 when I began thinking about the final database. I had
-already written **ajbbooks** and was working on version 2.0 of that
-program using XML as the output format.  I was also beginning to work
-on the SQLlite version of my library collection.  These factors
-motivated me to add the **journals** programs to my toolbox.
+Initial cataloging of books was started with the AJB volumes in late
+September of 2010 using the **bookentry** program, later renamed as
+**ajbooks**. In 2016 work was started on the **journal** program
+to capture information about the journals that held reviews of the
+books.  There were many files that were common to both programs and at
+first the were loaded from the module ajbbooks. This quickly became a
+nuisance and in 2018 these files were split into **aabook.lib**,
+**aabook.ajbbook**, and **aabook.journal**.

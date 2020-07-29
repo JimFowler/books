@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to aabooks_lib's documentation!
+Welcome to aabooks.lib documentation!
 =======================================
 
 .. toctree::
@@ -12,7 +12,6 @@ Welcome to aabooks_lib's documentation!
 
    introduction
    installation
-   configuration
    classes
    
 
