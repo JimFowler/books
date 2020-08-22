@@ -46,6 +46,7 @@ volumes of the Astronomischer Jahresbericht
   </xs:complexType>
 </xs:element>
 
+<!-- Should consider moving this to a separate entry.xsd -->
 <xs:complexType name="entry">
   <xs:all>
     <!-- An Entry must have at least a Title and an Index to be valid -->
@@ -142,6 +143,9 @@ volumes of the Astronomischer Jahresbericht
 <xs:complexType name="index">
   <xs:all>
     <xs:element name="IndexName"        type="xs:string"/>
+    <!-- minOccurs="0" is here for backward compatibilty until
+	 we add page numbers to all entries -->
+    <xs:element name="PageNumber"       type="xs:string" minOccurs="0"/>
     <xs:element name="VolumeNumber"     type="xs:integer"/>
     <xs:element name="SectionNumber"    type="xs:integer"/>
     <xs:element name="SubSectionNumber" type="xs:integer"/>

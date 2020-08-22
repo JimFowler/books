@@ -42,6 +42,7 @@ Entry format
     <Entry>
       <Index>
  	<IndexName>  AJB </IndexName>
+	<PageNumber> 12 </PageNumber>
 	<VolumeNumber> 58 </VolumeNumber>
 	<SectionNumber> 3 </SectionNumber>
 	<SubSectionNumber> 0 </SubSectionNumber>
