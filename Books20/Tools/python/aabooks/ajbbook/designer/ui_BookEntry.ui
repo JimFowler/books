@@ -71,6 +71,9 @@
       <property name="text">
        <string>Pages:</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
      </widget>
     </item>
     <item row="15" column="16" colspan="6">
@@ -214,10 +217,10 @@
        </font>
       </property>
       <property name="text">
-       <string>Edition</string>
+       <string>Edition:</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
     </item>
@@ -442,20 +445,6 @@
       </property>
       <property name="text">
        <string>Quit</string>
-      </property>
-     </widget>
-    </item>
-    <item row="17" column="7" colspan="2">
-     <widget class="QLabel" name="intoLabel">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>into:</string>
       </property>
      </widget>
     </item>
@@ -831,7 +820,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Subsection</string>
+       <string>Subsect</string>
       </property>
      </widget>
     </item>
@@ -853,7 +842,7 @@
      <widget class="QLineEdit" name="itemNum">
       <property name="minimumSize">
        <size>
-        <width>0</width>
+        <width>85</width>
         <height>32</height>
        </size>
       </property>
@@ -885,7 +874,7 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="5" colspan="3">
+    <item row="3" column="5">
      <widget class="QLineEdit" name="pageNum">
       <property name="minimumSize">
        <size>
@@ -906,7 +895,78 @@
       </property>
      </widget>
     </item>
+    <item row="17" column="7" colspan="5">
+     <widget class="QLabel" name="intoLabel">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>into:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
    </layout>
+   <zorder>editorLabel</zorder>
+   <zorder>deleteButton</zorder>
+   <zorder>pageLabel</zorder>
+   <zorder>priceEntry</zorder>
+   <zorder>referenceLabel</zorder>
+   <zorder>secNum</zorder>
+   <zorder>yearEntry</zorder>
+   <zorder>priceLabel</zorder>
+   <zorder>translatorEntry</zorder>
+   <zorder>volLabel</zorder>
+   <zorder>indexEntry</zorder>
+   <zorder>editionLabel</zorder>
+   <zorder>titleEntry</zorder>
+   <zorder>authorEntry</zorder>
+   <zorder>contribLabel</zorder>
+   <zorder>publEntry</zorder>
+   <zorder>indexLabel</zorder>
+   <zorder>acceptButton</zorder>
+   <zorder>newEntryButton</zorder>
+   <zorder>publLabel</zorder>
+   <zorder>commentsLabel</zorder>
+   <zorder>reviewsEntry</zorder>
+   <zorder>reviewsLabel</zorder>
+   <zorder>compilersEntry</zorder>
+   <zorder>commentsEntry</zorder>
+   <zorder>quitButton</zorder>
+   <zorder>intoLabel</zorder>
+   <zorder>authorLabel</zorder>
+   <zorder>editorEntry</zorder>
+   <zorder>titleLabel</zorder>
+   <zorder>translateLabel</zorder>
+   <zorder>tolangEntry</zorder>
+   <zorder>editionEntry</zorder>
+   <zorder>compilersLabel</zorder>
+   <zorder>reprintEntry</zorder>
+   <zorder>contribEntry</zorder>
+   <zorder>pageEntry</zorder>
+   <zorder>yearLabel</zorder>
+   <zorder>volNum</zorder>
+   <zorder>ofnumLabel</zorder>
+   <zorder>secLabel</zorder>
+   <zorder>translatebyLabel</zorder>
+   <zorder>prevButton</zorder>
+   <zorder>nextButton</zorder>
+   <zorder>insertButton</zorder>
+   <zorder>referenceEntry</zorder>
+   <zorder>reprintLabel</zorder>
+   <zorder>fromlangEntry</zorder>
+   <zorder>subSecNum</zorder>
+   <zorder>subSecLabel</zorder>
+   <zorder>itemLabel</zorder>
+   <zorder>pageNumLabel</zorder>
+   <zorder>pageNum</zorder>
+   <zorder>itemNum</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -925,7 +985,6 @@
   <tabstop>secNum</tabstop>
   <tabstop>subSecNum</tabstop>
   <tabstop>itemNum</tabstop>
-  <tabstop>pageNum</tabstop>
   <tabstop>authorEntry</tabstop>
   <tabstop>titleEntry</tabstop>
   <tabstop>editorEntry</tabstop>
