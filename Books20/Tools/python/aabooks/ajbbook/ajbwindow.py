@@ -87,7 +87,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                                    'Reprint', 'Others', 'OrigStr', 'Comments', ]
 
         # lists of which display fields may or may not have symbol entry allowed
-        self.no_entry_list = ['volNum', 'secNum', 'subSecNum', 'itemNum',
+        self.no_entry_list = ['volNum', 'secNum', 'subSecNum', 'itemNum', 'pageNum'
                               'yearEntry', 'pageEntry', 'indexEntry',
                               'editionEntry', 'referenceEntry', 'reprintEntry']
         self.set_text_entry_list = ['authorEntry', 'editorEntry', 'titleEntry',
@@ -115,6 +115,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.secNum.textChanged.connect(self.set_entry_dirty)
         self.subSecNum.textChanged.connect(self.set_entry_dirty)
         self.itemNum.textChanged.connect(self.set_entry_dirty)
+        self.pageNum.textChanged.connect(self.set_entry_dirty)
         self.authorEntry.textChanged.connect(self.set_entry_dirty)
         self.editorEntry.textChanged.connect(self.set_entry_dirty)
         self.titleEntry.textChanged.connect(self.set_entry_dirty)
@@ -189,7 +190,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         # else get a file name
         fname, filtera = QtWidgets.QFileDialog.getOpenFileName(self,
-                                                               "%s -- Choose new file" % QtGui.QApplication.applicationName(),
+                                                               "%s -- Choose new file" % QtWidgets.QApplication.applicationName(),
                                                                self.bookfile.get_dirname(),
                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
         if fname:
@@ -575,6 +576,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         else:
             self.subSecNum.setText('0')
         self.itemNum.setText(str(a['entryNum']) + a['entrySuf'])
+        self.pageNum.setText(str(a['pageNum']))
 
         # Authors
         astr = ''
@@ -775,6 +777,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             num['subsectionNum'] = int(self.subSecNum.text())
             num['entryNum'] = int(items[1])
             num['entrySuf'] = items[2]
+            num['pageNum'] = int(self.pageNum.text())
         except:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             tb = traceback.format_tb(exc_traceback)

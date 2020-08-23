@@ -102,6 +102,7 @@ class AJBentry(entry.Entry):
 
         self['Index'] = -1
         self['Num'] = {'volNum':-1,
+                       'pageNum': -1,
                        'sectionNum':-1,
                        'subsectionNum':-1,
                        'entryNum':-1,
@@ -712,6 +713,10 @@ class AJBentry(entry.Entry):
         elm = etree.SubElement(index_xml, 'IndexName')
         elm.text = str(ajbnum['volume']).strip()
 
+        if ajbnum['pageNum'] != -1:
+            elm = etree.SubElement(index_xml, 'PageNumber')
+            elm.text = str(ajbnum['pageNum'])
+
         elm = etree.SubElement(index_xml, 'VolumeNumber')
         elm.text = str(ajbnum['volNum'])
 
@@ -780,6 +785,8 @@ class AJBentry(entry.Entry):
                         mreg = __reg2__.match(elm.text)
                         self['Num']['entryNum'] = int(mreg.group(1))
                         self['Num']['entrySuf'] = mreg.group(2)
+                    elif elm.tag == 'PageNumber':
+                        self['Num']['pageNum'] = int(elm.text)
                     else:
                         pass
 
