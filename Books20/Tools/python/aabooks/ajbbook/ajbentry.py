@@ -23,21 +23,17 @@ the form Entry.py.entry()."""
 
 
 import re
-from lxml import etree
 
-from nameparser import HumanName
 from aabooks.lib import entry
 from aabooks.lib import utils
 from aabooks.ajbbook import AJBcomments as comments
-
+from aabooks.ajbbook import entryxml
 #
 # Don't build the regular expression compilers everytime
 #  we build and entry.
 #
 __reg1__ = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
-__reg2__ = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
-__reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})',
-                      re.UNICODE)
+__reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
 class AJBentry(entry.Entry):
 
@@ -167,6 +163,12 @@ class AJBentry(entry.Entry):
             return True
         return False
 
+    def entry_from_xml(self, xmlstr):
+        entryxml.entry_from_xml(self, xmlstr)
+
+    def entry_to_xml(self):
+        return entryxml.entry_to_xml(self)
+    
     #
     # Ascii comma separated variable file, read/write functions
     #
@@ -556,475 +558,36 @@ class AJBentry(entry.Entry):
                 else:
                     print('Unknown grammer name %s' % grammar_name)
 
-    #
-    # XML create routines
-    #
-    def write_xml_from_entry(self):
-        '''Create an XML etree element with the root tag Entry from
-        the entry.'''
-
-        if not self.is_valid:
-            return None
-
-        # Title and Index are required of any entry
-        entryxml = etree.Element('Entry')
-
-        anum = self['Num']
-        entryxml.append(self.make_ajbnum_xml(anum))
-
-        elm = etree.SubElement(entryxml, 'Title')
-        elm.text = self['Title']
-
-        # This ends the required elements.  All further elements
-        # may be missing or blank.
-
-        if self.not_empty('subTitle'):
-            elm = etree.SubElement(entryxml, 'SubTitle')
-            elm.text = self['subTitle']
-
-        # Create the people list, right now these lists are
-        # only HumanNames but we need to add business names
-        # in the future.
-        if self['Authors']:
-            elm = etree.SubElement(entryxml, 'Authors')
-            for author in self['Authors']:
-                autelm = etree.SubElement(elm, 'Author')
-                # all authors are humannames right now.
-                person = self.make_person_xml(author)
-                autelm.append(person)
-
-        if self['Editors']:
-            elm = etree.SubElement(entryxml, 'Editors')
-            for editor in self['Editors']:
-                edelm = etree.SubElement(elm, 'Editor')
-                # all authors are humannames right now.
-                person = self.make_person_xml(editor)
-                edelm.append(person)
-
-        if self['Publishers']:
-            elm = etree.SubElement(entryxml, 'Publishers')
-            for publ in self['Publishers']:
-                epub = etree.SubElement(elm, 'Publisher')
-
-                eplace = etree.Element('Place')
-                eplace.text = publ['Place']
-                epub.append(eplace)
-
-                epn = etree.Element('Name')
-                epn.text = publ['PublisherName']
-                epub.append(epn)
-
-        if self.not_empty('Year'):
-            elm = etree.SubElement(entryxml, 'Year')
-            elm.text = str(self['Year'])
-
-        if self.not_empty('Edition'):
-            elm = etree.SubElement(entryxml, 'Edition')
-            elm.text = str(self['Edition'])
-
-        if self.not_empty('Pagination'):
-            elm = etree.SubElement(entryxml, 'Pagination')
-            elm.text = str(self['Pagination'])
-
-        # The schema defines a price with currency and value
-        # but we need to do some intellegent parsing of the prices
-        # before we can use this.  For now we just naively use
-        # the string.
-        if self.not_empty('Price'):
-            elm = etree.SubElement(entryxml, 'Prices')
-            for price in self['Price'].split(' and '):
-                priceelm = etree.SubElement(elm, 'Price')
-                priceelm.text = price
-
-        if self['Reviews']:
-            elm = etree.SubElement(entryxml, 'Reviews')
-            for rev in self['Reviews']:
-                revelm = etree.SubElement(elm, 'Review')
-                revelm.text = str(rev)
-
-        if self.not_empty('TranslatedFrom'):
-            elm = etree.SubElement(entryxml, 'TranslatedFrom')
-            elm.text = str(self['TranslatedFrom'])
-
-        if self.not_empty('Language'):
-            elm = etree.SubElement(entryxml, 'Language')
-            elm.text = str(self['Language'])
-
-        if self['Translators']:
-            elm = etree.SubElement(entryxml, 'Translators')
-            for trans in self['Translators']:
-                aelm = etree.SubElement(elm, 'Translator')
-                # all translators are humannames right now.
-                person = self.make_person_xml(trans)
-                aelm.append(person)
-
-        if self['Compilers']:
-            elm = etree.SubElement(entryxml, 'Compilers')
-            for compiler in self['Compilers']:
-                aelm = etree.SubElement(elm, 'Compiler')
-                # all compilers are humannames right now.
-                person = self.make_person_xml(compiler)
-                aelm.append(person)
-
-        if self['Contributors']:
-            elm = etree.SubElement(entryxml, 'Contributors')
-            for contrib in self['Contributors']:
-                aelm = etree.SubElement(elm, 'Contributor')
-                # all contributors are humannames right now.
-                person = self.make_person_xml(contrib)
-                aelm.append(person)
-
-        # Sometimes the reprint can be just a year number rather than
-        # an AJBnum.  An AJBnum should have decimal points in it and
-        # Years should not, so we look for a decimal point to determine
-        # which it is.
-        if self.not_empty('Reprint'):
-            elm = etree.SubElement(entryxml, 'ReprintOf')
-            if len(self['Reprint'].split('.')) == 1:
-                # Must be a year
-                eyear = etree.SubElement(elm, 'Year')
-                eyear.text = self['Reprint']
-            else:
-                numdict = self._parse_ajbnum(self['Reprint'])
-                num = self.make_ajbnum_xml(numdict)
-                elm.append(num)
-
-        if self.not_empty('Reference'):
-            elm = etree.SubElement(entryxml, 'ReferenceOf')
-            numdict = self._parse_ajbnum(self['Reference'])
-            ajbxml = self.make_ajbnum_xml(numdict)
-            elm.append(ajbxml)
-
-
-        if self['Others']:
-            elm = etree.SubElement(entryxml, 'Comments')
-            for comment in self['Others']:
-                com = etree.SubElement(elm, 'Comment')
-                com.text = comment
-
-        # return the root Entry element
-        return entryxml
-
-
-    def make_ajbnum_xml(self, ajbnum):
-        '''Write an XML version of an AJB number as an index
-        element. The index argument must be a dictionary'''
-        index_xml = etree.Element('Index')
-
-        elm = etree.SubElement(index_xml, 'IndexName')
-        elm.text = str(ajbnum['volume']).strip()
-
-        if ajbnum['pageNum'] != -1:
-            elm = etree.SubElement(index_xml, 'PageNumber')
-            elm.text = str(ajbnum['pageNum'])
-
-        elm = etree.SubElement(index_xml, 'VolumeNumber')
-        elm.text = str(ajbnum['volNum'])
-
-        elm = etree.SubElement(index_xml, 'SectionNumber')
-        elm.text = str(ajbnum['sectionNum'])
-
-        elm = etree.SubElement(index_xml, 'SubSectionNumber')
-        elm.text = str(ajbnum['subsectionNum'])
-
-        elm = etree.SubElement(index_xml, 'EntryNumber')
-        elm.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
-
-        return index_xml
-
-
-    def make_person_xml(self, hname):
-        '''Create a Person element from a HumanName object. Returns the Person
-        element.
-
-        '''
-
-        person_xml = etree.Element('Person')
-
-        if hname.title:
-            elm = etree.SubElement(person_xml, 'Prefix')
-            elm.text = hname.title
-
-        if hname.first:
-            elm = etree.SubElement(person_xml, 'First')
-            elm.text = hname.first
-
-        if hname.middle:
-            elm = etree.SubElement(person_xml, 'Middle')
-            elm.text = hname.middle
-
-        if hname.last:
-            elm = etree.SubElement(person_xml, 'Last')
-            elm.text = hname.last
-
-        if hname.suffix:
-            elm = etree.SubElement(person_xml, 'Suffix')
-            elm.text = hname.suffix
-
-        return person_xml
-
-    def read_xml_to_entry(self, elxml):
-        '''Parse an XML element of an Entry and place the information
-        into the AJBentry dictionary. This is a bit tricky.  XML entries
-        contain more information than the AJBentry does.'''
-
-        for child in elxml:
-            #print('child is ', child.tag)
-
-            if child.tag == 'Index':
-                for elm in child:
-                    if elm.tag == 'IndexName':
-                        self['Num']['volume'] = elm.text
-                    elif elm.tag == 'VolumeNumber':
-                        self['Num']['volNum'] = int(elm.text)
-                    elif elm.tag == 'SectionNumber':
-                        self['Num']['sectionNum'] = int(elm.text)
-                    elif elm.tag == 'SubSectionNumber':
-                        self['Num']['subsectionNum'] = int(elm.text)
-                    elif elm.tag == 'EntryNumber':
-                        # need to split off the suffix, use regex
-                        mreg = __reg2__.match(elm.text)
-                        self['Num']['entryNum'] = int(mreg.group(1))
-                        self['Num']['entrySuf'] = mreg.group(2)
-                    elif elm.tag == 'PageNumber':
-                        self['Num']['pageNum'] = int(elm.text)
-                    else:
-                        pass
-
-            if child.tag == 'Title':
-                self['Title'] = child.text
-
-            # subTitle and subsubTitle not supported in AJBentry
-            if child.tag == 'subTitle':
-                self['Title'] += child.text
-
-            if child.tag == 'subsubTitle':
-                self['Title'] += child.text
-
-            if child.tag == 'Authors':
-                for author in child:
-                    for g2ent in author:
-                        if g2ent.tag == 'Person':
-                            self['Authors'].append(self.person_name_from_xml(g2ent))
-
-            if child.tag == 'Editors':
-                # PersonInfo or CorporateBody
-                for editor in child:
-                    for g2ent in editor:
-                        if g2ent.tag == 'Person':
-                            self['Editors'].append(self.person_name_from_xml(g2ent))
-
-            if child.tag == 'Publishers':
-                # Place and Name
-                for publ in child:
-                    publisher = {}
-                    for pub in publ:
-                        if pub.tag == 'Place':
-                            if pub.text is not None:
-                                publisher['Place'] = str(pub.text)
-                            else:
-                                publisher['Place'] = ''
-
-                        elif pub.tag == 'Name':
-                            if pub.text is not None:
-                                publisher['PublisherName'] = str(pub.text)
-                            else:
-                                publisher['PublisherName'] = ''
-
-                        else:
-                            pass
-                    self['Publishers'].append(publisher)
-
-            if child.tag == 'Year':
-                self['Year'] = child.text
-
-            if child.tag == 'Edition':
-                self['Edition'] = child.text
-
-            if child.tag == 'Pagination':
-                self['Pagination'] = child.text
-
-            if child.tag == 'Prices':
-                first = True
-                self['Price'] = ''
-                for price in child:
-                    if first:
-                        first = False
-                    else:
-                        self['Price'] += ' and '
-                    self['Price'] += price.text
-
-            if child.tag == 'Reviews':
-                for review in child:
-                    self['Reviews'].append(review.text)
-
-
-            if child.tag == 'TranslatedFrom':
-                self['TranslatedFrom'] = child.text
-
-            if child.tag == 'Language':
-                self['Language'] = child.text
-
-            if child.tag == 'Translators':
-                # PersonInfo or CorporateBody
-                for trans in child:
-                    for g2ent in trans:
-                        if g2ent.tag == 'Person':
-                            self['Translators'].append(self.person_name_from_xml(g2ent))
-
-            if child.tag == 'Compilers':
-                # PersonInfo or CorporateBody
-                for comp in child:
-                    for g2ent in comp:
-                        if g2ent.tag == 'Person':
-                            self['Compilers'].append(self.person_name_from_xml(g2ent))
-
-            if child.tag == 'Contributors':
-                # PersonInfo or CorporateBody
-                for contr in child:
-                    for g2ent in contr:
-                        if g2ent.tag == 'Person':
-                            self['Contributors'].append(self.person_name_from_xml(g2ent))
-
-            if child.tag == 'ReprintOf':
-                # Year or AJBnum but only one
-                for reprint in child:
-                    if reprint.tag == 'Year':
-                        self['Reprint'] = reprint.text
-                    elif reprint.tag == 'Index':
-                        self['Reprint'] = self.ajbstr_from_xml(reprint)
-
-
-            if child.tag == 'ReferenceOf':
-                # AJBnum
-                subsectionnum = '0'
-                for ell in child:
-                    if ell.tag == 'Index':
-                        self['Reference'] = self.ajbstr_from_xml(ell)
-
-            if child.tag == 'Comments':
-                for comment in child:
-                    self['Others'].append(comment.text)
-
-    def ajbstr_from_xml(self, ell):
-        '''Return a AJB number as a string "AJB xx.xxx(xx).xx[a]" from
-        an XML Index element.'''
-
-        for elm in ell:
-            if elm.tag == 'IndexName':
-                aname = elm.text
-            elif elm.tag == 'VolumeNumber':
-                volnum = '%02d'%int(elm.text)
-            elif elm.tag == 'SectionNumber':
-                sectionnum = '%02d'%int(elm.text)
-            elif elm.tag == 'SubSectionNumber':
-                subsectionnum = elm.text
-            elif elm.tag == 'EntryNumber':
-                mreg = __reg2__.match(elm.text)
-                entrynum = '%02d'%int(mreg.group(1))
-                entrysuf = mreg.group(2)
-        return aname + ' ' + volnum + '.' + sectionnum + '.' + entrynum + entrysuf
-
-
-    def person_name_from_xml(self, ell):
-        '''Create a person mane from an XML element.'''
-        hname = HumanName()
-        for elm in ell:
-            if elm.tag == 'First':
-                hname.first = elm.text
-            elif elm.tag == 'Middle':
-                hname.middle = elm.text
-            elif elm.tag == 'Last':
-                hname.last = elm.text
-            elif elm.tag == 'Title':
-                hname.title = elm.text
-            elif elm.tag == 'Suffix':
-                hname.suffix = elm.text
-            elif elm.tag == 'NickName':
-                hname.nickname = elm.text
-            else:
-                pass
-
-        return hname
-
 
 #
 # Test everything
 #
 if __name__ == '__main__':
 
+    from lxml import etree
     from pprint import pprint
 
     TESTENT = {
-        'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of
-Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179
-pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
-Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-        'ajbstra' : '''4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of
-Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179
-pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
-Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstra' : '''4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-        'ajbstra1' : '''4 66.145.29a P. W. Hodge, The Physics comma and
-Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,
-1966, 179 pp, $2.95 and $4.95,
-Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
-and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstra1' : '''4 66.145.29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-        'badajbstrd' : '''4 66.145.29d P. W. Hodge,
-The Physics comma and Astronomy of Galaxies and Cosmology,
-New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95
-and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144
-and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'badajbstrd' : '''4 66.145.29d P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
 
-        'authorstr' : '''4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other,
-The Physics comma and Astronomy of Galaxies and Cosmology, New York,
-McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American
-216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and
-Sky Tel. 33 164, other This is the authorstr;''',
+        'authorstr' : '''4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the authorstr;''',
 
-        'editorstr' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III
-and A. Other and A. V. de la Name ed.,
-The Physics comma and Astronomy of Galaxies and
-Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and
-$4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and
-Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment;
-edited by A. B. Name; translated from Italian into English by A. Trans;
-also published London: A Publishing Co.; other This is the editor string;''',
+        'editorstr' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;''',
 
-        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author III
-and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and
-Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and
-$4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and
-Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment;
-3rd edition;
-edited by A. B. Name; translated from Italian into English by A. Trans;
-also published London: A Publishing Co.;
-other This is the editor string;
-contributors A. B. Contrib; compiled by A. B. Compiler;
-in French; reprint of 1956; reference AJB 59.144.55b;''',
+        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55b;''',
 
-        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III
-and A. Other and A. V. de la Name,
-The Physics comma and Astronomy of Galaxies and Cosmology, , , , , ,
-Sci. American 216 Nr 2 142 and Sci. American 216
-Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55''',
+        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55''',
 
-        'badajbstr' : '''27 xx.145(1).309 P. W. Hodge,
-The Physics comma and Astronomy of Galaxies and Cosmology ,
-New York, McGraw-Hill Book Company, 1966, 179 pp,
-$2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216
-Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164,
-other This is the badstr;''',
+        'badajbstr' : '''27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
 
-        'badtitlestr' : '''27 66.145(1).309 P. W. Hodge, , New York,
-McGraw-Hill Book Company,
-1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and
-Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164,
-other This is the badstr;''',
+        'badtitlestr' : '''27 66.145(1).309 P. W. Hodge, , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
         }
-
 
     try:
         entry.Entry(TESTENT['ajbstr'])
@@ -1084,11 +647,11 @@ other This is the badstr;''',
     pprint(ENT)
 
     print('\nallfieldajb as XML')
-    XMLENT = ENT.write_xml_from_entry()
+    XMLENT = ENT.entry_to_xml()
     print(etree.tostring(XMLENT, pretty_print=True, encoding='unicode'))
 
     print('\nallfieldajb XML as entry')
     ENT = AJBentry()
-    ENT.read_xml_to_entry(XMLENT)
+    ENT.entry_from_xml(XMLENT)
     print('entry.is_valid is %d' % (ENT.is_valid()))
     pprint(ENT)
