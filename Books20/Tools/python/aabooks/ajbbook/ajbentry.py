@@ -437,6 +437,7 @@ class AJBentry(entry.Entry):
 
         return {'volume': nums[0],
                 'volNum': int(nums[2]),
+                'pageNum': -1,
                 'sectionNum': int(nums[3]),
                 'subsectionNum': int(nums[5]),
                 'entryNum': int(nums[6]),
