@@ -19,8 +19,11 @@
 ##
 ## End copyright
 '''This file contains the functions needed to convert AJB/AAA entries
-into XML format in accordance with bookfile.xsd.  The two main
-functions are entry_from_xml() and entry_to_xml().
+into XML format in accordance with the schema defined in bookfile.xsd.
+The two main functions are entry_from_xml() and entry_to_xml().  These
+functions depend explicitly on the definition of the class AJBentry
+defined in ajbentry.py and can not be used with out ajbentry.py.
+
 '''
 
 import re
@@ -31,6 +34,7 @@ __reg2__ = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
 
 # XML create routines
 #
+# will need to change bookfile.py as well
 #def write_xml_from_entry(self):
 def entry_to_xml(entry):
     '''This function converts an Entry dictionary to an XML Entry element.
@@ -39,7 +43,7 @@ def entry_to_xml(entry):
 
     '''
 
-    if not entry.is_valid:
+    if not entry.is_valid():
         return None
 
     # Title and Index are required of any entry
@@ -188,7 +192,7 @@ def make_ajbnum_xml(ajbnum):
     '''Write an XML version of an AJB number as an index
     element. The ajbnum argument must be a dictionary in the format
     of ajbentry['Num']'''
-    
+
     index_xml = etree.Element('Index')
 
     elm = etree.SubElement(index_xml, 'IndexName')
@@ -243,11 +247,12 @@ def make_person_xml(hname):
 
     return person_xml
 
+# need to modify bookfile.py as well
 #def read_xml_to_entry(self, elxml):
 def entry_from_xml(entry, elementxml):
-    '''Given an XML Entry element place the information
-    into the AJBentry dictionary. The input value is the XML
-    element and the function returns a variable of class AJBentry.
+    '''Given an XML Entry element place the information into the AJBentry
+    dictionary. The input values are the entry to put the information
+    into and the XMLelement to be parsed.
 
     '''
 
@@ -380,7 +385,6 @@ def entry_from_xml(entry, elementxml):
 
         if child.tag == 'ReferenceOf':
             # AJBnum
-            subsectionnum = '0'
             for ell in child:
                 if ell.tag == 'Index':
                     entry['Reference'] = ajbstr_from_xml(ell)
@@ -390,7 +394,7 @@ def entry_from_xml(entry, elementxml):
                 entry['Others'].append(comment.text)
 
 def ajbstr_from_xml(element):
-    '''Return a AJB number as a string "AJB xx.xxx(xx).xx[a]" from
+    '''Return a AJB number as a string "AJB xx.xxx.xx[a]" from
     an XML Index element.'''
 
     for child in element:
@@ -400,8 +404,6 @@ def ajbstr_from_xml(element):
             volnum = '%02d'%int(child.text)
         elif child.tag == 'SectionNumber':
             sectionnum = '%02d'%int(child.text)
-        elif child.tag == 'SubSectionNumber':
-            subsectionnum = child.text
         elif child.tag == 'EntryNumber':
             mreg = __reg2__.match(child.text)
             entrynum = '%02d'%int(mreg.group(1))
@@ -439,11 +441,10 @@ def person_name_from_xml(ell):
 if __name__ == '__main__':
 
     import aabooks.ajbbook.ajbentry as ajbentry
-    from pprint import pprint
-    
-    entry = ajbentry.AJBentry()
 
-    entry_xml = '''<Entry>
+    TMP_ENTRY = ajbentry.AJBentry()
+
+    ENTRY_XML = '''<Entry>
   <Index>
     <IndexName>AJB</IndexName>
     <VolumeNumber>66</VolumeNumber>
@@ -551,9 +552,8 @@ if __name__ == '__main__':
   </Comments>
 </Entry>'''
 
-    ent_xml = etree.fromstring(entry_xml)
-    #ent_root = ent_xml.getroot()
+    ENT_XML = etree.fromstring(ENTRY_XML)
 
-    entry.entry_from_xml(ent_xml)
+    TMP_ENTRY.entry_from_xml(ENT_XML)
 
-    print(etree.tostring(entry.entry_to_xml(), pretty_print=True, encoding='unicode'))
+    print(etree.tostring(TMP_ENTRY.entry_to_xml(), pretty_print=True, encoding='unicode'))
