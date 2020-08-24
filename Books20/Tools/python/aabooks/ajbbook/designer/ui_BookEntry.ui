@@ -985,6 +985,7 @@
   <tabstop>secNum</tabstop>
   <tabstop>subSecNum</tabstop>
   <tabstop>itemNum</tabstop>
+  <tabstop>pageNum</tabstop>
   <tabstop>authorEntry</tabstop>
   <tabstop>titleEntry</tabstop>
   <tabstop>editorEntry</tabstop>
