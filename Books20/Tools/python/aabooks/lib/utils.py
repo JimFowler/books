@@ -18,6 +18,9 @@
 
 from nameparser import HumanName
 from nameparser.config import CONSTANTS
+import re
+
+__reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
 # add SJ Suffix list
 CONSTANTS.suffixes.add('sj')
@@ -86,6 +89,50 @@ def standard_parser_args(parser):
     
 
     return parser
+
+def parse_ajbnum(line):
+    """Get the Volume, Section, any possible subSection, and the
+    section entry number.  The subSection defaults to zero
+    if no subSection value exists. Returns a dictionary with the
+    AJB number elements {'volume': 'AJB', 'volNum': int, 'sectionNum': int,
+    'subsectionNum': int, 'entryNum': int, 'entrySuf': ''}.
+    """
+    #
+    # This regular expression is used to parse the AJB number
+    # which is of the form
+    # [AJB ]volNum.sectionNum[(subsectionNum)].entryNum[entrySuf], where
+    # the AJB, subsectionNum, and entrySuf are optional
+    # e.g. 66.18(1).25a. It returns the list [empty, empty, 66,
+    # 18, (1), 1, 25, 'a', empty].  Note
+    # that the subsectionNum may not be there in which case both
+    # item 4 and 5 will be empty strings and the subsection number defaults
+    # to zero.
+    #
+
+    nums = __reg3__.split(line.strip())
+
+    if len(nums) != 9:
+        print('Bad AJB number {}\n'.format(line))
+        return
+
+    if not nums[0]: # volume
+        nums[0] = 'AJB'
+
+    if not nums[5]: # subsectionNum
+        nums[5] = 0
+
+    if not nums[7]: # entrySuf
+        nums[7] = ''
+
+    return {'volume': nums[0],
+            'volNum': int(nums[2]),
+            'pageNum': -1,
+            'sectionNum': int(nums[3]),
+            'subsectionNum': int(nums[5]),
+            'entryNum': int(nums[6]),
+            'entrySuf': nums[7],
+            }
+
 
 
 if __name__ == '__main__':
