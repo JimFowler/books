@@ -57,11 +57,35 @@ def entry_to_xml(entry):
 
     # This ends the required elements.  All further elements
     # may be missing or blank.
+    entry_xml_subtitles(entry, entryxml)
+    entry_xml_authors(entry, entryxml)
+    entry_xml_editors(entry, entryxml)
+    entry_xml_publishers(entry, entryxml)
+    entry_xml_year(entry, entryxml)
+    entry_xml_edition(entry, entryxml)
+    entry_xml_pagination(entry, entryxml)
+    entry_xml_price(entry, entryxml)
+    entry_xml_reviews(entry, entryxml)
+    entry_xml_translatedfrom(entry, entryxml)
+    entry_xml_language(entry, entryxml)
+    entry_xml_translators(entry, entryxml)
+    entry_xml_compilers(entry, entryxml)
+    entry_xml_contributors(entry, entryxml)
+    entry_xml_reprint(entry, entryxml)
+    entry_xml_reference(entry, entryxml)
+    entry_xml_others(entry, entryxml)
 
+    # return the root Entry element
+    return entryxml
+
+def entry_xml_subtitles(entry, entryxml):
+    '''Convert the entry subTitles to XML'''
     if entry.not_empty('subTitle'):
         elm = etree.SubElement(entryxml, 'SubTitle')
         elm.text = entry['subTitle']
 
+def entry_xml_authors(entry, entryxml):
+    '''Convert the entry Authors to XML'''
     # Create the people list, right now these lists are
     # only HumanNames but we need to add business names
     # in the future.
@@ -73,6 +97,8 @@ def entry_to_xml(entry):
             person = make_person_xml(author)
             autelm.append(person)
 
+def entry_xml_editors(entry, entryxml):
+    '''Convert the entry Editor to XML'''
     if entry['Editors']:
         elm = etree.SubElement(entryxml, 'Editors')
         for editor in entry['Editors']:
@@ -81,6 +107,8 @@ def entry_to_xml(entry):
             person = make_person_xml(editor)
             edelm.append(person)
 
+def entry_xml_publishers(entry, entryxml):
+    '''Convert the entry Publishers to XML'''
     if entry['Publishers']:
         elm = etree.SubElement(entryxml, 'Publishers')
         for publ in entry['Publishers']:
@@ -94,18 +122,26 @@ def entry_to_xml(entry):
             epn.text = publ['PublisherName']
             epub.append(epn)
 
+def entry_xml_year(entry, entryxml):
+    '''Convert the entry Year (of publication) to XML'''
     if entry.not_empty('Year'):
         elm = etree.SubElement(entryxml, 'Year')
         elm.text = str(entry['Year'])
 
+def entry_xml_edition(entry, entryxml):
+    '''Convert the entry Edition to XML'''
     if entry.not_empty('Edition'):
         elm = etree.SubElement(entryxml, 'Edition')
         elm.text = str(entry['Edition'])
 
+def entry_xml_pagination(entry, entryxml):
+    '''Convert the entry Pagination to XML'''
     if entry.not_empty('Pagination'):
         elm = etree.SubElement(entryxml, 'Pagination')
         elm.text = str(entry['Pagination'])
 
+def entry_xml_price(entry, entryxml):
+    '''Convert the entry Price to XML'''
     # The schema defines a price with currency and value
     # but we need to do some intellegent parsing of the prices
     # before we can use this.  For now we just naively use
@@ -116,20 +152,28 @@ def entry_to_xml(entry):
             priceelm = etree.SubElement(elm, 'Price')
             priceelm.text = price
 
+def entry_xml_reviews(entry, entryxml):
+    '''Convert the entry Reviews to XML'''
     if entry['Reviews']:
         elm = etree.SubElement(entryxml, 'Reviews')
         for rev in entry['Reviews']:
             revelm = etree.SubElement(elm, 'Review')
             revelm.text = str(rev)
 
+def entry_xml_translatedfrom(entry, entryxml):
+    '''Convert the entry TranslatedFrom to XML'''
     if entry.not_empty('TranslatedFrom'):
         elm = etree.SubElement(entryxml, 'TranslatedFrom')
         elm.text = str(entry['TranslatedFrom'])
 
+def entry_xml_language(entry, entryxml):
+    '''Convert the entry Language to XML'''
     if entry.not_empty('Language'):
         elm = etree.SubElement(entryxml, 'Language')
         elm.text = str(entry['Language'])
 
+def entry_xml_translators(entry, entryxml):
+    '''Convert the entry Translators to XML'''
     if entry['Translators']:
         elm = etree.SubElement(entryxml, 'Translators')
         for trans in entry['Translators']:
@@ -138,6 +182,8 @@ def entry_to_xml(entry):
             person = make_person_xml(trans)
             aelm.append(person)
 
+def entry_xml_compilers(entry, entryxml):
+    '''Convert the entry Compilers to XML'''
     if entry['Compilers']:
         elm = etree.SubElement(entryxml, 'Compilers')
         for compiler in entry['Compilers']:
@@ -146,6 +192,8 @@ def entry_to_xml(entry):
             person = make_person_xml(compiler)
             aelm.append(person)
 
+def entry_xml_contributors(entry, entryxml):
+    '''Convert the entry Contributors to XML'''
     if entry['Contributors']:
         elm = etree.SubElement(entryxml, 'Contributors')
         for contrib in entry['Contributors']:
@@ -154,6 +202,8 @@ def entry_to_xml(entry):
             person = make_person_xml(contrib)
             aelm.append(person)
 
+def entry_xml_reprint(entry, entryxml):
+    '''Convert the entry Reprint to XML'''
     # Sometimes the reprint can be just a year number rather than
     # an AJBnum.  An AJBnum should have decimal points in it and
     # Years should not, so we look for a decimal point to determine
@@ -170,6 +220,8 @@ def entry_to_xml(entry):
             num = make_ajbnum_xml(numdict)
             elm.append(num)
 
+def entry_xml_reference(entry, entryxml):
+    '''Convert the entry Reference to XML'''
     if entry.not_empty('Reference'):
         elm = etree.SubElement(entryxml, 'ReferenceOf')
         # parse_ajbnum is defined for the text conversion!
@@ -177,16 +229,13 @@ def entry_to_xml(entry):
         ajbxml = make_ajbnum_xml(numdict)
         elm.append(ajbxml)
 
-
+def entry_xml_others(entry, entryxml):
+    '''Convert the entry Others (comments) to XML'''
     if entry['Others']:
         elm = etree.SubElement(entryxml, 'Comments')
         for comment in entry['Others']:
             com = etree.SubElement(elm, 'Comment')
             com.text = comment
-
-    # return the root Entry element
-    return entryxml
-
 
 def make_ajbnum_xml(ajbnum):
     '''Write an XML version of an AJB number as an index
@@ -251,147 +300,204 @@ def make_person_xml(hname):
 #def read_xml_to_entry(self, elxml):
 def entry_from_xml(entry, elementxml):
     '''Given an XML Entry element place the information into the AJBentry
-    dictionary. The input values are the entry to put the information
-    into and the XMLelement to be parsed.
+    dictionary. The input arguments are the entry to put the
+    information into and the XMLelement to be parsed.
 
     '''
 
     for child in elementxml:
         #print('child is ', child.tag)
+        exec('xml_entry_' + child.tag.lower() + '(entry, child)')
 
-        if child.tag == 'Index':
-            for elm in child:
-                if elm.tag == 'IndexName':
-                    entry['Num']['volume'] = elm.text
-                elif elm.tag == 'VolumeNumber':
-                    entry['Num']['volNum'] = int(elm.text)
-                elif elm.tag == 'SectionNumber':
-                    entry['Num']['sectionNum'] = int(elm.text)
-                elif elm.tag == 'SubSectionNumber':
-                    entry['Num']['subsectionNum'] = int(elm.text)
-                elif elm.tag == 'EntryNumber':
-                    # need to split off the suffix, use regex
-                    mreg = __reg2__.match(elm.text)
-                    entry['Num']['entryNum'] = int(mreg.group(1))
-                    entry['Num']['entrySuf'] = mreg.group(2)
-                elif elm.tag == 'PageNumber':
-                    entry['Num']['pageNum'] = int(elm.text)
+def xml_entry_index(entry, child):
+    '''Convert XML Index to entry Num'''
+
+    if child.tag == 'Index':
+        for elm in child:
+            if elm.tag == 'IndexName':
+                entry['Num']['volume'] = elm.text
+            elif elm.tag == 'VolumeNumber':
+                entry['Num']['volNum'] = int(elm.text)
+            elif elm.tag == 'SectionNumber':
+                entry['Num']['sectionNum'] = int(elm.text)
+            elif elm.tag == 'SubSectionNumber':
+                entry['Num']['subsectionNum'] = int(elm.text)
+            elif elm.tag == 'EntryNumber':
+                # need to split off the suffix, use regex
+                mreg = __reg2__.match(elm.text)
+                entry['Num']['entryNum'] = int(mreg.group(1))
+                entry['Num']['entrySuf'] = mreg.group(2)
+            elif elm.tag == 'PageNumber':
+                entry['Num']['pageNum'] = int(elm.text)
+            else:
+                pass
+
+def xml_entry_title(entry, child):
+    '''Convert XML Title to entry Title'''
+
+    if child.tag == 'Title':
+        entry['Title'] = child.text
+
+# subTitle and subsubTitle not supported in AJBentry
+def xml_entry_subtitle(entry, child):
+    '''Convert XML subTitle to entry Title'''
+
+    if child.tag == 'subTitle':
+        entry['Title'] += child.text
+
+def xml_entry_subsubtitle(entry, child):
+    '''Convert XML subsubTitle to entry Title'''
+
+    if child.tag == 'subsubTitle':
+        entry['Title'] += child.text
+
+def xml_entry_authors(entry, child):
+    '''Convert XML Authors to entry Authors'''
+
+    if child.tag == 'Authors':
+        for author in child:
+            for g2ent in author:
+                if g2ent.tag == 'Person':
+                    entry['Authors'].append(person_name_from_xml(g2ent))
+
+def xml_entry_editors(entry, child):
+    '''Convert XML Editors to entry Editors'''
+
+    if child.tag == 'Editors':
+        # PersonInfo or CorporateBody
+        for editor in child:
+            for g2ent in editor:
+                if g2ent.tag == 'Person':
+                    entry['Editors'].append(person_name_from_xml(g2ent))
+
+def xml_entry_publishers(entry, child):
+    '''Convert XML Publishers to entry Publishers'''
+
+    if child.tag == 'Publishers':
+        # Place and Name
+        for publ in child:
+            publisher = {}
+            for pub in publ:
+                if pub.tag == 'Place':
+                    if pub.text is not None:
+                        publisher['Place'] = str(pub.text)
+                    else:
+                        publisher['Place'] = ''
+                elif pub.tag == 'Name':
+                    if pub.text is not None:
+                        publisher['PublisherName'] = str(pub.text)
+                    else:
+                        publisher['PublisherName'] = ''
                 else:
                     pass
+            entry['Publishers'].append(publisher)
 
-        if child.tag == 'Title':
-            entry['Title'] = child.text
+def xml_entry_year(entry, child):
+    ''' Convert XML Year to entry Year'''
 
-        # subTitle and subsubTitle not supported in AJBentry
-        if child.tag == 'subTitle':
-            entry['Title'] += child.text
+    if child.tag == 'Year':
+        entry['Year'] = child.text
 
-        if child.tag == 'subsubTitle':
-            entry['Title'] += child.text
+def xml_entry_edition(entry, child):
+    '''Convert XML Edition to entry Edition'''
 
-        if child.tag == 'Authors':
-            for author in child:
-                for g2ent in author:
-                    if g2ent.tag == 'Person':
-                        entry['Authors'].append(person_name_from_xml(g2ent))
+    if child.tag == 'Edition':
+        entry['Edition'] = child.text
 
-        if child.tag == 'Editors':
-            # PersonInfo or CorporateBody
-            for editor in child:
-                for g2ent in editor:
-                    if g2ent.tag == 'Person':
-                        entry['Editors'].append(person_name_from_xml(g2ent))
+def xml_entry_pagination(entry, child):
+    '''Convert XML Pagination to entry Pagination'''
 
-        if child.tag == 'Publishers':
-            # Place and Name
-            for publ in child:
-                publisher = {}
-                for pub in publ:
-                    if pub.tag == 'Place':
-                        if pub.text is not None:
-                            publisher['Place'] = str(pub.text)
-                        else:
-                            publisher['Place'] = ''
+    if child.tag == 'Pagination':
+        entry['Pagination'] = child.text
 
-                    elif pub.tag == 'Name':
-                        if pub.text is not None:
-                            publisher['PublisherName'] = str(pub.text)
-                        else:
-                            publisher['PublisherName'] = ''
+def xml_entry_prices(entry, child):
+    '''Convert XML Prices to entry Price'''
 
-                    else:
-                        pass
-                entry['Publishers'].append(publisher)
+    if child.tag == 'Prices':
+        first = True
+        entry['Price'] = ''
+        for price in child:
+            if first:
+                first = False
+            else:
+                entry['Price'] += ' and '
+            entry['Price'] += price.text
 
-        if child.tag == 'Year':
-            entry['Year'] = child.text
+def xml_entry_reviews(entry, child):
+    '''Convert XML Reviews to entry Reviews'''
 
-        if child.tag == 'Edition':
-            entry['Edition'] = child.text
+    if child.tag == 'Reviews':
+        for review in child:
+            entry['Reviews'].append(review.text)
 
-        if child.tag == 'Pagination':
-            entry['Pagination'] = child.text
+def xml_entry_translatedfrom(entry, child):
+    '''Convert XML TranslatedFrom to entry TranslatedFrom'''
 
-        if child.tag == 'Prices':
-            first = True
-            entry['Price'] = ''
-            for price in child:
-                if first:
-                    first = False
-                else:
-                    entry['Price'] += ' and '
-                entry['Price'] += price.text
+    if child.tag == 'TranslatedFrom':
+        entry['TranslatedFrom'] = child.text
 
-        if child.tag == 'Reviews':
-            for review in child:
-                entry['Reviews'].append(review.text)
+def xml_entry_language(entry, child):
+    '''Convert XML Language to entry Language'''
 
+    if child.tag == 'Language':
+        entry['Language'] = child.text
 
-        if child.tag == 'TranslatedFrom':
-            entry['TranslatedFrom'] = child.text
+def xml_entry_translators(entry, child):
+    '''Convert XML Translators to entry Transltors'''
 
-        if child.tag == 'Language':
-            entry['Language'] = child.text
+    if child.tag == 'Translators':
+        # PersonInfo or CorporateBody
+        for trans in child:
+            for g2ent in trans:
+                if g2ent.tag == 'Person':
+                    entry['Translators'].append(person_name_from_xml(g2ent))
 
-        if child.tag == 'Translators':
-            # PersonInfo or CorporateBody
-            for trans in child:
-                for g2ent in trans:
-                    if g2ent.tag == 'Person':
-                        entry['Translators'].append(person_name_from_xml(g2ent))
+def xml_entry_compilers(entry, child):
+    '''Convert XML Compilers to entry Compilers'''
 
-        if child.tag == 'Compilers':
-            # PersonInfo or CorporateBody
-            for comp in child:
-                for g2ent in comp:
-                    if g2ent.tag == 'Person':
-                        entry['Compilers'].append(person_name_from_xml(g2ent))
+    if child.tag == 'Compilers':
+        # PersonInfo or CorporateBody
+        for comp in child:
+            for g2ent in comp:
+                if g2ent.tag == 'Person':
+                    entry['Compilers'].append(person_name_from_xml(g2ent))
 
-        if child.tag == 'Contributors':
-            # PersonInfo or CorporateBody
-            for contr in child:
-                for g2ent in contr:
-                    if g2ent.tag == 'Person':
-                        entry['Contributors'].append(person_name_from_xml(g2ent))
+def xml_entry_contributors(entry, child):
+    '''Convert XML Contributors to entry Contributors'''
 
-        if child.tag == 'ReprintOf':
-            # Year or AJBnum but only one
-            for reprint in child:
-                if reprint.tag == 'Year':
-                    entry['Reprint'] = reprint.text
-                elif reprint.tag == 'Index':
-                    entry['Reprint'] = ajbstr_from_xml(reprint)
+    if child.tag == 'Contributors':
+        # PersonInfo or CorporateBody
+        for contr in child:
+            for g2ent in contr:
+                if g2ent.tag == 'Person':
+                    entry['Contributors'].append(person_name_from_xml(g2ent))
 
+def xml_entry_reprintof(entry, child):
+    '''Convert XML ReprintOf to entry Reprint'''
 
-        if child.tag == 'ReferenceOf':
-            # AJBnum
-            for ell in child:
-                if ell.tag == 'Index':
-                    entry['Reference'] = ajbstr_from_xml(ell)
+    if child.tag == 'ReprintOf':
+        # Year or AJBnum but only one
+        for reprint in child:
+            if reprint.tag == 'Year':
+                entry['Reprint'] = reprint.text
+            elif reprint.tag == 'Index':
+                entry['Reprint'] = ajbstr_from_xml(reprint)
 
-        if child.tag == 'Comments':
-            for comment in child:
-                entry['Others'].append(comment.text)
+def xml_entry_referenceof(entry, child):
+    '''Convert XML RefereceOf to entry Reference'''
+
+    if child.tag == 'ReferenceOf':
+        # AJBnum
+        for ell in child:
+            if ell.tag == 'Index':
+                entry['Reference'] = ajbstr_from_xml(ell)
+
+def xml_entry_comments(entry, child):
+    '''Convert XML Comments to entry Other'''
+
+    if child.tag == 'Comments':
+        for comment in child:
+            entry['Others'].append(comment.text)
 
 def ajbstr_from_xml(element):
     '''Return a AJB number as a string "AJB xx.xxx.xx[a]" from
@@ -500,7 +606,8 @@ if __name__ == '__main__':
   <Edition>3</Edition>
   <Pagination>179 pp</Pagination>
   <Prices>
-    <Price>$2.95 and $4.95</Price>
+    <Price>$2.95</Price>
+    <Price>$4.95</Price>
   </Prices>
   <Reviews>
     <Review>Sci. American 216 Nr 2 142</Review>
@@ -556,4 +663,12 @@ if __name__ == '__main__':
 
     TMP_ENTRY.entry_from_xml(ENT_XML)
 
-    print(etree.tostring(TMP_ENTRY.entry_to_xml(), pretty_print=True, encoding='unicode'))
+    NEW_XML = etree.tostring(TMP_ENTRY.entry_to_xml(), pretty_print=True, encoding='unicode')
+
+    locs = [i for i in range(len(ENTRY_XML)) if ENTRY_XML[i] != NEW_XML[i]]
+    if locs:
+        print('Error: new XML entry string does not match',
+              'original XML entry string in the following locations', locs)
+        print(NEW_XML[locs[0]:])
+    else:
+        print('Success: new XML entry string matches original XML entry string')
