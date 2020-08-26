@@ -336,7 +336,7 @@ def text_entry_field2(entry, field):
 def text_entry_field3(entry, field):
     '''Publisher'''
     publishername = "" + field
-    entry['Publishers'].append({'PublisherName' : publishername})
+    entry['Publishers'][0]['PublisherName'] = publishername
 
 def text_entry_field4(entry, field):
     '''Publication Year'''
