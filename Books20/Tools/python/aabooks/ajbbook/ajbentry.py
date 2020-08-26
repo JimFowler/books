@@ -192,4 +192,5 @@ class AJBentry(entry.Entry):
 #
 if __name__ == '__main__':
 
-    print('Need to define test routines!')
+    print('''All the functionality is tested
+in entrytext.py and entryxml.py''')
