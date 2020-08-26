@@ -356,7 +356,7 @@ def xml_entry_authors(entry, child):
         for g2ent in author:
             if g2ent.tag == 'Person':
                 entry['Authors'].append(person_name_from_xml(g2ent))
-                
+
 def xml_entry_editors(entry, child):
     '''Convert XML Editors to entry Editors'''
 
@@ -438,7 +438,7 @@ def xml_entry_translators(entry, child):
         for g2ent in trans:
             if g2ent.tag == 'Person':
                 entry['Translators'].append(person_name_from_xml(g2ent))
-                
+
 def xml_entry_compilers(entry, child):
     '''Convert XML Compilers to entry Compilers'''
 
@@ -644,7 +644,8 @@ if __name__ == '__main__':
     ENT_XML = etree.fromstring(ENTRY_XML)
 
     TMP_ENTRY.read_xml_to_entry(ENT_XML)
-    NEW_XML = etree.tostring(TMP_ENTRY.write_xml_from_entry(), pretty_print=True, encoding='unicode')
+    NEW_XML = etree.tostring(TMP_ENTRY.write_xml_from_entry(),
+                             pretty_print=True, encoding='unicode')
 
     locs = [i for i in range(len(ENTRY_XML)) if ENTRY_XML[i] != NEW_XML[i]]
     if locs:
