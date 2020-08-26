@@ -22,16 +22,18 @@ a comma separated.  Note that the text format is depricated
 and no longer in use.  It has been supplanted by the XML format.
 However, we keep this around just in case.
 """
+
+import re
+
 from aabooks.ajbbook import AJBcomments as comments
 from aabooks.lib import utils
-import re
 
 #
 # Don't build the regular expression compilers everytime
 #  we build and entry.
 #
 __reg1__ = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
-    
+
 #
 # Ascii comma separated variable file, read/write functions
 #
@@ -46,13 +48,44 @@ def entry_to_text(entry):
 
     entrystr = entry.num_str()[4:] + ' '
 
+    entrystr += entry_text_authoreditor(entry)
+    entrystr += ', ' + entry['Title'].replace(', ', ' comma ')
+
+    entrystr += entry_text_publishers(entry)
+    entrystr += entry_text_pagination(entry)
+    entrystr += entry_text_price(entry)
+    entrystr += entry_text_reviews(entry)
+    # the following are the various comment types
+    entrystr += entry_text_edition(entry)
+    entrystr += entry_text_reprint(entry)
+    entrystr += entry_text_compilers(entry)
+    entrystr += entry_text_contributors(entry)
+    entrystr += entry_text_translated(entry)
+    entrystr += entry_text_additional_editors(entry)
+    entrystr += entry_text_additional_publishers(entry)
+    entrystr += entry_text_language(entry)
+    entrystr += entry_text_others(entry)
+    entrystr += entry_text_reference(entry)
+
+    return entrystr
+
+def entry_text_authoreditor(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
+
     if entry.not_empty('Authors'):
         entrystr += utils.make_name_str(entry['Authors'])
     elif entry.not_empty('Editors'):
         entrystr += utils.make_name_str(entry['Editors'])
         entrystr += ' ed.'
 
-    entrystr = entrystr + ', ' + entry['Title'].replace(', ', ' comma ')
+    return entrystr
+
+def entry_text_publishers(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
 
     if entry.not_empty('Publishers'):
         entrystr += ', '
@@ -67,19 +100,43 @@ def entry_to_text(entry):
     else:
         entrystr += ', , '
 
-    entrystr += ', '
+    return entrystr
+
+def entry_text_year(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
+
     if entry.not_empty('Year'):
         entrystr += str(entry['Year'])
 
-    entrystr += ', '
+    return entrystr
+
+def entry_text_pagination(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
+
     if entry.not_empty('Pagination'):
         entrystr += str(entry['Pagination'])
 
-    entrystr += ', '
+    return entrystr
+
+def entry_text_price(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
+
     if entry.not_empty('Price'):
         entrystr += str(entry['Price'])
 
-    entrystr += ', '
+    return entrystr
+
+def entry_text_reviews(entry):
+    '''Convert entry Reviews to entry string review field'''
+
+    entrystr = ','
+
     if entry.not_empty('Reviews'):
         first = True
         for review in entry['Reviews']:
@@ -88,7 +145,13 @@ def entry_to_text(entry):
             first = False
             entrystr += review
 
-    # comments
+    return entrystr
+
+def entry_text_edition(entry):
+    '''Convert entry Edition to entry string edition'''
+
+    entrystr = ''
+
     entrystr += ', '
     if entry.not_empty('Edition'):
         entrystr += str(entry['Edition'])
@@ -103,21 +166,49 @@ def entry_to_text(entry):
             entrystr += 'th'
         entrystr += ' edition;'
 
+    return entrystr
+
+def entry_text_reprint(entry):
+    '''Convert entry Reprint to entry string reprint of'''
+
+    entrystr = ''
+
     if entry.not_empty('Reprint'):
         entrystr += 'reprint of '
         entrystr += str(entry['Reprint'])
         entrystr += ';'
+
+    return entrystr
+
+def entry_text_compilers(entry):
+    '''Convert entry Compilers to entry string compiled by'''
+
+    entrystr = ''
 
     if entry.not_empty('Compilers'):
         entrystr += 'compiled by '
         entrystr += utils.make_name_str(entry['Compilers'])
         entrystr += ';'
 
+    return entrystr
+
+def entry_text_contributors(entry):
+    '''Convert entry Contributors to entry string contributors'''
+
+    entrystr = ''
 
     if entry.not_empty('Contributors'):
         entrystr += 'contributors '
         entrystr += utils.make_name_str(entry['Contributors'])
         entrystr += ';'
+
+    return entrystr
+
+def entry_text_translated(entry):
+    '''Convert entry Translateds or TranslatedFrom to
+    an entrystr translator comment.'''
+
+    entrystr = ''
 
     # translated from by
     if entry.not_empty('Translators') or entry.not_empty('TranslatedFrom'):
@@ -130,12 +221,28 @@ def entry_to_text(entry):
             entrystr += utils.make_name_str(entry['Translators'])
         entrystr += ';'
 
+    return entrystr
+
+def entry_text_additional_editors(entry):
+    '''Convert the entry Editors to entrystr edited by
+    but only if the author field is populated in which
+    case these are additional editors.'''
+
+    entrystr = ''
+
     # additional editors
     if entry.not_empty('Authors') and entry.not_empty('Editors'):
         # need to include editors in comments
         entrystr += 'edited by '
         entrystr += utils.make_name_str(entry['Editors'])
         entrystr += ';'
+
+    return entrystr
+
+def entry_text_additional_publishers(entry):
+    '''Convert the entry Publishers to entrystr also published'''
+
+    entrystr = ''
 
     # additional publishers
     if entry['Publishers'].__len__() > 1:
@@ -150,22 +257,39 @@ def entry_to_text(entry):
                                     publ['PublisherName'].replace(', ', ' comma '))
         entrystr += ';'
 
+    return entrystr
+
+def entry_text_language(entry):
+    '''Convert the entry Language to entrystr language'''
+
+    entrystr = ''
     if entry.not_empty('Language'):
         entrystr += 'in '
         entrystr += entry['Language']
         entrystr += ';'
 
-    # others
+    return entrystr
+
+def entry_text_others(entry):
+    '''Convert the entry Others to entrystr others'''
+
+    entrystr = ''
+    # others (the comments)
     if entry.not_empty('Others'):
         for other in entry['Others']:
             entrystr += 'other %s' % str(other).replace(', ', ' comma ')
             entrystr += '; '
 
+    return entrystr
+
+def entry_text_reference(entry):
+    '''Convert the entry Referece to the entrystr reference'''
+
+    entrystr = ''
     if entry.not_empty('Reference'):
         entrystr += 'reference '
         entrystr += entry['Reference']
         entrystr += ';'
-
 
     return entrystr
 
@@ -194,42 +318,48 @@ def entry_from_text(entry, line):
             fieldnum += 1
             field = field.replace(' comma ', ', ')
             field = field.strip()
-            if fieldnum == 0:  # AJBnum and Authors
-                _parse_field0(entry, field)
+            exec('text_entry_field%d(entry, field)'%fieldnum)
 
-            elif fieldnum == 1:  # Title
-                entry['Title'] = field
+def text_entry_field0(entry, field):
+    '''AJBnum and Authors'''
+    _parse_field0(entry, field)
 
-            elif fieldnum == 2:  # place of publication
-                place = "" + field
+def text_entry_field1(entry, field):
+    '''Title'''
+    entry['Title'] = field
 
-            elif fieldnum == 3:  # Publisher
-                publishername = "" + field
-                entry['Publishers'] = [{'Place' : place,
-                                       'PublisherName' : publishername}]
+def text_entry_field2(entry, field):
+    '''place of publication'''
+    place = "" + field
+    entry['Publishers'].append({'Place' : place})
 
-            elif fieldnum == 4:   # Publication Year
-                entry['Year'] = field
+def text_entry_field3(entry, field):
+    '''Publisher'''
+    publishername = "" + field
+    entry['Publishers'].append({'PublisherName' : publishername})
 
-            elif fieldnum == 5:   # Page Count
-                entry['Pagination'] = field
+def text_entry_field4(entry, field):
+    '''Publication Year'''
+    entry['Year'] = field
 
-            elif fieldnum == 6:   # Price
-                entry['Price'] = field
+def text_entry_field5(entry, field):
+    '''Page Count'''
+    entry['Pagination'] = field
 
-            elif fieldnum == 7:   # Reviews
-                if field:
-                    entry['Reviews'] = field.split(' and ')
+def text_entry_field6(entry, field):
+    '''Price'''
+    entry['Price'] = field
 
-            elif fieldnum == 8:   # Comments and other material
-                entry['Comments'] = field
-                _parse_comments(entry, field)
-                continue
+def text_entry_field7(entry, field):
+    '''Reviews'''
+    if field:
+        entry['Reviews'] = field.split(' and ')
 
-        return True
-
-    return False
-
+def text_entry_field8(entry, field):
+    '''Comments and other material'''
+    entry['Comments'] = field
+    _parse_comments(entry, field)
+    
 
 #
 # Private functions
@@ -352,7 +482,7 @@ def _parse_comments(entry, field):
                 for pub in tlist:
                     parts = pub.split(':')
                     entry['Publishers'].append({'Place' : parts[0].strip(),
-                                               'PublisherName': parts[1].strip()})
+                                                'PublisherName': parts[1].strip()})
 
             elif grammar_name == 'Language':
                 entry['Language'] = str(result.find(comments.uWord)).strip()
@@ -373,34 +503,79 @@ def _parse_comments(entry, field):
 ##
 if __name__ == '__main__':
 
-    from aabooks.lib import entry
+    from aabooks.lib import entry as aaentry
     from aabooks.ajbbook.ajbentry import AJBentry
     from pprint import pprint
-    
+
     TESTENT = {
-        'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and \
+Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, \
+1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American \
+216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the \
+ajbstr;''',
 
-        'ajbstra' : '''4 66.145(1).29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstra' : '''4 66.145(1).29a P. W. Hodge, The Physics comma and \
+Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, \
+1966, 179pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American \
+216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the \
+ajbstr;''',
 
-        'ajbstra1' : '''4 66.145.29a P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company,1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'ajbstra1' : '''4 66.145.29a P. W. Hodge, The Physics comma and \
+Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, \
+1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American \
+216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the \
+ajbstr;''',
 
-        'badajbstrd' : '''4 66.145.29d P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the ajbstr;''',
+        'badajbstrd' : '''4 66.145.29d P. W. Hodge, The Physics comma \
+and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, \
+1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American \
+216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the\
+ ajbstr;''',
 
-        'authorstr' : '''4 66.145(1).29 P. W. Hodge and I. A. Author and A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the authorstr;''',
+        'authorstr' : '''4 66.145(1).29 P. W. Hodge and I. A. Author and \
+A. N. Other, The Physics comma and Astronomy of Galaxies and Cosmology, \
+New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci.\
+ American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 \
+109 and Sky Tel. 33 164, other This is the authorstr;''',
 
-        'editorstr' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string;''',
+        'editorstr' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III \
+and A. Other and A. V. de la Name ed., The Physics comma and Astronomy of \
+Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, \
+$2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 \
+and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. \
+B. Name; translated from Italian into English by A. Trans; also published \
+London: A Publishing Co.; other This is the editor string;''',
 
-        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition; edited by A. B. Name; translated from Italian into English by A. Trans; also published London: A Publishing Co.; other This is the editor string; contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint of 1956; reference AJB 59.144.55b;''',
+        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author \
+III and A. Other and A. V. de la Name, The Physics comma and Astronomy of \
+Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, \
+$2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 \
+and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition;\
+ edited by A. B. Name; translated from Italian into English by A. Trans; also \
+published London: A Publishing Co.; other This is the editor string; \
+contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint \
+of 1956; reference AJB 59.144.55b;''',
 
-        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author III and A. Other and A. V. de la Name, The Physics comma and Astronomy of Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference AJB 59.144.55''',
+        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author \
+III and A. Other and A. V. de la Name, The Physics comma and Astronomy of \
+Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. \
+American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference \
+AJB 59.144.55''',
 
-        'badajbstr' : '''27 xx.145(1).309 P. W. Hodge, The Physics comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
+        'badajbstr' : '''27 xx.145(1).309 P. W. Hodge, The Physics \
+comma and Astronomy of Galaxies and Cosmology , New York, McGraw-Hill \
+Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 \
+and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, \
+other This is the badstr;''',
 
-        'badtitlestr' : '''27 66.145(1).309 P. W. Hodge, , New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
+        'badtitlestr' : '''27 66.145(1).309 P. W. Hodge, , \
+New York, McGraw-Hill Book Company, 1966, 179 pp, $2.95 and $4.95, \
+Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and \
+Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
         }
 
     try:
-        entry.Entry(TESTENT['ajbstr'])
+        aaentry.Entry(TESTENT['ajbstr'])
     except NotImplementedError:
         print("Entry() class fails properly with no read() method.")
 
@@ -449,4 +624,3 @@ if __name__ == '__main__':
 
     print(utils.parse_ajbnum('AJB 32.45(0).56'))
     print(utils.parse_ajbnum('32.45(0).56'))
-    
