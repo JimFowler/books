@@ -252,10 +252,6 @@ def make_ajbnum_xml(ajbnum):
     elm = etree.SubElement(index_xml, 'VolumeNumber')
     elm.text = str(ajbnum['volNum'])
 
-    if ajbnum['pageNum'] != -1:
-        elm = etree.SubElement(index_xml, 'PageNumber')
-        elm.text = str(ajbnum['pageNum'])
-
     elm = etree.SubElement(index_xml, 'SectionNumber')
     elm.text = str(ajbnum['sectionNum'])
 
@@ -264,6 +260,10 @@ def make_ajbnum_xml(ajbnum):
 
     elm = etree.SubElement(index_xml, 'EntryNumber')
     elm.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
+
+    if ajbnum['pageNum'] != -1:
+        elm = etree.SubElement(index_xml, 'PageNumber')
+        elm.text = str(ajbnum['pageNum'])
 
     return index_xml
 
@@ -528,129 +528,40 @@ def person_name_from_xml(ell):
 #
 if __name__ == '__main__':
 
+    import unittest
+
     import aabooks.ajbbook.ajbentry as ajbentry
+    import aabooks.ajbbook.testentryxml as testentry
 
-    TMP_ENTRY = ajbentry.AJBentry()
+    class EntryTestCase(unittest.TestCase):
+        """Set up the unit tests"""
 
-    ENTRY_XML = '''<Entry>
-  <Index>
-    <IndexName>AJB</IndexName>
-    <VolumeNumber>66</VolumeNumber>
-    <SectionNumber>145</SectionNumber>
-    <SubSectionNumber>0</SubSectionNumber>
-    <EntryNumber>29a</EntryNumber>
-  </Index>
-  <Title>The Physics, and Astronomy of Galaxies and Cosmology</Title>
-  <Authors>
-    <Author>
-      <Person>
-        <First>P.</First>
-        <Middle>W.</Middle>
-        <Last>Hodge</Last>
-        <Suffix>jr.</Suffix>
-      </Person>
-    </Author>
-    <Author>
-      <Person>
-        <First>I.</First>
-        <Middle>A. Author</Middle>
-        <Last>Other</Last>
-      </Person>
-    </Author>
-    <Author>
-      <Person>
-        <First>A.</First>
-        <Middle>V.</Middle>
-        <Last>de la Name</Last>
-      </Person>
-    </Author>
-  </Authors>
-  <Editors>
-    <Editor>
-      <Person>
-        <First>A.</First>
-        <Middle>B.</Middle>
-        <Last>Name</Last>
-      </Person>
-    </Editor>
-  </Editors>
-  <Publishers>
-    <Publisher>
-      <Place>New York</Place>
-      <Name>McGraw-Hill Book Company</Name>
-    </Publisher>
-    <Publisher>
-      <Place>Londön</Place>
-      <Name>A Publishing Co.</Name>
-    </Publisher>
-  </Publishers>
-  <Year>1966</Year>
-  <Edition>3</Edition>
-  <Pagination>179 pp</Pagination>
-  <Prices>
-    <Price>$2.95</Price>
-    <Price>$4.95</Price>
-  </Prices>
-  <Reviews>
-    <Review>Sci. American 216 Nr 2 142</Review>
-    <Review>Sky Tel. 33 164</Review>
-  </Reviews>
-  <TranslatedFrom>Itälian</TranslatedFrom>
-  <Language>French</Language>
-  <Translators>
-    <Translator>
-      <Person>
-        <First>A.</First>
-        <Last>Trans</Last>
-      </Person>
-    </Translator>
-  </Translators>
-  <Compilers>
-    <Compiler>
-      <Person>
-        <First>A.</First>
-        <Middle>B.</Middle>
-        <Last>Compiler</Last>
-      </Person>
-    </Compiler>
-  </Compilers>
-  <Contributors>
-    <Contributor>
-      <Person>
-        <First>A.</First>
-        <Middle>B.</Middle>
-        <Last>Contrib</Last>
-      </Person>
-    </Contributor>
-  </Contributors>
-  <ReprintOf>
-    <Year>1956</Year>
-  </ReprintOf>
-  <ReferenceOf>
-    <Index>
-      <IndexName>AJB</IndexName>
-      <VolumeNumber>59</VolumeNumber>
-      <SectionNumber>144</SectionNumber>
-      <SubSectionNumber>0</SubSectionNumber>
-      <EntryNumber>55b</EntryNumber>
-    </Index>
-  </ReferenceOf>
-  <Comments>
-    <Comment>a first comment</Comment>
-    <Comment>This is the editor string</Comment>
-  </Comments>
-</Entry>'''
+        def setUp(self):
+            """Initialize local stuff. We start with a fresh Entry object
+            for every test."""
 
-    ENT_XML = etree.fromstring(ENTRY_XML)
+            self.test_str = testentry.ENTRY_XML_STR
+            self.test_entry = ajbentry.AJBentry()
+            self.ent_xml = etree.fromstring(self.test_str)
 
-    TMP_ENTRY.read_xml_to_entry(ENT_XML)
-    NEW_XML = etree.tostring(TMP_ENTRY.write_xml_from_entry(),
-                             pretty_print=True, encoding='unicode')
+        def tearDown(self):
+            """Displose of the Entry object at the end of every test."""
 
-    locs = [i for i in range(len(ENTRY_XML)) if ENTRY_XML[i] != NEW_XML[i]]
-    if locs:
-        print('Error: new XML entry string does not match',
-              'original XML entry string in the following locations', locs)
-        print(NEW_XML[locs[0]:])
-    else:
-        print('Success: new XML entry string matches original XML entry string')
+            del self.test_str
+            del self.test_entry
+            del self.ent_xml
+
+        def test_read_write(self):
+            """Test that we can read/write the XML string to an AJBentry"""
+
+            self.test_entry.read_xml_to_entry(self.ent_xml)
+            new_str = etree.tostring(self.test_entry.write_xml_from_entry(),
+                                     pretty_print=True, encoding='unicode')
+            
+            self.assertEqual(len(self.test_str), len(new_str))
+            locs = [i for i in range(len(self.test_str)) if self.test_str[i] != new_str[i]]
+
+            # locs should be an empty list
+            self.assertFalse(locs, msg='input and output strings differ')
+
+    unittest.main()
