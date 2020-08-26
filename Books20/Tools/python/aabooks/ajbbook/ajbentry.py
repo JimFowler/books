@@ -21,9 +21,6 @@
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
 
-
-import re
-
 from aabooks.lib import entry
 from aabooks.ajbbook import entryxml
 from aabooks.ajbbook import entrytext
@@ -175,15 +172,19 @@ class AJBentry(entry.Entry):
     # Read/write the entry in the specified format
     #
     def read_xml_to_entry(self, xmlstr):
+        '''A call to the entryxml routine entry_from_xml()'''
         entryxml.entry_from_xml(self, xmlstr)
 
     def write_xml_from_entry(self):
+        '''A call to the entryxml routine entry_to_xml()'''
         return entryxml.entry_to_xml(self)
 
-    def read_text_to_entry(self):
-        entrytext.entry_from_text(self)
+    def read_text_to_entry(self, line):
+        '''A call to the entrytext routine entry_from_text()'''
+        entrytext.entry_from_text(self, line)
 
     def write_text_from_entry(self):
+        '''A call to the entrytext routine entry_to_text()'''
         entrytext.entry_to_text(self)
 
 #
@@ -191,23 +192,4 @@ class AJBentry(entry.Entry):
 #
 if __name__ == '__main__':
 
-    from lxml import etree
-    from pprint import pprint
-
-
-    #
-    # test XML routines
-    #
-    print('\n\nTesting XML routines\n')
-    print('allfieldajb as entry:')
-    pprint(ENT)
-
-    print('\nallfieldajb as XML')
-    XMLENT = ENT.entry_to_xml()
-    print(etree.tostring(XMLENT, pretty_print=True, encoding='unicode'))
-
-    print('\nallfieldajb XML as entry')
-    ENT = AJBentry()
-    ENT.entry_from_xml(XMLENT)
-    print('entry.is_valid is %d' % (ENT.is_valid()))
-    pprint(ENT)
+    print('Need to define test routines!')
