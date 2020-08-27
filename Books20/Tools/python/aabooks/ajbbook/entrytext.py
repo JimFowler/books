@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#
 # -*- mode: python;-*-
 ## Begin copyright
 ##
@@ -29,8 +29,20 @@ from aabooks.ajbbook import AJBcomments as comments
 from aabooks.lib import utils
 
 #
-# Don't build the regular expression compilers everytime
-#  we build and entry.
+# We disable these pylint warnings. exec() is used to
+# minimize the number of statement and variables
+# in event_from_text() and we have much too long a
+# function in parse_comments(). However, we are not
+# going the change parse_comments() because it is complicated
+# and the text format is deprecated.
+#
+
+# pylint: disable=exec-used,too-many-branches,too-many-statements
+
+#
+# Build the regular expression compilers to we don't
+# build the them every time we enter the entry_from_text()
+# function.
 #
 __reg1__ = re.compile(r'\A\d+ +\d+\.\d+', re.UNICODE)
 
@@ -299,18 +311,14 @@ def entry_from_text(entry, line):
     Entry dictionary. Returns True if this is a parsable line and
     false if it is not."""
 
-    place = ""
-    publishername = ""
-
     #
-    # This regular expression is used to check the beginning of a line
+    # __reg1__ is used to check the beginning of a line
     # for an item number, volnum and section number. If no numbers are
     # seen, then we reject the line.
     #
 
     if line and __reg1__.match(line):
         entry['OrigStr'] = line
-        #print(line)
         fields = line.split(',')
         fieldnum = -1
         for field in fields:
@@ -359,7 +367,7 @@ def text_entry_field8(entry, field):
     '''Comments and other material'''
     entry['Comments'] = field
     _parse_comments(entry, field)
-    
+
 
 #
 # Private functions
@@ -503,9 +511,9 @@ def _parse_comments(entry, field):
 ##
 if __name__ == '__main__':
 
-    from aabooks.lib import entry as aaentry
+    import unittest
+
     from aabooks.ajbbook.ajbentry import AJBentry
-    from pprint import pprint
 
     TESTENT = {
         'ajbstr': '''4 66.145(1).29 P. W. Hodge, The Physics comma and \
@@ -574,53 +582,68 @@ Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 and \
 Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
         }
 
-    try:
-        aaentry.Entry(TESTENT['ajbstr'])
-    except NotImplementedError:
-        print("Entry() class fails properly with no read() method.")
 
-    ENT = AJBentry()
-    print('The empty ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+    class EntryTextTestCase(unittest.TestCase):
+        '''Set up the unit tests'''
 
-    ENT = AJBentry(TESTENT['ajbstr'])
-    print('The good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+        def setUp(self):
+            '''Initialize local stuff. We start with a fresh
+            AJBentry object for every test.
 
+            '''
+            self.entry = AJBentry()
 
-    ENT = AJBentry(TESTENT['ajbstra'])
-    print('\nThe good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+        def tearDown(self):
+            '''Dispose of the Entry object at the end of every test.'''
 
+            del self.entry
 
-    ENT = AJBentry(TESTENT['ajbstra1'])
-    print('\nThe good ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+        def test_read_ajbstr(self):
+            '''Test for valid entry with ajbstr'''
 
-    ENT = AJBentry(TESTENT['badajbstr'])
-    print('\nThe bad ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
+            self.entry.read_text_to_entry(TESTENT['ajbstr'])
+            self.assertTrue(self.entry.is_valid())
 
-    ENT = AJBentry(TESTENT['badtitlestr'])
-    print('\nThe bad title ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+        def test_read_ajbstra(self):
+            '''Test for valid entry with ajbstra'''
 
-    ENT = AJBentry(TESTENT['authorstr'])
-    print('\nThe author ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
-    print(ENT.short_title())
+            self.entry.read_text_to_entry(TESTENT['ajbstra'])
+            self.assertTrue(self.entry.is_valid())
 
-    ENT = AJBentry(TESTENT['editorstr'])
-    print('\nThe editor ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
-    print(ENT.short_title())
+        def test_read_ajbstra1(self):
+            '''Test for valid entry with ajbstra1'''
 
-    print(ENT.num_str())
-    EDS = ENT['Editors']
-    print(EDS[0].full_name)
+            self.entry.read_text_to_entry(TESTENT['ajbstra1'])
+            self.assertTrue(self.entry.is_valid())
 
-    ENT = AJBentry(TESTENT['allfieldsstr'])
-    print('\nThe all fields ajb entry is_valid() is %d and looks like:' % ENT.is_valid())
-    pprint(ENT)
+        def test_read_badajbstr(self):
+            '''Test for invalid entry with badajbstr'''
 
-    print(utils.parse_ajbnum('AJB 32.45(0).56'))
-    print(utils.parse_ajbnum('32.45(0).56'))
+            self.entry.read_text_to_entry(TESTENT['badajbstr'])
+            self.assertFalse(self.entry.is_valid())
+
+        def test_read_badtitlestr(self):
+            '''Test for invalid entry with badtitlestr'''
+
+            self.entry.read_text_to_entry(TESTENT['badtitlestr'])
+            self.assertFalse(self.entry.is_valid())
+
+        def test_read_multiauthor(self):
+            '''Test for valid entry with authorstr'''
+
+            self.entry.read_text_to_entry(TESTENT['authorstr'])
+            self.assertTrue(self.entry.is_valid())
+
+        def test_read_multieditor(self):
+            '''Test for valid entry with editorstr'''
+
+            self.entry.read_text_to_entry(TESTENT['editorstr'])
+            self.assertTrue(self.entry.is_valid())
+
+        def test_read_allfields(self):
+            '''Test for valid entry with allfieldsstr'''
+
+            self.entry.read_text_to_entry(TESTENT['allfieldsstr'])
+            self.assertTrue(self.entry.is_valid())
+
+    unittest.main()
