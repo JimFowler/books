@@ -32,6 +32,8 @@ from nameparser import HumanName
 
 from aabooks.lib import utils
 
+# pylint: disable=exec-used,unused-argument
+
 __reg2__ = re.compile(r'([0-9]+)([A-Za-z]*)', re.ASCII)
 
 # XML create routines
@@ -534,30 +536,30 @@ if __name__ == '__main__':
     import aabooks.ajbbook.testentryxml as testentry
 
     class EntryTestCase(unittest.TestCase):
-        """Set up the unit tests"""
+        '''Set up the unit tests'''
 
         def setUp(self):
-            """Initialize local stuff. We start with a fresh Entry object
-            for every test."""
+            '''Initialize local stuff. We start with a fresh Entry object
+            for every test.'''
 
             self.test_str = testentry.ENTRY_XML_STR
             self.test_entry = ajbentry.AJBentry()
             self.ent_xml = etree.fromstring(self.test_str)
 
         def tearDown(self):
-            """Displose of the Entry object at the end of every test."""
+            '''Displose of the Entry object at the end of every test.'''
 
             del self.test_str
             del self.test_entry
             del self.ent_xml
 
         def test_read_write(self):
-            """Test that we can read/write the XML string to an AJBentry"""
+            '''Test that we can read/write the XML string to an AJBentry'''
 
             self.test_entry.read_xml_to_entry(self.ent_xml)
             new_str = etree.tostring(self.test_entry.write_xml_from_entry(),
                                      pretty_print=True, encoding='unicode')
-            
+
             self.assertEqual(len(self.test_str), len(new_str))
             locs = [i for i in range(len(self.test_str)) if self.test_str[i] != new_str[i]]
 
