@@ -1,3 +1,42 @@
+2020-08-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabook/ajbbook/entryxml.py: Added unittests to
+	entryxml.py.
+
+	* Tools/python/aabook/ajbbook/entrytext.py: Added unittests to
+	entrytext.py.
+
+2020-08-25  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabook/ajbbook/entrytext.py: Created entrytext.py
+	by taking all the entry to text and text to entry functions
+	out of ajbentry.py.  Cleaned with pylint and did a full functional
+	test of all features. Even though the text entry format is depricated
+	I still want to keep this feature.  This way the entries can
+	be deleted quickly.
+
+2020-08-24  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabook/ajbbook/entryxml.py: Created entryxml.py
+	by taking all the entry to xml and xml to entry functions
+	out of ajbentry.py.  Cleaned with pylint and did a full functional
+	test of all features.
+
+2020-08-22  Jim Fowler  <jrf@biblion>
+
+	* Tools/xml/bookfile.xsd: Add page numbers as an optional
+	addtional to Index. So the AJB number may contain the page
+	number as well.
+
+	* Tools/python/aabook/ajbbook/designer/ui_BookEntry.ui: Added
+	a page number field to the book entry gui.
+
+	* Tools/python/aabook/ajbbook/ajbentry.py: Added page number
+	to Index dictionary.
+
+	* Tools/python/aabook/ajbbook/ajbmainwindow.py: Added page number
+	to entry_to_display() and display_to_entry()
+
 2020-07-25  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/journals (main): Switch to configargparse in
