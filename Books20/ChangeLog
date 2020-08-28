@@ -1,3 +1,7 @@
+2020-08-28  Jim Fowler  <jrf@biblion>
+
+	* master: merge aabooks with master
+
 2020-08-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabook/ajbbook/entryxml.py: Added unittests to
