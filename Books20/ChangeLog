@@ -1,5 +1,10 @@
 2020-08-28  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/journal/entryxml.py: Created entryxml.py
+	by taking all the entry to xml and xml to entry functions
+	from journalentry.py. Cleaned with pylint and did a full functional
+	test of all the features.
+
 	* master: merge aabooks with master
 
 2020-08-26  Jim Fowler  <jrf@biblion>
@@ -13,11 +18,11 @@
 2020-08-25  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabook/ajbbook/entrytext.py: Created entrytext.py
-	by taking all the entry to text and text to entry functions
-	out of ajbentry.py.  Cleaned with pylint and did a full functional
-	test of all features. Even though the text entry format is depricated
-	I still want to keep this feature.  This way the entries can
-	be deleted quickly.
+	by taking all the entry to text and text to entry functions out of
+	ajbentry.py.  Cleaned with pylint and did a full functional test
+	of all features. Even though the text entry format is depricated I
+	still want to keep this feature.  This way the text entry
+	functions can be deleted quickly.
 
 2020-08-24  Jim Fowler  <jrf@biblion>
 
