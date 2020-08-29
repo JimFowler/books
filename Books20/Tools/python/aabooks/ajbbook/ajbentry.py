@@ -21,12 +21,11 @@
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
 
-from aabooks.lib import entry
 from aabooks.ajbbook import entryxml
 from aabooks.ajbbook import entrytext
 
 
-class AJBentry(entry.Entry):
+class AJBentry(dict):
 
     """Read the information from a string and put the data in the
     AJBentry dictionary. The entry is valid if there was a valid AJB

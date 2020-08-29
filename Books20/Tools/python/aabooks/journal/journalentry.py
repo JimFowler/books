@@ -23,12 +23,11 @@ the form Entry.entry().'''
 
 
 
-from aabooks.lib import entry
 import aabooks.journal.entryxml as entryxml
 
 __version__ = 'class JournalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
 
-class JournalEntry(entry.Entry):
+class JournalEntry(dict):
 
     """Read the information from an XML string and put the data in the
     journalEntry dictionary. The entry is valid if there is a valid
