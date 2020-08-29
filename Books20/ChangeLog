@@ -1,8 +1,12 @@
 2020-08-29  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/lib/entry.py: Deleted entry.py in order to
+	simplify the software.  Made AJBentry and JournalEntry a subclass
+	of dict.  Merged again with master
+
 	* master: merge aabooks into master in order to pick up
 	journal/entryxml.py
-	
+
 2020-08-28  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/entryxml.py: Created entryxml.py
