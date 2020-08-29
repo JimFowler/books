@@ -185,7 +185,7 @@ class AJBentry(entry.Entry):
 
     def write_text_from_entry(self):
         '''A call to the entrytext routine entry_to_text()'''
-        entrytext.entry_to_text(self)
+        return entrytext.entry_to_text(self)
 
 #
 # Test everything

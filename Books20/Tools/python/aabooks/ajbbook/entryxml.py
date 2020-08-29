@@ -300,8 +300,9 @@ def make_person_xml(hname):
 
     return person_xml
 
-# need to modify bookfile.py as well
+#
 #def read_xml_to_entry(self, elxml):
+#
 def entry_from_xml(entry, elementxml):
     '''Given an XML Entry element place the information into the AJBentry
     dictionary. The input arguments are the entry to put the
@@ -547,7 +548,7 @@ if __name__ == '__main__':
             self.ent_xml = etree.fromstring(self.test_str)
 
         def tearDown(self):
-            '''Displose of the Entry object at the end of every test.'''
+            '''Dispose of the Entry object at the end of every test.'''
 
             del self.test_str
             del self.test_entry
