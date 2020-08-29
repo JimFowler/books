@@ -1,5 +1,9 @@
 2020-08-29  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/lib/entryfile.py (EntryList): Created
+	entryfile.py with class EntryList() as a generic class for
+	bookfile and journalfile.
+
 	* Tools/python/aabooks/lib/entry.py: Deleted entry.py in order to
 	simplify the software.  Made AJBentry and JournalEntry a subclass
 	of dict.  Merged again with master

@@ -29,19 +29,13 @@ max_entries() - 1. This will certainly change in the future to be
 more pythonic.  Will need to update the documentation and unit tests
 when I do.
 
-The generic metadate that are associated with entries are
+The generic metadata that are associated with entries are
 
   * dirty_flag - has the list been modified since the last write to disk
 
-  * header - any header information associated with the file
-
   * filename - the full file name
+               Used only in open() statement
 
-  * dirname - this directory the file is located in 
-
-  * basename - the base name of the file
-
-  * extension - the file extension or type (e.g .xml, .txt)
 
 Users are free to add their own metadata to their sub-class.
 
@@ -58,7 +52,7 @@ and may provide their own reader and writer.
 
 import os
 
-__VERSION__ = 0.1
+__VERSION__ = 1.0
 
 
 class EntryList(list):
@@ -77,16 +71,10 @@ class EntryList(list):
         """
         super(EntryList, self).__init__()
 
-        self._header = None
+        # the first element is the header
+        self.append('')
 
-        self._filename = './document1.txt'
-        self._dirname = './'
-        self._basename = 'document1'
-        self._extension = '.txt'
-
-        # 1 <= current_entry_index <= len(self.)
-        self.current_entry_index = -1
-
+        self.filename = './document1.xml'
         self._dirty = False
 
     def is_dirty(self):
@@ -100,56 +88,7 @@ class EntryList(list):
         '''Return the number of entries in the entry_list.
 
         '''
-        return len(self)
-
-    # Functions dealing with the file name
-
-    def set_filename(self, filename):
-        """Set the name of the disk file. Thus one can read a file,
-        set a new file name, and save the file. No validity checking
-        is done at this stage.
-
-        Returns True if the filename was set, otherwise it return False
-        """
-
-        if isinstance(filename, str):
-            self._filename = filename
-            self._dirname, _basename = os.path.split(filename)
-            self._basename, self._extension = os.path.splitext(_basename)
-            self._dirty = True
-            return True
-
-        return False
-
-    def get_filename(self):
-        """Return the current value of the fileName.
-
-        """
-        return self._filename
-
-    def get_dirname(self):
-        """Returns the dirname() of the current filename.
-
-        """
-        return self._dirname
-
-    def get_basename(self):
-        """Returns the basename() of the current filename.
-
-        """
-        return self._basename
-
-    def get_basename_with_extension(self):
-        """Returns the baseName().extension() of the current filename.
-
-        """
-        return self._basename + self._extension
-
-    def get_extension(self):
-        """Returns the extension() of the current filename.
-
-        """
-        return self._extension
+        return len(self) - 1
 
     # Functions to deal with the Header
 
@@ -161,7 +100,7 @@ class EntryList(list):
         # headerstr should be a string
         if isinstance(headerstr, str):
             self._dirty = True
-            self._header = headerstr
+            self[0] = headerstr
             return True
 
         return False
@@ -170,7 +109,7 @@ class EntryList(list):
         """Return the current header string.
 
         """
-        return self._header
+        return self[0]
 
     # current entry
 
@@ -184,10 +123,9 @@ class EntryList(list):
         if not entry.is_valid():
             return False
 
-        if 1 <= count <= len(self):
+        if 1 <= count <= len(self) - 1:
             # count is within the list, insert the entry
-            self.current_entry_index = count - 1
-            self.insert(self.current_entry_index, entry)
+            self.insert(count, entry)
         else:
             # count is not within the list, append the entry
             self.append(entry)
@@ -198,7 +136,7 @@ class EntryList(list):
 
     def set_entry(self, entry, count=-1):
         """Write over an existing entry or the entry at position
-        'count' if given.  Note that 1 <= count <= len(self.).
+        'count' if given.  Note that 1 <= count <= len(self.) - 1.
         The dirty flag is set for the file.
 
         Returns True or False indicating whether or not the entry
@@ -210,13 +148,11 @@ class EntryList(list):
         if not entry.is_valid():
             return False
 
-        if count != -1 and not 1 <= count <= len(self):
+        if count != -1 and not 1 <= count <= len(self) - 1:
             return False
 
-        if count != -1:
-            self.current_entry_index = count - 1
 
-        self[self.current_entry_index] = entry
+        self[count] = entry
         self._dirty = True
 
         return True
@@ -227,23 +163,21 @@ class EntryList(list):
         that 1 <= count <= len(self.).
 
         """
-        if count < 1 or count > len(self):
+        if count < 1 or count > len(self) - 1:
             return None
 
-        # the list actually counts with a zero-based index
-        self.current_entry_index = count - 1
-        return self[self.current_entry_index]
+        return self[count]
 
     def delete_entry(self, entrynum):
         """Delete the entryNum record in the list, if such exists.
         Return the length of the remaining list.
 
         """
-        if 0 < entrynum <= len(self):
-            self.pop(entrynum - 1)
+        if 0 < entrynum <= len(self) - 1:
+            self.pop(entrynum)
             self._dirty = True
 
-        return len(self)
+        return len(self) - 1
 
     # file I/O
     def read_file(self, filename=None):
@@ -252,12 +186,12 @@ class EntryList(list):
 
         """
         if filename:
-            self.set_filename(filename)
+            self.filename = filename
 
-        if self._filename == '' or not os.path.isfile(self._filename):
+        if self.filename == '' or not os.path.isfile(self.filename):
             return 0  # no records read
 
-        return eval('self.read_file_' + self._extension[1:])
+        return eval('self.read_file_' + os.path.splitext(self.filename)[1][1:])
 
     def write_file(self, filename=None):
         """Select a writer function depending on the filename
@@ -268,9 +202,9 @@ class EntryList(list):
 
         """
         if filename:
-            self.set_filename(filename)
+            self.filename = filename
 
-        return eval('self.write_file_' + self._extension[1:])
+        return eval('self.write_file_' + os.path.splitext(self.filename)[1][1:])
 
 
 
@@ -278,10 +212,8 @@ if __name__ == "__main__":
 
     import unittest
     from pathlib import Path
-    import aabooks.lib.entry as en
-    from pprint import pprint
-    
-    class MyEntry(en.Entry):
+
+    class MyEntry(dict):
         """A simple entry class for testing.
         The entry consists of a single entry
         'value' : <string>
@@ -301,7 +233,6 @@ if __name__ == "__main__":
         def blank_entry(self):
             """Create a new Entry."""
 
-
         def set_value(self, string):
             """Set the entry."""
             self['value'] = string
@@ -320,57 +251,29 @@ if __name__ == "__main__":
             self.entry4 = MyEntry() # invalid entry
 
         def tearDown(self):
-            """Delete the class variables at the end of each test."""
-            
+            """Delete the class variables at the end of each """
+
             del self.ev_list
             del self.entry1
             del self.entry2
             del self.entry3
             del self.entry4
 
-        def test_initialize(self):
+        def test_a_initialize(self):
             """Test that the EntryList is initialized correctly.
 
             Test
               header is None
               filename
-              dirname
-              basename
-              extension
               dirty_flag
 
             """
 
-            self.assertIsNone(self.ev_list.get_header())
-            self.assertEqual(self.ev_list.get_filename(), './document1.txt')
-            self.assertEqual(self.ev_list.get_dirname(), './')
-            self.assertEqual(self.ev_list.get_basename(), 'document1')
-            self.assertEqual(self.ev_list.get_extension(), '.txt')
-            self.assertEqual(self.ev_list.get_basename_with_extension(),
-                             'document1.txt')
+            self.assertEqual(self.ev_list.get_header(), '')
+            self.assertEqual(self.ev_list.filename, './document1.xml')
             self.assertFalse(self.ev_list.is_dirty())
 
-
-        def test_set_filename(self):
-            """Test set_filename and all the get_*name functions
-
-            """
-
-            self.assertTrue(self.ev_list.set_filename('./files/test_file.xml'))
-            self.assertEqual(self.ev_list.get_filename(), './files/test_file.xml')
-            self.assertEqual(self.ev_list.get_dirname(), './files')
-            self.assertEqual(self.ev_list.get_basename(), 'test_file')
-            self.assertEqual(self.ev_list.get_extension(), '.xml')
-            self.assertEqual(self.ev_list.get_basename_with_extension(),
-                             'test_file.xml')
-            self.assertTrue(self.ev_list.is_dirty())
-
-            # should not be able to set a non-string as the filename
-            self.assertFalse(self.ev_list.set_filename(5))
-            self.assertEqual(self.ev_list.get_filename(), './files/test_file.xml')
-
-
-        def test_header(self):
+        def test_c_header(self):
             """Test header manipulation.
 
             test
@@ -392,8 +295,7 @@ It contains three lines."""
             self.assertFalse(self.ev_list.set_header(5))
             self.assertFalse(self.ev_list.is_dirty())
 
-
-        def test_entry(self):
+        def test_d_set_new_entry(self):
             """Test entry manipulation.
 
             """
@@ -427,30 +329,44 @@ It contains three lines."""
             # test set_new_entry with invalid entry
             self.assertFalse(self.ev_list.set_new_entry(self.entry4))
 
-            
+        def test_e_get_entry(self):
+            '''Test the EntryList.get_entry() function.'''
+
+            # set up the list first 123
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+
             # test get_entry with counts inside and outside of invalid values
             self.assertIsNone(self.ev_list.get_entry(0))
             self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()+1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(1), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry3)
 
-            # Test set_entry
+        def test_f_set_entry(self):
+            '''Test the EntryList.set_entry() function'''
 
-            # test set_entry with replacement of entry just inside valid counts 2121
+            # set up the list first 1233
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+
+            # test set_entry with replacement of entry just inside valid counts 2233
             self.assertTrue(self.ev_list.set_entry(self.entry2, 1))
             self.assertEqual(self.ev_list.get_entry(1), self.entry2)
-            self.assertTrue(self.ev_list.set_entry(self.entry3, self.ev_list.max_entries())) # 2123
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry3)
+            self.assertTrue(self.ev_list.set_entry(self.entry1, self.ev_list.max_entries())) # 2221
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry1)
 
             # test set_entry with invalid entry
             self.assertFalse(self.ev_list.set_entry(self.entry4, 2))
-            self.assertEqual(self.ev_list.get_entry(4), self.entry3)
+            self.assertEqual(self.ev_list.get_entry(4), self.entry1)
 
             # test set_entry with invalid count
             self.assertFalse(self.ev_list.set_entry(self.entry2, 0))
             self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()+1))
 
-            # test delete_entry 123
+            # test delete_entry 221
             self.assertEqual(self.ev_list.max_entries(), 4)
             self.assertEqual(self.ev_list.delete_entry(1), 3)
 
@@ -458,8 +374,7 @@ It contains three lines."""
             self.assertEqual(self.ev_list.delete_entry(0), 3)
             self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
 
-
-        def test_read_file(self):
+        def test_g_read_file(self):
             """Test the read_file stub.
 
             """
@@ -479,14 +394,13 @@ It contains three lines."""
                 self.ev_list.read_file('bogon.xml')
 
             # test that _filename was updated
-            self.assertEqual(self.ev_list.get_filename(), 'bogon.xml')
+            self.assertEqual(self.ev_list.filename, 'bogon.xml')
             try:
                 os.remove('bogon.xml')
             except FileNotFoundError:
                 pass
 
-
-        def test_write_file(self):
+        def test_h_write_file(self):
             """test the write_file stub
 
             """
@@ -495,7 +409,7 @@ It contains three lines."""
             with self.assertRaises(AttributeError):
                 self.ev_list.write_file(filename)
 
-            self.assertEqual(self.ev_list.get_filename(), filename)
+            self.assertEqual(self.ev_list.filename, filename)
 
 
     unittest.main()
