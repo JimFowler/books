@@ -1,5 +1,16 @@
 2020-08-30  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/journal/jsearch.py: Corrected return
+	index from search list to take into account the 1-based counting
+	of entries in the new entrylist.EntryList() class.
+
+	* Tools/python/aabooks/journal/journalwindow.py (JournalWindow):
+	Adapted JournalWindow to new JournalFile format.
+
+	* Tools/python/aabooks/journal/journalfile.py (JournalFile):
+	Adapted class JournalFile to the new entrylist.EntryList()
+	class.
+
 	* Tools/python/aabooks/ajbbook/ajbwindow.py
 	(BookEntry.entry_to_display): Adapted ajbwindow.py to use new
 	bookfile.BookFile() and entrylist.EntryList()

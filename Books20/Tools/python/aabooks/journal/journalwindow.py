@@ -33,7 +33,7 @@ To keep pylint happy,
 '''
 import os
 import platform
-import configparser
+
 # Trouble shooting assistance
 from pprint import pprint
 
@@ -168,21 +168,20 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         '''Add all the titles and abbreviations to the search
         dictionary'''
         self._vardict['sdict'].clear()
-        index = 0
-        for entry in self._vardict['journal_file']._entry_list:
-            title = entry['Title']
-            self._vardict['sdict'].add_sub_strings(title, (title, index))
+        for count, entry in enumerate(self._vardict['journal_file']):
+            if count > 0:
+                title = entry['Title']
+                self._vardict['sdict'].add_sub_strings(title, (title, count))
 
-            sub_title = entry['subTitle']
-            self._vardict['sdict'].add_sub_strings(sub_title, (sub_title, index))
+                sub_title = entry['subTitle']
+                self._vardict['sdict'].add_sub_strings(sub_title, (sub_title, count))
 
-            subsub_title = entry['subsubTitle']
-            self._vardict['sdict'].add_sub_strings(subsub_title, (subsub_title, index))
+                subsub_title = entry['subsubTitle']
+                self._vardict['sdict'].add_sub_strings(subsub_title, (subsub_title, count))
 
-            for abr in entry['Abbreviations']:
-                if abr is not None:
-                    self._vardict['sdict'].add_sub_strings(abr, (abr, index))
-            index += 1
+                for abr in entry['Abbreviations']:
+                    if abr is not None:
+                        self._vardict['sdict'].add_sub_strings(abr, (abr, count))
 
 
     #
@@ -219,7 +218,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         the first entry. If no records are found we assume that this is
         a new file and we automatically generate a new entry."""
 
-        self.set_max_entry_count(self._vardict['journal_file'].read_xml_file(name))
+        self.set_max_entry_count(self._vardict['journal_file'].read_file(name))
         if self.max_entry_count:
             self.statusbar.clearMessage()
             self.statusbar.showMessage('%d records found'%self.max_entry_count, 6000)
@@ -230,7 +229,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         else:
             self.statusbar.showMessage('No records found in file %s' % name)
             self._new_entry()
-        self.set_window_title(self._vardict['journal_file'].get_base_name())
+        self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
 
 
     def _save_file(self):
@@ -252,8 +251,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                 ".", "*.xml")
 
         if fname:
-            self._vardict['journal_file'].write_xml_file(fname)
-            self.set_window_title(self._vardict['journal_file'].get_base_name())
+            self._vardict['journal_file'].write_file(fname)
+            self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
 
     #
     # Menu and button slots for Entry Actions
@@ -499,8 +498,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self._vardict['header_window'].set_bookfile(self._vardict['journal_file'])
         self._vardict['header_window'].setWindowTitle(\
                 QtWidgets.QApplication.translate("headerWindow",\
-                "Edit heaaders - %s" % (self._vardict['journal_file'].get_base_name()),\
-                None))
+                "Edit heaaders - %s" % (os.path.basename(self._vardict['journal_file'].filename)),\
+                                        None))
         self._vardict['header_window'].set_header_text(\
                                         self._vardict['journal_file'].get_header())
         self._vardict['header_window'].show()
@@ -601,7 +600,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         fname, dummy = QtWidgets.QFileDialog.getOpenFileName(self,\
             '%s -- Choose new file' % QtWidgets.QApplication.applicationName(),\
-            self._vardict['journal_file'].get_dir_name(), '*.xml')
+            os.path.dirname(self._vardict['journal_file'].filename), '*.xml')
         if fname:
             self.open_file(fname)
 
@@ -801,3 +800,20 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                 entry['Comments'].append(line)
 
         return entry
+
+#
+# Test routine
+#
+
+
+if __name__ == '__main__':
+
+    import sys
+
+    APP = QtWidgets.QApplication(sys.argv)
+    APP.setApplicationName('Journal Entry')
+    FORM = JournalWindow()
+    APP.focusChanged.connect(FORM.set_focus_changed)
+
+    FORM.show()
+    sys.exit(APP.exec_())
