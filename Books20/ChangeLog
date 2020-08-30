@@ -1,5 +1,9 @@
 2020-08-30  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/ajbbook/ajbwindow.py
+	(BookEntry.entry_to_display): Adapted ajbwindow.py to use new
+	bookfile.BookFile() and entrylist.EntryList()
+
 	* Tools/python/aabooks/ajbbook/bookfile.py: Adapted BookFile()
 	class to be a subclass of entrylist.EntryList().  Added unit tests
 	and ran through pylint.
