@@ -289,7 +289,6 @@ It contains three lines.'''
             self.assertTrue(self.ev_list.set_header(header))
             self.assertEqual(self.ev_list.get_header(), header)
             self.assertTrue(self.ev_list.is_dirty())
-            del self.ev_list
 
             # should not be able to write a non-string to the header
             self.ev_list = EntryList()
