@@ -256,12 +256,12 @@ if __name__ == "__main__":
         def test_d_read_file_text(self):
             '''Test the BookFile.read_file_text() method.'''
 
-            self.assertEqual(self.bookfile.read_file("testfile2.txt"), 11)
+            self.assertEqual(self.bookfile.read_file("testfile.txt"), 11)
 
         def test_d_write_file_text(self):
             '''Test the BookFile.write_file_text() method.'''
 
-            self.assertEqual(self.bookfile.read_file("testfile2.txt"), 11)
+            self.assertEqual(self.bookfile.read_file("testfile.txt"), 11)
             self.assertTrue(self.bookfile.write_file('testfile_tmp.txt'))
 
         def test_f_check_schema(self):
