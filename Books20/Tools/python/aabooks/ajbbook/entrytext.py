@@ -24,7 +24,6 @@ However, we keep this around just in case.
 """
 
 import re
-
 from aabooks.ajbbook import AJBcomments as comments
 from aabooks.lib import utils
 
@@ -58,12 +57,13 @@ def entry_to_text(entry):
     if not entry.is_valid():
         return ''
 
-    entrystr = entry.num_str()[4:] + ' '
+    entrystr = entry.num_str()[4:]
 
     entrystr += entry_text_authoreditor(entry)
     entrystr += ', ' + entry['Title'].replace(', ', ' comma ')
 
     entrystr += entry_text_publishers(entry)
+    entrystr += entry_text_year(entry)
     entrystr += entry_text_pagination(entry)
     entrystr += entry_text_price(entry)
     entrystr += entry_text_reviews(entry)
@@ -84,7 +84,7 @@ def entry_to_text(entry):
 def entry_text_authoreditor(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ' '
 
     if entry.not_empty('Authors'):
         entrystr += utils.make_name_str(entry['Authors'])
@@ -97,7 +97,7 @@ def entry_text_authoreditor(entry):
 def entry_text_publishers(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ''
 
     if entry.not_empty('Publishers'):
         entrystr += ', '
@@ -117,7 +117,7 @@ def entry_text_publishers(entry):
 def entry_text_year(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ', '
 
     if entry.not_empty('Year'):
         entrystr += str(entry['Year'])
@@ -127,7 +127,7 @@ def entry_text_year(entry):
 def entry_text_pagination(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ', '
 
     if entry.not_empty('Pagination'):
         entrystr += str(entry['Pagination'])
@@ -137,7 +137,7 @@ def entry_text_pagination(entry):
 def entry_text_price(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ', '
 
     if entry.not_empty('Price'):
         entrystr += str(entry['Price'])
@@ -147,7 +147,7 @@ def entry_text_price(entry):
 def entry_text_reviews(entry):
     '''Convert entry Reviews to entry string review field'''
 
-    entrystr = ','
+    entrystr = ', '
 
     if entry.not_empty('Reviews'):
         first = True
@@ -162,9 +162,7 @@ def entry_text_reviews(entry):
 def entry_text_edition(entry):
     '''Convert entry Edition to entry string edition'''
 
-    entrystr = ''
-
-    entrystr += ', '
+    entrystr = ', '
     if entry.not_empty('Edition'):
         entrystr += str(entry['Edition'])
         num = int(entry['Edition'])
@@ -183,7 +181,7 @@ def entry_text_edition(entry):
 def entry_text_reprint(entry):
     '''Convert entry Reprint to entry string reprint of'''
 
-    entrystr = ''
+    entrystr = ' '
 
     if entry.not_empty('Reprint'):
         entrystr += 'reprint of '
@@ -195,7 +193,7 @@ def entry_text_reprint(entry):
 def entry_text_compilers(entry):
     '''Convert entry Compilers to entry string compiled by'''
 
-    entrystr = ''
+    entrystr = ' '
 
     if entry.not_empty('Compilers'):
         entrystr += 'compiled by '
@@ -207,7 +205,7 @@ def entry_text_compilers(entry):
 def entry_text_contributors(entry):
     '''Convert entry Contributors to entry string contributors'''
 
-    entrystr = ''
+    entrystr = ' '
 
     if entry.not_empty('Contributors'):
         entrystr += 'contributors '
@@ -217,10 +215,10 @@ def entry_text_contributors(entry):
     return entrystr
 
 def entry_text_translated(entry):
-    '''Convert entry Translateds or TranslatedFrom to
+    '''Convert entry Translated or TranslatedFrom to
     an entrystr translator comment.'''
 
-    entrystr = ''
+    entrystr = ' '
 
     # translated from by
     if entry.not_empty('Translators') or entry.not_empty('TranslatedFrom'):
@@ -240,7 +238,7 @@ def entry_text_additional_editors(entry):
     but only if the author field is populated in which
     case these are additional editors.'''
 
-    entrystr = ''
+    entrystr = ' '
 
     # additional editors
     if entry.not_empty('Authors') and entry.not_empty('Editors'):
@@ -254,7 +252,7 @@ def entry_text_additional_editors(entry):
 def entry_text_additional_publishers(entry):
     '''Convert the entry Publishers to entrystr also published'''
 
-    entrystr = ''
+    entrystr = ' '
 
     # additional publishers
     if entry['Publishers'].__len__() > 1:
@@ -274,7 +272,7 @@ def entry_text_additional_publishers(entry):
 def entry_text_language(entry):
     '''Convert the entry Language to entrystr language'''
 
-    entrystr = ''
+    entrystr = ' '
     if entry.not_empty('Language'):
         entrystr += 'in '
         entrystr += entry['Language']
@@ -285,7 +283,7 @@ def entry_text_language(entry):
 def entry_text_others(entry):
     '''Convert the entry Others to entrystr others'''
 
-    entrystr = ''
+    entrystr = ' '
     # others (the comments)
     if entry.not_empty('Others'):
         for other in entry['Others']:
@@ -295,7 +293,7 @@ def entry_text_others(entry):
     return entrystr
 
 def entry_text_reference(entry):
-    '''Convert the entry Referece to the entrystr reference'''
+    '''Convert the entry Reference to the entrystr reference'''
 
     entrystr = ''
     if entry.not_empty('Reference'):
@@ -512,7 +510,6 @@ def _parse_comments(entry, field):
 if __name__ == '__main__':
 
     import unittest
-
     from aabooks.ajbbook.ajbentry import AJBentry
 
     TESTENT = {
@@ -554,17 +551,18 @@ and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; edited by A. \
 B. Name; translated from Italian into English by A. Trans; also published \
 London: A Publishing Co.; other This is the editor string;''',
 
-        'allfieldsstr' : '''4 66.145.29a P.-W. Hodge jr. and I. A. Author \
+        'allfieldsstr' : '''4 66.145(0).29a P.-W. Hodge jr. and I. A. Author \
 III and A. Other and A. V. de la Name, The Physics comma and Astronomy of \
 Galaxies and Cosmology, New York, McGraw-Hill Book Company, 1966, 179 pp, \
 $2.95 and $4.95, Sci. American 216 Nr 2 142 and Sci. American 216 Nr. 2 144 \
-and Sky Tel. 33 109 and Sky Tel. 33 164, other a first comment; 3rd edition;\
- edited by A. B. Name; translated from Italian into English by A. Trans; also \
-published London: A Publishing Co.; other This is the editor string; \
-contributors A. B. Contrib; compiled by A. B. Compiler; in French; reprint \
-of 1956; reference AJB 59.144.55b;''',
+and Sky Tel. 33 109 and Sky Tel. 33 164, 3rd edition; reprint of 1956; \
+compiled by A. B. Compiler; contributors A. B. Contrib; \
+translated from Italian by A. Trans; edited by A. B. Name; \
+also published London: A Publishing Co.; \
+in French; other a first comment; other This is the editor string; \
+reference AJB 59.144.55b;''',
 
-        'allfieldsstr2' : '''4 66.145.29 P.-W. Hodge jr. and I. A. Author \
+        'allfieldsstr2' : '''4 66.145(0).29 P.-W. Hodge jr. and I. A. Author \
 III and A. Other and A. V. de la Name, The Physics comma and Astronomy of \
 Galaxies and Cosmology, , , , , , Sci. American 216 Nr 2 142 and Sci. \
 American 216 Nr. 2 144 and Sky Tel. 33 109 and Sky Tel. 33 164, reference \
@@ -645,5 +643,14 @@ Sky Tel. 33 109 and Sky Tel. 33 164, other This is the badstr;''',
 
             self.entry.read_text_to_entry(TESTENT['allfieldsstr'])
             self.assertTrue(self.entry.is_valid())
+
+        def test_write_allfields(self):
+            '''Test for same strings when writing entries.'''
+
+            self.entry.read_text_to_entry(TESTENT['allfieldsstr'])
+            self.assertTrue(self.entry.is_valid())
+
+            entry_str = '4 ' + self.entry.write_text_from_entry()
+            self.assertEqual(entry_str, TESTENT['allfieldsstr'])
 
     unittest.main()

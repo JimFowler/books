@@ -99,6 +99,7 @@ class AJBentry(dict):
         self['Compilers'] = []
         self['Contributors'] = []
         self['Translators'] = []
+        self['Language'] = ''
         self['Others'] = []
         self['Title'] = ''
         self['Publishers'] = []
@@ -152,7 +153,7 @@ class AJBentry(dict):
         else:
             name = 'noAuthor'
 
-        string = string + name + ', ' + self['Title'] + '\n'
+        string = string + name + ', ' + self['Title'][:20] + '\n'
         return string
 
     def is_valid(self):

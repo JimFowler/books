@@ -1,3 +1,21 @@
+2020-08-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: Adapted BookFile()
+	class to be a subclass of entrylist.EntryList().  Added unit tests
+	and ran through pylint.
+
+	* Tools/python/aabooks/ajbbook/entrytext.py: Found a number of
+	issues with entrytext.py.  I had not tested the text functions in
+	this file.  Added unit test to use write_text_from_entry().
+	There is a deprecated usage in modgrammer that I need to clean
+	up. Will need to add unittest to AJBcomments.py to find it.
+
+	* Tools/python/aabooks/lib/entrylist.py
+	(EntryListTestCase.test_a_initialize): Remove unnecessary
+	'del self.evlist'
+
+	* Tools/python/aabooks/lib/entrylist.py: update documentation
+
 2020-08-29  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/lib.entrylist.py: rename entryfile.py

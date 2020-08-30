@@ -91,17 +91,35 @@ class EntryList(list):
         '''
         return len(self) - 1
 
+    def clear_list(self):
+        '''Delete all entries and put '' in the header. This will leave a list
+        with only an empty header and no entries.  Returns
+        max_entries(), which should be 0.
+
+        '''
+
+        for entrynum in range(self.max_entries(), 0, -1):
+            self.pop(entrynum)
+            
+        self.set_header('')
+        self._dirty = False
+
+        return self.max_entries()
+    
     # Functions to deal with the Header
 
     def set_header(self, headerstr):
-        '''Set the header entry to be headerStr.
+        '''Set the header entry to be headerstr.
 
         '''
 
         # headerstr should be a string
         if isinstance(headerstr, str):
             self._dirty = True
-            self[0] = headerstr
+            if len(self) == 0:
+                self.append(headerstr)
+            else:
+                self[0] = headerstr
             return True
 
         return False
@@ -192,7 +210,7 @@ class EntryList(list):
         if self.filename == '' or not os.path.isfile(self.filename):
             return 0  # no records read
 
-        return eval('self.read_file_' + os.path.splitext(self.filename)[1][1:])
+        return eval('self.read_file_' + os.path.splitext(self.filename)[1][1:] + '()')
 
     def write_file(self, filename=None):
         '''Select a writer function depending on the filename
@@ -205,7 +223,7 @@ class EntryList(list):
         if filename:
             self.filename = filename
 
-        return eval('self.write_file_' + os.path.splitext(self.filename)[1][1:])
+        return eval('self.write_file_' + os.path.splitext(self.filename)[1][1:] + '()')
 
 
 
@@ -274,7 +292,7 @@ if __name__ == '__main__':
             self.assertEqual(self.ev_list.filename, './document1.xml')
             self.assertFalse(self.ev_list.is_dirty())
 
-        def test_c_header(self):
+        def test_b_header(self):
             '''Test header manipulation.
 
             test
@@ -295,7 +313,7 @@ It contains three lines.'''
             self.assertFalse(self.ev_list.set_header(5))
             self.assertFalse(self.ev_list.is_dirty())
 
-        def test_d_set_new_entry(self):
+        def test_c_set_new_entry(self):
             '''Test entry manipulation.
 
             '''
@@ -329,7 +347,7 @@ It contains three lines.'''
             # test set_new_entry with invalid entry
             self.assertFalse(self.ev_list.set_new_entry(self.entry4))
 
-        def test_e_get_entry(self):
+        def test_d_get_entry(self):
             '''Test the EntryList.get_entry() function.'''
 
             # set up the list first 123
@@ -343,7 +361,7 @@ It contains three lines.'''
             self.assertEqual(self.ev_list.get_entry(1), self.entry1)
             self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry3)
 
-        def test_f_set_entry(self):
+        def test_d_set_entry(self):
             '''Test the EntryList.set_entry() function'''
 
             # set up the list first 1233
@@ -374,8 +392,24 @@ It contains three lines.'''
             self.assertEqual(self.ev_list.delete_entry(0), 3)
             self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
 
+        def test_f_clear_list(self):
+            '''Test the EntryList.clear_list() function.'''
+
+            # set up the list first 1231
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+
+            self.assertEqual(self.ev_list.clear_list(), 0)
+            # should have just the header in the list
+            self.assertEqual(len(self.ev_list), 1)
+            
         def test_g_read_file(self):
-            '''Test the read_file stub.
+            '''Test the read_file stub. Should not be able to read a file at
+            this time because we don't have a read_file_xml() method yet. We
+            touch the filename first to insure that we don't have a file
+            not exists error.
 
             '''
 
@@ -393,7 +427,7 @@ It contains three lines.'''
             with self.assertRaises(AttributeError):
                 self.ev_list.read_file('bogon.xml')
 
-            # test that _filename was updated
+            # test that filename was updated
             self.assertEqual(self.ev_list.filename, 'bogon.xml')
             try:
                 os.remove('bogon.xml')
@@ -401,7 +435,8 @@ It contains three lines.'''
                 pass
 
         def test_h_write_file(self):
-            '''test the write_file stub
+            '''test the write_file stub. Should not be able to write a file at
+            this time.
 
             '''
             
