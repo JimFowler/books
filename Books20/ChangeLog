@@ -1,5 +1,8 @@
 2020-08-30  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/ajbbook/AJBcomments.py: Cleaned up
+	with pylint and added unit tests.
+
 	* Tools/python/aabooks/journal/jsearch.py: Corrected return
 	index from search list to take into account the 1-based counting
 	of entries in the new entrylist.EntryList() class.

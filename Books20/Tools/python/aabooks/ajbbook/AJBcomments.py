@@ -1,7 +1,7 @@
 ﻿## Begin copyright
 ##
 ##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/AJBcomments.py
-##  
+##
 ##   Part of the Books20 Project
 ##
 ##   Copyright 2018 James R. Fowler
@@ -29,90 +29,104 @@ See the test comments in the unit tests for an example
 of how comments are written.
 """
 
-from modgrammar import *
-from modgrammar.extras import *
+import modgrammar as mg
+import modgrammar.extras as mge
 
-grammar_whitespace_mode = 'optional'
+mg.grammar_whitespace_mode = 'optional'
 
-class WhiteSpace (Grammar):
-    grammar = (RE(r'[ \t\r\n]+'))
-               
-class Digit (Grammar):
-    grammar = (WORD("0-9", count=1))
+class WhiteSpace(mg.Grammar):
+    '''Parse white space.'''
+    grammar = (mge.RE(r'[ \t\r\n]+'))
+
+class Digit(mg.Grammar):
+    '''Parse single digit number.'''
+    grammar = (mg.WORD("0-9", count=1))
     grammar_collapse = True
 
-class TwoDigit (Grammar):
-    grammar = (WORD('0-9', count=2))
+class TwoDigit(mg.Grammar):
+    '''Parse a two digit number.'''
+    grammar = (mg.WORD('0-9', count=2))
     grammar_collapse = True
-    
-class Year (Grammar):
-    grammar = (WORD('0-9', count=4))
 
-class Item (Grammar):
-    grammar = (RE(r'[0-9]{2,3}[a-c]*'))
+class Year(mg.Grammar):
+    '''parse a 4 digit year.'''
+    grammar = (mg.WORD('0-9', count=4))
+
+class Item(mg.Grammar):
+    '''Parse the item (entry) number.'''
+    grammar = (mge.RE(r'[0-9]{2,3}[a-c]*'))
 
 # Note that no subsection is needed
 
-class Section (Grammar):
-    grammar = (RE(r'[0-9]{2,3}'))
+class Section(mg.Grammar):
+    '''Parse a section number.'''
+    grammar = (mge.RE(r'[0-9]{2,3}'))
 
-class Volume (Grammar):
+class Volume(mg.Grammar):
+    '''Parse the volume number.'''
     grammar = (TwoDigit)
 
-class AJBNum (Grammar):
-    grammar = (L('AJB'), Volume, '.', Section, '.', Item)
+class AJBNum(mg.Grammar):
+    '''Parse an AJB number.'''
+    grammar = (mg.L('AJB'), Volume, '.', Section, '.', Item)
 
-class uWord (Grammar):
-    # one or more unicode characters.
+class Word(mg.Grammar):
+    '''one or more unicode characters.'''
     # also matches number and underscore.
     # Match a bunch of punctuation marks.
     # Punctuation marks are usually used in the Other grammar
     # but occasionally get used in the main entries.
-    grammar=(RE(r"[-,!()+<>?$£&.°'′’/\w]+"))
+    grammar = (mge.RE(r"[-,!()+<>?$£&.°'′’/\w]+"))
 
-class uAbrv (Grammar):
-    # unicode possessive, (Was abreviation)
+class Abrv(mg.Grammar):
+    '''unicode possessive, (Was abreviation)'''
     # \u2019 is a right quote mark
-    #grammar=(uWord, OR(LITERAL('.'), LITERAL('\u2019')))
-    grammar=(uWord, LITERAL('\u2019'))
+    #grammar=(Word, OR(LITERAL('.'), LITERAL('\u2019')))
+    grammar = (Word, mg.LITERAL('\u2019'))
 
-class uWord2 (Grammar):
-    # unicode word or abbreviation
-    grammar = (OR(uWord, uAbrv))
+class Word2(mg.Grammar):
+    '''unicode word or abbreviation'''
+    grammar = (mg.OR(Word, Abrv))
 
-class uWord3 (Grammar):
+class Word3(mg.Grammar):
+    '''A word with & and - included.'''
     # hyphenated word or abbreviations
-    grammar = (uWord2, OPTIONAL(WORD("&-"), uWord2))
+    grammar = (Word2, mg.OPTIONAL(mg.WORD("&-"), Word2))
 
-class uWords (Grammar):
-    """Many unicode words"""
-    grammar = (REPEAT(uWord))
+class Words(mg.Grammar):
+    '''Many unicode words'''
+    grammar = (mg.REPEAT(Word))
 
-class Initial (Grammar):
-    """Only capitalized initials are allowed"""
-    grammar = (RE(r'\w'), LITERAL('.'))
+class Initial(mg.Grammar):
+    '''Only capitalized initials are allowed'''
+    grammar = (mge.RE(r'\w'), mg.LITERAL('.'))
 
-class Name (Grammar):
+class Name(mg.Grammar):
+    '''Parse a name from a comment.'''
     # accept hypenated first initial and hyphenated last name
-    grammar = (OPTIONAL(Initial, OPTIONAL(L('-'), Initial)),
-               OPTIONAL(REPEAT(Initial, OPTIONAL(L('-'), Initial))),
-               uWords)
+    grammar = (mg.OPTIONAL(Initial, mg.OPTIONAL(mg.L('-'), Initial)),
+               mg.OPTIONAL(mg.REPEAT(Initial, mg.OPTIONAL(mg.L('-'), Initial))),
+               Words)
 
-class NameList (Grammar):
-    grammar = (LIST_OF(Name, sep='and'))
+class NameList(mg.Grammar):
+    '''Parse a namelist in a comment.'''
+    grammar = (mg.LIST_OF(Name, sep='and'))
 
-class FromLanguage(Grammar):
-    grammar = (L('from'), uWord)
+class FromLanguage(mg.Grammar):
+    '''Parse a from language comment.'''
+    grammar = (mg.L('from'), Word)
 
-class ToLanguage(Grammar):
-    grammar = (L('into'), uWord)
+class ToLanguage(mg.Grammar):
+    '''Parse a to language comment.'''
+    grammar = (mg.L('into'), Word)
 
-class Publisher (Grammar):
-    """City: Name"""
-    grammar = (uWords, L(':'), uWords)
+class Publisher(mg.Grammar):
+    '''Parse a publisher comment of the form City: Name'''
+    grammar = (Words, mg.L(':'), Words)
 
-class PublisherList (Grammar):
-    grammar = (LIST_OF(Publisher, sep='and'))
+class PublisherList(mg.Grammar):
+    '''Parse a publishers list comment.'''
+    grammar = (mg.LIST_OF(Publisher, sep='and'))
 
 
 
@@ -124,153 +138,140 @@ class PublisherList (Grammar):
 # variable length grammars, like Editors, Translated, or Publisher
 #
 
-class Publishers (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('also published'), PublisherList,
-               L(';'))
+class Publishers(mg.Grammar):
+    '''Parse a publisher comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('also published'), PublisherList,
+               mg.L(';'))
 
-class Translation (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('translated'), OPTIONAL(FromLanguage),
-               OPTIONAL(ToLanguage), OPTIONAL(L('by'), NameList),
-               L(';'))
+class Translation(mg.Grammar):
+    '''Parse a translation comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('translated'), mg.OPTIONAL(FromLanguage),
+               mg.OPTIONAL(ToLanguage), mg.OPTIONAL(mg.L('by'), NameList),
+               mg.L(';'))
 
-class Editors (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('edited by'), NameList,
-               L(';'))
+class Editors(mg.Grammar):
+    '''Parse an editors comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('edited by'), NameList,
+               mg.L(';'))
 
-class Compilers (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('compiled by'), NameList,
-               L(';'))
+class Compilers(mg.Grammar):
+    '''Parse a compilers comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('compiled by'), NameList,
+               mg.L(';'))
 
-class Contributors (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('contributors'), NameList,
-               L(';'))
+class Contributors(mg.Grammar):
+    '''Parse a contributors comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('contributors'), NameList,
+               mg.L(';'))
 
-class Reprint (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('reprint of'), OR(AJBNum, Year),
-               L(';'))
+class Reprint(mg.Grammar):
+    '''Parse a reprint comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('reprint of'), mg.OR(AJBNum, Year),
+               mg.L(';'))
 
-class Reference (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('reference'), AJBNum,
-               L(';'))
-  
-class Edition (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               OR(Digit, TwoDigit),
-               OR(L('nd'), L('rd'), L('st'), L('th')),
-               OPTIONAL(OR(L('facsimile'), L('revised'))), L('edition'),
-               L(';'))
+class Reference(mg.Grammar):
+    '''Parse a reference comment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('reference'), AJBNum,
+               mg.L(';'))
 
-    def elem_init(self, sessiondata):
+class Edition(mg.Grammar):
+    '''Parse an edition comment.'''
+    edition_num = -1
+    sessiondata = None
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.OR(Digit, TwoDigit),
+               mg.OR(mg.L('nd'), mg.L('rd'), mg.L('st'), mg.L('th')),
+               mg.OPTIONAL(mg.OR(mg.L('facsimile'), mg.L('revised'))), mg.L('edition'),
+               mg.L(';'))
+
+    def grammer_elem_init(self, sessiondata):
+        '''initialize the element.'''
         self.edition_num = self[1].string
+        self.sessiondata = sessiondata
 
-class LanguageList (Grammar):
-    grammar = (LIST_OF(uWords, sep='and'))
+class LanguageList(mg.Grammar):
+    '''Parse a language list comment.'''
+    grammar = (mg.LIST_OF(Words, sep='and'))
 
-class Language (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('in'), LanguageList,
-               OPTIONAL( L('with'), uWords, L('references')),
-               L(';'))
+class Language(mg.Grammar):
+    '''Parse a language comment'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('in'), LanguageList,
+               mg.OPTIONAL(mg.L('with'), Words, mg.L('references')),
+               mg.L(';'))
 
-class Other (Grammar):
-    grammar = (OPTIONAL(WhiteSpace),
-               L('other'), uWords,
-               L(';'))
+class Other(mg.Grammar):
+    '''Parse an 'other' commment.'''
+    grammar = (mg.OPTIONAL(WhiteSpace),
+               mg.L('other'), Words,
+               mg.L(';'))
 
-class Comment (Grammar):
-    grammar = (OR(Edition, Compilers, Contributors, 
-                  Reference, Reprint, 
-                  Editors, Translation, Publishers,
-                  Language, Other))
+class Comment(mg.Grammar):
+    '''Parse a comment string.'''
+    grammar = (mg.OR(Edition, Compilers, Contributors,
+                     Reference, Reprint,
+                     Editors, Translation, Publishers,
+                     Language, Other))
 
 
 if __name__ == '__main__':
 
     import sys
+    import unittest
 
-    def PrintResult(result):
+    def write_ebnf_form():
+        '''Write out the Extended Baccus-Naur form.'''
+        sys.stdout.writelines(mg.generate_ebnf(Comment))
 
-        grmName = result.elements[0].grammar_name
-        print(grmName)
+    class AjbCommentTestCase(unittest.TestCase):
+        '''Define tests for the AJBComment functions.'''
 
-        if 'Edition' ==  grmName:
-            tmp = result.elements[0].edition_num
-            print(tmp)
+        def setUp(self):
+            '''Set up a parser for each test.'''
+            self.comment_parser = Comment.parser()
 
-        elif 'Reference' == grmName:
-            tmp = result.find(AJBNum)
-            print(str(tmp))
+        def tearDown(self):
+            '''Clean up our mess after each test.'''
+            del self.comment_parser
 
-        elif 'Reprint' == grmName:
-            tmp = result.find(AJBNum)
-            if tmp:
-                print('AJBNum is ' + str(tmp))
-            tmp = result.find(Year)
-            if tmp:
-                print('Year is ' + str(tmp))
+        def test_a_comments(self):
+            '''Test individual comments. Really should test each comment
+            for an expected result rather than any result.'''
+            count = 0
+            for comment in TESTSTR:
+                result = self.comment_parser.parse_string(comment)
+                if not result:
+                    count += 1
+            self.comment_parser.reset()
 
-        elif 'Editors' == grmName:
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
+            self.assertEqual(count, 0)
 
-        elif 'Compilers' == grmName:
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
+        def test_b_full_string(self):
+            '''Test a full string of comments.'''
+            result = self.comment_parser.parse_text(FULLSTR,
+                                                    reset=True, multi=True)
+            self.assertTrue(result, msg='full string parse failed')
 
-        elif 'Contributors' == grmName:
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
-
-        elif 'Translation' == grmName :
-            tmp = result.find(FromLanguage)
-            if tmp:
-                print(tmp.elements[1])
-            tmp = result.find(ToLanguage)
-            if tmp:
-                print(tmp.elements[1])
-            tmp = result.find(NameList)
-            if tmp:
-                # parse the NameList
-                print(str(tmp))
-
-        elif 'Publishers' == grmName:
-            tmp = result.find(PublisherList)
-            # parse the PublisherList
-            print(tmp)
-
-        elif 'Language' == grmName:
-            tmp = result.find(uWord)
-            # get the language
-            print(tmp)
-
-        elif 'Other' == grmName:
-            tmp = result.find(uWords)
-            # parse the PublisherList
-            print(tmp)
-
-    teststr = ['  2nd edition;',
+    TESTSTR = ['  2nd edition;',
                '3rd edition;',
                '7th revised edition;',
                '17th revised edition;',
-               
+
                'reprint of 1956;',
                'reprint of AJB 34.56.23;',
-               
+
                'reference AJB 66.54.32;',
                'reference AJB 66.54.32a;',
                'reference AJB 66.54.32c;',
                'reference AJB 66.54.32;',
-    
+
                'edited by A. J. Reader;',
                'edited by A.-B. J. Reader;',
                'edited by A. B. J. Reader;',
@@ -305,54 +306,90 @@ if __name__ == '__main__':
                # a unicode city for when we figure out unicode words
                'also published G\u00F6ttingen: Big City Publisher;',
                'also published New York: Another Big City Publisher Ltd.;',
-               ' also published New York: Another Big City, Publisher Ltd. and London: Phys.-Math. Staatsverlag;',
+               ''' also published New York: Another Big City, Publisher Ltd. \
+and London: Phys.-Math. Staatsverlag;''',
 
                'other now is the time for all good men ;',
                'other <<The Books at Large>>;',
-               'other you should be able to write anything here including (45) _ and Abrvs.;']
+               '''other you should be able to write anything here including \
+(45) _ and Abrvs.;''']
 
-    fullstr = 'other extraneous material that I do not yet know how to handle; also published New York: Another Big City Publisher Ltd. and London: Big City Publisher; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
-    newfullstr = 'other extraneous material that I do not yet know how to handle; translated from Italian into French by A. J. Trans and I. M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised edition; in Russian;'
+    FULLSTR = '''other extraneous material that I do not yet know how to \
+handle; also published New York: Another Big City Publisher Ltd. and London: \
+Big City Publisher; translated from Italian into French by A. J. Trans and I. \
+M. Trans; edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th \
+revised edition; in Russian;'''
 
-    cParser = Comment.parser()
-    count = 0
+    NEWFULLSTR = '''other extraneous material that I do not yet know how to \
+handle; translated from Italian into French by A. J. Trans and I. M. Trans; \
+edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised \
+edition; in Russian;'''
 
-    for comment in teststr:
-        print('\nComment is "' + comment + '"')
-        result = cParser.parse_string(comment)
-        if result:
-            PrintResult(result)
-        else:
-            print('bad result!')
-            print(type(comment))
-            count += 1
-        cParser.reset()
+    unittest.main()
 
-    print( '\nDoing full string\n')
 
-    result = cParser.parse_text(fullstr, reset=True, multi=True)
-    if not result:
-        print('bad result for')
-        print(fullstr)
-        count += 1
+UNUSED = '''
+    def print_result(result):
+        """Print the results after parsing the comments."""
+        grm_name = result.elements[0].grammar_name
+        print(grm_name)
 
-    for grm in result:
-        PrintResult(grm)
-        print()
-        #result = cParser.parse_string('')
+        if grm_name == 'Edition':
+            tmp = result.elements[0].edition_num
+            print(tmp)
 
-    print('\n')
-    sys.stdout.writelines(generate_ebnf(Comment))
+        elif grm_name == 'Reference':
+            tmp = result.find(AJBNum)
+            print(str(tmp))
 
-    """
-    nm = FromLanguage.parser()
-    result = nm.parse_string( 'from Italian ' )
-    print( result.elements )
-    """
-    if 1 == count:
-        s = ' '
-    else:
-        s = 's'
-    result = '\nDone! %d error%c' % (count, s)
-    print(result)
+        elif grm_name == 'Reprint':
+            tmp = result.find(AJBNum)
+            if tmp:
+                print('AJBNum is ' + str(tmp))
+            tmp = result.find(Year)
+            if tmp:
+                print('Year is ' + str(tmp))
 
+        elif grm_name == 'Editors':
+            tmp = result.find(NameList)
+            # parse the NameList
+            print(str(tmp))
+
+        elif grm_name == 'Compilers':
+            tmp = result.find(NameList)
+            # parse the NameList
+            print(str(tmp))
+
+        elif grm_name == 'Contributors':
+            tmp = result.find(NameList)
+            # parse the NameList
+            print(str(tmp))
+
+        elif grm_name == 'Translation':
+            tmp = result.find(FromLanguage)
+            if tmp:
+                print(tmp.elements[1])
+            tmp = result.find(ToLanguage)
+            if tmp:
+                print(tmp.elements[1])
+            tmp = result.find(NameList)
+            if tmp:
+                # parse the NameList
+                print(str(tmp))
+
+        elif grm_name == 'Publishers':
+            tmp = result.find(PublisherList)
+            # parse the PublisherList
+            print(tmp)
+
+        elif grm_name == 'Language':
+            tmp = result.find(Word)
+            # get the language
+            print(tmp)
+
+        elif grm_name == 'Other':
+            tmp = result.find(Words)
+            # parse the PublisherList
+            print(tmp)
+
+'''
