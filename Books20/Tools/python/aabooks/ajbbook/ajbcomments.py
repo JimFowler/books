@@ -1,6 +1,6 @@
 ﻿## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/AJBcomments.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/ajbcomments.py
 ##
 ##   Part of the Books20 Project
 ##
@@ -183,19 +183,16 @@ class Reference(mg.Grammar):
 
 class Edition(mg.Grammar):
     '''Parse an edition comment.'''
-    edition_num = -1
-    sessiondata = None
     grammar = (mg.OPTIONAL(WhiteSpace),
                mg.OR(Digit, TwoDigit),
                mg.OR(mg.L('nd'), mg.L('rd'), mg.L('st'), mg.L('th')),
                mg.OPTIONAL(mg.OR(mg.L('facsimile'), mg.L('revised'))), mg.L('edition'),
                mg.L(';'))
 
-    def grammer_elem_init(self, sessiondata):
+    def grammar_elem_init(self, sessiondata):
         '''initialize the element.'''
         self.edition_num = self[1].string
-        self.sessiondata = sessiondata
-
+        
 class LanguageList(mg.Grammar):
     '''Parse a language list comment.'''
     grammar = (mg.LIST_OF(Words, sep='and'))
@@ -259,6 +256,8 @@ if __name__ == '__main__':
                                                     reset=True, multi=True)
             self.assertTrue(result, msg='full string parse failed')
 
+    # This should be a set of tuples with the comment, a result, and a
+    # function that returns the proper result to compare with.
     TESTSTR = ['  2nd edition;',
                '3rd edition;',
                '7th revised edition;',

@@ -24,7 +24,7 @@ However, we keep this around just in case.
 """
 
 import re
-from aabooks.ajbbook import AJBcomments as comments
+from aabooks.ajbbook import ajbcomments as comments
 from aabooks.lib import utils
 
 #
@@ -491,10 +491,10 @@ def _parse_comments(entry, field):
                                                 'PublisherName': parts[1].strip()})
 
             elif grammar_name == 'Language':
-                entry['Language'] = str(result.find(comments.uWord)).strip()
+                entry['Language'] = str(result.find(comments.Word)).strip()
 
             elif grammar_name == 'Other':
-                name = str(result.find(comments.uWords)).strip()
+                name = str(result.find(comments.Words)).strip()
                 if not entry.not_empty('Others'):
                     entry['Others'] = []
                 entry['Others'].append(name)
