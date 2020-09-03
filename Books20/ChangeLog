@@ -1,4 +1,55 @@
+2020-09-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/ajbcomments.py: Added unittest
+	yesterday.  Tested with an XML file, converted to text, then read
+	the text, write a second text file, and compare successfully.
+
+	* aabooks: merge with master
+
+2020-08-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/AJBcomments.py: Cleaned up
+	with pylint and added unit tests.
+
+	* Tools/python/aabooks/journal/jsearch.py: Corrected return
+	index from search list to take into account the 1-based counting
+	of entries in the new entrylist.EntryList() class.
+
+	* Tools/python/aabooks/journal/journalwindow.py (JournalWindow):
+	Adapted JournalWindow to new JournalFile format.
+
+	* Tools/python/aabooks/journal/journalfile.py (JournalFile):
+	Adapted class JournalFile to the new entrylist.EntryList()
+	class.
+
+	* Tools/python/aabooks/ajbbook/ajbwindow.py
+	(BookEntry.entry_to_display): Adapted ajbwindow.py to use new
+	bookfile.BookFile() and entrylist.EntryList()
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: Adapted BookFile()
+	class to be a subclass of entrylist.EntryList().  Added unit tests
+	and ran through pylint.
+
+	* Tools/python/aabooks/ajbbook/entrytext.py: Found a number of
+	issues with entrytext.py.  I had not tested the text functions in
+	this file.  Added unit test to use write_text_from_entry().
+	There is a deprecated usage in modgrammer that I need to clean
+	up. Will need to add unittest to AJBcomments.py to find it.
+
+	* Tools/python/aabooks/lib/entrylist.py
+	(EntryListTestCase.test_a_initialize): Remove unnecessary
+	'del self.evlist'
+
+	* Tools/python/aabooks/lib/entrylist.py: update documentation
+
 2020-08-29  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib.entrylist.py: rename entryfile.py
+	to entrylist.py.
+
+	* Tools/python/aabooks/lib/entryfile.py (EntryList): Created
+	entryfile.py with class EntryList() as a generic class for
+	bookfile and journalfile.
 
 	* Tools/python/aabooks/lib/entry.py: Deleted entry.py in order to
 	simplify the software.  Made AJBentry and JournalEntry a subclass

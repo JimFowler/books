@@ -86,7 +86,7 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
         title_text = search_title.text()
         for title, index in self.current_search_list:
             if title == title_text:
-                self.parent.show_entry(index + 1)
+                self.parent.show_entry(index)
                 return
 
         self.parent._new_entry()

@@ -18,13 +18,6 @@
 Classes and Functions
 *********************
 
-Entry
-=====
-
-.. automodule:: entry
-   :members:
-   :show-inheritance:
-
  
 EntryList
 =========

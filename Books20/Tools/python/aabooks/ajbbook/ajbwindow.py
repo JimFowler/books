@@ -191,7 +191,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         # else get a file name
         fname, filtera = QtWidgets.QFileDialog.getOpenFileName(self,
                                                                "%s -- Choose new file" % QtWidgets.QApplication.applicationName(),
-                                                               self.bookfile.get_dirname(),
+                                                               os.path.dirname(self.bookfile.filename),
                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
         if fname:
             name, ext = os.path.splitext(fname)
@@ -219,19 +219,19 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         else:
             self.statusbar.showMessage('No records found in file %s' % name)
             self.new_entry()
-        self.set_window_title(self.bookfile.get_basename_with_extension())
+        self.set_window_title(os.path.basename(self.bookfile.filename))
 
     def save_file(self):
         """Ignore dirty entries and just save the file."""
 
-        if self.bookfile.get_filename() is None or self.bookfile.get_basename() == 'document1':
+        if self.bookfile.filename is None or os.path.basename(self.bookfile.filename) == 'document1.xml':
             if self.save_file_as() == QtWidgets.QMessageBox.Cancel:
                 return QtWidgets.QMessageBox.Cancel
 
         self.bookfile.write_file()
 
         self.statusbar.showMessage(
-            'Saving file ' + self.bookfile.get_basename_with_extension())
+            'Saving file ' + os.path.basename(self.bookfile.filename))
         QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
         return QtWidgets.QMessageBox.Save
@@ -240,7 +240,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         """Ignore dirty entries and save the file as..."""
         fname, filterA = QtWidgets.QFileDialog.getSaveFileName(self,
                                                                "%s -- Choose file" % QtWidgets.QApplication.applicationName(),
-                                                               self.bookfile.get_dirname(),
+                                                               os.path.dirname(self.bookfile.filename),
                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
 
         if fname:
@@ -252,7 +252,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                     fname += '.txt'
 
             self.bookfile.write_file(fname)
-            self.set_window_title(self.bookfile.get_basename_with_extension())
+            self.set_window_title(os.path.basename(self.bookfile.filename))
             return QtWidgets.QMessageBox.Save
         else:
             return QtWidgets.QMessageBox.Cancel
@@ -459,7 +459,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.header_window = hw.HeaderWindow(parent=self)
         self.header_window.set_bookfile(self.bookfile)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
-                                                                      "Edit Headers - %s" % (self.bookfile.get_basename_with_extension()), None))
+                                                                      "Edit Headers - %s" % (os.path.basename(self.bookfile.filename)), None))
         self.header_window.set_header_text(self.bookfile.get_header())
         self.header_window.show()
 
