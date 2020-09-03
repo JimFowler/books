@@ -1,3 +1,11 @@
+2020-09-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/ajbcomments.py: Added unittest
+	yesterday.  Tested with an XML file, converted to text, then read
+	the text, write a second text file, and compare successfully.
+
+	* aabooks: merge with master
+
 2020-08-30  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/AJBcomments.py: Cleaned up
