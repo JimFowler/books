@@ -15,7 +15,7 @@
 ##
 ## End copyright
 
-"""Parse a comment line from an AJB text file.  Separate
+'''Parse a comment line from an AJB text file.  Separate
 out the different sections of the comment.  The calling
 function has to decide what to do with this information
 but an example of how to get that information is included
@@ -27,7 +27,7 @@ Calling syntax:
 
 See the test comments in the unit tests for an example
 of how comments are written.
-"""
+'''
 
 import modgrammar as mg
 import modgrammar.extras as mge
@@ -192,7 +192,7 @@ class Edition(mg.Grammar):
     def grammar_elem_init(self, sessiondata):
         '''initialize the element.'''
         self.edition_num = self[1].string
-        
+
 class LanguageList(mg.Grammar):
     '''Parse a language list comment.'''
     grammar = (mg.LIST_OF(Words, sep='and'))
@@ -223,9 +223,85 @@ if __name__ == '__main__':
     import sys
     import unittest
 
+    # Various helper functions for the test case.
     def write_ebnf_form():
-        '''Write out the Extended Baccus-Naur form.'''
+        '''Write out the Extended Baccus-Naur Form.'''
         sys.stdout.writelines(mg.generate_ebnf(Comment))
+
+    def find_result(result):
+        '''Use the correct 'find' function to get the proper
+        output from 'result'.'''
+
+        grm_name = result.elements[0].grammar_name
+
+        return eval('find_result_' + grm_name.lower() +'(result)')
+
+    def find_result_edition(result):
+        '''Find the edition number.'''
+        return result.elements[0].edition_num
+
+    def find_result_reference(result):
+        '''Find the AJB number for a reference comment.'''
+        return str(result.find(AJBNum))
+
+    def find_result_reprint(result):
+        '''Find the AJB number or year for a reprint.'''
+        tmp = result.find(AJBNum)
+        if tmp:
+            return str(tmp)
+        tmp = result.find(Year)
+        if tmp:
+            return str(tmp)
+
+        return ''
+
+    def find_result_editors(result):
+        '''Find the namelist of editors.'''
+        return str(result.find(NameList))
+
+    def find_result_compilers(result):
+        '''Find the namelist of compilers.'''
+        return str(result.find(NameList))
+
+    def find_result_contributors(result):
+        '''Find the namelist of contributors.'''
+        return str(result.find(NameList))
+
+    def find_result_translation(result):
+        '''Find the namelist of translators as well as the
+        'to' and 'from' language.'''
+
+        tmp = result.find(FromLanguage)
+        if tmp:
+            from_lang = str(tmp.elements[1])
+        else:
+            from_lang = ''
+
+        tmp = result.find(ToLanguage)
+        if tmp:
+            to_lang = str(tmp.elements[1])
+        else:
+            to_lang = ''
+        tmp = result.find(NameList)
+
+        if tmp:
+            namelist = str(tmp)
+        else:
+            namelist = ''
+
+        return ','.join([from_lang, to_lang, namelist])
+
+    def find_result_publishers(result):
+        '''Find the Place and PublisherName of publishers.'''
+        return str(result.find(PublisherList))
+
+    def find_result_language(result):
+        '''Find the language of publication.'''
+        return str(result.find(Word))
+
+    def find_result_other(result):
+        '''Find any other comment string.'''
+        return str(result.find(Words))
 
     class AjbCommentTestCase(unittest.TestCase):
         '''Define tests for the AJBComment functions.'''
@@ -242,12 +318,15 @@ if __name__ == '__main__':
             '''Test individual comments. Really should test each comment
             for an expected result rather than any result.'''
             count = 0
-            for comment in TESTSTR:
-                result = self.comment_parser.parse_string(comment)
-                if not result:
+            for comment, expected_result in TEST_RESULTS:
+                parser_result = self.comment_parser.parse_string(comment)
+                found_result = find_result(parser_result)
+                if expected_result != found_result:
+                    print('Error: ', comment, expected_result, found_result)
+                    print()
                     count += 1
-            self.comment_parser.reset()
 
+            self.comment_parser.reset()
             self.assertEqual(count, 0)
 
         def test_b_full_string(self):
@@ -256,62 +335,58 @@ if __name__ == '__main__':
                                                     reset=True, multi=True)
             self.assertTrue(result, msg='full string parse failed')
 
-    # This should be a set of tuples with the comment, a result, and a
-    # function that returns the proper result to compare with.
-    TESTSTR = ['  2nd edition;',
-               '3rd edition;',
-               '7th revised edition;',
-               '17th revised edition;',
+    # test_result is a list of tuples with the test comment
+    # and the expected result
+    TEST_RESULTS = [
+        ('  2nd edition;', '2'),
+        ('3rd edition;', '3'),
+        ('7th revised edition;', '7'),
+        ('17th revised edition;', '17'),
+        ('reprint of 1956;', '1956'),
+        ('reprint of AJB 34.56.23;', 'AJB 34.56.23'),
+        ('reference AJB 66.54.32;', 'AJB 66.54.32'),
+        ('reference AJB 66.54.32a;', 'AJB 66.54.32a'),
+        ('reference AJB 66.54.32c;', 'AJB 66.54.32c'),
+        ('reference AJB 66.54.32;', 'AJB 66.54.32'),
+        ('edited by A. J. Reader;', 'A. J. Reader'),
+        ('edited by A.-B. J. Reader;', 'A.-B. J. Reader'),
+        ('edited by A. B. J. Reader;', 'A. B. J. Reader'),
+        ('edited by A.-B. C.-D. J. Reader;', 'A.-B. C.-D. J. Reader'),
+        ('edited by A. Reader and I. M. Writer;', 'A. Reader and I. M. Writer'),
+        ('compiled by A. J. Reader;', 'A. J. Reader'),
+        ('compiled by A.-B. J. Reader;', 'A.-B. J. Reader'),
+        ('compiled by A. Reader and I. M. Writer;', 'A. Reader and I. M. Writer'),
+        ('contributors A. J. Reader;', 'A. J. Reader'),
+        ('contributors A.-B. J. Reader;', 'A.-B. J. Reader'),
+        ('contributors A. Reader and I. M. Writer;', 'A. Reader and I. M. Writer'),
+        ('translated by A. J. Reader-Writer;', ',,A. J. Reader-Writer'),
+        ('translated by A. Reader;', ',,A. Reader'),
+        ('translated by A. Reader and I. M. Writer;', ',,A. Reader and I. M. Writer'),
+        ('translated from Italian;', 'Italian,,'),
+        ('translated into French;', ',French,'),
+        (' translated from Italian into French;', 'Italian,French,'),
+        ('translated from Italian by A. J. Reader;', 'Italian,,A. J. Reader'),
+        ('translated from Swedish into French by A. J. Reader;', 'Swedish,French,A. J. Reader'),
+        ('translated from Romanian into French by A. J. Reader and I. M. Writer;',
+         'Romanian,French,A. J. Reader and I. M. Writer'),
+        ('in Italian;', 'Italian'),
+        ('in French and Italian;', 'French'),
+        ('in French with Russian references;', 'French'),
+        (' also published London: Big City Publisher;', 'London: Big City Publisher'),
+        ('also published London: Rand McNally & Sons;', 'London: Rand McNally & Sons'),
+        ('also published London: St. Martin’s Press;', 'London: St. Martin’s Press'),
+        ('also published Göttingen: Big City Publisher;', 'Göttingen: Big City Publisher'),
+        ('also published New York: Another Big City Publisher Ltd.;',
+         'New York: Another Big City Publisher Ltd.'),
+        (''' also published New York: Another Big City, Publisher Ltd. and London: Phys.-Math. \
+Staatsverlag;''',
+         'New York: Another Big City, Publisher Ltd. and London: Phys.-Math. Staatsverlag'),
+        ('other now is the time for all good men ;', 'now is the time for all good men'),
+        ('other <<The Books at Large>>;', '<<The Books at Large>>'),
+        ('other you should be able to write anything here including (45) _ and Abrvs.;',
+         'you should be able to write anything here including (45) _ and Abrvs.'),
+    ]
 
-               'reprint of 1956;',
-               'reprint of AJB 34.56.23;',
-
-               'reference AJB 66.54.32;',
-               'reference AJB 66.54.32a;',
-               'reference AJB 66.54.32c;',
-               'reference AJB 66.54.32;',
-
-               'edited by A. J. Reader;',
-               'edited by A.-B. J. Reader;',
-               'edited by A. B. J. Reader;',
-               'edited by A.-B. C.-D. J. Reader;',
-               'edited by A. Reader and I. M. Writer;',
-
-               'compiled by A. J. Reader;',
-               'compiled by A.-B. J. Reader;',
-               'compiled by A. Reader and I. M. Writer;',
-
-               'contributors A. J. Reader;',
-               'contributors A.-B. J. Reader;',
-               'contributors A. Reader and I. M. Writer;',
-
-               'translated by A. J. Reader-Writer;',
-               'translated by A. Reader;',
-               'translated by A. Reader and I. M. Writer;',
-               'translated from Italian;',
-               'translated into French;',
-               ' translated from Italian into French;',
-               'translated from Italian by A. J. Reader;',
-               'translated from Italian into French by A. J. Reader;',
-               'translated from Italian into French by A. J. Reader and I. M. Writer;',
-
-               'in Italian;',
-               'in French and Italian;',
-               'in French with Russian references;',
-
-               ' also published London: Big City Publisher;',
-               'also published London: Rand McNally & Sons;',
-               "also published London: St. Martin\u2019s Press;",
-               # a unicode city for when we figure out unicode words
-               'also published G\u00F6ttingen: Big City Publisher;',
-               'also published New York: Another Big City Publisher Ltd.;',
-               ''' also published New York: Another Big City, Publisher Ltd. \
-and London: Phys.-Math. Staatsverlag;''',
-
-               'other now is the time for all good men ;',
-               'other <<The Books at Large>>;',
-               '''other you should be able to write anything here including \
-(45) _ and Abrvs.;''']
 
     FULLSTR = '''other extraneous material that I do not yet know how to \
 handle; also published New York: Another Big City Publisher Ltd. and London: \
@@ -325,70 +400,3 @@ edited by A. Reader and I. M. Writer; reprint of AJB 34.56.23; 7th revised \
 edition; in Russian;'''
 
     unittest.main()
-
-
-UNUSED = '''
-    def print_result(result):
-        """Print the results after parsing the comments."""
-        grm_name = result.elements[0].grammar_name
-        print(grm_name)
-
-        if grm_name == 'Edition':
-            tmp = result.elements[0].edition_num
-            print(tmp)
-
-        elif grm_name == 'Reference':
-            tmp = result.find(AJBNum)
-            print(str(tmp))
-
-        elif grm_name == 'Reprint':
-            tmp = result.find(AJBNum)
-            if tmp:
-                print('AJBNum is ' + str(tmp))
-            tmp = result.find(Year)
-            if tmp:
-                print('Year is ' + str(tmp))
-
-        elif grm_name == 'Editors':
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
-
-        elif grm_name == 'Compilers':
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
-
-        elif grm_name == 'Contributors':
-            tmp = result.find(NameList)
-            # parse the NameList
-            print(str(tmp))
-
-        elif grm_name == 'Translation':
-            tmp = result.find(FromLanguage)
-            if tmp:
-                print(tmp.elements[1])
-            tmp = result.find(ToLanguage)
-            if tmp:
-                print(tmp.elements[1])
-            tmp = result.find(NameList)
-            if tmp:
-                # parse the NameList
-                print(str(tmp))
-
-        elif grm_name == 'Publishers':
-            tmp = result.find(PublisherList)
-            # parse the PublisherList
-            print(tmp)
-
-        elif grm_name == 'Language':
-            tmp = result.find(Word)
-            # get the language
-            print(tmp)
-
-        elif grm_name == 'Other':
-            tmp = result.find(Words)
-            # parse the PublisherList
-            print(tmp)
-
-'''
