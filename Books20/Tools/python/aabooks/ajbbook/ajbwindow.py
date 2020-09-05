@@ -38,6 +38,8 @@ from aabooks.ajbbook import menus
 from aabooks.ajbbook import origstrwindow as origstr
 from aabooks.ajbbook import ajbentry
 from aabooks.ajbbook import version as ajbver
+from aabooks.ajbbook import entrydisplay as entrydisplay
+
 from aabooks.lib import headerwindow as hw
 from aabooks.lib import symbol
 from aabooks.lib import entryselect as es
@@ -50,6 +52,10 @@ del __BASENAME
 
 
 __version__ = '2.0'
+
+# Note: that this regex will silently reject a suffix
+#     that is not '' or [a-c].
+r2 = re.compile(r'(\d+)([a-c]{0,1})', re.UNICODE)
 
 # pylint: disable too-many-locals
 
@@ -261,16 +267,96 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     # Menu and button slots for Entry Actions on File menu
     #
 
+    def display_entry_is_valid(self):
+        """Check the entry for validity before we do anything else.  This
+        function returns the tuple (valid, errorfield, errortb), where
+        valid is True/False, errorfield is the field which is not
+        valid, and errortb is the reason it is not valid, basicly the traceback
+        from the exception.
+
+        """
+
+        valid = True
+        error_string = ''
+        
+        try:
+            index = int(self.indexEntry.text())
+        except ValueError:
+            valid = False
+            error_string = 'Invalid index number.\n'
+
+        num = {}
+        try:
+            num['volNum'] = int(self.volNum.text())
+        except ValueError:
+            valid = False
+            error_string += 'Invalid volume number.\n'
+            
+        try:
+            num['sectionNum'] = int(self.secNum.text())
+        except ValueError:
+            valid = False
+            error_string += 'Invalid section number.\n'
+
+        try:
+            num['subsectionNum'] = int(self.subSecNum.text())
+        except ValueError:
+            valid = False
+            error_string += 'Invalid sub-section number.\n'
+
+        try:
+            items = r2.split(self.itemNum.text().strip())
+            num['entryNum'] = int(items[1])
+            num['entrySuf'] = items[3]
+        except (ValueError, IndexError):
+            valid = False
+            error_string += 'Invalid item number.\n'
+
+
+        try:
+            num['pageNum'] = int(self.pageNum.text())
+        except ValueError:
+            valid = False
+            error_string += 'Invalid page number.'
+
+
+        if valid: # Then test the complete AJB num
+            entry = ajbentry.AJBentry()
+            entry['Num'] = num
+            if not entry.is_valid_ajbnum():
+                valid = False
+                error_string += 'AJB number is not valid.\n'
+
+        if not self.titleEntry.toPlainText():
+            # warn that there is no title
+            valid = False
+            error_string += 'Invalid or missing title string.\n'
+        
+        publ_entries = self.publEntry.toPlainText()
+        if len(publ_entries) != 0:
+            alist = publ_entries.split('\n')
+            for line in alist:
+                try:
+                    place, publisher = line.split(':')
+                except ValueError:
+                    valid = False
+                    error_string += 'No colon in publisher line: {}.\n'.format(line)
+
+        return (valid, error_string)
+
+    
     def save_entry(self):
         """Save the entry to the current entry number in the bookfile."""
         #
         # Save the back up file here
         #
-        self.tmp_entry = self.display_to_entry()
-        if not self.tmp_entry:
-            QtWidgets.QMessageBox.information(self, "Entry Invalid",
-                                              "Entry invalid!  Not saved in bookfile!")
+        valid, error_str = self.display_entry_is_valid()
+        if not valid:
+            QtWidgets.QMessageBox.information(self, "Entry Invalid", error_str + \
+                                              '\nEntry invalid!  Not saved in bookfile!')
             return
+
+        self.tmp_entry = self.display_to_entry()
 
         if self.current_entry_number > self.max_entry_number:
             ret = self.bookfile.set_new_entry(self.tmp_entry, self.current_entry_number)
@@ -564,384 +650,6 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         if ok:
             self.default_volume_number = numVal
 
-    def entry_to_display(self, entry):
-        """Given an entry, display the parts on the GUI display."""
-
-        # AJB number
-        a = entry['Num']
-        self.volNum.setText(str(a['volNum']))
-        self.secNum.setText(str(a['sectionNum']))
-        if int(a['subsectionNum']) > -1:
-            self.subSecNum.setText(str(a['subsectionNum']))
-        else:
-            self.subSecNum.setText('0')
-        self.itemNum.setText(str(a['entryNum']) + a['entrySuf'])
-        self.pageNum.setText(str(a['pageNum']))
-
-        # Authors
-        astr = ''
-        if entry.not_empty('Authors'):
-            a = entry['Authors']
-            if a:
-                first = True
-                for b in a:
-                    if not first:
-                        astr += '\n'
-                    first = False
-                    astr += str(b)
-        self.authorEntry.setText(astr)
-
-        # Editors
-        astr = ''
-        if entry.not_empty('Editors'):
-            a = entry['Editors']
-            if a:
-                first = True
-                for b in a:
-                    if not first:
-                        astr += '\n'
-                    first = False
-                    astr += str(b)
-        self.editorEntry.setText(astr)
-
-        # Title
-        astr = ''
-        if entry.not_empty('Title'):
-            astr += entry['Title']
-        self.titleEntry.setText(astr)
-
-        # Publishers
-        astr = ''
-        if entry.not_empty('Publishers'):
-            first = True
-            for a in entry['Publishers']:
-                if not first:
-                    astr += '\n'
-                first = False
-                astr += a['Place'] + ' : ' + a['PublisherName']
-        self.publEntry.setText(astr)
-
-        # Edition
-        astr = ''
-        if entry.not_empty('Edition'):
-            astr += entry['Edition']
-        self.editionEntry.setText(astr)
-
-        # Year
-        astr = ''
-        if entry.not_empty('Year'):
-            astr += entry['Year']
-        self.yearEntry.setText(astr)
-
-        # Pagination
-        astr = ''
-        if entry.not_empty('Pagination'):
-            astr += entry['Pagination']
-        self.pageEntry.setText(astr)
-
-        # Price
-        astr = ''
-        if entry.not_empty('Price'):
-            astr += entry['Price']
-        self.priceEntry.setText(astr)
-
-        # Review
-        astr = ''
-        if entry.not_empty('Reviews'):
-            rev = entry['Reviews']
-            first = True
-            if rev:
-                for item in rev:
-                    if not first:
-                        astr += '\n'
-                    astr += item
-                    first = False
-        self.reviewsEntry.setPlainText(astr)
-
-        # Language
-        astr = ''
-        if entry.not_empty('Language'):
-            astr += entry['Language']
-        self.tolangEntry.setText(astr)
-
-        # fromLanguage
-        astr = ''
-        if entry.not_empty('TranslatedFrom'):
-            astr += entry['TranslatedFrom']
-        self.fromlangEntry.setText(astr)
-
-        # Translators
-        astr = ''
-        if entry.not_empty('Translators'):
-            a = entry['Translators']
-            if a:
-                first = True
-                for b in a:
-                    if not first:
-                        astr += '\n'
-                    first = False
-                    astr += str(b)
-        self.translatorEntry.setText(astr)
-
-        # Compilers
-        astr = ''
-        if entry.not_empty('Compilers'):
-            a = entry['Compilers']
-            if a:
-                first = True
-                for b in a:
-                    if not first:
-                        astr += '\n'
-                    first = False
-                    astr += str(b)
-        self.compilersEntry.setText(astr)
-
-        # Contributors
-        astr = ''
-        if entry.not_empty('Contributors'):
-            a = entry['Contributors']
-            if a:
-                first = True
-                for b in a:
-                    if not first:
-                        astr += '\n'
-                    first = False
-                    astr += str(b)
-        self.contribEntry.setText(astr)
-
-        # Reprint
-        astr = ''
-        if entry.not_empty('Reprint'):
-            astr += entry['Reprint']
-        self.reprintEntry.setText(astr)
-
-        # Reference
-        astr = ''
-        if entry.not_empty('Reference'):
-            astr += entry['Reference']
-        self.referenceEntry.setText(astr)
-
-        # Others
-        astr = ''
-        if entry.not_empty('Others'):
-            a = entry['Others']
-            first = True
-            for b in a:
-                if not first:
-                    astr += '\n'
-                first = False
-                astr += str(b)
-        self.commentsEntry.setPlainText(astr)
-
-        for field in entry.keys():
-            if self.known_entry_fields.count(field) == 0:
-                QtWidgets.QMessageBox.warning(self, 'Unknown Entry Field',
-                                              'Unknown field "%s:  %s"\n in entry %s\n "' %
-                                              (field, entry[field], entry['Index']),
-                                              QtWidgets.QMessageBox.Ok)
-        self.repaint()
-
-    def display_to_entry(self):
-        """Copy the display into a new entry and
-        return the entry."""
-
-        # Note: that this regex will silently reject a suffix
-        #     that is not '' or [a-c].
-        r2 = re.compile(r'(\d+)([a-c]{0,1})', re.UNICODE)
-        items = r2.split(self.itemNum.text().strip())
-
-        entry = ajbentry.AJBentry()
-
-        # Index
-        try:
-            index = int(self.indexEntry.text())
-            entry['Index'] = str(index - 1)
-        except:
-            exc_type, exc_value, exc_traceback = sys.exc_info()
-            tb = traceback.format_tb(exc_traceback)
-            tb_str = ''
-            for s in tb:
-                tb_str = tb_str + s
-            tb_str = tb_str + '\n\n Invalid Index number'
-            QtWidgets.QMessageBox.warning(self, 'Invalid Index Num',
-                                          tb_str, QtWidgets.QMessageBox.Ok)
-            return None
-
-        # AJB number
-        num = {}
-        num['volume'] = 'AJB'
-
-        try:
-            num['volNum'] = int(self.volNum.text())
-            num['sectionNum'] = int(self.secNum.text())
-            num['subsectionNum'] = int(self.subSecNum.text())
-            num['entryNum'] = int(items[1])
-            num['entrySuf'] = items[2]
-            num['pageNum'] = int(self.pageNum.text())
-        except:
-            exc_type, exc_value, exc_traceback = sys.exc_info()
-            tb = traceback.format_tb(exc_traceback)
-            tb_str = ''
-            for s in tb:
-                tb_str = tb_str + s
-            tb_str = tb_str + '\n\n Invalid AJB Entry number'
-            QtWidgets.QMessageBox.warning(self, 'Invalid AJB Num',
-                                          tb_str, QtWidgets.QMessageBox.Ok)
-            return None
-
-        entry['Num'] = num
-        if not entry.is_valid_ajbnum():
-            QtWidgets.QMessageBox.warning(self, 'Invalid number',
-                                          'Entry must have a valid AJB num in order to be valid',
-                                          QtWidgets.QMessageBox.Ok)
-            return None
-
-        # Authors
-        entrya = []
-        a = self.authorEntry.toPlainText()
-        if a:
-            alist = a.split('\n')
-            for line in alist:
-                nm = HumanName(line)
-                entrya.append(nm)
-        entry['Authors'] = entrya
-
-        # Editors
-        entrya = []
-        a = self.editorEntry.toPlainText()
-        if a:
-            alist = a.split('\n')
-            for line in alist:
-                nm = HumanName(line)
-                entrya.append(nm)
-        entry['Editors'] = entrya
-
-        # Title
-        a = self.titleEntry.toPlainText()
-        if a:
-            entry['Title'] = a
-        else:
-            # warn that there is no title
-            QtWidgets.QMessageBox.warning(self, 'No Title',
-                                          'Entry must have a title in order to be valid',
-                                          QtWidgets.QMessageBox.Ok)
-            return None
-
-        # Publishers
-        entrya = []
-        a = self.publEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                nm = {}
-                try:
-                    place, publisher = line.split(':')
-                except:
-                    # warn that there is no title
-                    QtWidgets.QMessageBox.warning(self, 'No Colon in publishing',
-                                                  'Publishing field must be Place : PublisherName.\nColon is missing.',
-                                                  QtWidgets.QMessageBox.Ok)
-                    return None
-
-                if not place:
-                    place = ''
-                if not publisher:
-                    publisher = ''
-                nm['Place'] = place.strip()
-                nm['PublisherName'] = publisher.strip()
-                entrya.append(nm)
-        entry['Publishers'] = entrya
-
-        # Edition
-        a = self.editionEntry.text()
-        if len(a) != 0:
-            entry['Edition'] = a
-
-        # Year
-        a = self.yearEntry.text()
-        if len(a) != 0:
-            entry['Year'] = a
-
-        # Pagination
-        a = self.pageEntry.text()
-        if len(a) != 0:
-            entry['Pagination'] = a
-
-        # Price
-        a = self.priceEntry.text()
-        if len(a) != 0:
-            entry['Price'] = a
-
-        # Review
-        entrya = []
-        a = self.reviewsEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                entrya.append(line)
-        entry['Reviews'] = entrya
-
-        # Language
-        a = self.tolangEntry.text()
-        if len(a) != 0:
-            entry['Language'] = a
-
-        # fromLanguage
-        a = self.fromlangEntry.text()
-        if len(a) != 0:
-            entry['TranslatedFrom'] = a
-
-        # Translators
-        entrya = []
-        a = self.translatorEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                nm = HumanName(line)
-                entrya.append(nm)
-        entry['Translators'] = entrya
-
-        # Compilers
-        entrya = []
-        a = self.compilersEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                nm = HumanName(line)
-                entrya.append(nm)
-        entry['Compilers'] = entrya
-
-        # Contributors
-        entrya = []
-        a = self.contribEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                nm = HumanName(line)
-                entrya.append(nm)
-        entry['Contributors'] = entrya
-
-        # Reprint
-        a = self.reprintEntry.text()
-        if len(a) != 0:
-            entry['Reprint'] = a
-
-        # Reference
-        a = self.referenceEntry.text()
-        if len(a) != 0:
-            entry['Reference'] = a
-
-        # Others
-        entrya = []
-        a = self.commentsEntry.toPlainText()
-        if len(a) != 0:
-            alist = a.split('\n')
-            for line in alist:
-                entrya.append(line)
-        entry['Others'] = entrya
-
-        return entry
-
     def insert_char(self, obj):
         """Insert the charactor in obj[0] with self.insert_function
         if insert_function is not None."""
@@ -969,6 +677,17 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             self.insert_function = nowWidget.insert
         elif self.no_entry_list.count(nowWidget.objectName()):
             self.insert_function = None
+
+    def entry_to_display(self, entry):
+        '''Given an entry, display the parts on the GUI display.'''
+        
+        entrydisplay.entry_to_display(self, entry)
+        self.repaint()
+
+    def display_to_entry(self):
+        '''Copy the display into a new entry and
+        return the entry.'''
+        return entrydisplay.display_to_entry(self)
 
     #
     # Help menu functions
