@@ -21,7 +21,6 @@
 # pylint: disable=line-too-long
 import platform
 import sys
-import traceback
 import re
 import os
 
@@ -30,15 +29,13 @@ from pprint import pprint
 
 from PyQt5 import QtCore, QtGui, QtWidgets, QtPrintSupport
 
-from nameparser import HumanName
-
 from aabooks.ajbbook import ui_BookEntry as BookEntry_ui
 from aabooks.ajbbook import bookfile as bf
 from aabooks.ajbbook import menus
 from aabooks.ajbbook import origstrwindow as origstr
 from aabooks.ajbbook import ajbentry
 from aabooks.ajbbook import version as ajbver
-from aabooks.ajbbook import entrydisplay as entrydisplay
+from aabooks.ajbbook import entrydisplay
 
 from aabooks.lib import headerwindow as hw
 from aabooks.lib import symbol
@@ -58,6 +55,24 @@ __version__ = '2.0'
 r2 = re.compile(r'(\d+)([a-c]{0,1})', re.UNICODE)
 
 # pylint: disable too-many-locals
+
+def help_string():
+    """comment"""
+    help_str = """<b>AJB Book Entry</b> v {0}
+  <p>Author: J. R. Fowler
+  <p>Copyright &copy; 2012-2020
+  <p>All rights reserved.
+  <p>This application is used to create and visualize
+  the text files with the books found in the annual
+  bibliographies of <b>Astronomischer Jahresbericht</b>.
+  <p>aabooks/lib v {1}
+  <p>Python {2} - Qt {3} - PyQt {4} on {5}""".format(ajbver.__version__,
+                                                     libver.__version__,
+                                                     platform.python_version(),
+                                                     QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
+                                                     platform.system())
+
+    return help_str
 
 class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     """BookEntry is the class which handles the BookEntry form
@@ -83,7 +98,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.symbol_table_name = __DEFAULT_SYMBOL_TABLE_NAME__
         self.symbol_window = None
         self.header_window = None
-        
+
         # Fields within an Entry that we know about already
         self.known_entry_fields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
                                    'Publishers', 'Edition', 'Year',
@@ -142,11 +157,11 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         self.open_new_file()
 
-    def set_max_entry_number(self, n):
+    def set_max_entry_number(self, count):
         """comment"""
-        if n < 0:
-            n = 0
-        self.max_entry_number = n
+        if count < 0:
+            count = 0
+        self.max_entry_number = count
 
         if self.max_entry_number == 0:
             self.prevButton.setEnabled(False)
@@ -195,14 +210,14 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             return
 
         # else get a file name
-        fname, filtera = QtWidgets.QFileDialog.getOpenFileName(self,
-                                                               "%s -- Choose new file" % QtWidgets.QApplication.applicationName(),
-                                                               os.path.dirname(self.bookfile.filename),
-                                                               "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
+        fname, filter_a = QtWidgets.QFileDialog.getOpenFileName(self,
+                                                                "%s -- Choose new file" % QtWidgets.QApplication.applicationName(),
+                                                                os.path.dirname(self.bookfile.filename),
+                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
         if fname:
-            name, ext = os.path.splitext(fname)
-            if ext == '':
-                if filtera == 'XML Files (*.xml)':
+            name = os.path.splitext(fname)
+            if name[1] == '':
+                if filter_a == 'XML Files (*.xml)':
                     fname += '.xml'
                 else:
                     fname += '.txt'
@@ -244,15 +259,15 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
     def save_file_as(self):
         """Ignore dirty entries and save the file as..."""
-        fname, filterA = QtWidgets.QFileDialog.getSaveFileName(self,
-                                                               "%s -- Choose file" % QtWidgets.QApplication.applicationName(),
-                                                               os.path.dirname(self.bookfile.filename),
-                                                               "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
+        fname, filter_a = QtWidgets.QFileDialog.getSaveFileName(self,
+                                                                "%s -- Choose file" % QtWidgets.QApplication.applicationName(),
+                                                                os.path.dirname(self.bookfile.filename),
+                                                                "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
 
         if fname:
-            name, ext = os.path.splitext(fname)
-            if ext == '':
-                if filterA == 'XML Files (*.xml)':
+            name = os.path.splitext(fname)
+            if name[1] == '':
+                if filter_a == 'XML Files (*.xml)':
                     fname += '.xml'
                 else:
                     fname += '.txt'
@@ -260,8 +275,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             self.bookfile.write_file(fname)
             self.set_window_title(os.path.basename(self.bookfile.filename))
             return QtWidgets.QMessageBox.Save
-        else:
-            return QtWidgets.QMessageBox.Cancel
+
+        return QtWidgets.QMessageBox.Cancel
 
     #
     # Menu and button slots for Entry Actions on File menu
@@ -278,9 +293,9 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         valid = True
         error_string = ''
-        
+
         try:
-            index = int(self.indexEntry.text())
+            int(self.indexEntry.text())
         except ValueError:
             valid = False
             error_string = 'Invalid index number.\n'
@@ -291,7 +306,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         except ValueError:
             valid = False
             error_string += 'Invalid volume number.\n'
-            
+
         try:
             num['sectionNum'] = int(self.secNum.text())
         except ValueError:
@@ -331,20 +346,20 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             # warn that there is no title
             valid = False
             error_string += 'Invalid or missing title string.\n'
-        
+
         publ_entries = self.publEntry.toPlainText()
         if len(publ_entries) != 0:
             alist = publ_entries.split('\n')
             for line in alist:
                 try:
-                    place, publisher = line.split(':')
+                    line.split(':')
                 except ValueError:
                     valid = False
                     error_string += 'No colon in publisher line: {}.\n'.format(line)
 
         return (valid, error_string)
 
-    
+
     def save_entry(self):
         """Save the entry to the current entry number in the bookfile."""
         #
@@ -412,7 +427,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         the current display entry in front of this entry in the booklist."""
 
         words = line[0].split(' ')
-        
+
         try:
             num = int(words[0])
         except ValueError:
@@ -428,7 +443,6 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.set_max_entry_number(self.max_entry_number + 1)
         self.show_entry(self.current_entry_number)
 
-        
     def delete_entry(self):
         """Delete the entry at the current_entry_number but
         ask the user first."""
@@ -545,7 +559,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.header_window = hw.HeaderWindow(parent=self)
         self.header_window.set_bookfile(self.bookfile)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
-                                                                      "Edit Headers - %s" % (os.path.basename(self.bookfile.filename)), None))
+                                                                           "Edit Headers - %s" % (os.path.basename(self.bookfile.filename)), None))
         self.header_window.set_header_text(self.bookfile.get_header())
         self.header_window.show()
 
@@ -643,12 +657,12 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     def set_volume_number_interactive(self):
         """Provides an interactive dialog to set the default
         volume number for new entries."""
-        curVal = self.default_volume_number
-        numVal, ok = QtWidgets.QInputDialog.getText(self, 'Volume Number',
-                                                    'Enter New Volume Number\n(next new entry will use this value)',
-                                                    text=curVal)
-        if ok:
-            self.default_volume_number = numVal
+        current_val = self.default_volume_number
+        volume_num, is_ok = QtWidgets.QInputDialog.getText(self, 'Volume Number',
+                                                           'Enter New Volume Number\n(next new entry will use this value)',
+                                                           text=current_val)
+        if is_ok:
+            self.default_volume_number = volume_num
 
     def insert_char(self, obj):
         """Insert the charactor in obj[0] with self.insert_function
@@ -660,27 +674,27 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             self.insert_function(char)
         # take back focus somehow??
 
-    def set_focus_changed(self, oldWidget, nowWidget):
+    def set_focus_changed(self, old_widget, now_widget):
         """For items in set_text_entry_list and set_line_entry_list
         set insert_function to be either insertPlainText or insert."""
 
-        if oldWidget is None:
+        if old_widget is None:
             pass
-        elif oldWidget.objectName() == 'indexEntry':
+        elif old_widget.objectName() == 'indexEntry':
             self.indexEntry.setText(str(self.current_entry_number))
 
-        if nowWidget is None:
+        if now_widget is None:
             pass
-        elif self.set_text_entry_list.count(nowWidget.objectName()):
-            self.insert_function = nowWidget.insertPlainText
-        elif self.set_line_entry_list.count(nowWidget.objectName()):
-            self.insert_function = nowWidget.insert
-        elif self.no_entry_list.count(nowWidget.objectName()):
+        elif self.set_text_entry_list.count(now_widget.objectName()):
+            self.insert_function = now_widget.insertPlainText
+        elif self.set_line_entry_list.count(now_widget.objectName()):
+            self.insert_function = now_widget.insert
+        elif self.no_entry_list.count(now_widget.objectName()):
             self.insert_function = None
 
     def entry_to_display(self, entry):
         '''Given an entry, display the parts on the GUI display.'''
-        
+
         entrydisplay.entry_to_display(self, entry)
         self.repaint()
 
@@ -693,27 +707,9 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     # Help menu functions
     #
 
-    def help_string(self):
-        """comment"""
-        help_str = """<b>AJB Book Entry</b> v {0}
-      <p>Author: J. R. Fowler
-      <p>Copyright &copy; 2012-2020
-      <p>All rights reserved.
-      <p>This application is used to create and visualize
-      the text files with the books found in the annual
-      bibliographies of <b>Astronomischer Jahresbericht</b>.
-      <p>aabooks/lib v {1}
-      <p>Python {2} - Qt {3} - PyQt {4} on {5}""".format(ajbver.__version__,
-                                                         libver.__version__,
-                                                         platform.python_version(),
-                                                         QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
-                                                         platform.system())
-
-        return help_str
-
     def help_about(self):
         """comment"""
-        hstr = self.help_string()
+        hstr = help_string()
         QtWidgets.QMessageBox.about(self, 'About BookEntry', hstr)
 
 
