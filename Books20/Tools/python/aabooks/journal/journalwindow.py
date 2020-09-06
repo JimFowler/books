@@ -252,13 +252,13 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _save_file(self):
         """Ignore dirty entries and just save the file."""
-        if self._vardict['journal_file'].get_file_name() is None:
+        if self._vardict['journal_file'].filename is None:
             self._save_file_as()
         else:
-            self._vardict['journal_file'].write_xml_file()
+            self._vardict['journal_file'].write_file_xml()
 
         self.statusbar.showMessage('Saving file ' \
-                    + self._vardict['journal_file'].get_base_name())
+                                   + os.path.basename(self._vardict['journal_file'].filename)[0])
         QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
 
@@ -269,7 +269,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                 ".", "*.xml")
 
         if fname:
-            self._vardict['journal_file'].write_file(fname)
+            self._vardict['journal_file'].write_file_xml(fname)
             self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
 
     #
