@@ -62,7 +62,7 @@ del BASE_NAME
 
 __version__ = '1.0.0'
 
-def help_string(self):
+def help_string():
     '''Create help string.'''
     helpstring = '''<b>Journals</b> v {0}
     <p>Author: J. R. Fowler
@@ -159,9 +159,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         '''
         mem = self.titleEdit.toPlainText().strip()
-        if len(mem):
-            return True
-        return False
+        if len(mem) == 0:
+            return False
+        return True
 
     def set_max_entry_count(self, count):
         '''Comment'''
@@ -290,8 +290,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     def _save_entry(self):
         '''Save the entry to the current entry number in the bookfile.'''
         if not self.display_is_valid():
-            QtWidgets.QMessageBox.information(self, 'Entry Invalid',
-                                              '1 Entry invalid. No Title!\nNot saved in journalfile!')
+            msg = '1 Entry invalid. No Title!\nNot saved in journalfile!'
+            QtWidgets.QMessageBox.information(self, 'Entry Invalid', msg)
+
             return
 
         self._vardict['temp_entry'] = entrydisplay.display_to_entry(self)
@@ -305,8 +306,9 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
                             self._vardict['cur_entry_number'])
 
         if not ret:
-            QtWidgets.QMessageBox.information(self, 'Entry Invalid',
-                                              '2 Entry invalid. No Title!\nNot saved in journalfile!')
+            msg = '2 Entry invalid. No Title!\nNot saved in journalfile!'
+            QtWidgets.QMessageBox.information(self, 'Entry Invalid', msg)
+
             return
 
         if self._vardict['cur_entry_number'] > self.max_entry_count:

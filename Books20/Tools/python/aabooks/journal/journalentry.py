@@ -18,8 +18,6 @@
 '''journalEntry provides a class which can convert between a an XML
 entry and a representation in python, typically a dictionary entry of
 the form Entry.entry().'''
-# -*- coding: UTF-8 -*-
-# -*- mode: Python;-*-
 
 
 
@@ -77,12 +75,6 @@ class JournalEntry(dict):
         #               'LCCN', 'DDCN', etc
         #
         self['Comments'] = [] # should be a list of strings
-
-
-
-    def version(self):
-        return __version__ + ": " + super(JournalEntry, self).version()
-
 
     def is_valid(self):
         """journal entries are valid if they have a valid Title."""
