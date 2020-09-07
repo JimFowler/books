@@ -270,7 +270,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             self._vardict['journal_file'].write_file_xml()
 
         self.statusbar.showMessage('Saving file ' \
-                                   + os.path.basename(self._vardict['journal_file'].filename)[0])
+                                   + os.path.basename(self._vardict['journal_file'].filename))
         QtCore.QTimer.singleShot(10000, self.statusbar.clearMessage)
 
 
