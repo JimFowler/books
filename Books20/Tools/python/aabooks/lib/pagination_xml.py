@@ -235,11 +235,9 @@ if __name__ == '__main__':
 
         def setUp(self):
             '''Set up for the tests.'''
-            pass
 
         def tearDown(self):
             '''Tear down for the next test.'''
-            pass
 
         def do_string(self, test_string, final_string):
             '''Convert a pagination string to XML, convert back to a pagination

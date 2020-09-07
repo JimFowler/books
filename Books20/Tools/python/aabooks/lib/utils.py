@@ -16,9 +16,10 @@
 ## End copyright
 '''Utility functions that may be used in various programs.'''
 
+import re
+
 from nameparser import HumanName
 from nameparser.config import CONSTANTS
-import re
 
 __reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
@@ -63,7 +64,7 @@ def standard_parser_args(parser):
     the argparse or configargparse packages.
 
     '''
-    
+
     parser.add_argument('--version',
                         help='show the version information and exit',
                         default=False,
@@ -76,17 +77,16 @@ def standard_parser_args(parser):
                             help='path to the alternate configuration file.')
     except TypeError:
         pass
-    
+
     parser.add_argument('--verbose',
                         help='be noisy about our actions',
                         default=False,
                         action='store_true')
-    
+
     parser.add_argument('--debug',
                         help='turn on debugging information',
                         default=False,
                         action='store_true')
-    
 
     return parser
 
@@ -113,7 +113,7 @@ def parse_ajbnum(line):
 
     if len(nums) != 9:
         print('Bad AJB number {}\n'.format(line))
-        return
+        return {}
 
     if not nums[0]: # volume
         nums[0] = 'AJB'
