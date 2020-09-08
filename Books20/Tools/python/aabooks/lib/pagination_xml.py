@@ -217,44 +217,59 @@ def xml_to_pagination_string(elem):
 ##
 if __name__ == '__main__':
 
+    import unittest
+
+    GOOD_STRING = [
+        ('', ''),
+        (None, ''),
+        ('12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c', \
+         '12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c'),
+        ]
+
     OLD_STR = '12p+203p+14i+23f+522P+10c'
-    NEW_STR = '12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c'
     ROM_STR = '5D+XIIIpp+203p+40AA+32AB+14i+23f+522P+10c'
     BAD_STR = '12pz+203p+14i+23f+522P+10c'
 
-    def testit(test_string):
-        '''test the XML to/from pagination strings'''
+    class PaginationTestCase(unittest.TestCase):
+        '''The test suite for pagination_xml.py.'''
 
-        # Test transform from string to xml
-        print('Testing string "{}"'.format(test_string))
-        p_elem = pagination_string_to_xml(test_string)
-        print(etree.tostring(p_elem, pretty_print=True,
-                             method='xml', encoding='unicode'))
+        def setUp(self):
+            '''Set up for the tests.'''
 
-        # Test transform from xml to string
-        p_string = xml_to_pagination_string(p_elem)
-        print('and this maps back to:\n', p_string)
-        if p_string == test_string:
-            print('which matches the test string\n')
-        else:
-            print('which does not match the test string\n')
+        def tearDown(self):
+            '''Tear down for the next test.'''
 
+        def do_string(self, test_string, final_string):
+            '''Convert a pagination string to XML, convert back to a pagination
+            string, and compare the answer to the final string.
 
-    #
-    # ok, do the testing now.
-    #
-    testit('')
-    testit(None)
-    testit(NEW_STR)
+            '''
 
-    try:
-        testit(OLD_STR)
-    except KeyError:
-        print('OLD_STR fails as expected with ValueError\n\n')
+            p_elem = pagination_string_to_xml(test_string)
+            p_string = xml_to_pagination_string(p_elem)
+            self.assertEqual(p_string, final_string)
+            #print(etree.tostring(p_elem, pretty_print=True,
+            #                     method='xml', encoding='unicode'))
 
-    try:
-        testit(BAD_STR)
-    except KeyError:
-        print('BAD_STR fails as expected with KeyError\n\n')
+        def test_a_good_strings(self):
+            '''Test all the good strings that can be correctly converted.'''
 
-    testit(ROM_STR)
+            for t_string, f_string in GOOD_STRING:
+                self.do_string(t_string, f_string)
+
+        def test_b_old_string(self):
+            '''Test the old format string.'''
+            self.do_string(OLD_STR, OLD_STR)
+
+        def test_c_bad_string(self):
+            '''Test a bad string that should not convert.'''
+
+            with self.assertRaises(KeyError):
+                self.do_string(BAD_STR, BAD_STR)
+
+        def test_d_roman_string(self):
+            '''Test the rom string.'''
+
+            self.do_string(ROM_STR, ROM_STR)
+
+    unittest.main()

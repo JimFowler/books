@@ -16,15 +16,13 @@
 ## End copyright
 '''Utility functions that may be used in various programs.'''
 
-from nameparser import HumanName
-from nameparser.config import CONSTANTS
 import re
+
+from nameparser import HumanName
 
 __reg3__ = re.compile(r'([AJB]{0,1})(\d+)\.(\d+)(\((\d+)\))*\.(\d+)([a-c]{0,1})', re.UNICODE)
 
-# add SJ Suffix list
-CONSTANTS.suffixes.add('sj')
-
+# Should use namesparser here
 def make_name_list(line, sep=' and '):
     """Returns a list of object of class HumanName. See the package
     nameparser for full info. The names have the following possible keys
@@ -63,7 +61,7 @@ def standard_parser_args(parser):
     the argparse or configargparse packages.
 
     '''
-    
+
     parser.add_argument('--version',
                         help='show the version information and exit',
                         default=False,
@@ -76,17 +74,16 @@ def standard_parser_args(parser):
                             help='path to the alternate configuration file.')
     except TypeError:
         pass
-    
+
     parser.add_argument('--verbose',
                         help='be noisy about our actions',
                         default=False,
                         action='store_true')
-    
+
     parser.add_argument('--debug',
                         help='turn on debugging information',
                         default=False,
                         action='store_true')
-    
 
     return parser
 
@@ -113,7 +110,7 @@ def parse_ajbnum(line):
 
     if len(nums) != 9:
         print('Bad AJB number {}\n'.format(line))
-        return
+        return {}
 
     if not nums[0]: # volume
         nums[0] = 'AJB'
@@ -136,4 +133,32 @@ def parse_ajbnum(line):
 
 
 if __name__ == '__main__':
-    print('No tests available yet')
+
+    import unittest
+
+    class UtilsTestCase(unittest.TestCase):
+        '''Test cases for aabooks/lib/utils.py.'''
+
+        def setUp(self):
+            '''Set things up for every test.'''
+
+        def tearDown(self):
+            '''Clean up the mess after every test.'''
+
+        def test_a_make_name_func(self):
+            '''Test make_name_list().'''
+
+            name_str = '''A. B. Author and C. D. Next sj and D. E. Brother'''
+            test_name_list = make_name_list(name_str)
+            test_name_str = make_name_str(test_name_list)
+            self.assertEqual(test_name_str, name_str)
+
+        def test_b_parse_ajbnum(self):
+            '''test the parse_ajb() function.'''
+
+            # test a good value
+            # testa bad value
+            # test AAA value?
+
+
+    unittest.main()

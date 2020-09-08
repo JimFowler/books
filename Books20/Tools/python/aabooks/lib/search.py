@@ -65,8 +65,10 @@ def __get_sub_strings__(string, min_length=3, max_length=10):
 
     '''
 
-    len_string = len(string) # the length of the input string
-    max_length = min(max_length, len_string) # the max length substring we will return
+    # the length of the input string
+    len_string = len(string)
+    # the max length substring we will return
+    max_length = min(max_length, len_string)
 
     strset = set() # the temporary sub-string set
 
@@ -159,44 +161,57 @@ class SearchDict(dict):
 # Test everything (I hope)
 #
 if __name__ == '__main__':
-    from pprint import pprint
-    import title_list as tl
 
-    D = SearchDict()
+    import unittest
+    import aabooks.lib.title_list as tl
 
-    for title in tl.TITLE_LIST:
-        D.add_sub_strings(title[0], (title[0], title[1]))
+    SEARCH_TERMS = [
+        ('Journal de', [('Journal des Observateurs', 1)]),
+        ('Astro', [('Astronomische Abhandlungen', 1),
+                   ('Astronomische Blätter', 1),
+                   ('Astronomical Herald', 1),
+                   ('Astronomical Journal of Soviet Union', 1),
+                   ('Astronomische Nachrichten', 1)]),
+        ('ApJ', [('ApJ', 1)]),
+        ('apj', []),
+        ('Optical', []),
+        ]
 
-    print('\n\nsearching for "Journal devo"')
-    pprint(D.search('Journal devo'))
+    class SearchTestCase(unittest.TestCase):
+        '''Unit tests for search.py.'''
 
-    print('\n\nsearching for "Astro"')
-    pprint(D.search('Astro'))
+        def setUp(self):
+            '''Set up the unit tests.'''
+            self.searchd = SearchDict()
 
-    print('\n\nsearching for "Astrop"')
-    pprint(D.search('Astrop'))
+            for title in tl.TITLE_LIST:
+                self.searchd.add_sub_strings(title[0], (title[0], title[1]))
 
-    print('\n\nsearching for "ApJ"')
-    pprint(D.search('ApJ'))
+        def tearDown(self):
+            '''Clean up for the next tests.'''
+            del self.searchd
 
-    print('\n\nsearching for "apj"')
-    pprint(D.search('apj'))
+        def test_a_search_astronomy(self):
+            '''Test the search terms within the journals.'''
 
-    print('\n\nsearching for "Optical"')
-    pprint(D.search('Optical'))
+            for search_str, answer in SEARCH_TERMS:
+                prelim_answer = self.searchd.search(search_str)
+                self.assertEqual(prelim_answer, answer)
 
-    print('\n\nsearching for "Astro"')
-    pprint(D.search('Astro'))
+        def test_b_colors(self):
+            '''Test the color list.'''
 
-    # test with the color list
-    # we first clear the existing SearchDict
-    #  and reloaded it with the color sub-strings
-    D.clear()
-    for color in tl.COLOR_LIST:
-        D.add_sub_strings(color[0], color[1])
+            self.searchd.clear()
+            for color in tl.COLOR_LIST:
+                self.searchd.add_sub_strings(color[0], color[1])
 
-    print('\n\nsearching for "red"')
-    pprint(D.search('red'))
+            answer = [('apple', 'blood', 'cherry', 'ferrari'),
+                      ('blood', 'apple', 'ferrari')]
+            prelim_answer = self.searchd.search('red')
+            self.assertEqual(prelim_answer, answer)
 
-    print('\n\nsearching for a non-exist string')
-    pprint(D.search('animal'))
+            answer = []
+            prelim_answer = self.searchd.search('animal')
+            self.assertEqual(prelim_answer, answer)
+
+    unittest.main()

@@ -1,10 +1,40 @@
+2020-09-06  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/search.py: Added unit tests.
+
+	* Tools/python/aabooks/lib/pagination_xml.py: Added unit tests.
+
+	* Tools/python/aabooks/journal/journalwindow.py: Fix issue with
+	save file.  I had not tested the save function and had not
+	modified the calls for journalfile.filename.
+
+2020-09-05  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalwindow.py: removed display
+	to/from entry and moved them to entrydisplay.py
+
+	* Tools/python/aabooks/journal/entrydisplay.py: created from
+	display to/from entry in journalwindow.py
+
+	* Tools/python/aabooks/ajbbook/ajbwindow.py: Added function
+	display_entry_is_valid() to check validity of the display form
+	before converting the form to an ajbentry.
+
+	* Tools/python/aabooks/ajbbook/entrydisplay.py: Finished work on
+	the dislay to entry functions.  Tested by hand successfully.
+
 2020-09-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/entrydisplay.py: Began work on
+	entry to display functions.  Moved original ones from ajbwindow.py
+	into entrydisplay.py.  Tested sucessfully and began clean up with
+	pylint.
+
+	* aabooks: merge with master
 
 	* Tools/python/aabooks/ajbbook/ajbcomments.py: Added unittest
 	yesterday.  Tested with an XML file, converted to text, then read
 	the text, write a second text file, and compare successfully.
-
-	* aabooks: merge with master
 
 2020-08-30  Jim Fowler  <jrf@biblion>
 

@@ -100,12 +100,12 @@ class EntryList(list):
 
         for entrynum in range(self.max_entries(), 0, -1):
             self.pop(entrynum)
-            
+
         self.set_header('')
         self._dirty = False
 
         return self.max_entries()
-    
+
     # Functions to deal with the Header
 
     def set_header(self, headerstr):
@@ -404,7 +404,7 @@ It contains three lines.'''
             self.assertEqual(self.ev_list.clear_list(), 0)
             # should have just the header in the list
             self.assertEqual(len(self.ev_list), 1)
-            
+
         def test_g_read_file(self):
             '''Test the read_file stub. Should not be able to read a file at
             this time because we don't have a read_file_xml() method yet. We
@@ -439,7 +439,7 @@ It contains three lines.'''
             this time.
 
             '''
-            
+
             filename = 'bogon.xml'
 
             with self.assertRaises(AttributeError):

@@ -14,7 +14,11 @@
 ##
 ##
 ## End copyright
+'''This file contains the XML string for a valid journal entry
+<Journal>.  It is used in the unit tests for entryxml.py as well as
+the unit tests for journalentry.py.
 
+'''
 
 ENTRY_XML_STR = '''<Journal>
   <Title>First Test Journal</Title>

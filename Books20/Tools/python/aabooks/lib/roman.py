@@ -103,7 +103,6 @@ ________________________
 
 import re
 
-# pylint: disable=invalid-name
 
 class RomanError(Exception):
     '''The base class for the Roman numeral conversion module.'''
@@ -119,14 +118,14 @@ class InvalidRomanNumeralError(RomanError):
 
 
 #Define digit mapping
-__romanNumeral_Map = tuple(zip(
+__roman_numeral_map = tuple(zip(
     ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'),
     (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
 ))
 
 
 #Define pattern to detect valid Roman numerals
-romanNumeralPattern = re.compile("""
+roman_numeral_pattern = re.compile("""
     ^                   # beginning of string
     M{0,4}              # thousands - 0 to 4 M's
     (CM|CD|D?C{0,3})    # hundreds - 900 (CM), 400 (CD), 0-300 (0 to 3 C's),
@@ -139,51 +138,51 @@ romanNumeralPattern = re.compile("""
     """, re.VERBOSE)
 
 
-def isRoman(s):
-    """test to verify is a string is a roman numeral."""
+def is_roman(roman_str):
+    """test to verify if a string is a roman numeral."""
 
-    if not s or not romanNumeralPattern.search(s):
+    if not roman_str or not roman_numeral_pattern.search(roman_str):
         return False
 
     return True
 
 
-def toRoman(n):
+def to_roman(number):
     """convert integer to Roman numeral"""
 
-    if not isinstance(n, int):
+    if not isinstance(number, int):
         raise NotIntegerError("decimals can not be converted")
-    if not -1 < n < 5000:
+    if not -1 < number < 5000:
         raise OutOfRangeError("number out of range (must be 0..4999)")
 
     # special case
-    if n == 0:
+    if number == 0:
         return 'N'
 
     result = ""
-    for numeral, integer in __romanNumeral_Map:
-        while n >= integer:
+    for numeral, integer in __roman_numeral_map:
+        while number >= integer:
             result += numeral
-            n -= integer
+            number -= integer
     return result
 
 
-def fromRoman(s):
+def from_roman(roman_str):
     """convert Roman numeral to integer"""
-    if not s:
+    if not roman_str:
         raise InvalidRomanNumeralError('Input can not be blank')
 
     # special case
-    if s == 'N':
+    if roman_str == 'N':
         return 0
 
-    if not romanNumeralPattern.search(s):
-        raise InvalidRomanNumeralError('Invalid Roman numeral: %s' % s)
+    if not roman_numeral_pattern.search(roman_str):
+        raise InvalidRomanNumeralError('Invalid Roman numeral: %s' % roman_str)
 
     result = 0
     index = 0
-    for numeral, integer in __romanNumeral_Map:
-        while s[index:index+len(numeral)] == numeral:
+    for numeral, integer in __roman_numeral_map:
+        while roman_str[index:index+len(numeral)] == numeral:
             result += integer
             index += len(numeral)
     return result
@@ -205,43 +204,43 @@ if __name__ == '__main__':
 
     NOT_ROMAN = ('AA', 'mxvi', 'MMaVI', '', 'SPQR', 'MMXiii', 'MXCD')
 
-    class TestRoman(unittest.TestCase):
+    class RomanNumberTestCase(unittest.TestCase):
         '''Run the unit tests for Roman number functions.'''
 
-        def test_isRoman(self):
-            '''Test valid strings in isRoman().'''
+        def test_is_roman(self):
+            '''Test valid strings in is_roman().'''
             for _, num_roman in TEST_MAP:
-                self.assertTrue(isRoman(num_roman),
+                self.assertTrue(is_roman(num_roman),
                                 '"%s" should be a valid Roman' % (num_roman))
 
-        def test_isRoman_errors(self):
-            '''Test invalid strings in isRoman().'''
-            for s in NOT_ROMAN:
-                self.assertFalse(isRoman(s),
-                                 '"%s" should not be Roman' % (s))
+        def test_is_roman_errors(self):
+            '''Test invalid strings in is_roman().'''
+            for bad_string in NOT_ROMAN:
+                self.assertFalse(is_roman(bad_string),
+                                 '"%s" should not be Roman' % (bad_string))
 
-        def test_toRoman(self):
-            '''Test valid numbers in toRoman().'''
+        def test_to_roman(self):
+            '''Test valid numbers in to_roman().'''
             for num_arabic, num_roman in TEST_MAP:
-                self.assertEqual(toRoman(num_arabic), num_roman,
+                self.assertEqual(to_roman(num_arabic), num_roman,
                                  '%s should be %s' % (num_arabic, num_roman))
 
-        def test_toRoman_errors(self):
-            '''Test invalid numbers in toRoman().'''
-            self.assertRaises(OutOfRangeError, toRoman, 100000)
-            self.assertRaises(NotIntegerError, toRoman, '1')
+        def test_to_roman_errors(self):
+            '''Test invalid numbers in to_roman().'''
+            self.assertRaises(OutOfRangeError, to_roman, 100000)
+            self.assertRaises(NotIntegerError, to_roman, '1')
 
-        def test_fromRoman(self):
-            '''Test valid Roman numerals fromRoman().'''
+        def test_from_roman(self):
+            '''Test valid Roman numerals from_roman().'''
             for num_arabic, num_roman in TEST_MAP:
-                self.assertEqual(fromRoman(num_roman), num_arabic,
+                self.assertEqual(from_roman(num_roman), num_arabic,
                                  '%s should be %s' % (num_roman, num_arabic))
 
-        def test_fromRoman_errors(self):
-            '''Test invalid strings in fromRoman().'''
-            for s in NOT_ROMAN:
+        def test_from_roman_errors(self):
+            '''Test invalid strings in from_roman().'''
+            for bad_string in NOT_ROMAN:
                 self.assertRaises(
-                    InvalidRomanNumeralError, fromRoman, s)
+                    InvalidRomanNumeralError, from_roman, bad_string)
 
 
     unittest.main()
