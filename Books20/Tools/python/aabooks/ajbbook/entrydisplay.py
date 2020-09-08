@@ -315,7 +315,7 @@ def display_entry_ajbnum(self, entry):
     num['sectionNum'] = int(self.secNum.text())
     num['subsectionNum'] = int(self.subSecNum.text())
     num['entryNum'] = int(items[1])
-    num['entrySuf'] = items[3]
+    num['entrySuf'] = items[2]
     num['pageNum'] = int(self.pageNum.text())
 
     entry['Num'] = num
