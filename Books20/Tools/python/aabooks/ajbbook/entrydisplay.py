@@ -354,17 +354,18 @@ def display_entry_publishers(self, entry):
 
     entrya = []
     publishers = self.publEntry.toPlainText()
-    plist = publishers.split('\n')
-    for publ in plist:
-        pdict = {}
-        place, publisher = publ.split(':')
-        if not place:
-            place = ''
-        if not publisher:
-            publisher = ''
-        pdict['Place'] = place.strip()
-        pdict['PublisherName'] = publisher.strip()
-        entrya.append(pdict)
+    if len(publishers) != 0:
+        plist = publishers.split('\n')
+        for publ in plist:
+            pdict = {}
+            place, publisher = publ.split(':')
+            if not place:
+                place = ''
+            if not publisher:
+                publisher = ''
+                pdict['Place'] = place.strip()
+                pdict['PublisherName'] = publisher.strip()
+                entrya.append(pdict)
     entry['Publishers'] = entrya
 
 def display_entry_edition(self, entry):
