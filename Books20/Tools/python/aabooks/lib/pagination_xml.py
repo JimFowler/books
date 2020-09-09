@@ -69,8 +69,8 @@ Known text codes and their matching XML tags are::
     'pe' : 'OtherSec_5',
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
-    't'  : 'Tafeln',
-    'T'  : 'Tabellen',
+    't'  : 'Tables (Tabellen)',
+    'T'  : 'Tafeln (Plates), 
   }
 
 
@@ -120,10 +120,8 @@ __TAG_TO_XML_NAME__ = {
     'pc' : 'OtherSec_3',
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
-    # Not sure how these last two names are used so I am sticking with
-    # the German words for now.
-    't'  : 'Tafeln',
-    'T'  : 'Tabellen',
+    't'  : 'Tables',     # tabelen
+    'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
 }
 
 __XML_NAME_TO_TAG__ = {v: k for k, v in __TAG_TO_XML_NAME__.items()}
