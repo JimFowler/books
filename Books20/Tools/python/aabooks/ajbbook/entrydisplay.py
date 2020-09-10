@@ -363,9 +363,11 @@ def display_entry_publishers(self, entry):
                 place = ''
             if not publisher:
                 publisher = ''
-                pdict['Place'] = place.strip()
-                pdict['PublisherName'] = publisher.strip()
-                entrya.append(pdict)
+
+            pdict['Place'] = place.strip()
+            pdict['PublisherName'] = publisher.strip()
+            entrya.append(pdict)
+
     entry['Publishers'] = entrya
 
 def display_entry_edition(self, entry):
