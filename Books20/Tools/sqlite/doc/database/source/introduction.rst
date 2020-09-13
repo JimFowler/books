@@ -57,6 +57,16 @@ noSQL
 Graph Databases
 _______________
 
+The Carnegie Mellon University Database Group has their `class
+lectures <https://www.youtube.com/channel/UCHnBsf2rH-K7pn09rb3qvkA>`_
+about database on YouTube. Since April 2020 they have been running a
+series called Quatantine 2020 Database talks. On August 22 2020 one of
+these talks was by Gavin Mendel_Gleason about `TerminusDB
+<https://www.youtube.com/watch?v=CaESy_ILFDs&list=PLSE8ODhjZXjagqlf1NxuBQwaMkrHXi-iz&index=16&t=0s>`_,
+a graph database used as a revision control system for data.  Their
+description of graph databases matched what I thought I was trying to
+do with the Books20 database.
+
 The primary description given below mainly consists of relationships
 between objects, people, organizations, books, and jounals. When I
 think about the design of the Relational Database for the books I
