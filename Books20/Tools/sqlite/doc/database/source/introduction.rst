@@ -15,24 +15,32 @@ Should we use an SQL or a noSQL database?  Choices would most likely
 be between SQLite or mondoDB.  I like the SQL databases for the formal
 orgainization that they provide. The noSQL database provides the
 ability to add new columns or data to the system with out having the
-rebuild the database.  ``Task, Read about SQLite and mongoDB.`` As a
-general rule different Database Management Systems (DBMS) work well
-for specific classes of problem. Some are best for low volume
-transactions, while some are excellent for high volume transactions
-rates.
+rebuild the database.  As a general rule different Database Management
+Systems (DBMS) work well for specific classes of problem. Some are
+best for low volume transactions, while some are excellent for high
+volume transactions rates.
 
 My criteria for selecting a DBMS include cost, ease of use, access to
 python bindings, and ...
 
+One idea, suggested by Neo4j, is that some companies have multiple
+database types.  A relationaly database for tabular data and a graph
+database for relationship type data.  This may be an option
+
 
 SQL
-___
+===
 
 SQL database systems, e.g. mySQL or SQLite, are relational databases.
 The basic objects are tables and records which define relationship
 between tables through foreign keys.  A well defined and very mature
 language, SQL, is used to access these tables and records independent
-of how the data is organized on the storage system.
+of how the data is organized on the storage system. However, SQL can
+be difficult to work with if there are multiple tables that require
+multiple joings
+
+SQLite
+______
 
 The system I am considering, SQLite, works well for low volume, low
 transaction rate databases. I expect the books database to contain no
@@ -44,10 +52,41 @@ and 16 million attributes entries which are generatated at a rate of
 
 
 noSQL
-_____
+=====
 
-I am not familiar yet with how to use a noSQL DBMS.
+Graph Databases
+_______________
 
+The primary description given below mainly consists of relationships
+between objects, people, organizations, books, and jounals. When I
+think about the design of the Relational Database for the books I
+primarily think about the relationship tables, not the physical object
+tables.  For a dataset that principally consists of relationship, a
+graph database may be the right choice. Graph database consists of
+nodes, e.g.\ people or books, which have properties, name, date, etc.,
+and relationships, e.g.\ isAuthor, isTranslator, publishedBy, or
+published, when can have properties as well, for example, date
+published or second author.  Both nodes and relationship may have
+labels such as :person or :business.  I have been looking at `Neo4j
+<https://neo4j.com>`_ as an example of a graph database.  Neo4j thinks
+of nodes as nouns, properties of nodes as ajective, relationships as
+verbs, and properties of relationships as adverbs.
+
+``Cyper`` is the query language and it is supported by the
+'OpenCypher group <https://www.opencypher.org>`_. This seems to
+be an easier language to work in than SQL but I will have to layout
+a schema and write some queries to verify that this is true.
+
+Converting RDBS to Neo4j. Replace foreign keys with relationships.
+Covert join tables (many-to-many tables) to relationships with
+properties.
+
+Some other graph databases are
+
+* ArangoDB  Apache
+* TerminusDB GPL3
+* Grakn Core  GNU
+* JanusGraph Apache 2 with Linux support
 
 High Level Overview
 *******************
