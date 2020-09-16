@@ -63,8 +63,8 @@ class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
             resp = QtWidgets.QMessageBox.warning(self, "Warning",
                                                  '''The header has been modified\n
                                                  Do you want to save your changes?''',
-                                                 QtWidgets.QMessageBox.Save,
-                                                 QtWidgets.QMessageBox.Discard,
+                                                 QtWidgets.QMessageBox.Save |
+                                                 QtWidgets.QMessageBox.Discard |
                                                  QtWidgets.QMessageBox.Cancel)
             if resp == QtWidgets.QMessageBox.Save:
                 self.save_close()
