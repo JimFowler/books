@@ -11,7 +11,7 @@ Welcome to Books20 Database documentation!
    :caption: Contents:
 
    introduction
-   
+   neo4j   
 
 Indices and tables
 ==================

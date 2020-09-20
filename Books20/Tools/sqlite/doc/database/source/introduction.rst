@@ -60,37 +60,30 @@ _______________
 The Carnegie Mellon University Database Group has their `class
 lectures <https://www.youtube.com/channel/UCHnBsf2rH-K7pn09rb3qvkA>`_
 about database systems on YouTube. Since April 2020 they have been
-running a series called Quarantin 2020 Database talks. On August 22
-2020 one of these talks was by Gavin Mendel_Gleason about `TerminusDB
+running a series called Quarantine 2020 Database. On August 22,
+2020 the talk was by Gavin Mendel_Gleason about `TerminusDB
 <https://www.youtube.com/watch?v=CaESy_ILFDs&list=PLSE8ODhjZXjagqlf1NxuBQwaMkrHXi-iz&index=16&t=0s>`_,
-a graph database used as a revision control system for data.  Their
+a graph database used as a revision control system for data.  His
 description of graph databases matched what I thought I was trying to
 do with the Books20 database.
 
-The primary description of a database structure given below mainly
-consists of relationships between objects, people, organizations,
-books, and jounals. When I think about the design of the Relational
-Database for the books I primarily think about the relationship
-tables, not the physical object tables.  For a dataset that
-principally consists of relationship, a graph database may be the
-right choice. Graph database consists of nodes, e.g.\ people or books,
-which have properties, name, date, etc., and relationships, e.g.\
-isAuthor, isTranslator, publishedBy, or published, when can have
-properties as well, for example, date published or second author.
-Both nodes and relationship may have labels such as :person or
-:business.  I have been looking at `Neo4j <https://neo4j.com>`_ as an
-example of a graph database.  Neo4j thinks of nodes as nouns,
-properties of nodes as ajective, relationships as verbs, and
-properties of relationships as adverbs.
+The description of a possible database structure given below consists
+of relationships between objects, people, organizations, books, and
+journals. When I think about the design of the relational database for
+the books I primarily think about the relationship or join tables that
+descibe the many-to-many relationships, not the physical object
+tables.  For a dataset that principally consists of relationship, a
+graph database may be the right choice. Graph database consists of
+nodes, e.g.\ people or books, which have properties, name, date, etc.,
+and relationships, e.g.\ isAuthor, isTranslator, publishedBy, or
+published, when can have properties as well, for example, date
+published or second author.  Both nodes and relationship may have
+labels such as :person or :business. 
 
 ``Cyper`` is the query language and it is supported by the
 'OpenCypher group <https://www.opencypher.org>`_. This seems to
 be an easier language to work in than SQL but I will have to layout
 a schema and write some queries to verify that this is true.
-
-Converting RDBS to Neo4j. Replace foreign keys with relationships.
-Covert join tables (many-to-many tables) to relationships with
-properties.
 
 Some other graph databases are
 
