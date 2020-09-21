@@ -13,6 +13,10 @@ properties.
 Installation
 ============
 
+Installing ndo4j desktop. Download from neo4j.com. Click the download
+button.  I downloaded neo4j-desktop-offline-1.3.4-x86_64.AppImage. Change
+the mode of the file to executable and run the program.
+
 To install neo4j we add neo4j.com to the list of active repositories
 and the use ``apt`` to install.  So run the following commands as root::
 
@@ -34,3 +38,14 @@ Install the Python neo4j module::
 
   pip install neo4j
 
+Questions
+=========
+
+These are some pending questions I have for neo4j.
+
+
+   #. What can I do with neo4j browser?
+
+   #. What is neo4j desktop?
+
+   #. What can I do with the Python driver?
