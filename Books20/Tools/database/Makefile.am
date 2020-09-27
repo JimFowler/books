@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Tools/sqlite/Makefile.am
+#  /home/jrf/Documents/books/Books20/Tools/database/Makefile.am
 #  
 #   Part of the Books20 Project
 #
