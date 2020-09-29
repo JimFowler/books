@@ -46,8 +46,8 @@ AC_OUTPUT(Makefile
       Tools/python/aabooks/journal/Makefile
       Tools/python/doc/Makefile
       Tools/python/scripts/Makefile
-      Tools/sqlite/Makefile
-      Tools/sqlite/doc/Makefile
+      Tools/database/Makefile
+      Tools/database/doc/Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile
       WebPages/Makefile
