@@ -9,7 +9,7 @@ intervening years; this document is the result.
 
 
 SQL or noSQL
-************
+============
 
 Should we use an SQL or a noSQL database?  Choices would most likely
 be between SQLite or mondoDB.  I like the SQL databases for the formal
@@ -29,7 +29,7 @@ database for relationship type data.  This may be an option
 
 
 SQL
-===
+___
 
 SQL database systems, e.g. mySQL or SQLite, are relational databases.
 The basic objects are tables and records which define relationship
@@ -39,8 +39,8 @@ of how the data is organized on the storage system. However, SQL can
 be difficult to work with if there are multiple tables that require
 multiple joings
 
-SQLite
-______
+SQLite3
+_______
 
 The system I am considering, SQLite, works well for low volume, low
 transaction rate databases. I expect the books database to contain no
@@ -91,9 +91,10 @@ Some other graph databases are
 * TerminusDB GPL3
 * Grakn Core  GNU
 * JanusGraph Apache 2 with Linux support
+* neo4j
 
 High Level Overview
-*******************
+===================
 
 Independent of the style of the database there are certain actions
 that any software system would have to support.  We need to be able to
@@ -113,7 +114,7 @@ May want to track queries in order to run analytics later on.
 
 
 Sample Queries
-**************
+==============
 
 To plan the database we need to define the expected queries
 that we might want to run.  This will have define what tables
@@ -123,13 +124,24 @@ are needed.
 
   Q2. Select all books by author/translator/person A or publisher P
 
+  Q3. How many books were published in topic A for year Y
+
+  Q4. What author/editor published the most books in year Y
   
 
 Development
 ***********
 
-As an initial test I have developed a strawman database using the
-informatino in the journals.xml files. There are about 230 journals
-with associated information as well as some publishers in this
-file.
+As an initial test I have developed two strawman databases. The first
+uses the information in the journals.xml files. There are about 230
+journals with associated information as well as some publishers in
+this file. I have already begun to create an SQLite3 database with
+this information but it is not complete nor have I fully defined all
+the procedures to implement CRUD.
 
+I am also using the Collection data (my personal book catalog) as a
+test data set that can be exprimented with.  This data was created in
+a Microsoft Access database (back in 1997) and is easily converted to
+CSV file format for import into another database.  I have already
+created an SQLite3 database with it but have not defined all the
+procedures to fully implement CRUD.
