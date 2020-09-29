@@ -56,9 +56,9 @@ build_docs: database
 # Examples from ../python/docs
 .PHONY: database
 database:
-	@echo "Building journals html documentation"
+	@echo "Building database html documentation"
 	${MAKE} -C database html
-	@echo "Building journals pdf documentation"
+	@echo "Building database pdf documentation"
 	${MAKE} -C database latexpdf
 
 
