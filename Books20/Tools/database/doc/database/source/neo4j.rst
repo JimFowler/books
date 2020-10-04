@@ -93,10 +93,20 @@ Nodes may be indexed on their properties
 The nodes may consist of the following labels,
 
   * :Series
+    unique id, name,
+    
   * :Book:MultiVolume
+    unique id, title, [series/volume number], edition, language
+    
   * :Person
+    unique id, first, middle, last, born, died
+    
   * :Corporate
+    name, mail/ship address, url, email
+    
   * :Journal
+    name, start, end
+    
   * :Review
   * :Project
   * :Bibliography - AJB, AAA, others?
