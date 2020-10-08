@@ -64,12 +64,12 @@ class EntryList(list):
 
     # pylint: disable=eval-used
     def __init__(self):
-        '''Intialize the generic metadata for the list and file.
+        '''Initialize the generic metadata for the list and file.
         sub-classes of EntryList may define their own metadata
         and/or ignore this metadata.
 
         '''
-        super(EntryList, self).__init__()
+        super().__init__()
 
         # the first element is the header
         self.append('')
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
         def __init__(self, string=None):
             '''The event initializer.'''
-            super(MyEntry, self).__init__()
+            super().__init__()
             self.set_value(string)
 
         def is_valid(self):
