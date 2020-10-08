@@ -70,7 +70,7 @@ Known text codes and their matching XML tags are::
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
     't'  : 'Tables (Tabellen)',
-    'T'  : 'Tafeln (Plates), 
+    'T'  : 'Tafeln (Plates),
   }
 
 
