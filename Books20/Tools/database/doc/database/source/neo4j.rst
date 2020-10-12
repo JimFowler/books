@@ -19,8 +19,20 @@ _______
 Installing ndo4j desktop. Download from neo4j.com. Click the download
 button.  I downloaded
 neo4j-desktop-offline-1.3.4-x86_64.AppImage. Change the mode of the
-file to executable, create a soft link as ``neodesk`` and run the
+file to executable, create a soft link as ``neodesk``, and run the
 program.
+
+Files are imported from
+
+~/.local/share/neo4j-relate/dbmss/dbms-<long number>/import
+
+Cypher files are located
+
+~/.config/Neo4j Desktop/Application/projects/project-<long number>
+
+Why the database locations are scattered about my home directory
+is still unclear.
+
 
 Server
 ______
@@ -40,7 +52,9 @@ To start the database server run the following as root::
   sudo service neo4j start
 
 Connect to the neo4j brower service at `localhost:7474
-<http://localhost:7474/browser/>`_.
+<http://localhost:7474/browser/>`_.  The authentication
+is neo4j:neo4jadmin.
+
 
 Install the Python neo4j module::
 
@@ -82,81 +96,11 @@ Gephi, https://github.com/tinkerpop
 
 Oracles Graph Blog  https://blogs.oracle.com/bigdataspatialgraph
 
-Design
-======
+Plugins
+=======
 
-Nodes
-_____
+NeoSemantixs and RDF see https://neo4j.com/labs/nsmtx-rdf
+this is a plugin that enables the use of RDF in Neo4j. Enables
+import and export of RDF data
 
-Nodes may be indexed on their properties
 
-The nodes may consist of the following labels,
-
-  * :Series
-    unique id, name,
-    
-  * :Book:MultiVolume
-    unique id, title, [series/volume number], edition, language
-    
-  * :Person
-    unique id, first, middle, last, born, died
-    
-  * :Corporate
-    name, mail/ship address, url, email
-    
-  * :Journal
-    name, start, end
-    
-  * :Review
-  * :Project
-  * :Bibliography - AJB, AAA, others?
-  * :Year, :Month, :Day
-
-    * properties: value, month_name, month_number
-
-  * something for the AJB/AAA counts
-
-Relationships
-_____________
-
-Remember that relationship can not be indexed. For faster searches
-we should keep relationship properties to a minimum if we plan to make
-decisions based on those properties.
-
-The relationships may consist of,
-
-  * :Book to :MultiVolume
-
-    * :PART_OF {volume: n{
-      
-  * :Book to :Book
-    
-    * :EDITION_OF {edition: n}
-	
-    * :REPRINT_OF
-    * :TRANSLATION_OF
-
-  * :Book to :Person
-    
-    * :AUTHOR {authorNumber: n}	
-    * :EDITOR {editorNumber: n}
-    * :TRANSLATOR {translatorNumber: n}
-    * :COMPILER {compilerNumber: n}
-    * :CONTRIBUTER {contributorNumber: n}
-    * :ILLUSTRATOR {illustratorNumber: n}
-
-  * :Book to :Corporate
-    
-    * all of the book-to-people relations
-    * :PRINTED_BY
-    * :PUBLISHED_BY
-
-      * properties: copyright:
-	
-    * :PURCHASED_FROM {purchaseYear:, purchasePrice:}
-	
-  * :Review
-    
-    * :OF_BOOK -> (:Book)
-    * :IN_JOURNAL -> (:Journal {issue: n, page: m}
-    * :REVIEWED_BY -> (:Person)

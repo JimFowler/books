@@ -1,18 +1,19 @@
 Graph Databases
 ***************
 
-Introduction
-============
-
 Notes from the on-line classes from Neo4j at
 https://Neo4j/graphacademy
 
-Graphs are uniquely useful when answering a questions that involves
+
+Introduction
+============
+
+Graphs are uniquely useful when answering questions that involves
 following a path along a chain of items.
 
 Mathematically, graphs consist of Vertices and Edges. A vertex (or
-node) is defined mathematically as place where two or more edges some
-together.
+node) is defined mathematically as place where two or more edges
+(relationships) come together.
 
 Neo4j graphs consist of ``Node`` and ``Relationship``. It is possible
 to have nodes without relationships but you can not have relationships
@@ -118,7 +119,7 @@ Cypher style recommendations
   * create nodes first, then create relationships
 
 Filters on Queries
-==================
+__________________
 
 One can use WHERE to filter on properties.  The common mathematical
 and Boolean functions are available as well as various string
@@ -129,14 +130,14 @@ not be used resulting in longer searches.
 Note that a property may be a list.
 
 Working with Patterns in Queries
-================================
+________________________________
 
 
 Working with Cypher Data
-========================
+________________________
 
 Controlling the Query Chain
-===========================
+___________________________
 
 You can use WITH to select out variables in the first
 part of a query to use in the second part of the query or
@@ -144,14 +145,14 @@ in a second match query.
 
 
 Controlling Results Returned
-============================
+____________________________
 
 You can use DISTINCT in the RETURN or in a WITH clause so that rows
 with identical values will only be returned once.  ORDER_BY and LIMIT
 are also available and again can be used in the RETURN or WITH clause.
 
 Creating Nodes
-==============
+______________
 
 Can create or assign nodes with more than one label by using CREATE
 (:Movie:Action {title: 'Batman Begins'}). You can add a label later
@@ -167,7 +168,7 @@ Once a property key exists it remains in the graph even if no nodes
 have that property key
 
 Creating Relationship
-=====================
+_____________________
 
 Create a relationship as::
 
@@ -192,7 +193,7 @@ direction when MERGE creates a new relationship.
 
 
 Deleting Nodes and Relationships
-================================
+________________________________
 
 Must delete all relationship linked to a node before deleting
 the node.  Use
@@ -200,15 +201,15 @@ the node.  Use
 DETACH DELETE (n) to clear links and delete node.
 
 Merging Data
-============
+____________
 
 Best practice when using MERGE is to specify only properties
 that have unique values or constraints.
 
 MERGE will automatically create nodes and relationship
-if it can not find matching nodes and relationships.  So, then,
+if it can not find matching nodes and relationships.  So, then,::
 
-MERGE (m:LABEL {prop: x})-[]->()
+  MERGE (m:LABEL {prop: x})-[]->()
 
 finds only the nodes that have only the property 'prop'. If your node
 has additional properties it will not find those nodes.  Best practice is
@@ -226,7 +227,7 @@ A case statement may be used for SET or RETURN::
   END
 
 Defining Constraints for your Data
-==================================
+__________________________________
 
 Cypher allows you to define
 
@@ -262,7 +263,7 @@ To create combined contra int or node key::
  A node key is also used as a composite index on the Label node.
 
 Using Indexes
-=============
+_____________
 
 Constraints and node keys are single property and conposite indexes
 respectively.
@@ -323,3 +324,176 @@ but for a full-text schema index use the procedure::
 
   CALL db.index.fulltext.drop('IndexName')
 
+Using Query Best Practices
+__________________________
+
+One can set parameters that may be used in queries as::
+
+  :params actorName => 'Tom Hanks' or
+  :params {actorName:'Tom Hanks', movieName:'Top Gun'}
+
+and referenced as ``$actorName``.  The later command replaces
+the entire parameter set.  Clear all parameters with::
+
+  :params {}
+
+or a single parameter but giving the list of parameters with
+out the one deleted.
+
+In order to build a good graph and to write efficient queries
+use ``EXPLAIN`` and ``PROFILE`` to examine the action of the
+database when executing the query.
+
+A good graph model and query minimizes the number of rows
+processed. Cypher queries may take a long time  becuase the
+query takes a long time to create the result string or to execute
+in the graph engine. Queries can be monitored with::
+
+  :queries
+
+but this in only available in the Enterprise edition of Neo4j.
+Long running queries can be kill by
+
+  * opening another brower and running ``:queries``,
+    use the kill button next to the query
+  * by closing the result pane in the query brower
+  * by closing the query browser
+
+Using LOAD CSV for Import
+_________________________
+
+To load data from a csv file into Neo4j, there are a number
+of steps that need to take place.
+
+  1. Determine how the CSV file will be structured
+  2. Determine if normalized or denormalized data are used
+  3. Ensure that the data IDs to be used are unique
+  4. Ensure data in CSV file is clean
+  5. Execute Cypher code to inspect the data
+  6. Determine if the data needs to be transformed
+  7. If required, encusre constraints are created in the graph
+  8. Determine the size of the data to be loaded
+  9. Executre Cypher code to load data
+  10. Add indexes to the graph
+
+The command is::
+
+  LOAD CSV WITH HEADERS FROM 'uri' as row...
+
+where ``url`` is either is either ``http://`` for a file on the
+Internet or ``file:///`` for a CSV file relative to the ``import``
+directory. LOAD CSV has a limit of 100K rows.
+
+
+Graph Data Modeling
+===================
+
+Neo4j is a property graph database.  Applicatinos retrieve
+data by traversing the graph. The model consists of
+
+  * nodes
+  * relationships
+  * properties - provide specific values to nodes or relationships
+  * labels - used to catagorize a set of nodes
+
+Traversal means anchoring at a node based on
+a specfic property values, then travesing the graph to satisfy
+the query.
+
+Arrow tool http://apcjones.com/arrows
+
+Workflow for graph data modeling
+
+  1. Build the intial graph data model
+  2. Create and profile Cypher queries to support the model
+  3. Create data in the database to support the model
+  4. Identify additional questions for the application
+  5. Modify the graph data model to support new questions
+  6. Refactor the database to support the revised graph data model
+  7. Create and profile the Cypher queries to support the revised model
+  8. repeat steps 4--7
+
+Designing the initial data model
+
+  1. Understand the domain
+     a. describe the application in detail
+     b. identify the stakeholders and developers
+     c. Identify the users of the applications
+     d. enumerate the use cases
+  2. Create high-level sample data
+  3. Define specific questions for the application
+  4. Identify entities
+     a. defined properties to answer the application questions,
+	
+	(otherwise they are merely decoration). Properties are used to
+	identify anchors, traversing the graph, and returning
+	data. Decorators should be left out of the initial model.
+
+5. Identify connections between entities
+
+     Connections are the verbs in your application questions. Avoid
+     using noun for connection names.
+     
+  6. Test the questions against the entities
+  7. Test scalability
+
+     Identify how many of each node might occur. Use EXPLAIN
+     and PROFILE to examine queries
+
+Your model should address the uniqueness of nodes.  Nodes with lots of
+fan-outs are known as super-nodes and should be used with case.  They
+can cause difficulties in traversal if you traverse through a
+super-node and follow all the fan-outs
+
+Nodes should have a one or more properties that uniquely identify
+them. These properties may never be used in a query but they can
+differentiate between nodes.
+
+Use an intermediate node if you have a relationship that needs to
+connect to more than one node.  Or if you have sub-properties
+of a relationship property. Intermediate nodes can also be used to
+reduce fan-out.
+
+Relationship can be used as a link-list, e.g. NEXT or PREVIOUS
+relationships. Do not use doubly-linked lists, it is not necessary.
+
+Timeline trees are useful for date or interval searches.  Need unique
+identifiers for node however.
+
+If many nodes in the model have the same value for a property
+another solution is to use the propery value as a label.  Recall
+the nodes can have multiple labels.
+
+Implementing Graph Data Models
+==============================
+
+Profiling Queries
+_________________
+
+The workflow for profiling and examining queries is
+
+  1. Load data into the graph
+  2. Create queries that answer the application questions
+  3. Execute the quires against the data to see if they retrieve
+     the correct informtion
+  4. PROFILE the query execution
+  5. Identify problems and weaknesses in the query execution
+
+     a. Can the query be rewritten to perform better?
+     b. do we need to refactor the graph?
+
+  6. If necessary, modify the graph data model and refactor the graph
+  7. PROFILE the same type of query against the refactored data.
+
+     Note that the query may need to be rewritten due to changes
+     in the graph data model.
+
+Implementing Graph Date Models
+==============================
+
+Typically a refactor of a model will require additional nodes
+and relationship. These new nodes primarily pull data out of the
+node or relationship properties and put them in new nodes or '
+relationship. The goal is to optimize queries by finding anchor
+nodes quickly and not having to search the entire database
+multiple times for a query.
