@@ -1,480 +1,654 @@
-23|Albrecht|A.|Miguel|||
-24|Egret||Daniel|||
-25|Alexander|Francis O'Donel|Arthur|||
-26|Aller|H,|Lawrence|||
-27|Ames|S.|J|||
-29|Armitage||Angus|||
-30|Arp||Halton|||Known by his nickname Chip
-31|Batson|M.|R.|||
-32|Bridges|M.|Patricia|||
-33|Inge|L.|Jay|||
-34|Batten|H.|Alan|||
-35|Bell||Louis|||
-36|Binney||James|||
-37|Tremaine||Scott|||
-38|Brashear||John|||
-39|Scaife|Lucien|W.|||
-40|Bruck|Alexander|Hermann|||
-41|Bruck|T.|Mary|||
-42|Burbidge||Geoffrey|||
-43|Burbidge||Margaret|||
-44|Burnham|W.|Shelly|||
-45|Burton|B.|W.|||
-46|Elmegreen|G.|Bruce|||
-47|Genzel||R.|||
-48|Buttman||Gunther|||
-49|Chandrasekhar||S.||1996-01-01|
-50|Christianson|E.|Gale|||
-51|Clerke|M.|Agnus|||
-52|Cox|P.|John|||
-53|Cutri|M.|Roc|||
-54|Latter|B.|William|||
-55|Dalgarno||A.|||
-56|Layzer||David|||
-57|De Morgan||Augustus|||
-58|Doazan||V.|||
-60|Sedmak||G.|||
-61|Barylak||M.|||
-62|Rusconi||L.|||
-63|Drake||Stillman|||
-64|Eddington|Stanley|Arthur|||
-65|Evans|S.|David|||
-66|Deeming|J.|Terence|||
-67|Evans|Hall|Betty|||
-68|Goldfarb||Stephen|||
-70|Mullholland|Derral|J.|||
-71|Farnsworth|Hall|Alice|||
-72|Flower||David|||
-73|Fogg|J.|Martyn|||
-74|Forbes|J.|Eric|||
-75|Frost|Brant|Edwin|||
-76|Stuve||Otto|||
-77|Elvey|T.|C.|||
-78|Garrison|F.|Robert|||
-79|Gascoigne|C. B.|S.|||
-80|Proust|M.|K.|||
-81|Robin|O.|M.|||
-82|Gingerich||Owen|||
-83|Glassgold|E.|A.|||
-84|Huggins|J.|P.|||
-85|Schucking|I.|E.|||
-86|Goldberg||Leo|||
-87|Griffen|F.|R.|||
-88|Hale|Ellery|George|||
-89|Ellerman||Francis|||
-90|Parkhurst|A.|J.|||
-91|Kent|A.|Norton|||
-92|Hanisch|J.|R.|||
-93|Brissenden|J. V.|R.|||
-95|Barnes||J.|||
-96|Haramundanis||Katherine|||Daughter of Cecilia Payne-Gaposchkin
-98|Hargrove|C.|Eugene|||
-99|Harrison|R.|George|||
-100|Hearnshaw|B.|J.|||
-102|Herbig|H.|George|||
-103|Henry|C.|Richard|||
-104|Landsman|B.|Wayne|||
-105|Murthy||Jayant|||
-106|Tennyson|D.|Peter|||
-107|Wofford|B.|James|||
-108|Wilson||Robert|||
-109|Herschel|F. W.|John|||Sir John Herschel
-110|Herzberg||Gerhard|||
-111|Spinks|W. T.|J.|||
-112|Hey|S.|J.|||
-113|Hollenback|J.|D.|||
-114|Thronson|A.|Harley|||
-115|Houk||Nancy|||
-116|Newberry|V.|Michael|||
-118|Irvine|J.|Nelson|||
-119|Rosenbush||David|||
-120|Howse||Derek|||
-121|Hoyt|Graves|William|||
-122|Hubble||Edwin|||
-123|Huggins||William|||Sir William Huggins
-124|Huggins||Lady|||Wife of Sir William Huggins
-125|Jacob|H.|Donald|||
-126|Jaschek||Carlos|||
-127|Murtagh||Fionn|||
-128|Jaschek||Mercedes|||
-129|Jeans|H.|James|||Sir James H. Jeans
-130|Jones|Z.|B.|||
-131|Boyd|G.|L.|||
-132|Jones|Zaban|Bessie|||
-133|Kaler|B.|James|||
-134|Kenney|A.|Louis|||
-135|Kirchoff||Gustav|||
-136|Kopal||Zdenek|||
-137|Koppes|R.|Clayton|||
-138|Kurucz|L.|Robert|||
-139|Furnelid||Ingemar|||
-140|Brault||James|||
-141|Testerman||Larry|||
-142|Lamb||Horace|||
-143|Levy|H.|David|||
-144|Lockyer|Norman|J.|||
-145|Lovell||Bernard|||
-146|Lovelock||James|||
-147|Allaby||Michael|||
-148|Maffeo||Sabino|||Society of Jesus
-149|Coyne|V.|George|||Society of Jesus
-150|Malina|F.|Roger|||
-151|Bowyer||Stuart|||
-152|Mascart|E.|M.|||
-153|McDougall|A.|Walter|||
-154|McGucken||William|||
-155|Mihalis||Dimitri|||
-156|Mihalis||Barbara|||
-157|Milne|A.|E.|||
-158|Morgan|W.|William|||
-159|Abt|A.|Helmut|||
-160|Tabscott|W.|J.|||Photographic assistant at Yerkes Observatory.
-161|Moulton|Ray|Frank|||
-162|Murdin||Lesley|||
-163|Murray|A.|C.|||
-164|Narrien||John|||
-166|Neugebauer||Otto|||
-167|Nininger|H.|Harvey|||
-168|Osterbrock|E.|Donald|||
-169|Gustafson|R.|J.|||
-170|Unruh|J. Shiloh|W.|||
-171|Pais||Abraham|||
-172|Payne|H.|Cecilia|||later Payne-Gaposhkin
-173|Peebles|James E.|P.|||
-174|Podobed|V.|V.|||
-175|Preston||Richard|||
-176|Proctor|A.|Richard|||
-177|Ritchy|W.|George|||
-178|Ronan|A.|Colin|||
-179|Roscoe|Enfield|Henry|||
-180|Rosseland||Svein|||
-181|Rowland|Augustus|Henry|||
-182|Russell|Norris|Henry|||
-183|Salet||P.|||
-184|Saward||Dudley|||
-185|Scheiner||J.|||
-186|Schellen||H.|||
-187|Lassell||Jane|||
-188|Lassell||Caroline|||
-189|Shapiro|L.|S.|||
-190|Teukolsky|A.|S.|||
-191|Shapley||Harlow|||
-192|Sheehan||William|||
-193|Shklovskii|S.|I.|||
-194|Sagan||Carl||1997-01-01|
-195|Smartt|Marshall|William|||
-196|Smith|W.|Robert|||
-197|Spitzer|J.|Lyman||1997-01-01|
-198|Stephenson||Bruce|||
-199|Sternberg||Shlomo|||
-200|Swerdlow||Noel|||
-201|Tassoul||Jean-Louis|||
-202|Terrell||Dirk|||
-203|Mukherjee|D.|J.|||
-204|Tombaugh|W.|Clyde||1997-01-01|
-205|Moore||Patrick|||
-206|Tucker|H.|Wallace|||
-207|Tuckerman||Alfred|||
-208|Tufte|Rolf|Edward|||
-209|Ulmer|P.|Melville|||
-210|van Helden||Albert|||
-211|Verschurr|L.|Gerrit|||
-212|Kellerman|I.|K.|||
-213|Wali||Kameshwar|||
-214|Webb|Ernest|George|||
-215|Wienberg||Steve|||
-216|Wilard|C.|Berton|||
-217|Wright||Helen|||
-218|Zombeck|V.|Martin|||
-219|Wilson|E.|R.|||
-220|Phillip|G. Davis|A.|||
-221|Hauck||Bernard|||
-222|Upgren|R.|Arthur|||
-223|Smoluchowski||Roman|||
-224|Bahcall|N.|John|||
-225|Matthews|Sharp|Mildred|||
-226|Tattersfield||D.|||
-227|Di Gesu||V.|||
-228|Scarsi||L.|||
-229|Crane||P.|||
-230|Craig|J. D.|Ian|||
-231|Brown|C.|John|||
-232|Kitchen|R.|C.|||
-233|Harwit||Martin|||
-234|Schroeder|J.|Daniel|||
-236|Couteau||Paul|||
-237|Battan||Alan|||
-238|Glasstone||Samuel|||
-239|Goldsmith||Donald|||
-240|Rothery|A.|David|||
-241|Chaisson|J.|Eric|||
-242|Hanbury Brown||R.|||
-243|Florence||Ronald|||
-244|Candler||C.|||
-245|Dufay||Jean|||
-246|Carr|H.|Michael|||
-247|Emerson||D.|||
-248|Doyle|Reeve|Laurance|||
-249|Wright|L.|Jerome|||
-250|Zubrin|M.|Robert|||
-251|Wagner|S,|Richard|1953-01-01||
-252|Stern||Alan|||
-253|Mitton||Jacqueline|||
-254|Lyman||Theodore|||
-255|Uhler|S|H|||
-256|Wood|Wilson|Robert|||
-257|Payne-Gaposchkin||Cecilia|||See also Cecilia Payne
-258|Gaposchkin||Sergei|||Husband of Cecilia Payne-Gaposchkin
-259|Watts|Marshall|W.|||D.Sc., Senior Physical Science Master in the Manchester Grammer School (1872)
-260|Living|D.|G.|||Fellow of St. John's College, Professor of Chemistry
-261|Dewar||J.|||Fellow of Peterhouse, Jacksonian Professor in the University of Cambridge
-262|Stoney|Johnstone|George|||
-263|Aitken|Grant|Robert|||
-264|Edmonson|K.|Frank|||
-265||||||Empty Record
-266|Hartree|R.|D.|1897-01-01|1958-01-01|F.R.S., Plummer Professor of mathematical physics at Cambridge University
-267|Sommerfeld||Arnold|1868-01-01|1951-01-01|
-268|Martin|R.|A.|||
-269|Schwarzshild||Martin|||
-270|Lieber|Rosanoff|Lillian|1886-01-01|1986-01-01|
-271|Lieber|Gray|Hugh|||Professor and Head of the Department of Fine Arts, Long Island University
-272|Manguel||Alberto|||
-273|Gordy||Walter|||Professor of Physics, Duke University
-274|Smith|V.|William|||Professor of Phsics, University of Delaware
-275|Trambarulo|F.|Ralph|||Assistant Professor of Physics, Pennsylvania State College
-276|McClure|M|Donald|||Radio Corporation of America Laboratories, Princeton New Jersey University of Chicago
-277|Baker|L|Gregory|||Bryn Athyn College of New Church, Pennsylvania
-278|Blackburn|A|James|||Willim laurier Univiersity Ontario, Canada
-279|van Cleempoel||Koenraad|||
-280|Jardetzky|S|Wenceslas|||Manhattan College and Columbia University, New York, NY
-281|Eckart||Andreas|||University of Cologne, Germany
-282|Shodel||Rainer|||University of Cologne, Germany
-283|Straubmeir||Christian|||University of Cologne, Germany
-284|Bertin||Giuseppe|||Professor of Physics, Scruola Normale Superiore, Pisa, Italy
-285|Lin|Ch'iao|Chia|1916-01-01||Professor Emeritus of Physics, MIT
-286|van den Bergh||Sidney|||Dominion Astrophysical Observatory
-287|Brown|B|Earle|||
-288|Warwick||Andrew|||
-289|Collins||Harry|||
-290|Cronin|W|James|||Professor of Physics, University of Chicago Nobel Prize Physics
-291|Stanley||Mattew|||Professor of History, Michigan State University
-292|Srinivasan||Ganasen|1942-01-01||
-293|Berry|Elton|Robert|||
-294|Westfall|S|Richard|||Professor of History, Indiana University
-295|Cohen|Bernard|I|1914-01-01||
-296|Sebring|A|Thomas|||
-297|Dirac|Adrien Maurice|Paul|1902-01-01||
-298|Bird||Kai|||
-299|Sherwin|J|Martin|||Professor of English and History Tufts University
-300|Alder||Ken|||Professor of History Northwestern University
-301|Standage||Tom|||
-302|McInnes|R|Colin|1968-01-01||
-303|Ramsey||JoAnne|||Wife of Harry Ramsey
-304|DeVorkin|H|David|||
-305|Bradbury||Ray|||
-306|Clarke|C|Arthur|||
-307|Murray||Bruce|||
-308|Sullivan||Walter|||
-309|Harrison|A|Albert|||
-310|Cowan|D|Robert|||
-311|Turner|L'e|Gerard|||
-312|Gardner||Martin|||
-313|Field||George|1929-01-01||Professor of Applied Astronomy, Harvard University
-314|Michel||Henri|||Academie Internationale d'Histoire des Sciendes
-315|Paschen||Friedrich|1865-01-01|1947-01-01|\"Probably the greatest experimental spectroscopist of his time\", DSB, X pp 345-349
-316|Gotze||R.|||
-317|Greenspan|Thordike|Nancy|||
-318|Lewis|Judd|S.|||
-319|Heppenheimer|A.|T.|||
-320|Travers|W|Morris|||
-321|Meadows|J.|A.|||
-322|Lockyer|Mary|T.|||
-323|Lockyer|L.|Winifred|||
-324|Draper|William|John|||
-325|Buchwald|Z.|Jed|||
-326|Secchi|A|P|1818-01-01|1878-01-01|
-327|Faraday||Michael|||
-328|Mutch|A|Thomas|||
-329|Arvidson|E|Raymond|||
-330|Head|W|James|||
-331|Head|W|James|||
-332|Jones|L|Kenneth|||
-333|Saunders|Stephen|R|||
-334|Sidgreaves||Walter|||S.J, F.R.A.S,
-335|Drake||Frank|||
-336|Sobel||Dava|||
-337|Shostak||Seth|||
-338|Billingham||John|||
-339|Smyth|Piazzi|Charles|1819-01-01|1900-01-01|Astronomer Royal for Scotland 1845-1888
-340|Miller|I|Arthur|||Professor of the History and Philosophy of Science, Unversity College London
-341|Glass|S|I|||
-342|Goodchild||Peter|||
-343|Seabrook||William|1886-01-01||
-344|Warnow|N|Joan|||
-345|Weiner||Charles|||
-346|Schmidt||Stanley|||
-347|Hardy|W|John|||
-348|Evans||Nancy|||
-349|Thackeray|D.|A.|||
-350|Hill||Edward|||
-351|Young|A|C|||
-352|Longair|S|Malcom|||
-353|Hartmann||Dap|||
-354|Levine|N|Ira|||
-355|Green|M|Robin|||
-356|Morton||Oliver|||
-357|Munitz|K|Milton|||
-358|Fison|H|Alfred|||
-359|Dauvillier||A.|||Professor, College de France, Pic-du-Midi Observatory
-360|Kemp|A.|D.|||Department of Librarianship, Newcastle-upon-Tyne Polytechnic previously Librarian, Royal Observatory, Edinburgh
-361|Reisch|A|George|1962-01-01||
-362|Luther||Paul|||
-363|Kohlstedt|Gregory|Sally|1943-01-01||
-364|Zuckerman||Harriet|||Associate Professor of Sociology at Columbia University.
-365|Montgomery|L|Scott|||
-366|Bartusiak||Marcia|||Teaches in the graduate program in science writing at MIT. Two time winner of the AIP Science Writing Award.
-367|Mitchell|G|Mark|||Children's author
-368|Opik|J|Ernst|||Armagh Observatory, Armagh, Nothern Ireland.  The last name should have an umlaut over the 'O'
-369|Zimmerman||Robert|||
-370|Barrow|D|John|||Professor of Mathematical Sciences, Cambridge University
-371|Mitton||Simon|1946-01-01||
-372|Kronick|A|David|||
-373|Duley|W|W|||
-374|Williams|A|D|||
-375|Jeffries|D|C|||
-376|Lee|L.|Raymond|||
-377|Fraser|B|Alistair|||
-378|Hack||Margherita|||
-379|Genet|M|Russell|||
-380|Johnson|M|Jolyon|||
-381|Wallen||Vera|||
-382|Finkbeiner|K|Ann|||
-384|Andersen||Geoff|||
-385|Pyne|J|Steven|||
-386|Cokinos||Christopher|||
-387|Hayes|S|Donald|||
-388|Hall|S|Douglas|||
-389|Genet|R|David|||
-390|Spangenburg||Ray|||
-392|Moser||Kit|||
-393|Strom|G|Robert|||
-394|Wilhelms|E|Don|||
-395|Aubin||David|||
-396|Bigg||Charlotte|||
-397|Sibum|Otto|H.|||
-398|Dunbar||David|||
-400|Cameron|G. W.|Alastair|1925-01-01||Born in Winnipeg, Manitoba. Obtained B.Sc.  From the University of Manitoba in 1947 and Ph.D. from University of Saskatchewan in 1952
-401|Chauvin||Michael|||
-402|Barnes|G.|Thomas|||Faculty University of Texas at Austin
-403|Tassoul||Monique|||
-404|McCray|Patrick|W|||
-405|Mather|C|John|||
-406|Boslough||John|||
-407|Harford||James|||
-409|Consolmagno||Guy|||Society of Jesus
-410|Coblentz|W|William|||
-411|Wood|Bradshaw|Frank|||
-412|Clark|H.|David|||
-413|Smoot||George|||
-414|Chance||Jane|1945-01-01||
-415|Wells|O'Neill|Raymond|1940-01-01||Should have Jr. on the name
-416|Lorenz||Ralph|||
-418|McKinley|W. R.|D|||
-419|Chabas||Jose|||
-420|Goldstein|R.|Barnard|||
-421|Webb|L.|W|||
-422|Johnston||Marjorie|||
-423|Williams|R.|Thomas|||
-424|Saladyga||Michael|||
-425|Sanders|H|Robert|||
-426|Sullivan|T.|Woodruff|||Woodruff T. Sullivan III
-427|Buckley||David|||
-428|Lombard||Marguerite|||
-429|Lomberg||Mike|||
-430|Mering||Kobus|||
-431|Theron||Roelien|||
-432|Perryman||Michael|||
-433|Shaviv||Giora|||
-434|Doel|E.|Ronald|||
-435|Dick|J|Steve|||
-436|Brandt|C|John|||
-437|Niedner, Jr.|B|Malcolm|||
-438|Rahe||Jurgen|||
-439|Black|C|David|||
-440|Levy|H|Eugene|||
-441|Lunine|I|Jonathan|||
-442|Hansen|J|Carl|||
-443|Kawaler|D|Steven|||
-444|Fiala|D|Alan|||
-445|Kondo||Yoji|||
-446|Maunder|Walter|E|||
-447|Hoffleit||Dorrit|||
-448|Donn||B|||
-449|Mumma||M|||
-450|Jackson||W|||
-451|A'Hearn||M|||
-452|Harrington||R|||
-453|Swensson|W|J|||
-454|Benedict|S|W|||
-455|Delbouille||L|||
-456|Roland||G|||
-457|Hiltner|A|William|||
-458|Proell||Wayne|||Editor Journal of Space Flight
-459|Bowman|J|Norman|||Editor Rocket Abstracts
-460|Brouwer||Dirk|||Director of the Observatory at Yale University
-461|Clemence|M|Gerald|||Scientific Director of the United States Navel Observatory
-462|Bowditch||Nathaniel|||
-463|Pannekoek||A|||
-464|Kuiper|P|Gerald|||
-465|Woolfson||Michael|||
-466|Croswell||Ken|||
-467|Vakoch|A.|Douglas|||
-468|Poundstone||William|||
-469|Nourse|E|Alan|||
-470|Steinicke||Wolfgang|||
-471|Zwicky||Fritz|||
-472|Filchner||Wilhelm|||
-473|Przybyllok||Erich|||
-474|Hagen||Toni|||
-475|Struve||Otto|1897-08-08|1963-04-06|Director of Yerkes and McDonald Observatories
-476|Lambert|L|David|||
-477|Clarke||David|||
-478|Wilson||Margaret|||
-479|Blackett|Maynard Stuart|Patrick|1897-11-18|1974-07-13|
-480|Morse|S|Edward|||
-481|Cohen|R.|E|||
-482|Crowe|M.|Kenneth|||
-483|Dumond|W. M.|Jesse|||
-484|Hynek|A.|J.|||
-485|MacPike|Fairfield|Eugene|||
-486|Compton|David|William|||
-487|Segre||Emilio|||
-488|Bohr||Niels|||
-489|Lowell||Percival|||
-490|Maciel|J|Walter|||
-491|Bertolotti||Mario|||
-492|van Altena|F.|William|||
-493|Wilcox||Arthur|||
-494|Montgomery|J. X.|D|||
-495|Wilkening|L|Laurel|||
-496|Becvar||Antonin|||
-497|Tirion||Wil|||
-498|Douglas|Vibert|A|||
-499|Cornell||James|||
-500|Lightman|P|Alan|||
-501|Massey|S. W.|H|||
-502|Boyd|L. F.|R.|||
-503|Steinberg|L|J|||
-504|Lequeux||J|||
-505|Pawsey|L|J|||
-506|Bracewell|N|R|||
-507|Roberts||Sibhan|||
-508|Gray||Jeremy|1947-01-01||
-510|McKready||Kevin|||Pen name for Edgar Gardner Murphy
-511|Burdick|Stanley|Bruce|||
-512|Hoyle||Fred|||
-513|Bernhard|J|Hubert|||
-514|Bennett|A|Dorothy|||
-515|Rice|S|Hugh|||
-516|Baker|H|Robert|||
-517|Newcomb||Simon|||
+23,"Albrecht","A.","Miguel",,,
+24,"Egret",,"Daniel",,,
+25,"Alexander","Francis O'Donel","Arthur",,,
+26,"Aller","H,","Lawrence",,,
+27,"Ames","S.","J",,,
+29,"Armitage",,"Angus",,,
+30,"Arp",,"Halton",,,"Known by his nickname Chip"
+31,"Batson","M.","R.",,,
+32,"Bridges","M.","Patricia",,,
+33,"Inge","L.","Jay",,,
+34,"Batten","H.","Alan",,,
+35,"Bell",,"Louis",,,
+36,"Binney",,"James",,,
+37,"Tremaine",,"Scott",,,
+38,"Brashear",,"John",,,
+39,"Scaife","Lucien","W.",,,
+40,"Bruck","Alexander","Hermann",,,
+41,"Bruck","T.","Mary",,,
+42,"Burbidge",,"Geoffrey",,,
+43,"Burbidge",,"Margaret",,,
+44,"Burnham","W.","Shelly",,,
+45,"Burton","B.","W.",,,
+46,"Elmegreen","G.","Bruce",,,
+47,"Genzel",,"R.",,,
+48,"Buttman",,"Gunther",,,
+49,"Chandrasekhar",,"S.",,1/1/1996 0:00:00,
+50,"Christianson","E.","Gale",,,
+51,"Clerke","M.","Agnus",,,
+52,"Cox","P.","John",,,
+53,"Cutri","M.","Roc",,,
+54,"Latter","B.","William",,,
+55,"Dalgarno",,"A.",,,
+56,"Layzer",,"David",,,
+57,"De Morgan",,"Augustus",,,
+58,"Doazan",,"V.",,,
+60,"Sedmak",,"G.",,,
+61,"Barylak",,"M.",,,
+62,"Rusconi",,"L.",,,
+63,"Drake",,"Stillman",,,
+64,"Eddington","Stanley","Arthur",,,
+65,"Evans","S.","David",,,
+66,"Deeming","J.","Terence",,,
+67,"Evans","Hall","Betty",,,
+68,"Goldfarb",,"Stephen",,,
+70,"Mullholland","Derral","J.",,,
+71,"Farnsworth","Hall","Alice",,,
+72,"Flower",,"David",,,
+73,"Fogg","J.","Martyn",,,
+74,"Forbes","J.","Eric",,,
+75,"Frost","Brant","Edwin",,,
+76,"Stuve",,"Otto",,,
+77,"Elvey","T.","C.",,,
+78,"Garrison","F.","Robert",,,
+79,"Gascoigne","C. B.","S.",,,
+80,"Proust","M.","K.",,,
+81,"Robin","O.","M.",,,
+82,"Gingerich",,"Owen",,,
+83,"Glassgold","E.","A.",,,
+84,"Huggins","J.","P.",,,
+85,"Schucking","I.","E.",,,
+86,"Goldberg",,"Leo",,,
+87,"Griffen","F.","R.",,,
+88,"Hale","Ellery","George",,,
+89,"Ellerman",,"Francis",,,
+90,"Parkhurst","A.","J.",,,
+91,"Kent","A.","Norton",,,
+92,"Hanisch","J.","R.",,,
+93,"Brissenden","J. V.","R.",,,
+95,"Barnes",,"J.",,,
+96,"Haramundanis",,"Katherine",,,"Daughter of Cecilia Payne-Gaposchkin"
+98,"Hargrove","C.","Eugene",,,
+99,"Harrison","R.","George",,,
+100,"Hearnshaw","B.","J.",,,
+102,"Herbig","H.","George",,,
+103,"Henry","C.","Richard",,,
+104,"Landsman","B.","Wayne",,,
+105,"Murthy",,"Jayant",,,
+106,"Tennyson","D.","Peter",,,
+107,"Wofford","B.","James",,,
+108,"Wilson",,"Robert",,,
+109,"Herschel","F. W.","John",,,"Sir John Herschel"
+110,"Herzberg",,"Gerhard",,,
+111,"Spinks","W. T.","J.",,,
+112,"Hey","S.","J.",,,
+113,"Hollenback","J.","D.",,,
+114,"Thronson","A.","Harley",,,
+115,"Houk",,"Nancy",,,
+116,"Newberry","V.","Michael",,,
+118,"Irvine","J.","Nelson",,,
+119,"Rosenbush",,"David",,,
+120,"Howse",,"Derek",,,
+121,"Hoyt","Graves","William",,,
+122,"Hubble",,"Edwin",,,
+123,"Huggins",,"William",,,"Sir William Huggins"
+124,"Huggins",,"Lady",,,"Wife of Sir William Huggins"
+125,"Jacob","H.","Donald",,,
+126,"Jaschek",,"Carlos",,,
+127,"Murtagh",,"Fionn",,,
+128,"Jaschek",,"Mercedes",,,
+129,"Jeans","H.","James",,,"Sir James H. Jeans"
+130,"Jones","Z.","B.",,,
+131,"Boyd","G.","L.",,,
+132,"Jones","Zaban","Bessie",,,
+133,"Kaler","B.","James",,,
+134,"Kenney","A.","Louis",,,
+135,"Kirchoff",,"Gustav",,,
+136,"Kopal",,"Zdenek",,,
+137,"Koppes","R.","Clayton",,,
+138,"Kurucz","L.
+L.","Robert",,,
+139,"Furnelid",,"Ingemar",,,
+140,"Brault",,"James",,,
+141,"Testerman",,"Larry",,,
+142,"Lamb",,"Horace",,,
+143,"Levy","H.","David",,,
+144,"Lockyer","Norman","J.",,,
+145,"Lovell",,"Bernard",,,
+146,"Lovelock",,"James",,,
+147,"Allaby",,"Michael",,,
+148,"Maffeo",,"Sabino",,,"Society of Jesus"
+149,"Coyne","V.","George",,,"Society of Jesus"
+150,"Malina","F.","Roger",,,
+151,"Bowyer",,"Stuart",,,
+152,"Mascart","E.","M.",,,
+153,"McDougall","A.","Walter",,,
+154,"McGucken",,"William",,,
+155,"Mihalis",,"Dimitri",,,
+156,"Mihalis",,"Barbara",,,
+157,"Milne","A.","E.",,,
+158,"Morgan","W.","William",,,
+159,"Abt","A.","Helmut",,,
+160,"Tabscott","W.","J.",,,"Photographic assistant at Yerkes Observatory."
+161,"Moulton","Ray","Forest",,,
+162,"Murdin",,"Lesley",,,
+163,"Murray","A.","C.",,,
+164,"Narrien",,"John",,,
+166,"Neugebauer",,"Otto",,,
+167,"Nininger","H.","Harvey",,,
+168,"Osterbrock","E.","Donald",,,
+169,"Gustafson","R.","J.",,,
+170,"Unruh","J. Shiloh","W.",,,
+171,"Pais",,"Abraham",,,
+172,"Payne","H.","Cecilia",,,"later Payne-Gaposhkin"
+173,"Peebles","James E.","P.",,,
+174,"Podobed","V.","V.",,,
+175,"Preston",,"Richard",,,
+176,"Proctor","A.","Richard",,,
+177,"Ritchy","W.","George",,,
+178,"Ronan","A.","Colin",,,
+179,"Roscoe","Enfield","Henry",,,
+180,"Rosseland",,"Svein",,,
+181,"Rowland","Augustus","Henry",,,
+182,"Russell","Norris","Henry",,,
+183,"Salet",,"P.",,,
+184,"Saward",,"Dudley",,,
+185,"Scheiner",,"J.",,,
+186,"Schellen",,"H.",,,
+187,"Lassell",,"Jane",,,
+188,"Lassell",,"Caroline",,,
+189,"Shapiro","L.","S.",,,
+190,"Teukolsky","A.","S.",,,
+191,"Shapley",,"Harlow",,,
+192,"Sheehan",,"William",,,
+193,"Shklovskii","Samuilovich","Iosif",1/1/1917 0:00:00,,"also spelled Shklovsky"
+194,"Sagan",,"Carl",,1/1/1997 0:00:00,
+195,"Smartt","Marshall","William",,,
+196,"Smith","W.","Robert",,,
+197,"Spitzer","J.","Lyman",,1/1/1997 0:00:00,
+198,"Stephenson",,"Bruce",,,
+199,"Sternberg",,"Shlomo",,,
+200,"Swerdlow",,"Noel",,,
+201,"Tassoul",,"Jean-Louis",,,
+202,"Terrell",,"Dirk",,,
+203,"Mukherjee","D.","J.",,,
+204,"Tombaugh","W.","Clyde",,1/1/1997 0:00:00,
+205,"Moore",,"Patrick",,,
+206,"Tucker","H.","Wallace",,,
+207,"Tuckerman",,"Alfred",,,
+208,"Tufte","Rolf","Edward",,,
+209,"Ulmer","P.","Melville",,,
+210,"van Helden",,"Albert",,,
+211,"Verschurr","L.","Gerrit",,,
+212,"Kellerman","I.","K.",,,
+213,"Wali",,"Kameshwar",,,
+214,"Webb","Ernest","George",,,
+215,"Wienberg",,"Steve",,,
+216,"Wilard","C.","Berton",,,
+217,"Wright",,"Helen",,,
+218,"Zombeck","V.","Martin",,,
+219,"Wilson","E.","R.",,,
+220,"Phillip","G. Davis","A.",,,
+221,"Hauck",,"Bernard",,,
+222,"Upgren","R.","Arthur",,,
+223,"Smoluchowski",,"Roman",,,
+224,"Bahcall","N.","John",,,
+225,"Matthews","Sharp","Mildred",,,
+226,"Tattersfield",,"D.",,,
+227,"Di Gesu",,"V.",,,
+228,"Scarsi",,"L.",,,
+229,"Crane",,"P.",,,
+230,"Craig","J. D.","Ian",,,
+231,"Brown","C.","John",,,
+232,"Kitchen","R.","C.",,,
+233,"Harwit",,"Martin",,,
+234,"Schroeder","J.","Daniel",,,
+236,"Couteau",,"Paul",,,
+237,"Battan",,"Alan",,,
+238,"Glasstone",,"Samuel",,,
+239,"Goldsmith",,"Donald",,,
+240,"Rothery","A.","David",,,
+241,"Chaisson","J.","Eric",,,
+242,"Hanbury Brown",,"R.",,,
+243,"Florence",,"Ronald",,,
+244,"Candler",,"C.",,,
+245,"Dufay",,"Jean",,,
+246,"Carr","H.","Michael",,,
+247,"Emerson",,"D.",,,
+248,"Doyle","Reeve","Laurance",,,
+249,"Wright","L.","Jerome",,,
+250,"Zubrin","M.","Robert",,,
+251,"Wagner","S,","Richard",1/1/1953 0:00:00,,
+252,"Stern",,"Alan",,,
+253,"Mitton",,"Jacqueline",,,
+254,"Lyman",,"Theodore",,,
+255,"Uhler","S","H",,,
+256,"Wood","Wilson","Robert",,,
+257,"Payne-Gaposchkin",,"Cecilia",,,"See also Cecilia Payne"
+258,"Gaposchkin",,"Sergei",,,"Husband of Cecilia Payne-Gaposchkin"
+259,"Watts","Marshall","W.",,,"D.Sc., Senior Physical Science Master in the Manchester Grammer School (1872)"
+260,"Living","D.","G.",,,"Fellow of St. John's College, Professor of Chemistry"
+261,"Dewar",,"J.",,,"Fellow of Peterhouse, Jacksonian Professor in the University of Cambridge"
+262,"Stoney","Johnstone","George",,,
+263,"Aitken","Grant","Robert",,,
+264,"Edmonson","K.","Frank",,,
+265,,,,,,"Empty Record"
+266,"Hartree","R.","D.",1/1/1897 0:00:00,1/1/1958 0:00:00,"F.R.S., Plummer Professor of mathematical physics at Cambridge University"
+267,"Sommerfeld",,"Arnold",1/1/1868 0:00:00,1/1/1951 0:00:00,
+268,"Martin","R.","A.",,,
+269,"Schwarzshild",,"Martin",,,
+270,"Lieber","Rosanoff","Lillian",1/1/1886 0:00:00,1/1/1986 0:00:00,"Professor and Head of the Department of Mathmatics, Long Island University, retired 1950
+See also the Wikpedia entry and
+http://www34.homepage.villanova.edu/robert.jantzen/lieber/
+
+Parents: one of four children of Clara and Abraham Rosanoff
+Brothers: Martin Andre (chemist) and Aaron Joshua (psychiatrist)
+
+    * 1931 Non-euclidean Geometry, Academy Press.
+
+    * 1932 Galois and the Theory of Groups, Science Press Printing Company, Lancaster, Pa.
+
+    * 1936 The Einstein Theory of Relativity, Science Press Printing Co., Lancaster, PA.
+
+    * 1940 Non-euclidean Geometry: Three Moons in Mathesis, Science Press Printing Co., Lancaster, PA.
+
+    * 1942 The Education of T. C. MITS, The Galois Institute Press, Long island University.
+
+    * 1944 The Education of T. C. MITS, W. W. Norton & Co., NY, (Revjsed & Enlarged edition)
+
+    * 1945 The Einstein theory of Relativity, Farrar & Rinehart, NY. (Part I of this edition is the same material published in 1936. Part II was new in this edition.
+
+    * 1946 Modern Mathematics for T. C. Mits, The Celebrated Man in the Street, G. Allen & Unwin Ltd, London, 1st London Edition.
+
+    * 1946 Take a Number: Mathematics for the Two Billion, The Jacques Cattell Press, Lancaster, PA.
+
+    * 1947 Mits, Wits and Logic, (1st Edition) W.W. Norton, NY.
+
+    * 1949 The Einstein Theory of Relativity, D. Dobson, London.
+
+    * 1953 Infinity Rinehart, NY.
+
+    * 1954 Mits, Wits, and Logic, (Revised Edition) Galois Institute Press, Brooklyn.
+
+    * 1959 Lattice Theory; the Atomic Age in Mathematics, Galois Institute of Mathematics and Art, Brooklyn, NY.
+
+    * 1960 Mits, Wits, and Logic, (3d Edition) W. W. Norton, NY.
+
+    * 1961 Human Values and Science, Art and Mathematics, (1st Edition) W. W. Norton, NY.
+
+    * 1963 Mathematics: First S-t-e-p-s, F. Watts, NY."
+271,"Lieber","Gray","Hugh",,,"Professor and Head of the Department of Fine Arts, Long Island University"
+272,"Manguel",,"Alberto",,,
+273,"Gordy",,"Walter",,,"Professor of Physics, Duke University"
+274,"Smith","V.","William",,,"Professor of Phsics, University of Delaware"
+275,"Trambarulo","F.","Ralph",,,"Assistant Professor of Physics, Pennsylvania State College"
+276,"McClure","M","Donald",,,"Radio Corporation of America Laboratories, Princeton New Jersey
+University of Chicago"
+277,"Baker","L","Gregory",,,"Bryn Athyn College of New Church, Pennsylvania"
+278,"Blackburn","A","James",,,"Willim laurier Univiersity Ontario, Canada"
+279,"van Cleempoel",,"Koenraad",,,
+280,"Jardetzky","S","Wenceslas",,,"Manhattan College and Columbia University, New York, NY"
+281,"Eckart",,"Andreas",,,"University of Cologne, Germany"
+282,"Shodel",,"Rainer",,,"University of Cologne, Germany"
+283,"Straubmeir",,"Christian",,,"University of Cologne, Germany"
+284,"Bertin",,"Giuseppe",,,"Professor of Physics, Scruola Normale Superiore, Pisa, Italy"
+285,"Lin","Ch'iao","Chia",1/1/1916 0:00:00,,"Professor Emeritus of Physics, MIT"
+286,"van den Bergh",,"Sidney",,,"Dominion Astrophysical Observatory"
+287,"Brown","B","Earle",,,
+288,"Warwick",,"Andrew",,,
+289,"Collins",,"Harry",,,
+290,"Cronin","W","James",,,"Professor of Physics, University of Chicago
+Nodel Prize Physics"
+291,"Stanley",,"Mattew",,,"Professor of History, Michigan State University"
+292,"Srinivasan",,"Ganasen",1/1/1942 0:00:00,,
+293,"Berry","Elton","Robert",,,
+294,"Westfall","S","Richard",,,"Professor of History, Indiana University"
+295,"Cohen","Bernard","I",1/1/1914 0:00:00,,
+296,"Sebring","A","Thomas",,,
+297,"Dirac","Adrien Maurice","Paul",1/1/1902 0:00:00,,
+298,"Bird",,"Kai",,,
+299,"Sherwin","J","Martin",,,"Professor of English and History Tufts University"
+300,"Alder",,"Ken",,,"Professor of History Northwestern University"
+301,"Standage",,"Tom",,,
+302,"McInnes","R","Colin",1/1/1968 0:00:00,,
+303,"Ramsey",,"JoAnne",,,"Wife of Harry Ramsey"
+304,"DeVorkin","H","David",,,
+305,"Bradbury",,"Ray",,,
+306,"Clarke","C","Arthur",,,
+307,"Murray",,"Bruce",,,
+308,"Sullivan",,"Walter",,,
+309,"Harrison","A","Albert",,,
+310,"Cowan","D","Robert",,,
+311,"Turner","L'e","Gerard",,,
+312,"Gardner",,"Martin",,,
+313,"Field",,"George",1/1/1929 0:00:00,,"Professor of Applied Astronomy, Harvard University"
+314,"Michel",,"Henri",,,"Academie Internationale d'Histoire des Sciendes"
+315,"Paschen",,"Friedrich",1/1/1865 0:00:00,1/1/1947 0:00:00,"""Probably the greatest experimental spectroscopist of his time"", DSB, X pp 345-349"
+316,"Gotze",,"R.",,,
+317,"Greenspan","Thordike","Nancy",,,
+318,"Lewis","Judd","S.",,,
+319,"Heppenheimer","A.","T.",,,
+320,"Travers","W","Morris",,,
+321,"Meadows","J.","A.",,,
+322,"Lockyer","Mary","T.",,,
+323,"Lockyer","L.","Winifred",,,
+324,"Draper","William","John",,,
+325,"Buchwald","Z.","Jed",,,
+326,"Secchi","A","P",1/1/1818 0:00:00,1/1/1878 0:00:00,
+327,"Faraday",,"Michael",,,
+328,"Mutch","A","Thomas",,,
+329,"Arvidson","E","Raymond",,,
+330,"Head","W","James",,,
+331,"Head","W","James",,,
+332,"Jones","L","Kenneth",,,
+333,"Saunders","Stephen","R",,,
+334,"Sidgreaves",,"Walter",,,"S.J, F.R.A.S,"
+335,"Drake",,"Frank",,,
+336,"Sobel",,"Dava",,,
+337,"Shostak",,"Seth",,,
+338,"Billingham",,"John",,,
+339,"Smyth","Piazzi","Charles",1/1/1819 0:00:00,1/1/1900 0:00:00,"Astronomer Royal for Scotland 1845-1888"
+340,"Miller","I","Arthur",,,"Professor of the History and Philosophy of Science, Unversity College London"
+341,"Glass","S","I",,,
+342,"Goodchild",,"Peter",,,
+343,"Seabrook",,"William",1/1/1886 0:00:00,,
+344,"Warnow","N","Joan",,,
+345,"Weiner",,"Charles",,,
+346,"Schmidt",,"Stanley",,,
+347,"Hardy","W","John",,,
+348,"Evans",,"Nancy",,,
+349,"Thackeray","D.","A.",,,
+350,"Hill",,"Edward",,,
+351,"Young","A","C",,,
+352,"Longair","S","Malcom",,,
+353,"Hartmann",,"Dap",,,
+354,"Levine","N","Ira",,,
+355,"Green","M","Robin",,,
+356,"Morton",,"Oliver",,,
+357,"Munitz","K","Milton",,,
+358,"Fison","H","Alfred",,,
+359,"Dauvillier",,"A.",,,"Professor, College de France, Pic-du-Midi Observatory"
+360,"Kemp","A.","D.",,,"Department of Librarianship, Newcastle-upon-Tyne Polytechnic
+previously Librarian, Royal Observatory, Edinburgh"
+361,"Reisch","A","George",1/1/1962 0:00:00,,
+362,"Luther",,"Paul",,,
+363,"Kohlstedt","Gregory","Sally",1/1/1943 0:00:00,,
+364,"Zuckerman",,"Harriet",,,"Associate Professor of Sociology at Columbia University."
+365,"Montgomery","L","Scott",,,
+366,"Bartusiak",,"Marcia",,,"Teaches in the graduate program in science writing at MIT. Two time winner of the AIP Science Writing Award."
+367,"Mitchell","G","Mark",,,"Children's author"
+368,"Opik","J","Ernst",,,"Armagh Observatory, Armagh, Nothern Ireland.  The last name should have an umlaut over the 'O'"
+369,"Zimmerman",,"Robert",,,
+370,"Barrow","D","John",,,"Professor of Mathematical Sciences, Cambridge University"
+371,"Mitton",,"Simon",1/1/1946 0:00:00,,
+372,"Kronick","A","David",,,
+373,"Duley","W","W",,,
+374,"Williams","A","D",,,
+375,"Jeffries","D","C",,,
+376,"Lee","L.","Raymond",,,
+377,"Fraser","B","Alistair",,,
+378,"Hack",,"Margherita",,,
+379,"Genet","M","Russell",,,
+380,"Johnson","M","Jolyon",,,
+381,"Wallen",,"Vera",,,
+382,"Finkbeiner","K","Ann",,,
+384,"Andersen",,"Geoff",,,
+385,"Pyne","J","Steven",,,
+386,"Cokinos",,"Christopher",,,
+387,"Hayes","S","Donald",,,
+388,"Hall","S","Douglas",,,
+389,"Genet","R","David",,,
+390,"Spangenburg",,"Ray",,,
+392,"Moser",,"Kit",,,
+393,"Strom","G","Robert",,,
+394,"Wilhelms","E","Don",,,
+395,"Aubin",,"David",,,
+396,"Bigg",,"Charlotte",,,
+397,"Sibum","Otto","H.",,,
+398,"Dunbar",,"David",,,
+400,"Cameron","G. W.","Alastair",1/1/1925 0:00:00,,"Born in Winnipeg, Manitoba. Obtained B.Sc.  From the University of Manitoba in 1947 and Ph.D. from University of Saskatchewan in 1952"
+401,"Chauvin",,"Michael",,,
+402,"Barnes","G.","Thomas",,,"Faculty University of Texas at Austin"
+403,"Tassoul",,"Monique",,,
+404,"McCray","Patrick","W",,,
+405,"Mather","C","John",,,
+406,"Boslough",,"John",,,
+407,"Harford",,"James",,,
+409,"Consolmagno",,"Guy",,,"Society of Jesus"
+410,"Coblentz","W","William",,,
+411,"Wood","Bradshaw","Frank",,,
+412,"Clark","H.","David",,,
+413,"Smoot",,"George",,,
+414,"Chance",,"Jane",1/1/1945 0:00:00,,
+415,"Wells","O'Neill","Raymond",1/1/1940 0:00:00,,"Should have Jr. on the name"
+416,"Lorenz",,"Ralph",,,
+418,"McKinley","W. R.","D",,,
+419,"Chabas",,"Jose",,,
+420,"Goldstein","R.","Barnard",,,
+421,"Webb","L.","W",,,
+422,"Johnston",,"Marjorie",,,
+423,"Williams","R.","Thomas",,,
+424,"Saladyga",,"Michael",,,
+425,"Sanders","H","Robert",,,
+426,"Sullivan","T.","Woodruff",,,"Woodruff T. Sullivan III"
+427,"Buckley",,"David",,,
+428,"Lombard",,"Marguerite",,,
+429,"Lomberg",,"Mike",,,
+430,"Mering",,"Kobus",,,
+431,"Theron",,"Roelien",,,
+432,"Perryman",,"Michael",,,
+433,"Shaviv",,"Giora",,,
+434,"Doel","E.","Ronald",,,
+435,"Dick","J","Steve",,,
+436,"Brandt","C","John",,,
+437,"Niedner, Jr.","B","Malcolm",,,
+438,"Rahe",,"Jurgen",,,
+439,"Black","C","David",,,
+440,"Levy","H","Eugene",,,
+441,"Lunine","I","Jonathan",,,
+442,"Hansen","J","Carl",,,
+443,"Kawaler","D","Steven",,,
+444,"Fiala","D","Alan",,,
+445,"Kondo",,"Yoji",,,
+446,"Maunder","Walter","E",,,
+447,"Hoffleit",,"Dorrit",,,
+448,"Donn",,"B",,,
+449,"Mumma",,"M",,,
+450,"Jackson",,"W",,,
+451,"A'Hearn",,"M",,,
+452,"Harrington",,"R",,,
+453,"Swensson","W","J",,,
+454,"Benedict","S","W",,,
+455,"Delbouille",,"L",,,
+456,"Roland",,"G",,,
+457,"Hiltner","A","William",,,
+458,"Proell",,"Wayne",,,"Editor Journal of Space Flight"
+459,"Bowman","J","Norman",,,"Editor Rocket Abstracts"
+460,"Brouwer",,"Dirk",,,"Director of the Observatory at Yale University"
+461,"Clemence","M","Gerald",,,"Scientific Director of the United States Navel Observatory"
+462,"Bowditch",,"Nathaniel",,,
+463,"Pannekoek",,"A",,,
+464,"Kuiper","P","Gerald",,,
+465,"Woolfson",,"Michael",,,
+466,"Croswell",,"Ken",,,
+467,"Vakoch","A.","Douglas",,,
+468,"Poundstone",,"William",,,
+469,"Nourse","E","Alan",,,
+470,"Steinicke",,"Wolfgang",,,
+471,"Zwicky",,"Fritz",,,
+472,"Filchner",,"Wilhelm",,,
+473,"Przybyllok",,"Erich",,,
+474,"Hagen",,"Toni",,,
+475,"Struve",,"Otto",8/8/1897 0:00:00,4/6/1963 0:00:00,"Director of Yerkes and McDonald Observatories"
+476,"Lambert","L","David",,,
+477,"Clarke",,"David",,,
+478,"Wilson",,"Margaret",,,
+479,"Blackett","Maynard Stuart","Patrick",11/18/1897 0:00:00,7/13/1974 0:00:00,
+480,"Morse","S","Edward",,,
+481,"Cohen","R.","E",,,
+482,"Crowe","M.","Kenneth",,,
+483,"Dumond","W. M.","Jesse",,,
+484,"Hynek","A.","J.",,,
+485,"MacPike","Fairfield","Eugene",,,
+486,"Compton","David","William",,,
+487,"Segre",,"Emilio",,,
+488,"Bohr",,"Niels",,,
+489,"Lowell",,"Percival",,,
+490,"Maciel","J","Walter",,,
+491,"Bertolotti",,"Mario",,,
+492,"van Altena","F.","William",,,
+493,"Wilcox",,"Arthur",,,
+494,"Montgomery","J. X.","D",,,
+495,"Wilkening","L","Laurel",,,
+496,"Becvar",,"Antonin",,,
+497,"Tirion",,"Wil",,,
+498,"Douglas","Vibert","A",,,
+499,"Cornell",,"James",,,
+500,"Lightman","P","Alan",,,
+501,"Massey","S. W.","H",,,
+502,"Boyd","L. F.","R.",,,
+503,"Steinberg","L","J",,,
+504,"Lequeux",,"J",,,
+505,"Pawsey","L","J",,,
+506,"Bracewell","N","R",,,
+507,"Roberts",,"Sibhan",,,
+508,"Gray",,"Jeremy",1/1/1947 0:00:00,,
+510,"McKready",,"Kevin",,,"Pen name for Edgar Gardner Murphy"
+511,"Burdick","Stanley","Bruce",,,
+512,"Hoyle",,"Fred",,,
+513,"Bernhard","J","Hubert",,,
+514,"Bennett","A","Dorothy",,,
+515,"Rice","S","Hugh",,,
+516,"Baker","H","Robert",,,
+517,"Newcomb",,"Simon",,,
+518,"Adams","Couch","John",,,
+519,"Hoskinson","J","Albert",,,
+520,"Duerksen","A.","J.",,,
+521,"Giacconi",,"Riccardo",,,
+522,"Edberg","J","Stephen",,,
+523,"Sekanina",,"Zdenek",,,
+524,"Fry",,"Lori",,,
+525,"Sidgwick","B","J",,,
+526,"Marsden","G.","Brian",,,
+527,"Fiesenheiser","I","E",,,
+528,"Thornton","Plakins","Tamara",,,
+529,"Axtell",,"James",,,
+530,"Moore","E","Charlotte",,,
+531,"Muller",,"Roland",,,
+532,"Maunder","S. D.","Annie",,,"Wife of E. Walter Maunder"
+533,"Livingstone","N","David",,,
+534,"Yang","Ning","Chen",,,"Nobel prize in physics 1957"
+535,"Mott","F.","Neville",,,
+536,"Herrmann","B","Dieter",,,
+537,"Wickramasinghe",,"Chandra",,,
+538,"Shetterly","Lee","Margot",,,
+539,"Gamow",,"George",,,
+540,"von Karman",,"Theodore",,,
+541,"Edson",,"Lee",,,
+542,"Danby","M.A.","John",,,
+543,"King","C","Henry",,,
+544,"Bok","J","Bart",,,
+545,"Bok","F","Priscilla",,,
+546,"Todd","P","David",,,"Professor of Astronomy and Director of the Observatory at Amherst College"
+547,"Smith",,"Roger",,,
+548,"Robinson","Hedley","J",,,
+549,"Humphreys","J","W",,,
+550,"Cunningham",,"Clifford",,,
+551,"Elbers",,"Astrid",,,
+552,"McVittie","C.","G.",,,
+553,"Unsold",,"A",,,
+554,"Hughes","J.","A.",,,
+555,"Fowler","A.","William",,,"Nobel prize in Physics 1983"
+556,"Heavens","S","O",,,
+557,"Magueijo",,"Joao",,,
+558,"Sagdeev","Z","Roald",,,
+559,"Bartky",,"Walter",,,"Associate Professor of Astronomy at the University of Chicago"
+560,"Gascoigne","Mortimer","Robert",,,
+561,"Sandage",,"Allan",,,"Astronomer at the Mt. Wilson Observatory, worked under Edwin Hubble"
+562,"Brown",,"Louis",,,
+563,"Stetson","True","Harlan",,,
+564,"Millikan","A","Robert",,,
+565,"Thompson","J","Allyn",,,
+566,"Muirden",,"James",,,
+567,"Selwyn","W. H","E.",,,
+568,"Texereau",,"Jean",,,
+569,"Bowen",,"Mark",,,
+570,"Heck",,"Andre",,,
+571,"Frisch",,"Priscilla",,,
+572,"van der Hulst","M","J",,,
+573,"Ruzmaikin","A.","A.",,,
+574,"Shukurov","M.","A.",,,
+575,"Sokoloff","D.","D.",,,
+576,"Appenzeller",,"I.",,,
+577,"Chmielewski",,"Y.",,,
+578,"Pecker",,"J.-C.",,,
+579,"de la Reza",,"R.",,,
+580,"Tammann",,"G.",,,
+581,"Wayman",,"P.",,,
+582,"Docobo","A.","J.",,,
+583,"Elipe",,"A.",,,
+584,"McAlister",,"H.",,,
+585,"Schindler",,"Robert",,,
+586,"Malouf","F.","A.",,,
+587,"Ball","Stawell","Robert",,,
+588,"Henseling",,"Robert",,,
+589,"Plakmann",,"Joseph",,,
+590,"Jones","Spencer","Harold",,,"The Astronomer Royal"
+591,"Jones",,"Harold",,,"The Astronomer Royal"
+592,"Raine","J","Derek",,,
+593,"Heller",,"Michael",,,
+594,"Olivier","P.","Charles",,,
+595,"Johnson","C.","R.",,,
+596,"Howarth","E.","Helen",,,
+597,"Lang","R.","Kenneth",,,
+598,"Wallis","D","Brad",,,
+599,"Provin","W","Robert",,,
+600,"Rees",,"Martin",,,
+601,"Barbieri",,"Cesare",,,
+602,"Johnson","V","Torrence",,,
+603,"Sohus","M","Anita",,,
+604,"Grinspoon","Henry","David",,,
+605,"Dimitroff","Z","George",,,
+606,"Baker","G.","James",,,
+607,"Middlehurst","M","Barbara",,,
+608,"Stratton","J. M.","F.",,,
+609,"Charlier","V. L.","C.",,,
+610,"Greenstein","L.","Jesse",,,
+611,"Blaauw",,"Adriaan",,,
+612,"Schmidt",,"Maarten",,,
+613,"Greene",,"Dascom",,,
+614,"Genet","A","Karen",,,
+615,"Summers",,"Michael",,,
+616,"Trefil",,"James",,,
+617,"Muller",,"Richard",,,
+618,"Schrodinger",,"Erwin",,,
+619,"Tielens","G. G. M.","A.",,,
+620,"Snow","Peck","Theodore",,,
+621,"Takeuti",,"Mine",,,
+622,"Sasselov","D","Dimitar",,,
+623,"Schwartz","E.","Hugo",,,
+624,"Cook","H","Alan",,,
+625,"Manley","L","Peter",,,
+626,"Carder","W.","Robert",,,
+627,"Genuth","Schechner","Sara",,,
+628,"Strauss",,"David",1/1/1937 0:00:00,,
+629,"Silberstein",,"L.",,,
+630,"Habing","J","Harm",,,
+631,"Plummer","C","H",,,
+632,"Pappalardo","T","Robert",,,
+633,"McKinnon","B","William",,,
+634,"Khurana",,"Krishhan",,,
+635,"Schenk","M","Paul",,,
+636,"Clark","N","Roger",,,
+637,"Howett","J. A.","Carly",,,
+638,"Verbiscer","J","Ane",,,
+639,"Waite","Hunter","J",,,
+640,"Corliss","R.","William",,,
+641,"November","J","Laurence",,,
+642,"Thompson","P.","Silvanus",,,
+643,"Thorndike",,"Lynn",,,
+644,"Trabert",,"Wilhelm",,,
+645,"Sampson","A.","R",,,
+646,"Turner","H.","H.",,,
+647,"Hertzsprung-Kapteyn",,"Henrietta",,,
+648,"Gehrels",,"Tom",,,

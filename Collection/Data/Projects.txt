@@ -1,9 +1,9 @@
-1|History of Spectroscopy|The history of spectroscopy with special focus on its use in astronomy.   Explore the use of this new tool and its application to Astronomy as well as the development of the field of Astrophysics.
-2|History of Astronomy|General history of astronomy.
-3|Observatory History|History of the design, construction, and operation of observatories.
-4|Astronomical Lives|Lives of the astronomers and people important to the history of astronomy.  Biographies and autobiographies of these people.
-5|Mars|History of the study of Mars. Current state of our knowledge of Mars.  Books about Mars.
-11|Extraterrestrial Exploration and Seti|The Search for Extraterretrial Intellegence.  Included in this project are discussions of extraterrestrial life and its possibilities as well as biology.  Also discussions of how humans can survive and travel in extraterrestrial space. We need to find extraterrestrial life as well as finding extraterrestrial intellegence.
-12|20th Century Astronomy Books|Important books in the history of 20th Century astronomy studies
-13|Books on Books|Books about book printing, publishing, reading, collecting, etc.
-14|Sociology of Science|How science works and how scientists work (or don't work) together.
+1,"History of Spectroscopy","The history of spectroscopy with special focus on its use in astronomy.   Explore the use of this new tool and its application to Astronomy as well as the development of the field of Astrophysics."
+2,"History of Astronomy","General history of astronomy."
+3,"Observatory History","History of the design, construction, and operation of observatories."
+4,"Astronomical Lives","Lives of the astronomers and people important to the history of astronomy.  Biographies and autobiographies of these people."
+5,"Mars","History of the study of Mars. Current state of our knowledge of Mars.  Books about Mars."
+11,"Extraterrestrial Exploration and Seti","The Search for Extraterretrial Intellegence.  Included in this project are discussions of extraterrestrial life and its possibilities as well as biology.  Also discussions of how humans can survive and travel in extraterrestrial space. We need to find extraterrestrial life as well as finding extraterrestrial intellegence."
+12,"20th Century Astronomy Books","Important books in the history of 20th Century astronomy studies"
+13,"Books on Books","Books about book printing, publishing, reading, collecting, etc."
+14,"Sociology of Science","How science works and how scientists work (or don't work) together."
