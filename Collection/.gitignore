@@ -23,8 +23,4 @@ missing
 *.toc
 *.out
 *.run.xml
-Books20/Makefile
-Books20/*/Makefile
-Books20/WebPages/Images/Makefile
-Books20/Tools/TeX/Makefile
-Books20/Docs/Series/Makefile
+Data/Orig
