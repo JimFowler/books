@@ -1,652 +1,835 @@
-31|23|1095|1|Albrecht, Miguel A.
-32|24|1095|2|Egret, Daniel
-33|25|1096|1|Alexander, A.F. o'D.
-35|26|1098|1|Aller, L.H.
-36|27|1099|1|J. S. Ames,, Tr. and Ed.
-37|29|1100|1|Armitage, Agnus
-38|29|1101|1|Armitage, Agnus
-39|30|1102|1|Arp, Halton
-40|31|1103|1|Batson, R. M.
-41|32|1103|2|Bridges, P. M.
-42|33|1103|3|Inge, J. L.
-43|34|1104|1|Batten, Alan H.
-44|35|1105|1|Bell, Louis
-45|36|1106|1|Binney, James
-46|37|1106|2|Scott Tremaine
-47|38|1107|1|Brashear, John
-48|39|1107|2|W. Lucien Scaife ed.
-50|40|1108|2|Bruck, H. T.
-51|41|1108|1|Bruck, M. T.
-52|42|1109|2|Burbidge, Geoffrey
-53|43|1109|1|Burbidge, Margaret
-54|44|1110|1|Burnham, S. W.
-55|45|1111|1|Burton, W. B.
-56|46|1111|2|Elmegreen, B. G.
-57|47|1111|3|Genzel, R.
-58|44|1093|1|Burnham, S. W.
-59|48|1112|1|Buttman, Gunther
-60|49|1113|1|Chandrasekhar, S.
-61|49|1114|1|Chandrasekhar, S.
-62|49|1115|1|Chandrasekhar, S.
-63|50|1116|1|Christianson, Gale E.
-64|50|1117|1|Christianson, Gale E.
-65|51|1118|1|Clerke, Agnus M.
-66|51|1119|1|Clerke, Agnus M.
-67|52|1120|1|Cox, John P.
-68|53|1121|1|Cutri, Roc M.
-69|54|1121|2|Latter, William B. ed.
-70|55|1122|1|Dalgarno, A.
-71|56|1122|2|Layzer, D. eds.
-72|57|1123|1|De Morgan, Augustus
-73|58|1124|1|Doazan, V.
-74|60|1124|2|Sedmak, G.
-75|61|1124|3|
-76|62|1124|4|Rusconi, L.
-77|63|1125|1|Drake, Stillman
-78|64|1126|1|Eddington, Sir Arthur Stanley
-79|65|1127|1|Evans, David S.
-84|65|1128|1|Evans, David S.
-85|66|1128|2|Deeming, Terence J.
-86|67|1128|3|Evans, Betty Hall
-87|68|1128|4|Goldfarb, Stephen
-88|65|1129|1|Evans, David S.
-89|70|1129|2|Mullholland, J. Derral
-90|71|1130|1|Farnsworth, Alice Hall
-91|72|1131|1|Flower, David
-92|73|1132|1|Fogg, Martyn J.
-93|74|1133|1|Forbes, Eric J. ed.
-94|75|1134|1|Frost, E. B.
-95|76|1134|2|Stuve, O.
-96|77|1134|3|Elvey, C. T.
-97|75|1135|1|Frost, Edwin Brant
-98|78|1136|1|Garrison, Robert F. ed.
-99|79|1137|1|Gascoigne, S. C. B.
-100|80|1137|2|Proust, K. M.
-101|81|1137|3|Robin, M. O.
-102|82|1138|1|Gingerich, Owen
-103|83|1139|1|Glassgold, A. E.
-104|84|1139|2|Huggins, P. J.
-105|85|1139|3|Schucking, E. I.
-106|86|1140|1|Goldberg, Leo
-107|26|1140|2|Aller, Lawrence
-108|87|1141|1|
-109|88|1142|1|Hale, G. E.
-110|89|1142|2|Ellerman, F.
-111|90|1142|3|Parkhurst, J. A.
-112|88|1143|1|Hale, George E.
-113|91|1143|2|Kent, Norton A.
-114|88|1144|1|Hale, George Ellery
-115|89|1144|2|Ellerman, F.
-116|92|1145|1|Hanisch, R. J.
-117|93|1145|2|Brissenden, R. J. V.
-118|95|1145|3|Barnes, J.
-119|96|1146|1|
-120|98|1147|1|Hargrove, Eugene C. ed.
-121|99|1148|1|Harrison, George R.
-122|100|1149|1|Hearnshaw, J. B.
-123|100|1150|1|Hearnshaw. J. B.
-124|102|1151|1|Herbig, G. H. ed.
-125|103|1152|1|Henry, Richard C.
-126|104|1152|2|Landsman, Wayne B.
-127|105|1152|3|Murthy, Jayant
-128|106|1152|4|Tennyson, Peter D.
-129|107|1152|5|Wofford, James B.
-130|108|1152|6|Wilson, Robert
-131|109|1153|1|Herschel, Sir Joohn F. W.
-132|110|1154|1|Herzberg, Gerhard
-133|111|1154|2|Spinks, J. W. T. tr.
-134|112|1155|1|Hey, J. S.
-135|113|1156|1|Hollenback, D. J.
-136|114|1156|2|
-137|115|1157|1|Houk, Nancy
-138|116|1157|2|Newberry, Michael J.
-139|115|1158|1|Houk, Nancy
-140|118|1158|2|Irvine, Nelson J.
-141|119|1158|3|Rosnebush, David
-142|120|1159|1|Howse, Derek
-143|120|1160|1|Howse, Derek
-144|121|1161|1|Hoyt, William Graves
-145|122|1162|1|Hubble, Edwin
-146|123|1163|1|Huggins, Sir William
-147|124|1163|2|Lady Huggins
-148|125|1164|1|Jacob, Donald H.
-149|126|1165|1|Jaschek, Carlos
-150|127|1165|2|Murtagh, Fionn
-151|126|1166|1|Jaschek, Carlos
-152|128|1166|2|Jaschek, Mercedes
-155|126|1167|1|Jaschek, Carlos
-156|128|1167|2|Jaschek, Mercedes
-157|129|1168|1|Jeans, Sir James H.
-158|130|1169|1|Jones, B. Z.
-159|131|1169|2|Boyd, L. G.
-160|132|1170|1|Jones, Bessie Zaban
-161|133|1171|1|Kaler, James B.
-162|134|1172|1|Kenney, Louis A.
-163|135|1173|1|Kirchoff, Gustav
-164|136|1174|1|Kopal, Zdenek
-165|136|1175|1|Kopal, Zdenek
-166|136|1176|1|Kopal, Zdenek
-167|136|1177|1|Kopal, Zdenek
-168|136|1178|1|
-169|137|1179|1|Koppes, Clayton R.
-170|138|1180|1|Kurucz, Robert L.
-171|139|1180|2|Furnelid, Ingemar
-172|140|1180|3|Brault, James
-173|141|1180|4|Testerman, Larry
-174|142|1181|1|Lamb, Horace
-175|143|1182|1|Levy, David H.
-176|144|1183|1|Lockyer, J. Norman
-177|144|1184|1|Lockyer, J. Norman
-178|144|1185|1|Lockyer, J. Norman
-179|144|1186|1|Lockyer, J. Norman
-180|144|1187|1|Lockyer, Sir Norman
-181|145|1188|1|Lovell, Bernard
-182|145|1189|1|Lovell, Bernard
-183|145|1190|1|Lovell, Bernard
-184|146|1191|1|Lovelock, James
-185|147|1191|2|Allaby, Michael
-186|148|1192|1|Maffeo, Sabino, S.J.
-187|149|1192|2|Coyne, George, S.J. tr.
-188|150|1193|1|Malina, Roger F.
-189|151|1193|2|Bowyer, Stuart
-190|152|1194|1|Mascart, M. E.
-191|153|1195|1|McDougall, Walter A.
-192|154|1196|1|McGucken, William
-193|155|1197|1|Mihalis, Dimitri
-194|155|1198|1|Mihalis, Dimitri
-195|156|1198|2|Mihalis, Barbara
-196|155|1199|1|Mihalis, Dimitri
-197|36|1199|2|Binney, James
-198|157|1200|1|Milne, E. A.
-199|158|1201|1|Morgan, W. W.
-200|159|1201|2|Abt, H, A.
-201|160|1201|3|Tabscott, J. W.
-202|158|1202|1|Morgan, William W.
-203|161|1203|1|Moulton, F. R.
-204|162|1204|1|Murdin, Lesley
-205|163|1205|1|Murray, C. A.
-206|164|1206|1|Narrien, John
-207|166|1207|1|Neugebauer, O.
-208|166|1208|1|Neugebauer, O.
-209|167|1209|1|Nininger, Harvey H,
-210|168|1210|1|Osterbrock, D. E.
-211|169|1210|2|Gustaafson, J. R.
-212|170|1210|3|Unruh, W. J. Shiloh
-213|168|1211|1|Osterbrock, Donald E.
-214|168|1212|1|Osterbrock, Donal E.
-215|168|1213|1|Osterbrock, Donald E.
-216|168|1214|1|Osterbrock, Donald E.
-217|171|1215|1|Pais, Abraham
-218|171|1216|1|Pais, Abraham
-219|171|1217|1|Pais, Abraham
-220|172|1218|1|Payne Cecilia
-221|172|1219|1|Payne-Gaposhkin, Cecilia H.
-222|173|1220|1|Peebles, P. J. E.
-223|173|1221|1|Peebles, P. J. E.
-224|174|1222|1|Podobed, V. V.
-225|175|1223|1|Preston, Richard
-226|176|1224|1|Proctor, Richard A.
-227|176|1225|1|Proctor, Richard A.
-228|177|1226|1|Ritchy, G. W.
-229|178|1227|1|Ronan, Colin A.
-230|179|1228|1|Roscoe, Henry E.
-231|179|1229|1|Roscoe, Sir Henry Enfield
-232|180|1230|1|Rosseland, S.
-233|181|1231|1|Rowland, Henry A.
-234|182|1232|1|Russell, Henry Norris
-235|183|1233|1|Salet, P.
-236|184|1234|1|Saward, Dudley
-237|185|1235|1|Scheiner, Dr. J.
-238|186|1236|1|Schellen, Dr. H.
-239|187|1236|2|Lassell, Jane
-240|188|1236|2|Lassell, Caroline
-241|189|1237|1|Shapiro, S. L.
-242|190|1237|2|Teukolsky, S. A.
-243|191|1238|1|Shapley, Harlow
-244|192|1239|1|Sheehan, William
-245|192|1240|1|Sheehan, William
-246|193|1241|1|Shklovskii, I. S.
-247|194|1241|2|Sagan, Carl
-248|195|1242|1|Smartt, W. M.
-249|195|1243|1|Smartt, W. M.
-250|196|1244|1|Smith, Robert W.
-251|197|1245|1|Spitzer, Lyman J.
-252|197|1246|1|Spitzer, Lyman Jr.
-253|198|1247|1|Stephenson, Bruce
-254|199|1248|1|Sternberg, Shlomo
-255|200|1249|1|Swerdlow, Noel
-256|166|1249|2|
-257|201|1250|1|Tassoul, Jean-Louis
-258|202|1251|1|Terrell, Dirk
-259|203|1251|2|Mukherjee, J. D.
-261|204|1252|1|Tombaugh, Clyde W.
-262|205|1252|2|Moore, Patrick
-263|206|1253|1|Tucker, Wallace H.
-264|207|1254|1|Tuckerman, Alfred
-265|208|1255|1|Tufte, Edward R.
-266|208|1256|1|Tufte, Edward Rolf
-267|209|1257|1|Ulmer, Melville P.
-268|210|1258|1|van Helden, Alfred tr.
-269|211|1259|1|Verschurr, G. L.
-270|212|1259|2|Kellerman, K. I.
-271|211|1260|1|Verschurr, Gerrit L.
-272|213|1261|1|Wali, Kameshwar
-273|214|1262|1|Webb, George Ernest
-274|215|1263|1|Wienberg, Steven
-275|216|1264|1|Wilard, Berton C.
-276|217|1265|1|Wright, Helen
-277|217|1266|1|Wright, Helen
-278|218|1267|1|Zombeck, Martin V.
-279|219|1251|3|Wilson, R. E.
-280|220|1269|1|Phillip, A. G. Davis
-281|221|1269|2|Hauck, Bernard
-282|222|1269|3|Upgren, Arthur R.
-283|223|1270|1|Smoluchowski, Roman
-284|224|1270|2|Bahcall, John N.
-285|225|1270|3|Matthews, Mildred S.
-286|191|1271|1|Shapley, Harlow
-287|226|1272|1|Tattersfield, D.
-288|227|1273|1|Di Gesu, V.
-289|228|1273|2|Scarsi, L.
-290|229|1273|3|Crane, P.
-291|230|1274|1|Craig, Ian J. D.
-292|231|1274|2|Brown, John C.
-293|232|1275|1|Kitchen, C. R.
-294|233|1276|1|Harwit, Martin
-295|233|1277|1|Harwit, Martin
-296|234|1278|1|Schroeder, Daniel J.
-297|236|1279|1|
-298|237|1279|2|Batten, Alan tr.
-299|238|1280|1|Glasstone, Samuel
-300|192|1281|1|Sheehan, William
-301|239|1282|1|
-302|240|1283|1|Rothery, David A.
-303|241|1285|1|Chaisson, Eric J.
-304|242|1286|1|Hanbury Brown R.
-305|243|1287|1|Florence, Ronald
-306|168|1288|1|Osterbrock, Donald E.
-307|244|1289|1|Candler, C.
-308|245|1290|1|Dufay, Jean
-309|246|1291|1|Carr, Michael H.
-310|247|1268|1|
-311|248|1292|1|
-312|249|1293|1|Wright, Jerome L.
-313|250|1294|1|Zubrin, Robert
-314|251|1294|2|Wagner, Richard
-316|252|1296|2|
-317|253|1296|1|
-318|208|1297|1|Edward R. Tufte
-319|246|1298|1|Michael H. Carr
-320|254|1299|1|Theodore Lyman
-321|255|1300|1|
-322|256|1300|2|Wood, R.W.
-323|233|1295|1|Harwit, Martin
-324|257|1301|1|
-325|258|1301|2|
-328|259|1304|1|
-329|260||1|
-330|261||2|
-331|260|1305|1|
-332|261|1305|2|
-333|262||1|
-334|262|1306|1|
-335|23||1|
-336|159||1|
-337|23||1|
-338|25||1|
-339|263|1307|1|
-340|264||1|
-341|264|1308|1|
-343|265|1284|1|
-344|265|1094|1|
-345|25|1097|1|
-346|265|1092|1|
-347|266|1310|1|
-348|267|1311|1|
-349|268|1312|1|Dr. A. R. Martin, ed
-350|136|1313|1|
-351|269|1314|1|
-352|270|1315|1|
-353|271|1315|2|
-354|270|1316|1|
-355|271|1316|2|
-356|270|1317|1|
-357|271|1317|2|
-358|270|1318|1|
-359|271|1318|2|
-360|270|1319|1|
-361|271|1319|2|
-362|270|1320|1|
-363|271|1320|2|
-364|270|1321|1|
-365|271|1321|2|
-366|270|1322|1|
-367|271|1322|2|
-368|270|1323|1|
-369|271|1323|2|
-370|270|1324|1|
-371|271|1324|2|
-372|270|1325|1|
-373|271|1325|2|
-374|270|1326|1|
-375|271|1326|2|
-376|272|1327|1|
-377|273|1329|1|
-378|274|1329|2|
-379|275|1329|3|
-380|276|1330|1|
-381|277|1331|1|
-382|278|1331|2|
-383|279|1332|1|
-384|280|1333|1|
-385|281|1334|1|
-386|282|1334|2|
-387|283|1334|3|
-388|233|1335|1|
-389|284|1336|1|
-390|285|1336|2|
-391|286|1337|1|
-392|287|1338|1|
-394|288|1340|1|
-395|289|1341|1|
-396|290|1342|1|James W. Cronin  Ed,
-397|291|1343|1|
-398|292|1344|1|G. Srinivasan Ed.
-399|293|1345|1|Berry, Robert Elton
-401|50|1346|1|Gale E. Christianson
-402|294|1347|1|
-403|295|1348|1|
-404|296|1349|1|
-405|297|1350|1|P.A.M. Dirac
-406|298|1351|1|
-407|299|1351|2|
-408|300|1352|1|
-409|301|1353|1|
-410|302|1354|1|
-411|303|1355|1|
-412|304|1356|1|
-413|305|1357|1|
-414|306|1357|2|
-415|307|1357|3|
-416|194|1357|4|
-417|308|1357|5|
-418|309|1358|1|
-419|310|1360|1|
-420|311|1361|1|
-421|295|1362|1|
-422|168|1363|1|
-423|312|1364|1|
-424|313|1365|1|
-425|239|1365|2|
-426|314|1366|1|
-427|315|1367|1|
-428|316|1367|2|
-429|317|1368|1|
-430|318|1369|1|
-431|319|1371|1|
-432|320|1372|1|
-433|197|1373|1|
-434|321|1374|1|
-435|191|1375|1|
-436|322|1376|1|
-437|323|1376|2|
-438|324|1377|1|
-439|217|1378|1|
-440|325|1379|1|
-441|326|1380|1|
-442|64|1381|1|
-443|49|1382|1|
-444|265|1383|1|
-445|265|1309|1|
-446|327|1384|1|
-447|57|1385|1|
-448|328|1386|1|
-449|329|1386|2|
-450|330|1386|3|James W. Head III
-451|332|1386|4|
-452|333|1386|5|
-453|334|1387|1|
-454|63|1388|1|
-455|335|1389|1|
-456|336|1389|2|
-457|337|1390|1|
-458|338|1391|1|
-459|265|1392|1|
-460|339|1393|1|
-461|186|1394|1|
-462|187|1394|2|
-463|188|1394|3|
-464|340|1396|1|
-465|341|1397|1|
-466|295|1398|1|
-467|342|1399|1|
-468|343|1400|1|
-469|343|1401|1|
-470|217|1402|1|
-471|344|1402|2|
-472|345|1402|3|
-473|250|1403|1|
-474|346|1404|1|
-475|250|1404|2|
-476|347|1405|1|
-477|246|1406|1|
-478|348|1406|2|
-479|349|1407|1|
-480|350|1408|1|Edward Hill
-481|351|1409|1|
-482|352|1410|1|M.S. Longair
-483|353|1411|1|Dap Hartmann
-484|45|1411|2|W.B. Burton
-485|354|1412|1|Ira N. Levine
-486|355|1413|1|Robin M. Green
-488|126|1415|1|
-489|49|1416|1|
-490|356|1417|1|Oliver Morton
-491|136|1418|1|
-492|191|1419|1|Harlow Shapley, Ed.
-493|357|1420|1|Milton K. Munitz, Ed.
-494|358|1421|1|Alfred H. Frison
-495|136|1422|1|
-496|359|1423|1|A. Dauvillier
-497|360|1425|1|D. A. Kemp
-498|361|1426|1|George A. Reisch
-499|362|1427|1|Paul Luther
-500|363|1428|1|Sally Gregory Kohlstedt
-501|364|1429|1|
-502|365|1430|1|Scott L. Montgomery
-503|82|1431|1|Owen Gingerich
-504|65|1432|1|David S. Evans
-505|70|1432|2|J. Derral Mulholland
-506|366|1433|1|Marcia Bartusiak, ed.
-507|367|1434|1|Mark G. Mitchell
-508|368|1435|1|Ernst J. Opik
-509|369|1437|1|Robert Zimmerman
-510|172|1438|1|
-511|370|1439|1|John D. Barrow
-512|304|1440|1|
-513|304|1441|1|
-514|86|1442|1|Leo Goldberg
-515|26|1442|2|Lawrence H. Aller
-516|145|1443|1|A.C.B. Lovell
-517|155|1444|1|Dimitri Mihalis
-518|371|1445|1|
-519|352|1446|1|M. S. Longair
-520|372|1447|1|David A. Kronick
-521|373|1448|1|W. W. Duley
-522|374|1448|2|D. A. William
-523|375|1449|1|
-524|376|1450|1|Raymond L. Lee, jr.
-525|377|1450|2|Alistair B Fraser
-528|378|1452|1|M. Hack
-529|379|1453|1|Russell M. Genet
-530|380|1453|2|Joylon M. Johnson
-531|381|1453|3|Vera Wallen
-532|379|1454|1|Russell M. Genet
-533|380|1454|2|Jolyon M. Johnson
-534|381|1454|3|Vera  Wallen
-535|382|1455|1|Ann Finkbeiner
-536|384|1456|1|
-537|385|1457|1|
-538|386|1458|1|
-539|379|1459|1|
-540|387|1459|2|
-541|388|1459|3|
-542|389|1459|4|
-543|390|1460|1|Ray Spangenburf
-544|392|1460|2|Kit Moser
-545|197|1461|1|Lyman Spitzer, Jr.
-546|246|1462|1|Michael H. Carr
-547|333|1462|2|R. Stephen Saunders
-548|393|1462|3|Robert G. Strom
-549|394|1462|4|Don E. Wilhelms
-550|395|1463|1|David Aubin
-551|396|1463|2|Chorlotte Bigg
-552|397|1463|1|H. Otto Sibum
-553|398|1464|1|David Dunbar
-555|173|1466|1|
-556|400|1467|1|A. G. W. Cameron, ed.
-557|401|1468|1|Michael Chauvin
-558|402|1469|1|Thomas G. Barnes ed.
-559|201|1470|1|Jean-Louis Tassoul
-560|403|1470|2|Monique Tassoul
-561|404|1471|1|W. Patrick McCray
-562|405|1472|1|John C. Mather
-563|406|1472|2|John Boslough
-564|407|1473|1|James Harford
-565|409|1474|1|Brother Guy Consolmagno
-566|410|1475|1|William W. Coblentz
-567|411|1476|1|Frank Bradshaw Wood, ed.
-568|412|1477|1|
-569|413|1478|1|
-570|414|1479|1|Jane Chance
-571|415|1479|2|R.O. Wells, jr.
-572|400|1480|1|A.G.W. Cameron
-573|416|1481|1|Ralph Lorenz
-574|253|1481|2|Jacqueline Mitton
-575|418|1482|1|D. W. R. McKinley
-577|418|1484|1|
-578|195|1485|1|W. M. Smart
-579|41|1486|1|Mary Bruck
-580|143|1487|1|David H. Levy
-581|419|1488|1|Jose Chabas
-582|420|1488|2|Bernard R. Goldstein
-583|421|1489|1|W. L. Webb
-584|171|1490|1|Abraham Pais
-585|422|1491|1|Marjorie Johnston
-586|423|1492|1|Thomas R. Williams
-588|424|1492|2|
-589|425|1493|1|
-590|426|1494|1|Woodruff T. Sullivan III
-591|352|1495|1|
-592|427|1496|1|David Buckley
-593|428|1496|2|Marguerite Lombard
-594|429|1496|3|Mike Lomberg
-595|430|1496|4|
-596|431|1496|5|Roelien Theron
-597|432|1497|1|Michael Perryman
-598|433|1498|1|Giora Shaviv
-599|434|1499|1|Ronald E. Doel
-600|51|1500|1|
-601|435|1501|1|Steve J. Dick
-602|436|1502|1|John C. Brandt
-603|437|1502|2|Malcolm B. Niedner, Jr.
-604|438|1502|3|Jurgen Rahe
-605|439|1503|1|David C. Black
-606|225|1503|2|Mildred Shapley matthews
-607|440|1504|1|E. H. Levy
-608|441|1504|2|J. I. Lunine
-609|442|1505|1|C. J. Hansen
-610|443|1505|2|S. D. Kawaler
-611|444|1506|1|Alan D. Fiala
-612|435|1506|2|Steven J. Dick
-613|445|1507|1|Y. Kondo
-614|265|1508|1|E. Walter Maunder F.R.A.S.
-615|447|1510|1|Dorrit Hoffleit
-616|448|1511|1|B. Donn
-617|449|1511|2|M. Mumma
-618|450|1511|3|W. Jackson
-619|451|1511|4|M. A'Hearn
-620|452|1511|5|R. Harrington
-621|453|1512|1|J. W. Swensson
-622|454|1512|2|W. S. Benedict
-623|455|1512|3|L. Debouille
-624|456|1512|4|G. Roland
-625|457|1513|1|William A. Hiltner
-626|280|1514|1|Wenceslas S. Jardetzky
-627|194|1516|1|Carl Sagan
-628|458|1517|1|
-629|459|1517|2|
-630|460|1518|1|
-631|461|1518|2|
-632|462|1519|1|
-633|463|1520|1|A. Pannekoek
-634|464|1521|1|Gerald P. Kuipler ed.
-635|465|1522|1|Michael Woolfson
-636|466|1523|1|Ken Croswell
-637|223|1524|1|
-638|224|1524|2|
-639|225|1524|3|
-640|467|1525|1|Douglas A Vakoch
-641|468|1526|1|
-642|469|1527|1|Alan E. Nourse
-643|470|1528|1|Wolfgang Steinicke
-644|471|1529|1|F. Zwicky
-645|191|1530|1|
-646|472|1531|1|W. Filchner
-647|473|1531|2|E. Przybyllok
-648|474|1531|3|T. Hagen
-649|265|1532|1|
-650|475|1533|1|
-651|476|1534|1|
-652|477|1535|1|
-653|265|1536|1|
-654|478|1537|1|
-655|479|1538|1|P. M. S. Blackett
-656|129|1539|1|
-657|480|1540|1|
-658|481|1541|1|E. R. Cohen
-659|482|1541|2|Kenneth M. Crowe
-660|483|1541|3|Jesse W. M. Dumond
-661|484|1542|1|J. A. Hynek
-662|485|1543|1|Eugene Fairfield MacPike
-663|486|1544|1|William David Compton
-664|487|1546|1|Emilio Segre
-665|267|1547|1|
-666|409|1548|1|
-667|488|1549|1|
-668|489|1550|1|
-669|490|1551|1|Walter J. Maciel
-670|491|1552|1|Mario Bertolotti
-671|492|1553|1|William F. van Altena
-672|493|1554|1|Arthur Wilcox
-673|180|1555|1|
-674|494|1556|1|D. J. X. Mongomery
-675|495|1557|1|Laurel L. Wilkening ed.
-676|496|1558|1|
-677|497|1559|1|Wil Tirion
-679|489|1562|1|
-680|498|1563|1|A. Vibert Douglas
-681|499|1564|1|
-682|500|1564|2|
-683|136|1565|1|
-684|191|1566|1|
-685|501|1567|1|
-686|502|1567|2|
-687|503|1568|1|
-688|504|1568|2|
-689|242|1569|1|
-690|145|1569|2|A. C. B. Lovell
-691|505|1570|1|J. L. Pawsey
-692|506|1570|2|R. N. Bracewell
-693|507|1571|1|
-694|508|1572|1|Jeremy Gray
-695|510|1573|1|Kevin McKready
-696|511|1574|1|
-697|366|1575|1|Marcia Bartusiak
-698|295|1576|1|I. Berhard Cohen
-699|512|1577|1|Fre Hoyle
-700|513|1578|1|Bernhart
-701|514|1578|2|Bennett
-702|515|1578|3|
-703|516|1579|1|Robert H. Baker
-704|516|1580|1|Robert H. Baker
+"BookAuthorId","AuthorID","BookID","Priority","AsWritten"
+31,23,1095,1,"Albrecht, Miguel A."
+32,24,1095,2,"Egret, Daniel"
+33,25,1096,1,"Alexander, A.F. o'D."
+35,26,1098,1,"Aller, L.H."
+36,27,1099,1,"J. S. Ames,, Tr. and Ed."
+37,29,1100,1,"Armitage, Agnus"
+38,29,1101,1,"Armitage, Agnus"
+39,30,1102,1,"Arp, Halton"
+40,31,1103,1,"Batson, R. M."
+41,32,1103,2,"Bridges, P. M."
+42,33,1103,3,"Inge, J. L."
+43,34,1104,1,"Batten, Alan H."
+44,35,1105,1,"Bell, Louis"
+45,36,1106,1,"Binney, James"
+46,37,1106,2,"Scott Tremaine"
+47,38,1107,1,"Brashear, John"
+48,39,1107,2,"W. Lucien Scaife ed."
+50,40,1108,2,"Bruck, H. T."
+51,41,1108,1,"Bruck, M. T."
+52,42,1109,2,"Burbidge, Geoffrey"
+53,43,1109,1,"Burbidge, Margaret"
+54,44,1110,1,"Burnham, S. W."
+55,45,1111,1,"Burton, W. B."
+56,46,1111,2,"Elmegreen, B. G."
+57,47,1111,3,"Genzel, R."
+58,44,1093,1,"Burnham, S. W."
+59,48,1112,1,"Buttman, Gunther"
+60,49,1113,1,"Chandrasekhar, S."
+61,49,1114,1,"Chandrasekhar, S."
+62,49,1115,1,"Chandrasekhar, S."
+63,50,1116,1,"Christianson, Gale E."
+64,50,1117,1,"Christianson, Gale E."
+65,51,1118,1,"Clerke, Agnus M."
+66,51,1119,1,"Clerke, Agnus M."
+67,52,1120,1,"Cox, John P."
+68,53,1121,1,"Cutri, Roc M."
+69,54,1121,2,"Latter, William B. ed."
+70,55,1122,1,"Dalgarno, A."
+71,56,1122,2,"Layzer, D. eds."
+72,57,1123,1,"De Morgan, Augustus"
+73,58,1124,1,"Doazan, V."
+74,60,1124,2,"Sedmak, G."
+75,61,1124,3,
+76,62,1124,4,"Rusconi, L."
+77,63,1125,1,"Drake, Stillman"
+78,64,1126,1,"Eddington, Sir Arthur Stanley"
+79,65,1127,1,"Evans, David S."
+84,65,1128,1,"Evans, David S."
+85,66,1128,2,"Deeming, Terence J."
+86,67,1128,3,"Evans, Betty Hall"
+87,68,1128,4,"Goldfarb, Stephen"
+88,65,1129,1,"Evans, David S."
+89,70,1129,2,"Mullholland, J. Derral"
+90,71,1130,1,"Farnsworth, Alice Hall"
+91,72,1131,1,"Flower, David"
+92,73,1132,1,"Fogg, Martyn J."
+93,74,1133,1,"Forbes, Eric J. ed."
+94,75,1134,1,"Frost, E. B."
+95,76,1134,2,"Stuve, O."
+96,77,1134,3,"Elvey, C. T."
+97,75,1135,1,"Frost, Edwin Brant"
+98,78,1136,1,"Garrison, Robert F. ed."
+99,79,1137,1,"Gascoigne, S. C. B."
+100,80,1137,2,"Proust, K. M."
+101,81,1137,3,"Robin, M. O."
+102,82,1138,1,"Gingerich, Owen"
+103,83,1139,1,"Glassgold, A. E."
+104,84,1139,2,"Huggins, P. J."
+105,85,1139,3,"Schucking, E. I."
+106,86,1140,1,"Goldberg, Leo"
+107,26,1140,2,"Aller, Lawrence"
+108,87,1141,1,
+109,88,1142,1,"Hale, G. E."
+110,89,1142,2,"Ellerman, F."
+111,90,1142,3,"Parkhurst, J. A."
+112,88,1143,1,"Hale, George E."
+113,91,1143,2,"Kent, Norton A."
+114,88,1144,1,"Hale, George Ellery"
+115,89,1144,2,"Ellerman, F."
+116,92,1145,1,"Hanisch, R. J."
+117,93,1145,2,"Brissenden, R. J. V."
+118,95,1145,3,"Barnes, J."
+119,96,1146,1,
+120,98,1147,1,"Hargrove, Eugene C. ed."
+121,99,1148,1,"Harrison, George R."
+122,100,1149,1,"Hearnshaw, J. B."
+123,100,1150,1,"Hearnshaw. J. B."
+124,102,1151,1,"Herbig, G. H. ed."
+125,103,1152,1,"Henry, Richard C."
+126,104,1152,2,"Landsman, Wayne B."
+127,105,1152,3,"Murthy, Jayant"
+128,106,1152,4,"Tennyson, Peter D."
+129,107,1152,5,"Wofford, James B."
+130,108,1152,6,"Wilson, Robert"
+131,109,1153,1,"Herschel, Sir Joohn F. W."
+132,110,1154,1,"Herzberg, Gerhard"
+133,111,1154,2,"Spinks, J. W. T. tr."
+134,112,1155,1,"Hey, J. S."
+135,113,1156,1,"Hollenback, D. J."
+136,114,1156,2,
+137,115,1157,1,"Houk, Nancy"
+138,116,1157,2,"Newberry, Michael J."
+139,115,1158,1,"Houk, Nancy"
+140,118,1158,2,"Irvine, Nelson J."
+141,119,1158,3,"Rosnebush, David"
+142,120,1159,1,"Howse, Derek"
+143,120,1160,1,"Howse, Derek"
+144,121,1161,1,"Hoyt, William Graves"
+145,122,1162,1,"Hubble, Edwin"
+146,123,1163,1,"Huggins, Sir William"
+147,124,1163,2,"Lady Huggins"
+148,125,1164,1,"Jacob, Donald H."
+149,126,1165,1,"Jaschek, Carlos"
+150,127,1165,2,"Murtagh, Fionn"
+151,126,1166,1,"Jaschek, Carlos"
+152,128,1166,2,"Jaschek, Mercedes"
+155,126,1167,1,"Jaschek, Carlos"
+156,128,1167,2,"Jaschek, Mercedes"
+157,129,1168,1,"Jeans, Sir James H."
+158,130,1169,1,"Jones, B. Z."
+159,131,1169,2,"Boyd, L. G."
+160,132,1170,1,"Jones, Bessie Zaban"
+161,133,1171,1,"Kaler, James B."
+162,134,1172,1,"Kenney, Louis A."
+163,135,1173,1,"Kirchoff, Gustav"
+164,136,1174,1,"Kopal, Zdenek"
+165,136,1175,1,"Kopal, Zdenek"
+166,136,1176,1,"Kopal, Zdenek"
+167,136,1177,1,"Kopal, Zdenek"
+168,136,1178,1,
+169,137,1179,1,"Koppes, Clayton R."
+170,138,1180,1,"Kurucz, Robert L."
+171,139,1180,2,"Furnelid, Ingemar"
+172,140,1180,3,"Brault, James"
+173,141,1180,4,"Testerman, Larry"
+174,142,1181,1,"Lamb, Horace"
+175,143,1182,1,"Levy, David H."
+176,144,1183,1,"Lockyer, J. Norman"
+177,144,1184,1,"Lockyer, J. Norman"
+178,144,1185,1,"Lockyer, J. Norman"
+179,144,1186,1,"Lockyer, J. Norman"
+180,144,1187,1,"Lockyer, Sir Norman"
+181,145,1188,1,"Lovell, Bernard"
+182,145,1189,1,"Lovell, Bernard"
+183,145,1190,1,"Lovell, Bernard"
+184,146,1191,1,"Lovelock, James"
+185,147,1191,2,"Allaby, Michael"
+186,148,1192,1,"Maffeo, Sabino, S.J."
+187,149,1192,2,"Coyne, George, S.J. tr."
+188,150,1193,1,"Malina, Roger F."
+189,151,1193,2,"Bowyer, Stuart"
+190,152,1194,1,"Mascart, M. E."
+191,153,1195,1,"McDougall, Walter A."
+192,154,1196,1,"McGucken, William"
+193,155,1197,1,"Mihalis, Dimitri"
+194,155,1198,1,"Mihalis, Dimitri"
+195,156,1198,2,"Mihalis, Barbara"
+196,155,1199,1,"Mihalis, Dimitri"
+197,36,1199,2,"Binney, James"
+198,157,1200,1,"Milne, E. A."
+199,158,1201,1,"Morgan, W. W."
+200,159,1201,2,"Abt, H, A."
+201,160,1201,3,"Tabscott, J. W."
+202,158,1202,1,"Morgan, William W."
+203,161,1203,1,"Moulton, F. R."
+204,162,1204,1,"Murdin, Lesley"
+205,163,1205,1,"Murray, C. A."
+206,164,1206,1,"Narrien, John"
+207,166,1207,1,"Neugebauer, O."
+208,166,1208,1,"Neugebauer, O."
+209,167,1209,1,"Nininger, Harvey H,"
+210,168,1210,1,"Osterbrock, D. E."
+211,169,1210,2,"Gustaafson, J. R."
+212,170,1210,3,"Unruh, W. J. Shiloh"
+213,168,1211,1,"Osterbrock, Donald E."
+214,168,1212,1,"Osterbrock, Donal E."
+215,168,1213,1,"Osterbrock, Donald E."
+216,168,1214,1,"Osterbrock, Donald E."
+217,171,1215,1,"Pais, Abraham"
+218,171,1216,1,"Pais, Abraham"
+219,171,1217,1,"Pais, Abraham"
+220,172,1218,1,"Payne Cecilia"
+221,172,1219,1,"Payne-Gaposhkin, Cecilia H."
+222,173,1220,1,"Peebles, P. J. E."
+223,173,1221,1,"Peebles, P. J. E."
+224,174,1222,1,"Podobed, V. V."
+225,175,1223,1,"Preston, Richard"
+226,176,1224,1,"Proctor, Richard A."
+227,176,1225,1,"Proctor, Richard A."
+228,177,1226,1,"Ritchy, G. W."
+229,178,1227,1,"Ronan, Colin A."
+230,179,1228,1,"Roscoe, Henry E."
+231,179,1229,1,"Roscoe, Sir Henry Enfield"
+232,180,1230,1,"Rosseland, S."
+233,181,1231,1,"Rowland, Henry A."
+234,182,1232,1,"Russell, Henry Norris"
+235,183,1233,1,"Salet, P."
+236,184,1234,1,"Saward, Dudley"
+237,185,1235,1,"Scheiner, Dr. J."
+238,186,1236,1,"Schellen, Dr. H."
+239,187,1236,2,"Lassell, Jane"
+240,188,1236,2,"Lassell, Caroline"
+241,189,1237,1,"Shapiro, S. L."
+242,190,1237,2,"Teukolsky, S. A."
+243,191,1238,1,"Shapley, Harlow"
+244,192,1239,1,"Sheehan, William"
+245,192,1240,1,"Sheehan, William"
+246,193,1241,1,"Shklovskii, I. S."
+247,194,1241,2,"Sagan, Carl"
+248,195,1242,1,"Smartt, W. M."
+249,195,1243,1,"Smartt, W. M."
+250,196,1244,1,"Smith, Robert W."
+251,197,1245,1,"Spitzer, Lyman J."
+252,197,1246,1,"Spitzer, Lyman Jr."
+253,198,1247,1,"Stephenson, Bruce"
+254,199,1248,1,"Sternberg, Shlomo"
+255,200,1249,1,"Swerdlow, Noel"
+256,166,1249,2,
+257,201,1250,1,"Tassoul, Jean-Louis"
+258,202,1251,1,"Terrell, Dirk"
+259,203,1251,2,"Mukherjee, J. D."
+261,204,1252,1,"Tombaugh, Clyde W."
+262,205,1252,2,"Moore, Patrick"
+263,206,1253,1,"Tucker, Wallace H."
+264,207,1254,1,"Tuckerman, Alfred"
+265,208,1255,1,"Tufte, Edward R."
+266,208,1256,1,"Tufte, Edward Rolf"
+267,209,1257,1,"Ulmer, Melville P."
+268,210,1258,1,"van Helden, Alfred tr."
+269,211,1259,1,"Verschurr, G. L."
+270,212,1259,2,"Kellerman, K. I."
+271,211,1260,1,"Verschurr, Gerrit L."
+272,213,1261,1,"Wali, Kameshwar"
+273,214,1262,1,"Webb, George Ernest"
+274,215,1263,1,"Wienberg, Steven"
+275,216,1264,1,"Wilard, Berton C."
+276,217,1265,1,"Wright, Helen"
+277,217,1266,1,"Wright, Helen"
+278,218,1267,1,"Zombeck, Martin V."
+279,219,1251,3,"Wilson, R. E."
+280,220,1269,1,"Phillip, A. G. Davis"
+281,221,1269,2,"Hauck, Bernard"
+282,222,1269,3,"Upgren, Arthur R."
+283,223,1270,1,"Smoluchowski, Roman"
+284,224,1270,2,"Bahcall, John N."
+285,225,1270,3,"Matthews, Mildred S."
+286,191,1271,1,"Shapley, Harlow"
+287,226,1272,1,"Tattersfield, D."
+288,227,1273,1,"Di Gesu, V."
+289,228,1273,2,"Scarsi, L."
+290,229,1273,3,"Crane, P."
+291,230,1274,1,"Craig, Ian J. D."
+292,231,1274,2,"Brown, John C."
+293,232,1275,1,"Kitchen, C. R."
+294,233,1276,1,"Harwit, Martin"
+295,233,1277,1,"Harwit, Martin"
+296,234,1278,1,"Schroeder, Daniel J."
+297,236,1279,1,
+298,237,1279,2,"Batten, Alan tr."
+299,238,1280,1,"Glasstone, Samuel"
+300,192,1281,1,"Sheehan, William"
+301,239,1282,1,
+302,240,1283,1,"Rothery, David A."
+303,241,1285,1,"Chaisson, Eric J."
+304,242,1286,1,"Hanbury Brown R."
+305,243,1287,1,"Florence, Ronald"
+306,168,1288,1,"Osterbrock, Donald E."
+307,244,1289,1,"Candler, C."
+308,245,1290,1,"Dufay, Jean"
+309,246,1291,1,"Carr, Michael H."
+310,247,1268,1,
+311,248,1292,1,
+312,249,1293,1,"Wright, Jerome L."
+313,250,1294,1,"Zubrin, Robert"
+314,251,1294,2,"Wagner, Richard"
+318,208,1297,1,"Edward R. Tufte"
+319,246,1298,1,"Michael H. Carr"
+320,254,1299,1,"Theodore Lyman"
+321,255,1300,1,
+322,256,1300,2,"Wood, R.W."
+324,257,1301,1,
+325,258,1301,2,
+328,259,1304,1,
+331,260,1305,1,
+332,261,1305,2,
+334,262,1306,1,
+339,263,1307,1,
+341,264,1308,1,
+343,265,1284,1,
+344,265,1094,1,
+345,25,1097,1,
+346,265,1092,1,
+347,266,1310,1,
+348,267,1311,1,
+349,268,1312,1,"Dr. A. R. Martin, ed"
+350,136,1313,1,
+351,269,1314,1,
+377,273,1329,1,
+378,274,1329,2,
+379,275,1329,3,
+380,276,1330,1,
+381,277,1331,1,
+382,278,1331,2,
+383,279,1332,1,
+384,280,1333,1,
+385,281,1334,1,
+386,282,1334,2,
+387,283,1334,3,
+388,233,1335,1,
+389,284,1336,1,
+390,285,1336,2,
+391,286,1337,1,
+392,287,1338,1,
+394,288,1340,1,
+395,289,1341,1,
+396,290,1342,1,"James W. Cronin  Ed,"
+397,291,1343,1,
+398,292,1344,1,"G. Srinivasan Ed."
+399,293,1345,1,"Berry, Robert Elton"
+401,50,1346,1,"Gale E. Christianson"
+402,294,1347,1,
+403,295,1348,1,
+404,296,1349,1,
+405,297,1350,1,"P.A.M. Dirac"
+406,298,1351,1,
+407,299,1351,2,
+408,300,1352,1,
+409,301,1353,1,
+410,302,1354,1,
+411,303,1355,1,
+412,304,1356,1,
+413,305,1357,1,
+414,306,1357,2,
+415,307,1357,3,
+416,194,1357,4,
+417,308,1357,5,
+418,309,1358,1,
+419,310,1360,1,
+420,311,1361,1,
+421,295,1362,1,
+422,168,1363,1,
+423,312,1364,1,
+424,313,1365,1,
+425,239,1365,2,
+426,314,1366,1,
+427,315,1367,1,
+428,316,1367,2,
+429,317,1368,1,
+430,318,1369,1,
+431,319,1371,1,
+432,320,1372,1,
+433,197,1373,1,
+434,321,1374,1,
+435,191,1375,1,
+436,322,1376,1,
+437,323,1376,2,
+438,324,1377,1,
+439,217,1378,1,
+440,325,1379,1,
+441,326,1380,1,
+442,64,1381,1,
+443,49,1382,1,
+444,265,1383,1,
+445,265,1309,1,
+446,327,1384,1,
+447,57,1385,1,
+448,328,1386,1,
+449,329,1386,2,
+450,330,1386,3,"James W. Head III"
+451,332,1386,4,
+452,333,1386,5,
+453,334,1387,1,
+454,63,1388,1,
+455,335,1389,1,
+456,336,1389,2,
+457,337,1390,1,
+458,338,1391,1,
+459,265,1392,1,
+460,339,1393,1,
+461,186,1394,1,
+462,187,1394,2,
+463,188,1394,3,
+464,340,1396,1,
+465,341,1397,1,
+466,295,1398,1,
+467,342,1399,1,
+468,343,1400,1,
+469,343,1401,1,
+470,217,1402,1,
+471,344,1402,2,
+472,345,1402,3,
+473,250,1403,1,
+474,346,1404,1,
+475,250,1404,2,
+476,347,1405,1,
+477,246,1406,1,
+478,348,1406,2,
+479,349,1407,1,
+480,350,1408,1,"Edward Hill"
+481,351,1409,1,
+482,352,1410,1,"M.S. Longair"
+483,353,1411,1,"Dap Hartmann"
+484,45,1411,2,"W.B. Burton"
+485,354,1412,1,"Ira N. Levine"
+486,355,1413,1,"Robin M. Green"
+488,126,1415,1,
+489,49,1416,1,
+490,356,1417,1,"Oliver Morton"
+491,136,1418,1,
+492,191,1419,1,"Harlow Shapley, Ed."
+493,357,1420,1,"Milton K. Munitz, Ed."
+494,358,1421,1,"Alfred H. Frison"
+495,136,1422,1,
+496,359,1423,1,"A. Dauvillier"
+497,360,1425,1,"D. A. Kemp"
+498,361,1426,1,"George A. Reisch"
+499,362,1427,1,"Paul Luther"
+500,363,1428,1,"Sally Gregory Kohlstedt"
+501,364,1429,1,
+502,365,1430,1,"Scott L. Montgomery"
+503,82,1431,1,"Owen Gingerich"
+504,65,1432,1,"David S. Evans"
+505,70,1432,2,"J. Derral Mulholland"
+506,366,1433,1,"Marcia Bartusiak, ed."
+507,367,1434,1,"Mark G. Mitchell"
+508,368,1435,1,"Ernst J. Opik"
+509,369,1437,1,"Robert Zimmerman"
+510,172,1438,1,
+511,370,1439,1,"John D. Barrow"
+512,304,1440,1,
+513,304,1441,1,
+514,86,1442,1,"Leo Goldberg"
+515,26,1442,2,"Lawrence H. Aller"
+516,145,1443,1,"A.C.B. Lovell"
+517,155,1444,1,"Dimitri Mihalis"
+518,371,1445,1,
+519,352,1446,1,"M. S. Longair"
+520,372,1447,1,"David A. Kronick"
+521,373,1448,1,"W. W. Duley"
+522,374,1448,2,"D. A. William"
+523,375,1449,1,
+524,376,1450,1,"Raymond L. Lee, jr."
+525,377,1450,2,"Alistair B Fraser"
+528,378,1452,1,"M. Hack"
+529,379,1453,1,"Russell M. Genet"
+530,380,1453,2,"Joylon M. Johnson"
+531,381,1453,3,"Vera Wallen"
+532,379,1454,1,"Russell M. Genet"
+533,380,1454,2,"Jolyon M. Johnson"
+534,381,1454,3,"Vera  Wallen"
+535,382,1455,1,"Ann Finkbeiner"
+536,384,1456,1,
+537,385,1457,1,
+538,386,1458,1,
+539,379,1459,1,
+540,387,1459,2,
+541,388,1459,3,
+542,389,1459,4,
+543,390,1460,1,"Ray Spangenburf"
+544,392,1460,2,"Kit Moser"
+545,197,1461,1,"Lyman Spitzer, Jr."
+546,246,1462,1,"Michael H. Carr"
+547,333,1462,2,"R. Stephen Saunders"
+548,393,1462,3,"Robert G. Strom"
+549,394,1462,4,"Don E. Wilhelms"
+550,395,1463,2,"David Aubin"
+551,396,1463,3,"Chorlotte Bigg"
+552,397,1463,1,"H. Otto Sibum"
+553,398,1464,1,"David Dunbar"
+555,173,1466,1,
+556,400,1467,1,"A. G. W. Cameron, ed."
+557,401,1468,1,"Michael Chauvin"
+558,402,1469,1,"Thomas G. Barnes ed."
+559,201,1470,1,"Jean-Louis Tassoul"
+560,403,1470,2,"Monique Tassoul"
+561,404,1471,1,"W. Patrick McCray"
+562,405,1472,1,"John C. Mather"
+563,406,1472,2,"John Boslough"
+564,407,1473,1,"James Harford"
+565,409,1474,1,"Brother Guy Consolmagno"
+566,410,1475,1,"William W. Coblentz"
+567,411,1476,1,"Frank Bradshaw Wood, ed."
+568,412,1477,1,
+569,413,1478,1,
+570,414,1479,1,"Jane Chance"
+571,415,1479,2,"R.O. Wells, jr."
+572,400,1480,1,"A.G.W. Cameron"
+573,416,1481,1,"Ralph Lorenz"
+574,253,1481,2,"Jacqueline Mitton"
+575,418,1482,1,"D. W. R. McKinley"
+577,418,1484,1,
+578,195,1485,1,"W. M. Smart"
+579,41,1486,1,"Mary Bruck"
+580,143,1487,1,"David H. Levy"
+581,419,1488,1,"Jose Chabas"
+582,420,1488,2,"Bernard R. Goldstein"
+583,421,1489,1,"W. L. Webb"
+584,171,1490,1,"Abraham Pais"
+585,422,1491,1,"Marjorie Johnston"
+586,423,1492,1,"Thomas R. Williams"
+588,424,1492,2,
+589,425,1493,1,
+590,426,1494,1,"Woodruff T. Sullivan III"
+591,352,1495,1,
+592,427,1496,1,"David Buckley"
+593,428,1496,2,"Marguerite Lombard"
+594,429,1496,3,"Mike Lomberg"
+595,430,1496,4,
+596,431,1496,5,"Roelien Theron"
+597,432,1497,1,"Michael Perryman"
+598,433,1498,1,"Giora Shaviv"
+599,434,1499,1,"Ronald E. Doel"
+600,51,1500,1,
+601,435,1501,1,"Steve J. Dick"
+602,436,1502,1,"John C. Brandt"
+603,437,1502,2,"Malcolm B. Niedner, Jr."
+604,438,1502,3,"Jurgen Rahe"
+605,439,1503,1,"David C. Black"
+606,225,1503,2,"Mildred Shapley matthews"
+607,440,1504,1,"E. H. Levy"
+608,441,1504,2,"J. I. Lunine"
+609,442,1505,1,"C. J. Hansen"
+610,443,1505,2,"S. D. Kawaler"
+611,444,1506,1,"Alan D. Fiala"
+612,435,1506,2,"Steven J. Dick"
+613,445,1507,1,"Y. Kondo"
+614,265,1508,1,"E. Walter Maunder F.R.A.S."
+615,447,1510,1,"Dorrit Hoffleit"
+616,448,1511,1,"B. Donn"
+617,449,1511,2,"M. Mumma"
+618,450,1511,3,"W. Jackson"
+619,451,1511,4,"M. A'Hearn"
+620,452,1511,5,"R. Harrington"
+621,453,1512,1,"J. W. Swensson"
+622,454,1512,2,"W. S. Benedict"
+623,455,1512,3,"L. Debouille"
+624,456,1512,4,"G. Roland"
+625,457,1513,1,"William A. Hiltner"
+626,280,1514,1,"Wenceslas S. Jardetzky"
+627,194,1516,1,"Carl Sagan"
+628,458,1517,1,
+629,459,1517,2,
+630,460,1518,1,
+631,461,1518,2,
+632,462,1519,1,
+633,463,1520,1,"A. Pannekoek"
+634,464,1521,1,"Gerald P. Kuipler ed."
+635,465,1522,1,"Michael Woolfson"
+636,466,1523,1,"Ken Croswell"
+637,223,1524,1,
+638,224,1524,2,
+639,225,1524,3,
+640,467,1525,1,"Douglas A Vakoch"
+641,468,1526,1,
+642,469,1527,1,"Alan E. Nourse"
+643,470,1528,1,"Wolfgang Steinicke"
+644,471,1529,1,"F. Zwicky"
+645,191,1530,1,
+646,472,1531,1,"W. Filchner"
+647,473,1531,2,"E. Przybyllok"
+648,474,1531,3,"T. Hagen"
+649,265,1532,1,
+650,475,1533,1,
+651,476,1534,1,
+652,477,1535,1,
+653,265,1536,1,
+654,478,1537,1,
+655,479,1538,1,"P. M. S. Blackett"
+656,129,1539,1,
+657,480,1540,1,
+658,481,1541,1,"E. R. Cohen"
+659,482,1541,2,"Kenneth M. Crowe"
+660,483,1541,3,"Jesse W. M. Dumond"
+661,484,1542,1,"J. A. Hynek"
+662,485,1543,1,"Eugene Fairfield MacPike"
+663,486,1544,1,"William David Compton"
+664,487,1546,1,"Emilio Segre"
+665,267,1547,1,
+666,409,1548,1,
+667,488,1549,1,
+668,489,1550,1,
+669,490,1551,1,"Walter J. Maciel"
+670,491,1552,1,"Mario Bertolotti"
+671,492,1553,1,"William F. van Altena"
+672,493,1554,1,"Arthur Wilcox"
+673,180,1555,1,
+674,494,1556,1,"D. J. X. Mongomery"
+675,495,1557,1,"Laurel L. Wilkening ed."
+676,496,1558,1,
+677,497,1559,1,"Wil Tirion"
+679,489,1562,1,
+680,498,1563,1,"A. Vibert Douglas"
+681,499,1564,1,
+682,500,1564,2,
+683,136,1565,1,
+684,191,1566,1,
+685,501,1567,1,
+686,502,1567,2,
+687,503,1568,1,
+688,504,1568,2,
+689,242,1569,1,
+690,145,1569,2,"A. C. B. Lovell"
+691,505,1570,1,"J. L. Pawsey"
+692,506,1570,2,"R. N. Bracewell"
+693,507,1571,1,
+694,508,1572,1,"Jeremy Gray"
+695,510,1573,1,"Kevin McKready"
+696,511,1574,1,
+697,366,1575,1,"Marcia Bartusiak"
+698,295,1576,1,"I. Berhard Cohen"
+699,512,1577,1,"Fre Hoyle"
+700,513,1578,1,"Bernhart"
+701,514,1578,2,"Bennett"
+702,515,1578,3,
+703,516,1579,1,"Robert H. Baker"
+704,516,1580,1,"Robert H. Baker"
+705,518,1582,1,"John Couch Adams"
+706,64,1583,1,"A. S. Eddington"
+707,519,1584,1,"Abert J. Hoskinson"
+708,520,1584,2,"J. A. Duerksen"
+709,75,1585,1,
+710,439,1586,1,"David C. Black Ed."
+711,49,1587,1,
+712,521,1588,1,"Riccardo Giacconi"
+713,445,1589,1,"Y. Kondo ed."
+714,522,1590,1,"Stephen J. Edberg"
+715,523,1591,1,"Zdenek Sekanina ed."
+716,524,1591,2,"Lori Fry Production Editor"
+717,40,1592,1,"Hermann A. Bruck"
+718,439,1593,1,"David C. Black ed."
+719,29,1596,1,"Angux Armitage"
+720,351,1597,1,"C. A. Young"
+721,525,1598,1,"J. B. Sidgwick"
+722,526,1599,1,"Brian G. Marsden"
+723,527,1600,1,"E. I. Fiesenheiser"
+724,528,1601,1,
+725,529,1602,1,"James Axtell"
+726,182,1603,1,"Henry Norris Russell"
+727,530,1603,2,"Charlotte E. Moore"
+728,531,1604,1,"Roland Muller"
+729,532,1605,1,"Annie S. D. Maunder"
+730,446,1605,2,"E. Walter Maunder"
+731,533,1606,1,
+732,534,1607,1,
+733,535,1608,1,"N. F. Mott"
+734,536,1609,1,"Dieter B. herrmann"
+735,537,1610,1,"Chandra Wickramasinghe"
+736,538,1611,1,"Margot Lee Shetterly"
+737,539,1612,1,"George Gamow"
+742,540,1613,1,"Theodore von Karman"
+743,541,1613,2,"Lee Edson"
+744,136,1614,1,
+745,542,1615,1,"J. M. A. Danby"
+746,543,1616,1,"Henry C. King"
+747,544,1617,1,"Bart J. Bok"
+748,545,1617,2,"Priscilla F. Bok"
+749,546,1618,1,"David Todd"
+750,547,1619,1,
+751,548,1620,1,"J. Hedley Robinson"
+752,549,1621,1,"W. J. Humpreys"
+753,447,1622,1,
+754,496,1623,1,
+755,447,1624,1,
+756,336,1625,1,
+757,550,1626,1,"Clifford Cunningham"
+758,551,1627,1,"Astrod Elbers"
+759,552,1628,1,"G. C. McVittie"
+760,553,1629,1,"A. Unsold"
+761,122,1631,1,
+762,554,1632,1,
+763,552,1633,1,
+764,96,1634,1,
+765,220,1635,1,
+766,492,1635,2,
+767,222,1635,3,
+768,49,1636,1,
+769,555,1637,1,"William A. Fowler"
+770,544,1638,1,
+771,556,1639,1,
+772,265,1640,1,
+773,233,1641,1,
+774,265,1642,1,
+775,557,1643,1,
+776,558,1644,1,
+777,447,1645,1,
+778,559,1646,1,"Walter Bartky"
+779,560,1647,1,
+780,561,1648,1,"Allan Sandage"
+781,265,1509,1,
+782,265,1370,1,
+783,265,1424,1,
+784,265,1545,1,
+785,562,1649,1,
+786,563,1650,1,"Harlan True Stetson"
+787,432,1651,1,"Michael Perryman"
+788,564,1652,1,"Robert A. Millikan"
+789,565,1653,1,
+790,349,1654,1,"A. D. Thackeray"
+791,548,1655,1,"J. Hedley Robinson"
+792,566,1655,2,"James Muirden"
+793,566,1620,2,"James Muirden"
+794,548,,1,
+795,566,,2,
+796,567,1657,1,"E. W. H. Selwyn"
+797,568,1658,1,"Jean Texereau"
+798,86,1659,1,
+799,26,1659,2,
+800,257,1662,1,
+801,257,1663,1,
+802,468,1664,1,"William Poundstone"
+803,379,1665,1,"Russell M. Genet"
+804,387,1665,2,"Donald S. Hayes"
+805,387,1666,1,
+806,389,1666,2,"David R. Genet"
+807,379,1666,3,"Russell M. Genet"
+808,569,1667,1,"Mark Bowen"
+809,257,1668,1,
+810,570,1669,1,
+811,570,1670,1,
+812,571,1671,1,"Priscilla Frisch ed."
+813,572,1672,1,
+814,573,1673,1,
+815,574,1673,2,
+816,575,1673,3,
+817,576,1674,1,
+818,577,1674,2,
+819,578,1674,3,
+820,579,1674,4,
+821,580,1674,5,
+822,581,1674,1,
+823,582,1675,1,
+824,583,1675,2,
+825,584,1675,3,
+826,585,1676,1,
+827,586,1677,1,
+828,587,1678,1,
+829,588,1679,1,
+830,589,1680,1,
+831,590,1681,1,
+832,592,1682,1,
+833,593,1682,2,
+834,594,1683,1,
+835,595,1684,1,
+836,191,1685,1,
+837,596,1685,2,
+838,594,1686,1,
+839,259,1687,1,"W. Marshall Watts"
+840,161,1688,1,
+841,597,1689,1,
+842,82,1689,2,
+843,598,1690,1,
+844,599,1690,2,
+845,600,1691,1,
+846,601,1692,1,
+847,438,1692,2,
+848,602,1692,3,
+849,603,1692,4,
+850,570,1693,1,
+851,570,1694,1,
+852,252,1695,1,"Alan Stern"
+853,604,1695,2,"David Grinspoon"
+854,65,1696,1,"David Evans"
+855,70,1696,2,"J. Deral Mulholland"
+856,193,1697,1,"I. S. Shklovsky"
+857,191,1698,1,
+858,605,1699,1,"George Z. Dimitroff"
+859,606,1699,2,"James G. Baker"
+860,544,1700,1,
+861,545,1700,2,
+863,265,1701,1,
+864,464,1702,1,"Gerarl P. Kuiper ed."
+865,607,1702,2,"Barbara M. Middlehurst ed."
+866,608,1703,1,"F. J. M. Stratton"
+867,609,1704,1,"C. V. L. Charlier"
+868,610,1705,1,"Jesse L. Greenstein"
+869,611,1706,1,"Adriaan Blaauw"
+871,612,1706,2,"Maarten Schmidt"
+872,145,1707,1,"Bernard Lovell"
+873,144,1708,1,
+875,613,1709,1,
+876,464,1710,1,
+877,129,1711,1,
+878,129,1712,1,
+879,379,1713,1,
+880,614,1713,2,
+881,615,1714,1,
+882,616,1714,2,
+883,617,1715,1,
+884,587,1716,1,
+885,35,1717,1,
+886,618,1718,1,
+887,619,1719,1,"A. G. G. M. Tielens"
+888,620,1719,2,"T. P. Snow"
+889,570,1720,1,
+890,621,1721,1,
+891,622,1721,2,
+892,623,1722,1,
+893,624,1723,1,"Alan Cook"
+894,625,1724,1,"Peter L. Manly"
+895,136,1725,1,
+896,626,1725,2,"R. W. Carder"
+897,627,1726,1,"Sara Schechner Genuth"
+898,628,1727,1,"David Strauss"
+899,629,1728,1,"L. Silberstein"
+900,195,1729,1,"W. M. Smartt"
+901,630,1730,1,"Harm J. Habing"
+902,631,1731,1,"H. C.Plummer"
+903,632,1732,1,
+904,633,1732,2,
+905,634,1732,3,
+906,635,1733,1,
+907,636,1733,2,
+908,637,1733,3,
+909,638,1733,4,
+910,639,1733,5,
+911,176,1734,1,
+912,179,1735,1,
+913,640,1736,1,"William R. Corliss"
+914,200,1737,1,
+915,641,1738,1,"Laurence J. November"
+916,642,1739,1,"Silvanus P. Thompson"
+917,643,1740,1,"Lynn Thorndike"
+918,644,1741,1,
+919,645,1742,1,"R. A. Sampson"
+920,646,1743,1,"H. H. Turner"
+921,647,1744,1,
+922,65,1745,1,
+923,65,1746,1,
+924,88,1747,1,
+925,75,1748,1,
+926,173,1749,1,
+927,648,1750,1,
+928,648,1751,1,
+929,648,1752,1,

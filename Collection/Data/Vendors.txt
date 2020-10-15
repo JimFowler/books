@@ -1,3 +1,4 @@
+"VendorID","Name","MailingAddress","MailingCity","MailingState/Prov","MailingCountry","MailingPostalCode","ShippingAddress","ShippingCity","ShippingState/Prov","ShippingCountry","ShippingCode","PhoneNumber","FaxNumber","EmailAddress","URL","Comments"
 2,"Jeff Weber Rare Books","P.O Box 3368","Glendale","CA","USA","91221-0368","1923 Foothill Drive","Glendale","CA","USA","91201-1242","1-323-344-9332","1-323344-9267","info@weberrarebooks.com","#http://www.abaa-booknet.com/alldlrs/sc/91221jef.html#","Jeff and Linda Weber, 7AM - 10PM PT seven days a week"
 4,"Knollwood Books","P.O. Box 197","Oregon","WI","USA","53575-0197","6211 Knollwood Dr","Oregon","WI","USA","53575","1-608-835-8861","1-608-835-8421","books@tdsnet.com",,"Lee and Peggy Price"
 5,"19th Century Shop","1047 Hollins St","Baltimore","MD","USA","21223",,,,,,"(301)539-2586","(301)727-2681","rarebooks@19thcenturyshop.com","#http://www.19thcenturyshop.com/#","Fine books and manuscripts,  first ed.  Excellent quality"
@@ -132,8 +133,7 @@
 142,"Ronald Press Company",,,,,,,,,,,,,,,
 143,"Rinehart and Company",,,,,,,,,,,,,,,
 144,"Science Press Printing Company",,"Lancaster","PA",,,,,,,,,,,,
-145,"BookFeller",,"Fort Davis","TX",,"79734",,,,,,,,,,"Nel and Jerry
-opened in 2007"
+145,"BookFeller",,"Fort Davis","TX",,"79734",,,,,,,,,,"Nel and Jerry opened in 2007"
 146,"Interscience Publishers, Inc.","250 Fifth Ave","New York","NY",,,,,,,,,,,,
 147,"Follett's Intellectual Property","2402 Guadalupe Street","Austin","TX",,"78705",,,,,,"(512)478-0007",,,"#http://intellectualpropertyaustin.com#",
 148,"Imperial College Press","57 Shelton Street","Covent Garden, London",,"UK","WC2H 9HE",,,,,,,,,,
@@ -278,8 +278,7 @@ opened in 2007"
 291,"Zetetic Books","46 Meadow Road","Berkhamsted",,"UK","HP4 1EB",,,,,,,,"books@zeteticbooks.com","#http://www.zeteticbooks.com#",
 292,"Sevington Books","St. Leonards Lodge, 100 Church Road","Sevington","Kent","UK","TN24 0LF",,,,,,,,,,
 293,"Zubal Books","2969 W 25th Street","Cleveland","OH",,"44113",,,,,,"216-241-7540","216-241-6966","info@zubal.com","#http://www.zubal.com/#","also on ABE books"
-294,"Dickson Street Bookshop","325 West Dickson","Fayetteville","AR",,"72701",,,,,,"479-442-8182",,"mail@dicksonstreetbooks.com","#http://www.dicksonstreetbooks.com#","M-S 9-9
-Sunday 10-6"
+294,"Dickson Street Bookshop","325 West Dickson","Fayetteville","AR",,"72701",,,,,,"479-442-8182",,"mail@dicksonstreetbooks.com","#http://www.dicksonstreetbooks.com#","M-S 9-9 Sunday 10-6"
 295,"Dartmouth College",,"Hanover","NH",,,,,,,,,,,,
 296,"University of Nebraska Press",,"Lincoln","NE",,,,,,,,,,,,
 297,"Artis Books & Antiques","429 Fifth Street","Calumet","MI",,"49913",,,,,,"906-337-1534",,"artisbooks@ymail.com",,"via ABE Books"
