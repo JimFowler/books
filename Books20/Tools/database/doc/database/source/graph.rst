@@ -240,6 +240,9 @@ To create a constraint::
   CREATE CONSTRAINT NameOfConstraint on (l:Label) ASSERT l.property IS UNIQUE;
   CREATE CONSTRAINT NameOfConstraint on (l:Label) ASSERT exists(l.property);
 
+Noe the uniqueness constraint does not require all nodes of type Label
+to have have that property, i.e. it is not an existance constraint.
+
 To create a constraint on a relationship::
 
   create constraint NameOfConstraint on ()-[r:REL]-() assert exists(r.prop);
@@ -255,12 +258,14 @@ To delete a constraint::
 
   DROP CONSTRAINT NameOfConstraint
 
-To create combined contra int or node key::
+To create combined constraint or node key::
 
   CREATE CONSTRAINT NameOfConstraint on (l:Label)
   ASSERT(l.prop1, l,prop2) IS NODE KEY;
 
- A node key is also used as a composite index on the Label node.
+ A node key is also used as a composite index on the Label node.  For
+ a constraint which is a node key, all nodes of type Label must have
+ the properties (existance) and the combination must be unique.
 
 Using Indexes
 _____________

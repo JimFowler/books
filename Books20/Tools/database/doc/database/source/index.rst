@@ -11,7 +11,10 @@ Welcome to Books20 Database documentation!
    :caption: Contents:
 
    introduction
-   neo4j   
+   questions
+   neo4j
+   graph
+   design
 
 Indices and tables
 ==================
