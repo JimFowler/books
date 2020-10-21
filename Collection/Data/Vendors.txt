@@ -1,4 +1,4 @@
-"VendorID","Name","MailingAddress","MailingCity","MailingState/Prov","MailingCountry","MailingPostalCode","ShippingAddress","ShippingCity","ShippingState/Prov","ShippingCountry","ShippingCode","PhoneNumber","FaxNumber","EmailAddress","URL","Comments"
+"VendorID","Name","MailingAddress","MailingCity","MailingStateProv","MailingCountry","MailingPostalCode","ShippingAddress","ShippingCity","ShippingStateProv","ShippingCountry","ShippingCode","PhoneNumber","FaxNumber","EmailAddress","URL","Comments"
 2,"Jeff Weber Rare Books","P.O Box 3368","Glendale","CA","USA","91221-0368","1923 Foothill Drive","Glendale","CA","USA","91201-1242","1-323-344-9332","1-323344-9267","info@weberrarebooks.com","#http://www.abaa-booknet.com/alldlrs/sc/91221jef.html#","Jeff and Linda Weber, 7AM - 10PM PT seven days a week"
 4,"Knollwood Books","P.O. Box 197","Oregon","WI","USA","53575-0197","6211 Knollwood Dr","Oregon","WI","USA","53575","1-608-835-8861","1-608-835-8421","books@tdsnet.com",,"Lee and Peggy Price"
 5,"19th Century Shop","1047 Hollins St","Baltimore","MD","USA","21223",,,,,,"(301)539-2586","(301)727-2681","rarebooks@19thcenturyshop.com","#http://www.19thcenturyshop.com/#","Fine books and manuscripts,  first ed.  Excellent quality"
@@ -285,7 +285,6 @@
 298,"Shire Book Shop","305 Union Street","Franklin","MA",,"02038",,,,,,"508-528-5665",,"admin@shirebookshop.com","www.shirebookshop.com#http://www.shirebookshop.com#","Jack Boland and Jean Wallick"
 299,"Books Express",,,,,,,,,,,,,,,"via ABE Books"
 300,"Shortbooks","The Cottage Church Lane","Great Hallingsbury","Bishops Stortford","UK","CM22 7UA",,,,,,,,,,"via ABE Books"
-302,,,,,,,,,,,,,,,,"for Carolines Attic"
 303,"Eastman Kodak Company",,"Rochester","NY",,,,,,,,,,,,
 304,"MW Books Ltd","364 Degraw Ave","New York","NY",,"11231",,,,,,,,,,"via ABE Books"
 305,"Bibliohound","6045 Paseo Carreta","Carlsbad","CA",,"92009-2249",,,,,,,,,,"via ABE Books"
@@ -308,7 +307,7 @@
 322,"Bolin Creek Books","612 North Greensboro Street","Carrboro","NC","USA","27510-1702",,,,,,,,,,
 323,"Circle City books","3118 W. Camino Axul","Tucson","AZ","USA","85746",,,,,,,,,,"Via ABE Books"
 324,"American Technical Society",,"Chicago","IL","USA",,,,,,,,,,,
-325,,"111 Gloucester Street","Arlington","MA","USA","02476",,,,,,,,,,
+325,"Private Address","111 Gloucester Street","Arlington","MA","USA","02476",,,,,,,,,,"Unknown vendor, no books linked to it. But the address seems reasonable"
 326,"BookManBookWoman","3000 Medial","Nashville","TN","USA","37215",,,,,,,,,,"via ABE Books"
 327,"Warwick Books","101 Warwick Place","South Pasedena","CA","USA","91030",,,,,,,,,,"via ABE Books"
 328,"Peter L. Masi - books","PO Box B","Montague","MA","USA","01351",,,,,,,,,,"via ABE Books"
@@ -322,7 +321,6 @@
 336,"Fairborn Observatory","1247 Folk Road","Fairborn","OH",,"45324",,,,,,,,,,
 337,"Weidenfeld & Nicolson","10 east 53rd Street","New York","NY",,"10022",,,,,,,,,,"A division of Wheatland Corporation"
 338,"Society for Promoting Christian Knowledge",,"London","UK",,,,,,,,,,,,
-339,,,,,,,,,,,,"J",,,,
 340,"Imaginary Books & Collectables","505 Burro Avenue","Cloudcroft","NM","USA","88317",,,,,,"575-601-2012",,,"#https://imaginarybooksincloudcroft.com/#","Ed Woten bookseller"
 341,"The Sourcebook Project","PO Box 107","Glen Arm","MD","USA","21057",,,,,,,,,,
 342,"B.G. Teubner",,"Leipzig",,"Germany",,,,,,,,,,,

@@ -232,7 +232,7 @@
 262,"Stoney","Johnstone","George",,,
 263,"Aitken","Grant","Robert",,,
 264,"Edmonson","K.","Frank",,,
-265,,,,,,"Empty Record"
+265,"Empty Record",,,,,"Delete this entry after relationships are built"
 266,"Hartree","R.","D.",01/01/1897 0:00:00,01/01/1958 0:00:00,"F.R.S., Plummer Professor of mathematical physics at Cambridge University"
 267,"Sommerfeld",,"Arnold",01/01/1868 0:00:00,01/01/1951 0:00:00,
 268,"Martin","R.","A.",,,
@@ -376,7 +376,7 @@ previously Librarian, Royal Observatory, Edinburgh"
 365,"Montgomery","L","Scott",,,
 366,"Bartusiak",,"Marcia",,,"Teaches in the graduate program in science writing at MIT. Two time winner of the AIP Science Writing Award."
 367,"Mitchell","G","Mark",,,"Children's author"
-368,"Opik","J","Ernst",,,"Armagh Observatory, Armagh, Nothern Ireland.  The last name should have an umlaut over the 'O'"
+368,"Öpik","J","Ernst",,,"Armagh Observatory, Armagh, Nothern Ireland."
 369,"Zimmerman",,"Robert",,,
 370,"Barrow","D","John",,,"Professor of Mathematical Sciences, Cambridge University"
 371,"Mitton",,"Simon",01/01/1946 0:00:00,,
