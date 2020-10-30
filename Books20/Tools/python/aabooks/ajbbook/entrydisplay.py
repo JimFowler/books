@@ -18,6 +18,11 @@
 '''This file contains the functions to convert an AJBentry to/from the
 display in the BookEntry form. The file is used by ajbwindow.py.
 
+These functions should be split into
+get_string from form()
+convert_string_to_entry()
+so that we can properly test them with unittests
+
 '''
 import re
 
@@ -355,20 +360,24 @@ def display_entry_publishers(self, entry):
     entrya = []
     publishers = self.publEntry.toPlainText()
     if len(publishers) != 0:
-        plist = publishers.split('\n')
-        for publ in plist:
-            pdict = {}
-            place, publisher = publ.split(':')
-            if not place:
-                place = ''
-            if not publisher:
-                publisher = ''
+        try:
+            plist = publishers.split('\n')
+            for publ in plist:
+                pdict = {}
+                place, publisher = publ.split(':')
 
-            pdict['Place'] = place.strip()
-            pdict['PublisherName'] = publisher.strip()
-            entrya.append(pdict)
+                if not place:
+                    place = ''
+                if not publisher:
+                    publisher = ''
 
-    entry['Publishers'] = entrya
+                pdict['Place'] = place.strip()
+                pdict['PublisherName'] = publisher.strip()
+                entrya.append(pdict)
+
+            entry['Publishers'] = entrya
+        except ValueError:
+            pass
 
 def display_entry_edition(self, entry):
     '''Convert display editionEntry to entry Edition.'''
