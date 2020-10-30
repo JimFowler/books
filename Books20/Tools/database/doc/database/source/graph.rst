@@ -502,3 +502,69 @@ node or relationship properties and put them in new nodes or '
 relationship. The goal is to optimize queries by finding anchor
 nodes quickly and not having to search the entire database
 multiple times for a query.
+
+
+Basic Neo4j Administration
+**************************
+
+Neo4j support a Community Edition and an Enterprise Edition.  Neo4j
+Desktop includes the Enterprise Edition but can not be used for
+production enviroments. The Noe4j server runs the Community Edition.
+The Community Edition does not support multiple database, node key
+constraints, property existence constraints, or user roles.
+
+For the server Community Edition the database, import, plugins, and
+logs directories are under ``/var/lib/neo4j``. A configuration file
+resides in ``/etc/neo4j/neo4j.conf``
+
+You can use ``systemctl`` to start/stop the instance of the server.
+set initial password for the neo4j user as ``neo4j-admin
+set-initial-password newPassword``. The current user is ``neo4j``
+and the password is ``neo4jadmin``.
+
+Use ``cypher-shell`` or a browser to connect to the neo4j server.  You
+can use both together. The URL for a browser is
+http://localhost:7474/browser/
+
+Can't create a database in the Community Edition so we have to use the
+default database ``neo4j``. Question, can I rename the ``neo4j``
+database? No! Can I delete the neo4j database and create a single new
+one? Can't drop a default database. Can't create new database in the
+community edition.  So it doesn't look like to can drop ``neo4j``
+database and create a ``collection`` database in the Community Edition.
+
+I can stop the service and dump the ``neo4j`` database but I still
+can't copy the database.  Can we edit the neo4j.conf file to change
+the default location and the default database to be collection and
+have the system create collection? Yes, I can!! Edit the neo4j.conf
+file.  Change dbms.default_database and dbms.directories.data.  The
+data directory must by owned be neo4j:neo4j.  Run ``neo4j-admin
+set-initial-password`` to change the default password for the neo4j
+user from ``neo4j``.
+
+Check a database consistency if you suspect a problem or when you make
+a backup. Stop the running database and execute ``neo4j-admin
+check-consistency --database=<dbname> --report-dit=<report location>
+--verbose``
+
+Configure and maintain plugins::
+
+  download the plugin .jar file (unzip if necessary)
+  put the .jar file in the plugins directory
+  change ownership to neo4j:neo4j
+  ensure the jar file has execute permissions
+  modify neo4j.conf to sandbox the procedures
+  optionally whitelist the procedures that weill be used.
+  restart the neo4j instance
+  confirm the procedures are available.
+
+
+Configuring http ports.  The http port is enabled at 7474 but the
+https port is disabled at 7473.  Which are enabled and what the port
+numbers are can be changed in the neo4j.conf file. Can check
+configuration values through ``CALL dbms.listConfig() YIELD name,
+value RETURN name, value;``.  You can use ``WHERE name CONTAINS
+"http"`` if you want to select out specific configurations Be default
+the instance will only accept local connection.  Uncommenct
+``dbms.connectors.default_listen_address=0.0.0.0``. But use https for
+these connections.  But may not be allowed on the Community Edition.
