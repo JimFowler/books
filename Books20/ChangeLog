@@ -1,3 +1,15 @@
+2020-10-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/entrydisplay.py (display_entry_publishers):
+	Add try/except clause around the parsing of the place:publisher
+	string parsing.  Had a problem with a space in the entry form
+	that caused ajbbooks to crash.
+
+	Should split the entry_to_display() and display_to_entry()
+	procedures into read/write_form()
+	convert_string/entry_to_entry/string().  This will allow unittests
+	on the string conversion functions
+
 2020-09-06  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/lib/search.py: Added unit tests.
