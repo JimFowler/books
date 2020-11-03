@@ -1,3 +1,8 @@
+2020-11-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/symbols.txt: Added enn with cedilla
+	to symbol table.  This may be the only place it is used.
+
 2020-10-30  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/entrydisplay.py (display_entry_publishers):
