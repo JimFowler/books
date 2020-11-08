@@ -568,3 +568,111 @@ value RETURN name, value;``.  You can use ``WHERE name CONTAINS
 the instance will only accept local connection.  Uncommenct
 ``dbms.connectors.default_listen_address=0.0.0.0``. But use https for
 these connections.  But may not be allowed on the Community Edition.
+
+Cypher Query Tuning in Neo4j
+****************************
+
+How Queries Work in Neo4j
+=========================
+
+EXPLAIN <query> returns the execution plan but does not actually
+run the query.
+
+PROFILE <query> runs the query and returns
+
+  * rows - the number of rows passed between steps.  They take both
+    memory and CPU resourses.  Look for spikes in the number of rows
+    to find areas where you can tune the query.  'rows' returned is
+    also know as the cardinality of the step.
+
+  * db hits - hits between steps can't be compared because of the
+    complexity of how data is stored between steps. Try to reduce
+    the amount of data returned  but utilizing indexes.
+
+  * elapsed time - the time includes the time to run the query
+    as well as the time to return the results.
+
+  * memory - the amount of extra heap required to execute that
+    operator in the excution plan.
+
+The command ``:sysinfo`` will show the amount of page cache available
+and the hit ratio.  The cache is used to store all or part of the
+database in memory.  If the database can be stored entirely in the
+page cache the hit ratio will be 100\%
+
+Eager operations gather all the row information at once. Some examples
+of eager operation are ``MATCH``, ``FOREACH``, ``ORDER_BY``, ``DISTINCT``,
+and aggregating functions such as ``collect()``, ``count()``. ``avg()``,
+``min()``, ``max()``, etc.
+
+To improve an execution plan
+
+  * avoid redundant work and operations
+  * early in the query, eliminate data that is going to be filter
+    out later in the execution
+  * recognize less expensive ways to to what you want
+
+    * improve the cypher statement
+    * can you ensure that the query is pipelined rather than slotted?
+    * will APOC perform better for some processing?
+    * will a stored procedure perform better?
+
+Use ``call apoc.meta.graph()`` or ``call db.schema.visualization()``
+to visualize the graph structure. The former returns count information
+that the latter does not. You can see the structure along with the
+indexes available using ``:schema``.  Counts and labels can also be seen
+using ``call apoc.meta.stats()``.
+
+Information used during query processing includes
+
+  * node labels, automatically indexed
+  * node degree
+  * count store, querys with directed relationships use this
+  * indexes
+  * relationships
+  * properties
+
+The cost of access from least expensive to most expensive
+
+  * Anchor node label, indexed anchor node properties
+  * relationship degrees
+  * relationship type and direction
+  * non-indexed anchor node properties
+  * downstream node labels
+  * relationship properties, downstream node properties
+
+Best practice is to use parameters in your queries.
+
+Preparing for Query Tuning
+==========================
+
+Hardware settings. Described in more detail in the Operations
+Manual under Performance.
+
+  * Disk - use either SSD or have enough IOPs on the system
+
+    * use ``iotop`` for the disk usage
+
+    * on linux, configure the disk scheduler to ``noop`` or ``deadline``,
+      mount the database volume with ``noatime``.
+      
+  * RAM - memory is important, ideally the entire graph should fit into
+    RAM.
+
+    * use ``top`` or ``htop``
+
+  * CPU cores - the more the better
+
+  * Number of open files - for a large database this should be
+    set to 40,000 if there are many indexes and users
+
+  * Neo4j - use the latest version  
+
+You can use the following to inspect the memory usage. Values can be
+changed in neo4j.conf.::
+
+  CALL dbms.listConfig YIELD name, value
+  WHERE name START WITH 'dbms.memory'
+  RETURN name, value;
+
+General pattern is to use ``ORDER BY`` before using ``COLLECT()[..x]``
