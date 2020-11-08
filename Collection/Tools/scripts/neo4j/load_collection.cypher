@@ -91,7 +91,11 @@ CREATE (book:Book {bookId: toInteger(row.BookID),
 
   // Delete the empty Person record PersonId == 265
   MATCH (empty_person:Person {personId: 265}) detach delete empty_person;
-      
+
+  // Create the Indexes
+  CREATE INDEX LocationIndex for (b:Book) on (b.publishedAt);
+
+
   // load the relationship tables
   LOAD CSV WITH HEADERS FROM 'file:///BookAuthor.txt' AS row
   MATCH (book:Book), (person:Person)
