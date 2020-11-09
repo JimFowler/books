@@ -60,7 +60,37 @@ def getargs():
     return args
 
 
-def aaanum(num, numstr):
+def parse_authors(author_str):
+    pass
+
+def parse_title(title_str):
+    pass
+
+def parse_publishing(pub_str):
+    pass
+
+def parse_year(year_str):
+    pass
+
+def parse_keywords(keyword_str):
+    pass
+
+def parse_aaanum(numstr):
+    pass
+
+def parse_j_key(j_str):
+    pass
+
+def parse_m_key(m_str):
+    pass
+
+def parse_b_key(b_str):
+    pass
+
+def parse_l_key(l_str):
+    pass
+
+def parse_plus_key(plus_str):
     pass
 
 
@@ -69,20 +99,30 @@ def aaanum(num, numstr):
 #
 
 def main():
-    """Set up the windows and start the event loop for aaacovert."""
+    '''For every line in the file, create a dictionary of key - keyvalue.
+    Then parse the dictionary and convert the fields to an AJBentry type.
+    Added the temporary entry to a bookfile list. Finally write the bookfile
+    as an XML file of the form aaaXXXsYYY.xml.
+
+    '''
+    
     args = getargs()
 
     if args.verbose:
         pprint(args)
 
     # set up required data structures and variables
+    # generate the output file name and add to bf.
     bf = bookfile.BookFile()
     tmp_entry = ajbentry.AJBentry()
+    
     with open(args.filename, 'r', encoding='ISO-8859-1') as f:
         lines = f.readlines()
         count = 0
         for l in lines:
             count += 1
+
+            # convert the line to a dictionary
             elements = l.strip().split('|')
 
 
@@ -93,30 +133,49 @@ def main():
             # convert element dictionary to a AJBentry
             tmp_entry.blank_entry()
 
-            try:
-                tmp_entry['Year'] = element_dict['y']
-            except KeyError:
-                pass
+            # Parse the elements of the dictionary
+            for key in element_dict.keys():
+                #print('key is', key)
+
+                if key == 'a':
+                    parse_authors(element_dict['a'])
+
+                elif key == 't':
+                    parse_title(element_dict['t'])
             
-            try:
-                tmp_entry['Title'] = element_dict['t']
-            except KeyError:
-                pass
-            
-            try:
-                tmp_entry._parse_ajbnum(element_dict['n'])
-            except KeyError:
-                pass
-                
-            if count < 10:
-                pass
-                #print('printing elements dict')
-                #print(element_dict)
-                #pprint(elements)
-                #pprint(tmp_entry)
+                elif key == 's':
+                    parse_publishing(element_dict['s'])
+
+                elif key == 'y':
+                    parse_year(element_dict['y'])
+                    
+                elif key == 'k':
+                    parse_keywords(element_dict['k'])
+                                   
+                elif key == 'n':
+                    parse_aaanum(element_dict['n'])
+
+                elif key == 'j':
+                    parse_j_key(element_dict['j'])
+                    
+                elif key == 'm':
+                    parse_m_key(element_dict['m'])
+                    
+                elif key == 'b':
+                    parse_b_key(element_dict['b'])
+                    
+                elif key == 'l':
+                    parse_l_key(element_dict['l'])
+                    
+                elif key == '+':
+                    parse_plus_key(element_dict['+'])
+                    
+                else:
+                    print('Unknown key: {}'.format(key))
+                    print(l)
+                    
 
 
-    print('length of bookfile', len(bf._entry_list))
 #
 # Main work
 #

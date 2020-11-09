@@ -1,3 +1,10 @@
+2020-11-08  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/aaaconvert.py (main): Worked on converting
+	AAA files to bookfile.xml. Revised script and searched for all
+	keys in the listing.  Added documetation about the files in
+	Tools/python/docs/aaaconvert.
+
 2020-11-03  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/lib/symbols.txt: Added enn with cedilla
