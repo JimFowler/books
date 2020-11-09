@@ -94,7 +94,7 @@ def parse_title(entry, title_str):
 
     '''
 
-    entry['Title'] = title_str.replace('.', ';')
+    entry['Title'] = title_str.replace('.', ';').rstrip(';')
     
 def parse_publishing(entry, pub_str):
     '''Place the source information in the comment field
@@ -102,7 +102,7 @@ def parse_publishing(entry, pub_str):
     parse this string automatically.
 
     '''
-    entry['Comments'] = pub_str
+    entry['Others'].append(pub_str)
     
 
 def parse_year(entry, year_str):
@@ -146,16 +146,16 @@ def parse_j_key(entry, j_str):
     pass
 
 def parse_m_key(entry, m_str):
-    pass
+    entry['Others'].append(m_str)
 
 def parse_b_key(entry, b_str):
-    pass
+    entry['Others'].append(b_str)
 
 def parse_l_key(entry, l_str):
-    pass
+    entry['Others'].append(pub_str)
 
 def parse_plus_key(entry, plus_str):
-    pass
+    entry['Others'].append(plus_str)
 
 
 #
@@ -180,14 +180,15 @@ def main():
     # generate the output file name and add to bf.
     bf = bookfile.BookFile()
     
-    tmp_entry = ajbentry.AJBentry()
     
     with open(args.filename, 'r', encoding='ISO-8859-1') as f:
         lines = f.readlines()
         count = 0
         for l in lines:
             count += 1
-
+            tmp_entry = ajbentry.AJBentry()
+            tmp_entry['OrigStr'] = l
+            
             # convert the line to a dictionary
             elements = l.strip().split('|')
 
@@ -195,11 +196,7 @@ def main():
             del elements[0]
             element_dict = dict(itertools.zip_longest(*[iter(elements)] * 2, fillvalue=""))
 
-            # convert element dictionary to a AJBentry
-            tmp_entry.blank_entry()
-            tmp_entry['OrigStr'] = l
-            
-            # Parse the elements of the dictionary
+            # convert element dictionary by keys to an AJBentry
             for key in element_dict.keys():
                 #print('key is', key)
 
@@ -241,11 +238,12 @@ def main():
                     print(l)
                     
             bf.set_new_entry(tmp_entry)
-            pprint(tmp_entry)
-            print()
-            if count > 9:
-                return
 
+
+    bname = os.path.basename(args.filename)
+    fname, ext = os.path.splitext(bname)
+    bf.write_file_xml(fname + '.xml')
+    
 #
 # Main work
 #
