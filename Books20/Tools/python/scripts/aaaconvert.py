@@ -25,6 +25,9 @@ import sys
 import os
 import argparse
 import itertools
+import re
+
+from nameparser import HumanName
 
 from aabooks.ajbbook import bookfile
 from aabooks.ajbbook import ajbentry
@@ -60,37 +63,98 @@ def getargs():
     return args
 
 
-def parse_authors(author_str):
+def parse_authors(entry, author_str):
+    '''Parse the author/editor string and place the result in the AJBentry
+    entry. If this is a single editor, then (ed.) will be at the end
+    of the string. If there are multiple editors, then (eds.) will be
+    at the end of the string. Names are separated by spaces with all
+    but the last name having a trailing comma. Initials and last names
+    are separated by an underbar.  These names need to go in the
+    Author or Editor field of the AJBentry.
+
+    '''
+
+    names = author_str.split(' ')
+
+    if names[-1] == '(ed.)' or names[-1] == '(eds.)':
+        field = entry['Editors']
+        names.pop(-1)
+    else:
+        field = entry['Authors']
+        
+    namelist = []
+    for name in names:
+        rname = name.replace('_', ' ').strip(',')
+        namelist.append(HumanName(rname))
+
+    field.extend(namelist)
+        
+def parse_title(entry, title_str):
+    '''Parse the title string and add to entry['Title'].
+
+    '''
+
+    entry['Title'] = title_str.replace('.', ';')
+    
+def parse_publishing(entry, pub_str):
+    '''Place the source information in the comment field
+    for now.  Parse by hand unless we can work out how to
+    parse this string automatically.
+
+    '''
+    entry['Comments'] = pub_str
+    
+
+def parse_year(entry, year_str):
+    '''Parse the copyright year from the year string and
+    put in entry['Year'].
+
+    '''
+
+    entry['Year'] = int(year_str)
+
+    
+def parse_keywords(entry, keyword_str):
+    '''Parse the keywords from the keyword_str and
+    put into the new entry['keywords'].  Need to add keywords
+    to the definition of AJBentry.
+
+    '''
+
+    entry['keywords'] = [] # XXX removed this when keywords added to AJBentry
+    keywords = keyword_str.split(' ')
+    for k in keywords:
+        entry['keywords'].append(k.strip(','))
+
+aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-c]{0,1})$')
+def parse_aaanum(entry, num_str):
+    '''Parse the AAA number out of numstr and put the parts
+    into entry['Num'].
+
+    '''
+
+    items = aaa_re.split(num_str)
+    num = entry['Num']
+    num['volume'] = 'AAA'
+    num['volNum'] = int(items[1])
+    num['sectionNum'] = int(items[2])
+    num['subsectionNum'] = 0
+    num['entryNum'] = int(items[3])
+    num['entrySuf'] = items[4]
+
+def parse_j_key(entry, j_str):
     pass
 
-def parse_title(title_str):
+def parse_m_key(entry, m_str):
     pass
 
-def parse_publishing(pub_str):
+def parse_b_key(entry, b_str):
     pass
 
-def parse_year(year_str):
+def parse_l_key(entry, l_str):
     pass
 
-def parse_keywords(keyword_str):
-    pass
-
-def parse_aaanum(numstr):
-    pass
-
-def parse_j_key(j_str):
-    pass
-
-def parse_m_key(m_str):
-    pass
-
-def parse_b_key(b_str):
-    pass
-
-def parse_l_key(l_str):
-    pass
-
-def parse_plus_key(plus_str):
+def parse_plus_key(entry, plus_str):
     pass
 
 
@@ -99,6 +163,7 @@ def parse_plus_key(plus_str):
 #
 
 def main():
+
     '''For every line in the file, create a dictionary of key - keyvalue.
     Then parse the dictionary and convert the fields to an AJBentry type.
     Added the temporary entry to a bookfile list. Finally write the bookfile
@@ -114,6 +179,7 @@ def main():
     # set up required data structures and variables
     # generate the output file name and add to bf.
     bf = bookfile.BookFile()
+    
     tmp_entry = ajbentry.AJBentry()
     
     with open(args.filename, 'r', encoding='ISO-8859-1') as f:
@@ -125,56 +191,60 @@ def main():
             # convert the line to a dictionary
             elements = l.strip().split('|')
 
-
             # convert the list of elements to a dictionary
             del elements[0]
             element_dict = dict(itertools.zip_longest(*[iter(elements)] * 2, fillvalue=""))
 
             # convert element dictionary to a AJBentry
             tmp_entry.blank_entry()
-
+            tmp_entry['OrigStr'] = l
+            
             # Parse the elements of the dictionary
             for key in element_dict.keys():
                 #print('key is', key)
 
                 if key == 'a':
-                    parse_authors(element_dict['a'])
+                    parse_authors(tmp_entry, element_dict['a'])
 
                 elif key == 't':
-                    parse_title(element_dict['t'])
+                    parse_title(tmp_entry, element_dict['t'])
             
                 elif key == 's':
-                    parse_publishing(element_dict['s'])
+                    parse_publishing(tmp_entry, element_dict['s'])
 
                 elif key == 'y':
-                    parse_year(element_dict['y'])
+                    parse_year(tmp_entry, element_dict['y'])
                     
                 elif key == 'k':
-                    parse_keywords(element_dict['k'])
+                    parse_keywords(tmp_entry, element_dict['k'])
                                    
                 elif key == 'n':
-                    parse_aaanum(element_dict['n'])
+                    parse_aaanum(tmp_entry, element_dict['n'])
 
                 elif key == 'j':
-                    parse_j_key(element_dict['j'])
+                    parse_j_key(tmp_entry, element_dict['j'])
                     
                 elif key == 'm':
-                    parse_m_key(element_dict['m'])
+                    parse_m_key(tmp_entry, element_dict['m'])
                     
                 elif key == 'b':
-                    parse_b_key(element_dict['b'])
+                    parse_b_key(tmp_entry, element_dict['b'])
                     
                 elif key == 'l':
-                    parse_l_key(element_dict['l'])
+                    parse_l_key(tmp_entry, element_dict['l'])
                     
                 elif key == '+':
-                    parse_plus_key(element_dict['+'])
+                    parse_plus_key(tmp_entry, element_dict['+'])
                     
                 else:
                     print('Unknown key: {}'.format(key))
                     print(l)
                     
-
+            bf.set_new_entry(tmp_entry)
+            pprint(tmp_entry)
+            print()
+            if count > 9:
+                return
 
 #
 # Main work

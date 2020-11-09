@@ -7,7 +7,7 @@ and they responded that they already had the data files.
 
 The books are generally in section 3 of AAA while the conference
 proceedings are in section 12.  ??? sent both sections to me from all
-73 volumes. The total number of book in these files is
+73 volumes, a total of 126 files. The total number of book in these files is
 13,157. However, I have noted the occasional book in other sections
 that we not includes in these files. It will be necessary to search
 through the volumes of AAA to locate these books.
@@ -51,10 +51,11 @@ The known key fields are
     There are no sequential entry number for a single volumes as there are
     in the early volumes of AJB.
 
-  * s - publishing information. Including place, publisher, pagination,
+  * s - source information. Including place, publisher, pagination,
     and possibly other information. Place and publisher are separated
     by a colon. Reviews are also included here and may have different
-    abbreviations than AJB.
+    abbreviations than AJB. May have to parse this string by hand as
+    it can be very complicated.
 
   * j - the author/editor names are in ISO-8859-1 encoding. This field
     provides a 7-bit clean (ASCII) version of these names. Probably don't need
