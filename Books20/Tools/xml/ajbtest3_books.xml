@@ -93,6 +93,15 @@ Entry format
 	  </Person>
         </Translator>
       </Translators>
+      <TranslationOf> 
+	<Index>
+	  <IndexName>  AJB </IndexName>
+	  <VolumeNumber> 58 </VolumeNumber>
+	  <SectionNumber> 3 </SectionNumber>
+	  <SubSectionNumber> 0 </SubSectionNumber>
+	  <EntryNumber> 4 </EntryNumber>
+	</Index>
+      </TranslationOf>
       <Publishers>
         <Publisher>
           <Place>Oxford</Place>
@@ -125,6 +134,10 @@ Entry format
         <Review>ApJ 166 25</Review>
         <Review>NAT 1985 Nr. 10 114</Review>
       </Reviews>
+      <Keywords>
+        <Keyword>Keyword1</Keyword>
+        <Keyword>keyword2:subkey</Keyword>
+      </Keywords>
       <Comments>
         <Comment>This is the first comment</Comment>
         <Comment>This is the second comment</Comment>
@@ -141,6 +154,9 @@ Entry format
       </Index>
       <Title> My Second Book </Title>
       <subTitle>the Number Two Book</subTitle>
+      <TranslationOf>
+	<Year>1956</Year>
+      </TranslationOf>
       <ReprintOf>
 	<Year>1956</Year>
       </ReprintOf>
