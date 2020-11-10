@@ -112,14 +112,15 @@ class AJBentry(dict):
 
 
     def is_valid_ajbnum(self):
-        """A valid AJB number has a volume number between 1-68
+        """A valid AJB/AAA number has a volume number between 1-73
+        (AJB goes to volume 68 but AAA goes to volume 73)
         and a section number between 1-150
         and an entry number > 0"""
 
         num = self['Num']
 
-        return bool(num['volNum'] > 0 and num['volNum'] < 69 \
-                    and num['sectionNum'] > 0 and num['sectionNum'] < 150 \
+        return bool(num['volNum'] > 0 and num['volNum'] < 74 \
+                    and num['sectionNum'] > 0 and num['sectionNum'] < 151 \
                     and num['entryNum'] > 0 \
                     and (num['entrySuf'] == '' or num['entrySuf'] == 'a' \
                          or num['entrySuf'] == 'b' or num['entrySuf'] == 'c'))

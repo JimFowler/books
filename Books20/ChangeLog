@@ -1,3 +1,9 @@
+2020-11-09  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/ajbentry.py
+	(AJBentry.is_valid_ajbnum): Change volume number limit from 69 to
+	74 to support AAA volumes.
+
 2020-11-08  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/aaaconvert.py (main): Worked on converting
