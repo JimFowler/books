@@ -67,7 +67,9 @@ The known key fields are
 
   * b - this field was not described by ARIBib but it is the ADS
     bibcode for the work. Appears to principally in conference
-    proceedings, part 12.
+    proceedings, part 12. Note that bibcodes are typically associated
+    with journal articles. Journal articles should be dropped from
+    the bookfile.
 
   * l - this field was not described by ARIBib but is appears to be a
     coded link to the databases at the University of Chicago,
