@@ -29,20 +29,14 @@ from aabooks.ajbbook import ajbentry
 
 __VERSION__ = 0.1
 
-__DEFAULTHEADER__ = """Entry format
-
-Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
-
-AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
-
-Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+__DEFAULTHEADER__ = '''
 
 Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 
 For volume AJB ?? Index to the Literature of ????, started, finished, proofread
 
 
-"""
+'''
 # end of defaultHeader
 
 
