@@ -99,6 +99,7 @@ class AJBentry(dict):
         self['Compilers'] = []
         self['Contributors'] = []
         self['Translators'] = []
+        self['TranslationOf'] = ''
         self['Language'] = ''
         self['Others'] = []
         self['Title'] = ''
@@ -108,6 +109,7 @@ class AJBentry(dict):
         self['Price'] = ''
         self['Reviews'] = []
         self['Comments'] = ''
+        self['Keywords'] = []
         self['OrigStr'] = ''
 
 
