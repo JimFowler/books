@@ -52,11 +52,13 @@ def entry_to_display(self, entry):
     entry_display_language(self, entry)
     entry_display_fromlanguage(self, entry)
     entry_display_translators(self, entry)
+    entry_display_transof(self, entry)
     entry_display_compilers(self, entry)
     entry_display_contributors(self, entry)
     entry_display_reprint(self, entry)
     entry_display_reference(self, entry)
     entry_display_others(self, entry)
+    entry_display_keywords(self, entry)
     entry_display_unknown(self, entry)
 
 def entry_display_ajbnum(self, entry):
@@ -201,6 +203,14 @@ def entry_display_translators(self, entry):
                 astr += str(translator)
     self.translatorEntry.setText(astr)
 
+def entry_display_transof(self, entry):
+    '''Convert an Entry TranslationOf to display transofEntry.'''
+
+    astr = ''
+    if entry.not_empty('TranslationOf'):
+        astr += entry['TranslationOf']
+    self.transofEntry.setText(astr)
+
 def entry_display_compilers(self, entry):
     '''Convert an Entry Compilers to display compilersEntry.'''
 
@@ -261,6 +271,20 @@ def entry_display_others(self, entry):
             astr += str(comment)
     self.commentsEntry.setPlainText(astr)
 
+def entry_display_keywords(self, entry):
+    '''Convert an Entry Keywords to display keywordEntry.'''
+
+    astr = ''
+    if entry.not_empty('Keywords'):
+        keywords = entry['Keywords']
+        first = True
+        for keyword in keywords:
+            if not first:
+                astr += '\n'
+            first = False
+            astr += str(keyword)
+    self.keywordEntry.setPlainText(astr)
+
 def entry_display_unknown(self, entry):
     '''Pop a dialog if we get an unknown field type.'''
 
@@ -295,11 +319,13 @@ def display_to_entry(self):
     display_entry_language(self, entry)
     display_entry_fromlanguage(self, entry)
     display_entry_translators(self, entry)
+    display_entry_transof(self, entry)
     display_entry_compilers(self, entry)
     display_entry_contributors(self, entry)
     display_entry_reprint(self, entry)
     display_entry_reference(self, entry)
     display_entry_others(self, entry)
+    display_entry_keywords(self, entry)
 
     return entry
 
@@ -444,6 +470,13 @@ def display_entry_translators(self, entry):
             entrya.append(name)
     entry['Translators'] = entrya
 
+def display_entry_transof(self, entry):
+    '''Convert display transofEntry to entry TranslationOf.'''
+
+    transof = self.transofEntry.text()
+    if len(transof) != 0:
+        entry['TranslationOf'] = transof
+
 def display_entry_compilers(self, entry):
     '''Convert display compilersEntry to entry Compilers.'''
 
@@ -492,6 +525,17 @@ def display_entry_others(self, entry):
         for line in clist:
             entrya.append(line)
     entry['Others'] = entrya
+
+def display_entry_keywords(self, entry):
+    '''Convert display keywordsEntry to entry Keywordss.'''
+
+    entrya = []
+    keywords = self.keywordEntry.toPlainText()
+    if len(keywords) != 0:
+        klist = keywords.split('\n')
+        for line in klist:
+            entrya.append(line)
+    entry['Keywords'] = entrya
 
 #
 #
