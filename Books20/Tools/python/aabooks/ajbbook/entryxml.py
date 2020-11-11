@@ -73,11 +73,13 @@ def entry_to_xml(entry):
     entry_xml_translatedfrom(entry, entryxml)
     entry_xml_language(entry, entryxml)
     entry_xml_translators(entry, entryxml)
+    entry_xml_translationof(entry, entryxml)
     entry_xml_compilers(entry, entryxml)
     entry_xml_contributors(entry, entryxml)
     entry_xml_reprint(entry, entryxml)
     entry_xml_reference(entry, entryxml)
     entry_xml_others(entry, entryxml)
+    entry_xml_keywords(entry, entryxml)
 
     # return the root Entry element
     return entryxml
@@ -186,6 +188,24 @@ def entry_xml_translators(entry, entryxml):
             person = make_person_xml(trans)
             aelm.append(person)
 
+def entry_xml_translationof(entry, entryxml):
+    '''Convert the entry TranslationOf to XML'''
+    # Sometimes the translationof can be just a year number rather than
+    # an AJBnum.  An AJBnum should have decimal points in it and
+    # Years should not, so we look for a decimal point to determine
+    # which it is.
+    if entry.not_empty('TranslationOf'):
+        elm = etree.SubElement(entryxml, 'TranslationOf')
+        if len(entry['TranslationOf'].split('.')) == 1:
+            # Must be a year
+            eyear = etree.SubElement(elm, 'Year')
+            eyear.text = entry['TranslationOf']
+        else:
+            # parse_ajbnum is defined for the text conversion!
+            numdict = utils.parse_ajbnum(entry['TranslationOf'])
+            num = make_ajbnum_xml(numdict)
+            elm.append(num)
+
 def entry_xml_compilers(entry, entryxml):
     '''Convert the entry Compilers to XML'''
     if entry['Compilers']:
@@ -235,11 +255,19 @@ def entry_xml_reference(entry, entryxml):
 
 def entry_xml_others(entry, entryxml):
     '''Convert the entry Others (comments) to XML'''
-    if entry['Others']:
+    if entry.not_empty('Others'):
         elm = etree.SubElement(entryxml, 'Comments')
         for comment in entry['Others']:
             com = etree.SubElement(elm, 'Comment')
             com.text = comment
+
+def entry_xml_keywords(entry, entryxml):
+    '''Convert the entry Keywords to XML'''
+    if entry.not_empty('Keywords'):
+        elm = etree.SubElement(entryxml, 'Keywords')
+        for keyword in entry['Keywords']:
+            key = etree.SubElement(elm, 'Keyword')
+            key.text = keyword
 
 def make_ajbnum_xml(ajbnum):
     '''Write an XML version of an AJB number as an index
@@ -442,6 +470,16 @@ def xml_entry_translators(entry, child):
             if g2ent.tag == 'Person':
                 entry['Translators'].append(person_name_from_xml(g2ent))
 
+def xml_entry_translationof(entry, child):
+    '''Convert XML TranslationOf to entry TranslationOf'''
+
+    # Year or AJBnum but only one
+    for transof in child:
+        if transof.tag == 'Year':
+            entry['TranslationOf'] = transof.text
+        elif transof.tag == 'Index':
+            entry['TranslationOf'] = ajbstr_from_xml(transof)
+
 def xml_entry_compilers(entry, child):
     '''Convert XML Compilers to entry Compilers'''
 
@@ -483,6 +521,12 @@ def xml_entry_comments(entry, child):
 
     for comment in child:
         entry['Others'].append(comment.text)
+
+def xml_entry_keywords(entry, child):
+    '''Convert XML Keywords to entry Keywords'''
+
+    for keyword in child:
+        entry['Keyword'].append(keyword.text)
 
 def ajbstr_from_xml(element):
     '''Return a AJB number as a string "AJB xx.xxx.xx[a]" from
@@ -533,6 +577,8 @@ if __name__ == '__main__':
 
     import unittest
 
+    from pprint import pprint
+    
     import aabooks.ajbbook.ajbentry as ajbentry
     import aabooks.ajbbook.testentryxml as testentry
 
