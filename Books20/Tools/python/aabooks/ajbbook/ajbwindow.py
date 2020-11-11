@@ -104,17 +104,20 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                                    'Publishers', 'Edition', 'Year',
                                    'Pagination', 'Price', 'Reviews',
                                    'Compilers', 'Contributors', 'Translators',
-                                   'Language', 'TranslatedFrom', 'Reference',
-                                   'Reprint', 'Others', 'OrigStr', 'Comments', ]
+                                   'Language', 'TranslatedFrom', 'TranslationOf',
+                                   'Reference', 'Reprint', 'Others', 'OrigStr',
+                                   'Comments', 'Keywords']
+
 
         # lists of which display fields may or may not have symbol entry allowed
         self.no_entry_list = ['volNum', 'secNum', 'subSecNum', 'itemNum', 'pageNum'
                               'yearEntry', 'pageEntry', 'indexEntry',
-                              'editionEntry', 'referenceEntry', 'reprintEntry']
+                              'editionEntry', 'referenceEntry', 'reprintEntry',
+                              'transofEntry']
         self.set_text_entry_list = ['authorEntry', 'editorEntry', 'titleEntry',
                                     'publEntry', 'reviewsEntry', 'translatorEntry',
                                     'compilersEntry', 'contribEntry', 'commentsEntry',
-                                    'headerEntry']
+                                    'keywordEntry', 'headerEntry']
         self.set_line_entry_list = ['fromlangEntry', 'tolangEntry', 'priceEntry']
 
         menus.create_menus(self, self.menubar)
@@ -151,9 +154,11 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.fromlangEntry.textChanged.connect(self.set_entry_dirty)
         self.tolangEntry.textChanged.connect(self.set_entry_dirty)
         self.translatorEntry.textChanged.connect(self.set_entry_dirty)
+        self.transofEntry.textChanged.connect(self.set_entry_dirty)
         self.compilersEntry.textChanged.connect(self.set_entry_dirty)
         self.contribEntry.textChanged.connect(self.set_entry_dirty)
         self.commentsEntry.textChanged.connect(self.set_entry_dirty)
+        self.keywordEntry.textChanged.connect(self.set_entry_dirty)
 
         self.open_new_file()
 
