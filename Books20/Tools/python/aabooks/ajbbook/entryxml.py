@@ -526,7 +526,7 @@ def xml_entry_keywords(entry, child):
     '''Convert XML Keywords to entry Keywords'''
 
     for keyword in child:
-        entry['Keyword'].append(keyword.text)
+        entry['Keywords'].append(keyword.text)
 
 def ajbstr_from_xml(element):
     '''Return a AJB number as a string "AJB xx.xxx.xx[a]" from

@@ -95,6 +95,15 @@ ENTRY_XML_STR = '''<Entry>
       </Person>
     </Translator>
   </Translators>
+  <TranslationOf>
+    <Index>
+      <IndexName>AJB</IndexName>
+      <VolumeNumber>47</VolumeNumber>
+      <SectionNumber>144</SectionNumber>
+      <SubSectionNumber>0</SubSectionNumber>
+      <EntryNumber>23a</EntryNumber>
+    </Index>
+  </TranslationOf>
   <Compilers>
     <Compiler>
       <Person>
