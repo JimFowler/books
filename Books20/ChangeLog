@@ -1,3 +1,7 @@
+2020-11-13  Jim Fowler  <jrf@biblion>
+
+	* Installed ajbbooks with Keywords and TranslationOf boxes.
+
 2020-11-09  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/designer/ui_BookEntry.ui:
