@@ -37,6 +37,6 @@ setup(name='aabooks',
       url='http://het.as.utexas.edu/jrf/20thCentury.html',
       platforms=['Ubuntu 20.04 LTS'],
       packages=['aabooks', 'aabooks.lib', 'aabooks.ajbbook', 'aabooks.journal'],
-      scripts=['scripts/aaconvert', 'scripts/ajbbooks', 'scripts/journals',
+      scripts=['scripts/aaaconvert', 'scripts/ajbbooks', 'scripts/journals',
                'scripts/ppxml', 'scripts/validate_xml'],
       package_data={'aabooks.lib': ['symbols.txt']},)
