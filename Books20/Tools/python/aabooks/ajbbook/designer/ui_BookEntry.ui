@@ -183,7 +183,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>AJB subsection number if applicable</string>
+       <string>AJB/AAA subsection number if applicable</string>
       </property>
       <property name="text">
        <string>0</string>
@@ -271,7 +271,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>AJB Volume number</string>
+       <string>AJB/AAA Volume number</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
@@ -292,7 +292,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>AJB Section number</string>
+       <string>AJB/AAA Section number</string>
       </property>
       <property name="text">
        <string/>
@@ -444,6 +444,9 @@
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>An AJB/AAA or Year</string>
+      </property>
      </widget>
     </item>
     <item row="3" column="0" rowspan="2" colspan="7">
@@ -516,6 +519,9 @@
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string>An AJB/AAA number that this record is a reference too</string>
+      </property>
      </widget>
     </item>
     <item row="20" column="0" colspan="14">
@@ -526,7 +532,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>Comments, one per line</string>
+       <string>Keyword strings, one per line</string>
       </property>
       <property name="tabChangesFocus">
        <bool>true</bool>
@@ -647,7 +653,7 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>AJB item number in the section</string>
+       <string>AJB/AAA item number in the section</string>
       </property>
       <property name="text">
        <string/>
@@ -663,6 +669,9 @@
        <font>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>Edition number</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -911,6 +920,9 @@
        <font>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>An AJB/AAA number or Year</string>
       </property>
      </widget>
     </item>

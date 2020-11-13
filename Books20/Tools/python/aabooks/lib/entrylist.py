@@ -106,6 +106,18 @@ class EntryList(list):
 
         return self.max_entries()
 
+    # Functions to deal with the filename
+
+    def set_filename(self, filename):
+        '''Set the filename.'''
+
+        self.filename = filename
+        
+    def get_filename(self):
+        '''Set the filename.'''
+
+        return self.filename
+        
     # Functions to deal with the Header
 
     def set_header(self, headerstr):

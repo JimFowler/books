@@ -339,7 +339,8 @@ def display_entry_ajbnum(self, entry):
     '''Convert the display ajbnum to entry Num.'''
 
     num = {}
-    num['volume'] = 'AJB'
+    num['volume'] = self.default_volume_name
+
     items = r2.split(self.itemNum.text().strip())
 
     num['volNum'] = int(self.volNum.text())

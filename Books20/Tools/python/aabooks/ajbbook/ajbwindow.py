@@ -94,7 +94,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.set_max_entry_number(0)
         self.set_window_title('document1')
         self.insert_function = None
-        self.default_volume_number = None
+        self.default_volume_number = '1'
+        self.default_volume_name = 'AJB'
         self.symbol_table_name = __DEFAULT_SYMBOL_TABLE_NAME__
         self.symbol_window = None
         self.header_window = None
@@ -195,7 +196,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     #
     def open_new_file(self):
         """Create a new bookfile saving the old one if it is dirty."""
-        if self.bookfile is not None:
+        if self.bookfile is not None and self.bookfile.is_dirty():
             if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
                 return
 
@@ -205,7 +206,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.bookfile = bf.BookFile()
         self.set_max_entry_number(0)
         self.new_entry()
-
+        
     def ask_open_file(self):
         """Open an existing file saving the old one if it is dirty."""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
@@ -659,6 +660,11 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         """Sets the default volume number for new entries."""
         self.default_volume_number = num
 
+    def set_default_volume_name(self, name):
+        """Sets the default volume name for new entries.
+        Default is 'AJB'"""
+        self.default_volume_name = name
+
     def set_volume_number_interactive(self):
         """Provides an interactive dialog to set the default
         volume number for new entries."""
@@ -669,6 +675,16 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         if is_ok:
             self.default_volume_number = volume_num
 
+    def set_volume_name_interactive(self):
+        """Provides an interactive dialog to set the default
+        volume name for new entries."""
+        current_val = self.default_volume_name
+        volume_name, is_ok = QtWidgets.QInputDialog.getText(self, 'Volume Name',
+                                                           'Enter New Volume Name\n(next new entry will use this value)',
+                                                           text=current_val)
+        if is_ok:
+            self.default_volume_name = volume_name
+            
     def insert_char(self, obj):
         """Insert the charactor in obj[0] with self.insert_function
         if insert_function is not None."""
