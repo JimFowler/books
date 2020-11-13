@@ -41,3 +41,7 @@ relevant to the Collections and/or the Books20 database
   #. C, Which books are in project P?
 
   #. C, Which projects in book B in?  [Project could also be a topic keyword]
+
+  #. C/B How many books published in langauge l for years x-y?
+
+  #. C/B How many books not published in English for years x-y?
