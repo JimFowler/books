@@ -51,8 +51,11 @@ def getargs():
     parser.add_argument('-s', '--symbols', type=str,
                         help='use alternate symbol table,')
 
-    parser.add_argument('-v', '--volume', type=str,
-                        help='default volume number,')
+    parser.add_argument('--volnum', type=str,
+                        help='default volume number (default 1),')
+
+    parser.add_argument('--volname', type=str,
+                        help='volume number (default AJB),')
 
     return parser.parse_known_args()[0]
 
@@ -76,8 +79,12 @@ def main():
         form.help_about()
         sys.exit()
 
-    if args.volume is not None:
-        form.set_default_volume_number(args.volume)
+    if args.volnum is not None:
+        form.set_default_volume_number(args.volnum)
+        form.new_entry()
+
+    if args.volname is not None:
+        form.set_default_volume_name(args.volname)
         form.new_entry()
 
     if args.symbols is not None:
@@ -88,9 +95,9 @@ def main():
         if os.path.isfile(fname):
             form.open_file(fname)
         else:
-            form.open_new_file()
             form.bookfile.set_filename(fname)
-            form.set_window_title(form.bookfile.get_basename())
+            form.open_new_file()
+            form.set_window_title(os.path.basename(form.bookfile.get_filename()))
 
 
     form.show()
