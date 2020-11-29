@@ -38,5 +38,5 @@ setup(name='aabooks',
       platforms=['Ubuntu 20.04 LTS'],
       packages=['aabooks', 'aabooks.lib', 'aabooks.ajbbook', 'aabooks.journal'],
       scripts=['scripts/aaaconvert', 'scripts/ajbbooks', 'scripts/journals',
-               'scripts/ppxml', 'scripts/validate_xml', 'scripts/verify],
+               'scripts/ppxml', 'scripts/validate_xml', 'scripts/verify'],
       package_data={'aabooks.lib': ['symbols.txt']},)
