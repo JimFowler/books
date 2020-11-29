@@ -70,7 +70,7 @@ Known text codes and their matching XML tags are::
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
     't'  : 'Tables (Tabellen)',
-    'T'  : 'Tafeln (Plates),
+    #'T'  : 'Tafeln (Plates),
   }
 
 
@@ -121,7 +121,7 @@ __TAG_TO_XML_NAME__ = {
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
     't'  : 'Tables',     # tabelen
-    'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
+    #'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
 }
 
 __XML_NAME_TO_TAG__ = {v: k for k, v in __TAG_TO_XML_NAME__.items()}
@@ -227,7 +227,9 @@ if __name__ == '__main__':
     OLD_STR = '12p+203p+14i+23f+522P+10c'
     ROM_STR = '5D+XIIIpp+203p+40AA+32AB+14i+23f+522P+10c'
     BAD_STR = '12pz+203p+14i+23f+522P+10c'
-
+    BAD_STR2 = '12 pp+203p+14i+23f+522P+10c'
+    BAD_STR3 = '12pp+203p+14i+23f+522T+10c' # parse a bad character
+    
     class PaginationTestCase(unittest.TestCase):
         '''The test suite for pagination_xml.py.'''
 
@@ -265,8 +267,20 @@ if __name__ == '__main__':
             with self.assertRaises(KeyError):
                 self.do_string(BAD_STR, BAD_STR)
 
-        def test_d_roman_string(self):
-            '''Test the rom string.'''
+        def test_d_bad_string(self):
+            '''Test a bad string that should not convert.'''
+
+            with self.assertRaises(IndexError):
+                self.do_string(BAD_STR2, BAD_STR2)
+
+        def test_e_bad_string(self):
+            '''Test a bad string that should not convert.'''
+
+            with self.assertRaises(KeyError):
+                self.do_string(BAD_STR3, BAD_STR3)
+
+        def test_f_roman_string(self):
+            '''Test the roman string.'''
 
             self.do_string(ROM_STR, ROM_STR)
 
