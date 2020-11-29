@@ -5,6 +5,11 @@
 #  Basicly verify that I have entered data correctly
 #  for those fields which are not checked at entry.
 #
+'''Verify that we can parse the page number, pagination string,
+and reviewers correctly.  These fields are not check at entry time.
+They have also been updated and reformated over the course of the
+project.  Thus they need to be checked.
+'''
 
 import argparse
 
@@ -18,6 +23,7 @@ import aabooks.ajbbook.bookfile as bf
 __DESCRIPTION__ = '''Verify AJB entries for fields that are not parsed at entry time.'''
 
 def getargs():
+    '''Get the command line arguments and files to test.'''
 
     parser = argparse.ArgumentParser(description=__DESCRIPTION__)
 
@@ -34,6 +40,7 @@ def getargs():
 
 
 def main():
+    '''The main function that tests AJB files for some consistency.'''
     # get command line
     args = getargs()
     if args.verbose:
@@ -69,10 +76,10 @@ def main():
 
             # pagination, can we parse it properly
             try:
-                pgxml = pg.pagination_string_to_xml(entry['Pagination'])
-            except Exception as e:
-                print(count, entryindex, 'has unparsable pagination', e)
-                
+                pg.pagination_string_to_xml(entry['Pagination'])
+            except (KeyError, IndexError) as exp:
+                print(count, entryindex, 'has unparsable pagination', exp)
+
 #
 # Do the work
 #
