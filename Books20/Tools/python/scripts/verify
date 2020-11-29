@@ -1,0 +1,81 @@
+#! /usr/bin/env python
+#
+#  Verify the an AJB/AAA file does not have any
+#  missing data that we might expect it to have.
+#  Basicly verify that I have entered data correctly
+#  for those fields which are not checked at entry.
+#
+
+import argparse
+
+from pprint import pprint
+
+import aabooks.lib.utils as aautils
+import aabooks.lib.pagination_xml as pg
+
+import aabooks.ajbbook.bookfile as bf
+
+__DESCRIPTION__ = '''Verify AJB entries for fields that are not parsed at entry time.'''
+
+def getargs():
+
+    parser = argparse.ArgumentParser(description=__DESCRIPTION__)
+
+    aautils.standard_parser_args(parser)
+
+    parser.add_argument('ajbfiles',
+                        help='a list of files to check',
+                        nargs='*',
+                        action='append')
+
+    args = parser.parse_known_args()[0]
+
+    return args
+
+
+def main():
+    # get command line
+    args = getargs()
+    if args.verbose:
+        pprint(args)
+
+    # open xml file to bookfile
+    # for each entry
+    #
+    for ajbfile in args.ajbfiles[0]:
+
+        bookfile = bf.BookFile()
+        bookfile.set_filename(ajbfile)
+        bookfile.read_file_xml()
+
+        count = -1
+        for entry in bookfile:
+            # this mess is because BookFile(entrylist)
+            # has the header as the first item in the list
+            count += 1
+            if count == 0:
+                continue
+
+            entryindex = entry.num_str()
+
+            #   page numbers, AJB only, is page number -1
+            if entry['Num']['pageNum'] == -1:
+                print(count, entryindex, 'has missing page number')
+
+            # reviews, do they have a colon, i.e. have been checked for reviewer
+            for review in entry['Reviews']:
+                if ':' not in review:
+                    print(count, entryindex, 'has missing review author')
+
+            # pagination, can we parse it properly
+            try:
+                pgxml = pg.pagination_string_to_xml(entry['Pagination'])
+            except Exception as e:
+                print(count, entryindex, 'has unparsable pagination', e)
+                
+#
+# Do the work
+#
+if __name__ == '__main__':
+
+    main()
