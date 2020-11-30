@@ -1,0 +1,156 @@
+#! /usr/bin/env python
+#
+'''Parse AJB files, locate the journals in the Reviews field, test to
+see if they do not exist in the journal.xml file, and print the entry
+number and Journal name to stdout.  This needs to be done for file
+prior to AJB 38, when the journal program and journals.xml were
+created.  But should also be done for files after AJB 38 in order to
+pick up missing journals.
+
+'''
+
+from pprint import pprint
+import re
+import configargparse as argp
+
+import aabooks.lib.utils as aautils
+import aabooks.lib.search as search
+import aabooks.journal.journalfile as jf
+import aabooks.ajbbook.bookfile as bf
+
+
+# get command line arguments and config values
+# open journal file
+# create search list
+# open ajbfile
+# for each ajbentry
+#    grep alpha chars before number
+#    remove punctuation
+#    compare to search list
+#    if not found and not in journal list:
+#      add entry num and journal name to journal list
+#
+# print journal list
+
+# regex for journal names.
+re_jname = re.compile(r'^(\D+)')
+
+
+__DESCRIPTION__ = '''Parse a list of AJB files, locate the
+journals, compare to journal.xml, and create a list of unknown
+journals.'''
+
+def getargs():
+    '''Get the command line arguments and the list of files to search from.'''
+    parser = argp.ArgumentParser(description=__DESCRIPTION__,
+                                default_config_files=['~/.config/Books20/journals.conf'])
+
+    aautils.standard_parser_args(parser)
+
+    parser.add_argument('-i', '--input',
+                        help='read the file INPUT for existing journal entries')
+
+    parser.add_argument('-s', '--symbols', type=str,
+                        help='use alternate symbol table,')
+
+    parser.add_argument('ajbfiles',
+                        help='the AJB files to search for journals',
+                        nargs='*',
+                        action='append')
+
+    args = parser.parse_known_args()[0]
+
+    return args
+
+
+def build_search_dict(jfile, sdict):
+    '''Build the search dictionary from the journal file.'''
+
+    for count, entry in enumerate(jfile):
+        if count > 0:
+            title = entry['Title']
+            sdict.add_sub_strings(title, (title, count))
+
+            sub_title = entry['subTitle']
+            sdict.add_sub_strings(sub_title, (sub_title, count))
+
+            subsub_title = entry['subsubTitle']
+            sdict.add_sub_strings(subsub_title, (subsub_title, count))
+
+            for abr in entry['Abbreviations']:
+                if abr is not None:
+                    sdict.add_sub_strings(abr, (abr, count))
+
+def check_reviews(reviews, sdict, jdict, numstr):
+    '''Check a list of reviews to see if they are in sdict or jdict.'''
+
+    count = 0
+    for review in reviews:
+        # get jname
+        jmatch = re.match(re_jname, review)
+        if jmatch:
+            # remove punctuation
+            jname_dirty = jmatch.group(0).strip()
+            jname = jname_dirty.replace('.', '')
+
+            check_dicts(jname, sdict, jdict, numstr)
+        else:
+            count += 1
+
+    return count
+
+def check_dicts(jname, sdict, jdict, numstr):
+    '''Check jname against the sdict and the jdict. Add to jdict if necessary.'''
+
+    # if not (search sdict or search jlist)
+    #     add to entry, jname to jdict
+    if not sdict.search(jname):
+        if jdict.get(jname):
+            # jname is in the jdict so append the entry num
+            jdict.get(jname).append(numstr)
+        else:
+            # jname is not in the jdict so create a new entry
+            jdict[jname] = [numstr]
+
+
+
+def main():
+    '''The main function.'''
+
+    args = getargs()
+    if args.verbose:
+        pprint(args)
+
+    jfile = jf.JournalFile()
+    jfile.read_file_xml(args.input)
+
+    sdict = search.SearchDict()
+    build_search_dict(jfile, sdict)
+
+    # jdict entries are of the form
+    #  {jname : [ajbnum1, ajbnum2,...]}
+    jdict = {}
+    count_in_sdict = 0
+    for ajbfile in args.ajbfiles[0]:
+
+        bfile = bf.BookFile()
+        bfile.set_filename(ajbfile)
+        bfile.read_file_xml()
+
+        for count, entry in enumerate(bfile):
+            if count < 1:
+                # skip the header
+                continue
+
+            count_in_sdict += check_reviews(entry['Reviews'], sdict, jdict, entry.num_str())
+
+        del bfile
+
+    pprint(jdict)
+    print('{} journals already in sdict'.format(count_in_sdict))
+#
+# Main work
+#
+if __name__ == '__main__':
+
+    main()
