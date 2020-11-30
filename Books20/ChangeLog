@@ -1,10 +1,14 @@
 2020-11-29  Jim Fowler  <jrf@biblion>
 
-	* Tools/python/scripts/verify: wrote the python script verify
-	to check entries that are not checked at entry time. Primarily
-	the pagination, page number, and reviewers checked.  Good thing too,
-	as at least ajb68, ajb67, and ajb66 have missing entries and I just
-	did those files a few weeks ago.
+	* Tools/python/scripts/findjournals: write this script to find
+	journal names or abbreviation in AJB files that do not exist in
+	the journals.xml file.
+
+	* Tools/python/scripts/verify: wrote the python script verify to
+	check entries that are not checked at entry time. Primarily the
+	pagination, page number, and reviewers checked.  Good thing too,
+	as at least ajb68, ajb67, and ajb66 have missing entries and I
+	just did those files a few weeks ago.
 
 	* Tools/python/aabooks/lib/pagination_xml.py: Added two new
 	tests for bad string. Also removed 'T', 'Tafellen' for Plates.
