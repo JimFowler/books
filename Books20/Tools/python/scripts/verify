@@ -55,11 +55,9 @@ def main():
         bookfile.set_filename(ajbfile)
         bookfile.read_file_xml()
 
-        count = -1
-        for entry in bookfile:
+        for count, entry in enumerate(bookfile):
             # this mess is because BookFile(entrylist)
             # has the header as the first item in the list
-            count += 1
             if count == 0:
                 continue
 
