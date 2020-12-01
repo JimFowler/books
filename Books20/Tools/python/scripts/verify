@@ -83,6 +83,9 @@ def main():
                 if 'translation of' in comment:
                     print(count, entryindex, 'has translation of')
 
+        if args.verbose:
+            print(ajbfile, 'done')
+            
 #
 # Do the work
 #
