@@ -93,17 +93,17 @@ def check_reviews(reviews, sdict, jdict, numstr):
             jname_dirty = jmatch.group(0).strip()
             jname = jname_dirty.replace('.', '')
 
-            check_dicts(jname, sdict, jdict, numstr)
-        else:
-            count += 1
+            count += check_dicts(jname, sdict, jdict, numstr)
 
     return count
 
-def check_dicts(jname, sdict, jdict, numstr):
-    '''Check jname against the sdict and the jdict. Add to jdict if necessary.'''
 
-    # if not (search sdict or search jlist)
-    #     add to entry, jname to jdict
+def check_dicts(jname, sdict, jdict, numstr):
+    '''Check jname against the sdict and then jdict. Add to jdict if
+    necessary.
+
+    '''
+
     if not sdict.search(jname):
         if jdict.get(jname):
             # jname is in the jdict so append the entry num
@@ -111,8 +111,11 @@ def check_dicts(jname, sdict, jdict, numstr):
         else:
             # jname is not in the jdict so create a new entry
             jdict[jname] = [numstr]
+        # journal was added to jdict
+        return 0
 
-
+    # journal was in sdict
+    return 1
 
 def main():
     '''The main function.'''
@@ -142,7 +145,8 @@ def main():
                 # skip the header
                 continue
 
-            count_in_sdict += check_reviews(entry['Reviews'], sdict, jdict, entry.num_str())
+            count_in_sdict += check_reviews(entry['Reviews'],
+                                            sdict, jdict, entry.num_str())
 
         del bfile
 
