@@ -140,7 +140,7 @@ class AJBentry(dict):
             if anum['subsectionNum'] > -1:
                 strnum = strnum + '(' + str(anum['subsectionNum']) + ')'
             strnum = strnum + '.' + '%02d'%anum['entryNum']
-            strnum = strnum + '%1s'%anum['entrySuf']
+            strnum = strnum + '%s'%anum['entrySuf']
             return strnum
 
         return None

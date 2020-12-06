@@ -1,3 +1,9 @@
+2020-12-06  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/ajbentry.py:
+	(AJBentry.num_str): changed %1s to %2 for suffix. Was leaving a
+	trailing space.
+
 2020-11-29  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/findjournals: write this script to find
