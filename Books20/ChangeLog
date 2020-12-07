@@ -1,5 +1,9 @@
 2020-12-06  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/journal/entrydisplay.py
+	(display_entry_designators): added try/except around search
+	for colon. Prints warning message if colon is not found.
+
 	* Tools/python/aabooks/ajbbook/ajbentry.py:
 	(AJBentry.num_str): changed %1s to %2 for suffix. Was leaving a
 	trailing space.

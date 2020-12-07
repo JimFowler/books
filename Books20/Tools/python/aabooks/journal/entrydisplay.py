@@ -257,8 +257,11 @@ def display_entry_designators(self, entry):
     if mem:
         alist = mem.split('\n')
         for line in alist:
-            flds = line.split(':')
-            entry['Designators'][flds[0].strip()] = flds[1].strip()
+            try:
+                flds = line.split(':')
+                entry['Designators'][flds[0].strip()] = flds[1].strip()
+            except IndexError:
+                print('display_entry_designators: Warning missing colon')
 
 def display_entry_comments(self, entry):
     '''Convert display CommentsEdit to entry Comments.'''
