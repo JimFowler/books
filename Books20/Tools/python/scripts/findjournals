@@ -104,7 +104,7 @@ def check_dicts(jname, sdict, jdict, numstr):
 
     '''
 
-    if not sdict.search(jname):
+    if not sdict.search(jname[:10].strip()):
         if jdict.get(jname):
             # jname is in the jdict so append the entry num
             jdict.get(jname).append(numstr)
@@ -152,6 +152,8 @@ def main():
 
     pprint(jdict)
     print('{} journals already in sdict'.format(count_in_sdict))
+    print('{} new journals found'.format(len(jdict)))
+
 #
 # Main work
 #
