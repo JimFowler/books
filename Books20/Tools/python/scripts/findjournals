@@ -53,6 +53,11 @@ def getargs():
     parser.add_argument('-s', '--symbols', type=str,
                         help='use alternate symbol table,')
 
+    parser.add_argument('-C', '--count', type=int,
+                        metavar='COUNT',
+                        default=-1,
+                        help='check only the first COUNT objects,')
+
     parser.add_argument('ajbfiles',
                         help='the AJB files to search for journals',
                         nargs='*',
@@ -84,7 +89,7 @@ def build_search_dict(jfile, sdict):
 def check_reviews(reviews, sdict, jdict, numstr):
     '''Check a list of reviews to see if they are in sdict or jdict.'''
 
-    count = 0
+    dict_count = 0
     for review in reviews:
         # get jname
         jmatch = re.match(re_jname, review)
@@ -93,9 +98,9 @@ def check_reviews(reviews, sdict, jdict, numstr):
             jname_dirty = jmatch.group(0).strip()
             jname = jname_dirty.replace('.', '')
 
-            count += check_dicts(jname, sdict, jdict, numstr)
+            dict_count += check_dicts(jname, sdict, jdict, numstr)
 
-    return count
+    return dict_count
 
 
 def check_dicts(jname, sdict, jdict, numstr):
@@ -147,6 +152,9 @@ def main():
 
             count_in_sdict += check_reviews(entry['Reviews'],
                                             sdict, jdict, entry.num_str())
+
+            if count > args.count:
+                break
 
         del bfile
 
