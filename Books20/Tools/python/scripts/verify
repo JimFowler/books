@@ -29,6 +29,11 @@ def getargs():
 
     aautils.standard_parser_args(parser)
 
+    parser.add_argument('-C', '--count', type=int,
+                        metavar='COUNT',
+                        default=-1,
+                        help='check only the first COUNT objects,')
+
     parser.add_argument('ajbfiles',
                         help='a list of files to check',
                         nargs='*',
@@ -83,6 +88,9 @@ def main():
                 if 'translation of' in comment:
                     print(count, entryindex, 'has translation of')
 
+            if args.count != -1 and count >= args.count:
+                break
+            
         if args.verbose:
             print(ajbfile, 'done')
             
