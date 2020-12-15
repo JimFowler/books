@@ -1,0 +1,73 @@
+%% Begin copyright
+%%
+%%  /home/jrf/Documents/books/Books20/Docs/Series/journals.tex
+%%  
+%%   Part of the Books20 Project
+%%
+%%   Copyright 2020 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%% End copyright
+
+%%
+%%   Notes on the journals in my collection and the volumes
+%%    that are missing
+%%
+\documentclass[letterpaper]{article}
+
+\usepackage{books20}
+\usepackage[toc,page,title]{appendix}
+\addglobalbib{./../../Docs/MasterBib.bib}
+
+% need to set text width to soak up space
+% otherwise is is soaked up in the right hand margin
+% \paperwidth is 614.295pt (8.5in)
+% \textwidth = 345.0pt
+% \hoffset = 0
+% \oddsidemargin = 62pt
+% left/right margin is 72.27pt (1in) + \hoffset + \oddsidemargin
+%
+% so \paperwidth = 2 * (72.27 + \oddsidemargin) + \textwidth
+% or \textwidth = 614.295 - 2 * (72.27 + \oddsidemargin)
+%
+\setlength{\oddsidemargin}{13pt}
+\setlength{\evensidemargin}{13pt}
+\setlength{\textwidth}{443.0pt}
+
+\begin{document}
+
+%% Front matter
+\title{Journals in My Collection}
+\author{James R. Fowler}
+\date{last updated 13 December 2020\\ copy of \today}
+
+%\begin{titlepage}
+  \maketitle
+%\end{titlepage}
+
+\tableofcontents
+\listoftables
+
+%\begin{abstract}
+%\end{abstract}
+
+%\import{./}{intro}
+
+\import{./}{skytel}
+
+\newpage
+\appendixpage
+\begin{appendix}
+
+  \section{Sky \& Telescope}
+  \import{./}{STtable}
+
+\end{appendix}
+
+\end{document}
