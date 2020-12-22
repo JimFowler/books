@@ -54,3 +54,6 @@ relevant to the Collections and/or the Books20 database
   #. B, How many books for section S1 to S2 for interval I by year Y?
 
   #. B, How many books were published by P for the interval I by year?
+
+  #. B, Where did this piece of information come from? What is the reference
+     for this information?
