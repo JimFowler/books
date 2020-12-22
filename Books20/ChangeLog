@@ -1,3 +1,8 @@
+2020-12-22  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/verify (main): Added pagination
+	sequence test.  Removed test for 'translation of'.
+
 2020-12-06  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/entrydisplay.py

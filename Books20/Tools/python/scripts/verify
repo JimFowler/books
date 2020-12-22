@@ -91,9 +91,9 @@ def main():
                 print(count, entryindex, 'has unparsable pagination', exp)
 
             # 'translation of' in comments
-            for comment in entry['Others']:
-                if 'translation of' in comment:
-                    print(count, entryindex, 'has translation of')
+            #for comment in entry['Others']:
+            #    if 'translation of' in comment:
+            #        print(count, entryindex, 'has translation of')
 
             if args.count != -1 and count >= args.count:
                 break
