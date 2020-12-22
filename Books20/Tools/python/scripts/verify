@@ -56,6 +56,7 @@ def main():
     #
     for ajbfile in args.ajbfiles[0]:
 
+        old_page_number = -1
         bookfile = bf.BookFile()
         bookfile.set_filename(ajbfile)
         bookfile.read_file_xml()
@@ -69,8 +70,14 @@ def main():
             entryindex = entry.num_str()
 
             #   page numbers, AJB only, is page number -1
-            if entry['Num']['pageNum'] == -1:
+            page_number = entry['Num']['pageNum']
+            if  page_number == -1:
                 print(count, entryindex, 'has missing page number')
+            else:
+                # test for non-decreasing page numbers
+                if page_number < old_page_number:
+                    print(count, entryindex, 'non-sequential page number')
+                old_page_number = page_number
 
             # reviews, do they have a colon, i.e. have been checked for reviewer
             for review in entry['Reviews']:
