@@ -135,13 +135,21 @@ def create_edit_menu(self, menu_bar):
     header_action = create_action(self, 'Edit &Header...',
                                   slot='self.edit_header',
                                   shortcut='Ctrl+H')
-
+    
     origstr_action = create_action(self, 'Show Original String',
                                    slot='self.show_orig_str')
 
     setvolnum_action = create_action(self, 'Set Volume Number...',
                                      slot='self.set_volume_number_interactive')
 
+    sort_ajbnum_action = create_action(self, 'AJB/AAA num')
+    sort_ajbnum_action.setEnabled(False)
+
+    sort_author_action = create_action(self, 'Author')
+    sort_author_action.setEnabled(False)
+
+    sort_restore_action = create_action(self, 'Restore orig order')
+    sort_restore_action.setEnabled(False)
 
     edit_menu = menu_bar.addMenu('&Edit')
     edit_menu.addAction(cut_action)
@@ -151,6 +159,12 @@ def create_edit_menu(self, menu_bar):
     edit_menu.addSeparator()
     edit_menu.addAction(symbol_action)
     edit_menu.addAction(header_action)
+
+    sort_menu = edit_menu.addMenu('Sort by')
+    sort_menu.addAction(sort_ajbnum_action)
+    sort_menu.addAction(sort_author_action)
+    sort_menu.addAction(sort_restore_action)
+
     edit_menu.addAction(origstr_action)
     edit_menu.addAction(setvolnum_action)
 
