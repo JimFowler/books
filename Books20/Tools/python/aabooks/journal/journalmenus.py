@@ -117,7 +117,12 @@ def create_menus(self, menu_bar):
                            shortcut='Ctrl+H')
     menu.addAction(action)
 
+    # Create sort sub-menu
+    sort_menu = menu.addMenu('Sort By')
 
+    action = create_action(self, 'Journal Title')
+    action.setEnabled(False)
+    sort_menu.addAction(action)
 
     # set up the Entry menus
     menu = menu_bar.addMenu('Entry')

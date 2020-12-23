@@ -1,5 +1,9 @@
 2020-12-23  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/journal/journalmenus.py: Began adding a
+	Sort By menu to journals.  Only action right now is to sort by
+	Journal title but I may think of more.
+
 	* Tools/python/aabooks/ajbbook/menus.py (create_edit_menu): Began
 	adding a Sort By menu to ajbbooks. Added menu with empty actions
 	for sort by AJB/AAA number, sort by author, and restore original
