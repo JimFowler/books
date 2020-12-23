@@ -97,10 +97,10 @@ def main():
 
             if args.count != -1 and count >= args.count:
                 break
-            
+
         if args.verbose:
             print(ajbfile, 'done')
-            
+
 #
 # Do the work
 #
