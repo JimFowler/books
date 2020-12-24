@@ -146,6 +146,7 @@ def main():
         bfile.read_file_xml()
 
         for count, entry in enumerate(bfile):
+
             if count < 1:
                 # skip the header
                 continue
@@ -153,7 +154,7 @@ def main():
             count_in_sdict += check_reviews(entry['Reviews'],
                                             sdict, jdict, entry.num_str())
 
-            if count > args.count:
+            if args.count != -1 and count > args.count:
                 break
 
         del bfile
