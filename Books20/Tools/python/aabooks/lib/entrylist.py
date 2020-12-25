@@ -107,19 +107,17 @@ class EntryList(list):
         return self.max_entries()
 
     # Functions to deal with the filename
-
     def set_filename(self, filename):
         '''Set the filename.'''
 
         self.filename = filename
-        
+
     def get_filename(self):
         '''Set the filename.'''
 
         return self.filename
-        
-    # Functions to deal with the Header
 
+    # Functions to deal with the Header
     def set_header(self, headerstr):
         '''Set the header entry to be headerstr.
 
@@ -142,8 +140,7 @@ class EntryList(list):
         '''
         return self[0]
 
-    # current entry
-
+    # functions to deal with entries
     def set_new_entry(self, entry, count=-1):
         '''Append an entry to the list or insert before entry 'count',
         if that value is given. Note that 1 <= count <= len(self.).
@@ -208,7 +205,7 @@ class EntryList(list):
 
         return len(self) - 1
 
-    # file I/O
+    # generic file I/O
     def read_file(self, filename=None):
         '''Select a reader function depending on the filename
         extension.  Return the number of entries read. If filename
