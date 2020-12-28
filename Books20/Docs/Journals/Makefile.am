@@ -33,7 +33,7 @@ SUB_DIRS =
 
 BUILT_TABLE_FILES =  STtable.tex
 JOURNAL_TABLE_FILES =
-JOURNAL_TEX_FILES = journals.tex skytel.tex
+JOURNAL_TEX_FILES = journals.tex skytel.tex fbc.tex
 
 BIB_FILES = 
 #
