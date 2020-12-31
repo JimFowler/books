@@ -97,10 +97,11 @@ def clean_review_string(review_str):
     tmp_str = review_str
     tmp_str = tmp_str.replace('(NR)', '')
     tmp_str = tmp_str.replace('(NS)', '')
+    tmp_str = tmp_str.replace(' Nr.', '')
     tmp_str = tmp_str.replace('(', '')
     tmp_str = tmp_str.replace('.', '')
 
-    return tmp_str
+    return tmp_str.strip()
     
 def check_reviews(reviews, sdict, jdict, numstr):
     '''Check a list of reviews to see if they are in sdict or jdict.'''
