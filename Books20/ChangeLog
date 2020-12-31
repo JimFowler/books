@@ -1,3 +1,9 @@
+2020-12-31  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/findjournals (clean_review_string): Added
+	more clean up of review string.  Trying to take out more
+	punctuation.
+
 2020-12-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalmenus.py: Began adding a
