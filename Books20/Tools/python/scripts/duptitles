@@ -51,7 +51,9 @@ def entries_match(entry_I, entry_J):
     '''Decide if two entries are the same or match in some way.'''
 
     if entry_I['Title'] == entry_J['Title']:
-        return True
+        if entry_I['subTitle'] and entry_J['subTitle'] \
+           and entry_I['subTitle'] == entry_J['subTitle']:
+            return True
 
     return False
 
@@ -93,8 +95,8 @@ if __name__ == '__main__':
     
     _JF = jf.JournalFile()
 
-    _JF.read_xml_file(args.input)
+    _JF.read_file_xml(args.input)
 
 
-    #dup_titles(_JF)
-    list_publishers(_JF)
+    dup_titles(_JF)
+    #list_publishers(_JF)
