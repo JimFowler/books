@@ -70,7 +70,7 @@ Known text codes and their matching XML tags are::
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
     't'  : 'Tables (Tabellen)',
-    #'T'  : 'Tafeln (Plates),
+    'T'  : 'Tafeln (Plates, tables, boards),
   }
 
 
@@ -121,7 +121,7 @@ __TAG_TO_XML_NAME__ = {
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
     't'  : 'Tables',     # tabelen
-    #'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
+    'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
 }
 
 __XML_NAME_TO_TAG__ = {v: k for k, v in __TAG_TO_XML_NAME__.items()}
