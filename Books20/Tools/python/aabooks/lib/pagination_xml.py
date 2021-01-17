@@ -114,14 +114,14 @@ __TAG_TO_XML_NAME__ = {
     'P'  : 'Plates',
     'pp' : 'Preface',
     'p'  : 'Main',
-    'pa' : 'Afterword',
     # Other unknown sections
+    'pa' : 'OtherSec_1',
     'pb' : 'OtherSec_2',
     'pc' : 'OtherSec_3',
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
     't'  : 'Tables',     # tabelen
-    'T'  : 'Plates',     # tafeln  need to append plates or change all 'T's
+    'T'  : 'Tafeln',     # tafeln  need to append plates or change all 'T's
 }
 
 __XML_NAME_TO_TAG__ = {v: k for k, v in __TAG_TO_XML_NAME__.items()}

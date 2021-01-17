@@ -1,3 +1,8 @@
+2021-01-17  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/pagination_xml.py: Changed Tafeln
+	from 'P' to 'T'.  Also made 'pa' as OtherSec_1.
+
 2020-12-31  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/findjournals (clean_review_string): Added
