@@ -34,6 +34,26 @@ def getargs():
                         default=-1,
                         help='check only the first COUNT objects,')
 
+    parser.add_argument('--translation',
+                        default=True,
+                        action='store_false',
+                        help='skip the test for "translation of"')
+
+    parser.add_argument('--pagenumber',
+                        default=True,
+                        action='store_false',
+                        help='skip the test for valid page number')
+
+    parser.add_argument('--pagination',
+                        default=True,
+                        action='store_false',
+                        help='skip the test of the pagination string')
+
+    parser.add_argument('--review', '--reviews',
+                        default=True,
+                        action='store_false',
+                        help='skip the test for review authors')
+
     parser.add_argument('ajbfiles',
                         help='a list of files to check',
                         nargs='*',
@@ -70,31 +90,36 @@ def main():
             entryindex = entry.num_str()
 
             #   page numbers, AJB only, is page number -1
-            page_number = entry['Num']['pageNum']
-            if  page_number == -1:
-                print(count, entryindex, 'has missing page number')
-            else:
-                # test for non-decreasing page numbers
-                if page_number < old_page_number:
-                    print(count, entryindex, 'non-sequential page number')
-                old_page_number = page_number
+            if args.pagenumber:
+                page_number = entry['Num']['pageNum']
+                if  page_number == -1:
+                    print(count, entryindex, 'has missing page number')
+                else:
+                    # test for non-decreasing page numbers
+                    if page_number < old_page_number:
+                        print(count, entryindex, 'non-sequential page number')
+                    old_page_number = page_number
 
             # reviews, do they have a colon, i.e. have been checked for reviewer
-            for review in entry['Reviews']:
-                if ':' not in review:
-                    print(count, entryindex, 'has missing review author')
+            if args.review:
+                for review in entry['Reviews']:
+                    if ':' not in review:
+                        print(count, entryindex, 'has missing review author')
 
             # pagination, can we parse it properly
-            try:
-                pg.pagination_string_to_xml(entry['Pagination'])
-            except (KeyError, IndexError) as exp:
-                print(count, entryindex, 'has unparsable pagination', exp)
+            if args.pagination:
+                try:
+                    pg.pagination_string_to_xml(entry['Pagination'])
+                except (KeyError, IndexError) as exp:
+                    print(count, entryindex, 'has unparsable pagination', exp)
 
             # 'translation of' in comments
-            #for comment in entry['Others']:
-            #    if 'translation of' in comment:
-            #        print(count, entryindex, 'has translation of')
+            if args.translation:
+                for comment in entry['Others']:
+                    if 'translation of' in comment:
+                        print(count, entryindex, 'has translation of')
 
+            # are we done yet?
             if args.count != -1 and count >= args.count:
                 break
 

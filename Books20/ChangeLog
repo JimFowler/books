@@ -1,3 +1,9 @@
+2021-01-24  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/verify (getargs): Added command line flags
+	to turn off each test.  Reenabled test for 'translation of' in the
+	comments.
+
 2021-01-19  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/findjournals (clean_review_string): Added
