@@ -20,6 +20,7 @@ import aabooks.lib.pagination_xml as pg
 
 import aabooks.ajbbook.bookfile as bf
 
+
 __DESCRIPTION__ = '''Verify AJB entries for fields that are not parsed at entry time.'''
 
 def getargs():
@@ -49,6 +50,11 @@ def getargs():
                         action='store_false',
                         help='skip the test of the pagination string')
 
+    parser.add_argument('--tafeln',
+                        default=True,
+                        action='store_false',
+                        help='skip the test of plates or tafeln in pagination string')
+
     parser.add_argument('--review', '--reviews',
                         default=True,
                         action='store_false',
@@ -62,6 +68,61 @@ def getargs():
     args = parser.parse_known_args()[0]
 
     return args
+
+
+def test_for_page_number(args, count, entry, old_page_number):
+    '''Test the page number for existence and monotonically increasing value.'''
+    entryindex = entry.num_str()
+    # page numbers, AJB only, is page number -1
+    if args.pagenumber:
+        page_number = entry['Num']['pageNum']
+        if  page_number == -1:
+            print(count, entryindex, 'has missing page number')
+        else:
+            # test for non-decreasing page numbers
+            if page_number < old_page_number:
+                print(count, entryindex, 'non-sequential page number')
+        old_page_number = page_number
+
+    return old_page_number
+
+
+def test_for_pagination(args, count, entry):
+    '''test the pagination, can we parse it properly?'''
+    entryindex = entry.num_str()
+    if args.pagination:
+        try:
+            pg.pagination_string_to_xml(entry['Pagination'])
+        except (KeyError, IndexError) as exp:
+            print(count, entryindex, 'has unparsable pagination', exp)
+
+
+def test_for_tafeln(args, count, entry):
+    '''Test for the presence of an indicator for Tafeln.'''
+    entryindex = entry.num_str()
+    test_str = entry['Pagination']
+    if args.tafeln:
+        for test_char in ['T', 't', 'P']:
+            if test_char in test_str:
+                print(count, entryindex, 'has', test_char)
+
+
+def test_for_translation(args, count, entry):
+    '''Test for 'translation of' in comments.'''
+    entryindex = entry.num_str()
+    if args.translation:
+        for comment in entry['Others']:
+            if 'translation of' in comment:
+                print(count, entryindex, 'has translation of')
+
+
+def test_for_reviewers(args, count, entry):
+    '''Test the reviews, do they have a colon, i.e. have been checked for reviewer.'''
+    entryindex = entry.num_str()
+    if args.review:
+        for review in entry['Reviews']:
+            if ':' not in review:
+                print(count, entryindex, 'has missing review author')
 
 
 def main():
@@ -87,37 +148,12 @@ def main():
             if count == 0:
                 continue
 
-            entryindex = entry.num_str()
+            old_page_number = test_for_page_number(args, count, entry, old_page_number)
 
-            #   page numbers, AJB only, is page number -1
-            if args.pagenumber:
-                page_number = entry['Num']['pageNum']
-                if  page_number == -1:
-                    print(count, entryindex, 'has missing page number')
-                else:
-                    # test for non-decreasing page numbers
-                    if page_number < old_page_number:
-                        print(count, entryindex, 'non-sequential page number')
-                    old_page_number = page_number
-
-            # reviews, do they have a colon, i.e. have been checked for reviewer
-            if args.review:
-                for review in entry['Reviews']:
-                    if ':' not in review:
-                        print(count, entryindex, 'has missing review author')
-
-            # pagination, can we parse it properly
-            if args.pagination:
-                try:
-                    pg.pagination_string_to_xml(entry['Pagination'])
-                except (KeyError, IndexError) as exp:
-                    print(count, entryindex, 'has unparsable pagination', exp)
-
-            # 'translation of' in comments
-            if args.translation:
-                for comment in entry['Others']:
-                    if 'translation of' in comment:
-                        print(count, entryindex, 'has translation of')
+            test_for_pagination(args, count, entry)
+            test_for_tafeln(args, count, entry)
+            test_for_translation(args, count, entry)
+            test_for_reviewers(args, count, entry)
 
             # are we done yet?
             if args.count != -1 and count >= args.count:

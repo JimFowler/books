@@ -3,6 +3,8 @@
 	* Tools/python/scripts/verify (getargs): Added command line flags
 	to turn off each test.  Reenabled test for 'translation of' in the
 	comments.
+	(main): Added test and flag for 'Tafeln'.  Made seperate test
+	functions to satisfy pylint.
 
 2021-01-19  Jim Fowler  <jrf@biblion>
 
