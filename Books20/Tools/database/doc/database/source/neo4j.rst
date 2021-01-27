@@ -103,4 +103,20 @@ NeoSemantixs and RDF see https://neo4j.com/labs/nsmtx-rdf
 this is a plugin that enables the use of RDF in Neo4j. Enables
 import and export of RDF data
 
+Why Use a Graph Database
+========================
 
+Why should I use a graph database? noe4j gives four scenarios
+of problems where a graph based database can be effective.
+
+  1. Does our problem involve understanding relationships between
+     entities?
+
+  2. Does the problem involve a lot of self-referencing to the same
+     type of entity?
+
+  3. Does the problem explore relationships of varying or uknown
+     depth?
+
+  4. does our problem involve discovering lots of different routes or
+     paths?
