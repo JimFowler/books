@@ -129,7 +129,7 @@ def parse_keywords(entry, keyword_str):
         entry['keywords'].append(k.strip())
 
 
-aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-d]{0,1})$')
+aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-z]{0,1})$')
 def parse_aaanum(entry, num_str):
     '''Parse the AAA number out of numstr and put the parts
     into entry['Num'].
