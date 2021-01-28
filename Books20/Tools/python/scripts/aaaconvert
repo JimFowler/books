@@ -129,7 +129,7 @@ def parse_keywords(entry, keyword_str):
         entry['keywords'].append(k.strip())
 
 
-aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-c]{0,1})$')
+aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-d]{0,1})$')
 def parse_aaanum(entry, num_str):
     '''Parse the AAA number out of numstr and put the parts
     into entry['Num'].
@@ -144,6 +144,7 @@ def parse_aaanum(entry, num_str):
     num['subsectionNum'] = 0
     num['entryNum'] = int(items[3])
     num['entrySuf'] = items[4]
+
 
 def parse_j_key(entry, j_str):
     '''The 'j' key contain a 7-bit clean ASCII version of the
