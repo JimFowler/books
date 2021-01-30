@@ -263,11 +263,11 @@ def entry_xml_others(entry, entryxml):
 
 def entry_xml_keywords(entry, entryxml):
     '''Convert the entry Keywords to XML'''
-    if entry.not_empty('Keywords'):
+    if entry['Keywords']:
         elm = etree.SubElement(entryxml, 'Keywords')
         for keyword in entry['Keywords']:
             key = etree.SubElement(elm, 'Keyword')
-            key.text = keyword
+            key.text = str(keyword)
 
 def make_ajbnum_xml(ajbnum):
     '''Write an XML version of an AJB number as an index
