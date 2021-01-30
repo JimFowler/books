@@ -104,9 +104,12 @@ def parse_publishing(entry, pub_str):
     for now.  Parse by hand unless we can work out how to
     parse this string automatically.
 
+    split on '.', if string contains ':' split on ',' to ['place:pub',
+    'page']. In 'page' replace '_' with ''.  put 'place:pub' in
+    publisher, 'page' in pagination, and everything else in Others
     '''
 
-    entry['Others'].append(pub_str.strip())
+    entry['Others'].append(pub_str)
 
 def parse_year(entry, year_str):
     '''Parse the copyright year from the year string and
@@ -118,15 +121,14 @@ def parse_year(entry, year_str):
 
 def parse_keywords(entry, keyword_str):
     '''Parse the keywords from the keyword_str and put into the new
-    entry['keywords'].  Need to add keywords to the definition of
+    entry['Keywords'].  Need to add keywords to the definition of
     AJBentry.
 
     '''
-
-    entry['keywords'] = [] # remove this line when ajbentry is updated
+    entry['Keywords'] = [] # remove this line when ajbentry is updated
     keywords = keyword_str.split(',')
     for k in keywords:
-        entry['keywords'].append(k.strip())
+        entry['Keywords'].append(k.strip())
 
 
 aaa_re = re.compile(r'^AAA(\d+)\.(\d+)\.(\d+)([a-z]{0,1})$')
