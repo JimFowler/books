@@ -1,3 +1,18 @@
+2021-02-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/adsquery: Began work on script to query
+	books from the Astrophysical Data System.
+
+2021-01-30  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/entryxml.py (entry_xml_keywords):
+	Modified function to work properly with list object
+
+2021-01-29  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/aaaconvert (parse_keywords): Changed
+	entry['keywords'] to entry['Keywords']
+
 2021-01-28  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/aaaconvert: Extend suffix in parsing

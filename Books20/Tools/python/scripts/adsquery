@@ -1,0 +1,120 @@
+#! /usr/bin/env python
+#
+#  Interact with the NASA Astrophysics Data System (ADS)
+#
+## Begin copyright
+##
+##  /home/jrf/Documents/books/Books20/Tools/python/scripts/adsquery.py
+##
+##   Part of the Books20 Project
+##
+##   Copyright 2021 James R. Fowler
+##
+##   All rights reserved. No part of this publication may be
+##   reproduced, stored in a retrival system, or transmitted
+##   in any form or by any means, electronic, mechanical,
+##   photocopying, recording, or otherwise, without prior written
+##   permission of the author.
+##
+##
+## End copyright
+
+import sys
+import os
+import configargparse as argp
+from pprint import pprint
+
+from astroquery import nasa_ads as ads
+
+import aabooks.lib.utils as aautils
+
+# Don't save this token on github, put it in a config file instead.
+# Token can be recovered or replaced by logging into ADS and going to
+# settings->API Token
+#
+__VERSION__ = '1.0'
+
+__DESCRIPTION__ = 'Get a list of books by year from ADS'
+#
+# Parse the command line arguments
+#
+def get_args():
+    """Parse the command line arguments."""
+    parser = argp.ArgumentParser(description=__DESCRIPTION__,
+                                 default_config_files=['~/.config/Books20/adsquery.conf'])
+                                 
+    aautils.standard_parser_args(parser)
+    
+    parser.add_argument('-t', '--ads-token', type=str,
+                        dest='ads_token',
+                        help='Use ADS_TOKEN to connect with ADS')
+
+    parser.add_argument('-y', '--year',
+                       help='the year of publication',
+                       default='1900')
+    
+    return parser.parse_known_args()[0]
+
+
+#
+# Main work
+#
+if __name__ == '__main__':
+
+    args = get_args()
+    if args.verbose:
+        pprint(args)
+
+
+    #
+    # Query construction and field information can be found at
+    # https://github.com/adsabs/adsabs-dev-api/blob/master/Search_API.ipynb
+    # or the comprehensive list is at
+    # https://adsabs.github.io/help/search/comprehensive-solr-term-list
+    #
+    ads.ADS.NROWS = 50
+    ads.ADS.TOKEN = args.ads_token
+    ads.ADS.SORT = 'bibcode asc'
+    # Search fields are not the same as return fields
+    ads.ADS.ADS_FIELDS =['bibcode', 'alternate_bibcode', 'title', 'author',
+                         'pub_raw', 'copyright', 'year', 'pubdate', 'pub',
+                         'page_count', 'volume', 'citation', 'abstract',
+                         'keyword', 'doi', 'eid', 'isbn',
+                         'database', 'data']
+    
+    #query = 'bibcode:"1950inno.book.....A"' # can look up a specific bibcode
+    # add 'proceedings' to doctypes
+    query = 'doctype:"book" or doctype:"proceedings" year:{}'.format(args.year) # or all books by year
+
+    results = ads.ADS.query_simple(query)
+
+    if args.verbose:
+        print('length of results:', len(results))
+        #pprint(results)
+        print()
+
+    
+    for count, result in enumerate(results):
+        print(result['bibcode'])
+        print('Alternate:', result['alternate_bibcode'])
+        print('Title:', result['title'])
+        print('Author(s):', result['author'])
+        print('Copyright:', result['copyright'])
+        print('Year:', result['year'])
+        print('Pub Date:', result['pubdate'])
+        print('Pub Raw:', result['pub_raw'])
+        print('Publisher(s):', result['pub'])
+        print('Pagination:', result['page_count'])
+        print('Volume:', result['volume'])
+        print('Citation:', result['citation'])
+        print('abstract:', result['abstract'])
+        print('doi:', result['doi'])
+        print('eid:', result['eid'])
+        print('keywords:', result['keyword'])
+        print('database:', result['database'])
+        print('data:', result['data'])
+        print('isbn:', result['isbn'])
+
+        print()
+        # How do I want to print this information?
+        # in biblatex format or XML entries or ...
