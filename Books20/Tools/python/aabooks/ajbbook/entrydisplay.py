@@ -109,7 +109,7 @@ def entry_display_title(self, entry):
 
     astr = ''
     if entry.not_empty('Title'):
-        astr += entry['Title']
+        astr += str(entry['Title'])
     self.titleEntry.setText(astr)
 
 def entry_display_publishers(self, entry):
@@ -122,7 +122,8 @@ def entry_display_publishers(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += publisher['Place'] + ' : ' + publisher['PublisherName']
+            astr += str(publisher['Place']) + ' : ' \
+                + str(publisher['PublisherName'])
     self.publEntry.setText(astr)
 
 def entry_display_edition(self, entry):
@@ -130,7 +131,7 @@ def entry_display_edition(self, entry):
 
     astr = ''
     if entry.not_empty('Edition'):
-        astr += entry['Edition']
+        astr += str(entry['Edition'])
     self.editionEntry.setText(astr)
 
 def entry_display_year(self, entry):
@@ -138,7 +139,7 @@ def entry_display_year(self, entry):
     # Year
     astr = ''
     if entry.not_empty('Year'):
-        astr += entry['Year']
+        astr += str(entry['Year'])
     self.yearEntry.setText(astr)
 
 def entry_display_pagination(self, entry):
@@ -146,7 +147,7 @@ def entry_display_pagination(self, entry):
 
     astr = ''
     if entry.not_empty('Pagination'):
-        astr += entry['Pagination']
+        astr += str(entry['Pagination'])
     self.pageEntry.setText(astr)
 
 def entry_display_price(self, entry):
@@ -154,7 +155,7 @@ def entry_display_price(self, entry):
 
     astr = ''
     if entry.not_empty('Price'):
-        astr += entry['Price']
+        astr += str(entry['Price'])
     self.priceEntry.setText(astr)
 
 def entry_display_review(self, entry):
@@ -168,7 +169,7 @@ def entry_display_review(self, entry):
             for review in reviews:
                 if not first:
                     astr += '\n'
-                astr += review
+                astr += str(review)
                 first = False
     self.reviewsEntry.setPlainText(astr)
 
@@ -177,7 +178,7 @@ def entry_display_language(self, entry):
 
     astr = ''
     if entry.not_empty('Language'):
-        astr += entry['Language']
+        astr += str(entry['Language'])
     self.tolangEntry.setText(astr)
 
 def entry_display_fromlanguage(self, entry):
@@ -185,7 +186,7 @@ def entry_display_fromlanguage(self, entry):
 
     astr = ''
     if entry.not_empty('TranslatedFrom'):
-        astr += entry['TranslatedFrom']
+        astr += (entry['TranslatedFrom'])
     self.fromlangEntry.setText(astr)
 
 def entry_display_translators(self, entry):
@@ -208,7 +209,7 @@ def entry_display_transof(self, entry):
 
     astr = ''
     if entry.not_empty('TranslationOf'):
-        astr += entry['TranslationOf']
+        astr += str(entry['TranslationOf'])
     self.transofEntry.setText(astr)
 
 def entry_display_compilers(self, entry):
@@ -246,7 +247,7 @@ def entry_display_reprint(self, entry):
 
     astr = ''
     if entry.not_empty('Reprint'):
-        astr += entry['Reprint']
+        astr += str(entry['Reprint'])
     self.reprintEntry.setText(astr)
 
 def entry_display_reference(self, entry):
@@ -254,7 +255,7 @@ def entry_display_reference(self, entry):
 
     astr = ''
     if entry.not_empty('Reference'):
-        astr += entry['Reference']
+        astr += str(entry['Reference'])
     self.referenceEntry.setText(astr)
 
 def entry_display_others(self, entry):
@@ -292,7 +293,7 @@ def entry_display_unknown(self, entry):
         if self.known_entry_fields.count(field) == 0:
             QtWidgets.QMessageBox.warning(self, 'Unknown Entry Field',
                                           'Unknown field "%s:  %s"\n in entry %s\n "' %
-                                          (field, entry[field], entry['Index']),
+                                          (field, str(entry[field]), entry['Index']),
                                           QtWidgets.QMessageBox.Ok)
 
 
