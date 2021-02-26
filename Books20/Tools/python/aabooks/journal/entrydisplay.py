@@ -41,11 +41,11 @@ def entry_display_title(self, entry):
 
     astr = ''
     if entry.not_empty('Title'):
-        astr += entry['Title']
+        astr += str(entry['Title'])
     if entry.not_empty('subTitle'):
-        astr = astr + '\n' + entry['subTitle']
+        astr = astr + '\n' + str(entry['subTitle'])
     if entry.not_empty('subsubTitle'):
-        astr = astr + '\n' + entry['subsubTitle']
+        astr = astr + '\n' + str(entry['subsubTitle'])
     self.titleEdit.setText(astr)
 
 def entry_display_publishers(self, entry):
@@ -59,16 +59,16 @@ def entry_display_publishers(self, entry):
                 astr += '\n'
             first = False
             if mem.__contains__('Place'):
-                astr += mem['Place']
+                astr += str(mem['Place'])
             astr += ' : '
             if mem.__contains__('Name'):
-                astr += mem['Name']
+                astr += str(mem['Name'])
             astr += ' : '
             if mem.__contains__('startDate'):
-                astr += mem['startDate']
+                astr += str(mem['startDate'])
             astr += ' : '
             if mem.__contains__('endDate'):
-                astr += mem['endDate']
+                astr += (mem['endDate'])
     self.publisherEdit.setText(astr)
 
 def entry_display_abbreviations(self, entry):
@@ -81,7 +81,7 @@ def entry_display_abbreviations(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += mem
+            astr += str(mem)
     self.abbreviationsEdit.setText(astr)
 
 def entry_display_startdate(self, entry):
@@ -89,7 +89,7 @@ def entry_display_startdate(self, entry):
 
     astr = ''
     if entry.not_empty('startDate'):
-        astr += entry['startDate']
+        astr += str(entry['startDate'])
     self.startDateEdit.setText(astr)
 
 def entry_display_enddate(self, entry):
@@ -97,7 +97,7 @@ def entry_display_enddate(self, entry):
 
     astr = ''
     if entry.not_empty('endDate'):
-        astr += entry['endDate']
+        astr += str(entry['endDate'])
     self.endDateEdit.setText(astr)
 
 def entry_display_linkprevious(self, entry):
@@ -110,7 +110,7 @@ def entry_display_linkprevious(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += mem
+            astr += str(mem)
     self.LinkPreviousEdit.setText(astr)
 
 def entry_display_linknext(self, entry):
@@ -123,7 +123,7 @@ def entry_display_linknext(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += mem
+            astr += str(mem)
     self.LinkNextEdit.setText(astr)
 
 def entry_display_designators(self, entry):
@@ -136,9 +136,9 @@ def entry_display_designators(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += mem
+            astr += str(mem)
             astr += ' : '
-            astr += entry['Designators'][mem]
+            astr += str(entry['Designators'][mem])
     self.designatorEdit.setText(astr)
 
 def entry_display_comments(self, entry):
@@ -151,7 +151,7 @@ def entry_display_comments(self, entry):
             if not first:
                 astr += '\n'
             first = False
-            astr += mem
+            astr += str(mem)
     self.CommentsEdit.setText(astr)
 
 
