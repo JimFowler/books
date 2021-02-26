@@ -33,6 +33,7 @@ To keep pylint happy,
 '''
 import os
 import platform
+from fast_autocomplete import AutoComplete
 
 # Trouble shooting assistance
 from pprint import pprint
@@ -191,27 +192,36 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         self.close()
 
+
     #
     # Deal with the Search Dictionary
     #
     def _build_search_dictionary(self):
-        '''Add all the titles and abbreviations to the search
-        dictionary'''
-        self._vardict['sdict'].clear()
+        '''Takes a JournalFile and returns an AutoComplete object.
+
+        '''
+
+        words = {}
+        synonyms = {}
+        del self._vardict['sdict']
+        
         for count, entry in enumerate(self._vardict['journal_file']):
-            if count > 0:
-                title = entry['Title']
-                self._vardict['sdict'].add_sub_strings(title, (title, count))
+            if count < 1:
+                continue
 
-                sub_title = entry['subTitle']
-                self._vardict['sdict'].add_sub_strings(sub_title, (sub_title, count))
+            title = entry['Title']
+            sub_title = entry['subTitle']
+            subsub_title = entry['subsubTitle']
 
-                subsub_title = entry['subsubTitle']
-                self._vardict['sdict'].add_sub_strings(subsub_title, (subsub_title, count))
+            words[title.lower()] = {'Title' : title,
+                                    'Index' : count}
 
-                for abr in entry['Abbreviations']:
-                    if abr is not None:
-                        self._vardict['sdict'].add_sub_strings(abr, (abr, count))
+            synonyms[title] = [sub_title.lower(), subsub_title.lower()]
+            for abbrev in entry['Abbreviations']:
+                if abbrev:
+                    synonyms[title].append(str(abbrev.lower()))
+
+        self._vardict['sdict']  = AutoComplete(words=words, synonyms=synonyms)
 
 
     #

@@ -1,3 +1,13 @@
+2021-02-26  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/jsearch.py
+	(JournalSearch.search_edit_changed): Changed to utlize
+	the package fast_autosearch instead of my search.py.
+
+	* Tools/python/aabooks/journal/journalwindow.py
+	(JournalWindow._build_search_dictionary): Changed to utilize
+	the package fast_autosearch instead of my search.py.
+
 2021-02-03  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/adsquery: Began work on script to query

@@ -58,22 +58,25 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
         search_text = self.searchEdit.text()
         self.searchResults.clear()
         self.searchResults.insertItem(0, search_text.strip())
+        self.current_search_list = []
 
-        if len(search_text) > 2:
-            # Update the searchResults box
-            try:
-                self.current_search_list = self.searchdict.search(search_text.strip())
-            except KeyError:
-                self.current_search_list = []
+        try:
+            search_results = self.searchdict.search(word=search_text)
+            for sres in search_results:
+                context = self.searchdict.words[sres[-1]]
+                self.current_search_list.append((context['Title'],
+                                                 context['Index']))
+        except KeyError:
+            self.current_search_list = []
 
-            max_items = len(self.current_search_list)
-            if max_items > 0:
-                # add to searchResults
-                for i in range(1, (max_items + 1)):
-                    try:
-                        self.searchResults.insertItem(i, self.current_search_list[i-1][0])
-                    except IndexError:
-                        pass
+        max_items = len(self.current_search_list)
+        if max_items > 0:
+            # add to searchResults
+            for i in range(1, (max_items + 1)):
+                try:
+                    self.searchResults.insertItem(i, self.current_search_list[i-1][0])
+                except IndexError:
+                    pass
 
         self.searchEdit.textChanged.connect(self.search_edit_changed)
 
