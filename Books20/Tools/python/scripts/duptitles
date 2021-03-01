@@ -51,9 +51,14 @@ def entries_match(entry_I, entry_J):
     '''Decide if two entries are the same or match in some way.'''
 
     if entry_I['Title'] == entry_J['Title']:
-        if entry_I['subTitle'] and entry_J['subTitle'] \
-           and entry_I['subTitle'] == entry_J['subTitle']:
-            return True
+        print('common title')
+        return True
+    if entry_I['subTitle'] and entry_J['subTitle'] and entry_I['subTitle'] == entry_J['subTitle'] :
+        print('common subtitle')
+        return True
+    if entry_I['subsubTitle'] and entry_J['subsubTitle'] and entry_I['subsubTitle'] == entry_J['subsubTitle']:
+        print('common subsubtitle')
+        return True
 
     return False
 
