@@ -117,7 +117,7 @@ def parse_year(entry, year_str):
 
     '''
 
-    entry['Year'] = int(year_str.strip())
+    entry['Year'] = year_str.strip()
 
 def parse_keywords(entry, keyword_str):
     '''Parse the keywords from the keyword_str and put into the new
