@@ -1,3 +1,9 @@
+2021-03-07  Jim Fowler  <jrf@biblion>
+
+	* Docs/Series/springer_assl_table.py (assl_print_books): Added
+	AJB/AAA numbers to entries. Had to modify the read function
+	to allow additional fields in the entry list.
+
 2021-02-26  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/jsearch.py
