@@ -193,7 +193,7 @@ ASSL_BOOK_LIST = [
 
     (21, ['Space Observatories'], '1970', 
      ['Jean-Claude Pecker'],
-     'A', None, ''),
+     'A', None, 'AAA 04.03.101'),
 
     (22, ['Structure and Evolution of the', 'Galaxy:',
           'Proceedings of the NATO Advanced', 'Study Institute Held in Athens,',
