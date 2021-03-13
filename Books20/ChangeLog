@@ -1,3 +1,8 @@
+2021-03-13  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/verify (main): commented out test for
+	Tafeln and 'translation of'.
+
 2021-03-07  Jim Fowler  <jrf@biblion>
 
 	* Docs/Series/springer_assl_table.py (assl_print_books): Added

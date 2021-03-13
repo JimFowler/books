@@ -151,8 +151,8 @@ def main():
             old_page_number = test_for_page_number(args, count, entry, old_page_number)
 
             test_for_pagination(args, count, entry)
-            test_for_tafeln(args, count, entry)
-            test_for_translation(args, count, entry)
+            #test_for_tafeln(args, count, entry)
+            #test_for_translation(args, count, entry)
             test_for_reviewers(args, count, entry)
 
             # are we done yet?
