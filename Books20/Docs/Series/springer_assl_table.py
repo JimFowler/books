@@ -199,7 +199,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of the NATO Advanced', 'Study Institute Held in Athens,',
           'September 8–19, 1969'], '1971', 
      ['L. N. Mavridis'],
-     'E', None, ''),
+     'E', None, 'AAA 05.12.06'),
 
     (23, ['The Magellanic Clouds:', 'A European Southern Observatory',
           'Presentation: Principal Prospects,', 'Current Observational and',
