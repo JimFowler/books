@@ -221,7 +221,7 @@ ASSL_BOOK_LIST = [
 
     (26, ['Selected Exercises in Galactic', 'Astronomy'], '1971', 
      ['I. Atanasijević'],
-     'A', None, ''),
+     'A', None, 'AAA 06.03.25'),
 
     (27, ['Physics of the Solar Coronae:', 'Proceedings of the NATO Advanced',
           'Study Institute on the Physics', 'of the Solar Coronae',
