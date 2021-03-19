@@ -18,7 +18,7 @@
 #
 # End copyright
 #
-"""Convert aaaVVsSS.txt files to aaaVVsSS_books.xml files for use
+"""Convert aaaVVsSS.txt files to aaaVV_books.xml files for use
 with ajbbooks.py and other xml parsers.
 """
 import os
@@ -53,7 +53,8 @@ def getargs():
 
     parser.add_argument('filename',
                         type=str,
-                        action='store',
+                        action='append',
+                        nargs='*',
                         help='read the file INPUT for entries')
 
     args = parser.parse_args()
@@ -227,36 +228,44 @@ def main():
     # set up required data structures and variables
     # generate the output file name and add to bf.
     bookfile = bf.BookFile()
+    bookfile.set_header('''
 
-    with open(args.filename, 'r', encoding='ISO-8859-1') as fptr:
-        lines = fptr.readlines()
-        count = 0
-        for line in lines:
-            count += 1
-            tmp_entry = ajbentry.AJBentry()
-            tmp_entry['OrigStr'] = line
+Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
 
-            # convert the line to a dictionary
-            elements = line.strip().split('|')
-
-            # convert the list of elements to a dictionary
-            del elements[0]
-            element_dict = dict(itertools.zip_longest(*[iter(elements)] * 2, fillvalue=""))
-
-            # convert element dictionary by keys to an AJBentry
-            for key in element_dict.keys():
-                try:
-                    _KEY_FUNCTIONS[key](tmp_entry, element_dict[key])
-                except KeyError:
-                    print('Unknown key: {} entry num {}\n  {}'.format(key, count,
-                                                                  element_dict[key]))
-
-            bookfile.set_new_entry(tmp_entry)
+For volume AAA ?? Index to the Literature of ????, started, finished, proofread
 
 
-    bname = os.path.basename(args.filename)
-    fname = os.path.splitext(bname)
-    bookfile.write_file_xml(fname[0] + '_books.xml')
+''')
+
+    for fname in args.filename[0]:
+        with open(fname, 'r', encoding='ISO-8859-1') as fptr:
+            lines = fptr.readlines()
+            count = 0
+            for line in lines:
+                count += 1
+                tmp_entry = ajbentry.AJBentry()
+                tmp_entry['OrigStr'] = line
+
+                # convert the line to a dictionary
+                elements = line.strip().split('|')
+
+                # convert the list of elements to a dictionary
+                del elements[0]
+                element_dict = dict(itertools.zip_longest(*[iter(elements)] * 2, fillvalue=""))
+
+                # convert element dictionary by keys to an AJBentry
+                for key in element_dict.keys():
+                    try:
+                        _KEY_FUNCTIONS[key](tmp_entry, element_dict[key])
+                    except KeyError:
+                        print('Unknown key: {} entry num {}\n  {}'.format(key, count,
+                                                                      element_dict[key]))
+
+                bookfile.set_new_entry(tmp_entry)
+
+    bname = os.path.basename(fname)
+    fname, suffix = os.path.splitext(bname)
+    bookfile.write_file_xml(fname[0:5] + '_books.xml')
 
 #
 # Main work
