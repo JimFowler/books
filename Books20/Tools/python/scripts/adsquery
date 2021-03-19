@@ -51,7 +51,7 @@ def get_args():
 
     parser.add_argument('-y', '--year',
                        help='the year of publication',
-                       default='1900')
+                       default='1899')
     
     return parser.parse_known_args()[0]
 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     ads.ADS.TOKEN = args.ads_token
     ads.ADS.SORT = 'bibcode asc'
     # Search fields are not the same as return fields
-    ads.ADS.ADS_FIELDS =['bibcode', 'alternate_bibcode', 'title', 'author',
+    ads.ADS.ADS_FIELDS =['bibcode', 'alternate_bibcode', 'doctype', 'title', 'author',
                          'pub_raw', 'copyright', 'year', 'pubdate', 'pub',
                          'page_count', 'volume', 'citation', 'abstract',
                          'keyword', 'doi', 'eid', 'isbn',
@@ -93,10 +93,10 @@ if __name__ == '__main__':
         #pprint(results)
         print()
 
-    
     for count, result in enumerate(results):
         print(result['bibcode'])
         print('Alternate:', result['alternate_bibcode'])
+        print('Doctype:', result['doctype'])
         print('Title:', result['title'])
         print('Author(s):', result['author'])
         print('Copyright:', result['copyright'])
