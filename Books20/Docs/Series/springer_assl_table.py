@@ -205,19 +205,19 @@ ASSL_BOOK_LIST = [
           'Presentation: Principal Prospects,', 'Current Observational and',
           'Theoretical Approaches, and', 'Prospects for Future Research'], '1971', 
      ['André B. Muller'],
-     'E', None, ''),
+     'E', None, 'AAA 06.12.10'),
 
     (24, ['The Radiating Atmosphere:', 'Proceedings of a Symposium Organized by',
           'the Summer Advanced Study Institute,',
           'Held at Queens University', 'Kingston, Ontario, Aug 3-14, 1970'], '1971', 
      ['B. M. McCormac'],
-     'E', None, ''),
+     'E', None, 'AAA 06.12.21'),
 
     (25, ['Mesospheric Models and Related', 'Experiments:',
           'Proceedings of the Fourth', 'Esrin-Eslab Symposium Held in',
           'Frascati, Italy, 6–10 July, 1970'], '1971', 
      ['G. Fiocco'],
-     'E', None, ''),
+     'E', None, 'AAA 06.12.24'),
 
     (26, ['Selected Exercises in Galactic', 'Astronomy'], '1971', 
      ['I. Atanasijević'],
