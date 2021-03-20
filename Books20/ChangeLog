@@ -1,3 +1,10 @@
+2021-03-20  Jim Fowler  <jrf@biblion>
+
+	* Docs/Journals/skytel_table.py: Added missing dictionary
+	to indicate which issues are not in my collection.  Added
+	print_month() function to print missing issues differently
+	than issues I have.
+
 2021-03-13  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/verify (main): commented out test for
