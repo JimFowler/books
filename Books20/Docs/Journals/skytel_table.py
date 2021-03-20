@@ -121,10 +121,10 @@ st_missing = {
 
     
 TBL_CAPTION = r'\bfseries Sky \& Telescope Magazine'
-TBL_FORMAT = r'[p]{l l l l l l l l c l l l l l l l}'
+TBL_FORMAT = r'[p]{l l l l l l l l l l l l l l l}'
 TBL_LABEL = r'skytel:1'
 #TBL_HEADING = r''
-TBL_HEADING = r'''Vol & Year & & & & & & & & Vol & & & & & &'''
+TBL_HEADING = r'''Vol & Year & & & & & & Vol & & & & & &'''
 CONTINUE_LABEL = r'''Continuation of \bt{Sky \& Telescope}'''
 TBL_PREAMBLE = r'''\setlength\LTleft{0pt}'''
 TBL_FOOTER = r''
@@ -153,15 +153,17 @@ def st_print_table():
     volume = 19
     for volume in range(volume, 145, 2):
         raw_str = r''
-        raw_str += r'''\bf{''' + r'''{}'''.format(year)
-        raw_str += r'''} & \bf{Vol ''' + r'''{}'''.format(volume) + r'''}'''
-        
+        raw_str += r'''\bf{''' + r'''{}'''.format(year) + r'''}'''
+
+        # print the first volume of the year
+        raw_str += r''' & \bf{Vol ''' + r'''{}'''.format(volume) + r'''}'''
         for month in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']:
             raw_str += r''' & ''' + print_month(volume, month)
             
-        raw_str += r''' & '''
-        raw_str += r'''\hfill & \bf{Vol ''' + '''{}'''.format(volume + 1) + r'''}'''
+        #raw_str += r''' & \hfill'''
 
+        # print the second volume of the year
+        raw_str += r''' & \bf{Vol ''' + '''{}'''.format(volume + 1) + r'''}'''
         for month in ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
             raw_str += r''' & ''' + print_month(volume, month)
             
@@ -179,7 +181,7 @@ if __name__ == '__main__':
 
     tb.print_table_caption(TBL_CAPTION)
     tb.print_table_label(TBL_LABEL)
-    tb.print_table_heading(16, TBL_HEADING, CONTINUE_LABEL)
+    tb.print_table_heading(15, TBL_HEADING, CONTINUE_LABEL)
     tb.print_table_footer(TBL_FOOTER, CONTINUE_FOOTER)
 
     st_print_table()
