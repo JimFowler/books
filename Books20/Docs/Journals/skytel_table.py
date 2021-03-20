@@ -130,20 +130,19 @@ TBL_PREAMBLE = r'''\setlength\LTleft{0pt}'''
 TBL_FOOTER = r''
 CONTINUE_FOOTER = r''
 
-def print_month(volume, month):
-    '''Pretty print a month name depending on whether
+def print_month(volume, issue):
+    '''Pretty print a issue name depending on whether
     it is missing from my collection or not.
 
     '''
-    raw_str = ' & '
-    
-    if month in st_missing[str(volume)]:
-        # if the volume is missing
-        raw_str += str(month)
+    return_string = r''
+    if issue in st_missing[str(volume)]:
+        # if the issue is missing from the volume
+        return_string += str(issue)
     else:
-        raw_str += r'''\bf{''' + str(month) + r'''}'''
+        return_string += r'''\bf{''' + str(issue) + r'''}'''
         
-    return raw_str
+    return return_string
 
 def st_print_table():
 
@@ -156,13 +155,15 @@ def st_print_table():
         raw_str = r''
         raw_str += r'''\bf{''' + r'''{}'''.format(year)
         raw_str += r'''} & \bf{Vol ''' + r'''{}'''.format(volume) + r'''}'''
+        
         for month in ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']:
-            raw_str += print_month(volume, month)
+            raw_str += r''' & ''' + print_month(volume, month)
+            
         raw_str += r''' & '''
         raw_str += r'''\hfill & \bf{Vol ''' + '''{}'''.format(volume + 1) + r'''}'''
 
         for month in ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']:
-            raw_str += print_month(volume, month)
+            raw_str += r''' & ''' + print_month(volume, month)
             
         raw_str += r''' \\[5pt]'''
         safe_str = tb.protect_str(raw_str)
