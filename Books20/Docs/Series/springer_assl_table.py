@@ -232,7 +232,7 @@ ASSL_BOOK_LIST = [
 
     (28, ['The Environment of the Earth'], '1971', 
      ['Francis Delobeau'],
-     'A', None, ''),
+     'A', None, 'AAA 07.03.02'),
 
     (29, ['Solar-Terrestrial Physics/1970:', 'Proceedings of the International',
           'Symposium on Solar-Terrestrial',
