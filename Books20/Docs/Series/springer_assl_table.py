@@ -31,7 +31,10 @@
 
    This information was gather from the back pages of
    volumes 280 and 338. The remaining data were collected
-   from the Springer-Nature web site
+   from the Springer-Nature web site.
+
+   Note that some of the works were published as multi-volume
+   publications.
 '''
 
 import sys
@@ -48,6 +51,8 @@ TBL_COMMENT = '''%%
 %%   with the book project "Some Important Books in Astronomy
 %%   and Astrophysics in the 20th Century"
 %%
+%%   Note that some of the works were published as multi-volume
+%%   publications.
 '''
 
 TBL_COPYRIGHT = r'''%%   Copyright 2018 James R. Fowler
@@ -228,17 +233,19 @@ ASSL_BOOK_LIST = [
           'Held in Cavouri-Vouliagmeni,', 'Athens, Greece'
           '6-17 September 1970'], '1971', 
      ['C. J. Macris'],
-     'E', None, ''),
+     'E', None, 'AAA 07.12.11'),
 
     (28, ['The Environment of the Earth'], '1971', 
      ['Francis Delobeau'],
      'A', None, 'AAA 07.03.02'),
 
+    # Volume 29 was published in four parts AAA 07.12.12-15
+    # AAA 07.12.16 is the listing for all four volumes
     (29, ['Solar-Terrestrial Physics/1970:', 'Proceedings of the International',
           'Symposium on Solar-Terrestrial',
           'Physics Held in Leningrad, U.S.S.R.,', '12–19 May 1970'], '1972', 
      ['C. de Jager', 'E. R. Dyer'],
-     'E', None, ''),
+     'E', None, 'AAA 07.12.16'),
 
     (30, ['Infrared Detection Techniques for', 'Space Research:',
           'Proceedings of the Fifth Eslab/Esrin',
@@ -250,7 +257,7 @@ ASSL_BOOK_LIST = [
     (31, ['Gravitational N-Body Problem:', 'Proceedings of the IAU Colloquium',
           'No. 10 Held in Cambridge, England', 'August 12–15, 1970'], '1972', 
      ['Myron Lecar'],
-     'E', None, ''),
+     'E', None, 'AAA 07.12.04'),
 
     (32, ['Earth’s Magnetospheric Processes:',
           'Proceedings of a Symposium Organized', 'by the Summer Advanced Study',
