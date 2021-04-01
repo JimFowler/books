@@ -243,7 +243,7 @@ ASSL_BOOK_LIST = [
     # AAA 07.12.16 is the listing for all four volumes
     (29, ['Solar-Terrestrial Physics/1970:', 'Proceedings of the International',
           'Symposium on Solar-Terrestrial',
-          'Physics Held in Leningrad, U.S.S.R.,', '12–19 May 1970'], '1972', 
+          'Physics Held in Leningrad, U.S.S.R.,', '12–-19 May 1970'], '1972', 
      ['C. de Jager', 'E. R. Dyer'],
      'E', None, 'AAA 07.12.16'),
 
@@ -252,7 +252,7 @@ ASSL_BOOK_LIST = [
           'Symposium Held in Noordwijk, The',
           'Netherlands, June 8–11, 1971'], '1972', 
      ['V. Manno', 'J. Ring'],
-     'E', None, ''),
+     'E', None, 'AAA 08.12.05'),
 
     (31, ['Gravitational N-Body Problem:', 'Proceedings of the IAU Colloquium',
           'No. 10 Held in Cambridge, England', 'August 12–15, 1970'], '1972', 
@@ -262,9 +262,9 @@ ASSL_BOOK_LIST = [
     (32, ['Earth’s Magnetospheric Processes:',
           'Proceedings of a Symposium Organized', 'by the Summer Advanced Study',
           'Institute and Ninth ESRO Summer', 'School, Held in Cortina, Italy,',
-          'August 30 – September 10, 1971'], '1972', 
+          'August 30 –-- September 10, 1971'], '1972', 
      ['B. M. McCormac'],
-     'E', None, ''),
+     'E', None, 'AAA 08.12.09'),
 
     (33, ['Maps of Lunar Hemispheres'], '1972', 
      ['Antonín Rükl'],
