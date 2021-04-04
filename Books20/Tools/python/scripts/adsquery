@@ -26,7 +26,12 @@ from pprint import pprint
 
 from astroquery import nasa_ads as ads
 
+from nameparser import HumanName
+
 import aabooks.lib.utils as aautils
+from aabooks.ajbbook import bookfile as bf
+from aabooks.ajbbook import ajbentry
+
 
 # Don't save this token on github, put it in a config file instead.
 # Token can be recovered or replaced by logging into ADS and going to
@@ -51,20 +56,16 @@ def get_args():
 
     parser.add_argument('-y', '--year',
                        help='the year of publication',
-                       default='1899')
+                       default='1997')
     
     return parser.parse_known_args()[0]
 
+def get_ads_year(year):
+    '''Get the books out of ADS for a particular year.
 
-#
-# Main work
-#
-if __name__ == '__main__':
+    return an ADS query results
 
-    args = get_args()
-    if args.verbose:
-        pprint(args)
-
+    '''
 
     #
     # Query construction and field information can be found at
@@ -81,40 +82,309 @@ if __name__ == '__main__':
                          'page_count', 'volume', 'citation', 'abstract',
                          'keyword', 'doi', 'eid', 'isbn',
                          'database', 'data']
-    
-    #query = 'bibcode:"1950inno.book.....A"' # can look up a specific bibcode
-    # add 'proceedings' to doctypes
-    query = 'doctype:"book" or doctype:"proceedings" year:{}'.format(args.year) # or all books by year
+
+    # can look up a specific bibcode    
+    #query = 'bibcode:"1950inno.book.....A"'
+
+    # or all books by year
+    query = 'doctype:"book" or doctype:"proceedings" year:{}'.format(year)
 
     results = ads.ADS.query_simple(query)
 
+    return results
+
+def print_result(result):
+    '''Print the result fields'''
+
+    print(result['bibcode'])
+    print('Alternate:', result['alternate_bibcode'])
+    print('Doctype:', result['doctype'])
+    print('Title:', result['title'])
+    print('Author(s):', result['author'])
+    print('Copyright:', result['copyright'])
+    print('Year:', result['year'])
+    print('Pub Date:', result['pubdate'])
+    print('Pub Raw:', result['pub_raw'])
+    print('Publisher(s):', result['pub'])
+    print('Pagination:', str(result['page_count']))
+    print('Volume:', result['volume'])
+    print('Citation:', result['citation'])
+    print('abstract:', result['abstract'])
+    print('doi:', result['doi'])
+    print('eid:', result['eid'])
+    print('keywords:', result['keyword'])
+    print('database:', result['database'])
+    print('data:', result['data'])
+    print('isbn:', result['isbn'])
+
+    print()
+
+
+def create_bookfile(year):
+    '''Create a bookfile object and initialize it.
+
+    '''
+    bookfile = bf.BookFile()
+    bookfile.set_header('''
+
+Save as Unicode UTF-8 text encoding.
+
+From ADS books for the Literature of {}, started, finished, proofread
+
+
+'''.format(year))
+
+    return bookfile
+
+
+def entry_set_index(entry, year, count):
+    '''Set up an AJB index entry to make this entry a valid ajbentry'''
+
+    entry['Num']['volume'] = 'ADS'
+    entry['Num']['volNum'] = year - 1898
+    entry['Num']['sectionNum'] = 1
+    entry['Num']['subsectionNum'] = 0
+    entry['Num']['entryNum'] = count
+    entry['Num']['pageNum'] = 0
+    
+    
+def result_to_entry_title(result, entry):
+    '''Put the result title field into the entry Title field.
+    The result field is a list which may have more that one
+    element. The entry Title field is a string.
+
+    '''
+
+    first = True
+    for t in result['title']:
+        if not first:
+            entry['Title'] += '; '
+        entry['Title'] += str(t)
+        first = False
+
+def result_to_entry_authors(result, entry):
+    '''Put the result author field elements in to the entry Authors
+    field.  The result author field is a list with lastname, first middle.
+    Hopefully we can parse this format with nameparser.
+
+    '''
+    if result['author']:
+        if type(result['author']) is list:
+            for name in result['author']:
+                if name:
+                    entry['Authors'].append(HumanName(name))
+        elif type(result['author']) is str:
+            entry['Authors'] = str(result['author'])
+        else:
+            entry['Others'].append('authors : {}'.format(result['author']))
+        
+def result_to_entry_year(result, entry):
+    '''Put the result year field into the entry Year field.
+
+    '''
+    if result['year']:
+        entry['Year'] += str(result['year'])
+
+
+def result_to_entry_pagination(result, entry):
+    '''Put the result page_count field in to entry Pagination field.
+    Note that the result page_count field may be a list or an int
+
+    '''
+    if result['page_count']:
+        if type(result['page_count']) is list:
+            for page in result['page_count']:
+                if page:
+                    entry['Pagination'] += str(page)
+        elif type(result['page_count']) is int:
+            entry['Pagination'] = str(result['page_count'])
+        else:
+            entry['Others'].append('page_count : {}'.format(result['page_count']))
+
+
+def result_to_entry_reviews(result, entry):
+    '''Put the result citation field into the entry Reviews field.
+
+    '''
+
+    if result['citation']:
+        for cite in result['citation']:
+            if cite:
+                entry['Reviews'].append(str(cite) + ' :')
+
+def result_to_entry_bibcode(result, entry):
+    '''Put the result bibcode and alternate_bibcode into the entry
+    Comments field.
+
+    '''
+
+    if result['bibcode']:
+        entry['Others'].append('bibcode : {}'.format(str(result['bibcode'])))
+ 
+    if result['alternate_bibcode']:
+        if type(result['alternate_bibcode']) is list:
+            for bibcode in result['alternate_bibcode']:
+                if bibcode:
+                    entry['Others'].append('altbibcode : {}'.format(str(bibcode)))
+        else:
+            entry['Others'].append('altbibcode : {}'.format(str(result['alternate_bibcode'])))
+
+def result_to_entry_keywords(result, entry):
+    '''Put the result doctype and keyword fields into the entry Keywords field
+
+    '''
+
+    if result['doctype']:
+        entry['Keywords'].append(str(result['doctype']))
+
+    if result['keyword']:
+        for key in result['keyword']:
+            if key:
+                entry['Keywords'].append(str(key))
+
+def result_to_entry_others(result, entry):
+    '''Put remaining result fields into entry Others field;
+    ex. doi, eid, isbn, database, pub_raw
+    '''
+    if result['pub']:
+        if type(result['pub']) is list:
+            for pub in result['pub']:
+                if pub:
+                    entry['Others'].append('pub : {}'.format(str(pub)))
+        else:
+            entry['Others'].append('pub : {}'.format(str(result['pub'])))
+
+    if result['pub_raw']:
+        if type(result['pub_raw']) is list:
+            for pubraw in result['pub_raw']:
+                if pubraw:
+                    entry['Others'].append('pub_raw : {}'.format(str(pubraw)))
+        else:
+            entry['Others'].append('pub_raw : {}'.format(str(result['pub_raw'])))
+
+    if result['doi']:
+        if type(result['doi']) is list:
+            for doi in result['doi']:
+                if doi:
+                    entry['Others'].append('doi : {}'.format(str(doi)))
+        else:
+            entry['Others'].append('doi : {}'.format(str(result['doi'])))
+
+    if result['eid']:
+        if type(result['eid']) is list:
+            for eid in result['eid']:
+                if eid:
+                    entry['Others'].append('eid : {}'.format(str(eid)))
+        else:
+            entry['Others'].append('eid : {}'.format(str(result['eid'])))
+
+    if result['isbn']:
+        if type(result['isbn']) is list:
+            for isbn in result['isbn']:
+                if isbn:
+                    entry['Others'].append('isbn : {}'.format(str(isbn)))
+        else:
+            entry['Others'].append('isbn : {}'.format(str(result['isbn'])))
+
+    if result['database']:
+        if type(result['database']) is list:
+            for database in result['database']:
+                if database:
+                    entry['Others'].append('database : {}'.format(str(database)))
+        else:
+            entry['Others'].append('database : {}'.format(str(result['database'])))
+
+'''
+Fields currently returned 
+
+1899taps.book.....H
+Alternate: ['1899QB61.H7........']
+Doctype: book
+Title: ['The teaching of astronomy in the primary and secondary schools and in the university.']
+Author(s): ['Holden, Edward Singleton']
+Copyright: [None]
+Year: 1899
+Pub Date: 1899-00-00
+Pub Raw: [Washington, Gov't print. off., 1899]
+Publisher(s): Washington
+Pagination: [None]
+Volume: [None]
+Citation: ['2001AEdRv...1...58M']
+abstract: [None]
+doi: [None]
+eid: [None]
+keywords: ['ASTRONOMY: STUDY AND TEACHING']
+database: ['astronomy']
+data: [None]
+isbn: [None]
+
+for t in title
+   t -> Title
+for a in authors
+   a -> Authors  # What about editors and others
+year -> Year
+pagination -> Pagination
+for c in citation
+   c -> reviews append ':'
+bibcode -> Comments 'bibcode : bibcode'
+for bibcode in alternate_bibcode
+   alternate -> Comments 'altbibcode : bibcode'
+doctype -> Keywords
+for k in keywords
+   k -> Keywords
+pub_raw -> comments pub_raw : pub_raw  # May be a list or a string
+doi -> comments 'doi : doi'
+eid -> comments 'eid : eid'
+for i in isbn 
+   i -> comments 'isbn : isbn'
+for d in datebase 
+   d -> comments datebase : database
+
+pub_date -> comments pub_date : pub_date
+date
+'''
+
+def result_to_entry(result):
+    '''Create an AJB entry from a ADS result.
+
+    Return the entry so it can be added to the bookfile.
+
+    '''
+    entry = ajbentry.AJBentry()
+    entry_set_index(entry, int(args.year), count)    
+
+    result_to_entry_others(result, entry)
+    result_to_entry_title(result, entry)
+    result_to_entry_authors(result, entry)
+    result_to_entry_year(result, entry)
+    result_to_entry_pagination(result, entry)
+    result_to_entry_reviews(result, entry)
+    result_to_entry_bibcode(result, entry)
+    result_to_entry_keywords(result, entry)
+    
+    return entry
+
+#
+# Main work
+#
+if __name__ == '__main__':
+
+    args = get_args()
+    if args.verbose:
+        pprint(args)
+
+    bookfile = create_bookfile(str(args.year))
+    
+    results = get_ads_year(args.year)    
+
     if args.verbose:
         print('length of results:', len(results))
-        #pprint(results)
-        print()
 
-    for count, result in enumerate(results):
-        print(result['bibcode'])
-        print('Alternate:', result['alternate_bibcode'])
-        print('Doctype:', result['doctype'])
-        print('Title:', result['title'])
-        print('Author(s):', result['author'])
-        print('Copyright:', result['copyright'])
-        print('Year:', result['year'])
-        print('Pub Date:', result['pubdate'])
-        print('Pub Raw:', result['pub_raw'])
-        print('Publisher(s):', result['pub'])
-        print('Pagination:', result['page_count'])
-        print('Volume:', result['volume'])
-        print('Citation:', result['citation'])
-        print('abstract:', result['abstract'])
-        print('doi:', result['doi'])
-        print('eid:', result['eid'])
-        print('keywords:', result['keyword'])
-        print('database:', result['database'])
-        print('data:', result['data'])
-        print('isbn:', result['isbn'])
+    # How do I want to print this information?
+    # in biblatex format or XML entries or ...
+    for count, result in enumerate(results, start=1):
+        #print_result(result)
+        tmp_entry = result_to_entry(result)
+        bookfile.set_new_entry(tmp_entry)
 
-        print()
-        # How do I want to print this information?
-        # in biblatex format or XML entries or ...
+    bookfile.write_file_xml('ads_{}_books.xml'.format(args.year))
