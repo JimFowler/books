@@ -272,7 +272,7 @@ ASSL_BOOK_LIST = [
 
     (34, ['Introduction to the Physics of', 'Stellar Interiors'], '1973', 
      ['V. Kourganoff'],
-     'A', None, ''),
+     'A', None, 'AAA 09.03.74'),
 
     (35, ['Physics and Chemistry of Upper', 'Atmosphere:',
           'Proceedings of a Symposium Organized',
