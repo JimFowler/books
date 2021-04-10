@@ -1,3 +1,8 @@
+2021-04-09  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/findjournals (clean_review_string):
+	Added ' Nr' to the cleaning features.
+
 2021-03-20  Jim Fowler  <jrf@biblion>
 
 	* Docs/Journals/skytel_table.py: Added missing dictionary
