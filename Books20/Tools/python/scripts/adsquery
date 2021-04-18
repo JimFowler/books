@@ -73,7 +73,7 @@ def get_ads_year(year):
     # or the comprehensive list is at
     # https://adsabs.github.io/help/search/comprehensive-solr-term-list
     #
-    ads.ADS.NROWS = 50
+    ads.ADS.NROWS = 500
     ads.ADS.TOKEN = args.ads_token
     ads.ADS.SORT = 'bibcode asc'
     # Search fields are not the same as return fields
