@@ -1,3 +1,9 @@
+2021-04-12  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/entryxml.py (make_ajbnum_xml):
+	Cleaned up parsing of ajbnum.  Put try/except around the parsing
+	so that we don't crash if the number is not valid.
+
 2021-04-09  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/findjournals (clean_review_string):

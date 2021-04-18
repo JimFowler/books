@@ -26,6 +26,8 @@ defined in ajbentry.py and can not be used with out ajbentry.py.
 
 '''
 
+import sys
+import traceback
 import re
 from lxml import etree
 from nameparser import HumanName
@@ -276,25 +278,32 @@ def make_ajbnum_xml(ajbnum):
 
     index_xml = etree.Element('Index')
 
-    elm = etree.SubElement(index_xml, 'IndexName')
-    elm.text = str(ajbnum['volume']).strip()
+    try:
+        elm = etree.SubElement(index_xml, 'IndexName')
+        elm.text = str(ajbnum['volume']).strip()
 
-    elm = etree.SubElement(index_xml, 'VolumeNumber')
-    elm.text = str(ajbnum['volNum'])
+        elm = etree.SubElement(index_xml, 'VolumeNumber')
+        elm.text = str(ajbnum['volNum'])
 
-    elm = etree.SubElement(index_xml, 'SectionNumber')
-    elm.text = str(ajbnum['sectionNum'])
+        elm = etree.SubElement(index_xml, 'SectionNumber')
+        elm.text = str(ajbnum['sectionNum'])
 
-    elm = etree.SubElement(index_xml, 'SubSectionNumber')
-    elm.text = str(ajbnum['subsectionNum'])
+        elm = etree.SubElement(index_xml, 'SubSectionNumber')
+        elm.text = str(ajbnum['subsectionNum'])
 
-    elm = etree.SubElement(index_xml, 'EntryNumber')
-    elm.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
+        elm = etree.SubElement(index_xml, 'EntryNumber')
+        elm.text = str(ajbnum['entryNum']) + ajbnum['entrySuf']
 
-    if ajbnum['pageNum'] != -1:
-        elm = etree.SubElement(index_xml, 'PageNumber')
-        elm.text = str(ajbnum['pageNum'])
-
+        if ajbnum['pageNum'] != -1:
+            elm = etree.SubElement(index_xml, 'PageNumber')
+            elm.text = str(ajbnum['pageNum'])
+    except:
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        traceback.print_exception(exc_type, exc_value, exc_traceback,
+                                  limit=2, file=sys.stdout)
+        print('ERROR entryxml::make_ajbnum_xml: failed')
+        return etree.Element('Index')
+    
     return index_xml
 
 
@@ -529,21 +538,38 @@ def xml_entry_keywords(entry, child):
         entry['Keywords'].append(keyword.text)
 
 def ajbstr_from_xml(element):
-    '''Return a AJB number as a string "AJB xx.xxx.xx[a]" from
+    '''Return a AJB number as a string "AJB xx.xx(x).xx[a]" from
     an XML Index element.'''
 
-    for child in element:
-        if child.tag == 'IndexName':
-            aname = child.text
-        elif child.tag == 'VolumeNumber':
-            volnum = '%02d'%int(child.text)
-        elif child.tag == 'SectionNumber':
-            sectionnum = '%02d'%int(child.text)
-        elif child.tag == 'EntryNumber':
-            mreg = __reg2__.match(child.text)
-            entrynum = '%02d'%int(mreg.group(1))
-            entrysuf = mreg.group(2)
-    return aname + ' ' + volnum + '.' + sectionnum + '.' + entrynum + entrysuf
+    aname = ''
+    volnum = ''
+    sectionnum = ''
+    subsectionnum = ''
+    entrynum = ''
+    entrysuf = ''
+    
+    try:
+        for child in element:
+            if child.tag == 'IndexName':
+                aname = child.text
+            elif child.tag == 'VolumeNumber':
+                volnum = '%02d'%int(child.text)
+            elif child.tag == 'SectionNumber':
+                sectionnum = '%02d'%int(child.text)
+            elif child.tag == 'SubSectionNumber':
+                subsectionnum = '(%02d)'%int(child.text)
+            elif child.tag == 'EntryNumber':
+                mreg = __reg2__.match(child.text)
+                entrynum = '%02d'%int(mreg.group(1))
+                entrysuf = mreg.group(2)
+    except:
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        traceback.print_exception(exc_type, exc_value, exc_traceback,
+                                  limit=2, file=sys.stdout)
+        print('ERROR entryxml::ajbstr_from_xml: failed')
+        return ''
+
+    return aname + ' ' + volnum + '.' + sectionnum + subsectionnum + '.' + entrynum + entrysuf
 
 
 def person_name_from_xml(ell):
