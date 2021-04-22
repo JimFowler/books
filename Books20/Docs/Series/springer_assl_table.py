@@ -287,7 +287,7 @@ ASSL_BOOK_LIST = [
           'No. 21 Held at the University of', 'Toronto, Toronto, Canada August',
           '29–31, 1972'], '1973', 
      ['J. D. Fernie'],
-     'E', None, ''),
+     'E', None, 'AAA 10.12.06'),
 
     (37, ['Photon and Particle Interactions', 'with Surfaces in Space:',
           'Proceedings of the 6th Eslab', 'Symposium, Held at Noordwijk,',
