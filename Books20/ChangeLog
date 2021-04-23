@@ -1,3 +1,9 @@
+2021-04-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/xml/pagination.xsd: Added OtherSec_6-10
+
+	* Tools/python/aabooks/lib/pagination_xml.py: Added OtherSec_6-10.
+
 2021-04-12  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/ajbbook/entryxml.py (make_ajbnum_xml):
