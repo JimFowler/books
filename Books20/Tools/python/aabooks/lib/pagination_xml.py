@@ -67,6 +67,11 @@ Known text codes and their matching XML tags are::
     'pc' : 'OtherSec_3',
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
+    'pf' : 'OtherSec_6',
+    'pg' : 'OtherSec_7',
+    'ph' : 'OtherSec_8',
+    'pi' : 'OtherSec_9',
+    'pj' : 'OtherSec_10',
     # Not sure how these last two names are used so I am sticking with
     # the German words for now.
     't'  : 'Tables (Tabellen)',
@@ -89,7 +94,7 @@ from lxml import etree
 # that tags and XML names must be one to one and unique.
 #
 # If you make changes to this list, you must also make a change to the
-# schema in bookfile.xsd.
+# schema in Tools/xml/pagination.xsd.
 #
 __TAG_TO_XML_NAME__ = {
     'AA' : 'Appendix_A',
@@ -120,6 +125,11 @@ __TAG_TO_XML_NAME__ = {
     'pc' : 'OtherSec_3',
     'pd' : 'OtherSec_4',
     'pe' : 'OtherSec_5',
+    'pf' : 'OtherSec_6',
+    'pg' : 'OtherSec_7',
+    'ph' : 'OtherSec_8',
+    'pi' : 'OtherSec_9',
+    'pj' : 'OtherSec_10',
     't'  : 'Tables',     # tabelen
     'T'  : 'Tafeln',     # tafeln  need to append plates or change all 'T's
 }
