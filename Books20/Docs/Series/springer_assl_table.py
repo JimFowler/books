@@ -323,7 +323,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of the Seventh ESLAB', 'Symposium Held in Saulgau, W.',
           'Germany, 22–25 May , 1973'], '1974', 
      ['D. Edgar Page'],
-     'E', None, ''),
+     'E', None, 'AAA 11.12.16'),
 
     (43, ['X-Ray Astronomy'], '1974', 
      ['Riccardo Giacconi', 'Herbert Gursky'],
@@ -339,7 +339,7 @@ ASSL_BOOK_LIST = [
           'Conference on Supernovae Held in',
           'Leece, Italy, May 7–11, 1973'], '1974', 
      ['Cristiano Batalli Cosmovici'],
-     'E', None, ''),
+     'E', None, 'AAA 11.12.15'),
 
     (46, ['Ionospheric Effects of Solar Flares'], '1974', 
      ['A. P. Mitra'],
@@ -362,7 +362,7 @@ ASSL_BOOK_LIST = [
 
     (50, ['Mapping of the Moon: Past and Present'], '1974', 
      ['Zdeněk Kopal', 'Robert W. Carder'],
-     'A', None, ''),
+     'A', None, 'AAA 11.03.72'),
 
     (51, ['Atmospheres of Earth and the Planets:',
           'Proceedings of the Summer Advanced', 'Study Institute, Held at the',
