@@ -327,7 +327,7 @@ ASSL_BOOK_LIST = [
 
     (43, ['X-Ray Astronomy'], '1974', 
      ['Riccardo Giacconi', 'Herbert Gursky'],
-     'E', None, ''),
+     'E', None, 'AAA 12.03.13'),
 
     (44, ['Magnetospheric Physics:', 'Proceedings of the Advanced Summer',
           'Institute Held in Sheffield, U.K.,', 'August 1973'], '1974', 
@@ -343,7 +343,7 @@ ASSL_BOOK_LIST = [
 
     (46, ['Ionospheric Effects of Solar Flares'], '1974', 
      ['A. P. Mitra'],
-     'A', None, ''),
+     'A', None, 'AAA 12.03.14'),
 
     (47, ['Physics of Magnetospheric Substorms'], '1977', 
      ['Syun-Ichi Akasofu'],
