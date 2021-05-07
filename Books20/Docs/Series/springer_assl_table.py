@@ -332,7 +332,7 @@ ASSL_BOOK_LIST = [
     (44, ['Magnetospheric Physics:', 'Proceedings of the Advanced Summer',
           'Institute Held in Sheffield, U.K.,', 'August 1973'], '1974', 
      ['B. M. McCormac'],
-     'E', None, ''),
+     'E', None, 'AAA 12.12.21'),
 
     (45, ['Supernovae and Supernova Remnants:',
           'Proceedings of the International',
