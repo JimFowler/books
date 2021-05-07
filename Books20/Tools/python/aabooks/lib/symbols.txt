@@ -68,6 +68,7 @@
 ï, Small letter i with diaeresis
 ì, Small letter i with grave
 í, Small letter i with acute
+Î, Capital letter I with caron
 î, Small letter i with caron
 ī, Small letter i with macron
 Ĭ, Capital letter i with breve
