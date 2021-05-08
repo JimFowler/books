@@ -20,7 +20,16 @@
 #
 """Convert aaaVVsSS.txt files to aaaVV_books.xml files for use
 with ajbbooks.py and other xml parsers.
+
+Convert in titles and comments
+ 'No;_' to 'Nr. '
+ 'No._' to 'Nr. '
+ '_-_' to '--'   en-dash
+ '_-' to '---'  em-dash
+ 'Vol._' to 'Volume '
+ '_' to ''  remove underscores
 """
+import sys
 import os
 import argparse
 import itertools
@@ -62,10 +71,23 @@ def getargs():
 
     if args.version:
         print('aaconvert: version {}'.format(__VERSION__))
-        exit(0)
-        
+        sys.exit(0)
+
     return args
 
+
+def clean_str(dirty_str):
+    '''Replace some common sub-strings with my strings.'''
+
+    tmp_str = dirty_str
+    tmp_str = tmp_str.replace('No;_', 'Nr. ')
+    tmp_str = tmp_str.replace('No._', 'Nr. ')
+    tmp_str = tmp_str.replace('_-_', '–')
+    tmp_str = tmp_str.replace('_-', '—')
+    tmp_str = tmp_str.replace('Vol._', 'Volume ')
+    tmp_str = tmp_str.replace('_', ' ')
+
+    return tmp_str
 
 def parse_authors(entry, author_str):
     '''Parse the author/editor string and place the result in the AJBentry
@@ -98,7 +120,8 @@ def parse_title(entry, title_str):
 
     '''
 
-    entry['Title'] = title_str.replace('.', ';').rstrip(';')
+    #title_str = title_str.replace('.', ';').rstrip(';')
+    entry['Title'] = clean_str(title_str).rstrip('.')
 
 def parse_publishing(entry, pub_str):
     '''Place the source information in the comment field
@@ -110,7 +133,7 @@ def parse_publishing(entry, pub_str):
     publisher, 'page' in pagination, and everything else in Others
     '''
 
-    entry['Others'].append(pub_str)
+    entry['Others'].append(clean_str(pub_str))
 
 def parse_year(entry, year_str):
     '''Parse the copyright year from the year string and
@@ -236,6 +259,7 @@ For volume AAA ?? Index to the Literature of ????, started, finished, proofread
 
 
 ''')
+    fname = None
 
     for fname in args.filename[0]:
         with open(fname, 'r', encoding='ISO-8859-1') as fptr:
@@ -263,9 +287,10 @@ For volume AAA ?? Index to the Literature of ????, started, finished, proofread
 
                 bookfile.set_new_entry(tmp_entry)
 
-    bname = os.path.basename(fname)
-    fname, suffix = os.path.splitext(bname)
-    bookfile.write_file_xml(fname[0:5] + '_books.xml')
+    if fname is not None:
+        bname = os.path.basename(fname)
+        name = os.path.splitext(bname)
+        bookfile.write_file_xml(name[0][0:5] + '_books.xml')
 
 #
 # Main work
