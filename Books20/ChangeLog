@@ -1,3 +1,8 @@
+2021-05-08  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/scripts/aaaconvert (clean_str): Add clean_str()
+	function to do additional clean up on the title and comments.
+
 2021-04-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/xml/pagination.xsd: Added OtherSec_6-10
