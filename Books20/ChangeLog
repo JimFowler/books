@@ -1,3 +1,9 @@
+2021-05-15  Jim Fowler  <jrf@biblion>
+
+	* Data/Ajb/ajb.ods (AAA): Deleted Books and Conf columns.  Total
+	books per volume is now what it counted in aaa??_books.xml.
+	Changed Year totals to better match Ajb tab.
+
 2021-05-08  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/aaaconvert (clean_str): Add clean_str()
