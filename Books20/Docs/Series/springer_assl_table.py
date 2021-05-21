@@ -317,7 +317,7 @@ ASSL_BOOK_LIST = [
 
     (41, ['Introduction to Astronomical', 'Photometry'], '1974', 
      ['M. Golay'],
-     'A', None, ''),
+     'A', None, 'AAA 14.03.148'),
 
     (42, ['Correlated Interplanetary and', 'Magnetospheric Observations:',
           'Proceedings of the Seventh ESLAB', 'Symposium Held in Saulgau, W.',
@@ -351,14 +351,14 @@ ASSL_BOOK_LIST = [
 
     (48, ['Neutron Stars, Black Holes and', 'Binary X-Ray Sources'], '1975', 
      ['Herbert Gursky', 'Remo Ruffini'],
-     'E', None, ''),
+     'E', None, 'AAA 14.12.14'),
 
     (49, ['Catalog of Solar Particle Events', '1955–1969:',
           'Prepared under the Auspices of',
           'Working Group 2 of the Inter-Union',
           'Commission on Solar-Terrestrial', 'Physics'], '1975', 
      ['Z. Švestka', 'P. Simon'],
-     'E', None, ''),
+     'E', None, 'AAA 14.03.122'),
 
     (50, ['Mapping of the Moon: Past and Present'], '1974', 
      ['Zdeněk Kopal', 'Robert W. Carder'],
@@ -384,7 +384,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of a Conference Held in',
           'Utrecht on March 25–27, 1975'], '1975', 
      ['C. De Jager', 'H. Nieuwenhuijzen'],
-     'E', None, ''),
+     'E', None, 'AAA 14.12.41'),
 
     (55, ['Solid State Astrophysics:', 'Proceedings of a Symposium Held at',
           'the University College, Cardiff, Wales', '9–12 July 1974'], '1976', 
