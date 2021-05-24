@@ -378,7 +378,7 @@ ASSL_BOOK_LIST = [
 
     (53, ['The Solar Chromosphere and Corona:', 'Quiet Sun'], '1976', 
      ['R. Grant Athay'],
-     'A', None, ''),
+     'A', '90-277-0244-6', 'AAA 17.03.16'),
 
     (54, ['Image Processing Techniques in', 'Astronomy:',
           'Proceedings of a Conference Held in',
