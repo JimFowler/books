@@ -389,7 +389,7 @@ ASSL_BOOK_LIST = [
     (55, ['Solid State Astrophysics:', 'Proceedings of a Symposium Held at',
           'the University College, Cardiff, Wales', '9–12 July 1974'], '1976', 
      ['N. C. Wickramasinghe', 'D. J. Morgan'],
-     'E', None, ''),
+     'E', None, 'AAA 17.12.01'),
 
     (56, ['Detection and Spectrometry of Faint', 'Light'], '1976', 
      ['John Meaburn'],
@@ -399,7 +399,7 @@ ASSL_BOOK_LIST = [
           'Magnetospheric Study:', 'Proceedings of the 10th ESLAB',
           'Symposium, Held at Vienna, Austria,', '10–13 June 1975'], '1976', 
      ['K. Knott', 'B. Battrick'],
-     'E', None, ''),
+     'E', None, 'AAA 17.12.02'),
 
     (58, ['Magnetospheric Particles and Fields:',
           'Proceedings of the Summer Advanced',
