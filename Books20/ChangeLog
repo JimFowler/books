@@ -1,3 +1,9 @@
+2021-06-01  Jim Fowler  <jrf@biblion>
+
+	* WebPages/PythonTools.txt: Added Python documentation to
+	the web pages. Needed to keep track of the additional modules
+	I've installed over time.
+
 2021-05-15  Jim Fowler  <jrf@biblion>
 
 	* Data/Ajb/ajb.ods (AAA): Deleted Books and Conf columns.  Total
