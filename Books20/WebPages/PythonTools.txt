@@ -1,0 +1,28 @@
+<h3>Python Tools</h3>
+
+<p>Python is my language of choice for programming in the Books20 Project.
+I use the Anaconda version with additional packages installed as needed.
+
+<h4>Anaconda Python</h4>
+<a href="https://www.anaconda.com/">Anaconda 3.7</a> our version of python
+with PyQt5
+<br><a href="https://docs.python.org/3.7/">Documentation</a> for Python 3.7
+
+<h4>Additional Anaconda modules</h4>
+<a href="https://pypi.org/project/fast_autocomplete/">fast_autocomplete</a>
+v0.7.0, a fast autocomplete package, v0.7.1 is current as of 3/8/2021
+<br><b>lxml</b> a package to deal with XML files
+
+<br>What additional Anaconda modules have I installed?
+
+<h4>Additional non-Anaconda modules</h4>
+<a href="https://pypi.org/project/isbnlib/">ISBN lib</a>
+resources for ISBN numbers
+<br>What additional non-Anaconda modules have I installed?
+
+<h4> Modules in my personal site-packages</h4>
+<a href="https://pypi.org/project/modgrammer">modgrammer 0.10</a>
+the text comment parser used in  ajbbooks v1.0
+<br><a href="https://pypi.org/project/nameparser/">nameparser 0.3.3<a>
+(8/4/2014) the human name parser, v1.0.6 is current as of 2/8/2020
+<br><br>More...
