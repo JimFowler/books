@@ -405,11 +405,11 @@ ASSL_BOOK_LIST = [
           'Proceedings of the Summer Advanced',
           'Study School, Held in Graz, Austria,', 'August 4–15, 1975'], '1976', 
      ['B. M. McCormac'],
-     'E', None, ''),
+     'E', '90-227-0702-2', 'AAA 18.12.32'),
 
     (59, ['Spallation Nuclear Reactions and', 'their Applications'], '1976', 
      ['B. S. P. Shen', 'M. Merker'],
-     'E', None, ''),
+     'E', '90-277-0746-4', 'AAA 18.12.33'),
 
     (60, ['Multiple Periodic Variable Stars:',
           'Proceedings of the International',
@@ -423,7 +423,7 @@ ASSL_BOOK_LIST = [
           'Science Department of the European',
           'Space Agency, Held at Frascati,', 'Italy, 11–14 May 1976'], '1976', 
      ['J. J. Burger', 'A. Pedersen', 'B. Battrick'],
-     'E', None, ''),
+     'E', '90-277-0768-5', 'AAA 18.12.23'),
 
     (62, ['Scientific Applications of Lunar', 'Laser Ranging:',
           'Proceedings of a Symposium Held in',
