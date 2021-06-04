@@ -416,7 +416,7 @@ ASSL_BOOK_LIST = [
           'Astronomical Union Colloquium No. 29,',
           'Held at Budapest, Hungary', '1--5 September 1975'], '1976', 
      ['Walter S. Fitch'],
-     'E', None, ''),
+     'E', '90-277-0766-9', 'AAA 18.12.67'),
 
     (61, ['Atmospheric Physics from Spacelab:', 'Proceedings of the 11th ESLAB',
           'Symposium, Organized by the Space',
