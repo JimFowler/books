@@ -42,7 +42,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtPrintSupport
 
 from aabooks.lib import headerwindow as hw
 from aabooks.lib import entryselect as es
-from aabooks.lib import search
+#from aabooks.lib import search
 from aabooks.lib import symbol
 from aabooks.lib import version as libver
 
@@ -97,7 +97,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self._vardict['entry_dirty'] = False
         self._vardict['search_flag'] = False
         self._vardict['current_search_list'] = []
-        self._vardict['sdict'] = search.SearchDict()
+        self._vardict['sdict'] = None
         self._vardict['temp_entry'] = None
         self._vardict['entry_select'] = None
         self._vardict['symbol_table'] = None
