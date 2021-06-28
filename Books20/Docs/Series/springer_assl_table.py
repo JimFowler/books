@@ -347,7 +347,7 @@ ASSL_BOOK_LIST = [
 
     (47, ['Physics of Magnetospheric Substorms'], '1977', 
      ['Syun-Ichi Akasofu'],
-     'A', None, ''),
+     'A', '90-277-0748-0', 'AAA 19.03.18'),
 
     (48, ['Neutron Stars, Black Holes and', 'Binary X-Ray Sources'], '1975', 
      ['Herbert Gursky', 'Remo Ruffini'],
