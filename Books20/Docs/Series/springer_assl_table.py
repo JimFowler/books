@@ -2333,6 +2333,24 @@ ASSL_BOOK_LIST = [
     (460, ['Astronomical Polarization from', 'Infrared to Gamma Rays'], '2019',
      ['R. Mignani', 'A. Shearer', 'A. Slowikowska', 'S. Zane'],
      'E', '978-3-030-19714-8', ''),
+
+    (461, ['Timing Neutron Stars:', 'Pulsations, Oscillations and Explosions'], '2021',
+     ['Tomaso Belloni', 'Mariano Méndez', 'Chengmin Zhang'],
+     'E', '978-3-662-62108-0', ''),
+
+    (462, ['High Energy Cosmic Rays'], '2021',
+     ['Todor Stanev'],
+     'A', '978-3-030-71566-3', ''),
+
+    (463, ['Dynamical Chaos in Planetary Systems'], '2020',
+     ['Ivan Schevchenko'],
+     'A', '978-3-030-52143-1', ''),
+
+    (464, ['Kappa Distributions:', 'From Observational Evidences via Controversial',
+           'Predictions to a Consistent Theory of', 'Nonequilibrium Plasmas'], '2021',
+     ['Marian Lazar', 'Horst Fichtner'],
+     'E', '978-3-030-82622-2', '')
+    
 ]
 
 def assl_print_books(book_list):
