@@ -435,7 +435,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of a Symposium Held in',
           'Philadephia, Penn., U.S.A.,', 'June 8–10, 1976'], '1977', 
      ['Giovanni G. Fazio'],
-     'E', None, ''),
+     'E', '90-277-0791-X', 'AAA 19.12.03'),
 
     (64, ['Compilation, Critical Evaluation and',
           'Distribution of Stellar Data:',
@@ -443,24 +443,24 @@ ASSL_BOOK_LIST = [
           'Astronomical Union Colloquium No. 35,',
           'held at Strasbourg, France,', '19–21 August, 1976'], '1977', 
      ['C. Jaschek', 'G. A. Wilkins'],
-     'E', None, ''),
+     'E', '90-277-0792-8', 'AAA 19.12.09'),
 
     (65, ['Novae and Related Stars:', 'Proceedings of an International',
           'Conference Held by the Institut',
           'D’Astrophysique, Paris, France,', '7 to 9 September 1976'], '1977', 
      ['M. Friedjung'],
-     'E', None, ''),
+     'E', '90-277-0793-6', 'AAA 19.12.01'),
 
     (66, ['Supernovae:', 'Proceedings of a Special IAU Session',
           'on Supernovae Held on September 1, 1976', 'in Grenoble, France'], '1977', 
      ['David N. Schramm'],
-     'E', None, ''),
+     'E', '90-277-0806-1', 'AAA 19.12.02'),
 
     (67, ['CNO Isotopes in Astrophysics:',
           'Proceedings of a Special IAU Session',
           'Held on August 30, 1976, in', 'Grenoble, France'], '1977', 
      ['Jean Audouze'],
-     'E', None, ''),
+     'E', '90-277-0807-X', 'AAA 19.12.14'),
 
     (68, ['Dynamics of Close Binary Systems'], '1978', 
      ['Zdeněk Kopal'],
