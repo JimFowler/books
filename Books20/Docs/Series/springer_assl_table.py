@@ -468,7 +468,7 @@ ASSL_BOOK_LIST = [
 
     (69, ['Illustrated Glossary for Solar and', 'Solar-Terrestrial Physics'], '1977', 
      ['Dr. A. Bruzek', 'Dr. C. J. Durrant'],
-     'E', None, ''),
+     'E', '90-277-0825-8', 'AAA 20.03.22'),
 
     (70, ['Topics in Interstellar Matter:',
           'Invited Reviews Given for Commission 34',
