@@ -429,7 +429,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of a Symposium Held in',
           'Austin, Tex., U.S.A.,', '8–-10 June,', '1976'], '1977', 
      ['J. Derral Mulholland', 'Creighton A. Burk', 'Eric C. Silverberg'],
-     'E', None, ''),
+     'E', '90-277-0790-1', 'AAA 20.12.12'),
 
     (63, ['Infrared and Submillimeter', 'Astronomy:',
           'Proceedings of a Symposium Held in',
@@ -477,7 +477,7 @@ ASSL_BOOK_LIST = [
           'the Sixteenth General Assembly of',
           'IAU, Grenoble, August 1976'], '1977', 
      ['Hugo Van Woerden'],
-     'E', None, ''),
+     'E', '90-277-0835-5', 'AAA 20.12.11'),
 
     (71, [], None, 
      [],
