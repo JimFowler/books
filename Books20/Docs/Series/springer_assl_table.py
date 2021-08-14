@@ -479,9 +479,11 @@ ASSL_BOOK_LIST = [
      ['Hugo Van Woerden'],
      'E', '90-277-0835-5', 'AAA 20.12.11'),
 
-    (71, [], None, 
-     [],
-     None, None, ''),
+    (71, ['Study of travelling interplanetary', 'phenomena 1977',
+          'Proceedings of the L.~D. de Feiter', 'Memorial Symposium held in'
+           ' Tel Aviv, Israel, June 7--10, 1977'], '1977', 
+     ['M. A. Shea', 'D. F. Smart', 'S. T. Wu'],
+     'E', '90-277-0860-6', 'AAA 20.12.42'),
 
     (72, ['Dynamics of Planets and Satellites', 'and Theories of Their Motion:',
           'Proceedings of the 41st Colloquium',
