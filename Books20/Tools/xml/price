@@ -25,10 +25,8 @@ FF 1                 \
 1.00 DM              Deutsch Marks
 1.00 RM              Reichsmark
 \                    German 1924-1948
-1.00 M               German Mark ??
+1.00 M               East German Mark
 100 rpf              100 Reichspfenning
-1.00 Schill          Austrian schilling
-\                    1925-1938, 1945-1999
 1 Rbl.               Soviet Rubles
 1 Kop                Soviet Kopecks, 1 Rbl. == 100 Kop.
 1.00 L               Italian Lire
@@ -55,6 +53,8 @@ FF 1                 \
 1 Lei                Romanian Lion
 1 peseta	     Spanish
 100 centimos         Spanish = 1 pesata
+1.00 Schill          Austrian schilling
+\                    1925-1938, 1945-1999
 öS 1.00              Austrian Schilling 20 Dec 1924
 1 groschen           Austrian groschen 1 Shilling == 100 Groschen
 1 Rs                 Indian Rupees
