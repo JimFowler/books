@@ -1,4 +1,5 @@
 #! /bin/bash
 #
 #
-ppxml $1 | egrep -e '[1-9]+R' | grep -v Price
+#ppxml $1 | egrep -e '(\d+)\s?R[.]?'
+ppxml $1 | grep '<Price>' | grep R

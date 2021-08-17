@@ -34,14 +34,16 @@ def getargs():
 
     return args
 
-rubles = re.compile(r'(\d)+R')
-def fix_price(entry):
-    '''Replace a 'nR' strings in Price with 'n Rbl.' '''
+rubles = re.compile(r'(\d+[.]?\d*)\s?(R[.]?[\W]+|R[.]?$)')
+def fix_price(count, entry):
+    '''Replace a 'nR ' strings in Price with 'n Rbl.' '''
 
-    old_price_str = entry['Price']
+    old_price_str = entry['Price'].strip()
+
     if rubles.search(old_price_str):
-        entry['Price'] = rubles.sub(r'\g<1> Rbl.', old_price_str)
-
+            new_price_str = rubles.sub(r'\g<1> Rbl. ', old_price_str)
+            entry['Price'] = new_price_str.strip()
+            print('{} "{}" : "{}"'.format(count, old_price_str, entry['Price']))
 
 
 def main():
@@ -55,7 +57,7 @@ def main():
     # for each entry
     #
     for ajbfile in args.ajbfiles[0]:
-
+        print('working on:', ajbfile)
         bookfile = bf.BookFile()
         bookfile.set_filename(ajbfile)
         bookfile.read_file_xml()
@@ -66,7 +68,7 @@ def main():
             if count == 0:
                 continue
 
-            fix_price(entry)
+            fix_price(count, entry)
 
         bookfile.write_file_xml()
 
