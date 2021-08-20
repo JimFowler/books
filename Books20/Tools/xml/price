@@ -1,4 +1,4 @@
-Pricing abbreviations I have used
+Pricing abbreviations I have usedA
 2017-01-01
 
 Abbreviation may or may not have a period afterwards, they may
@@ -9,14 +9,16 @@ have a space between the units and the number.
 Abbreviation         Units
 =================  ==================
 $1.00                US Dollars
-1.00 $C              Canadian Dollars
-1.00 $A              Australian Dollar
+$C1.00               Canadian Dollars
+$A1.00               Australian Dollar
 £1                   British Pounds
 1s                   British Shillings
 1d                   British Pence
+1p                   British new Penny
 1.00 Fr.             French Francs
 1 f                  \
 1 F                  \
+FF 1                 \
 1.00 Schw. Fr.       Swiss Francs
 1 swf                \
 1.00 Belg. Fr.       Belgian Francs
@@ -27,29 +29,36 @@ $1.00                US Dollars
 100 rpf              100 Reichspfenning
 1.00 Schill          Austrian schilling
 \                    1925-1938, 1945-1999
-1.00 R               Soviet Rubels
-1 Kop                Soviet Kopecks
+1 Rbl.               Soviet Rubles
+1 Kop                Soviet Kopecks, 1 Rbl. == 100 Kop.
 1.00 L               Italian Lire
 1.00 Lire            \
 1.00 Zł.             Polish Złoty (Golden)
+1 zł                 \
 1.00 Gulden          Dutch Guilder
 1 hfl                Dutch Florins
 1 Dfl                \
 1 fl                 \
 1 Kr.                Swedish Kronor (Crown)
 1 Öre                Swedish Öre
+1 Dkr.               Danish Kroner
+1 Nkr.               Norwegian Kroner
 1 Lewa               Bulgarian Leva (Lion)
 1 c
 1 Kčs                Czech Koruna
 1 Kč                 \
 1 Kěs                \
 1 MDN                East German Mark
+1 M                  \
 1 Yen                Japanese Yen
 1 ¥                  \
 1 Lei                Romanian Lion
 1 peseta	     Spanish
 100 centimos         Spanish = 1 pesata
-öS 607.50            found is AAA 02s03 118
+öS 1.00              Austrian Schilling 20 Dec 1924
+1 groschen           Austrian groschen 1 Shilling == 100 Groschen
+1 Rs                 Indian Rupees
+1 Rand               South African Rand
 1 n. d. 68.4.183     no denomination?
 =================  ==================
 

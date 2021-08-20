@@ -429,7 +429,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of a Symposium Held in',
           'Austin, Tex., U.S.A.,', '8–-10 June,', '1976'], '1977', 
      ['J. Derral Mulholland', 'Creighton A. Burk', 'Eric C. Silverberg'],
-     'E', None, ''),
+     'E', '90-277-0790-1', 'AAA 20.12.12'),
 
     (63, ['Infrared and Submillimeter', 'Astronomy:',
           'Proceedings of a Symposium Held in',
@@ -468,7 +468,7 @@ ASSL_BOOK_LIST = [
 
     (69, ['Illustrated Glossary for Solar and', 'Solar-Terrestrial Physics'], '1977', 
      ['Dr. A. Bruzek', 'Dr. C. J. Durrant'],
-     'E', None, ''),
+     'E', '90-277-0825-8', 'AAA 20.03.22'),
 
     (70, ['Topics in Interstellar Matter:',
           'Invited Reviews Given for Commission 34',
@@ -477,11 +477,13 @@ ASSL_BOOK_LIST = [
           'the Sixteenth General Assembly of',
           'IAU, Grenoble, August 1976'], '1977', 
      ['Hugo Van Woerden'],
-     'E', None, ''),
+     'E', '90-277-0835-5', 'AAA 20.12.11'),
 
-    (71, [], None, 
-     [],
-     None, None, ''),
+    (71, ['Study of travelling interplanetary', 'phenomena 1977',
+          'Proceedings of the L.~D. de Feiter', 'Memorial Symposium held in'
+           ' Tel Aviv, Israel, June 7--10, 1977'], '1977', 
+     ['M. A. Shea', 'D. F. Smart', 'S. T. Wu'],
+     'E', '90-277-0860-6', 'AAA 20.12.42'),
 
     (72, ['Dynamics of Planets and Satellites', 'and Theories of Their Motion:',
           'Proceedings of the 41st Colloquium',

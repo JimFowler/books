@@ -1,3 +1,9 @@
+2021-08-15  James Fowler  <jrf12@Jamess-MBP.tularosa.net>
+
+	* Tools/xml/fixrubles.py: added program to change price strings
+	from 1R to 1 Rbl.  This will, hopefully, prevent confusion between
+	1R and R 1.
+
 2021-06-04  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/verify (test_for_isbn): Added verification
