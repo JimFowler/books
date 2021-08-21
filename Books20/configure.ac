@@ -18,12 +18,12 @@ dnl
 dnl   This configure contains the instructions for building the
 dnl   stuff for the Books20 Project.
 
-AC_INIT([Books], [2.0])
+AC_INIT([Books],[2.0])
 AM_INIT_AUTOMAKE()
 
 AC_PROG_INSTALL()
 
-AC_OUTPUT(Makefile
+AC_CONFIG_FILES([Makefile
       Docs/Makefile
       Docs/Bibliography/Makefile
       Docs/Collecting/Makefile
@@ -52,4 +52,5 @@ AC_OUTPUT(Makefile
       Tools/TeX/Makefile
       Tools/xml/Makefile
       WebPages/Makefile
-      WebPages/Images/Makefile)
+      WebPages/Images/Makefile])
+AC_OUTPUT
