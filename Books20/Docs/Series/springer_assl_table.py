@@ -490,7 +490,7 @@ ASSL_BOOK_LIST = [
           'of the International Astronomical',
           'Union Held in Cambridge, England,', '17–19 August 1976'], '1978', 
      ['Victor Szebehely'],
-     'E', None, ''),
+     'E', '90-277-0869-X', 'AAA 21.12.20'),
 
     (73, ['Spacecraft Attitude Determination', 'and Control'], '1978', 
      ['James R. Wertz'],
