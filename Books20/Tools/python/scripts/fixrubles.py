@@ -1,4 +1,4 @@
-#! python
+#! /usr/bin/env python
 #
 #  open the xml file
 #   for each entry
