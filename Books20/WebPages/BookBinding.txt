@@ -10,7 +10,8 @@
   <h3>Resources</h3>
 
   <a href="http://www.bookbindersworkshop.com/">Book Binders Workshop</a>
-  <br><a href="http://www.talasonline.com/">Talas supplies</a>
+  <br><a href="https://www.talasonline.com/">Talas supplies</a>
+  <br><a href="https://www.colophonbookarts.com/">Colophon Book Arts Supply</a>
   <br><a href="http://www.shopbrodart.com/library-supplies-school-supplies/book-care/">Brodart</a>
   <br><a href="http://www.affordablebindingequipment.com/">Affordable Binding Equipment</a>
   <br><a href="http://www.hollanders.com/">Hollanders</a>
