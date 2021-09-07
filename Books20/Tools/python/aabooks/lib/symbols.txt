@@ -106,6 +106,7 @@
 ß, Small letter sharp s
 Ṯ, Capital letter T with line below
 ṯ, Small letter t with line below
+Ţ, Capital letter T with cedilla
 ţ, Small letter t with cedilla
 ť, Small letter t with caron
 
