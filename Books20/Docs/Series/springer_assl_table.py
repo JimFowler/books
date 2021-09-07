@@ -464,7 +464,7 @@ ASSL_BOOK_LIST = [
 
     (68, ['Dynamics of Close Binary Systems'], '1978', 
      ['Zdeněk Kopal'],
-     'A', None, ''),
+     'A', '90-277-0820-7', 'AAA 22.03.78'),
 
     (69, ['Illustrated Glossary for Solar and', 'Solar-Terrestrial Physics'], '1977', 
      ['Dr. A. Bruzek', 'Dr. C. J. Durrant'],
