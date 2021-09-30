@@ -494,7 +494,7 @@ ASSL_BOOK_LIST = [
 
     (73, ['Spacecraft Attitude Determination', 'and Control'], '1978', 
      ['James R. Wertz'],
-     'E', None, ''),
+     'E', '90-277-0959-9', 'AAA 25.03.06'),
 
     (74, ['Wave Instabilities in Space Plasmas:',
           'Proceedings of a Symposium Organized',
