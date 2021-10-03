@@ -22,7 +22,8 @@ FF 1                 \
 1.00 Schw. Fr.       Swiss Francs
 1 swf                \
 1.00 Belg. Fr.       Belgian Francs
-1.00 DM              Deutsch Marks
+1.00 Ft              Hungarian Forint post WW2
+1.00 DM              Deutsch Marks West Germany post WW2
 1.00 RM              Reichsmark
 \                    German 1924-1948
 1.00 M               East German Mark
@@ -38,6 +39,7 @@ FF 1                 \
 1 Dfl                \
 1 fl                 \
 1 Kr.                Swedish Kronor (Crown)
+1 SKr.               \
 1 Öre                Swedish Öre
 1 Dkr.               Danish Kroner
 1 Nkr.               Norwegian Kroner
