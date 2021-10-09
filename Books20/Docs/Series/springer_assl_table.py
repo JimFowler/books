@@ -508,14 +508,14 @@ ASSL_BOOK_LIST = [
           'Regional Meeting in Astronomy Held', 'in Uppsala, Sweden,',
           '7–12 August, 1978'], '1979', 
      ['Bengt E. Westerlund'],
-     'E', None, ''),
+     'E', '90-277-0983-1', 'AAA 25.12.45'),
 
     (76, ['Image Formation from Coherence', 'Functions in Astronomy:',
           'Proceedings of the IAU Colloquium', 'No.49 on the Formation of Images',
           'from Spatial Coherence Functions in', 'Astronomy, Held in Groningen,',
           'The Netherlands, 10–12 August 1978'], '1979', 
      ['Cornelis Van Schooneveld'],
-     'E', None, ''),
+     'E', '90-277-0987-4', 'AAA 25.12.46'),
 
     (77, ['Language of the Stars:', 'A Discourse on the Theory of the',
           'Light Changes of Eclipsing Variables'], '1979', 
