@@ -518,9 +518,9 @@ ASSL_BOOK_LIST = [
      'E', '90-277-0987-4', 'AAA 25.12.46'),
 
     (77, ['Language of the Stars:', 'A Discourse on the Theory of the',
-          'Light Changes of Eclipsing Variables'], '1979', 
+          'Light Changes of Eclipsing Variables'], '1979 *', 
      ['Zdeněk Kopal'],
-     'A', None, ''),
+     'A', '90-277-1001-5', 'AAA 26.03.75'),
 
     (78, ['Dynamics of the Magnetosphere:', 'Proceedings of the A.G.U. Chapman',
           'Conference ‘Magnetospheric Substorms', 'and Related Plasma Processes’ held',
