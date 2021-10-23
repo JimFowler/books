@@ -502,7 +502,7 @@ ASSL_BOOK_LIST = [
           'Assembly Held in Helsinki, Finland,',
           'July 31 -- August 8, 1978'], '1979', 
      ['Peter J. Palmadesso', 'Konstantinos Papadopoulos'],
-     'E', None, ''),
+     'E', '90-277-1028-7', 'AAA 26.12.20'),
 
     (75, ['Stars and Star Systems:', 'Proceedings of the Fourth European',
           'Regional Meeting in Astronomy Held', 'in Uppsala, Sweden,',
