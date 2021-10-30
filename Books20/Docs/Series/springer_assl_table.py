@@ -526,7 +526,7 @@ ASSL_BOOK_LIST = [
           'Conference ‘Magnetospheric Substorms', 'and Related Plasma Processes’ held',
           'at Los Alamos Scientific Laboratory,', 'Los Alamos, N.M, U.S.A.', 'October 9–13, 1978'], '1980', 
      ['S.-I. Akasofu'],
-     'E', None, ''),
+     'E', '90-277-1052-X', 'AAA 27.12.02'),
 
     (79, ['Gravity, Particles, and', 'Astrophysics:', 'A Review of Modern Theories of',
           'Gravity and G-variabilty, and their', 'Relation to Elementary Particle',
@@ -537,11 +537,11 @@ ASSL_BOOK_LIST = [
     (80, ['Radio Recombination Lines:', 'Proceedings of a Workshop Held in',
           'Ottawa, Ontario, Canada,', 'August 24–25, 1979'], '1980', 
      ['P. A. Shaver'],
-     'E', None, ''),
+     'E', '90-277-1103-8', 'AAA 27.12.05'),
 
     (81, ['Astrophysics from Spacelab'], '1980', 
      ['Pier Luigi Bernacca', 'Remo Ruffini'],
-     'E', None, ''),
+     'E', '90-277-1064-3', 'AAA 27.12.50'),
 
     (82, ['Cosmic Plasma'], '1981', 
      ['Hannes Alfvén'],
