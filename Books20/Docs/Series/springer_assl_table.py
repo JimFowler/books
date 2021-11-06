@@ -532,7 +532,7 @@ ASSL_BOOK_LIST = [
           'Gravity and G-variabilty, and their', 'Relation to Elementary Particle',
           'Physics and Astrophysics'], '1980', 
      ['Paul S. Wesson'],
-     'E', None, ''),
+     'E', '90-277-1083-X', 'AAA 28.03.111'),
 
     (80, ['Radio Recombination Lines:', 'Proceedings of a Workshop Held in',
           'Ottawa, Ontario, Canada,', 'August 24–25, 1979'], '1980', 
