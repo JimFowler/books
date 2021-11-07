@@ -20,7 +20,7 @@
 that are not supplied in the module isbnlib.
 
 https://isbnsearch.com/search?s=0-667-02340-5
-  will return the books information
+  will return the book's information if this is a valid ISBN
 '''
 
 from math import fmod
@@ -32,6 +32,7 @@ import isbnlib as isbn
 # checksum is j =  remainder of ([abcdefghi] x [123456789]) MOD 11
 # Valid results are '0'-'9' and 'X'
 #
+isbn10mults = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 def checksum_10(isbnlike):
     '''Calculate the proper ISBN-10 check sum for a test ISBN 10
     string. The input string must be 10 legal characters with or
@@ -44,8 +45,8 @@ def checksum_10(isbnlike):
     isbndigits = isbn.canonical(isbnlike)
 
     tmp_sum = 0
-    for num, value in enumerate(isbndigits[:9]):
-        tmp_sum += (num + 1) * int(value)
+    for num, value in zip(isbn10mults, isbndigits[:9]):
+        tmp_sum += num * int(value)
 
     chksum = int(fmod(tmp_sum, 11))
 
