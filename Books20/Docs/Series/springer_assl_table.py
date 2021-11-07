@@ -552,7 +552,7 @@ ASSL_BOOK_LIST = [
           'Canada, During the IAU General', 'Assembly, 15 and 16 August, 1979'],
      '1980', 
      ['Michael D. Papagiannis'],
-     'E', None, ''),
+     'E', '90-277-1181-X', 'AAA 28.12.52'),
 
     (84, ['Relation Between Laboratory and', 'Space Plasmas:',
           'Proceedings of the International', 'Workshop held at Gakushi-Kaikan',
