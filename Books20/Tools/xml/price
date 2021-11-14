@@ -21,7 +21,9 @@ $A1.00               Australian Dollar
 FF 1                 \
 1.00 Schw. Fr.       Swiss Francs
 1 swf                \
+1 Sfr                \
 1.00 Belg. Fr.       Belgian Francs
+1.00 Bfr             \
 1.00 Ft              Hungarian Forint post WW2
 1.00 DM              Deutsch Marks West Germany post WW2
 1.00 RM              Reichsmark
@@ -68,3 +70,4 @@ FF 1                 \
 =================  ==================
 
 check 68.19.21 units are Fr. but published in Germany
+
