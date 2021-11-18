@@ -545,7 +545,7 @@ ASSL_BOOK_LIST = [
 
     (82, ['Cosmic Plasma'], '1981', 
      ['Hannes Alfvén'],
-     'A', None, ''),
+     'A', '90-277-1151-8', 'AAA 29.03.17'),
 
     (83, ['Strategies for the Search for Life', 'in the Universe:',
           'A Joint Session of Commissions 16,', '40, and 44, Held in Montreal,',
