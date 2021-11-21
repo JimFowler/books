@@ -135,5 +135,10 @@ if __name__ == '__main__':
             for isbntest, chksum in isbn10_list:
                 self.assertEqual(checksum_10(isbntest + '0'), chksum)
 
+        def test_c_test(self):
+            test_isbn = '0-0147-2003-1'
+            print(checksum_10(test_isbn))
+            return True
 
+        
     unittest.main()
