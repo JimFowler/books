@@ -559,7 +559,7 @@ ASSL_BOOK_LIST = [
           '(University Alumni Association),', 'Tokyo, Japan, April 14–15, 1980'],
      '1981', 
      ['Hiroshi Kikuchi'],
-     'E', None, ''),
+     'E', '90-277-1248-4', 'AAA 29.12.49'),
 
     (85, ['Stellar Paths:', 'Photographic Astrometry with',
           'Long-Focus Instruments'], '1981', 
@@ -571,7 +571,7 @@ ASSL_BOOK_LIST = [
           'of the International Astronomical',
           'Union Held in Warsaw, Poland,', 'September 8–12, 1980'], '1981', 
      ['E. M. Gaposchkin', 'B. Kołaczek'],
-     'E', None, ''),
+     'E', '90-277-1260-3', 'AAA 29.12.45'),
 
     (87, ['X-Ray Astronomy with the Einstein', 'Satellite:',
           'Proceedings of the High Energy',
@@ -580,7 +580,7 @@ ASSL_BOOK_LIST = [
           'the Harvard/Smithsonian Center for', 'Astrophysics, Cambridge,',
           'Massachusetts, U.S.A.,', 'January 28–30, 1980'], '1981', 
      ['Riccardo Giacconi'],
-     'E', None, ''),
+     'E', '90-277-1261-1', 'AAA 29.12.55'),
 
     (88, ['Physical Processes in Red Giants:',
           'Proceedings of the Second Workshop,',
@@ -589,7 +589,7 @@ ASSL_BOOK_LIST = [
           'of Astronomy, in Erice, Sicily,', 'Italy, September 3–13, 1980'],
      '1981', 
      ['Icko Iben Jr.', 'Alvio Renzini'],
-     'E', None, ''),
+     'E', '90-277-1284-0', 'AAA 29.12.56'),
 
     (89, ['Effects of Mass Loss on Stellar', 'Evolution:',
           'IAU Colloquium no. 59 Held in',
