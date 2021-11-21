@@ -122,7 +122,7 @@ def test_for_translation(args, count, entry):
             if 'translation of' in comment:
                 print(count, entryindex, 'has translation of')
 
-
+                
 def test_for_reviewers(args, count, entry):
     '''Test the reviews, do they have a colon, i.e. have been checked for reviewer.'''
     entryindex = entry.num_str()
@@ -138,12 +138,15 @@ def test_for_isbn(args, count, entry):
         for comment in entry['Others']:
             if comment and 'ISBN' in comment:
                 isbnstrs = isbn.get_isbnlike(comment)
+                if not isbnstrs:
+                       print(count, entryindex, 'has no ISBN like numbers:', comment)
+                       continue
+                   
                 for isbnstr in isbnstrs:
-                   if not isbn.is_isbn10(isbnstr) and \
-                      not isbn.is_isbn13(isbnstr):
+                      if not isbn.is_isbn10(isbnstr) and \
+                         not isbn.is_isbn13(isbnstr):
                        print(count, entryindex, 'has invalid ISBN:', isbnstr)
 
-                    
 def main():
     '''The main function that tests AJB files for some consistency.'''
     # get command line
