@@ -33,6 +33,16 @@ include ${BOOKS20_ROOT}/makefile.local
 SUB_DIRS = DatabaseDesign Handbook Journals Notes Questions Quotes Series Style 
 
 #
+# TeX files for docs.pdf
+#
+TEXFILES = Handbook/hbintro.tex Handbook/handbuch.tex \
+	History/longair1995.tex \
+	Journals/skytel.tex Journals/fbc.tex \
+	Notes/18Cent.tex Notes/book_notes.tex Notes/biblio_notes.tex \
+	Notes/world_history_notes.tex Notes/socsci_notes.tex \
+	Notes/history_notes.tex Notes/book_references.tex
+
+#
 # Build any software and/or documents
 #
 all: build_software build_docs
@@ -49,9 +59,13 @@ build_software: ${SUB_DIRS}
 	@echo "Nothing to build in ${CURDIR}"
 
 .PHONY: build_docs
-build_docs: ${SUB_DIRS}
-	@echo "Building docs in ${CURDIR}"
-	@echo "Nothing to build in ${CURDIR}"
+build_docs: ${SUB_DIRS} docs.pdf
+
+docs.pdf: docs.tex ${TEXFILES}
+	${LATEX} -draftmode docs
+	${BIBER} docs
+	${LATEX} -draftmode docs
+	${LATEX} docs
 
 #
 # Install any software and/or documents
@@ -65,9 +79,11 @@ install_software: ${SUB_DIRS}
 	@echo "Nothing to install from  ${CURDIR}"
 
 .PHONY: install_docs
-install_docs: ${SUB_DIRS}
-	@echo "Installing docs from ${CURDIR}"
-	@echo "Nothing to install from  ${CURDIR}"
+install_docs: ${SUB_DIRS} build_docs install_pdf
+
+install_pdf:
+	@echo "Installing PDF files in ${PDF_INSTALL_DIR}"
+	install -m 444 -p ./docs.pdf ${PDF_INSTALL_DIR}
 
 
 #

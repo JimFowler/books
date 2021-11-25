@@ -1,0 +1,96 @@
+%% Begin copyright
+%%
+%%  /home/jrf/Documents/books/Books20/Docs/docs.tex
+%%
+%%   Part of the Books20 Project
+%%
+%%   Copyright 2021 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%% End copyright
+\documentclass{book}
+
+\usepackage{books20}
+
+\addglobalbib{./MasterBib.bib}
+\addglobalbib{./Bibliography/testbib.bib}
+\addglobalbib{./History/history.bib}
+\addglobalbib{./Style/localbib.bib}
+
+\begin{document}
+
+%% Front matter
+\title{Notes for \ProjectTitle}
+\author{James R. Fowler}
+\date{last updated 24 Nov 2021\\ copy of \today}
+
+\maketitle
+
+\tableofcontents
+\listoftables
+
+% Handbooks and reference works
+\chapter{Handbooks and Reference Works in Astronomy and Astrophysics}
+\section{Introduction}
+\import{./Handbook/}{hbintro}
+
+\section{Handbooks and Reference Works}
+\import{./Handbook/}{handbuch}
+
+%Bibliography
+%% \chapter{Bibliography}
+%% \import{./Bibliography}{}
+
+% Collecting
+%% \chapter{Collecting Books}
+%% \import{./Collecting}{}
+
+% History
+\chapter{Astronomical History}
+\import{./History/}{longair1995}
+
+% Journals
+\chapter{Journals in my Collection}
+%\import{./Journals/}{intro}
+\import{./Journals/}{skytel}
+\import{./Journals/}{fbc}
+
+% Notes about things
+\chapter{Notes and the taking of Notes}
+
+%% \section{Notes about Notes}
+%% \import{./Notes/}{}
+\section{Notes about the History of Astronomy}
+\import{./Notes/}{18Cent}
+
+\section{Note about Books}
+\import{./Notes/}{book_notes}
+
+\section{Notes about Bibliographies}
+\import{./Notes/}{biblio_notes}
+
+%%\section{Notes about \Cen{19} and \Cen{20} Century World History}
+\section{World History}
+\import{./Notes/}{world_history_notes}
+
+%\section{History of Reading}\
+%\import{}{hist_reading_notes}
+
+\section{Notes on the Sociology of Science}
+\import{./Notes/}{socsci_notes}
+
+\section{History and Historiography}
+\import{./Notes/}{history_notes}
+
+\section{Books References}
+\import{./Notes/}{book_references}
+
+\printbibliography
+
+\end{document}
