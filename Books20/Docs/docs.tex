@@ -17,6 +17,7 @@
 \documentclass{book}
 
 \usepackage{books20}
+\usepackage[toc,page,title]{appendix}
 
 \addglobalbib{./MasterBib.bib}
 \addglobalbib{./Bibliography/testbib.bib}
@@ -35,7 +36,7 @@
 \tableofcontents
 \listoftables
 
-% Handbooks and reference works
+%% Handbooks and reference works
 \chapter{Handbooks and Reference Works in Astronomy and Astrophysics}
 \section{Introduction}
 \import{./Handbook/}{hbintro}
@@ -43,29 +44,30 @@
 \section{Handbooks and Reference Works}
 \import{./Handbook/}{handbuch}
 
-%Bibliography
-%% \chapter{Bibliography}
-%% \import{./Bibliography}{}
+%%Bibliography
+\chapter{Bibliography}
+%\import{./Bibliography}{}
 
-% Collecting
-%% \chapter{Collecting Books}
-%% \import{./Collecting}{}
+%% Collecting
+\chapter{Collecting Books}
+%\import{./Collecting}{}
 
-% History
+%% History
 \chapter{Astronomical History}
 \import{./History/}{longair1995}
 
-% Journals
+%% Journals
 \chapter{Journals in my Collection}
 %\import{./Journals/}{intro}
 \import{./Journals/}{skytel}
 \import{./Journals/}{fbc}
 
-% Notes about things
+%% Notes about things
 \chapter{Notes and the taking of Notes}
 
-%% \section{Notes about Notes}
-%% \import{./Notes/}{}
+\section{Notes about Notes}
+%\import{./Notes/}{}
+
 \section{Notes about the History of Astronomy}
 \import{./Notes/}{18Cent}
 
@@ -75,7 +77,7 @@
 \section{Notes about Bibliographies}
 \import{./Notes/}{biblio_notes}
 
-%%\section{Notes about \Cen{19} and \Cen{20} Century World History}
+%\section{Notes about \Cen{19} and \Cen{20} Century World History}
 \section{World History}
 \import{./Notes/}{world_history_notes}
 
@@ -90,6 +92,72 @@
 
 \section{Books References}
 \import{./Notes/}{book_references}
+
+%% Questions
+\chapter{Questions}
+%\import{./Questions/}{Questions}
+
+%% Qutoes
+\chapter{Quotes}
+%\import{./Quotes/}{Quotes}
+
+%% Series
+% Notes that these sections already have the section command
+\chapter{Book Series}
+\import{./Series/}{intro}
+
+\import{./Series/}{harvard}
+
+\import{./Series/}{uchicago}
+
+\import{./Series/}{uarizona}
+
+\import{./Series/}{springer}
+
+\import{./Series/}{cambridge}
+
+\import{./Series/}{interscience}
+\import{./Series/}{intersciencetable}
+
+\import{./Series/}{other}
+
+
+%% Style Guides
+\chapter{Style Guides}
+\section{English Grammer and Syntax}
+%\import{./Style/}{style_english}
+
+\section{\LaTeX2e\ Documents}
+%\import{./Style/}{style_latex}
+%\import{./Style/}{style_bibliography}
+
+\section{Python Programming}
+%\import{./Style/}{style_python}
+
+\section{Sphinx Documentation}
+%\import{./Style/}{style_sphinx}
+
+\section{Building Tools}
+%\import{./Style/}{style_build}
+
+
+%% Appendicies
+\newpage
+\appendixpage
+\begin{appendix}
+
+  \section{Astrophysics and Space Science Library}
+  \import{./Series/}{springerASSLtable}
+
+  \newpage
+  \section{Astronomy and Astrophysics Library}
+  \import{./Series/}{springerAALtable}
+
+  \newpage
+  \section{Cambridge Astrophysics Series}
+  \import{./Series/}{cambCAPStable}
+
+\end{appendix}
 
 \printbibliography
 
