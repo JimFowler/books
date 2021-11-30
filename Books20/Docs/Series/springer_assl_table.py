@@ -604,7 +604,7 @@ ASSL_BOOK_LIST = [
     (91, ['Investigating the Universe:', 'Papers presented to Zdeněk Kopal on',
           'the occasion of his retirement,', 'September 1981'], '1981', 
      ['F. D. Kahn'],
-     'E', None, ''),
+     'E', '90-277-1325-1', 'AAA 30.03.14'),
 
     (92, ['Instrumentation for Astronomy with', 'Large Optical Telescopes:',
           'Proceedings of IAU Colloquium No.', '67, Held at Zelenshikskaya,',

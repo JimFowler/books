@@ -39,74 +39,14 @@
 \mainmatter
 
 \chapter{General Comments}
-
 \section{Purpose}
-This style guide is about maintaining consistency within the documents
-of my project \ProjectTitle. Consistency is for readablilty and
-helps avoid conflicting statements between documents. The tools
-that I am using are,
-
-\begin{itemize}
-\item \texttt{Ubuntu} Linux at the current LTS release,
-\item \texttt{Emacs} as the text editor,
-\item \LaTeXe\ as the document processor,
-\item with \texttt{BibLatex} bibliography control,
-\item \texttt{Python} as the software development language,
-\item \texttt{Sphinx} as the Python documentation language,
-\item \texttt{Git} as the version control system,
-\item with \texttt{GitHub} as the off-site repository,
-\item \texttt{sqlite3} is used for the database structure,
-\item \texttt{XML} is used for the intermediate data lists until
-  I can migrate the data to the database,
-\item Gnu \texttt{autotools} as the build environment (autoconf, automake,
-  etc.),
-\item Gnu \texttt{Make} is used as the build tool,
-\item possibly \texttt{R} as the statistical analysis language,
-  if I ever have to do detailed statistics, otherwise I'll just
-  use the statitics package in python,
-\item with \texttt{Sweave} or \texttt{RMarkdown} as the R documentation language,
-\item \texttt{ESS} is an Emacs package for running R,
-\end{itemize}
-    
-
-\section{Copyright}
-
-The files within this project are currently under full copyright.  This
-may change at a later date but for now I want to protect whatever
-intellectual property there is.  Therefore all files in the project
-should contain the copyright notice below with the appropriate comment
-character for whatever langangue parser is used for that file; the
-example below uses the comment chacter for \LaTeXe.  The
-\texttt{<filename>} should contain the path name relative to the top
-project directory. The \texttt{<file description>} should contain a
-quick description of the file contents. The copyright \texttt{<Year>}
-should be the year in which the file was created.
-
-\begin{verbatim}
-%%
-%%
-%%  <filename>
-%%
-%%  
-%%  [file description]
-%%
-%%  Part of Books20 Project
-%%
-%%  Copyright <Year> James R. Fowler
-%%
-%%  All rights reserved. No part of this publication may be
-%%  reproduced, stored in a retrival system, or transmitted
-%%  in any form or by any means, electronic, mechanical,
-%%  photocopying, recording, or otherwise, without prior written
-%%  permission of the author.
-%%
-%%
-%%
-\end{verbatim}
-
+\import{./}{purpose}
+\section{copyright}
+\import{./}{copyright}
 
 \chapter{English Grammer and Syntax}
 \import{./}{style_english}
+\section{Spelling Conventions}
 
 \chapter{\LaTeX2e\ Documents}
 \import{./}{style_latex}
