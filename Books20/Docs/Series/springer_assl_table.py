@@ -564,7 +564,7 @@ ASSL_BOOK_LIST = [
     (85, ['Stellar Paths:', 'Photographic Astrometry with',
           'Long-Focus Instruments'], '1981', 
      ['Peter Van De Kamp'],
-     'A', None, ''),
+     'A', '90-277-1265-5', 'AAA 30.03.154'),
 
     (86, ['Reference Coordinate Systems for', 'Earth Dynamics:',
           'Proceedings of the 56th colloquium',
