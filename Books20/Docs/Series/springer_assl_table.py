@@ -595,7 +595,7 @@ ASSL_BOOK_LIST = [
           'IAU Colloquium no. 59 Held in',
           'Miramare, Trieste, Italy,', 'September 15–19, 1980'], '1981', 
      ['C. Chiosi', 'R. Stalio'],
-     'E', None, ''),
+     'E', '90-277-1282-1', 'AAA 30.12.15'),
 
     (90, ['The Orion Complex: A Case Study of', 'Interstellar Matter'], '1982', 
      ['C. Goudis'],
