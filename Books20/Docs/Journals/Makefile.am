@@ -55,7 +55,7 @@ build_software: ${SUB_DIRS}
 .PHONY: build_docs
 build_docs: ${SUB_DIRS} journals.pdf
 
-journals.pdf: ${BUILT_TABLE_FILES} ${JOURNAL_FILES}
+journals.pdf: ${BUILT_TABLE_FILES} ${JOURNAL_TEX_FILES}
 	${LATEX} -draftmode journals
 	${BIBER} journals
 	${LATEX} -draftmode journals
