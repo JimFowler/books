@@ -599,7 +599,7 @@ ASSL_BOOK_LIST = [
 
     (90, ['The Orion Complex: A Case Study of', 'Interstellar Matter'], '1982', 
      ['C. Goudis'],
-     'A', None, ''),
+     'A', '90-277-1298-0', 'AAA 31.03.51'),
 
     (91, ['Investigating the Universe:', 'Papers presented to Zdeněk Kopal on',
           'the occasion of his retirement,', 'September 1981'], '1981', 
