@@ -32,7 +32,7 @@ import isbnlib as isbn
 # checksum is j =  remainder of ([abcdefghi] x [123456789]) MOD 11
 # Valid results are '0'-'9' and 'X'
 #
-isbn10mults = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+isbn10_mults = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 def checksum_10(isbnlike):
     '''Calculate the proper ISBN-10 check sum for a test ISBN 10
     string. The input string must be 10 legal characters with or
@@ -45,7 +45,7 @@ def checksum_10(isbnlike):
     isbndigits = isbn.canonical(isbnlike)
 
     tmp_sum = 0
-    for num, value in zip(isbn10mults, isbndigits[:9]):
+    for num, value in zip(isbn10_mults, isbndigits[:9]):
         tmp_sum += num * int(value)
 
     chksum = int(fmod(tmp_sum, 11))
@@ -60,7 +60,7 @@ def checksum_10(isbnlike):
 # checksum is m = 10 - the remainder of ([abcdefghiklm] x [131313131313]) MOD 10
 # Valid results are '0'-'9'
 #
-isbn13mults = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+isbn13_mults = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
 def checksum_13(isbnlike):
     '''Calculate the proper ISBN-13 check sum for a test ISBN 13
     string. The input string must have 13 legal characters with or
@@ -73,7 +73,7 @@ def checksum_13(isbnlike):
     isbndigits = isbn.canonical(isbnlike)
 
     tmp_sum = 0
-    for num, value in zip(isbn13mults, isbndigits[:12]):
+    for num, value in zip(isbn13_mults, isbndigits[:12]):
         tmp_sum += num * int(value)
     return str(10 - fmod(tmp_sum, 10))
 
@@ -101,6 +101,7 @@ if __name__ == '__main__':
         ('3-528-17214', '2'), ('3-211-81430', '2'), ('0-387-81430', '2'),
         ('3-211-81475', '2'), ('0-387-81475', '2'), ('0-86008-258', 'X'),
         ('2-01-003860', '6'), ('0-86961-109', '7'), ('0-444-41802', '4'),
+        ('0-08-026341', '0'), ('0-08-026342', '9'),
     ]
 
     isbn13_list = [
@@ -136,7 +137,8 @@ if __name__ == '__main__':
                 self.assertEqual(checksum_10(isbntest + '0'), chksum)
 
         def test_c_test(self):
-            test_isbn = '0-0147-2003-1'
+            '''Report the correct checksum for a 10 digit ISBN'''
+            test_isbn = '0-08-026341-9'
             print(checksum_10(test_isbn))
             return True
 
