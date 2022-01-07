@@ -617,7 +617,7 @@ ASSL_BOOK_LIST = [
           'Dynamics and Photochemistry”, Held',
           'in Penticton, British Columbia,', 'June 24–26, 1981'], '1982', 
      ['R. S. Roger', 'Peter E. Dewdney'],
-     'E', None, ''),
+     'E', '90-277-1383-9', 'AAA 31.12.02'),
 
     (94, ['High-Precision Earth Rotation and', 'Earth-Moon Dynamics:',
           'Lunar Distance and Related', 'Observations'], '1982', 
