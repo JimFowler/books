@@ -622,7 +622,7 @@ ASSL_BOOK_LIST = [
     (94, ['High-Precision Earth Rotation and', 'Earth-Moon Dynamics:',
           'Lunar Distance and Related', 'Observations'], '1982', 
      ['O. Calame'],
-     'E', None, ''),
+     'E', '90-277-1405-3', 'AAA 31.12.35'),
 
     (95, ['The Nature of Symbiotic Stars:', 'Proceedings of IAU Colloquium No. 70',
           'Held at the Observatoire De Haute', 'Provence, 26–28 August 1981'], '1982', 
@@ -633,7 +633,7 @@ ASSL_BOOK_LIST = [
           'Regional Meeting in Astronomy, Held',
           'in Dubrovnik, Yugoslavia,', '19--23 October 1981'], '1982', 
      ['W. Fricke', 'G. Teleki'],
-     'E', None, ''),
+     'E', '90-277-1429-0', 'AAA 31.12.40'),
 
     (97, ['Automated Data Retrieval in', 'Astronomy:',
           'Proceedings of the 64th Colloquium',
