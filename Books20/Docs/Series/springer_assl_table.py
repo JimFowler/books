@@ -610,7 +610,7 @@ ASSL_BOOK_LIST = [
           'Proceedings of IAU Colloquium No.', '67, Held at Zelenshikskaya,',
           'U.S.S.R., 8–10 September, 1981'], '1982', 
      ['Colin M. Humpfries'],
-     'E', None, ''),
+     'E', '90-277-1388-X', 'AAA 32.12.59'),
 
     (93, ['Regions of Recent Star Formation:', 'Proceedings of the Symposium on',
           '“Neutral Clouds near HII Regions ---',
@@ -627,7 +627,7 @@ ASSL_BOOK_LIST = [
     (95, ['The Nature of Symbiotic Stars:', 'Proceedings of IAU Colloquium No. 70',
           'Held at the Observatoire De Haute', 'Provence, 26–28 August 1981'], '1982', 
      ['Michael Friedjung', 'Roberto Viotti'],
-     'E', None, ''),
+     'E', '90-277-1422-3', 'AAA 32.12.45'),
 
     (96, ['Sun and Planetary System:', 'Proceedings of the Sixth European',
           'Regional Meeting in Astronomy, Held',
@@ -640,20 +640,20 @@ ASSL_BOOK_LIST = [
           'of the International Astronomical',
           'Union Held in Strasbourg, France,', 'July 7–10, 1981'], '1982', 
      ['Carlos Jaschek', 'W. Heintz'],
-     'E', None, ''),
+     'E', '90-277-1435-5', 'AAA 32.12.02'),
 
     (98, ['Binary and Multiple Stars as Tracers', 'of Stellar Evolution:',
           'Proceedings of the 69th Colloquium',
           'of the International Astronomical', 'Union, held im Bamberg, F.R.G.,',
           'August 31 – September 3, 1981'], '1982', 
      ['Zdenék Kopal', 'Jürgen Rahe'],
-     'E', None, ''),
+     'E', '90-277-1436-3', 'AAA 32.12.46'),
 
     (99, ['Progress in Cosmology:', 'Proceedings of the Oxford',
           'International Symposium Held in', 'Christ Church, Oxford,',
           'September 14–18, 1981'], '1982', 
      ['A. W. Wolfendale'],
-     'E', None, ''),
+     'E', '90-277-1441-X', 'AAA 32.12.47'),
 
     (100, ['Kinematics, Dynamics and Structure', 'of the Milky Way:',
            'Proceedings of a Workshop on ‘The', 'Milky Way” Held in Vancouver,',
