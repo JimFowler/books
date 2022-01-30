@@ -16,7 +16,7 @@ $A1.00               Australian Dollar
 1d                   British Pence
 1p                   British new Penny
 1.00 Fr.             French Francs
-1 f                  \
+1 f                  \ but in AAA an italic f is Dutch florins
 1 F                  \
 FF 1                 \
 1.00 Schw. Fr.       Swiss Francs
@@ -37,7 +37,7 @@ FF 1                 \
 1.00 Zł.             Polish Złoty (Golden)
 1 zł                 \
 1.00 Gulden          Dutch Guilder
-1 hfl                Dutch Florins
+1 hfl                Dutch Florins become italic 'f' in AAA
 1 Dfl                \
 1 fl                 \
 1 Kr.                Swedish Kronor (Crown)
