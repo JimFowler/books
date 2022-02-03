@@ -75,7 +75,31 @@ def checksum_13(isbnlike):
     tmp_sum = 0
     for num, value in zip(isbn13_mults, isbndigits[:12]):
         tmp_sum += num * int(value)
-    return str(10 - fmod(tmp_sum, 10))
+    return str(int(10 - fmod(tmp_sum, 10)))
+
+#
+# Generate a checksum for either a 10 or 13 digit ISBN
+#
+def checksum(isbnlike):
+    '''Calculate the proper ISBN-check sum for a test ISBN
+    string. The input string must have 10 or 13 legal characters with or
+    without dashes but the checksum character need not be valid.
+
+    Return a string character of the checksum digit.
+
+    '''
+    isbndigits = isbn.canonical(isbnlike)
+    isbnlen = len(isbndigits)
+    # get length, choose 10 or 13 checksum
+    if isbnlen == 10:
+        chksum = checksum_10(isbndigits)
+    elif isbnlen == 13:
+        chksum = checksum_13(isbndigits)
+    else:
+        return None
+                  
+    return chksum
+
 
 #
 #
@@ -83,7 +107,28 @@ def checksum_13(isbnlike):
 if __name__ == '__main__':
 
     import unittest
+    import argparse
 
+    # check for command line argument.  Run checksum rather
+    # than unit tests
+
+    parser = argparse.ArgumentParser(description='parse and validate ISBN values')
+    parser.add_argument('isbn',
+                        type=str,
+                        help='''An ISBN value to test''',
+                        default='',
+                        nargs='?')
+
+    args = parser.parse_args()
+
+    if args.isbn:
+        chksum = checksum(args.isbn)
+        if chksum is None:
+            print('This ISBN value', args.isbn, 'does not seem to be a proper value')
+        else:
+            print('The proper ISBN checksum is %s' % (chksum))
+        exit()
+        
     # missing a checksum of 8 still
     isbn10_list = [
         ('0-8357-0331', '2'), ('0-08-024620', '6'), ('3-540-09830', '5'),
@@ -135,12 +180,6 @@ if __name__ == '__main__':
 
             for isbntest, chksum in isbn10_list:
                 self.assertEqual(checksum_10(isbntest + '0'), chksum)
-
-        def test_c_test(self):
-            '''Report the correct checksum for a 10 digit ISBN'''
-            test_isbn = '0-08-026341-9'
-            print(checksum_10(test_isbn))
-            return True
 
         
     unittest.main()
