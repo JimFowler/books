@@ -659,14 +659,14 @@ ASSL_BOOK_LIST = [
            'Proceedings of a Workshop on ‘The', 'Milky Way” Held in Vancouver,',
            'Canada, May 17–19, 1982'], '1983', 
      ['W. L. H. Shuter'],
-     'E', None, ''),
+     'E', '90-277-1540-8', 'AAA 22.12.16'),
 
     (101, ['Cataclysmic Variables and Related', 'Objects:',
            'Proceedings of the 72nd Colloquium',
            'of International Astronomical Union',
            'Held in Haifa, Israel, August 9–13,', '1982'], '1983', 
      ['Mario Livio', 'Giora Shaviv'],
-     'E', None, ''),
+     'E', '90-277-1570-X', 'AAA 33.12.19'),
 
     (102, ['Activity in Red-Dwarf Stars:', 'Proceedings of the 71st Colloquium',
            'of the International Astronomical',
