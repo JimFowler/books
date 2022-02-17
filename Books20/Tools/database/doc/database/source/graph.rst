@@ -93,7 +93,7 @@ Cypher is a query language for graph databases. It is open language and
 can be found at https://opencypher.org.
 
 Nodes are specified by () or (variable:Label1:Label2). Note that node
-can have multiple labels. Use ``call db.schema.visualization() to see
+can have multiple labels. Use ``call db.schema.visualization()`` to see
 the graph schema of the current graph. Nodes may also have properties.
 
 A relationship is a directed connection between two nodes that has a
