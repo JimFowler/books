@@ -48,6 +48,7 @@
       <xs:element name="Frontispiece"   type="xs:integer" minOccurs="0" />
       <xs:element name="Figures"     type="xs:integer" minOccurs="0" />
       <xs:element name="Illustrations"  type="xs:integer" minOccurs="0" />
+      <xs:element name="Index"       type="xs:integer" minOccurs="0" />
       <xs:element name="Woodcuts"    type="xs:integer" minOccurs="0" />
       <xs:element name="Maps"        type="xs:integer" minOccurs="0" />
       <xs:element name="Nomograms"   type="xs:integer" minOccurs="0" />

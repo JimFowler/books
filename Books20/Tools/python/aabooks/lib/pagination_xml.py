@@ -53,6 +53,7 @@ Known text codes and their matching XML tags are::
     'F'  : 'Frontispiece',
     'f'  : 'Figures',
     'i'  : 'Illustrations',
+    'I'  : 'Index',
     'h'  : 'Woodcuts',
     'M'  : 'Maps',
     'n'  : 'Nomograms',
@@ -111,6 +112,7 @@ __TAG_TO_XML_NAME__ = {
     'F'  : 'Frontispiece',
     'f'  : 'Figures',
     'i'  : 'Illustrations',
+    'I'  : 'Index',
     'h'  : 'Woodcuts',
     'M'  : 'Maps',
     'n'  : 'Nomograms',
@@ -238,7 +240,7 @@ if __name__ == '__main__':
     ROM_STR = '5D+XIIIpp+203p+40AA+32AB+14i+23f+522P+10c'
     BAD_STR = '12pz+203p+14i+23f+522P+10c'
     BAD_STR2 = '12 pp+203p+14i+23f+522P+10c'
-    BAD_STR3 = '12pp+203p+14i+23f+522T+10c' # parse a bad character
+    BAD_STR3 = '12pp+203p+14i+23f+522z+10c' # parse a bad character
     
     class PaginationTestCase(unittest.TestCase):
         '''The test suite for pagination_xml.py.'''
