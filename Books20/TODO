@@ -1,3 +1,9 @@
+18 April 2022
+
+  Add an entry iterator to lib.entrylist
+  Override extend() to add two entry lists
+  Add '+' to extend two entry lists
+
 25 April 2020
 
   Add copyright notice to new AJB files, fix spelling mistake

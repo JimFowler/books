@@ -1,0 +1,51 @@
+Bibliography Styles
+
+
+Bibliographies may be enumerative, descriptive, ...
+
+bibliographies may be used to
+  list works in a collection
+  list works in a subject field but not in a collection
+  list works in an area or county
+
+
+Basicly bibliography is such a broad term that you can write
+the list in any form you want.
+
+
+  As a simple enumerative bibliography a simple author, title list
+suffices
+
+    # Last, First Middle, \it Title, Place: Publisher, Year
+
+  The Descriptive entry style varies by bibliography but most that I
+have seen are listed alphabetically by Author or by publication date.
+The San Diego State University lists their rare astronomical books by
+Author as
+
+    # Last, First Middle, birth-death
+
+    \it Title
+
+    Place: Publisher, Year
+
+    Description
+
+    Comments
+
+    Other bibliography references
+
+An alternate style, written as a paragraph to conserve space is,
+
+  Last, First Middle, \it Title, Place: Publisher, Year, Description
+
+The last threee fields are optional or may be left out
+if no information exists.  The ordering may change as well. For example,
+if you wanted the list by year of publication, then the year would go
+first.
+
+Multiple author/editors or sub-titles are handled how?
+Can biblatex be used to any purpose?
+Check out bibliographies at Sul Ross.
+Review my bibliography books
+

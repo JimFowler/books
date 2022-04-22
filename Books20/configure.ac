@@ -26,6 +26,7 @@ AC_PROG_INSTALL()
 AC_CONFIG_FILES([Makefile
       Docs/Makefile
       Docs/Bibliography/Makefile
+      Docs/Catalogues/Makefile
       Docs/Collecting/Makefile
       Docs/DatabaseDesign/Makefile
       Docs/Handbook/Makefile

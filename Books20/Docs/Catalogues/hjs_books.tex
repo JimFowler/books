@@ -1,0 +1,151 @@
+%% A counter to keep track of the books
+\newcounter{bksctr}
+
+%%
+%% The short title bibliography entry
+%%    problems with long title, multiple authors, and multiple publishers
+%%
+%%  \shrtentry{Author}{Title}{Place}{Publisher}{Year}
+%%
+\newcommand{\shrtentry}[5]{
+\stepcounter{bksctr}
+\noindent
+{\bf\arabic{bksctr}} #1 {\itshape #2} #3: #4 #5\newline
+}
+
+%%
+%% \bkentry{year}{author}  #1 #2
+%% {title}       #3
+%% {publishing}  #4
+%% {description} #5
+%% {references}  #6
+%%
+\newcommand{\bkentry}[4]{
+\stepcounter{bksctr}
+\vspace*{1 cm}
+\noindent
+\hbox{{\bf\arabic{bksctr}  #2, }}
+\hbox{{\itshape \large #3\hfil}}\newline
+\hbox{#4, #1 \hfil}\newline
+\hbox{Comments:\hfil}\newline
+}
+
+%%\hbox{#5\hfil}\newline
+%%\hbox{#6\hfil}\newline
+
+\setcounter{bksctr}{0}
+
+
+\shrtentry{Wray, James D.,}{The Color Atlas of Galaxies,}{Cambridge (UK)}{Cambridge University Press,}{1988}
+
+\shrtentry{Kuiper, Gerard P. ed.,}{The Sun,}{Chicago}{The University of Chicago Press,}{1953}
+
+\shrtentry{Kuiper, Gerard P. ed.,}{The Earth as a Planet,}{Chicago (USA)}{The University of Chicago Press,}{1964}
+
+\shrtentry{Kuiper, Gerard P. ed.,}{Planets and Satellites,}{Chicago}{The University of Chicago Press,}{1963}
+
+\shrtentry{Middlehurst, Barbara M. ed.,}{The Moon, Meteorites, and Comets,}{Chicago}{The University of Chicago Press,}{1963}
+
+\shrtentry{Zwicky, F.,}{Morphological Astronomy,}{Berlin}{Springer-Verlag,}{1958}
+
+\shrtentry{Evans, D. E. ed.,}{External Galaxies and Quasi-Stellar Objects,}{Dordrecht}{D. Reidel Publishing Co.,}{1972}
+
+\shrtentry{Hynek, J. A. ed.,}{Astrophysics,}{New York}{McGraw-Hill Book Co.,}{1951}
+
+\shrtentry{Kondo, Y. ed.,}{Observatories in Earth Orbit and Beyond,}{Dordrecht}{Kluwer Academic Publishers,}{1990}
+
+\shrtentry{Wright, Helen,}{Explorer of the Universe,}{New York}{E. P. Dutton \& Co., Inc.,}{1966}
+
+\shrtentry{Ball, Robert Stawell,}{The Story of the Heavens,}{London}{Cassell \& Co.,}{1892}
+
+\shrtentry{Herzberg, Gerhard,}{The Spectra and Structures of Simple Free Radicals,}{Ithaca NY (USA)}{Cornell University Press,}{1971}
+
+\shrtentry{Pedersen, Olaf,}{Early Physics \& Astronomy,}{New York}{Science History Publications,}{1974}
+
+\shrtentry{Ball, Robert S.,}{Great Astronomers,}{London}{Isbister and Co.,}{1895}
+
+\shrtentry{Heuer, Kenneth,}{City of Stargazers,}{New York}{Charles Scribner's Sons,}{1972}
+
+\shrtentry{Roach, F. E.,}{The Light of the Night Sky,}{Dordrecht}{D. Reidel Publishing Co.,}{1973}
+
+\shrtentry{Eddington, A. S.,}{The Internal Constitution of Stars,}{Cambridge (UK)}{At the University Press,}{1930}
+
+\shrtentry{de Vaucouleurs, G.,}{The Cosmic Distance Scale and the Hubble Constant,}{Canberra}{Mount Stromlo and Siding Springs Observatories,}{1982}
+
+\shrtentry{Drake, Thomas E.,}{The First Half Century of the Nantucker Maria Mitchell Association,}{Nantucket MA (USA)}{The Nantucket Maria Mitchell Association,}{1968}
+
+\shrtentry{Chincarini, Guido L. ed.,}{Electrography and Astronomical Applications,}{Austin TX (USA)}{The University of Texas Astronomy Department,}{1974}
+
+\shrtentry{Lemon, Harvey Brace,}{Analytical Experimental Physics,}{Chicago}{The University of Chicago Press,}{1947}
+
+\shrtentry{Schultz, Peter H.,}{Moon Morphology,}{Austin TX (USA)}{University of Texas Press,}{1976}
+
+\shrtentry{Aller, Lawrence H.,}{Astrophysics,}{New York}{The Ronald Press Company,}{1953}
+
+\shrtentry{}{La Physique des Planètes,}{Cointe-Sclessin (Belgium)}{Institut d'Astrophysique,}{1963}
+
+\shrtentry{}{Centennial Symposia,}{Cambridge MA (USA)}{Harvard College Observatory,}{1948}
+
+\shrtentry{Zwicky, F.,}{Morphological Astronomy,}{Berlin}{Springer-Verlag,}{1957}
+
+\shrtentry{Watson, Fletcher G.,}{Between the Planets,}{Cambridge MA (USA)}{Harvard University Press,}{1p56}
+
+\shrtentry{Texereau, Jean,}{How to Make a Telescope,}{Richmond VA (USA)}{Willman-Bell, Inc.,}{1984}
+
+\shrtentry{Wood, Frank B.,}{Photoelectric Astronomy for Amateurs,}{New York}{The Macmillan Company,}{1963}
+
+\shrtentry{Pierce, John R.,}{Electrons, Waves and Messages,}{Garden City NY (USA)}{Hanover House,}{1956}
+
+\shrtentry{Herzberg, Gerhard,}{Atomic Spectra and atomic structure,}{New York}{Dover Publications,}{1944}
+
+\shrtentry{Garbunny, Max,}{Optical Physics,}{New York}{Academic Press,}{1965}
+
+\shrtentry{Allen, C. W.,}{Astrophysical Quantities,}{London}{The Athlone Press,}{1955}
+
+\shrtentry{King, Henry C.,}{The History of the Telescope,}{Cambridge MA (USA)}{Sky Publishing Corporation,}{1955}
+
+\shrtentry{Smart, W. M.,}{Stellar Dynamics,}{cambridge (UK)}{At the University Press,}{1938}
+
+\shrtentry{Sarton, George,}{Ancient Science and Modern Civilization,}{}{The University of Nebraska Press,}{1954}
+
+\shrtentry{Ditchburn, R. W.,}{Light,}{New York}{Interscience Publishers,}{1964}
+
+\shrtentry{Ditchburn, R. W.,}{Light,}{New York}{Interscience Publishers,}{1964}
+
+\shrtentry{Bilby, Curt ed.,}{Modeling and Simulation of Advanced Space Programs,}{Austin TX (USA)}{The University of Texas at Austin,}{1991}
+
+\shrtentry{Spitzer, Lyman jr.,}{Physics of Fully Ionized Gases,}{New York}{Interscience Publishers,}{1957}
+
+\shrtentry{Hoskins, M. A.,}{William Herschel and the Construction of the Heavens,}{London}{Oldbourne Book Company,}{1963}
+
+\shrtentry{Drude, Paul,}{The Theory of Optics,}{New York}{Dover Publications,}{1959}
+
+\shrtentry{Ratcliffe, J. A.,}{The Magneto-Ionic Theory \& its Application to the Ionosphere,}{Cambridge (UK)}{At the University Press,}{1959}
+
+\shrtentry{Binnendijk, Leendert,}{Properties of Double Stars,}{Philadelphia PA (USA)}{University of Pennsylvania Press,}{1960}
+
+\shrtentry{Russell, Henry Norris,}{Astronomy,}{Boston}{Ginn \& Co.,}{1945}
+
+\shrtentry{Russell, Henry Norris,}{Astronomy,}{Boston}{Ginn \& Co.,}{1938}
+
+\shrtentry{Hoyle, Fred,}{Frontiers of Astronomy,}{New York}{Harper \& Brothers,}{1955}
+
+\shrtentry{Dicke, R. H.,}{Introduction to Quantum Mechanics,}{Reading MA (USA)}{Addison-Wesley Publishing Company,}{1961}
+
+\shrtentry{Baldwin, Ralph B.,}{The Face of the Moon,}{Chicago}{The University of Chicago Press,}{1949}
+
+\shrtentry{Sagan, Carl ed.,}{Planetary Atmosphers,}{Dordrecht (Holland)}{D. Reidel Publishing Co.,}{1971}
+
+\shrtentry{Strong, John,}{Concepts of Classical Optics,}{San Francisco}{W. H. Freeman \& Co.,}{1958}
+
+\shrtentry{Skilling, Hugh Hildreth,}{Fundamentals of Electric Waves,}{New York}{John Wiley \& Sons,}{1948}
+
+\shrtentry{White, Harvey Elliott,}{Introduction to Atomic Spectra,}{New York}{McGraw-Hill Book Co.,}{1934}
+
+\shrtentry{Pawsey, J. L.,}{Radio Astronomy,}{Oxford (UK)}{At the Clarendon Press,}{1955}
+
+\shrtentry{Evans, David S. ed.,}{Eleventh Texas Symposium on Relativistic Astrophysics,}{New York}{The New York Academy of Sciences,}{1984}
+
+\shrtentry{Sarton, George,}{A History of Science,}{Cambridge MA (USA)}{Harvard University Press,}{1952}
+
+\shrtentry{Biswas, S. K. ed.,}{Cosmic Perspectives,}{Cambridge (UK)}{Cambridge University Press,}{1989}
