@@ -72,7 +72,7 @@ class EntryList(list):
         super().__init__()
 
         # the first element is the header
-        self.append('')
+        self.header = ''
 
         self.filename = './document1.xml'
         self._dirty = False
@@ -86,10 +86,10 @@ class EntryList(list):
 
     def max_entries(self):
         '''Return the number of entries in the entry_list. This number
-        will be len(self) - 1.
+        will be len(self).
 
         '''
-        return len(self) - 1
+        return len(self)
 
     def clear_list(self):
         '''Delete all entries and put '' in the header. This will leave a list
@@ -98,8 +98,7 @@ class EntryList(list):
 
         '''
 
-        for entrynum in range(self.max_entries(), 0, -1):
-            self.pop(entrynum)
+        self.clear()
 
         self.set_header('')
         self._dirty = False
@@ -126,10 +125,7 @@ class EntryList(list):
         # headerstr should be a string
         if isinstance(headerstr, str):
             self._dirty = True
-            if len(self) == 0:
-                self.append(headerstr)
-            else:
-                self[0] = headerstr
+            self.header = headerstr
             return True
 
         return False
@@ -138,20 +134,20 @@ class EntryList(list):
         '''Return the current header string.
 
         '''
-        return self[0]
+        return self.header
 
     # functions to deal with entries
     def set_new_entry(self, entry, count=-1):
-        '''Append an entry to the list or insert before entry 'count',
-        if that value is given. Note that 1 <= count <= len(self.).
-        The dirty flag is set for the file.
+        '''Append an entry to the list or insert before entry 'count', if that
+        value is given. Note that 0 <= count < len(self) for
+        insertion.  The dirty flag is set for the file.
 
         '''
 
         if not entry.is_valid():
             return False
 
-        if 0 < count < len(self):
+        if 0 <= count < len(self):
             # count is within the list, insert the entry
             self.insert(count, entry)
         else:
@@ -164,7 +160,7 @@ class EntryList(list):
 
     def set_entry(self, entry, entrynum=-1):
         '''Write over an existing entry or the entry at position
-        'entrynum', if given.  Note that 0 < entrynum < len(self).
+        'entrynum', if given.  Note that 0 <= entrynum < len(self).
         The dirty flag is set for the list.
 
         Returns True or False indicating whether or not the entry
@@ -176,7 +172,7 @@ class EntryList(list):
         if not entry.is_valid():
             return False
 
-        if 0 < entrynum < len(self):
+        if 0 <= entrynum < len(self):
             self[entrynum] = entry
             self._dirty = True
             return True
@@ -189,7 +185,7 @@ class EntryList(list):
         returned. Note that 0 < entrynum < len(self.).
 
         '''
-        if 0 < entrynum < len(self):
+        if 0 <= entrynum < len(self):
             return self[entrynum]
 
         return None
@@ -199,11 +195,11 @@ class EntryList(list):
         Return the length of the remaining list.
 
         '''
-        if 0 < entrynum < len(self):
+        if 0 <= entrynum < len(self):
             self.pop(entrynum)
             self._dirty = True
 
-        return len(self) - 1
+        return self.max_entries()
 
     # generic file I/O
     def read_file(self, filename=None):
@@ -338,20 +334,20 @@ It contains three lines.'''
 
             # test set_new_entry with valid entry and check dirty flag set 1
             self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(0), self.entry1)
             self.assertTrue(self.ev_list.is_dirty())
 
             # test set_new_entry with second valid entry 12
             self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertEqual(self.ev_list.get_entry(2), self.entry2)
+            self.assertEqual(self.ev_list.get_entry(1), self.entry2)
 
             # test set_new_entry insertion of entry 312
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry3)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 0))
+            self.assertEqual(self.ev_list.get_entry(0), self.entry3)
 
             # test set_new_entry insertion of entry with invalid count 3121
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 4))
-            self.assertEqual(self.ev_list.get_entry(4), self.entry1)
+            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 3))
+            self.assertEqual(self.ev_list.get_entry(3), self.entry1)
 
             # test set_new_entry with invalid entry
             self.assertFalse(self.ev_list.set_new_entry(self.entry4))
@@ -365,10 +361,10 @@ It contains three lines.'''
             self.assertTrue(self.ev_list.set_new_entry(self.entry3))
 
             # test get_entry with counts inside and outside of invalid values
-            self.assertIsNone(self.ev_list.get_entry(0))
-            self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()+1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry1)
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry3)
+            self.assertIsNone(self.ev_list.get_entry(-1))
+            self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()))
+            self.assertEqual(self.ev_list.get_entry(0), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries() - 1), self.entry3)
 
         def test_d_set_entry(self):
             '''Test the EntryList.set_entry() function'''
@@ -380,25 +376,25 @@ It contains three lines.'''
             self.assertTrue(self.ev_list.set_new_entry(self.entry3))
 
             # test set_entry with replacement of entry just inside valid counts 2233
-            self.assertTrue(self.ev_list.set_entry(self.entry2, 1))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry2)
-            self.assertTrue(self.ev_list.set_entry(self.entry1, self.ev_list.max_entries())) # 2221
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()), self.entry1)
+            self.assertTrue(self.ev_list.set_entry(self.entry2, 0))
+            self.assertEqual(self.ev_list.get_entry(0), self.entry2)
+            self.assertTrue(self.ev_list.set_entry(self.entry1, self.ev_list.max_entries()-1)) # 2221
+            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()-1), self.entry1)
 
             # test set_entry with invalid entry
             self.assertFalse(self.ev_list.set_entry(self.entry4, 2))
-            self.assertEqual(self.ev_list.get_entry(4), self.entry1)
+            self.assertEqual(self.ev_list.get_entry(3), self.entry1)
 
             # test set_entry with invalid count
-            self.assertFalse(self.ev_list.set_entry(self.entry2, 0))
-            self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()+1))
+            self.assertFalse(self.ev_list.set_entry(self.entry2, -1))
+            self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()))
 
             # test delete_entry 221
             self.assertEqual(self.ev_list.max_entries(), 4)
             self.assertEqual(self.ev_list.delete_entry(1), 3)
 
             # test delete_entry with invalid count 123
-            self.assertEqual(self.ev_list.delete_entry(0), 3)
+            self.assertEqual(self.ev_list.delete_entry(-1), 3)
             self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
 
         def test_f_clear_list(self):
@@ -411,8 +407,8 @@ It contains three lines.'''
             self.assertTrue(self.ev_list.set_new_entry(self.entry1))
 
             self.assertEqual(self.ev_list.clear_list(), 0)
-            # should have just the header in the list
-            self.assertEqual(len(self.ev_list), 1)
+            # should have no entries in the list
+            self.assertEqual(len(self.ev_list), 0)
 
         def test_g_read_file(self):
             '''Test the read_file stub. Should not be able to read a file at
