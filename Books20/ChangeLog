@@ -1,3 +1,26 @@
+2022-04-22  Jim Fowler  <jrf@biblion>
+
+	* Note: When making a modification list this I should run the unit
+	tests both before and after. This time I only ran them after and
+	there were some small changes that I attribute to earlier changes
+	that were not tested.  However, if I had rqun the unit tests before
+	modifing, I could have noted what the current state of the test
+	were.
+
+	* Tools/python/aabooks/journal/journalfile.py
+	(JournalFileTestCase.test_d_check_schema): Modified to support the
+	changes to entrylist.py, primarily in writing the output files.
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: Modified to support
+	the changes to entrylist.py, primarily in writing the output
+	files.
+
+	* Tools/python/aabooks/lib/entrylist.py (EntryList): Changed the
+	entrylist to be a list only of entries.  The header is now a
+	separate part of the entry list.  Clients can now interate through
+	the list without having to test for the header entry at the
+	beginning of the list.
+
 2021-08-15  James Fowler  <jrf12@Jamess-MBP.tularosa.net>
 
 	* Tools/xml/fixrubles.py: added program to change price strings

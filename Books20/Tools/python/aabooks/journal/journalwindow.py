@@ -206,8 +206,6 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         del self._vardict['sdict']
         
         for count, entry in enumerate(self._vardict['journal_file']):
-            if count < 1:
-                continue
 
             title = entry['Title']
             sub_title = entry['subTitle']
