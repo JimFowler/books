@@ -284,11 +284,15 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _save_file_as(self):
         '''Ignore dirty entries and save the file as...'''
-        fname, dummy = QtWidgets.QFileDialog.getSaveFileName(self,\
+        fname, filtera = QtWidgets.QFileDialog.getSaveFileName(self,\
                 '%s -- Choose file'%QtWidgets.QApplication.applicationName(),\
                 '.', '*.xml')
 
         if fname:
+            name = os.path.splitext(fname)
+            if name[1] == '':
+                    fname += '.xml'
+
             self._vardict['journal_file'].write_file_xml(fname)
             self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
 
