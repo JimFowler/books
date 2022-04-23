@@ -2,7 +2,7 @@
 #
 '''Parse AJB files, locate the journals in the Reviews field, test to
 see if they do not exist in the journal.xml file, and print the entry
-number and Journal name to stdout.  This needs to be done for file
+number and Journal name to stdout.  This needs to be done for files
 prior to AJB 38, when the journal program and journals.xml were
 created.  But should also be done for files after AJB 38 in order to
 pick up missing journals.
@@ -72,19 +72,18 @@ def build_search_dict(jfile, sdict):
     '''Build the search dictionary from the journal file.'''
 
     for count, entry in enumerate(jfile):
-        if count > 0:
-            title = entry['Title']
-            sdict.add_sub_strings(title, (title, count))
+        title = entry['Title']
+        sdict.add_sub_strings(title, (title, count))
 
-            sub_title = entry['subTitle']
-            sdict.add_sub_strings(sub_title, (sub_title, count))
+        sub_title = entry['subTitle']
+        sdict.add_sub_strings(sub_title, (sub_title, count))
 
-            subsub_title = entry['subsubTitle']
-            sdict.add_sub_strings(subsub_title, (subsub_title, count))
+        subsub_title = entry['subsubTitle']
+        sdict.add_sub_strings(subsub_title, (subsub_title, count))
 
-            for abr in entry['Abbreviations']:
-                if abr is not None:
-                    sdict.add_sub_strings(abr, (abr, count))
+        for abr in entry['Abbreviations']:
+            if abr is not None:
+                sdict.add_sub_strings(abr, (abr, count))
 
 def clean_review_string(review_str):
     '''Clean up the review string by removing punctuation
@@ -166,10 +165,6 @@ def main():
         bfile.read_file_xml()
 
         for count, entry in enumerate(bfile):
-
-            if count < 1:
-                # skip the header
-                continue
 
             count_in_sdict += check_reviews(entry['Reviews'],
                                             sdict, jdict, entry.num_str())

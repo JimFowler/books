@@ -63,11 +63,6 @@ def main():
         bookfile.read_file_xml()
 
         for count, entry in enumerate(bookfile):
-            # this mess is because BookFile(entrylist)
-            # has the header as the first item in the list
-            if count == 0:
-                continue
-
             fix_price(count, entry)
 
         bookfile.write_file_xml()
