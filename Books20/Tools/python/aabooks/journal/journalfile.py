@@ -179,7 +179,7 @@ if __name__ == "__main__":
             self.assertEqual(count, 235)
 
             shorttitle = self.jfile.make_short_title_list()
-            self.assertEqual(len(shorttitle), 9337)
+            self.assertEqual(len(shorttitle), 8535)
 
         def test_d_check_schema(self):
             '''Test the written XML file against the XSD schema.'''
