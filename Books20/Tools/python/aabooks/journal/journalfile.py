@@ -61,8 +61,8 @@ class JournalFile(entrylist.EntryList):
 
         short_title_list = ''
         for count, entry in enumerate(self):
-            short_title_list = short_title_list + str(count) + \
-                ' ' + entry['Title'] + '\n'
+            short_title_list = short_title_list + str(count+1) + \
+                ' ' + entry['Title'][:50] + '\n'
 
         return short_title_list
 

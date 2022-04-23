@@ -1,3 +1,12 @@
+2022-04-23  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/journal/journalfile.py (JournalFile):
+	Complete changes to support zero-based entrylist.
+
+	* Tools/python/aabooks/journal/journalwindow.py
+	(JournalWindow.__init__): Complete changes to support zero-based
+	entrylist.
+
 2022-04-22  Jim Fowler  <jrf@biblion>
 
 	* Note: When making a modification list this I should run the unit

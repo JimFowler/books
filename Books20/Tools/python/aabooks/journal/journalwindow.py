@@ -307,11 +307,11 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if self._vardict['cur_entry_number'] > self.max_entry_count:
             ret = self._vardict['journal_file'].set_new_entry(\
                             self._vardict['temp_entry'], \
-                            self._vardict['cur_entry_number'])
+                            self._vardict['cur_entry_number'] - 1)
         else:
             ret = self._vardict['journal_file'].set_entry(\
                             self._vardict['temp_entry'], \
-                            self._vardict['cur_entry_number'])
+                            self._vardict['cur_entry_number'] - 1)
 
         if not ret:
             msg = '2 Entry invalid. No Title!\nNot saved in journalfile!'
@@ -371,7 +371,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         if not num or num < 1 or num > self.max_entry_count:
             return
 
-        self._vardict['journal_file'].set_new_entry(self._vardict['temp_entry'], num)
+        self._vardict['journal_file'].set_new_entry(self._vardict['temp_entry'], num - 1)
         self._build_search_dictionary()
         self._vardict['cur_entry_number'] = num
         self.set_max_entry_count(self.max_entry_count + 1)
@@ -388,7 +388,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             return
 
         self.set_max_entry_count(self._vardict['journal_file'].delete_entry(\
-                                            self._vardict['cur_entry_number']))
+                                           self._vardict['cur_entry_number'] - 1))
         self._build_search_dictionary()
         if self.max_entry_count < 1:
             self.insertButton.setEnable(False)
@@ -421,7 +421,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         # Display the actual entry data
         self._vardict['temp_entry'] = self._vardict['journal_file'].get_entry(\
-                                            self._vardict['cur_entry_number'])
+                                                self._vardict['cur_entry_number'] - 1)
 
         if not self._vardict['temp_entry']:
             return
@@ -436,7 +436,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _print_entry(self):
         '''Print a postscript file of the current display.'''
-        pprint(self._vardict['journal_file'].get_entry(self._vardict['cur_entry_number']))
+        pprint(self._vardict['journal_file'].get_entry(self._vardict['cur_entry_number'] - 1))
 
     def search(self, string):
         '''Search the existing Titles and abbreviations for any entries
