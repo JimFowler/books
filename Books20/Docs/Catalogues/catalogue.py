@@ -204,11 +204,7 @@ def main():
 
     add_commands()
 
-    count = -1
     for entry in BookF:
-        count += 1
-        if 0 == count:
-            continue # skip the header
 
         print_short_entry(entry)
 
