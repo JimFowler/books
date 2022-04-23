@@ -380,9 +380,9 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.tmp_entry = self.display_to_entry()
 
         if self.current_entry_number > self.max_entry_number:
-            ret = self.bookfile.set_new_entry(self.tmp_entry, self.current_entry_number)
+            ret = self.bookfile.set_new_entry(self.tmp_entry, self.current_entry_number - 1)
         else:
-            ret = self.bookfile.set_entry(self.tmp_entry, self.current_entry_number)
+            ret = self.bookfile.set_entry(self.tmp_entry, self.current_entry_number - 1)
 
         if not ret:
             QtWidgets.QMessageBox.information(self, "Entry Invalid",
@@ -444,7 +444,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         if not num or num < 1 or num > self.max_entry_number:
             return
 
-        self.bookfile.set_new_entry(self.tmp_entry, num)
+        self.bookfile.set_new_entry(self.tmp_entry, num - 1)
         self.current_entry_number = num
         self.set_max_entry_number(self.max_entry_number + 1)
         self.show_entry(self.current_entry_number)
@@ -458,7 +458,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         if ans == QtWidgets.QMessageBox.Cancel:
             return
 
-        self.set_max_entry_number(self.bookfile.delete_entry(self.current_entry_number))
+        self.set_max_entry_number(self.bookfile.delete_entry(self.current_entry_number - 1))
         if self.max_entry_number < 1:
             self.insertButton.setEnable(False)
             self.new_entry()
@@ -481,15 +481,15 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         else:
             self.current_entry_number = recnum
 
-        # Display the actual entry data
-        self.tmp_entry = self.bookfile.get_entry(self.current_entry_number)
+        # Display the actual entry data, the bookfile is 0-based
+        self.tmp_entry = self.bookfile.get_entry(self.current_entry_number - 1)
 
         if not self.tmp_entry:
             return
 
         # Display record count
         self.indexEntry.setText(str(self.current_entry_number))
-
+ 
         self.entry_to_display(self.tmp_entry)
         self.deleteButton.setEnabled(True)
         self.clear_entry_dirty()

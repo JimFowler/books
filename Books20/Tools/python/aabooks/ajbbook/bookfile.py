@@ -62,7 +62,7 @@ class BookFile(entrylist.EntryList):
 
         short_title_list = ''
         for count, ent in enumerate(self):
-            short_title_list = short_title_list + str(count) + \
+            short_title_list = short_title_list + str(count+1) + \
                 ' ' + ent.short_title()
 
         return short_title_list
@@ -242,7 +242,7 @@ if __name__ == "__main__":
 
             self.assertEqual(self.bookfile.read_file("testfile.xml"), 400)
             shorttitle = self.bookfile.make_short_title_list()
-            self.assertEqual(len(shorttitle), 19740)
+            self.assertEqual(len(shorttitle), 19742)
 
         def test_d_read_file_text(self):
             '''Test the BookFile.read_file_text() method.'''
