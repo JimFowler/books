@@ -88,6 +88,11 @@ def __split_string__(string, value):
     tuples of (sub-string, value).
     '''
     substring_list = [(substring, value) for substring in __get_sub_strings__(string)]
+    if len(string) < 3:
+        # if the length is shorter than the substrings
+        # we also add the string itself.
+        substring_list.append((string, value))
+        
     return substring_list
 
 
@@ -173,6 +178,7 @@ if __name__ == '__main__':
                    ('Astronomical Journal of Soviet Union', 1),
                    ('Astronomische Nachrichten', 1)]),
         ('ApJ', [('ApJ', 1)]),
+        ('BZ', [('BZ', 1)]),
         ('apj', []),
         ('Optical', []),
         ]
