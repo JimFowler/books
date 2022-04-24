@@ -1,3 +1,11 @@
+2022-04-24  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/search.py (__get_sub_strings__): Add
+	test for strings less than min_length.  If so, add them to the
+	strset to be included in the search dictionary.  Abbreviations
+	like BA or AJ were not being found when searching the journal
+	list.
+
 2022-04-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/journalfile.py (JournalFile):
