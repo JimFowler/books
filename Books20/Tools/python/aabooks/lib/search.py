@@ -81,6 +81,12 @@ def __get_sub_strings__(string, min_length=3, max_length=10):
                 else:
                     # break out of the inner loop here.
                     break
+
+    if len(string) < min_length:
+        # if the length is shorter than the substrings
+        # we also add the string itself.
+        strset.add(string)
+
     return strset
 
 def __split_string__(string, value):
@@ -88,11 +94,6 @@ def __split_string__(string, value):
     tuples of (sub-string, value).
     '''
     substring_list = [(substring, value) for substring in __get_sub_strings__(string)]
-    if len(string) < 3:
-        # if the length is shorter than the substrings
-        # we also add the string itself.
-        substring_list.append((string, value))
-        
     return substring_list
 
 
