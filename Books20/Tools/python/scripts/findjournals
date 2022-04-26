@@ -97,6 +97,7 @@ def clean_review_string(review_str):
     tmp_str = tmp_str.replace('.', '')
     tmp_str = tmp_str.replace('(NR)', '')
     tmp_str = tmp_str.replace('(NS)', '')
+    tmp_str = tmp_str.replace('(NF)', '')
     tmp_str = tmp_str.replace(' NF', '')
     tmp_str = tmp_str.replace(' NS', '')
     tmp_str = tmp_str.replace(' Nr', '')

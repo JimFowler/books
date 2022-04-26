@@ -173,6 +173,7 @@ if __name__ == '__main__':
 
     SEARCH_TERMS = [
         ('Journal de', [('Journal des Observateurs', 1)]),
+        ("Annales d'", [("Annales d'Astrophysique", 1)]),
         ('Astro', [('Astronomische Abhandlungen', 1),
                    ('Astronomische Blätter', 1),
                    ('Astronomical Herald', 1),
