@@ -292,8 +292,7 @@ def entry_display_unknown(self, entry):
     for field in entry.keys():
         if self.known_entry_fields.count(field) == 0:
             QtWidgets.QMessageBox.warning(self, 'Unknown Entry Field',
-                                          'Unknown field "%s:  %s"\n in entry %s\n "' %
-                                          (field, str(entry[field]), entry['Index']),
+                f'Unknown field \"{field}:  {entry["field"]}\"\n in entry {entry["index"]}\n',
                                           QtWidgets.QMessageBox.Ok)
 
 

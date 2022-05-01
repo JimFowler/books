@@ -71,7 +71,7 @@ class AJBentry(dict):
 
     def __init__(self, _entry_str=None):
 
-        super(AJBentry, self).__init__()
+        super().__init__()
 
         self.blank_entry()
 
@@ -135,12 +135,12 @@ class AJBentry(dict):
         anum = self['Num']
         if anum:
             strnum = str(anum['volume'])
-            strnum = strnum + ' ' + '%02d'%anum['volNum']
-            strnum = strnum + '.' + '%02d'%anum['sectionNum']
+            strnum = strnum + ' ' + f'{anum["volNum"]:02}'
+            strnum = strnum + '.' + f'{anum["sectionNum"]:02}'
             if anum['subsectionNum'] > -1:
-                strnum = strnum + '(' + str(anum['subsectionNum']) + ')'
-            strnum = strnum + '.' + '%02d'%anum['entryNum']
-            strnum = strnum + '%s'%anum['entrySuf']
+                strnum = strnum + f'({anum["subsectionNum"]})'
+            strnum = strnum + '.' + f'{anum["entryNum"]:02}'
+            strnum = strnum + str(anum['entrySuf'])
             return strnum
 
         return None

@@ -297,13 +297,13 @@ def make_ajbnum_xml(ajbnum):
         if ajbnum['pageNum'] != -1:
             elm = etree.SubElement(index_xml, 'PageNumber')
             elm.text = str(ajbnum['pageNum'])
-    except:
+    except ValueError:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         traceback.print_exception(exc_type, exc_value, exc_traceback,
                                   limit=2, file=sys.stdout)
         print('ERROR entryxml::make_ajbnum_xml: failed')
         return etree.Element('Index')
-    
+
     return index_xml
 
 
@@ -547,22 +547,22 @@ def ajbstr_from_xml(element):
     subsectionnum = ''
     entrynum = ''
     entrysuf = ''
-    
+
     try:
         for child in element:
             if child.tag == 'IndexName':
                 aname = child.text
             elif child.tag == 'VolumeNumber':
-                volnum = '%02d'%int(child.text)
+                volnum = f'{int(child.text):02}'
             elif child.tag == 'SectionNumber':
-                sectionnum = '%02d'%int(child.text)
+                sectionnum = f'{int(child.text):02}'
             elif child.tag == 'SubSectionNumber':
-                subsectionnum = '(%02d)'%int(child.text)
+                subsectionnum = f'({int(child.text):02})'
             elif child.tag == 'EntryNumber':
                 mreg = __reg2__.match(child.text)
-                entrynum = '%02d'%int(mreg.group(1))
+                entrynum = f'{int(mreg.group(1)):02}'
                 entrysuf = mreg.group(2)
-    except:
+    except ValueError:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         traceback.print_exception(exc_type, exc_value, exc_traceback,
                                   limit=2, file=sys.stdout)
@@ -603,10 +603,8 @@ if __name__ == '__main__':
 
     import unittest
 
-    from pprint import pprint
-    
-    import aabooks.ajbbook.ajbentry as ajbentry
-    import aabooks.ajbbook.testentryxml as testentry
+    from aabooks.ajbbook import ajbentry
+    from aabooks.ajbbook import testentryxml as testentry
 
     class EntryTestCase(unittest.TestCase):
         '''Set up the unit tests'''

@@ -14,4 +14,5 @@
 ##
 ##
 ## End copyright
+'''Import the version string.'''
 from .version import __version__

@@ -47,7 +47,7 @@ class BookFile(entrylist.EntryList):
 
     # pylint: disable=too-many-instance-attributes,too-many-public-methods
     def __init__(self):
-        super(BookFile, self).__init__()
+        super().__init__()
 
         # general meta based defined in entrylist
         self.set_header(__DEFAULTHEADER__)
@@ -106,22 +106,24 @@ class BookFile(entrylist.EntryList):
 
         Returns True if the file could be written or False otherwise."""
 
-        file_fd = open(self.filename, 'w', encoding='UTF8')
+        with open(self.filename, 'w', encoding='UTF8') as file_fd:
 
-        if file_fd.newlines:
-            newline = file_fd.newlines + file_fd.newline
-        else:
-            newline = '\n\n'
+            if file_fd.newlines:
+                newline = file_fd.newlines + file_fd.newline
+            else:
+                newline = '\n\n'
 
-        file_fd.write(self.get_header())
-        for count, ent in enumerate(self):
-            file_fd.write(str(count) + ' ' + ent.write_text_from_entry() \
-                          + newline)
+            file_fd.write(self.get_header())
+            for count, ent in enumerate(self):
+                file_fd.write(str(count) + ' ' + ent.write_text_from_entry() \
+                              + newline)
 
-        file_fd.close()
-        self._dirty = False
+            file_fd.close()
+            self._dirty = False
 
-        return True
+            return True
+
+        return False
 
     #
     # XML read/write
@@ -175,6 +177,8 @@ class BookFile(entrylist.EntryList):
 
         Returns True if the file could be written or False otherwise."""
 
+
+        #pylint: disable = consider-using-with
         try:
             if filename is not None:
                 file_fd = open(filename, 'w', encoding='UTF8')
@@ -187,14 +191,14 @@ class BookFile(entrylist.EntryList):
             traceback.print_exception(exc_type, exc_value, exc_traceback,
                                       limit=2, file=sys.stdout)
             return False
+        #pylint: enable = consider-using-with
 
-        # We do something clever here when we know how.
         elbf = etree.Element('BookFile')
         hdr = etree.SubElement(elbf, 'Header')
         hdr.text = self.get_header()
 
         ets = etree.SubElement(elbf, 'Entries')
-        for count, entry in enumerate(self):
+        for entry in self:
             # entry is of Class AJBentry
             ets.append(entry.write_xml_from_entry())
 

@@ -31,14 +31,13 @@ def create_action(self, text, slot=None, shortcut=None, icon=None,
     """
     action = QtWidgets.QAction(text, self)
     if icon is not None:
-        action.setIcon(QtGui.QIcon(":/{0}.png".format(icon)))
+        action.setIcon(QtGui.QIcon(f':/{icon}.png'))
     if shortcut is not None:
         action.setShortcut(shortcut)
     if tip is not None:
         action.setToolTip(tip)
         action.setStatusTip(tip)
     if slot is not None:
-        #self.connect(action, SIGNAL(signal), slot)
         eval('action.' + signal + '.connect(' + slot + ')')
     else:
         action.enabled = False
@@ -135,7 +134,7 @@ def create_edit_menu(self, menu_bar):
     header_action = create_action(self, 'Edit &Header...',
                                   slot='self.edit_header',
                                   shortcut='Ctrl+H')
-    
+
     origstr_action = create_action(self, 'Show Original String',
                                    slot='self.show_orig_str')
 

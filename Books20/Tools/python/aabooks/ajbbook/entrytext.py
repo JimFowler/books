@@ -263,8 +263,8 @@ def entry_text_additional_publishers(entry):
             if not first:
                 entrystr += ' and '
             first = False
-            entrystr += '%s: %s' % (publ['Place'].replace(', ', ' comma '),
-                                    publ['PublisherName'].replace(', ', ' comma '))
+            entrystr += f"{publ['Place'].replace(', ', ' comma ')}:"
+            entrystr += f" {publ['PublisherName'].replace(', ', ' comma ')}"
         entrystr += ';'
 
     return entrystr
@@ -273,10 +273,9 @@ def entry_text_language(entry):
     '''Convert the entry Language to entrystr language'''
 
     entrystr = ' '
+
     if entry.not_empty('Language'):
-        entrystr += 'in '
-        entrystr += entry['Language']
-        entrystr += ';'
+        entrystr += f'in {entry["Language"]};'
 
     return entrystr
 
@@ -287,8 +286,7 @@ def entry_text_others(entry):
     # others (the comments)
     if entry.not_empty('Others'):
         for other in entry['Others']:
-            entrystr += 'other %s' % str(other).replace(', ', ' comma ')
-            entrystr += '; '
+            entrystr += f"other {other.replace(', ', ' comma ')}; "
 
     return entrystr
 
@@ -297,9 +295,7 @@ def entry_text_reference(entry):
 
     entrystr = ''
     if entry.not_empty('Reference'):
-        entrystr += 'reference '
-        entrystr += entry['Reference']
-        entrystr += ';'
+        entrystr += f'reference {entry["Reference"]};'
 
     return entrystr
 
@@ -324,7 +320,7 @@ def entry_from_text(entry, line):
             fieldnum += 1
             field = field.replace(' comma ', ', ')
             field = field.strip()
-            exec('text_entry_field%d(entry, field)'%fieldnum)
+            exec(f'text_entry_field{fieldnum}(entry, field)')
 
 def text_entry_field0(entry, field):
     '''AJBnum and Authors'''
@@ -500,7 +496,7 @@ def _parse_comments(entry, field):
                 entry['Others'].append(name)
 
             else:
-                print('Unknown grammer name %s' % grammar_name)
+                print(f'Unknown grammer name {grammar_name}')
 
 
 

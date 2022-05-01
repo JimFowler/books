@@ -31,13 +31,14 @@ class OrigStrWindow(QtWidgets.QDialog, ui_OrigStr.Ui_origstrDialog):
     """
 
     def __init__(self, textstr=None):
-        super(OrigStrWindow, self).__init__()
+        super().__init__()
 
         self.setupUi(self)
 
         self.set_origstr_text(textstr)
-
+        #pylint: disable = no-value-for-parameter
         self.closeButton.released.connect(self.close)
+        #pylint: enable = no-value-for-parameter
 
     def set_filename(self, num):
         """Set the title of the window with the filename that the entry came
@@ -45,7 +46,7 @@ class OrigStrWindow(QtWidgets.QDialog, ui_OrigStr.Ui_origstrDialog):
 
         """
 
-        self.setWindowTitle('Original String - Entry %s'%str(num))
+        self.setWindowTitle(f'Original String - Entry {num}')
 
     def set_origstr_text(self, textstr):
         """Set the string to be displayed in the window."""

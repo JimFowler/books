@@ -57,21 +57,18 @@ r2 = re.compile(r'(\d+)([a-c]{0,1})', re.UNICODE)
 # pylint: disable too-many-locals
 
 def help_string():
-    """comment"""
-    help_str = """<b>AJB Book Entry</b> v {0}
+    """This string is displayed when the menu item
+    Help->About Bookfile is selected."""
+
+    help_str = f"""<b>AJB Book Entry</b> v {ajbver.__version__}
   <p>Author: J. R. Fowler
   <p>Copyright &copy; 2012-2020
   <p>All rights reserved.
   <p>This application is used to create and visualize
   the text files with the books found in the annual
   bibliographies of <b>Astronomischer Jahresbericht</b>.
-  <p>aabooks/lib v {1}
-  <p>Python {2} - Qt {3} - PyQt {4} on {5}""".format(ajbver.__version__,
-                                                     libver.__version__,
-                                                     platform.python_version(),
-                                                     QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
-                                                     platform.system())
-
+  <p>aabooks/lib v {libver.__version__}
+  <p>Python {platform.python_version()} - Qt {QtCore.QT_VERSION_STR} - PyQt {QtCore.PYQT_VERSION_STR} on {platform.system()}"""
     return help_str
 
 class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
@@ -80,7 +77,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     """
 
     def __init__(self):
-        super(BookEntry, self).__init__()
+        super().__init__()
         self.setupUi(self)
 
         self.tmp_entry = ajbentry.AJBentry()
@@ -99,6 +96,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.symbol_table_name = __DEFAULT_SYMBOL_TABLE_NAME__
         self.symbol_window = None
         self.header_window = None
+        self.origstr_window = None
 
         # Fields within an Entry that we know about already
         self.known_entry_fields = ['Index', 'Num', 'Authors', 'Editors', 'Title',
@@ -122,7 +120,11 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.set_line_entry_list = ['fromlangEntry', 'tolangEntry', 'priceEntry']
 
         menus.create_menus(self, self.menubar)
+        self.connect_all_slots()
 
+    def connect_all_slots(self):
+        '''Connect all the slots and signals to each other.'''
+        #pylint: disable = no-value-for-parameter
         self.quitButton.released.connect(self.quit)
         self.newEntryButton.released.connect(self.new_entry)
         self.acceptButton.released.connect(self.save_entry)
@@ -160,14 +162,14 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.contribEntry.textChanged.connect(self.set_entry_dirty)
         self.commentsEntry.textChanged.connect(self.set_entry_dirty)
         self.keywordEntry.textChanged.connect(self.set_entry_dirty)
+        #pylint: enable = no-value-for-parameter
 
         self.open_new_file()
 
     def set_max_entry_number(self, count):
         """comment"""
-        if count < 0:
-            count = 0
-        self.max_entry_number = count
+
+        self.max_entry_number = max(count, 0)
 
         if self.max_entry_number == 0:
             self.prevButton.setEnabled(False)
@@ -176,7 +178,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             self.prevButton.setEnabled(True)
             self.nextButton.setEnabled(True)
 
-        self.ofnumLabel.setText('of %d' % self.max_entry_number)
+        self.ofnumLabel.setText(f'of {self.max_entry_number}')
 
     #
     # Menu and button slots
@@ -206,7 +208,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.bookfile = bf.BookFile()
         self.set_max_entry_number(0)
         self.new_entry()
-        
+
     def ask_open_file(self):
         """Open an existing file saving the old one if it is dirty."""
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
@@ -217,7 +219,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         # else get a file name
         fname, filter_a = QtWidgets.QFileDialog.getOpenFileName(self,
-                                                                "%s -- Choose new file" % QtWidgets.QApplication.applicationName(),
+                                                                f"{QtWidgets.QApplication.applicationName()} -- Choose new file",
                                                                 os.path.dirname(self.bookfile.filename),
                                                                 "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
         if fname:
@@ -239,12 +241,12 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         if self.max_entry_number:
             self.statusbar.clearMessage()
             self.statusbar.showMessage(
-                '%d records found' % self.max_entry_number, 6000)
+                f'{self.max_entry_number} records found', 6000)
             self.show_entry(1)
             self.insertButton.setEnabled(True)
             self.clear_entry_dirty()
         else:
-            self.statusbar.showMessage('No records found in file %s' % name)
+            self.statusbar.showMessage(f'No records found in file {name}')
             self.new_entry()
         self.set_window_title(os.path.basename(self.bookfile.filename))
 
@@ -266,7 +268,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
     def save_file_as(self):
         """Ignore dirty entries and save the file as..."""
         fname, filter_a = QtWidgets.QFileDialog.getSaveFileName(self,
-                                                                "%s -- Choose file" % QtWidgets.QApplication.applicationName(),
+                                                                f'{QtWidgets.QApplication.applicationName()} -- Choose file',
                                                                 os.path.dirname(self.bookfile.filename),
                                                                 "All Files (*.*);;Text Files (*.txt);;XML Files (*.xml)")
 
@@ -361,7 +363,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                     line.split(':')
                 except ValueError:
                     valid = False
-                    error_string += 'No colon in publisher line: {}.\n'.format(line)
+                    error_string += f'No colon in publisher line: {line}.\n'
 
         return (valid, error_string)
 
@@ -371,13 +373,12 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         #
         # Save the back up file here
         #
-        valid, error_str = self.display_entry_is_valid()
-        if not valid:
-            QtWidgets.QMessageBox.information(self, "Entry Invalid", error_str + \
-                                              '\nEntry invalid!  Not saved in bookfile!')
+        self.tmp_entry = self.display_to_entry()
+        if not self.tmp_entry.is_valid():
+            QtWidgets.QMessageBox.information(self, 'Entry Invalid',
+                                              'Check AJBnum or Title\nEntry invalid!  Not saved in bookfile!')
             return
 
-        self.tmp_entry = self.display_to_entry()
 
         if self.current_entry_number > self.max_entry_number:
             ret = self.bookfile.set_new_entry(self.tmp_entry, self.current_entry_number - 1)
@@ -437,8 +438,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         try:
             num = int(words[0])
         except ValueError:
-            QtWidgets.QMessageBox.warning(self, "Insert Invalid",
-                                          "Unable to insert before {0}".format(words[0]))
+            QtWidgets.QMessageBox.warning(self, 'Insert Invalid',
+                                          f'Unable to insert before {words[0]}')
             return
 
         if not num or num < 1 or num > self.max_entry_number:
@@ -489,7 +490,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
 
         # Display record count
         self.indexEntry.setText(str(self.current_entry_number))
- 
+
         self.entry_to_display(self.tmp_entry)
         self.deleteButton.setEnabled(True)
         self.clear_entry_dirty()
@@ -538,8 +539,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         printer.setFullPage(True)
         printer.setPaperSize(QtPrintSupport.QPrinter.Letter)
 
-        self.prt = QtPrintSupport.QPrintDialog(printer, self)
-        if self.prt.exec_():
+        prt = QtPrintSupport.QPrintDialog(printer, self)
+        if prt.exec_():
             painter = QtGui.QPainter(printer)
             self.render(painter)
             del painter
@@ -565,7 +566,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         self.header_window = hw.HeaderWindow(parent=self)
         self.header_window.set_bookfile(self.bookfile)
         self.header_window.setWindowTitle(QtWidgets.QApplication.translate("headerWindow",
-                                                                           "Edit Headers - %s" % (os.path.basename(self.bookfile.filename)), None))
+                                         f'Edit Headers - {os.path.basename(self.bookfile.filename)}', None))
         self.header_window.set_header_text(self.bookfile.get_header())
         self.header_window.show()
 
@@ -604,7 +605,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
             enum = int(self.indexEntry.text())
         except ValueError:
             QtWidgets.QMessageBox.warning(self, 'Index Changed',
-                                          'Invalid index entry {0}'.format(self.indexEntry.text()),
+                            f'Invalid index entry {self.indexEntry.text()}',
                                           QtWidgets.QMessageBox.Ok)
             return
 
@@ -651,9 +652,8 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         """Creates the string 'AJB Book Entry vx.x - name' and
         places it into the window title.
         """
-        self.setWindowTitle(QtWidgets.QApplication.translate("MainWindow",
-                                                             "AJB Book Entry  v %s   -   %s" % (
-                                                                 __version__, name),
+        self.setWindowTitle(QtWidgets.QApplication.translate('MainWindow',
+                            f'AJB Book Entry  v {__version__}   -   {name}',
                                                              None))
 
     def set_default_volume_number(self, num):
@@ -684,7 +684,7 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
                                                            text=current_val)
         if is_ok:
             self.default_volume_name = volume_name
-            
+
     def insert_char(self, obj):
         """Insert the charactor in obj[0] with self.insert_function
         if insert_function is not None."""
@@ -744,7 +744,9 @@ if __name__ == '__main__':
     APP = QtWidgets.QApplication(sys.argv)
     APP.setApplicationName('Book Entry')
     FORM = BookEntry()
+    #pylint: disable = no-value-for-parameter
     APP.focusChanged.connect(FORM.set_focus_changed)
+    #pylint: enable = no-value-for-parameter
 
     FORM.show()
     sys.exit(APP.exec_())
