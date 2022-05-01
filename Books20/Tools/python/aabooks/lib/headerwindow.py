@@ -31,21 +31,23 @@ from aabooks.lib import ui_HeaderEntry
 class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
     '''A window to edit the header text with.'''
     def __init__(self, bf=None, parent=None):
-        super(HeaderWindow, self).__init__(parent)
+        super().__init__(parent)
 
         self.setupUi(self)
         self.set_bookfile(bf)
         self.dirty = False
 
+        # pylint: disable = no-value-for-parameter
         self.headerEntry.textChanged.connect(self.set_dirty)
         self.closeButton.released.connect(self.ask_and_close)
         self.saveButton.released.connect(self.save_header_text)
         self.cancelButton.released.connect(self.revert_header)
+        # pylint: enable = no-value-for-parameter
 
 
     def set_filename(self, file):
         '''Set the window title with the file name being edited'''
-        self.setWindowTitle('Edit Header - %s'%file)
+        self.setWindowTitle(f'Edit Header - {file}')
 
     def set_bookfile(self, bookf):
         '''Set the bookfile that we want to edit the header of.'''

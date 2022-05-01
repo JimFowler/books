@@ -14,4 +14,5 @@
 ##
 ##
 ## End copyright
+'''The initialization file for aabooks/lib'''
 from aabooks.lib.version import __version__

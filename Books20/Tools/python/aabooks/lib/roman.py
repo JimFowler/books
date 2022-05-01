@@ -177,7 +177,7 @@ def from_roman(roman_str):
         return 0
 
     if not roman_numeral_pattern.search(roman_str):
-        raise InvalidRomanNumeralError('Invalid Roman numeral: %s' % roman_str)
+        raise InvalidRomanNumeralError(f'Invalid Roman numeral: {roman_str}')
 
     result = 0
     index = 0
@@ -211,19 +211,19 @@ if __name__ == '__main__':
             '''Test valid strings in is_roman().'''
             for _, num_roman in TEST_MAP:
                 self.assertTrue(is_roman(num_roman),
-                                '"%s" should be a valid Roman' % (num_roman))
+                                f'"{num_roman}" should be a valid Roman')
 
         def test_is_roman_errors(self):
             '''Test invalid strings in is_roman().'''
             for bad_string in NOT_ROMAN:
                 self.assertFalse(is_roman(bad_string),
-                                 '"%s" should not be Roman' % (bad_string))
+                                 f'"{bad_string}" should not be Roman')
 
         def test_to_roman(self):
             '''Test valid numbers in to_roman().'''
             for num_arabic, num_roman in TEST_MAP:
                 self.assertEqual(to_roman(num_arabic), num_roman,
-                                 '%s should be %s' % (num_arabic, num_roman))
+                                 f'{num_arabic} should be {num_roman}')
 
         def test_to_roman_errors(self):
             '''Test invalid numbers in to_roman().'''
@@ -234,7 +234,7 @@ if __name__ == '__main__':
             '''Test valid Roman numerals from_roman().'''
             for num_arabic, num_roman in TEST_MAP:
                 self.assertEqual(from_roman(num_roman), num_arabic,
-                                 '%s should be %s' % (num_roman, num_arabic))
+                                 f'{num_roman} should be {num_arabic}')
 
         def test_from_roman_errors(self):
             '''Test invalid strings in from_roman().'''

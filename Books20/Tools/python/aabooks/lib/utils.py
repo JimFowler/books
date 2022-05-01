@@ -91,8 +91,12 @@ def parse_ajbnum(line):
     """Get the Volume, Section, any possible subSection, and the
     section entry number.  The subSection defaults to zero
     if no subSection value exists. Returns a dictionary with the
-    AJB number elements {'volume': 'AJB', 'volNum': int, 'sectionNum': int,
-    'subsectionNum': int, 'entryNum': int, 'entrySuf': ''}.
+    AJB number elements {'volume': 'AJB',
+                         'volNum': int,
+                         'sectionNum': int,
+                         'subsectionNum': int,
+                         'entryNum': int,
+                         'entrySuf': ''}.
     """
     #
     # This regular expression is used to parse the AJB number
@@ -105,11 +109,18 @@ def parse_ajbnum(line):
     # item 4 and 5 will be empty strings and the subsection number defaults
     # to zero.
     #
+    # Should load definition of ajbnum dictionary so it is only
+    # defined in one place.
+    #
+    # Should throw an error if we can parse_ajbnum()
+    # (should define error!!)
+    #
 
     nums = __reg3__.split(line.strip())
 
     if len(nums) != 9:
-        print('Bad AJB number {}\n'.format(line))
+        # should throw at least a warning here.
+        print(f'Bad AJB number {line}\n')
         return {}
 
     if not nums[0]: # volume
@@ -121,7 +132,7 @@ def parse_ajbnum(line):
     if not nums[7]: # entrySuf
         nums[7] = ''
 
-    return {'volume': nums[0],
+    return {'volume': nums[0].strip(),
             'volNum': int(nums[2]),
             'pageNum': -1,
             'sectionNum': int(nums[3]),
@@ -141,24 +152,79 @@ if __name__ == '__main__':
 
         def setUp(self):
             '''Set things up for every test.'''
-
+            self.glines = ['AJB 12.34(1).56a J. Russell',
+                           ' 12.34(1).56a J. Russell',
+                           '12.34.56a J. Russell',
+                           ' 12.34(1).56 J. Russell',
+                          ]
+            self.blines = ['AJB 12.34(1).a J. Russell',
+                           ' 12.-1.56a J. Russell',
+                           'aa.34.56a J. Russell',
+                          ]
+            self.ajbnum = {'volume': 'AJB',
+                           'volNum': 12,
+                           'pageNum': -1,
+                           'sectionNum': 34,
+                           'subsectionNum': 1,
+                           'entryNum': 56,
+                           'entrySuf': 'a',
+                           }
         def tearDown(self):
             '''Clean up the mess after every test.'''
+            del self.glines
+            del self.blines
+
+            del self.ajbnum
 
         def test_a_make_name_func(self):
             '''Test make_name_list().'''
-
             name_str = '''A. B. Author and C. D. Next sj and D. E. Brother'''
             test_name_list = make_name_list(name_str)
             test_name_str = make_name_str(test_name_list)
             self.assertEqual(test_name_str, name_str)
 
-        def test_b_parse_ajbnum(self):
+        def test_b0_good_parse_ajbnum(self):
             '''test the parse_ajb() function.'''
+            self.assertEqual(self.ajbnum, parse_ajbnum(self.glines[0]))
 
-            # test a good value
-            # testa bad value
-            # test AAA value?
+        def test_b1_good_parse_ajbnum(self):
+            '''Test without volume name. Should default to 'AJB'.'''
+            self.assertEqual(self.ajbnum, parse_ajbnum(self.glines[1]))
+
+        def test_b2_good_parse_ajbnum(self):
+            '''Test without optional sub-section number. Should
+            default to 0.'''
+            self.ajbnum['subsectionNum'] = 0
+            self.assertEqual(self.ajbnum, parse_ajbnum(self.glines[2]))
+
+        def test_b3_good_parse_ajbnum(self):
+            '''Test without option entry suffix. Should default to the empty
+            string.
+
+            '''
+            self.ajbnum['entrySuf'] = ''
+            self.assertEqual(self.ajbnum, parse_ajbnum(self.glines[3]))
+
+        def test_c0_bad_parse_ajbnum(self):
+            '''Test a missing entry number. Should get back and empty
+            dictionary.
+
+            '''
+            self.assertEqual({}, parse_ajbnum(self.blines[0]))
+
+        def test_c1_bad_parse_ajbnum(self):
+            '''Test a missing or incorrect section number. Should get back and
+            empty dictionary.
+
+            '''
+            self.assertEqual({}, parse_ajbnum(self.blines[1]))
+
+        def test_c2_bad_parse_ajbnum(self):
+            '''Test a missing section number. Should get back and empty
+            dictionary.
+
+            '''
+            self.assertEqual({}, parse_ajbnum(self.blines[2]))
 
 
     unittest.main()

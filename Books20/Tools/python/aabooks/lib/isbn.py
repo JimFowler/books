@@ -97,7 +97,7 @@ def checksum(isbnlike):
         chksum = checksum_13(isbndigits)
     else:
         return None
-                  
+
     return chksum
 
 
@@ -106,6 +106,7 @@ def checksum(isbnlike):
 #
 if __name__ == '__main__':
 
+    import sys
     import unittest
     import argparse
 
@@ -122,14 +123,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.isbn:
-        chksum = checksum(args.isbn)
-        if chksum is None:
+        cksum = checksum(args.isbn)
+        if cksum is None:
             print('This ISBN value', args.isbn, 'does not seem to be a proper value')
         else:
-            print('The proper ISBN checksum is %s' % (chksum))
-        exit()
-        
-    # missing a checksum of 8 still
+            print('The proper ISBN checksum is', cksum)
+        sys.exit()
+
+    # still missing a checksum of 8
     isbn10_list = [
         ('0-8357-0331', '2'), ('0-08-024620', '6'), ('3-540-09830', '5'),
         ('0-387-09830', '5'), ('3-540-09831', '3'), ('0-387-09831', '3'),
@@ -172,14 +173,14 @@ if __name__ == '__main__':
         def test_a_checksum_10(self):
             '''Test checksum_10() function.'''
 
-            for isbntest, chksum in isbn10_list:
-                self.assertEqual(checksum_10(isbntest + '0'), chksum)
+            for isbntest, csum in isbn10_list:
+                self.assertEqual(checksum_10(isbntest + '0'), csum)
 
         def test_b_checksum_13(self):
             '''Test checksum_13() function.'''
 
-            for isbntest, chksum in isbn10_list:
-                self.assertEqual(checksum_10(isbntest + '0'), chksum)
+            for isbntest, csum in isbn10_list:
+                self.assertEqual(checksum_10(isbntest + '0'), csum)
 
-        
+
     unittest.main()

@@ -34,7 +34,7 @@ def make_buttons(file_name, parent):
     '''Make all the buttons for the parent window from the
     symbol file in file_name.
     '''
-    button_dict = dict()
+    button_dict = {}
 
     row = 0
     col = 0
@@ -42,9 +42,9 @@ def make_buttons(file_name, parent):
     index = 0
 
     try:
-        # would like to use resource here ':/Resources/symbols.txt'
-        #file = open( './aabooks/Resources/symbols.txt', 'r' )
-        symfile = open(file_name, 'r')
+        #pylint: disable = consider-using-with
+        symfile = open(file_name, 'r', encoding='UTF8')
+        #pylint: enable = consider-using-with
     except IOError as ex:
         print(ex)
         return (row, col_max, button_dict)
@@ -65,7 +65,7 @@ def make_buttons(file_name, parent):
         try:
             char, tip = line.split(',')
         except ValueError as ex:
-            print('Symbol Table ValueError: "%s"' % line)
+            print(f'Symbol Table ValueError: "{line}"')
             print(ex)
             continue
 
@@ -76,12 +76,13 @@ def make_buttons(file_name, parent):
         button.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         button.setText(char)
         button.setToolTip(tip)
-        button.setObjectName('%03d%03dButton'%(row, col))
+        button.setObjectName(f'{row:03}{col:03}Button')
 
         parent.grid_layout.addWidget(button, row, col, 1, 1)
         parent.button_group.addButton(button, index)
-
+        #pylint: disable = no-value-for-parameter
         button.sigClicked.connect(parent.slot_clicked)
+        #pylint: enable = no-value-for-parameter
 
         button_dict[row, col] = button
 
@@ -102,8 +103,10 @@ class MyButton(QtWidgets.QToolButton):
     sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
     def __init__(self):
-        super(MyButton, self).__init__()
+        super().__init__()
+        #pylint: disable = no-value-for-parameter
         self.clicked.connect(self.slot_clicked)
+        #pylint: enable = no-value-for-parameter
 
     def slot_clicked(self):
         '''Emit the text if we are clicked.'''
@@ -116,7 +119,7 @@ class SymbolForm(QtWidgets.QDialog):
     sigClicked = QtCore.pyqtSignal(object, name='sigClicked')
 
     def __init__(self, file_name, font_family, font_size, parent=None):
-        super(SymbolForm, self).__init__(parent)
+        super().__init__(parent)
         self.setObjectName('symbolForm')
 
         self.setWindowTitle('Insert Symbol...')

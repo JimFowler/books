@@ -378,7 +378,9 @@ It contains three lines.'''
             # test set_entry with replacement of entry just inside valid counts 2233
             self.assertTrue(self.ev_list.set_entry(self.entry2, 0))
             self.assertEqual(self.ev_list.get_entry(0), self.entry2)
-            self.assertTrue(self.ev_list.set_entry(self.entry1, self.ev_list.max_entries()-1)) # 2221
+            self.assertTrue(self.ev_list.set_entry(self.entry1,
+                                    self.ev_list.max_entries()-1)) # 2221
+
             self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()-1), self.entry1)
 
             # test set_entry with invalid entry

@@ -215,7 +215,7 @@ def xml_to_pagination_string(elem):
         else:
             first = False
 
-        pagination_string += '{count}{tag}'.format(count=count, tag=tag)
+        pagination_string += f'{count}{tag}'
 
     return pagination_string
 
@@ -241,7 +241,7 @@ if __name__ == '__main__':
     BAD_STR = '12pz+203p+14i+23f+522P+10c'
     BAD_STR2 = '12 pp+203p+14i+23f+522P+10c'
     BAD_STR3 = '12pp+203p+14i+23f+522z+10c' # parse a bad character
-    
+
     class PaginationTestCase(unittest.TestCase):
         '''The test suite for pagination_xml.py.'''
 

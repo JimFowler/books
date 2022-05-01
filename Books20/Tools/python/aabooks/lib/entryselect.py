@@ -32,7 +32,7 @@ class EntrySelect(QtWidgets.QDialog, EntrySelect_ui.Ui_ShortTitleDisplay):
     lineEmit = QtCore.pyqtSignal(object, name='lineEmit')
 
     def __init__(self, entry_list=None):
-        super(EntrySelect, self).__init__()
+        super().__init__()
 
         self.setupUi(self)
 
@@ -45,9 +45,11 @@ class EntrySelect(QtWidgets.QDialog, EntrySelect_ui.Ui_ShortTitleDisplay):
         if entry_list is not None:
             self.set_text(entry_list)
 
+        # pylint: disable = no-value-for-parameter
         self.okButton.released.connect(self.return_entry)
         self.cancelButton.released.connect(self.return_none)
         self.textWindow.cursorPositionChanged.connect(self.highlight)
+        # pylint: enable = no-value-for-parameter
         self.textWindow.mouseDoubleClickEvent = self.mouse_double_click
 
     def mouse_double_click(self, mouse_event):

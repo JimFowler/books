@@ -108,7 +108,7 @@ class SearchDict(dict):
     def __init__(self):
         '''When a new SeachDict object is created clear() the
         underlying dictionary.'''
-        super(SearchDict, self).__init__()
+        super().__init__()
         self.clear()
 
     #
