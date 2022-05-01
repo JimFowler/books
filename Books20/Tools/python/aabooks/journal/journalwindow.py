@@ -33,10 +33,10 @@ To keep pylint happy,
 '''
 import os
 import platform
-from fast_autocomplete import AutoComplete
-
 # Trouble shooting assistance
 from pprint import pprint
+
+from fast_autocomplete import AutoComplete
 
 from PyQt5 import QtCore, QtGui, QtWidgets, QtPrintSupport
 
@@ -65,26 +65,24 @@ __version__ = '1.0.0'
 
 def help_string():
     '''Create help string.'''
-    helpstring = '''<b>Journals</b> v {0}
+
+    helpstring = f'''<b>Journals</b> v {jourver.__version__}
     <p>Author: J. R. Fowler
     <p>Copyright &copy; 2016 -- 2020
     <p>All rights reserved.
     <p>This application is used to create and visualize
     the XML files with the Journals found in the annual
     bibliographies of <b>Astronomischer Jahresbericht</b>.
-    <p>aabook/lib v {1}
-    <p>Python {2} - Qt {3} - PyQt {4} on {5}'''.format(
-        jourver.__version__,
-        libver.__version__,
-        platform.python_version(),
-        QtCore.QT_VERSION_STR, QtCore.PYQT_VERSION_STR,
-        platform.system())
+    <p>aabook/lib v {libver.__version__}
+    <p>Python {platform.python_version()} - Qt {QtCore.QT_VERSION_STR} -
+     PyQt {QtCore.PYQT_VERSION_STR} on {platform.system()}'''
+
     return helpstring
 
 class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
     '''The main window for the journal program.'''
     def __init__(self, parent=None):
-        super(JournalWindow, self).__init__(parent=parent)
+        super().__init__(parent=parent)
         self.setupUi(self)
 
         #
@@ -129,16 +127,17 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         menus.create_menus(self, self.menubar)
 
+        self.saveButton.setEnabled(False)
+        self.deleteButton.setEnabled(False)
+        self.newButton.setEnabled(True)
+
+        #pylint: disable = no-value-for-parameter
         self.searchButton.released.connect(self._search_entry)
-        self.newButton.released.connect(self._new_entry)
+        self.newButton.released.connect(self.new_entry)
         self.saveButton.released.connect(self._save_entry)
         self.insertButton.released.connect(self._ask_insert_entry)
         self.deleteButton.released.connect(self._delete_entry)
         self.quitButton.released.connect(self._quit)
-
-        self.saveButton.setEnabled(False)
-        self.deleteButton.setEnabled(False)
-        self.newButton.setEnabled(True)
 
         self.indexEntry.returnPressed.connect(self.index_changed)
 
@@ -150,7 +149,8 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self.LinkPreviousEdit.textChanged.connect(self._set_entry_dirty)
         self.LinkNextEdit.textChanged.connect(self._set_entry_dirty)
         self.designatorEdit.textChanged.connect(self._set_entry_dirty)
-        self.CommentsEdit.textChanged.connect(self ._set_entry_dirty)
+        self.CommentsEdit.textChanged.connect(self._set_entry_dirty)
+        #pylint: enable = no-value-for-parameter
 
 
     def display_is_valid(self):
@@ -166,9 +166,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def set_max_entry_count(self, count):
         '''Comment'''
-        if count < 0:
-            count = 0
-        self.max_entry_count = count
+        self.max_entry_count = max(count, 0)
 
         if self.max_entry_count == 0:
             self.prevButton.setEnabled(False)
@@ -177,7 +175,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             self.prevButton.setEnabled(True)
             self.nextButton.setEnabled(True)
 
-            self.ofnumLabel.setText('of %d'%self.max_entry_count)
+            self.ofnumLabel.setText(f'of {self.max_entry_count}')
 
     #
     # Menu and button slots
@@ -204,7 +202,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         words = {}
         synonyms = {}
         del self._vardict['sdict']
-        
+
         for count, entry in enumerate(self._vardict['journal_file']):
 
             title = entry['Title']
@@ -249,7 +247,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
         self._vardict['journal_file'] = journalfile.JournalFile()
         self.set_max_entry_count(0)
-        self._new_entry()
+        self.new_entry()
 
     def open_file(self, name=None):
         '''Open an existing file, get the count of entries, and display
@@ -259,14 +257,14 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self.set_max_entry_count(self._vardict['journal_file'].read_file(name))
         if self.max_entry_count:
             self.statusbar.clearMessage()
-            self.statusbar.showMessage('%d records found'%self.max_entry_count, 6000)
+            self.statusbar.showMessage(f'{self.max_entry_count} records found', 6000)
             self._build_search_dictionary()
             self._clear_search_flag()
             self.show_entry(1)
             self._clear_entry_dirty()
         else:
-            self.statusbar.showMessage('No records found in file %s' % name)
-            self._new_entry()
+            self.statusbar.showMessage(f'No records found in file {name}')
+            self.new_entry()
         self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
 
 
@@ -284,14 +282,14 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
 
     def _save_file_as(self):
         '''Ignore dirty entries and save the file as...'''
-        fname, filtera = QtWidgets.QFileDialog.getSaveFileName(self,\
-                '%s -- Choose file'%QtWidgets.QApplication.applicationName(),\
+        fname, dummy = QtWidgets.QFileDialog.getSaveFileName(self,\
+                f'{QtWidgets.QApplication.applicationName()} -- Choose file',\
                 '.', '*.xml')
 
         if fname:
             name = os.path.splitext(fname)
             if name[1] == '':
-                    fname += '.xml'
+                fname += '.xml'
 
             self._vardict['journal_file'].write_file_xml(fname)
             self.set_window_title(os.path.basename(self._vardict['journal_file'].filename))
@@ -331,7 +329,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self._clear_search_flag()
         self._clear_entry_dirty()
 
-    def _new_entry(self):
+    def new_entry(self):
         '''Create a new entry, save the old one if it has been modified.'''
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
             return
@@ -396,7 +394,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self._build_search_dictionary()
         if self.max_entry_count < 1:
             self.insertButton.setEnable(False)
-            self._new_entry()
+            self.new_entry()
         else:
             self.show_entry(self._vardict['cur_entry_number'])
 
@@ -546,7 +544,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         self._vardict['header_window'].set_bookfile(self._vardict['journal_file'])
         self._vardict['header_window'].setWindowTitle(\
                 QtWidgets.QApplication.translate('headerWindow',\
-                'Edit heaaders - %s' % (os.path.basename(self._vardict['journal_file'].filename)),\
+                f"Edit heaaders - {os.path.basename(self._vardict['journal_file'].filename)}",\
                                         None))
         self._vardict['header_window'].set_header_text(\
                                         self._vardict['journal_file'].get_header())
@@ -559,10 +557,10 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         '''Show help string.'''
         QtWidgets.QMessageBox.about(self, 'About Journals', help_string())
 
-
     #
     # Button slots and Signals
     #
+    #pylint: disable = invalid-name
     def on_prevButton_released(self):
         '''comment'''
         if self.ask_save_entry() == QtWidgets.QMessageBox.Cancel:
@@ -576,6 +574,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             return
 
         self.show_entry(self._vardict['cur_entry_number'] + 1)
+    #pylint: enable = invalid-name
 
     def index_changed(self):
         '''Comment'''
@@ -629,7 +628,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
             return
 
         fname, dummy = QtWidgets.QFileDialog.getOpenFileName(self,\
-            '%s -- Choose new file' % QtWidgets.QApplication.applicationName(),\
+            f'{QtWidgets.QApplication.applicationName()} -- Choose new file',\
             os.path.dirname(self._vardict['journal_file'].filename), '*.xml')
         if fname:
             self.open_file(fname)
@@ -642,8 +641,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         places it into the window title.
         '''
         title = QtWidgets.QApplication.translate('MainWindow',
-                                                 'Journal Entry  v %s   -   %s' %
-                                                 (__version__, name),
+                         f'Journal Entry  v {__version__}   -   {name}',
                                                  None)
         self.setWindowTitle(title)
 
@@ -660,7 +658,9 @@ if __name__ == '__main__':
     APP = QtWidgets.QApplication(sys.argv)
     APP.setApplicationName('Journal Entry')
     FORM = JournalWindow()
+    #pylint: disable = no-value-for-parameter
     APP.focusChanged.connect(FORM.set_focus_changed)
+    #pylint: enable = no-value-for-parameter
 
     FORM.show()
     sys.exit(APP.exec_())

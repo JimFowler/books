@@ -19,9 +19,7 @@
 entry and a representation in python, typically a dictionary entry of
 the form Entry.entry().'''
 
-
-
-import aabooks.journal.entryxml as entryxml
+from aabooks.journal import entryxml
 
 __version__ = 'class JournalEntry(Entry) v1.0.0 dtd 3 Jan 2015'
 
@@ -36,7 +34,7 @@ class JournalEntry(dict):
 
     def __init__(self, _entry_str=None):
 
-        super(JournalEntry, self).__init__()
+        super().__init__()
 
         self.blank_entry()
 
@@ -105,7 +103,7 @@ class JournalEntry(dict):
 #
 if __name__ == '__main__':
 
-    import aabooks.journal.testentry as testentry
+    from aabooks.journal import testentry
     import unittest
     from lxml import etree
 

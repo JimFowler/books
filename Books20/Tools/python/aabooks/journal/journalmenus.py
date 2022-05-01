@@ -32,7 +32,7 @@ def create_action(self, text, slot=None, shortcut=None, icon=None,
     """
     action = QtWidgets.QAction(text, self)
     if icon is not None:
-        action.setIcon(QtGui.QIcon(":/{0}.png".format(icon)))
+        action.setIcon(QtGui.QIcon(f':/{icon}.png'))
     if shortcut is not None:
         action.setShortcut(shortcut)
     if tip is not None:
@@ -128,7 +128,7 @@ def create_menus(self, menu_bar):
     menu = menu_bar.addMenu('Entry')
 
     action = create_action(self, 'New &Entry',
-                           slot='self._new_entry',
+                           slot='self.new_entry',
                            shortcut='Ctrl+E')
     menu.addAction(action)
 

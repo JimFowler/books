@@ -20,7 +20,7 @@
 import os
 from lxml import etree
 
-import aabooks.lib.entrylist as entrylist
+from aabooks.lib import entrylist
 from aabooks.journal import journalentry
 
 __version__ = 0.1
@@ -42,7 +42,7 @@ class JournalFile(entrylist.EntryList):
 
         '''
 
-        super(JournalFile, self).__init__()
+        super().__init__()
 
         self.set_header(__defaultHeader__)
         # a list of JournalEntry objects
@@ -115,11 +115,12 @@ class JournalFile(entrylist.EntryList):
 
         if filename:
             self.filename = filename
-
+        #pylint: disable = consider-using-with
         try:
             file_descriptor = open(self.filename, 'w', encoding='UTF8')
         except (FileNotFoundError, PermissionError):
             return False
+        #pylint: enable = consider-using-with
 
         # We do something clever here when we know how.
         jf_root = etree.Element('JournalFile')
@@ -127,7 +128,7 @@ class JournalFile(entrylist.EntryList):
         header.text = self.get_header()
 
         journals = etree.SubElement(jf_root, 'Journals')
-        for count, entry in enumerate(self):
+        for entry in self:
             entry_xml = entry.write_xml_from_entry()
             journals.append(entry_xml)
 
@@ -183,6 +184,8 @@ if __name__ == "__main__":
 
         def test_d_check_schema(self):
             '''Test the written XML file against the XSD schema.'''
+
+            test_parser = None
 
             count = self.jfile.read_file('testjournals.xml')
             self.assertEqual(count, 235)

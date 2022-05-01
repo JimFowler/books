@@ -33,19 +33,20 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
     '''The main class to create a widget and allow searchs.'''
 
     def __init__(self, parent=None, searchDict=None):
-        super(JournalSearch, self).__init__(parent=parent)
+        super().__init__(parent=parent)
         self.setupUi(self)
 
         self.searchdict = searchDict
         self.parent = parent
         self.current_search_list = []
-
+        #pylint: disable = no-value-for-parameter
         self.searchEdit.textChanged.connect(self.search_edit_changed)
         self.searchResults.itemDoubleClicked.connect(self.title_selected)
 
 
         self.closeButton.released.connect(self.close)
         self.newButton.released.connect(self.parent._new_entry)
+        #pylint: enable = no-value-for-parameter
 
 
     #
@@ -53,7 +54,9 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
     #
     def search_edit_changed(self):
         """Run a search of the sdict and fill in the searchResults"""
+        #pylint: disable = no-value-for-parameter
         self.searchEdit.textChanged.disconnect(self.search_edit_changed)
+        #pylint: enable = no-value-for-parameter
 
         search_text = self.searchEdit.text()
         self.searchResults.clear()
@@ -77,8 +80,9 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
                     self.searchResults.insertItem(i, self.current_search_list[i-1][0])
                 except IndexError:
                     pass
-
+        #pylint: disable = no-value-for-parameter
         self.searchEdit.textChanged.connect(self.search_edit_changed)
+        #pylint: enable = no-value-for-parameter
 
     def title_selected(self, search_title):
         """If a title has been selected in the searchResults, then find that
@@ -92,5 +96,5 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
                 self.parent.show_entry(index + 1)
                 return
 
-        self.parent._new_entry()
+        self.parent.new_entry()
         self.parent.titleEdit.setText(title_text)

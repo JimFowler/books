@@ -252,7 +252,7 @@ if __name__ == '__main__':
     import unittest
 
     from aabooks.journal.journalentry import JournalEntry
-    import aabooks.journal.testentry as testentry
+    from  aabooks.journal import testentry
 
 
     class EntryTestCase(unittest.TestCase):
