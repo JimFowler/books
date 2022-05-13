@@ -231,6 +231,28 @@ class EntryList(list):
         return eval('self.write_file_' + os.path.splitext(self.filename)[1][1:] + '()')
 
 
+    def __add__(self, entlist):
+        '''reimplement the __add__() or '+' function so that we can combine
+        two EntryList objects to create a third. Assumes that the
+        entlist passed in is valid by your definitions.
+
+        '''
+        new_entlist = EntryList()
+        new_entlist.set_header(self.get_header() + '\n' + entlist.get_header())
+        new_entlist.extend(self)
+        new_entlist.extend(entlist)
+
+        return new_entlist
+
+    def __iadd__(self, entlist):
+        '''Reimplement the __iadd__() or extend() function so that we can
+        extend the current list. Assumes that the entlist passed in is
+        valid by your definitions.
+
+        '''
+        self.set_header(self.get_header + '\n' + entlist.get_header())
+        self.extend(entlist)
+
 
 if __name__ == '__main__':
 
@@ -268,20 +290,24 @@ if __name__ == '__main__':
             '''Start with a fresh EntryList and Entry's for
             each test.'''
 
-            self.ev_list = EntryList()
+            self.ent_list = EntryList()
             self.entry1 = MyEntry('The quick brown fox')
             self.entry2 = MyEntry('jumped over the')
             self.entry3 = MyEntry('lazy dogs back')
             self.entry4 = MyEntry() # invalid entry
 
+            self.header = '''This is the new header.
+
+It contains three lines.'''
         def tearDown(self):
             '''Delete the class variables at the end of each '''
 
-            del self.ev_list
+            del self.ent_list
             del self.entry1
             del self.entry2
             del self.entry3
             del self.entry4
+            del self.header
 
         def test_a_initialize(self):
             '''Test that the EntryList is initialized correctly.
@@ -293,9 +319,9 @@ if __name__ == '__main__':
 
             '''
 
-            self.assertEqual(self.ev_list.get_header(), '')
-            self.assertEqual(self.ev_list.filename, './document1.xml')
-            self.assertFalse(self.ev_list.is_dirty())
+            self.assertEqual(self.ent_list.get_header(), '')
+            self.assertEqual(self.ent_list.filename, './document1.xml')
+            self.assertFalse(self.ent_list.is_dirty())
 
         def test_b_header(self):
             '''Test header manipulation.
@@ -306,17 +332,14 @@ if __name__ == '__main__':
               invalid header
             '''
 
-            header = '''This is the new header.
-
-It contains three lines.'''
-            self.assertTrue(self.ev_list.set_header(header))
-            self.assertEqual(self.ev_list.get_header(), header)
-            self.assertTrue(self.ev_list.is_dirty())
+            self.assertTrue(self.ent_list.set_header(self.header))
+            self.assertEqual(self.ent_list.get_header(), self.header)
+            self.assertTrue(self.ent_list.is_dirty())
 
             # should not be able to write a non-string to the header
-            self.ev_list = EntryList()
-            self.assertFalse(self.ev_list.set_header(5))
-            self.assertFalse(self.ev_list.is_dirty())
+            self.ent_list = EntryList()
+            self.assertFalse(self.ent_list.set_header(5))
+            self.assertFalse(self.ent_list.is_dirty())
 
         def test_c_set_new_entry(self):
             '''Test entry manipulation.
@@ -329,88 +352,88 @@ It contains three lines.'''
             #  insert an entry
             #  invalid entry
 
-            # verify that self.ev_list is clean initially
-            self.assertFalse(self.ev_list.is_dirty())
+            # verify that self.ent_list is clean initially
+            self.assertFalse(self.ent_list.is_dirty())
 
             # test set_new_entry with valid entry and check dirty flag set 1
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertEqual(self.ev_list.get_entry(0), self.entry1)
-            self.assertTrue(self.ev_list.is_dirty())
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1))
+            self.assertEqual(self.ent_list.get_entry(0), self.entry1)
+            self.assertTrue(self.ent_list.is_dirty())
 
             # test set_new_entry with second valid entry 12
-            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertEqual(self.ev_list.get_entry(1), self.entry2)
+            self.assertTrue(self.ent_list.set_new_entry(self.entry2))
+            self.assertEqual(self.ent_list.get_entry(1), self.entry2)
 
             # test set_new_entry insertion of entry 312
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3, 0))
-            self.assertEqual(self.ev_list.get_entry(0), self.entry3)
+            self.assertTrue(self.ent_list.set_new_entry(self.entry3, 0))
+            self.assertEqual(self.ent_list.get_entry(0), self.entry3)
 
             # test set_new_entry insertion of entry with invalid count 3121
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1, 3))
-            self.assertEqual(self.ev_list.get_entry(3), self.entry1)
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1, 3))
+            self.assertEqual(self.ent_list.get_entry(3), self.entry1)
 
             # test set_new_entry with invalid entry
-            self.assertFalse(self.ev_list.set_new_entry(self.entry4))
+            self.assertFalse(self.ent_list.set_new_entry(self.entry4))
 
         def test_d_get_entry(self):
             '''Test the EntryList.get_entry() function.'''
 
             # set up the list first 123
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry3))
 
             # test get_entry with counts inside and outside of invalid values
-            self.assertIsNone(self.ev_list.get_entry(-1))
-            self.assertIsNone(self.ev_list.get_entry(self.ev_list.max_entries()))
-            self.assertEqual(self.ev_list.get_entry(0), self.entry1)
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries() - 1), self.entry3)
+            self.assertIsNone(self.ent_list.get_entry(-1))
+            self.assertIsNone(self.ent_list.get_entry(self.ent_list.max_entries()))
+            self.assertEqual(self.ent_list.get_entry(0), self.entry1)
+            self.assertEqual(self.ent_list.get_entry(self.ent_list.max_entries() - 1), self.entry3)
 
         def test_d_set_entry(self):
             '''Test the EntryList.set_entry() function'''
 
             # set up the list first 1233
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry3))
 
             # test set_entry with replacement of entry just inside valid counts 2233
-            self.assertTrue(self.ev_list.set_entry(self.entry2, 0))
-            self.assertEqual(self.ev_list.get_entry(0), self.entry2)
-            self.assertTrue(self.ev_list.set_entry(self.entry1,
-                                    self.ev_list.max_entries()-1)) # 2221
+            self.assertTrue(self.ent_list.set_entry(self.entry2, 0))
+            self.assertEqual(self.ent_list.get_entry(0), self.entry2)
+            self.assertTrue(self.ent_list.set_entry(self.entry1,
+                                    self.ent_list.max_entries()-1)) # 2221
 
-            self.assertEqual(self.ev_list.get_entry(self.ev_list.max_entries()-1), self.entry1)
+            self.assertEqual(self.ent_list.get_entry(self.ent_list.max_entries()-1), self.entry1)
 
             # test set_entry with invalid entry
-            self.assertFalse(self.ev_list.set_entry(self.entry4, 2))
-            self.assertEqual(self.ev_list.get_entry(3), self.entry1)
+            self.assertFalse(self.ent_list.set_entry(self.entry4, 2))
+            self.assertEqual(self.ent_list.get_entry(3), self.entry1)
 
             # test set_entry with invalid count
-            self.assertFalse(self.ev_list.set_entry(self.entry2, -1))
-            self.assertFalse(self.ev_list.set_entry(self.entry2, self.ev_list.max_entries()))
+            self.assertFalse(self.ent_list.set_entry(self.entry2, -1))
+            self.assertFalse(self.ent_list.set_entry(self.entry2, self.ent_list.max_entries()))
 
             # test delete_entry 221
-            self.assertEqual(self.ev_list.max_entries(), 4)
-            self.assertEqual(self.ev_list.delete_entry(1), 3)
+            self.assertEqual(self.ent_list.max_entries(), 4)
+            self.assertEqual(self.ent_list.delete_entry(1), 3)
 
             # test delete_entry with invalid count 123
-            self.assertEqual(self.ev_list.delete_entry(-1), 3)
-            self.assertEqual(self.ev_list.delete_entry(self.ev_list.max_entries()+1), 3)
+            self.assertEqual(self.ent_list.delete_entry(-1), 3)
+            self.assertEqual(self.ent_list.delete_entry(self.ent_list.max_entries()+1), 3)
 
         def test_f_clear_list(self):
             '''Test the EntryList.clear_list() function.'''
 
             # set up the list first 1231
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry2))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry3))
-            self.assertTrue(self.ev_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry2))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry3))
+            self.assertTrue(self.ent_list.set_new_entry(self.entry1))
 
-            self.assertEqual(self.ev_list.clear_list(), 0)
+            self.assertEqual(self.ent_list.clear_list(), 0)
             # should have no entries in the list
-            self.assertEqual(len(self.ev_list), 0)
+            self.assertEqual(len(self.ent_list), 0)
 
         def test_g_read_file(self):
             '''Test the read_file stub. Should not be able to read a file at
@@ -427,15 +450,15 @@ It contains three lines.'''
             except FileNotFoundError:
                 pass
 
-            self.assertEqual(self.ev_list.read_file(filename), 0)
+            self.assertEqual(self.ent_list.read_file(filename), 0)
 
             # test read_file with real (but empty) filename
             Path('bogon.xml').touch()
             with self.assertRaises(AttributeError):
-                self.ev_list.read_file('bogon.xml')
+                self.ent_list.read_file('bogon.xml')
 
             # test that filename was updated
-            self.assertEqual(self.ev_list.filename, 'bogon.xml')
+            self.assertEqual(self.ent_list.filename, 'bogon.xml')
             try:
                 os.remove('bogon.xml')
             except FileNotFoundError:
@@ -450,9 +473,58 @@ It contains three lines.'''
             filename = 'bogon.xml'
 
             with self.assertRaises(AttributeError):
-                self.ev_list.write_file(filename)
+                self.ent_list.write_file(filename)
 
-            self.assertEqual(self.ev_list.filename, filename)
+            self.assertEqual(self.ent_list.filename, filename)
+            del filename
+
+        def test_i_add_lists(self):
+            '''Test the __add__() or '+' function in order to see
+            what is happening. Not much of a test as it simply duplicates
+            our first implementation of __add__().
+
+            '''
+
+            self.ent_list.set_header(self.header)
+            self.ent_list.set_new_entry(self.entry1)
+            self.ent_list.set_new_entry(self.entry2)
+            self.ent_list.set_new_entry(self.entry3)
+
+            answer_list = EntryList()
+            for dummy in range(0, 2):
+                for ent in self.ent_list:
+                    answer_list.append(ent)
+            answer_list.set_header(self.ent_list.get_header() + '\n' + \
+                                 self.ent_list.get_header())
+            test_list = self.ent_list + self.ent_list
+            self.assertEqual(test_list, answer_list)
+
+            del test_list
+            del answer_list
+
+        def test_j_extend_list(self):
+            '''Test the __extend__() function in order to see
+            what is happening. Not much of a test as it simply duplicates
+            the first implementation of __add__().
+
+            '''
+
+            self.ent_list.set_header(self.header)
+            self.ent_list.set_new_entry(self.entry1)
+            self.ent_list.set_new_entry(self.entry2)
+            self.ent_list.set_new_entry(self.entry3)
+
+            answer_list = EntryList()
+            for dummy in range(0, 2):
+                for ent in self.ent_list:
+                    answer_list.append(ent)
+            answer_list.set_header(self.ent_list.get_header() + '\n' + \
+                                 self.ent_list.get_header())
+
+            self.ent_list.extend(self.ent_list)
+            self.assertEqual(self.ent_list, answer_list)
+
+            del answer_list
 
 
     unittest.main()
