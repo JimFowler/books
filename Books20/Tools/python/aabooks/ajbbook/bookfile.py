@@ -343,7 +343,7 @@ if __name__ == "__main__":
             self.assertEqual(self.bookfile, answer_file)
             self.assertEqual(self.bookfile.get_header(),
                              answer_file.get_header())
-            self.bookfile.write_file('testme.xml')
+
             del answer_file
 
     unittest.main()
