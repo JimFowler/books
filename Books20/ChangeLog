@@ -1,3 +1,14 @@
+2022-05-15  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/entrylist.py: removed __add__() and
+	__iadd__() from the EntryList class. They new functions did not
+	work as expected.
+
+	* Tools/python/aabooks/ajbbook/bookfile.py
+	(BookFile.write_file_xml): Added __add__() and extend() to the
+	BookFile class.  I can now add '+' two BookFiles or extend one of
+	the with a second BookFile.
+
 2022-05-13  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/lib/entrylist.py (EntryList.__add__):

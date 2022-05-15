@@ -214,6 +214,26 @@ class BookFile(entrylist.EntryList):
         return not self.is_dirty()
 
 
+    def __add__(self, bookf):
+        '''reimplement the __add__() or '+' function so that we can combine
+        two BookFile objects to create a third. Assumes that the
+        entlist passed in is valid by your definitions.
+
+        '''
+
+        new_bookfile = BookFile()
+        new_bookfile.set_header(self.get_header() + '\n' + bookf.get_header())
+        list.extend(new_bookfile, self)
+        list.extend(new_bookfile, bookf)
+
+        return new_bookfile
+
+    def extend(self, bookf):
+        '''Redefine the extend() function from list.'''
+
+        self.set_header(self.get_header() + '\n' + bookf.get_header())
+        list.extend(self, bookf)
+
 if __name__ == "__main__":
 
     import unittest
@@ -279,5 +299,51 @@ if __name__ == "__main__":
                 xml_file_good = False
             self.assertTrue(xml_file_good,
                             msg='The xml file is not well formed or is invalid')
+
+        def test_g_add_bookfiles(self):
+            '''Test the __add__() or '+' function in order to see
+            what is happening. Not much of a test as it simply duplicates
+            our first implementation of __add__().
+
+            '''
+
+            self.bookfile.read_file("testfile.xml")
+
+            answer_file = BookFile()
+            for dummy in range(0, 2):
+                for ent in self.bookfile:
+                    answer_file.append(ent)
+            answer_file.set_header(self.bookfile.get_header() + '\n' + \
+                                 self.bookfile.get_header())
+            test_file = self.bookfile + self.bookfile
+            self.assertEqual(test_file, answer_file)
+            self.assertEqual(test_file.get_header(),
+                             answer_file.get_header())
+
+            del test_file
+            del answer_file
+
+        def test_j_extend_list(self):
+            '''Test the __extend__() function in order to see
+            what is happening. Not much of a test as it simply duplicates
+            the first implementation of __add__().
+
+            '''
+            self.bookfile.read_file("testfile.xml")
+
+            answer_file = BookFile()
+            for dummy in range(0, 2):
+                for ent in self.bookfile:
+                    answer_file.append(ent)
+            answer_file.set_header(self.bookfile.get_header() + '\n' + \
+                                 self.bookfile.get_header())
+
+            self.bookfile.extend(self.bookfile)
+
+            self.assertEqual(self.bookfile, answer_file)
+            self.assertEqual(self.bookfile.get_header(),
+                             answer_file.get_header())
+            self.bookfile.write_file('testme.xml')
+            del answer_file
 
     unittest.main()

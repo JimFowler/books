@@ -231,29 +231,6 @@ class EntryList(list):
         return eval('self.write_file_' + os.path.splitext(self.filename)[1][1:] + '()')
 
 
-    def __add__(self, entlist):
-        '''reimplement the __add__() or '+' function so that we can combine
-        two EntryList objects to create a third. Assumes that the
-        entlist passed in is valid by your definitions.
-
-        '''
-        new_entlist = EntryList()
-        new_entlist.set_header(self.get_header() + '\n' + entlist.get_header())
-        new_entlist.extend(self)
-        new_entlist.extend(entlist)
-
-        return new_entlist
-
-    def __iadd__(self, entlist):
-        '''Reimplement the __iadd__() or extend() function so that we can
-        extend the current list. Assumes that the entlist passed in is
-        valid by your definitions.
-
-        '''
-        self.set_header(self.get_header + '\n' + entlist.get_header())
-        self.extend(entlist)
-
-
 if __name__ == '__main__':
 
     import unittest
@@ -477,54 +454,6 @@ It contains three lines.'''
 
             self.assertEqual(self.ent_list.filename, filename)
             del filename
-
-        def test_i_add_lists(self):
-            '''Test the __add__() or '+' function in order to see
-            what is happening. Not much of a test as it simply duplicates
-            our first implementation of __add__().
-
-            '''
-
-            self.ent_list.set_header(self.header)
-            self.ent_list.set_new_entry(self.entry1)
-            self.ent_list.set_new_entry(self.entry2)
-            self.ent_list.set_new_entry(self.entry3)
-
-            answer_list = EntryList()
-            for dummy in range(0, 2):
-                for ent in self.ent_list:
-                    answer_list.append(ent)
-            answer_list.set_header(self.ent_list.get_header() + '\n' + \
-                                 self.ent_list.get_header())
-            test_list = self.ent_list + self.ent_list
-            self.assertEqual(test_list, answer_list)
-
-            del test_list
-            del answer_list
-
-        def test_j_extend_list(self):
-            '''Test the __extend__() function in order to see
-            what is happening. Not much of a test as it simply duplicates
-            the first implementation of __add__().
-
-            '''
-
-            self.ent_list.set_header(self.header)
-            self.ent_list.set_new_entry(self.entry1)
-            self.ent_list.set_new_entry(self.entry2)
-            self.ent_list.set_new_entry(self.entry3)
-
-            answer_list = EntryList()
-            for dummy in range(0, 2):
-                for ent in self.ent_list:
-                    answer_list.append(ent)
-            answer_list.set_header(self.ent_list.get_header() + '\n' + \
-                                 self.ent_list.get_header())
-
-            self.ent_list.extend(self.ent_list)
-            self.assertEqual(self.ent_list, answer_list)
-
-            del answer_list
 
 
     unittest.main()
