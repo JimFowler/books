@@ -1,5 +1,9 @@
 2022-05-15  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/journal/journalfile.py
+	(JournalFile.__init__): Added filename of __init__() in the
+	JournalFile class.  We can open the file during instatiation now.
+
 	* Tools/python/aabooks/lib/entrylist.py: removed __add__() and
 	__iadd__() from the EntryList class. They new functions did not
 	work as expected.

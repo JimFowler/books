@@ -36,7 +36,7 @@ class JournalFile(entrylist.EntryList):
     for book lists from AJB/AAA. It handles all the translation
     between the disk file format and the AJBentry format."""
 
-    def __init__(self):
+    def __init__(self, filename=None):
         '''Initialize with the parent class, then add any
         special metadata fro journals.
 
@@ -44,13 +44,14 @@ class JournalFile(entrylist.EntryList):
 
         super().__init__()
 
-        self.set_header(__defaultHeader__)
-        # a list of JournalEntry objects
-
-        self.file_name = './document1'
-
-        # 1 <= current_entry_number <= len(self._entry_list)
-        self.current_entry_number = -1
+        if filename:
+            self.read_file(filename)
+            self.current_entry_number = 1
+        else:
+            self.set_header(__defaultHeader__)
+            self.file_name = './document1'
+            # 1 <= current_entry_number <= len(self._entry_list)
+            self.current_entry_number = -1
 
         self._dirty = False
 
@@ -184,7 +185,10 @@ if __name__ == "__main__":
             '''Test the JournalFile.read_file_xml() method.'''
 
             count = self.jfile.read_file('testjournals.xml')
+            jfile2 = JournalFile('testjournals.xml')
             self.assertEqual(count, 235)
+            self.assertEqual(self.jfile, jfile2)
+            del jfile2
 
         def test_b_write_file_xml(self):
             '''Test the JournalFile.write_file_xml() method.'''
