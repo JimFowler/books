@@ -7,7 +7,11 @@
 	* Tools/python/aabooks/ajbbook/bookfile.py
 	(BookFile.write_file_xml): Added __add__() and extend() to the
 	BookFile class.  I can now add '+' two BookFiles or extend one of
-	the with a second BookFile.
+	them with a second BookFile.
+
+	* Tools/python/aabooks/journal/journalfile.py: Added __add__() and
+	extend() to JournalFile class. I can now add '+' two JournalFiles
+	or extend one of them with a second JournalFile
 
 2022-05-13  Jim Fowler  <jrf@biblion>
 

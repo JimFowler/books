@@ -143,6 +143,26 @@ class JournalFile(entrylist.EntryList):
 
         return True
 
+    def __add__(self, journalf):
+        '''Reimplement the __add__() or '+' function so that we can combine
+        two JournalFile objects to create a third.        
+
+        '''
+
+        new_journalfile = JournalFile()
+        new_journalfile.set_header(self.get_header() + '\n' + \
+                                  journalf.get_header())
+        list.extend(new_journalfile, self)
+        list.extend(new_journalfile, journalf)
+
+        return new_journalfile
+
+    def extend(self, journalf):
+        '''Reimplement the extend() function from list.'''
+
+        self.set_header(self.get_header() + '\n' + journalf.get_header())
+        list.extend(self, journalf)
+        
 if __name__ == "__main__":
 
     import unittest
@@ -211,4 +231,48 @@ if __name__ == "__main__":
                 self.assertTrue(xml_file_good,
                                 msg='The xml file is not well formed or is invalid')
 
+        def test_e_add_journalfiles(self):
+            '''Test the __add__() or '+' function in order to see
+            what is happening. Not much of a test as it simply duplicates
+            our first implementation of __add__().
+
+            '''
+
+            self.jfile.read_file("testjournals.xml")
+
+            answer_file = JournalFile()
+            for dummy in range(0, 2):
+                for ent in self.jfile:
+                    answer_file.append(ent)
+            answer_file.set_header(self.jfile.get_header() + '\n' + \
+                                 self.jfile.get_header())
+            test_file = self.jfile + self.jfile
+            self.assertEqual(test_file, answer_file)
+            self.assertEqual(test_file.get_header(),
+                             answer_file.get_header())
+
+            del test_file
+            del answer_file
+
+        def test_f_extend_list(self):
+            '''Test the __extend__() function in order to see
+            what is happening. 
+
+            '''
+            self.jfile.read_file("testjournals.xml")
+
+            answer_file = JournalFile()
+            for dummy in range(0, 2):
+                for ent in self.jfile:
+                    answer_file.append(ent)
+            answer_file.set_header(self.jfile.get_header() + '\n' + self.jfile.get_header())
+
+            self.jfile.extend(self.jfile)
+
+            self.assertEqual(self.jfile, answer_file)
+            self.assertEqual(self.jfile.get_header(),
+                             answer_file.get_header())
+
+            del answer_file
+                
     unittest.main()
