@@ -166,17 +166,20 @@ def main():
 
         for count, entry in enumerate(bookfile):
 
-            old_page_number = test_for_page_number(args, count, entry, old_page_number)
+            entry_count = count + 1
+            old_page_number = test_for_page_number(args, entry_count,
+                                                   entry, old_page_number)
 
-            test_for_pagination(args, count, entry)
+            test_for_pagination(args, entry_count, entry)
             #test_for_tafeln(args, count, entry)
             #test_for_translation(args, count, entry)
-            test_for_reviewers(args, count, entry)
-            test_for_isbn(args, count, entry)
-            # are we done yet?
-            if args.count != -1 and count >= args.count:
-                break
+            test_for_reviewers(args, entry_count, entry)
+            test_for_isbn(args, entry_count, entry)
 
+            # are we done yet?
+            if count >= args.count - 1:
+                break
+            
         if args.verbose:
             print(ajbfile, 'done')
 
