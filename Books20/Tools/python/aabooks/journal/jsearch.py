@@ -45,7 +45,7 @@ class JournalSearch(QtWidgets.QDialog, ui_JournalSearch.Ui_JournalSearch):
 
 
         self.closeButton.released.connect(self.close)
-        self.newButton.released.connect(self.parent._new_entry)
+        self.newButton.released.connect(self.parent.new_entry)
         #pylint: enable = no-value-for-parameter
 
 
