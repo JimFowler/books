@@ -31,6 +31,7 @@ AC_CONFIG_FILES([Makefile
       Docs/DatabaseDesign/Makefile
       Docs/Handbook/Makefile
       Docs/History/Makefile
+      Docs/Hjs/Makefile
       Docs/Journals/Makefile
       Docs/Notes/Makefile
       Docs/Questions/Makefile

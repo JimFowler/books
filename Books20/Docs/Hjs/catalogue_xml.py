@@ -145,6 +145,9 @@ def main():
     if args.verbose:
         pprint(args)
 
+    with open('the_books.tex', 'w') as fp:
+        fp.close()
+        
     bookf = bf.BookFile()
     bookf.read_file(args.input)
 
