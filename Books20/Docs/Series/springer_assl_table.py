@@ -659,7 +659,7 @@ ASSL_BOOK_LIST = [
            'Proceedings of a Workshop on ‘The', 'Milky Way” Held in Vancouver,',
            'Canada, May 17–19, 1982'], '1983', 
      ['W. L. H. Shuter'],
-     'E', '90-277-1540-8', 'AAA 22.12.16'),
+     'E', '90-277-1540-8', 'AAA 33.12.16'),
 
     (101, ['Cataclysmic Variables and Related', 'Objects:',
            'Proceedings of the 72nd Colloquium',
@@ -677,13 +677,13 @@ ASSL_BOOK_LIST = [
     (103, ['Astrophysical Jets:', 'Proceedings of an International',
            'Workshop held in Torino, Italy,', 'October 7–9, 1982'], '1983', 
      ['A. Ferrari', 'A. G. Pacholczyk'],
-     'E', None, ''),
+     'E', '90-277-1627-7', 'AAA 34.12.01'),
 
     (104, ['Solar-Terrestrial Physics:', 'Principles and Theoretical',
            'Foundations Based Upon the', 'Proceedings of the Theory Institute',
            'Held at Boston College,', 'August 9–26, 1982'], '1983', 
      ['R. L. Carovillano', 'J. M. Forbes'],
-     'E', None, ''),
+     'E', '90-277-1632-3', 'AAA 34.12.11'),
 
     (105, ['Surveys of the Southern Galaxy:',
            'Proceedings of a Workshop Held at', 'the Leiden Observatory,',
@@ -697,7 +697,7 @@ ASSL_BOOK_LIST = [
            'Union Held in Gerakini, Chalkidiki,',
            'Greece,', '30 August – 2 September, 1982'], '1983', 
      ['Vassilis V. Markellos', 'Yoshihide Kozai'],
-     'E', None, ''),
+     'E', '90-277-1650-1', 'AAA 34-12-19'),
 
     (107, ['Planetary Nebulae:', 'A Study of Late Stages of Stellar',
            'Evolution'], '1983', 
