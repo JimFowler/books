@@ -22,31 +22,6 @@ the books.  Create a LaTeX file for processing. Catalogue should look like
 Intro
   Who, what, where, when, how
 
-Catalogue
-  count entry
-
-%
-%% \bkentry{year}{author}  #1 #2
-%% {title}       #3
-%% {publishing}  #4
-%% {description} #5
-%% {references}  #6
-%%
-\newcounter{bksctr}
-
-\newcommand{\bkentry}[6]{
-\stepcounter{bksctr}
-\vspace*{1 cm}
-\noindent
-\hbox{{\bf\arabic{bksctr}  #2 \hfil}}\newline
-\hbox{{\it\large #3\hfil}}\newline
-\hbox{{\bf #1}, #4 \hfil}\newline
-\hbox{#5\hfil}\newline
-\hbox{#6\hfil}\newline
-\hbox{Comments:\hfil}\newline
-}
-
-
 \bkentry{1930}{Eddington, Arthur}
 {The Internal Constitution of Stars}
 {Cambridge, Cambridge University Press}
@@ -73,7 +48,7 @@ def get_args():
 
     parser = argp.ArgumentParser(description=__DESCRIPTION__,
                                  default_config_files=['~/.config/Books20/ajbbooks.conf'])
-                                 
+
     aautils.standard_parser_args(parser)
 
     sort_choices = ['Title', 'Author', 'Year', 'Place', 'Publisher']
@@ -94,74 +69,97 @@ def get_args():
     return parser.parse_known_args()[0]
 
 
+def protect(raw_str):
+    '''Protect the characters that are also LaTeX special characters
+
+    '''
+
+    new_str = raw_str.replace(r"&", r'\&')
+    return new_str
+
 def sort_bookfile(bookfile, sort_flag):
     '''Use the sort flag to determine how to sort the bookfile.
+
+    reimplement this or delete once we are able to sort bookfiles.
 
     '''
 
     if sort_flag:
         # sort the bookfile
         print(f'sorting bookfile by {sort_flag}')
-    
-    return
+
 
 def print_header(bookfile, outf=sys.stdout):
     '''Print the leading material for the catalogue.
 
     '''
-    print(f'Printing catalogue header', file=outf)
-    return
+    header = protect(r'''%%
+%% \bkentry{year}{author}  #1 #2
+%% {title}       #3
+%% {publishing}  #4
+%%
+\newcounter{bksctr}
+
+\newcommand{\bkentry}[4]{
+\stepcounter{bksctr}
+\vspace*{1 cm}
+\noindent
+\hbox{\arabic{bksctr} #1 {\it #2}, {\bf #3}\hfil}\\
+\hbox{ #4 \hfil}
+}
+
+''')
+    print(header, file=outf)
 
 def print_entry(count, entry, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
 
     '''
-    print(f'{count} entry', file=outf)
-    return
+    year = str(entry['Year'])
+    author = 'somebody'
+    title = entry['Title'].split(';')[0]
+    place = entry['Publishers'][0]['Place'].split('-')[0]
+    publisher = entry['Publishers'][0]['PublisherName']
+    
+    tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
+        + title + '}{' \
+        + place + ', ' + publisher + '}\n')
+
+    
+    print(tex_entry, file=outf)
 
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.
 
     '''
     print('Printing the closing material for the catalogue', file=outf)
-    return
 
 
 def main():
     '''Do all the work here
 
-    get command line arguments
-    open bookfile required
-    open output file 
-    sort file   option
-    print opening
-    print header  ?? option
-    for each entry
-       print_latex(ent)
-    print closing
     '''
     args = get_args()
     if args.verbose:
         pprint(args)
 
-    with open('the_books.tex', 'w') as fp:
-        fp.close()
-        
-    bookf = bf.BookFile()
-    bookf.read_file(args.input)
+    with open(args.output, 'w') as filep:
 
-    # sort bookfile
-    sort_bookfile(bookf, args.sort)
+        bookf = bf.BookFile()
+        bookf.read_file(args.input)
 
-    
-    print_header(bookf)
-    for count, ent in enumerate(bookf):
-        print_entry(count+1, ent)
+        # sort bookfile
+        sort_bookfile(bookf, args.sort)
 
-    print_closing(bookf)
+        print_header(bookf, outf=filep)
+        for count, ent in enumerate(bookf):
+            print_entry(count+1, ent, outf=filep)
 
-    
+        print_closing(bookf)
+
+    filep.close()
+
 #
 #
 #
