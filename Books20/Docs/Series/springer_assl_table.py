@@ -672,7 +672,7 @@ ASSL_BOOK_LIST = [
            'of the International Astronomical',
            'Union Held in Catania, Italy,', 'August 10–13, 1982'], '1983', 
      ['Patrick B. Byrne', 'Marcello Rodonò'],
-     'E', None, ''),
+     'E', '90-277-1601-3', 'AAA 34.12.26'),
 
     (103, ['Astrophysical Jets:', 'Proceedings of an International',
            'Workshop held in Torino, Italy,', 'October 7–9, 1982'], '1983', 
@@ -689,7 +689,7 @@ ASSL_BOOK_LIST = [
            'Proceedings of a Workshop Held at', 'the Leiden Observatory,',
            'The Netherlands, August 4–6, 1982'], '1983', 
      ['W. B. Burton', 'F. P. Israel'],
-     'E', None, ''),
+     'E', '90-277-1651-X', 'AAA 34.12.23'),
 
     (106, ['Dynamical Trapping and Evolution in', 'the Solar System:',
            'Proceedings of the 74th Colloquium',
