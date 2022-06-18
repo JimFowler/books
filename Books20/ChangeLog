@@ -1,3 +1,9 @@
+2022-06-18  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/lib/headerwindow.py
+	(HeaderWindow.ask_and_close): Correcte spelling mistake for
+	no_save_close() in the switch after the dialog box.
+
 2022-06-11  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/aabooks/journal/jsearch.py

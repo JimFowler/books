@@ -71,7 +71,7 @@ class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
             if resp == QtWidgets.QMessageBox.Save:
                 self.save_close()
             elif resp == QtWidgets.QMessageBox.Discard:
-                self.no_saveclose()
+                self.no_save_close()
             elif resp == QtWidgets.QMessageBox.Cancel:
                 return
         else:
