@@ -177,7 +177,7 @@ def main():
             test_for_isbn(args, entry_count, entry)
 
             # are we done yet?
-            if count >= args.count - 1:
+            if args.count != -1 and  count >= args.count - 1:
                 break
             
         if args.verbose:
