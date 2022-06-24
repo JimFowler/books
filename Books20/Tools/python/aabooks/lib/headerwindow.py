@@ -34,8 +34,10 @@ class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
         super().__init__(parent)
 
         self.setupUi(self)
-        self.set_bookfile(bf)
+
         self.dirty = False
+        self.bookfile = None
+        self.set_bookfile(bf)
 
         # pylint: disable = no-value-for-parameter
         self.headerEntry.textChanged.connect(self.set_dirty)
@@ -55,7 +57,7 @@ class HeaderWindow(QtWidgets.QDialog, ui_HeaderEntry.Ui_HeaderEdit):
 
     def save_header_text(self):
         '''Save the current test in the bookfile object.'''
-        if self.bookfile:
+        if self.bookfile is not None:
             self.bookfile.set_header(self.get_header_text())
             self.clear_dirty()
 
@@ -126,9 +128,9 @@ if __name__ == '__main__':
     import sys
 
     APP = QtWidgets.QApplication(sys.argv)
-    EX = HeaderWindow()
     BF = Bookfile.BookFile()
-    EX.set_bookfile(BF)
+    EX = HeaderWindow(bf=BF)
+    #EX.set_bookfile(BF)
     EX.set_filename('New File')
     EX.set_header_text(BF.get_header())
     EX.show()

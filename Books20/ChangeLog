@@ -1,5 +1,9 @@
 2022-06-23  Jim Fowler  <jrf@biblion>
 
+	* Tools/python/aabooks/lib/headerwindow.py (HeaderWindow):
+	Cleaned up code for python 3.9 and added test for None in
+	save_header_text()
+
 	* Docs/Hjs/catalogue_xml.py (get_author_string): Added multiple
 	author/editors to catalogue.  Also added comments.
 
