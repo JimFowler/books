@@ -1,3 +1,8 @@
+2022-06-23  Jim Fowler  <jrf@biblion>
+
+	* Docs/Hjs/catalogue_xml.py (get_author_string): Added multiple
+	author/editors to catalogue.  Also added comments.
+
 2022-06-21  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/verify (main): Corrected test for

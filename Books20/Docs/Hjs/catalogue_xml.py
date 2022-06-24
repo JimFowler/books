@@ -29,9 +29,9 @@ Intro
 {BEA 134; DSB 2:337; DeV 1140}
 '''
 import sys
-import configargparse as argp
-
 from pprint import pprint
+
+import configargparse as argp
 
 from aabooks.ajbbook import bookfile as bf
 from aabooks.lib import utils as aautils
@@ -88,7 +88,6 @@ def sort_bookfile(bookfile, sort_flag):
         # sort the bookfile
         print(f'sorting bookfile by {sort_flag}')
 
-
 def print_header(bookfile, outf=sys.stdout):
     '''Print the leading material for the catalogue.
 
@@ -111,24 +110,82 @@ def print_header(bookfile, outf=sys.stdout):
 ''')
     print(header, file=outf)
 
+def make_name_string(hname, name_style='first'):
+    '''Make the name string in the desired style from a HumanName
+    object. There are two forms of each style determine by the
+    presence of a first name or a first initial.  The different is the
+    ~ tie for LaTeX.
+
+    first -- Last, First MI.
+    first -- Last, FI.~MI.
+
+    second -- First MI., Last
+    second -- FI.~MI., Last
+
+    '''
+
+    name = '"          "'
+
+    if 'first' in name_style:
+        name = f'{hname.last}, {hname.first} {hname.middle}'
+    else:
+        name = f'{hname.first} {hname.middle} {hname.last}'
+
+    return name.strip()
+
+
+def get_author_string(entry):
+    '''Create an author/editor string from an entry.
+
+    '''
+
+    #return 'Author, A.~N.~and A.~N.~Editor'
+
+    authors = entry['Authors']
+    editors = entry['Editors']
+    ret_str = ''
+    
+    if len(authors):
+        # first author
+        ret_str = make_name_string(authors[0], name_style='first')
+        if len(authors) > 2:
+            ret_str += ' et. al'
+        elif len(authors) == 2:
+            ret_str += ' and ' + make_name_string(authors[1], name_style='second')
+    elif len(editors):
+        # first editor
+        ret_str = make_name_string(editors[0])
+        if len(editors) > 2:
+            ret_str += ' et. al., eds'
+        elif len(editors) == 2:
+            ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds'
+        else:
+            ret_str += ' ed.'
+
+    return ret_str
+
+
 def print_entry(count, entry, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
 
     '''
     year = str(entry['Year'])
-    author = 'somebody'
     title = entry['Title'].split(';')[0]
     place = entry['Publishers'][0]['Place'].split('-')[0]
     publisher = entry['Publishers'][0]['PublisherName']
-    
+    author = get_author_string(entry)
+
     tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
         + title + '}{' \
-        + place + ', ' + publisher + '}\n')
+        + place + ', ' + publisher + '}')
 
-    
     print(tex_entry, file=outf)
+    for comment in entry['Others']:
+        print('\n', comment, file=outf)
 
+    print('\n', file=outf)
+    
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.
 
