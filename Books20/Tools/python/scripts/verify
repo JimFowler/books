@@ -153,6 +153,7 @@ def main():
     args = getargs()
     if args.verbose:
         pprint(args)
+        print()
 
     # open xml file to bookfile
     # for each entry
@@ -181,7 +182,7 @@ def main():
                 break
             
         if args.verbose:
-            print(ajbfile, 'done')
+            print(ajbfile, f'done; verified {count + 1} entries')
 
 #
 # Do the work
