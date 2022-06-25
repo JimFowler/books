@@ -172,8 +172,15 @@ def print_entry(count, entry, outf=sys.stdout):
     '''
     year = str(entry['Year'])
     title = entry['Title'].split(';')[0]
-    place = entry['Publishers'][0]['Place'].split('-')[0]
-    publisher = entry['Publishers'][0]['PublisherName']
+    try:
+        place = entry['Publishers'][0]['Place'].split('-')[0]
+    except IndexError:
+        place = ''
+    try:
+        publisher = entry['Publishers'][0]['PublisherName']
+    except IndexError:
+        publisher = ''
+        
     author = get_author_string(entry)
 
     tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
@@ -182,9 +189,12 @@ def print_entry(count, entry, outf=sys.stdout):
 
     print(tex_entry, file=outf)
     for comment in entry['Others']:
-        print('\n', comment, file=outf)
-
-    print('\n', file=outf)
+        if comment is not None:
+            print('\n', protect(comment), file=outf)
+        else:
+            print(entry.num_str(), 'has a None comment')
+            
+        print('\n', file=outf)
     
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.

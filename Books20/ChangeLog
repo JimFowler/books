@@ -1,3 +1,8 @@
+2022-06-25  Jim Fowler  <jrf@biblion>
+
+	* Docs/Hjs/catalogue_xml.py (print_entry): Added additional
+	error checking when parsing entry.
+
 2022-06-23  Jim Fowler  <jrf@biblion>
 
 	* Tools/python/scripts/verify (main): Add entry count to
