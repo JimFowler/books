@@ -58,7 +58,7 @@ hjs_catalogue.pdf catalogue hjs: books.tex hjs_catalogue.tex
 	${LATEX} hjs_catalogue
 
 .PHONY: the_books.tex
-books.tex: ../../Data/HJS/hjs_full.xml
+books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
 	python catalogue_xml.py -s Year -o books.tex ../../Data/HJS/hjs_full.xml
 
 #
