@@ -177,7 +177,7 @@ def print_entry(count, entry, outf=sys.stdout):
     except IndexError:
         place = ''
     try:
-        publisher = entry['Publishers'][0]['PublisherName']
+        publisher = ', ' + entry['Publishers'][0]['PublisherName']
     except IndexError:
         publisher = ''
         
@@ -185,7 +185,7 @@ def print_entry(count, entry, outf=sys.stdout):
 
     tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
         + title + '}{' \
-        + place + ', ' + publisher + '}')
+        + place + publisher + '}')
 
     print(tex_entry, file=outf)
     for comment in entry['Others']:
