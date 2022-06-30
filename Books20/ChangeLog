@@ -30,6 +30,28 @@
 
 	* Tools/python/aabooks/journal/jsearch.py
 	(JournalSearch.__init__): Correct slot _new_entry() to new_entry()
+2022-06-06  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: Added
+	BookFile.sort_by() function as a wrapper around sort().
+	This way I don't have to specify the lambda function for
+	the key every time.
+
+2022-06-05  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/ajbentry.py: Sort by names
+	sort of works but has difficulty with Unicode chars.
+
+2022-06-03  Jim Fowler  <jrf@biblion>
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: Added a test for
+	the Bookfile sort function.  Sort by 'Year' work.  Need to
+	refine the test for all sort fields.
+
+	* Tools/python/aabooks/ajbbook/ajbentry.py (AJBentry.sort_key): Add
+	the sort_key() function. This should allow a BookFile object
+	to sort the list of entries.
+>>>>>>> sort_bookfile
 
 2022-05-15  Jim Fowler  <jrf@biblion>
 

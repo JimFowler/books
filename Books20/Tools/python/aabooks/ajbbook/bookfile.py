@@ -214,6 +214,13 @@ class BookFile(entrylist.EntryList):
         return not self.is_dirty()
 
 
+    def sort_by(self, sort_name):
+        '''Provides a wrapper function for sort().
+
+        '''
+
+        self.sort(key = lambda entry: entry.sort_key(sort_name))
+        
     def __add__(self, bookf):
         '''reimplement the __add__() or '+' function so that we can combine
         two BookFile objects to create a third. Assumes that the
@@ -225,7 +232,9 @@ class BookFile(entrylist.EntryList):
         new_bookfile.set_header(self.get_header() + '\n' + bookf.get_header())
         list.extend(new_bookfile, self)
         list.extend(new_bookfile, bookf)
-
+        # XXX update index numbers, do they start from 0 or 1
+        # index is never set
+        
         return new_bookfile
 
     def extend(self, bookf):
@@ -233,12 +242,13 @@ class BookFile(entrylist.EntryList):
 
         self.set_header(self.get_header() + '\n' + bookf.get_header())
         list.extend(self, bookf)
-
+        # XXX update index numbers
+        
 if __name__ == "__main__":
 
     import unittest
 
-    class BookFileTestCase(unittest.TestCase):
+    class BookFileFunctionTestCase(unittest.TestCase):
         '''Tests for the class BookFile.'''
 
         def setUp(self):
@@ -346,4 +356,64 @@ if __name__ == "__main__":
 
             del answer_file
 
+    class BookFileSortTestCase(unittest.TestCase):
+        '''Tests for the class BookFile.'''
+
+        def setUp(self):
+            '''Start every test afresh with a new BookFile.'''
+            self.bookfile = BookFile()
+            self.bookfile.read_file("testfile.xml")
+
+        def tearDown(self):
+            '''Clean up the mess after every test.'''
+
+            del self.bookfile
+
+        def is_sorted(self, key):
+            '''Test of the bookfile is sorted by the given key. '''
+
+            first = ''
+            for e in self.bookfile:
+                if 'num' in key.lower():
+                    second = e.sort_num_str()
+                else:
+                    second = e[key]
+                if second < first:
+                    return False
+                first = second
+            return True
+        
+        def test_a_sort_by_year(self):
+            '''Test the sort_by routine in ajbentry.py.
+
+            '''
+
+            self.assertFalse(self.is_sorted('Year'))
+            self.bookfile.sort_by('Year')
+            self.assertTrue(self.is_sorted('Year'))
+
+        def test_b_sort_by_ajbnum(self):
+            '''Test the sort_by routine in ajbentry.py.
+
+            '''
+
+            self.bookfile.sort_by('Year')
+            self.assertFalse(self.is_sorted('Num'))
+            self.bookfile.sort_by('Num')
+            self.assertTrue(self.is_sorted('Num'))
+
+        def test_c_sort_by_author(self):
+            ''' Test the sort_by routine in ajbentry.py
+
+            '''
+
+            self.bookfile.sort_by('Author')
+            #for e in self.bookfile:
+            #    if e['Authors']:
+            #        hname = e['Authors'][0]
+            #        namestr = hname.last + ', ' + hname.first + ' ' + hname.middle
+            #        print(f'{namestr}, {e["Title"]}')
+            #    else:
+            #        print(f'         {e["Title"]}')
+                    
     unittest.main()

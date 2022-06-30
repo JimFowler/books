@@ -20,6 +20,7 @@
 """AJBentry provides a class which can convert between a unicode text
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
+from pprint import pprint
 
 from aabooks.ajbbook import entryxml
 from aabooks.ajbbook import entrytext
@@ -100,6 +101,7 @@ class AJBentry(dict):
         self['Contributors'] = []
         self['Translators'] = []
         self['TranslationOf'] = ''
+        self['TranslatedFrom'] = ''
         self['Language'] = ''
         self['Others'] = []
         self['Title'] = ''
@@ -145,6 +147,27 @@ class AJBentry(dict):
 
         return None
 
+    def sort_num_str(self):
+        """Create lexical string out of 'Num' which will sort numerically.
+        ex. AJB 68.01(0).20 becomes 'AJB 068.0010.0020'
+
+        """
+
+        anum = self['Num']
+        if anum:
+            strnum = str(anum['volume'])
+            strnum = strnum + ' ' + f'{anum["volNum"]:03}'
+            strnum = strnum + '.' + f'{anum["sectionNum"]:03}'
+            if anum['subsectionNum'] > -1:
+                strnum = strnum + f'{anum["subsectionNum"]:02}'
+            else:
+                strnum = strnum + '0'
+            strnum = strnum + '.' + f'{anum["entryNum"]:03}'
+            strnum = strnum + str(anum['entrySuf'])
+            return strnum
+
+        return None
+
     def short_title(self):
         """Create a short title string for the entry. A short title
         is 'AJBnum 1stAuthor_lastname Title'."""
@@ -171,6 +194,67 @@ class AJBentry(dict):
             return True
         return False
 
+    def sort_key(self, key):
+        """Return a value that list.sort() can use to sort the Bookfile list.
+        'key' must a a string value of one of dict keys in the entry. For
+        the keys we do not yet now how to sort we do something???
+
+        """
+
+        sortkey = None
+
+        def mk_sort_name(hname):
+            """Create a string from a HumanName that we can use as
+            a search key.
+
+            """
+            sortname = hname.last + ', ' + hname.first + ' ' + hname.middle
+            return sortname.lower()
+
+        lower_key = key.lower()
+
+        if 'year' in lower_key:
+            sortkey = self['Year']
+
+        if 'title' in lower_key:
+            sortkey = self['Title']
+            
+        if 'num' in lower_key:
+            # return the ajbnum string
+            sortkey = self.sort_num_str()
+
+        if 'place' in lower_key:
+            # return the first publisher place
+            sortkey = self['Publishers'][0]['Place']
+
+        if 'publisher' in lower_key:
+            sortkey = self['Publishers'][0]['PublisherName']
+
+        if 'language' in lower_key:
+            sortkey = self['Language']
+            
+        if 'author' in lower_key:
+            if self['Authors']:
+                sortkey = mk_sort_name(self['Authors'][0])
+            elif self['Editors']:
+                sortkey = mk_sort_name(self['Editors'][0])
+            else:
+                sortkey = ''
+                
+        if 'editor' in lower_key or\
+           'translator' in lower_key or \
+           'compiler' in lower_key or \
+           'contributor' in lower_key:
+
+            lower_key += 's'
+            cap_key =lower_key.capitalize()
+            if self[cap_key]:
+                # if the list exists return the first name
+                sortkey =  mk_sort_name(self[cap_key][0])
+            else:
+                sortkey = ''
+
+        return sortkey
     #
     # Read/write the entry in the specified format
     #
