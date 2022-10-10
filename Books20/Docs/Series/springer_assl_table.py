@@ -702,7 +702,7 @@ ASSL_BOOK_LIST = [
     (107, ['Planetary Nebulae:', 'A Study of Late Stages of Stellar',
            'Evolution'], '1983', 
      ['Stuart Robert Pottasch'],
-     'A', None, ''),
+     'A', '90-277-1672-2', 'AAA 37.03.03'),
 
     (108, ['Galactic and Extragalactic Infrared', 'Spectroscopy:',
            'Proceedings of the XVIth ESLAB',
