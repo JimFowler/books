@@ -1,3 +1,10 @@
+2022-10-18  Jim Fowler  <jrf@biblion>
+
+	* Docs/Hjs/catalogue_xml.py: removed extra carriage returns.
+	Moved year to publisher line, added spaces if no year string.
+	Moved comma after author/editor from LaTeX command to string
+	(sort_bookfile): Added bookfile.sort() now that we can sort.
+
 2022-06-25  Jim Fowler  <jrf@biblion>
 
 	* Docs/Hjs/catalogue_xml.py (print_entry): Added additional

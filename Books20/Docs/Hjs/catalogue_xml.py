@@ -27,6 +27,11 @@ Intro
 {Cambridge, Cambridge University Press}
 {18 x 26.25 cm, x, 407 pp, 5 figs, 48 tables}
 {BEA 134; DSB 2:337; DeV 1140}
+
+TODO:
+  Add ifelse to \bkentry command to not put \hbox if year/publisher 
+     strings are empty.
+
 '''
 import sys
 from pprint import pprint
@@ -70,7 +75,7 @@ def get_args():
 
 
 def protect(raw_str):
-    '''Protect the characters that are also LaTeX special characters
+    '''Protect the LaTeX special characters that we want to print.
 
     '''
 
@@ -80,17 +85,21 @@ def protect(raw_str):
 def sort_bookfile(bookfile, sort_flag):
     '''Use the sort flag to determine how to sort the bookfile.
 
-    reimplement this or delete once we are able to sort bookfiles.
-
     '''
 
     if sort_flag:
         # sort the bookfile
         print(f'sorting bookfile by {sort_flag}')
+        bookfile.sort(sort_name=sort_flag)
 
 def print_header(bookfile, outf=sys.stdout):
     '''Print the leading material for the catalogue.
 
+    drop the \newcommand and write the commands out directly
+    in a \vbox so we don't get a page break in the middle of
+    a listing.
+
+    Alternatively have a 5 entry for comments
     '''
     header = protect(r'''%%
 %% \bkentry{year}{author}  #1 #2
@@ -99,12 +108,14 @@ def print_header(bookfile, outf=sys.stdout):
 %%
 \newcounter{bksctr}
 
-\newcommand{\bkentry}[4]{
-\stepcounter{bksctr}
-\vspace*{1 cm}
-\noindent
-\hbox{\arabic{bksctr} #1 {\it #2}, {\bf #3}\hfil}\\
-\hbox{ #4 \hfil}
+\newcommand{\bkentry}[4]{%
+ \vbox{%
+  \stepcounter{bksctr}
+  \vspace*{0.5 cm}
+  \noindent
+  \hbox{{\footnotesize\arabic{bksctr}} {\it #2} {\bf #3}\hfil}\\
+  \hbox{#1  #4 \hfil}%
+ }
 }
 
 ''')
@@ -124,12 +135,13 @@ def make_name_string(hname, name_style='first'):
 
     '''
 
-    name = '"          "'
-
     if 'first' in name_style:
         name = f'{hname.last}, {hname.first} {hname.middle}'
-    else:
+    elif 'second' in name_style:
         name = f'{hname.first} {hname.middle} {hname.last}'
+    else:
+        name = '"          "'
+        
 
     return name.strip()
 
@@ -162,6 +174,8 @@ def get_author_string(entry):
         else:
             ret_str += ' ed.'
 
+    if ret_str:
+        ret_str += ','
     return ret_str
 
 
@@ -172,6 +186,7 @@ def print_entry(count, entry, outf=sys.stdout):
     '''
     year = str(entry['Year'])
     title = entry['Title'].split(';')[0]
+    # Get only the first publisher, if there is one listed.
     try:
         place = entry['Publishers'][0]['Place'].split('-')[0]
     except IndexError:
@@ -181,6 +196,9 @@ def print_entry(count, entry, outf=sys.stdout):
     except IndexError:
         publisher = ''
         
+    if not year and publisher:
+        year = '\hspace{3em}'
+
     author = get_author_string(entry)
 
     tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
@@ -188,13 +206,10 @@ def print_entry(count, entry, outf=sys.stdout):
         + place + publisher + '}')
 
     print(tex_entry, file=outf)
+    print(file=outf)
     for comment in entry['Others']:
-        if comment is not None:
-            print('\n', protect(comment), file=outf)
-        else:
-            print(entry.num_str(), 'has a None comment')
-            
-        print('\n', file=outf)
+        print(protect(comment), file=outf)
+        print(file=outf)
     
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.
@@ -217,7 +232,8 @@ def main():
         bookf.read_file(args.input)
 
         # sort bookfile
-        sort_bookfile(bookf, args.sort)
+        if args.sort:
+            bookf.sort_by(args.sort)
 
         print_header(bookf, outf=filep)
         for count, ent in enumerate(bookf):
