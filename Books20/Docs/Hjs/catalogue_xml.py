@@ -29,18 +29,35 @@ Intro
 {BEA 134; DSB 2:337; DeV 1140}
 
 TODO:
-  Add ifelse to \bkentry command to not put \hbox if year/publisher 
-     strings are empty.
+
+  indent year place publisher
+  pick better font for catalogue entries
+  use \vbox for both entry and comments to prevent page breaks in comments
+  add sensible page count, do not use my codes for page counts
+  use Roman numerals for preface page counts
+  determine proper order of comments
+   series
+   books notes
+    laid in, edition, etc.
+   binding
+   dedication
+   bookplate
+   library stamp
+   signature/initials
+   ISBN
+  remove "ownership" words
 
 '''
 import sys
 from pprint import pprint
 
-import configargparse as argp
-
 from aabooks.ajbbook import bookfile as bf
 from aabooks.lib import utils as aautils
 
+import configargparse as argp
+
+from nameparser.config import CONSTANTS
+CONSTANTS.initials_format='{first} {middle}'
 
 __VERSION__ = '2.0'
 
@@ -109,12 +126,12 @@ def print_header(bookfile, outf=sys.stdout):
 \newcounter{bksctr}
 
 \newcommand{\bkentry}[4]{%
+ \stepcounter{bksctr}
  \vbox{%
-  \stepcounter{bksctr}
   \vspace*{0.5 cm}
   \noindent
   \hbox{{\footnotesize\arabic{bksctr}} {\it #2} {\bf #3}\hfil}\\
-  \hbox{#1  #4 \hfil}%
+  \hbox{ #1  #4 \hfil}
  }
 }
 
@@ -135,13 +152,17 @@ def make_name_string(hname, name_style='first'):
 
     '''
 
+    initials = hname.initials()
+
     if 'first' in name_style:
-        name = f'{hname.last}, {hname.first} {hname.middle}'
+        name = f'{hname.last}'
+        if initials:
+            name += f', {initials}'
     elif 'second' in name_style:
-        name = f'{hname.first} {hname.middle} {hname.last}'
+        name = f'{initials} {hname.last}'
     else:
-        name = '"          "'
-        
+        name = r''
+
 
     return name.strip()
 
@@ -156,25 +177,27 @@ def get_author_string(entry):
     authors = entry['Authors']
     editors = entry['Editors']
     ret_str = ''
-    
+
     if len(authors):
         # first author
         ret_str = make_name_string(authors[0], name_style='first')
         if len(authors) > 2:
-            ret_str += ' et. al'
+            ret_str += ', et.~al.'
         elif len(authors) == 2:
             ret_str += ' and ' + make_name_string(authors[1], name_style='second')
     elif len(editors):
         # first editor
         ret_str = make_name_string(editors[0])
         if len(editors) > 2:
-            ret_str += ' et. al., eds'
+            ret_str += ', et.~al., eds'
         elif len(editors) == 2:
-            ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds'
+            ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds.'
         else:
-            ret_str += ' ed.'
+            ret_str += ', ed.'
 
     if ret_str:
+        # Only add this comma if the name string is not empty
+        # otherwise the title is preceeded by a single comma
         ret_str += ','
     return ret_str
 
@@ -195,9 +218,9 @@ def print_entry(count, entry, outf=sys.stdout):
         publisher = ', ' + entry['Publishers'][0]['PublisherName']
     except IndexError:
         publisher = ''
-        
+
     if not year and publisher:
-        year = '\hspace{3em}'
+        year = r''
 
     author = get_author_string(entry)
 
@@ -210,7 +233,10 @@ def print_entry(count, entry, outf=sys.stdout):
     for comment in entry['Others']:
         print(protect(comment), file=outf)
         print(file=outf)
-    
+
+    print(entry.num_str(), file=outf)
+    print(file=outf)
+
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.
 
@@ -237,8 +263,12 @@ def main():
 
         print_header(bookf, outf=filep)
         for count, ent in enumerate(bookf):
-            print_entry(count+1, ent, outf=filep)
-
+            try:
+                print_entry(count+1, ent, outf=filep)
+            except Exception as e:
+                pprint(e)
+                print('problem with entry:', count + 1)
+                pprint(ent)
         print_closing(bookf)
 
     filep.close()
