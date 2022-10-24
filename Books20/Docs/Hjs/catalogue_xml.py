@@ -35,12 +35,13 @@ TODO:
   use \vbox for both entry and comments to prevent page breaks in comments
   add sensible page count, do not use my codes for page counts
   use Roman numerals for preface page counts
-  determine proper order of comments
+  -->determine proper order of comments
    series
    books notes
     laid in, edition, etc.
+    dedication
+   dust jacket
    binding
-   dedication
    bookplate
    library stamp
    signature/initials
