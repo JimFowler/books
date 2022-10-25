@@ -14,11 +14,12 @@
 %%
 %%
 %% End copyright
-\documentclass{article}%
+\documentclass[twosided,letterpaper]{book}
 
 \usepackage{graphicx}
 \usepackage{books20}
 \addglobalbib{./../Docs/MasterBib.bib}
+\addbibresource{./hjs_baas_obit.bib}
 
 %
 % History
@@ -27,6 +28,8 @@
 %----------------------------------------------------------
 \begin{document}
 
+\frontmatter
+\pagestyle{empty}
 \title{Catalogue of the Harlan J.~Smith Collection \\
   of Books in the Otto Struve Library \\
   of the McDonald Observatory, \\
@@ -34,29 +37,27 @@
 \author{compiled by James R. Fowler}
 \date{copy of \today}
 \maketitle
+\clearpage
 
-\newpage
-
-\vspace*{7 in}
-\centerline{Fort Davis, Texas}
+\vspace*{5 in}
 \centerline{Copyright \copyright 2022 McDonald Observatory}
+\centerline{Fort Davis, Texas}
+\clearpage
 
+\pagestyle{plain}
 \begin{figure}
   \includegraphics{hjs_photo.jpg}
   \label{fig:hjs}
 \end{figure}
-  
-\newpage
-\hbox{\hfil}
-\newpage
 
-\section*{Harlan J. Smith}
+\mainmatter
+\chapter*{Harlan J. Smith}
 \import{./}{biography}
 
-\newpage
+\chapter*{The Books}
+\import{./}{library}
 
-\section*{Catalogue of the Harlan J. Smith Collection}
-
+\chapter*{Catalogue of the Harlan J. Smith Collection}
 \import{./}{books}
 
 
