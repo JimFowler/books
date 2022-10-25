@@ -30,12 +30,12 @@ Intro
 
 TODO:
 
-  indent year place publisher
+  indent year place publisher??
   pick better font for catalogue entries
-  use \vbox for both entry and comments to prevent page breaks in comments
-  add sensible page count, do not use my codes for page counts
+  DONE use \vbox for both entry and comments to prevent page breaks in comments
+  add sensible pagination, do not use my codes for page counts
   use Roman numerals for preface page counts
-  -->determine proper order of comments
+  DONE determine proper order of comments
    series
    books notes
     laid in, edition, etc.
@@ -46,7 +46,7 @@ TODO:
    library stamp
    signature/initials
    ISBN
-  remove "ownership" words
+  DONE remove "ownership" words
 
 '''
 import sys
@@ -113,30 +113,8 @@ def sort_bookfile(bookfile, sort_flag):
 def print_header(bookfile, outf=sys.stdout):
     '''Print the leading material for the catalogue.
 
-    drop the \newcommand and write the commands out directly
-    in a \vbox so we don't get a page break in the middle of
-    a listing.
-
-    Alternatively have a 5 entry for comments
     '''
-    header = protect(r'''%%
-%% \bkentry{year}{author}  #1 #2
-%% {title}       #3
-%% {publishing}  #4
-%%
-\newcounter{bksctr}
-
-\newcommand{\bkentry}[4]{%
- \stepcounter{bksctr}
- \vbox{%
-  \vspace*{0.5 cm}
-  \noindent
-  \hbox{{\footnotesize\arabic{bksctr}} {\it #2} {\bf #3}\hfil}\\
-  \hbox{ #1  #4 \hfil}
- }
-}
-
-''')
+    header = protect(r'\newcounter{bksctr}')
     print(header, file=outf)
 
 def make_name_string(hname, name_style='first'):
@@ -203,7 +181,7 @@ def get_author_string(entry):
     return ret_str
 
 
-def print_entry(count, entry, outf=sys.stdout):
+def print_entry1(count, entry, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
 
@@ -238,6 +216,63 @@ def print_entry(count, entry, outf=sys.stdout):
     print(entry.num_str(), file=outf)
     print(file=outf)
 
+def print_entry2(count, entry, outf=sys.stdout):
+    '''Print an entry as number 'count' for the catalogue. These are
+    expected to be of the form AJBEntry.
+
+    '''
+
+    tex_entry = protect(r'''\stepcounter{bksctr}
+\vbox{%
+  \vspace*{0.5 cm}
+  \noindent
+''')
+
+    author = get_author_string(entry)
+
+    title = entry['Title'].split(';')[0]
+
+    tex_entry += r'''  \hbox{{\footnotesize\arabic{bksctr}} {\it ''' + author
+    tex_entry += r'''} {\bf ''' + title + r'''}\hfil}'''
+
+    # Get only the first publisher, if there is one listed.
+    try:
+        place = entry['Publishers'][0]['Place'].split('-')[0]
+        if place:
+            place += ','
+    except IndexError:
+        place = ''
+
+    try:
+        publisher = entry['Publishers'][0]['PublisherName']
+    except IndexError:
+        publisher = ''
+
+    try:
+        year = str(entry['Year'])
+    except IndexError:
+        year = ''
+        
+    if year or place or publisher:
+        if not year:
+            year=r'\hspace{3em}'
+        if not place:
+            place = r'\hspace{5em}'
+        tex_entry += r'''\\
+  \hbox{''' + year + ' ' + place + ' ' + publisher + r'''}'''
+
+    print(protect(tex_entry), file=outf)
+    print(file=outf)
+
+    for comment in entry['Others']:
+        print(protect(comment), file=outf)
+        print(file=outf)
+
+    print(entry.num_str(), file=outf)
+    print(r'''}
+
+''', file=outf)
+    
 def print_closing(bookfile, outf=sys.stdout):
     '''Print any closing material for the catalogue.
 
@@ -265,7 +300,7 @@ def main():
         print_header(bookf, outf=filep)
         for count, ent in enumerate(bookf):
             try:
-                print_entry(count+1, ent, outf=filep)
+                print_entry2(count+1, ent, outf=filep)
             except Exception as e:
                 pprint(e)
                 print('problem with entry:', count + 1)

@@ -1,3 +1,11 @@
+2022-10-24  Jim Fowler  <jrf@biblion>
+
+	* Docs/Hjs/catalogue_xml.py (print_entry2): Created new function
+	to explicitly write the LaTeX commands rather than creating
+	a new LaTeX command to do the work. This allows for more
+	creative formatting for individual entries.
+	(print_header): Removed \newcommand string from header.
+
 2022-10-18  Jim Fowler  <jrf@biblion>
 
 	* Docs/Hjs/catalogue_xml.py: removed extra carriage returns.
