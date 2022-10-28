@@ -30,7 +30,8 @@ Intro
 
 TODO:
 
-  indent year place publisher??
+  identify bookplates in hjs01_books.xml
+  DONE indent year place publisher??
   pick better font for catalogue entries
   DONE use \vbox for both entry and comments to prevent page breaks in comments
   add sensible pagination, do not use my codes for page counts
@@ -261,8 +262,71 @@ def print_entry2(count, entry, outf=sys.stdout):
         tex_entry += r'''\\
   \hbox{''' + year + ' ' + place + ' ' + publisher + r'''}'''
 
+
     print(protect(tex_entry), file=outf)
     print(file=outf)
+
+    for comment in entry['Others']:
+        print(protect(comment), file=outf)
+        print(file=outf)
+
+    print(entry.num_str(), file=outf)
+    print(r'''}
+
+''', file=outf)
+    
+def print_entry3(count, entry, outf=sys.stdout):
+    '''Print an entry as number 'count' for the catalogue. These are
+    expected to be of the form AJBEntry.
+
+    '''
+
+    tex_entry = protect(r'''\stepcounter{bksctr}
+\vbox{%
+  \vspace*{0.5 cm}
+  \noindent
+''')
+
+    # make the Author, Title line
+    author = get_author_string(entry)
+
+    title = entry['Title'].split(';')[0]
+
+    tex_entry += r'''  \footnotesize\arabic{bksctr} {\it ''' + author
+    tex_entry += r'''} {\bf ''' + title + r'''}'''
+
+    print(protect(tex_entry), file=outf)
+    print(file=outf)
+
+    # make the Year, Place, Publisher line
+    # Get only the first publisher, if there is one listed.
+    try:
+        place = entry['Publishers'][0]['Place'].split('-')[0]
+        if place:
+            place += ','
+    except IndexError:
+        place = ''
+
+    try:
+        publisher = entry['Publishers'][0]['PublisherName']
+    except IndexError:
+        publisher = ''
+
+    try:
+        year = str(entry['Year'])
+    except IndexError:
+        year = ''
+        
+    if year or place or publisher:
+        if not year:
+            year=r'\hspace{3em}'
+        if not place:
+            place = r'\hspace{5em}'
+
+        year_pub_entry = ' '.join([year, place, publisher])
+
+        print(protect(year_pub_entry), file=outf)
+        print(file=outf)
 
     for comment in entry['Others']:
         print(protect(comment), file=outf)
@@ -300,7 +364,7 @@ def main():
         print_header(bookf, outf=filep)
         for count, ent in enumerate(bookf):
             try:
-                print_entry2(count+1, ent, outf=filep)
+                print_entry3(count, ent, outf=filep)
             except Exception as e:
                 pprint(e)
                 print('problem with entry:', count + 1)
