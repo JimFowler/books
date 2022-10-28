@@ -14,12 +14,16 @@
 %%
 %%
 %% End copyright
-\documentclass[twosided,letterpaper]{book}
+\documentclass[letterpaper]{book}
 
 \usepackage{graphicx}
 \usepackage{books20}
-\addglobalbib{./../Docs/MasterBib.bib}
-\addbibresource{./hjs_baas_obit.bib}
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+]{biblatex}
+\addglobalbib{../MasterBib.bib}
+\addbibresource{hjs_baas_obit.bib}
 
 %
 % History
@@ -57,9 +61,10 @@
 \chapter*{The Books}
 \import{./}{library}
 
+\printbibliography
+
 \chapter*{Catalogue of the Harlan J. Smith Collection}
 \import{./}{books}
-
 
 \end{document}
 
