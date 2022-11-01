@@ -30,7 +30,7 @@ Intro
 
 TODO:
 
-  identify bookplates in hjs01_books.xml
+  DONE identify bookplates in hjs01_books.xml
   DONE indent year place publisher??
   pick better font for catalogue entries
   DONE use \vbox for both entry and comments to prevent page breaks in comments
@@ -48,6 +48,9 @@ TODO:
    signature/initials
    ISBN
   DONE remove "ownership" words
+  change 'selbtsverlog' to 'self-published'
+  change ' "' to '``' to get TeX quote marks
+  add additional space between year and place ?? or add comma
 
 '''
 import sys
@@ -169,7 +172,7 @@ def get_author_string(entry):
         # first editor
         ret_str = make_name_string(editors[0])
         if len(editors) > 2:
-            ret_str += ', et.~al., eds'
+            ret_str += ', et.~al., eds.'
         elif len(editors) == 2:
             ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds.'
         else:
