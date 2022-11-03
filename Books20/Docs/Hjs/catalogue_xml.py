@@ -48,9 +48,10 @@ TODO:
    signature/initials
    ISBN
   DONE remove "ownership" words
-  change 'selbtsverlog' to 'self-published'
-  change ' "' to '``' to get TeX quote marks
-  add additional space between year and place ?? or add comma
+  DONE print sub-titles
+  DONE change 'selbtsverlog' to 'self-published'
+  DONE change ' "' to '``' to get TeX quote marks
+  DONE add additional space between year and place ?? or add comma
 
 '''
 import sys
@@ -184,101 +185,16 @@ def get_author_string(entry):
         ret_str += ','
     return ret_str
 
-
-def print_entry1(count, entry, outf=sys.stdout):
-    '''Print an entry as number 'count' for the catalogue. These are
-    expected to be of the form AJBEntry.
-
-    '''
-    year = str(entry['Year'])
-    title = entry['Title'].split(';')[0]
-    # Get only the first publisher, if there is one listed.
-    try:
-        place = entry['Publishers'][0]['Place'].split('-')[0]
-    except IndexError:
-        place = ''
-    try:
-        publisher = ', ' + entry['Publishers'][0]['PublisherName']
-    except IndexError:
-        publisher = ''
-
-    if not year and publisher:
-        year = r''
-
-    author = get_author_string(entry)
-
-    tex_entry = protect(r'\bkentry{' + year + r'}{' + author + '}{' \
-        + title + '}{' \
-        + place + publisher + '}')
-
-    print(tex_entry, file=outf)
-    print(file=outf)
-    for comment in entry['Others']:
-        print(protect(comment), file=outf)
-        print(file=outf)
-
-    print(entry.num_str(), file=outf)
-    print(file=outf)
-
-def print_entry2(count, entry, outf=sys.stdout):
-    '''Print an entry as number 'count' for the catalogue. These are
-    expected to be of the form AJBEntry.
+def clean_comment(comment):
+    '''Clean up my parsable comments in the XML files
+    with good LateX comments.
 
     '''
+    cleaned = comment.replace(' "', ' ``')
 
-    tex_entry = protect(r'''\stepcounter{bksctr}
-\vbox{%
-  \vspace*{0.5 cm}
-  \noindent
-''')
-
-    author = get_author_string(entry)
-
-    title = entry['Title'].split(';')[0]
-
-    tex_entry += r'''  \hbox{{\footnotesize\arabic{bksctr}} {\it ''' + author
-    tex_entry += r'''} {\bf ''' + title + r'''}\hfil}'''
-
-    # Get only the first publisher, if there is one listed.
-    try:
-        place = entry['Publishers'][0]['Place'].split('-')[0]
-        if place:
-            place += ','
-    except IndexError:
-        place = ''
-
-    try:
-        publisher = entry['Publishers'][0]['PublisherName']
-    except IndexError:
-        publisher = ''
-
-    try:
-        year = str(entry['Year'])
-    except IndexError:
-        year = ''
-        
-    if year or place or publisher:
-        if not year:
-            year=r'\hspace{3em}'
-        if not place:
-            place = r'\hspace{5em}'
-        tex_entry += r'''\\
-  \hbox{''' + year + ' ' + place + ' ' + publisher + r'''}'''
-
-
-    print(protect(tex_entry), file=outf)
-    print(file=outf)
-
-    for comment in entry['Others']:
-        print(protect(comment), file=outf)
-        print(file=outf)
-
-    print(entry.num_str(), file=outf)
-    print(r'''}
-
-''', file=outf)
+    return cleaned
     
-def print_entry3(count, entry, outf=sys.stdout):
+def print_entry(count, entry, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
 
@@ -293,7 +209,8 @@ def print_entry3(count, entry, outf=sys.stdout):
     # make the Author, Title line
     author = get_author_string(entry)
 
-    title = entry['Title'].split(';')[0]
+    #title = entry['Title'].split(';')[0]
+    title = entry['Title']
 
     tex_entry += r'''  \footnotesize\arabic{bksctr} {\it ''' + author
     tex_entry += r'''} {\bf ''' + title + r'''}'''
@@ -312,6 +229,7 @@ def print_entry3(count, entry, outf=sys.stdout):
 
     try:
         publisher = entry['Publishers'][0]['PublisherName']
+        publisher = publisher.replace('selbstverlag', 'self-published')
     except IndexError:
         publisher = ''
 
@@ -323,6 +241,8 @@ def print_entry3(count, entry, outf=sys.stdout):
     if year or place or publisher:
         if not year:
             year=r'\hspace{3em}'
+        else:
+            year += '\hspace{0.5em}'
         if not place:
             place = r'\hspace{5em}'
 
@@ -332,7 +252,8 @@ def print_entry3(count, entry, outf=sys.stdout):
         print(file=outf)
 
     for comment in entry['Others']:
-        print(protect(comment), file=outf)
+        clean_com = clean_comment(comment)
+        print(protect(clean_com), file=outf)
         print(file=outf)
 
     print(entry.num_str(), file=outf)
@@ -367,7 +288,7 @@ def main():
         print_header(bookf, outf=filep)
         for count, ent in enumerate(bookf):
             try:
-                print_entry3(count, ent, outf=filep)
+                print_entry(count, ent, outf=filep)
             except Exception as e:
                 pprint(e)
                 print('problem with entry:', count + 1)
