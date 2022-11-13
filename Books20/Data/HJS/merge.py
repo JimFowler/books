@@ -19,7 +19,6 @@ bf4.set_filename('./hjs04_books.xml')
 bf4.read_file_xml()
 
 bf_all = bf1 + bf2 + bf3 + bf4
-bf_all.sort_by('Title')
 bf_all.sort_by('Author')
 bf_all.sort_by('Year')
 bf_all.set_filename('./hjs_all.xml')
