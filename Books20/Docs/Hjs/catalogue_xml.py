@@ -22,24 +22,23 @@ the books.  Create a LaTeX file for processing. Catalogue should look like
 Intro
   Who, what, where, when, how
 
-\bkentry{1930}{Eddington, Arthur}
-{The Internal Constitution of Stars}
-{Cambridge, Cambridge University Press}
-{18 x 26.25 cm, x, 407 pp, 5 figs, 48 tables}
-{BEA 134; DSB 2:337; DeV 1140}
 
 TODO:
 
+  really need to make this a class that takes an entry
+
+  pick better font for catalogue entries
+
   DONE identify bookplates in hjs01_books.xml
   DONE indent year place publisher??
-  pick better font for catalogue entries
   DONE use \vbox for both entry and comments to prevent page breaks in comments
-  add sensible pagination, do not use my codes for page counts
-  use Roman numerals for preface page counts
+  DONE add sensible pagination, do not use my codes for page counts
+  DONE use Roman numerals for preface page counts
   DONE determine proper order of comments
+   edition
    series
    books notes
-    laid in, edition, etc.
+    laid in, etc.
     dedication
    dust jacket
    binding
@@ -59,6 +58,7 @@ from pprint import pprint
 
 from aabooks.ajbbook import bookfile as bf
 from aabooks.lib import utils as aautils
+from aabooks.lib import roman
 
 import configargparse as argp
 
@@ -185,6 +185,85 @@ def get_author_string(entry):
         ret_str += ','
     return ret_str
 
+class Comma(object):
+    '''Add a comma and a space unless first is True'''
+    def __init__(self):
+        self.first_comma = True
+
+    def test(self):
+        '''Test the value of first_comma and return the
+        appropriate string.
+
+        '''
+        if self.first_comma:
+            self.first_comma = False
+            return '\hspace{1em}'
+        else:
+            return ', '
+
+def make_pagination_str(pagination):
+    '''Create a clean and neat pagination string given a string
+    of the form 12pp+235p+12P.
+
+    '''
+    pages = ''
+    page_counts = pagination.split('+')
+    comma = Comma()
+
+    for page in page_counts:
+        if 'pp' in page:
+            pg = int(page.split('pp')[0])
+            pages += comma.test() + roman.to_roman(pg).lower()
+        elif 'p' in page:
+            pg = page.split('p')[0]
+            pages += comma.test() + str(pg) + 'pp'
+        elif 'P' in page:
+            pg = page.split('P')[0]
+            pages += comma.test() + str(pg) + ' plates'
+        elif 'c' in page:
+            pg = page.split('c')[0]
+            pages += comma.test() + str(pg) + ' charts'
+        elif 'I' in page:
+            pg = page.split('I')[0]
+            pages += comma.test() + str(pg) + ' index'
+        elif 'AA' in page:
+            pg = page.split('AA')[0]
+            pages += comma.test() + str(pg) + ' Appendix A'
+        elif 'AB' in page:
+            pg = page.split('AB')[0]
+            pages += comma.test() + str(pg) + ' Appendix A'
+        elif 'AC' in page:
+            pg = page.split('AC')[0]
+            pages += comma.test() + str(pg) + ' Appendix A'
+        elif page:
+            print(page)
+        else:
+            pass
+        
+    return pages
+
+
+def make_edition(edition):
+    '''Create a proper string for the edition number.
+    i.e. 1^{st}, 2^{nd}, etc. This will only work correctly
+    up to the 20th edition.  The 21st edition will be incorrect
+    and will be printed as the '21th edition'
+
+    '''
+
+    ed = int(edition)
+    suffixes = {
+        1 : 'st',
+        2 : 'nd',
+        3 : 'rd',
+        }
+    try:
+        suffix = suffixes[ed]
+    except KeyError:
+        suffix = 'th'
+        
+    return '\Ord{' + str(edition) + '}{' + suffix + '} ' + 'edition'
+
 def clean_comment(comment):
     '''Clean up my parsable comments in the XML files
     with good LateX comments.
@@ -237,6 +316,12 @@ def print_entry(count, entry, outf=sys.stdout):
         year = str(entry['Year'])
     except IndexError:
         year = ''
+
+    try:
+        pagination = entry['Pagination']
+        pages = make_pagination_str(pagination)
+    except KeyError:
+        pages = ''
         
     if year or place or publisher:
         if not year:
@@ -246,11 +331,19 @@ def print_entry(count, entry, outf=sys.stdout):
         if not place:
             place = r'\hspace{5em}'
 
-        year_pub_entry = ' '.join([year, place, publisher])
+        year_pub_entry = ' '.join([year, place, publisher]) + pages
 
         print(protect(year_pub_entry), file=outf)
         print(file=outf)
 
+    try:
+        edition = entry['Edition']
+        if edition:
+            print(protect(make_edition(edition)), file=outf)
+            print(file=outf)
+    except KeyError:
+        pass
+    
     for comment in entry['Others']:
         clean_com = clean_comment(comment)
         print(protect(clean_com), file=outf)
