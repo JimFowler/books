@@ -231,10 +231,10 @@ def make_pagination_str(pagination):
             pages += comma.test() + str(pg) + ' Appendix A'
         elif 'AB' in page:
             pg = page.split('AB')[0]
-            pages += comma.test() + str(pg) + ' Appendix A'
+            pages += comma.test() + str(pg) + ' Appendix B'
         elif 'AC' in page:
             pg = page.split('AC')[0]
-            pages += comma.test() + str(pg) + ' Appendix A'
+            pages += comma.test() + str(pg) + ' Appendix C'
         elif page:
             print(page)
         else:
@@ -245,22 +245,23 @@ def make_pagination_str(pagination):
 
 def make_edition(edition):
     '''Create a proper string for the edition number.
-    i.e. 1^{st}, 2^{nd}, etc. This will only work correctly
-    up to the 20th edition.  The 21st edition will be incorrect
-    and will be printed as the '21th edition'
-
+    i.e. 1^{st}, 2^{nd}, etc. This should be able to handle
+    any edition number. edition may be a string, int, or float.
     '''
 
-    ed = int(edition)
-    suffixes = {
-        1 : 'st',
-        2 : 'nd',
-        3 : 'rd',
-        }
-    try:
-        suffix = suffixes[ed]
-    except KeyError:
+    ed_num = int(edition)
+    ed_digit = str(ed_num)[-1]
+    if 11 == ed_num or 12 == ed_num or 13 == ed_num:
         suffix = 'th'
+    elif '1' in ed_digit:
+        suffix = 'st'
+    elif '2' in ed_digit:
+        suffix = 'nd'
+    elif '3' in ed_digit:
+        suffix = 'rd'
+    else:
+        suffix = 'th'
+
         
     return '\Ord{' + str(edition) + '}{' + suffix + '} ' + 'edition'
 
@@ -288,10 +289,9 @@ def print_entry(count, entry, outf=sys.stdout):
     # make the Author, Title line
     author = get_author_string(entry)
 
-    #title = entry['Title'].split(';')[0]
     title = entry['Title']
 
-    tex_entry += r'''  \footnotesize\arabic{bksctr} {\it ''' + author
+    tex_entry += r'''  {\footnotesize\arabic{bksctr}} {\it ''' + author
     tex_entry += r'''} {\bf ''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
@@ -314,7 +314,7 @@ def print_entry(count, entry, outf=sys.stdout):
 
     try:
         year = str(entry['Year'])
-    except IndexError:
+    except ValueError:
         year = ''
 
     try:
