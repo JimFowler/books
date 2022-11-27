@@ -1,3 +1,13 @@
+2022-11-26  Jim Fowler  <jrf@biblion>
+
+	* Docs/Hjs/hjs_test.xml: created test entries for cat_entry.py
+	
+	* Docs/Hjs/test_hjs.tex: created test document for cat_entry.py
+
+	* Docs/Hjs/cat_entry.py (CatEntry): created class CatEntry as
+	a base class for different catalogue entries.  Also create classs
+	HjsEntry.
+
 2022-10-24  Jim Fowler  <jrf@biblion>
 
 	* Docs/Hjs/catalogue_xml.py (print_entry2): Created new function

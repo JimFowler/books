@@ -52,14 +52,22 @@ build_docs: ${SUB_DIRS} hjs_catalogue.pdf
 
 .PHONY: hjs_catalogue.pdf
 hjs_catalogue.pdf catalogue hjs: books.tex hjs_catalogue.tex
-	${LATEX} hjs_catalogue
+	${LATEX} -draftmode hjs_catalogue
 	${BIBER} hjs_catalogue
-	${LATEX} hjs_catalogue
-	${LATEX} hjs_catalogue
+	${LATEX} -draftmode hjs_catalogue
+	${LATEX} -draftmode hjs_catalogue
 
 .PHONY: the_books.tex
 books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
 	python catalogue_xml.py -s Year -o books.tex ../../Data/HJS/hjs_full.xml
+
+.PHONY: test_hjs.pdf
+test_hjs.pdf: test_books.tex test_hjs.tex
+	${LATEX} -draftmode test_hjs.tex
+
+.PHONY: test_books.tex
+test_books.tex: cat_entry.py
+	python cat_entry.py
 
 #
 # Install any software and/or documents
