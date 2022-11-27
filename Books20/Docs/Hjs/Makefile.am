@@ -98,11 +98,12 @@ clean: ${SUB_DIRS}
 veryclean: ${SUB_DIRS}
 	@echo "Doing veryclean of ${CURDIR}"
 	@echo "Nothing to do for veryclean in ${CURDIR}"
+	${RM} -f books.tex test_books.tex test_hjs.pdf
 
 .PHONY: distclean
 distclean: ${SUB_DIRS}
 	@echo "Doing distclean of ${CURDIR}"
-	${RM} Makefile Makefile.in
+	${RM} -f Makefile Makefile.in
 
 #
 # Targets you might want in general
