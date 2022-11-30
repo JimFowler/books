@@ -14,9 +14,15 @@
 %%
 %%
 %% End copyright
+%
+% History
+% created 11 June 2022
+%
+%----------------------------------------------------------
 \documentclass[letterpaper]{book}
 
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage{books20}
 \usepackage[
   backend=biber,
@@ -25,11 +31,6 @@
 \addglobalbib{../MasterBib.bib}
 \addbibresource{hjs_baas_obit.bib}
 
-%
-% History
-% created 11 June 2022
-%
-%----------------------------------------------------------
 \begin{document}
 
 \frontmatter
@@ -49,7 +50,7 @@
 \clearpage
 
 \pagestyle{plain}
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics{hjs_photo.jpg}
   Harlan J.~Smith 1924--1991
@@ -57,18 +58,24 @@
 \end{figure}
 \clearpage
 
-\section*{Harlan J. Smith}
+{\Large \bf Harlan J. Smith}
+\\
+\\
 \import{./}{biography}
 \clearpage
 
-\section*{The Books}
+{\Large \bf The Books}
+\\
+\\
 \import{./}{library}
 \clearpage
 
 \printbibliography
 
 \mainmatter
-\section*{Catalogue of the Harlan J. Smith Collection}
+{\Large \bf Catalogue of the Harlan J. Smith Collection}
+\\
+\\
 \import{./}{books}
 
 \end{document}
