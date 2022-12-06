@@ -55,7 +55,7 @@ hjs_catalogue.pdf catalogue hjs: books.tex hjs_catalogue.tex
 	${LATEX} -draftmode hjs_catalogue
 	${BIBER} hjs_catalogue
 	${LATEX} -draftmode hjs_catalogue
-	${LATEX} -draftmode hjs_catalogue
+	${LATEX} hjs_catalogue
 
 .PHONY: the_books.tex
 books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
@@ -64,6 +64,8 @@ books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
 .PHONY: test_hjs.pdf
 test_hjs.pdf: test_books.tex test_hjs.tex
 	${LATEX} -draftmode test_hjs.tex
+	${LATEX} -draftmode test_hjs.tex
+	${LATEX} test_hjs.tex
 
 .PHONY: test_books.tex
 test_books.tex: cat_entry.py

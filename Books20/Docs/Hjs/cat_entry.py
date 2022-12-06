@@ -30,9 +30,11 @@ CONSTANTS.initials_format='{first} {middle}'
 class Comma():
     '''Add a comma and a space unless first_comma is True'''
 
-    def __init__(self):
+    def __init__(self, first_text='', other_text=', '):
         '''Initialize the class variables.'''
         self.first_comma = True
+        self.first_text = first_text
+        self.other_text = other_text
 
     def test(self):
         '''Test the value of first_comma and return the
@@ -41,11 +43,16 @@ class Comma():
         '''
         if self.first_comma:
             self.first_comma = False
-            ret_str = r'\hspace{1em}'
+            ret_str = self.first_text
         else:
-            ret_str = ', '
+            ret_str = self.other_text
 
         return ret_str
+
+    def reset_first(self):
+        '''Reset the value of first_comma.'''
+        self.first_comma = True
+
 
 class CatEntry():
     '''A generic class to create a catalogue entry from an AJBEntry (see
@@ -64,7 +71,7 @@ class CatEntry():
 
         '''
 
-        new_str = raw_str.replace(r"&", r'\&')
+        new_str = raw_str.replace(r'&', r'\&')
         return new_str
 
     def make_name_string(self, hname, name_style='first'):
@@ -159,7 +166,7 @@ class CatEntry():
         '''
         pages = ''
         page_counts = pagination.split('+')
-        comma = Comma()
+        comma = Comma(first_text=r'\hspace{1em}', other_text=', ')
 
         for page in page_counts:
             if 'pp' in page:
@@ -177,16 +184,16 @@ class CatEntry():
                 pages += comma.test() + str(pg_count) + ' charts'
             elif 'I' in page:
                 pg_count = page.split('I')[0]
-                pages += comma.test() + str(pg_count) + ' index'
+                pages += comma.test() + str(pg_count) + 'p index'
             elif 'AA' in page:
                 pg_count = page.split('AA')[0]
-                pages += comma.test() + str(pg_count) + ' Appendix A'
+                pages += comma.test() + str(pg_count) + 'p appendix A'
             elif 'AB' in page:
                 pg_count = page.split('AB')[0]
-                pages += comma.test() + str(pg_count) + ' Appendix B'
+                pages += comma.test() + str(pg_count) + 'p appendix B'
             elif 'AC' in page:
                 pg_count = page.split('AC')[0]
-                pages += comma.test() + str(pg_count) + ' Appendix C'
+                pages += comma.test() + str(pg_count) + 'p appendix C'
             elif page:
                 print(page)
             else:
@@ -197,6 +204,8 @@ class CatEntry():
     def clean_comment(self, comment):
         '''Clean up the quotes in my comments from the XML files with
         good LateX quotes.
+
+        Should this be added to self.protect()?
 
         '''
         cleaned = comment.replace(' "', ' ``')
@@ -223,11 +232,11 @@ class HjsEntry(CatEntry):
   \vspace*{0.5 cm}
   \noindent
 ''')
-
+        # add reference link based on ????
         # make the Author, Title line
         tex_entry += r'''  {\footnotesize ''' + str(count) + r'''}'''
-        tex_entry += r''' {\it ''' + self.get_author_string(entry)
-        tex_entry += r'''} {\bf ''' + entry['Title'] + r'''}'''
+        tex_entry += r''' \textit{''' + self.get_author_string(entry)
+        tex_entry += r'''} \textbf{''' + entry['Title'] + r'''}'''
 
         print(self.protect(tex_entry), file=outf)
         print(file=outf)
@@ -327,16 +336,14 @@ if __name__ == '__main__':
             self.assertEqual(self.cat_entry.make_edition(103), r'\Ord{103}{rd} edition')
             self.assertEqual(self.cat_entry.make_edition(104), r'\Ord{104}{th} edition')
 
-        def test_hjs(self):
-            '''Test the HJS_entry class'''
-
-            hjs_entry = HjsEntry()
-            with open('test_books.tex', 'w') as filep:
-                bookf = bf.BookFile()
-                bookf.read_file('hjs_test.xml')
-
-                for count, entry in enumerate(bookf):
-                    count += 1
-                    hjs_entry.print_entry(count, entry, outf=filep)
-
     unittest.main()
+
+    # Create test_books.xml
+    hjs_entry = CatEntry()
+    with open('test_books.tex', 'w') as filep:
+        bookf = bf.BookFile()
+        bookf.read_file('hjs_test.xml')
+
+        for test_count, test_entry in enumerate(bookf):
+            test_count += 1
+            hjs_entry.print_entry(test_count, test_entry, outf=filep)
