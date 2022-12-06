@@ -286,13 +286,14 @@ def print_entry(count, entry, outf=sys.stdout):
   \noindent
 ''')
 
+    # add reference label
     # make the Author, Title line
     author = get_author_string(entry)
 
     title = entry['Title']
 
-    tex_entry += r'''  {\footnotesize\arabic{bksctr}} {\it ''' + author
-    tex_entry += r'''} {\bf ''' + title + r'''}'''
+    tex_entry += r'''  {\footnotesize\arabic{bksctr}} \textit{''' + author
+    tex_entry += r'''} \textbf{''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
     print(file=outf)
