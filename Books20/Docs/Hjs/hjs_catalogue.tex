@@ -30,6 +30,7 @@
 ]{biblatex}
 \addglobalbib{../MasterBib.bib}
 \addbibresource{hjs_baas_obit.bib}
+\addbibresource{hjs.bib}
 
 \begin{document}
 
@@ -42,40 +43,43 @@
 \author{compiled by James R. Fowler}
 \date{copy of \today}
 \maketitle
-\clearpage
+\newpage
 
 \vspace*{5 in}
 \centerline{Copyright \copyright 2022 McDonald Observatory}
 \centerline{Fort Davis, Texas}
-\clearpage
+\newpage
 
 \pagestyle{plain}
 \begin{figure}[t]
   \centering
   \includegraphics{hjs_photo.jpg}
-  Harlan J.~Smith 1924--1991
+  Harlan J.~Smith 1924 -- 1991
   \label{fig:hjs}
 \end{figure}
 \clearpage
+\mbox{}
+\thispagestyle{empty}
+\newpage
 
-{\Large \bf Harlan J. Smith}
-\\
-\\
+
+\centerline{\Large \bf Harlan J. Smith}
+\bigskip
 \import{./}{biography}
-\clearpage
+\newpage
 
-{\Large \bf The Books}
-\\
-\\
+\centerline{\Large \bf The Books}
+\bigskip
 \import{./}{library}
-\clearpage
+\newpage
 
 \printbibliography
 
 \mainmatter
-{\Large \bf Catalogue of the Harlan J. Smith Collection}
-\\
-\\
+\begin{center}
+  {\Large \bf Catalogue of the Harlan J. Smith Collection}
+\end{center}
+\bigskip
 \import{./}{books}
 
 \end{document}
