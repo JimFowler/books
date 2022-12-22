@@ -212,11 +212,11 @@ def make_pagination_str(pagination):
 
     for page in page_counts:
         if 'pp' in page:
-            pg = int(page.split('pp')[0])
+            pg = int(page.split(r'pp')[0])
             pages += comma.test() + roman.to_roman(pg).lower()
         elif 'p' in page:
             pg = page.split('p')[0]
-            pages += comma.test() + str(pg) + 'pp'
+            pages += comma.test() + str(pg) + '\,pp'
         elif 'P' in page:
             pg = page.split('P')[0]
             pages += comma.test() + str(pg) + ' plates'
