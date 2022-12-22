@@ -63,7 +63,7 @@ from aabooks.lib import roman
 import configargparse as argp
 
 from nameparser.config import CONSTANTS
-CONSTANTS.initials_format='{first} {middle}'
+CONSTANTS.initials_format='{first}{middle}'
 
 __VERSION__ = '2.0'
 
