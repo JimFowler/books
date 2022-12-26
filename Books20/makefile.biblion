@@ -76,8 +76,8 @@ EMACS_FILE_DIR = ${prefix}/Emacs/Files
 # Location to install python files.  Should contain
 # the directories bin, lib, and possibly etc.
 #
-PYTHON_INSTALL_DIR = ${prefix}
-
+#PYTHON_INSTALL_DIR = ${prefix}
+PYTHON_INSTALL_DIR = /home/jrf/anaconda3
 
 ##
 ## TeX/LaTeX
