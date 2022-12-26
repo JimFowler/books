@@ -21,6 +21,8 @@
 %----------------------------------------------------------
 \documentclass[letterpaper]{book}
 
+\usepackage[T1]{fontenc}
+
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage[titlesize=12pt,parsize=10pt]{colophon}
@@ -33,19 +35,22 @@
 \addbibresource{hjs_baas_obit.bib}
 \addbibresource{hjs.bib}
 
+\newcommand*{\bkfont}{\fontfamily{LibreCsln-TLF}\selectfont}
+\DeclareTextFontCommand{\bookfont}{\bkfont}
+
 \begin{document}
 
 \frontmatter
 \pagestyle{empty}
-\title{Catalogue of the Harlan J.~Smith Collection \\
-  of Books in the Otto Struve Library \\
-  of the McDonald Observatory, \\
-  Fort Davis, Texas}
+\title{\textsc{Catalogue of the Harlan J.\ Smith \\
+    Collection of Science Books \\
+    in the Otto Struve Library \\
+    of the McDonald Observatory, \\
+  Fort Davis, Texas}}
 \author{compiled by James R. Fowler}
 \date{copy of \today}
 \maketitle
 \newpage
-
 \vspace*{5 in}
 \centerline{Copyright \copyright 2022 McDonald Observatory}
 \centerline{Fort Davis, Texas}
@@ -64,32 +69,38 @@
 \newpage
 
 
-\centerline{\Large \bf Harlan J. Smith}
-\bigskip
+\vspace*{1 in}
+\centerline{\Large \bf Harlan J.\ Smith}
+\bigskip\bigskip
 \import{./}{biography}
 \newpage
 
+\vspace*{1 in}
 \centerline{\Large \bf The Books}
-\bigskip
+\bigskip\bigskip
 \import{./}{library}
 \newpage
+%%\showthe\font
 
 \printbibliography
 
 \mainmatter
 \begin{center}
-  {\Large \bf Catalogue of the Harlan J. Smith Collection}
+  {\Large \bf Catalogue of the Harlan J.\ Smith Collection}
 \end{center}
 \bigskip
 \import{./}{books}
 
+%%\showthe\font
+
 \backmatter
-\mbox{}
-\cleardoublepage
+%\mbox{}
+%\cleardoublepage
 \begin{colophon}
-  The catalogue was typeset using the \LaTeX\ processing system
-  in 10pt Computer Modern Roman font. It was printed and bound
-  by J.~Fowler.
+  The catalogue was typeset with the \LaTeX2e\ processing system using
+  10pt Computer Modern Roman font. The titles of the catalogue entries
+  are in the Libre Caslon Bold font. This was printed and
+  bound by J.~Fowler.
 \end{colophon}
 
 \end{document}

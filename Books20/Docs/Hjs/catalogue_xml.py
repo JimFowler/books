@@ -139,11 +139,12 @@ def make_name_string(hname, name_style='first'):
     initials = hname.initials()
 
     if 'first' in name_style:
-        name = f'{hname.last}'
+        name = r'\textit{' + f'{hname.last}'
         if initials:
             name += f', {initials}'
+        name += r'}'
     elif 'second' in name_style:
-        name = f'{initials} {hname.last}'
+        name = r'\textit{' + f'{initials} {hname.last}' + r'}'
     else:
         name = r''
 
@@ -156,8 +157,6 @@ def get_author_string(entry):
 
     '''
 
-    #return 'Author, A.~N.~and A.~N.~Editor'
-
     authors = entry['Authors']
     editors = entry['Editors']
     ret_str = ''
@@ -166,14 +165,14 @@ def get_author_string(entry):
         # first author
         ret_str = make_name_string(authors[0], name_style='first')
         if len(authors) > 2:
-            ret_str += ', et.~al.'
+            ret_str += ', et.\,al.'
         elif len(authors) == 2:
             ret_str += ' and ' + make_name_string(authors[1], name_style='second')
     elif len(editors):
         # first editor
         ret_str = make_name_string(editors[0])
         if len(editors) > 2:
-            ret_str += ', et.~al., eds.'
+            ret_str += ', et.\,al., eds.'
         elif len(editors) == 2:
             ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds.'
         else:
@@ -219,22 +218,22 @@ def make_pagination_str(pagination):
             pages += comma.test() + str(pg) + '\,pp'
         elif 'P' in page:
             pg = page.split('P')[0]
-            pages += comma.test() + str(pg) + ' plates'
+            pages += comma.test() + str(pg) + '\,plates'
         elif 'c' in page:
             pg = page.split('c')[0]
-            pages += comma.test() + str(pg) + ' charts'
+            pages += comma.test() + str(pg) + '\,charts'
         elif 'I' in page:
             pg = page.split('I')[0]
-            pages += comma.test() + str(pg) + ' index'
+            pages += comma.test() + str(pg) + 'p index'
         elif 'AA' in page:
             pg = page.split('AA')[0]
-            pages += comma.test() + str(pg) + ' Appendix A'
+            pages += comma.test() + str(pg) + 'p Appendix A'
         elif 'AB' in page:
             pg = page.split('AB')[0]
-            pages += comma.test() + str(pg) + ' Appendix B'
+            pages += comma.test() + str(pg) + 'p Appendix B'
         elif 'AC' in page:
             pg = page.split('AC')[0]
-            pages += comma.test() + str(pg) + ' Appendix C'
+            pages += comma.test() + str(pg) + 'p Appendix C'
         elif page:
             print(page)
         else:
@@ -292,8 +291,9 @@ def print_entry(count, entry, outf=sys.stdout):
 
     title = entry['Title']
 
-    tex_entry += r'''  {\footnotesize\arabic{bksctr}} \textit{''' + author
-    tex_entry += r'''} \textbf{''' + title + r'''}'''
+    tex_entry += r'''  {\footnotesize\arabic{bksctr}} ''' + author
+    #tex_entry += r''' \bookfont{ ''' + title + r'''}'''
+    tex_entry += r''' \textsc{\bfseries ''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
     print(file=outf)
@@ -332,7 +332,7 @@ def print_entry(count, entry, outf=sys.stdout):
         if not place:
             place = r'\hspace{5em}'
 
-        year_pub_entry = ' '.join([year, place, publisher]) + pages
+        year_pub_entry = ' '.join([year, place, publisher]) + ',' + pages
 
         print(protect(year_pub_entry), file=outf)
         print(file=outf)
