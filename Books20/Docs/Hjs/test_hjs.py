@@ -16,15 +16,18 @@
 ##
 ##
 ## End copyright
+'''Test the HjsEntry() class in cat_entry.py.  This will also test
+the CatEntry() class as well.  Should produce the test_books.tex
+file from the test_hjs.xml file.
 
+'''
 
 from aabooks.ajbbook import bookfile as bf
 import cat_entry as ce
 
-
 # Create test_books.xml
 hjs_entry = ce.HjsEntry()
-with open('test_books.tex', 'w') as filep:
+with open('test_books.tex', 'w', encoding='UTF8') as filep:
     bookf = bf.BookFile()
     bookf.read_file('test_hjs.xml')
 
