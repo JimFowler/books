@@ -69,7 +69,7 @@ test_hjs.pdf: test_books.tex test_hjs.tex
 
 .PHONY: test_books.tex
 test_books.tex: cat_entry.py
-	python cat_entry.py
+	python test_hjs.py
 
 #
 # Install any software and/or documents

@@ -175,7 +175,7 @@ class CatEntry():
             elif 'p' in page:
                 # there should alway be one of these page counts
                 pg_count = page.split('p')[0]
-                pages += comma.test() + str(pg_count) + 'pp'
+                pages += comma.test() + str(pg_count) + '\,pp'
             elif 'P' in page:
                 pg_count = page.split('P')[0]
                 pages += comma.test() + str(pg_count) + ' plates'
@@ -236,7 +236,7 @@ class HjsEntry(CatEntry):
         # make the Author, Title line
         tex_entry += r'''  {\footnotesize ''' + str(count) + r'''}'''
         tex_entry += r''' \textit{''' + self.get_author_string(entry)
-        tex_entry += r'''} \textbf{''' + entry['Title'] + r'''}'''
+        tex_entry += r'''} \textsc{''' + entry['Title'] + r'''}'''
 
         print(self.protect(tex_entry), file=outf)
         print(file=outf)
@@ -300,15 +300,10 @@ class HjsEntry(CatEntry):
 
 
 
-
-
-
-
 # Test this class
 if __name__ == '__main__':
 
     import unittest
-    from aabooks.ajbbook import bookfile as bf
 
     class HjsEntryTestCase(unittest.TestCase):
         '''Run the unit tests for the class CatEntry.'''
@@ -337,13 +332,3 @@ if __name__ == '__main__':
             self.assertEqual(self.cat_entry.make_edition(104), r'\Ord{104}{th} edition')
 
     unittest.main()
-
-    # Create test_books.xml
-    hjs_entry = CatEntry()
-    with open('test_books.tex', 'w') as filep:
-        bookf = bf.BookFile()
-        bookf.read_file('hjs_test.xml')
-
-        for test_count, test_entry in enumerate(bookf):
-            test_count += 1
-            hjs_entry.print_entry(test_count, test_entry, outf=filep)
