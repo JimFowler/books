@@ -205,6 +205,10 @@ def make_pagination_str(pagination):
     of the form 12pp+235p+12P.
 
     '''
+
+    if not pagination:
+        return ''
+    
     pages = ''
     page_counts = pagination.split('+')
     comma = Comma()
@@ -227,13 +231,13 @@ def make_pagination_str(pagination):
             pages += comma.test() + str(pg) + 'p index'
         elif 'AA' in page:
             pg = page.split('AA')[0]
-            pages += comma.test() + str(pg) + 'p Appendix A'
+            pages += comma.test() + str(pg) + 'p App.\ A'
         elif 'AB' in page:
             pg = page.split('AB')[0]
-            pages += comma.test() + str(pg) + 'p Appendix B'
+            pages += comma.test() + str(pg) + 'p App.\ B'
         elif 'AC' in page:
             pg = page.split('AC')[0]
-            pages += comma.test() + str(pg) + 'p Appendix C'
+            pages += comma.test() + str(pg) + 'p App.\ C'
         elif page:
             print(page)
         else:
@@ -268,8 +272,12 @@ def clean_comment(comment):
     '''Clean up my parsable comments in the XML files
     with good LateX comments.
 
+    These steps will missing quotes at the begining or end
+    of a line or followed by a period or comma. Should use a regex.
+
     '''
     cleaned = comment.replace(' "', ' ``')
+    cleaned = cleaned.replace('" ', "'' ")
 
     return cleaned
     
@@ -324,15 +332,19 @@ def print_entry(count, entry, outf=sys.stdout):
     except KeyError:
         pages = ''
         
-    if year or place or publisher:
+    if year or place or publisher or pages:
         if not year:
             year=r'\hspace{3em}'
         else:
             year += '\hspace{0.5em}'
         if not place:
             place = r'\hspace{5em}'
-
-        year_pub_entry = ' '.join([year, place, publisher]) + ',' + pages
+        if publisher and pages:
+            page_comma = ','
+        else:
+            page_comma = ''
+        
+        year_pub_entry = ' '.join([year, place, publisher]) + page_comma + pages
 
         print(protect(year_pub_entry), file=outf)
         print(file=outf)
