@@ -139,15 +139,13 @@ def make_name_string(hname, name_style='first'):
     initials = hname.initials()
 
     if 'first' in name_style:
-        name = r'\textit{' + f'{hname.last}'
+        name = f'{hname.last}'
         if initials:
             name += f', {initials}'
-        name += r'}'
     elif 'second' in name_style:
-        name = r'\textit{' + f'{initials} {hname.last}' + r'}'
+        name = f'{initials} {hname.last}'
     else:
         name = r''
-
 
     return name.strip()
 
@@ -163,18 +161,26 @@ def get_author_string(entry):
 
     if len(authors):
         # first author
-        ret_str = make_name_string(authors[0], name_style='first')
+        ret_str = r'''\textit{'''
+        ret_str += make_name_string(authors[0], name_style='first')
+        ret_str += r'}'
         if len(authors) > 2:
             ret_str += ', et.\,al.'
         elif len(authors) == 2:
-            ret_str += ' and ' + make_name_string(authors[1], name_style='second')
+            ret_str += r' and \textit{'
+            ret_str += make_name_string(authors[1], name_style='second')
+            ret_str += '}'
     elif len(editors):
         # first editor
-        ret_str = make_name_string(editors[0])
+        ret_str = r'''\textit{'''
+        ret_str += make_name_string(editors[0])
+        ret_str += r'}'
         if len(editors) > 2:
             ret_str += ', et.\,al., eds.'
         elif len(editors) == 2:
-            ret_str += ' and ' + make_name_string(editors[1], name_style='second') + ', eds.'
+            ret_str += r' and \textit{'
+            ret_str += make_name_string(editors[1], name_style='second')
+            ret_str += r'}, eds.'
         else:
             ret_str += ', ed.'
 
@@ -182,6 +188,7 @@ def get_author_string(entry):
         # Only add this comma if the name string is not empty
         # otherwise the title is preceeded by a single comma
         ret_str += ','
+
     return ret_str
 
 class Comma(object):
@@ -296,17 +303,22 @@ def print_entry(count, entry, outf=sys.stdout):
     # add reference label
     # make the Author, Title line
     author = get_author_string(entry)
-
+    
     title = entry['Title']
 
     tex_entry += r'''  {\footnotesize\arabic{bksctr}} ''' + author
-    #tex_entry += r''' \bookfont{ ''' + title + r'''}'''
     tex_entry += r''' \textsc{\bfseries ''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
     print(file=outf)
 
     # Create author index entries here
+    if entry['Authors']:
+        for author in entry['Authors']:
+            print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
+    if entry['Editors']:
+        for author in entry['Editors']:
+            print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
 
     # make the Year, Place, Publisher line
     # Get only the first publisher, if there is one listed.
