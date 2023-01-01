@@ -25,6 +25,7 @@
 
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{imakeidx}
 \usepackage[titlesize=12pt,parsize=10pt]{colophon}
 \usepackage{books20}
 \usepackage[
@@ -37,6 +38,8 @@
 
 \newcommand*{\bkfont}{\fontfamily{LibreCsln-TLF}\selectfont}
 \DeclareTextFontCommand{\bookfont}{\bkfont}
+
+\makeindex[name=author,title=Author/Editor Index]
 
 \begin{document}
 
@@ -97,8 +100,10 @@
 %%\showthe\font
 
 \backmatter
-%\mbox{}
-%\cleardoublepage
+
+\indexprologue{This index gives the page numbers where the particular author/editor(s) can be found.}
+\printindex[author]
+
 \begin{colophon}
   The catalogue was typeset with the \LaTeX2e\ processing system using
   10pt Computer Modern Roman font. The titles of the catalogue entries

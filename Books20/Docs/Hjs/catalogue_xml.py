@@ -306,6 +306,8 @@ def print_entry(count, entry, outf=sys.stdout):
     print(protect(tex_entry), file=outf)
     print(file=outf)
 
+    # Create author index entries here
+
     # make the Year, Place, Publisher line
     # Get only the first publisher, if there is one listed.
     try:
