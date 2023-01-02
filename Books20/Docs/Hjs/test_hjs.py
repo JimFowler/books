@@ -29,7 +29,7 @@ import cat_entry as ce
 hjs_entry = ce.HjsEntry()
 with open('test_books.tex', 'w', encoding='UTF8') as filep:
     bookf = bf.BookFile()
-    bookf.read_file('test_hjs.xml')
+    bookf.read_file('../../Data/HJS/hjs_jrf.xml')
 
     for test_count, test_entry in enumerate(bookf):
         test_count += 1

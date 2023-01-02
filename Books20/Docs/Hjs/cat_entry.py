@@ -214,8 +214,8 @@ class CatEntry():
 
 class HjsEntry(CatEntry):
     '''A class to create a HJS catalogue entry from an AJBEntry (see
-    ajbbook/ajbentry.py). An HJS catalogoue entry is for the Harlan J. Smith
-    catalogue in the McDonald Observatory Library.
+    ajbbook/ajbentry.py). An HJS catalogoue entry is for the Harlan
+    J. Smith catalogue in the McDonald Observatory Library.
 
     '''
     def __init__(self):
