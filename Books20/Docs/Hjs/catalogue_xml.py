@@ -288,7 +288,7 @@ def clean_comment(comment):
 
     return cleaned
     
-def print_entry(count, entry, outf=sys.stdout):
+def print_entry(count, entry, authidx, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
 
@@ -298,6 +298,7 @@ def print_entry(count, entry, outf=sys.stdout):
 \vbox{%
   \vspace*{0.5 cm}
   \noindent
+  \label{entry:''' + f'{count}' +r'''}
 ''')
 
     # add reference label
@@ -306,7 +307,7 @@ def print_entry(count, entry, outf=sys.stdout):
     
     title = entry['Title']
 
-    tex_entry += r'''  {\footnotesize\arabic{bksctr}} ''' + author
+    tex_entry += r'''  \hypertarget{entry:''' + str(count) + r'''}{\footnotesize\arabic{bksctr}} ''' + author
     tex_entry += r''' \textsc{\bfseries ''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
@@ -315,11 +316,14 @@ def print_entry(count, entry, outf=sys.stdout):
     # Create author index entries here
     if entry['Authors']:
         for author in entry['Authors']:
-            print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
+            #print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
+            #print(r'\index[author]{' + make_name_string(author) + r'|myentry}', file=outf)
+            print(r'\indexentry{' + make_name_string(author) + r'|myhref}{' + f'{count}' + r'}', file=authidx)
     if entry['Editors']:
         for author in entry['Editors']:
-            print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
-
+            #print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
+            #print(r'\index[author]{' + make_name_string(author) + r'|myentry}', file=outf)
+            print(r'\indexentry{' + make_name_string(author) + r'|myhref}{' f'{count}' + r'}', file=authidx)
     # make the Year, Place, Publisher line
     # Get only the first publisher, if there is one listed.
     try:
@@ -397,7 +401,7 @@ def main():
         pprint(args)
 
     with open(args.output, 'w') as filep:
-
+        authp = open('author2.idx', 'w')
         bookf = bf.BookFile()
         bookf.read_file(args.input)
 
@@ -406,9 +410,9 @@ def main():
             bookf.sort_by(args.sort)
 
         print_header(bookf, outf=filep)
-        for count, ent in enumerate(bookf):
+        for count, ent in enumerate(bookf, start=1):
             try:
-                print_entry(count, ent, outf=filep)
+                print_entry(count, ent, authp, outf=filep)
             except Exception as e:
                 pprint(e)
                 print('problem with entry:', count + 1)

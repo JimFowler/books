@@ -25,17 +25,15 @@
 
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\usepackage{imakeidx}
+\usepackage[noautomatic]{imakeidx}
+%\usepackage{imakeidx}
 \usepackage[titlesize=12pt,parsize=10pt]{colophon}
 \usepackage{books20}
-\usepackage[
-  backend=biber,
-  style=alphabetic,
-]{biblatex}
 \addglobalbib{../MasterBib.bib}
 \addbibresource{hjs_baas_obit.bib}
 \addbibresource{hjs.bib}
 
+\newcommand*{\myhref}[1]{\hyperlink{entry:#1}{#1}}
 \newcommand*{\bkfont}{\fontfamily{LibreCsln-TLF}\selectfont}
 \DeclareTextFontCommand{\bookfont}{\bkfont}
 
