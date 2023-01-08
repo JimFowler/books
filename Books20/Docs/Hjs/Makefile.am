@@ -51,7 +51,7 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} hjs_catalogue.pdf
 
 .PHONY: hjs_catalogue.pdf
-hjs_catalogue.pdf catalogue hjs: books.tex hjs_catalogue.tex
+hjs_catalogue.pdf catalogue hjs: hjs_catalogue.tex
 	${LATEX} -draftmode hjs_catalogue
 	${BIBER} hjs_catalogue
 	${LATEX} -draftmode hjs_catalogue
