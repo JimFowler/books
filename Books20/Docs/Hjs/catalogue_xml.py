@@ -298,7 +298,6 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
 \vbox{%
   \vspace*{0.5 cm}
   \noindent
-  \label{entry:''' + f'{count}' +r'''}
 ''')
 
     # add reference label
