@@ -238,13 +238,13 @@ def make_pagination_str(pagination):
             pages += comma.test() + str(pg) + 'p index'
         elif 'AA' in page:
             pg = page.split('AA')[0]
-            pages += comma.test() + str(pg) + 'p App.\ A'
+            pages += comma.test() + str(pg) + 'p app.\ A'
         elif 'AB' in page:
             pg = page.split('AB')[0]
-            pages += comma.test() + str(pg) + 'p App.\ B'
+            pages += comma.test() + str(pg) + 'p app.\ B'
         elif 'AC' in page:
             pg = page.split('AC')[0]
-            pages += comma.test() + str(pg) + 'p App.\ C'
+            pages += comma.test() + str(pg) + 'p app.\ C'
         elif page:
             print(page)
         else:
