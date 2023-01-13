@@ -115,7 +115,7 @@ def sort_bookfile(bookfile, sort_flag):
         print(f'sorting bookfile by {sort_flag}')
         bookfile.sort(sort_name=sort_flag)
 
-def print_header(bookfile, outf=sys.stdout):
+def print_header(outf=sys.stdout):
     '''Print the leading material for the catalogue.
 
     '''
@@ -165,7 +165,7 @@ def get_author_string(entry):
         ret_str += make_name_string(authors[0], name_style='first')
         ret_str += r'}'
         if len(authors) > 2:
-            ret_str += ', et.\,al.'
+            ret_str += r', et.\,al.'
         elif len(authors) == 2:
             ret_str += r' and \textit{'
             ret_str += make_name_string(authors[1], name_style='second')
@@ -176,7 +176,7 @@ def get_author_string(entry):
         ret_str += make_name_string(editors[0])
         ret_str += r'}'
         if len(editors) > 2:
-            ret_str += ', et.\,al., eds.'
+            ret_str += r', et.\,al., eds.'
         elif len(editors) == 2:
             ret_str += r' and \textit{'
             ret_str += make_name_string(editors[1], name_style='second')
@@ -191,7 +191,7 @@ def get_author_string(entry):
 
     return ret_str
 
-class Comma(object):
+class Comma():
     '''Add a comma and a space unless first is True'''
     def __init__(self):
         self.first_comma = True
@@ -203,9 +203,13 @@ class Comma(object):
         '''
         if self.first_comma:
             self.first_comma = False
-            return '\hspace{1em}'
-        else:
-            return ', '
+            return r'\hspace{1em}'
+
+        return ', '
+
+    def isfirst(self):
+        '''Return the value of self.first_comma'''
+        return self.first_comma
 
 def make_pagination_str(pagination):
     '''Create a clean and neat pagination string given a string
@@ -215,41 +219,41 @@ def make_pagination_str(pagination):
 
     if not pagination:
         return ''
-    
+
     pages = ''
     page_counts = pagination.split('+')
     comma = Comma()
 
     for page in page_counts:
         if 'pp' in page:
-            pg = int(page.split(r'pp')[0])
-            pages += comma.test() + roman.to_roman(pg).lower()
+            pg_str = int(page.split(r'pp')[0])
+            pages += comma.test() + roman.to_roman(pg_str).lower()
         elif 'p' in page:
-            pg = page.split('p')[0]
-            pages += comma.test() + str(pg) + '\,pp'
+            pg_str = page.split('p')[0]
+            pages += comma.test() + str(pg_str) + r'\,pp'
         elif 'P' in page:
-            pg = page.split('P')[0]
-            pages += comma.test() + str(pg) + '\,plates'
+            pg_str = page.split('P')[0]
+            pages += comma.test() + str(pg_str) + r'\,plates'
         elif 'c' in page:
-            pg = page.split('c')[0]
-            pages += comma.test() + str(pg) + '\,charts'
+            pg_str = page.split('c')[0]
+            pages += comma.test() + str(pg_str) + r'\,charts'
         elif 'I' in page:
-            pg = page.split('I')[0]
-            pages += comma.test() + str(pg) + 'p index'
+            pg_str = page.split('I')[0]
+            pages += comma.test() + str(pg_str) + r'p index'
         elif 'AA' in page:
-            pg = page.split('AA')[0]
-            pages += comma.test() + str(pg) + 'p app.\ A'
+            pg_str = page.split('AA')[0]
+            pages += comma.test() + str(pg_str) + r'p app.\ A'
         elif 'AB' in page:
-            pg = page.split('AB')[0]
-            pages += comma.test() + str(pg) + 'p app.\ B'
+            pg_str = page.split('AB')[0]
+            pages += comma.test() + str(pg_str) + r'p app.\ B'
         elif 'AC' in page:
-            pg = page.split('AC')[0]
-            pages += comma.test() + str(pg) + 'p app.\ C'
+            pg_str = page.split('AC')[0]
+            pages += comma.test() + str(pg_str) + r'p app.\ C'
         elif page:
             print(page)
         else:
             pass
-        
+
     return pages
 
 
@@ -260,20 +264,21 @@ def make_edition(edition):
     '''
 
     ed_num = int(edition)
-    ed_digit = str(ed_num)[-1]
-    if 11 == ed_num or 12 == ed_num or 13 == ed_num:
+    last_digit = str(ed_num)[-1]
+    #if 11 == ed_num or 12 == ed_num or 13 == ed_num:
+    if ed_num in [11, 12, 13]:
         suffix = 'th'
-    elif '1' in ed_digit:
+    elif '1' in last_digit:
         suffix = 'st'
-    elif '2' in ed_digit:
+    elif '2' in last_digit:
         suffix = 'nd'
-    elif '3' in ed_digit:
+    elif '3' in last_digit:
         suffix = 'rd'
     else:
         suffix = 'th'
 
-        
-    return '\Ord{' + str(edition) + '}{' + suffix + '} ' + 'edition'
+
+    return r'\Ord{' + str(edition) + '}{' + suffix + '} ' + 'edition'
 
 def clean_comment(comment):
     '''Clean up my parsable comments in the XML files
@@ -287,7 +292,7 @@ def clean_comment(comment):
     cleaned = cleaned.replace('" ', "'' ")
 
     return cleaned
-    
+
 def print_entry(count, entry, authidx, outf=sys.stdout):
     '''Print an entry as number 'count' for the catalogue. These are
     expected to be of the form AJBEntry.
@@ -303,10 +308,11 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
     # add reference label
     # make the Author, Title line
     author = get_author_string(entry)
-    
+
     title = entry['Title']
 
-    tex_entry += r'''  \hypertarget{entry:''' + str(count) + r'''}{\footnotesize\arabic{bksctr}} ''' + author
+    tex_entry += r'''  \hypertarget{entry:''' + str(count)
+    tex_entry += r'''}{\footnotesize\arabic{bksctr}} ''' + author
     tex_entry += r''' \textsc{\bfseries ''' + title + r'''}'''
 
     print(protect(tex_entry), file=outf)
@@ -315,14 +321,14 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
     # Create author index entries here
     if entry['Authors']:
         for author in entry['Authors']:
-            #print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
-            #print(r'\index[author]{' + make_name_string(author) + r'|myentry}', file=outf)
-            print(r'\indexentry{' + make_name_string(author) + r'|myhref}{' + f'{count}' + r'}', file=authidx)
+            output = r'\indexentry{' + make_name_string(author)
+            output += r'|myhref}{' + f'{count}' + r'}'
+            print(output, file=authidx)
     if entry['Editors']:
         for author in entry['Editors']:
-            #print(r'\index[author]{' + make_name_string(author) + r'}', file=outf)
-            #print(r'\index[author]{' + make_name_string(author) + r'|myentry}', file=outf)
-            print(r'\indexentry{' + make_name_string(author) + r'|myhref}{' f'{count}' + r'}', file=authidx)
+            output = r'\indexentry{' + make_name_string(author)
+            output += r'|myhref}{' f'{count}' + r'}'
+            print(output, file=authidx)
     # make the Year, Place, Publisher line
     # Get only the first publisher, if there is one listed.
     try:
@@ -348,19 +354,19 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
         pages = make_pagination_str(pagination)
     except KeyError:
         pages = ''
-        
+
     if year or place or publisher or pages:
         if not year:
             year=r'\hspace{3em}'
         else:
-            year += '\hspace{0.5em}'
+            year += r'\hspace{0.5em}'
         if not place:
             place = r'\hspace{5em}'
         if publisher and pages:
             page_comma = ','
         else:
             page_comma = ''
-        
+
         year_pub_entry = ' '.join([year, place, publisher]) + page_comma + pages
 
         print(protect(year_pub_entry), file=outf)
@@ -373,7 +379,7 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
             print(file=outf)
     except KeyError:
         pass
-    
+
     for comment in entry['Others']:
         clean_com = clean_comment(comment)
         print(protect(clean_com), file=outf)
@@ -383,8 +389,8 @@ def print_entry(count, entry, authidx, outf=sys.stdout):
     print(r'''}
 
 ''', file=outf)
-    
-def print_closing(bookfile, outf=sys.stdout):
+
+def print_closing(outf=sys.stdout):
     '''Print any closing material for the catalogue.
 
     '''
@@ -399,8 +405,8 @@ def main():
     if args.verbose:
         pprint(args)
 
-    with open(args.output, 'w') as filep:
-        authp = open('author2.idx', 'w')
+    with open(args.output, 'w', encoding = 'UTF8') as filep:
+        authp = open('author2.idx', 'w', encoding = 'UTF8')
         bookf = bf.BookFile()
         bookf.read_file(args.input)
 
@@ -408,15 +414,15 @@ def main():
         if args.sort:
             bookf.sort_by(args.sort)
 
-        print_header(bookf, outf=filep)
+        print_header(outf=filep)
         for count, ent in enumerate(bookf, start=1):
             try:
                 print_entry(count, ent, authp, outf=filep)
-            except Exception as e:
-                pprint(e)
+            except [KeyError, ValueError] as exp:
+                pprint(exp)
                 print('problem with entry:', count + 1)
                 pprint(ent)
-        print_closing(bookf)
+        print_closing()
 
     filep.close()
 

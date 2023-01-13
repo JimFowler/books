@@ -51,14 +51,14 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} hjs_catalogue.pdf
 
 .PHONY: hjs_catalogue.pdf
-hjs_catalogue.pdf catalogue hjs: hjs_catalogue.tex
+hjs_catalogue.pdf catalogue hjs: hjs_catalogue.tex books.tex
 	${LATEX} -draftmode hjs_catalogue
 	${BIBER} hjs_catalogue
 	${LATEX} -draftmode hjs_catalogue
 	${LATEX} hjs_catalogue
 
 .PHONY: the_books.tex
-books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
+the_books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
 	python catalogue_xml.py -s Year -o books.tex ../../Data/HJS/hjs_full.xml
 
 .PHONY: test_hjs.pdf
