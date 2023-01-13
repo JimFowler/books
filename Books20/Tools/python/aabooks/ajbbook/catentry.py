@@ -20,11 +20,7 @@
 different catalogue entries.
 
 '''
-from nameparser.config import CONSTANTS
-
 from aabooks.lib import roman
-
-CONSTANTS.initials_format='{first} {middle}'
 
 class Comma():
     '''Add a comma and a space unless first_comma is True'''
