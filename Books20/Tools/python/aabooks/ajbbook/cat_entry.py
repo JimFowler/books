@@ -20,11 +20,10 @@
 different catalogue entries.
 
 '''
-import sys
+from nameparser.config import CONSTANTS
 
 from aabooks.lib import roman
 
-from nameparser.config import CONSTANTS
 CONSTANTS.initials_format='{first} {middle}'
 
 class Comma():
@@ -106,27 +105,32 @@ class CatEntry():
 
         '''
 
-        #return 'Author, A.~N.~and A.~N.~Editor'
-
         authors = entry['Authors']
         editors = entry['Editors']
         ret_str = ''
 
         if len(authors):
             # first author
-            ret_str = self.make_name_string(authors[0], name_style='first')
+            ret_str = r'''\textit{'''
+            ret_str += self.make_name_string(authors[0], name_style='first')
+            ret_str += r'}'
             if len(authors) > 2:
-                ret_str += ', et.~al.'
+                ret_str += r', et.\,al.'
             elif len(authors) == 2:
-                ret_str += ' and ' + self.make_name_string(authors[1], name_style='second')
+                ret_str += r' and \textit{'
+                ret_str += self.make_name_string(authors[1], name_style='second')
+                ret_str += '}'
         elif len(editors):
             # first editor
-            ret_str = self.make_name_string(editors[0])
+            ret_str = r'''\textit{'''
+            ret_str += self.make_name_string(editors[0])
+            ret_str += r'}'
             if len(editors) > 2:
-                ret_str += ', et.~al., eds.'
+                ret_str += r', et.\,al., eds.'
             elif len(editors) == 2:
-                ret_str += ' and ' + self.make_name_string(editors[1], name_style='second')
-                ret_str += ', eds.'
+                ret_str += r' and \textit{'
+                ret_str += self.make_name_string(editors[1], name_style='second')
+                ret_str += r'}, eds.'
             else:
                 ret_str += ', ed.'
 
@@ -134,6 +138,7 @@ class CatEntry():
             # Only add this comma if the name string is not empty
             # otherwise the title is preceeded by a single comma
             ret_str += ','
+
         return ret_str
 
     def make_edition(self, edition):
@@ -175,13 +180,13 @@ class CatEntry():
             elif 'p' in page:
                 # there should alway be one of these page counts
                 pg_count = page.split('p')[0]
-                pages += comma.test() + str(pg_count) + '\,pp'
+                pages += comma.test() + str(pg_count) + r'\,pp'
             elif 'P' in page:
                 pg_count = page.split('P')[0]
-                pages += comma.test() + str(pg_count) + ' plates'
+                pages += comma.test() + str(pg_count) + r'\,plates'
             elif 'c' in page:
                 pg_count = page.split('c')[0]
-                pages += comma.test() + str(pg_count) + ' charts'
+                pages += comma.test() + str(pg_count) + r'\,charts'
             elif 'I' in page:
                 pg_count = page.split('I')[0]
                 pages += comma.test() + str(pg_count) + 'p index'
@@ -212,100 +217,13 @@ class CatEntry():
 
         return cleaned
 
-class HjsEntry(CatEntry):
-    '''A class to create a HJS catalogue entry from an AJBEntry (see
-    ajbbook/ajbentry.py). An HJS catalogoue entry is for the Harlan
-    J. Smith catalogue in the McDonald Observatory Library.
-
-    '''
-    def __init__(self):
-        '''Set up the class entities if any.'''
-        super().__init__()
-
-    def print_entry(self, count, entry, outf=sys.stdout):
-        '''Print the 'count'th entry for the catalogue. These are
-        expected to be of the form AJBEntry.
-
-        '''
-
-        tex_entry = self.protect(r'''\vbox{%
-  \vspace*{0.5 cm}
-  \noindent
-''')
-        # add reference link based on ????
-        # make the Author, Title line
-        tex_entry += r'''  {\footnotesize ''' + str(count) + r'''}'''
-        tex_entry += r''' \textit{''' + self.get_author_string(entry)
-        tex_entry += r'''} \textsc{''' + entry['Title'] + r'''}'''
-
-        print(self.protect(tex_entry), file=outf)
-        print(file=outf)
-
-        # make the Year, Place, Publisher line
-        # Get only the first publisher, if there is one listed.
-        try:
-            place = entry['Publishers'][0]['Place'].split('-')[0]
-            if place:
-                place += ','
-        except IndexError:
-            place = ''
-
-        try:
-            publisher = entry['Publishers'][0]['PublisherName']
-            publisher = publisher.replace('selbstverlag', 'self-published')
-        except IndexError:
-            publisher = ''
-
-        try:
-            year = str(entry['Year'])
-        except IndexError:
-            year = ''
-
-        try:
-            pagination = entry['Pagination']
-            pages = self.make_pagination_str(pagination)
-        except KeyError:
-            pages = ''
-
-        if year or place or publisher:
-            if not year:
-                year=r'\hspace{3em}'
-            else:
-                year += r'\hspace{0.5em}'
-            if not place:
-                place = r'\hspace{5em}'
-
-            year_pub_entry = ' '.join([year, place, publisher]) + pages
-
-            print(self.protect(year_pub_entry), file=outf)
-            print(file=outf)
-
-        try:
-            edition = entry['Edition']
-            if edition:
-                print(self.protect(self.make_edition(edition)), file=outf)
-                print(file=outf)
-        except KeyError:
-            pass
-
-        for comment in entry['Others']:
-            clean_com = self.clean_comment(comment)
-            print(self.protect(clean_com), file=outf)
-            print(file=outf)
-
-        print(entry.num_str(), file=outf)
-        print(r'''}
-
-    ''', file=outf)
-
-
 
 # Test this class
 if __name__ == '__main__':
 
     import unittest
 
-    class HjsEntryTestCase(unittest.TestCase):
+    class CatEntryTestCase(unittest.TestCase):
         '''Run the unit tests for the class CatEntry.'''
 
         def setUp(self):
