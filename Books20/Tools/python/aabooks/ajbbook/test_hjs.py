@@ -28,9 +28,10 @@ import cat_entry as ce
 # Create test_books.xml
 hjs_entry = ce.HjsEntry()
 with open('test_books.tex', 'w', encoding='UTF8') as filep:
+    authp = open('author2.idx', 'w', encoding = 'UTF8')
     bookf = bf.BookFile()
-    bookf.read_file('../../Data/HJS/hjs_jrf.xml')
+    bookf.read_file('../../../../Data/HJS/hjs_full.xml')
 
     for test_count, test_entry in enumerate(bookf):
         test_count += 1
-        hjs_entry.print_entry(test_count, test_entry, outf=filep)
+        hjs_entry.print_entry(test_count, test_entry, authp,  outf=filep)
