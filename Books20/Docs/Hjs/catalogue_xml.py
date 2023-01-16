@@ -99,7 +99,7 @@ def main():
                 hjs_entry.print_entry(count, ent, authp, outf=filep)
             except [KeyError, ValueError] as exp:
                 pprint(exp)
-                print('problem with entry:', count + 1)
+                print('problem with entry:', count)
                 pprint(ent)
         hjs_entry.print_closing()
 
