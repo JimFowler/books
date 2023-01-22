@@ -1,5 +1,24 @@
+%% Begin copyright
+%%
+%%  /home/jrf/Documents/books/Books20/Docs/Hjs/author.index
+%%
+%%   Part of the Books20 Project
+%%
+%%   Copyright 2023 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%% End copyright
+%%
 %% Copy this file to author.ind so that we can get
-%% a properly arranged index of Author/Editor(s)
+%% a properly arranged index of Author/Editor(s). This file
+%% is being maintained by hand and is no longer automatically
+%% generated as of 6 Jan 2023
 %%
 \begin{theindex}
 
@@ -211,7 +230,7 @@
   \indexspace
 
   \item Jackson, W., \myhref{298}
-  \item Jacobs, K.C., \myhref{260}
+  \item Jacobs, K.C., \myhref{258}
   \item Jahnke, E., \myhref{36}
   \item James, P., \myhref{354}
   \item Jeffery, R.L., \myhref{135}
@@ -393,6 +412,7 @@
   \item Smart, W.M., \myhref{29}
   \item Smith, H.J., \myhref{19}, \myhref{234}, \myhref{235},
   	       \myhref{264}, \myhref{304}, \myhref{489}
+  \item Smith, E.~van P., \myhref{258}
   \item Smoluchowski, R., \myhref{380}
   \item Sneddon, I.N., \myhref{60}
   \item Spitzer, L., \myhref{97}, \myhref{139}, \myhref{140},
@@ -401,7 +421,7 @@
   \item Stern, A., \myhref{446}
   \item Stewart, A., \myhref{354}
   \item Stewart, J.Q., \myhref{24}, \myhref{25}, \myhref{28}, \myhref{38}
-  \item Stodółkiewicz, J.S., \myhref{258}
+  \item Stodółkiewicz, J.S., \myhref{259}
   \item Strong, J., \myhref{106}
   \item Stuik, D.J., \myhref{46}
   \item Swings, J., \myhref{412}
@@ -430,10 +450,9 @@
 
   \indexspace
 
-  \item Vaghi, S., \myhref{259}, \myhref{271}
+  \item Vaghi, S., \myhref{260}, \myhref{271}
   \item van de Kamp, P., \myhref{175}
   \item van Newberry, M., \myhref{382}
-  \item van P. Smith, E., \myhref{260}
   \item Vessot, R.F.C., \myhref{375}
   \item Vishveshwara, C.V., \myhref{478}
   \item Vogliotti, M.A., \myhref{249}, \myhref{261}
@@ -473,7 +492,7 @@
 
   \indexspace
 
-  \item Zappalà, V., \myhref{249}, \myhref{259}, \myhref{261}, 
+  \item Zappalà, V., \myhref{249}, \myhref{260}, \myhref{261}, 
 		\myhref{271}
   \item Zirker, J.B., \myhref{347}
   \item Zuckerman, B., \myhref{400}
