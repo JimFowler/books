@@ -58,6 +58,7 @@ hjs_catalogue.pdf catalogue hjs: hjs_catalogue.tex books.tex author.ind
 	${LATEX} hjs_catalogue
 
 .PHONY: author.ind
+author.ind: author.index
 	cp author.index author.ind
 
 .PHONY: the_books.tex
