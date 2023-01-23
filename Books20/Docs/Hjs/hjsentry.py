@@ -70,7 +70,7 @@ class HjsEntry(catentry.CatEntry):
         title = entry['Title']
 
         tex_entry += r''' \hypertarget{entry:''' + str(count)
-        tex_entry += r'''}{\footnotesize\arabic{bksctr}} ''' + author
+        tex_entry += r'''}{\footnotesize\arabic{bksctr}}''' + author
         tex_entry += r''' \textsc{\bfseries ''' + title + r'''}'''
 
         print(self.protect(tex_entry), file=outf)

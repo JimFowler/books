@@ -185,16 +185,16 @@ class CatEntry():
                 pages += comma.test() + str(pg_count) + r'\,charts'
             elif 'I' in page:
                 pg_count = page.split('I')[0]
-                pages += comma.test() + str(pg_count) + 'p index'
+                pages += comma.test() + str(pg_count) + 'p\,index'
             elif 'AA' in page:
                 pg_count = page.split('AA')[0]
-                pages += comma.test() + str(pg_count) + 'p appendix A'
+                pages += comma.test() + str(pg_count) + 'p\,app.\,A'
             elif 'AB' in page:
                 pg_count = page.split('AB')[0]
-                pages += comma.test() + str(pg_count) + 'p appendix B'
+                pages += comma.test() + str(pg_count) + 'p\,app.\,B'
             elif 'AC' in page:
                 pg_count = page.split('AC')[0]
-                pages += comma.test() + str(pg_count) + 'p appendix C'
+                pages += comma.test() + str(pg_count) + 'p\,app.\,C'
             elif page:
                 print(page)
             else:
