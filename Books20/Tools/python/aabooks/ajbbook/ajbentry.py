@@ -123,7 +123,7 @@ class AJBentry(dict):
 
         num = self['Num']
 
-        return bool(num['volNum'] > 0 and num['volNum'] < 74 \
+        return bool(num['volNum'] > 0 \
                     and num['sectionNum'] > 0 and num['sectionNum'] < 151 \
                     and num['entryNum'] > 0 \
                     and (num['entrySuf'] == '' or num['entrySuf'] == 'a' \
