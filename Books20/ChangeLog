@@ -1,7 +1,19 @@
+2023-01-30  Jim Fowler  <jrf@Pergamon>
+
+	* Docs/Hjs/hjsentry.py: Added test in comments to ignore any
+	string with "HJS 94" in it.  I need to rerun catalogue_xml.py to
+	regenerate books.tex in order to incorporate previously missing
+	items.
+
+	Also we are now using hjsentry.py as the class for printing
+	catalogue entries.
+
+	* Docs/Hjs/Makefile.am: change books.tex target to the_books.tex
+
 2022-11-26  Jim Fowler  <jrf@biblion>
 
 	* Docs/Hjs/hjs_test.xml: created test entries for cat_entry.py
-	
+
 	* Docs/Hjs/test_hjs.tex: created test document for cat_entry.py
 
 	* Docs/Hjs/cat_entry.py (CatEntry): created class CatEntry as

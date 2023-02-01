@@ -139,6 +139,8 @@ class HjsEntry(catentry.CatEntry):
             pass
 
         for comment in entry['Others']:
+            if 'HJS 94' in comment:
+                continue
             clean_com = self.clean_comment(comment)
             print(self.protect(clean_com), file=outf)
             print(file=outf)
