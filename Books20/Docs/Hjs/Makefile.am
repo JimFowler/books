@@ -63,7 +63,7 @@ author.ind: author.index
 
 .PHONY: the_books.tex
 the_books.tex: ../../Data/HJS/hjs_full.xml catalogue_xml.py
-	python catalogue_xml.py -s Year -o books.tex ../../Data/HJS/hjs_full.xml
+	python catalogue_xml.py -s Year -o the_books.tex ../../Data/HJS/hjs_full.xml
 
 .PHONY: test_hjs.pdf
 test_hjs.pdf: test_books.tex test_hjs.tex
