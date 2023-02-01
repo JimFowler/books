@@ -21,9 +21,12 @@ missing
 *.bcf
 *.blg
 *.bib.bak
-*.log
 *.dvi
+*.ilg
+*.ind
+*.idx
+*.log
 *.lot
-*.toc
 *.out
+*.toc
 *.run.xml
