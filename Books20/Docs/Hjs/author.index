@@ -26,7 +26,7 @@
   \item Abell, G., \myhref{210}
   \item Adams, N.I., \myhref{46}
   \item Adler, R., \myhref{174}
-  \item Aleksandrov, A.D., \myhref{142--144}
+  \item Aleksandrov, A.D., \myhref{142}, \myhref{143}, \myhref{144}
   \item Alfvén, H., \myhref{47}, \myhref{278}
   \item Allen, C., \myhref{389}
   \item Allen, C.W., \myhref{74}
@@ -43,7 +43,7 @@
   \item Baker, V.R., \myhref{352}
   \item Baldwin, R.B., \myhref{43}, \myhref{175}
   \item Ball, R.S., \myhref{17, 18}
-  \item Barker, E.S., \myhref{198}, \myhref{211, 212}
+  \item Barker, E.S., \myhref{198}, \myhref{211}, \myhref{212}
   \item Barr, L.D., \myhref{400}
   \item Bate, R.R., \myhref{228}
   \item Baugher, J.F., \myhref{462}
@@ -91,7 +91,7 @@
   \item Cameron, A.G.W., \myhref{145}, \myhref{269}, \myhref{339}
   \item Campaccioli, M., \myhref{485}
   \item Candler, C., \myhref{157}
-  \item Chaikin, A., \myhref{397, 398}
+  \item Chaikin, A., \myhref{397}, \myhref{398}
   \item Chandrasekhar, S., \myhref{48}
   \item Cheston, T.S., \myhref{368}
   \item Chicarro, A.F., \myhref{494}
@@ -118,8 +118,8 @@
   \item Davis, B., \myhref{333}
   \item Davoust, E., \myhref{504}
   \item de Vaucouleurs, A., \myhref{160}, \myhref{425}
-  \item de Vaucouleurs, G., \myhref{98}, \myhref{158--160}, 
-		\myhref{401}
+  \item de Vaucouleurs, G., \myhref{98}, \myhref{158}, \myhref{59},
+  	\myhref{160}, \myhref{401}
   \item DeFrees, D., \myhref{486}
   \item Delsemme, A.H., \myhref{330}
   \item DeWitt, B.S., \myhref{248}
@@ -135,7 +135,7 @@
   \item Drude, P., \myhref{106}
   \item Dryer, J.L.E., \myhref{68}
   \item Duffin, D.J., \myhref{172}
-  \item Dugan, R.S., \myhref{20, 21}, \myhref{24}, \myhref{34}
+  \item Dugan, R.S., \myhref{20}, \myhref{21}, \myhref{24}, \myhref{34}
   \item Duric, N., \myhref{464}
 
   \indexspace
@@ -159,14 +159,14 @@
   \item Finch, E.R., \myhref{418}
   \item Flügge, S., \myhref{107}
   \item Forsyth, A.R., \myhref{81, 82}
-  \item Forward, R.L., \myhref{410--412}
+  \item Forward, R.L., \myhref{410}, \myhref{411}, \myhref{412}
   \item Fracastroro, M.G., \myhref{249}
   \item Fraknoi, A., \myhref{427}
   \item Franklin, P., \myhref{99}
   \item Françon, M., \myhref{146}
-  \item French, B.M., \myhref{332}, \myhref{387, 388}
+  \item French, B.M., \myhref{332}, \myhref{387}, \myhref{388}
   \item French, B.P., \myhref{297}
-  \item Frenkel, J., \myhref{49, 50}
+  \item Frenkel, J., \myhref{49}, \myhref{50}
   \item Friedman, F.L., \myhref{177}
   \item Froehlich, W., \myhref{11}
 
@@ -182,7 +182,8 @@
   \item Gordon, J.L., \myhref{254}
   \item Greely, R., \myhref{466}
   \item Greenspan, D., \myhref{124}
-  \item Grey, J., \myhref{333--335}, \myhref{369, 370}
+  \item Grey, J., \myhref{333}, \myhref{334}, \myhref{335},
+  	\myhref{369}, \myhref{370}
   \item Gribbin, J.R., \myhref{299}
   \item Griboval, P.J., \myhref{263}
 
@@ -257,7 +258,7 @@
   \item Knopp, K., \myhref{58}
   \item Koestler, A., \myhref{149}
   \item Kohlhase, C., \myhref{488}
-  \item Kolmogorov, A.N., \myhref{142--144}
+  \item Kolmogorov, A.N., \myhref{142}, \myhref{143}, \myhref{144}
   \item Kondo, Y., \myhref{498}
   \item Kopal, Z., \myhref{51}
   \item Kovacs, I., \myhref{215}
@@ -265,8 +266,8 @@
   \item Kozmetsky, G., \myhref{503}
   \item Kraus, J., \myhref{300}
   \item Krop, C., \myhref{370}
-  \item Kuiper, G.P., \myhref{44}, \myhref{70}, \myhref{150, 151}, 
-		\myhref{167}
+  \item Kuiper, G.P., \myhref{44}, \myhref{70}, \myhref{150},
+  	\myhref{151}, \myhref{167}
 
   \indexspace
 
@@ -274,7 +275,7 @@
   \item Lanczos, C., \myhref{91}
   \item Langley, R., \myhref{231}
   \item Latimer, W.M., \myhref{28}
-  \item Lavrent'ev, M.A., \myhref{142--144}
+  \item Lavrent'ev, M.A., \myhref{142}, \myhref{143}, \myhref{144}
   \item Layzer, D., \myhref{419}
   \item Leighton, R.B., \myhref{108}
   \item Lemon, H.B., \myhref{36}
@@ -307,10 +308,11 @@
   \item Mechtly, E.A., \myhref{217}
   \item Meinel, A.B., \myhref{340}
   \item Meinel, M.P., \myhref{340}
-  \item Menzel, D.H., \myhref{72}, \myhref{115--117}, \myhref{204}
+  \item Menzel, D.H., \myhref{72}, \myhref{115}, \myhref{116},
+  	\myhref{117}, \myhref{204}
   \item Mermin, N.D., \myhref{203}
   \item Michaud, M.A.G., \myhref{439}
-  \item Middlehurst, B.M., \myhref{150, 151}
+  \item Middlehurst, B.M., \myhref{150}, \myhref{151}
   \item Milham, W.I., \myhref{37}
   \item Millman, J., \myhref{242}
   \item Milone, E.F., \myhref{491}
@@ -335,7 +337,7 @@
   \indexspace
 
   \item Neugebauer, O., \myhref{218}
-  \item Newman, J.R., \myhref{83--86}
+  \item Newman, J.R., \myhref{83}, \myhref{84}, \myhref{85}, \myhref{86}
   \item Noble, B., \myhref{168, 169}
   \item Norman, C.A., \myhref{463}
   \item Nummedal, D., \myhref{352}
@@ -343,13 +345,13 @@
 
   \indexspace
 
-  \item O'Leary, B., \myhref{397, 398}
+  \item O'Leary, B., \myhref{397}, \myhref{398}
   \item O'Neill, G.K., \myhref{358}
   \item Oberg, J.E., \myhref{12}
   \item Ogden, C.K., \myhref{13}
   \item Omholt, A., \myhref{216}
   \item Oparin, A.I., \myhref{92}
-  \item Owen, T.C., \myhref{232, 233}
+  \item Owen, T.C., \myhref{232}, \myhref{233}
 
   \indexspace
 
@@ -373,9 +375,9 @@
   \indexspace
 
   \item Rahe, J., \myhref{433}, \myhref{482}
-  \item Rainville, E.D., \myhref{170, 171}
+  \item Rainville, E.D., \myhref{170}, \myhref{171}
   \item Rastall, P., \myhref{506}
-  \item Ratcliffe, J.A., \myhref{110, 111}
+  \item Ratcliffe, J.A., \myhref{110}, \myhref{111}
   \item Rau, H., \myhref{172}
   \item Refsdal, S., \myhref{224}
   \item Reichenbach, H., \myhref{29}
@@ -414,14 +416,15 @@
   \item Simmons, M.K., \myhref{336}
   \item Skilling, H.H., \myhref{41}
   \item Smart, W.M., \myhref{25}
-  \item Smith, H.J., \myhref{15}, \myhref{232, 233}, \myhref{263}, 
+  \item Smith, H.J., \myhref{15}, \myhref{232}, \myhref{233}, \myhref{263}, 
 		\myhref{303}, \myhref{499}
   \item Smoluchowski, R., \myhref{381}
   \item Sneddon, I.N., \myhref{57}
-  \item Spitzer, L., \myhref{93}, \myhref{137, 138}, \myhref{205, 206}
+  \item Spitzer, L., \myhref{93}, \myhref{137}, \myhref{138},
+  		 \myhref{205}, \myhref{206}
   \item Steg, L., \myhref{343}
   \item Stern, A., \myhref{450}
-  \item Stewart, J.Q., \myhref{20, 21}, \myhref{24}, \myhref{34}
+  \item Stewart, J.Q., \myhref{20}, \myhref{21}, \myhref{24}, \myhref{34}
   \item Stodółkiewicz, J.S., \myhref{256}
   \item Strong, J., \myhref{102}
   \item Stuik, D.J., \myhref{42}
@@ -458,7 +461,7 @@
   \item Vessot, R.F.C., \myhref{375}
   \item Vishveshwara, C.V., \myhref{483}
   \item Vogliotti, M.A., \myhref{247}, \myhref{259}
-  \item Voigt, H.H., \myhref{271, 272}
+  \item Voigt, H.H., \myhref{271}, \myhref{272}
 
   \indexspace
 
@@ -498,6 +501,6 @@
 		\myhref{270}
   \item Zirker, J.B., \myhref{346}
   \item Zuckerman, B., \myhref{402}
-  \item Zwicky, F., \myhref{94, 95}
+  \item Zwicky, F., \myhref{94}, \myhref{95}
 
 \end{theindex}
