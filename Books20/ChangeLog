@@ -1,3 +1,16 @@
+2023-02-04  Jim Fowler  <jrf@Pergamon>
+
+	* Tools/python/aabooks/ajbbook/entrynum.py: Finished AJBEntryNum
+	class I believe.  Stole the XML routines from entry_xml.py.  Added
+	additional tests in test_entrynum.py.
+
+2023-02-02  Jim Fowler  <jrf@Pergamon>
+
+	* Tools/python/aabooks/ajbbook/entrynum.py
+	(AJBEntryNum.from_string): Created entrynum.py.  Stole the to/from
+	string functions from the library.  Also wrote the test code for
+	the existing functions.
+
 2023-01-30  Jim Fowler  <jrf@Pergamon>
 
 	* Docs/Hjs/hjsentry.py: Added test in comments to ignore any
