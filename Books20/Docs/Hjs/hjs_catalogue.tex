@@ -21,6 +21,7 @@
 %----------------------------------------------------------
 \documentclass[letterpaper]{book}
 
+\usepackage[paper=letterpaper,twoside]{geometry}
 \usepackage[T1]{fontenc}
 
 \usepackage{graphicx}
@@ -34,8 +35,6 @@
 \addbibresource{hjs.bib}
 
 \newcommand*{\myhref}[1]{\hyperlink{entry:#1}{#1}}
-\newcommand*{\bkfont}{\fontfamily{LibreCsln-TLF}\selectfont}
-\DeclareTextFontCommand{\bookfont}{\bkfont}
 
 \makeindex[name=author,title=Author/Editor Index]
 
@@ -69,6 +68,19 @@
 \centerline{Fort Davis, Texas}
 \newpage
 
+% Dedication and acknowledgement
+%%\vspace*{3 in}
+\newgeometry{inner=2in, outer=2in,top=4in}
+\thispagestyle{empty}
+\noindent
+The McDonald Observatory would like to thank Joan Smith,
+Nat Smith, and the rest of the Harlan J.~Smith family
+for generously donating this collection to the observatory.
+This collection will be of scientific as well as historic
+interest to the staff and visitors of the observatory.
+\restoregeometry
+\newpage
+
 \thispagestyle{empty}
 \begin{figure}[t]
   \centering
@@ -79,9 +91,9 @@
   \label{fig:hjs}
 \end{figure}
 \clearpage
-\mbox{}
-\thispagestyle{empty}
-\newpage
+%\mbox{}
+%\thispagestyle{empty}
+%\newpage
 
 \pagestyle{plain}
 \vspace*{1 in}
@@ -115,10 +127,8 @@
 
 \begin{colophon}
   The catalogue was typeset with the \LaTeX2e\ processing system in
-  10pt Computer Modern Roman font. The McDonald Observatory would like
-  to thank Joan Smith, Nat Smith, and the rest of the Harlan J.~Smith
-  family for generously donating this collection to the observatory.
-  This catalogue was printed and bound by J.~Fowler.
+  10pt Computer Modern Roman font. It has been printed and
+  bound by J.~Fowler.
 \end{colophon}
 
 \end{document}
