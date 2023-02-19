@@ -36,7 +36,8 @@ class HjsEntry(catentry.CatEntry):
     def __init__(self):
         '''Set up the class entities if any.'''
         super().__init__()
-
+        #self.transf = open('hjs01_94.cvs', 'w', encoding='UTF8')
+        
     def print_header(self, outf=sys.stdout):
         '''Print the leading material for the catalogue.
 
@@ -62,7 +63,7 @@ class HjsEntry(catentry.CatEntry):
   \vspace*{0.5 cm}
   \noindent
  ''')
-
+        print('printing entry', count)
         # add reference label
         # make the Author, Title line
         author = self.get_author_string(entry)
@@ -140,6 +141,7 @@ class HjsEntry(catentry.CatEntry):
 
         for comment in entry['Others']:
             if 'HJS 94' in comment:
+                #print(comment, ',', entry.num_str(), ',', count, file=self.transf)
                 continue
             clean_com = self.clean_comment(comment)
             print(self.protect(clean_com), file=outf)
