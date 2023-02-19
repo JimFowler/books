@@ -137,8 +137,10 @@ class InvEntry(catentry.CatEntry):
             pass
 
         for comment in entry['Others']:
-            if 'HJS 01' in comment or \
-               'missing' in comment or \
+            if 'HJS 01' in comment:
+                print(comment + r' catalogue entry \myhref{1}', file=outf)
+
+            if 'missing' in comment or \
                'series' in comment:
                 clean_com = self.clean_comment(comment)
                 print(self.protect(clean_com), file=outf)
