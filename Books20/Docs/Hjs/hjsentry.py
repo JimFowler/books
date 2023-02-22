@@ -52,7 +52,7 @@ class HjsEntry(catentry.CatEntry):
         '''
         print('Printing the closing material for the catalogue', file=outf)
 
-    def print_entry(self, count, entry, authidx, outf=sys.stdout):
+    def print_entry(self, count, entry, authidx, transf=None, outf=sys.stdout):
         '''Print an entry as number 'count' for the catalogue. These are
         expected to be of the form AJBEntry.
 
@@ -63,7 +63,7 @@ class HjsEntry(catentry.CatEntry):
   \vspace*{0.5 cm}
   \noindent
  ''')
-        print('printing entry', count)
+        print('  printing entry', count)
         # add reference label
         # make the Author, Title line
         author = self.get_author_string(entry)
@@ -141,8 +141,9 @@ class HjsEntry(catentry.CatEntry):
 
         for comment in entry['Others']:
             if 'HJS 94' in comment:
-                #print(comment, ',', entry.num_str(), ',', count, file=self.transf)
-                continue
+                trans_str = f''' '{comment}' : ''' + '{'
+                trans_str += f''' 'hjs01' : '{entry.num_str()}', 'catentry' : '{count}' ''' + '},'
+                print(trans_str, file=transf)
             clean_com = self.clean_comment(comment)
             print(self.protect(clean_com), file=outf)
             print(file=outf)

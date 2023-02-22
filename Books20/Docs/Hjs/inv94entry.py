@@ -49,7 +49,7 @@ class InvEntry(catentry.CatEntry):
         '''
         print('Printing the closing material for the catalogue', file=outf)
 
-    def print_entry(self, count, entry, authidx, outf=sys.stdout):
+    def print_entry(self, count, entry, authidx, transf=None, outf=sys.stdout):
         '''Print an entry as number 'count' for the catalogue. These are
         expected to be of the form AJBEntry.
 
