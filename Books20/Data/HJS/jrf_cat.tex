@@ -1,0 +1,37 @@
+\documentclass[letterpaper]{book}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{imakeidx}
+\usepackage[titlesize=12pt,parsize=10pt]{colophon}
+\usepackage{books20}
+
+\begin{document}
+
+\frontmatter
+\pagestyle{empty}
+\title{\textsc{Books taken from the \\
+    Harlan J.\ Smith Collection \\
+    of Science Books \\
+    in the Otto Struve Library of \\
+    the McDonald Observatory \\
+    Fort Davis, Texas}}
+\author{compiled by James R. Fowler}
+\date{copy of \today}
+\maketitle
+\newpage
+\vspace*{5 in}
+\centerline{Copyright \copyright 2022 James Fowler}
+\centerline{Fort Davis, Texas}
+\newpage
+
+\mainmatter
+\begin{center}
+  {\Large \bf Books taken from the Harlan J.\ Smith Collection}
+\end{center}
+\bigskip
+\import{./}{jrf_books}
+
+\end{document}
