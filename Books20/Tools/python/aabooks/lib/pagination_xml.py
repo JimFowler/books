@@ -55,6 +55,7 @@ Known text codes and their matching XML tags are::
     'i'  : 'Illustrations',
     'I'  : 'Index',
     'h'  : 'Woodcuts',
+    'm'  : 'microfiche',
     'M'  : 'Maps',
     'n'  : 'Nomograms',
     'bP' : 'BW_Plates',
@@ -114,6 +115,7 @@ __TAG_TO_XML_NAME__ = {
     'i'  : 'Illustrations',
     'I'  : 'Index',
     'h'  : 'Woodcuts',
+    'm'  : 'Microfiche',
     'M'  : 'Maps',
     'n'  : 'Nomograms',
     'bP' : 'BW_Plates',
@@ -232,8 +234,8 @@ if __name__ == '__main__':
     GOOD_STRING = [
         ('', ''),
         (None, ''),
-        ('12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c', \
-         '12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c'),
+        ('12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c+2m', \
+         '12pp+203p+45pa+32pb+40AA+32AB+14i+23f+522P+10c+2m'),
         ]
 
     OLD_STR = '12p+203p+14i+23f+522P+10c'

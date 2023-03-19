@@ -50,6 +50,7 @@
       <xs:element name="Illustrations"  type="xs:integer" minOccurs="0" />
       <xs:element name="Index"       type="xs:integer" minOccurs="0" />
       <xs:element name="Woodcuts"    type="xs:integer" minOccurs="0" />
+      <xs:element name="Microfiche"  type="xs:integer" minOccurs="0" />
       <xs:element name="Maps"        type="xs:integer" minOccurs="0" />
       <xs:element name="Nomograms"   type="xs:integer" minOccurs="0" />
       <xs:element name="BW_Plates"   type="xs:integer" minOccurs="0" />
