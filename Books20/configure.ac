@@ -38,6 +38,7 @@ AC_CONFIG_FILES([Makefile
       Docs/Quotes/Makefile
       Docs/Series/Makefile
       Docs/Style/Makefile
+      Docs/Wjm/Makefile
       Manuscript/Makefile
       Tools/Makefile
       Tools/build/Makefile

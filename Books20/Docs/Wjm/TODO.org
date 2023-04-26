@@ -1,0 +1,43 @@
+#+STARTUP: hidestars
+#
+# Headlines
+#  new headline at same level M-Ret
+#  open/close all headlines Shift-Tab
+#
+# Tags
+#  on headline C-c C-c
+#  common tags
+# Places: @home @fire @work
+# Projects: Home Books20 (subprojects?) Ares Radio Fire Books Book_Club
+#
+# Check boxes
+#   ** Topic [/]
+#      - [ ] task
+# Use C-c C-x C-b to toggle checkbox
+# 
+# add a timestamp C-c .
+# change item under cursor by one unit s-up/down
+# Scheduled C-c C-s
+# Deadline  C-c C-d
+#
+# TODO
+# C-ct toggle todo tags
+#
+#+SEQ_TODO: TODO STARTED APPT WAITING TEST | DEFERRED DONE 
+* Steps to creating the WJMcDonald catalogue [0/11]
+ - [ ] Convert the WJ_McDonald_library_sorted.csv to an ajbbooks XML file
+   create convert_csv.py
+   CSV column headers
+   ID,Shelf Index,M Index,Title,Author(s),City,Publisher,
+       Date,Ed.,Prt.,Last Page,Comments
+ - [ ] edit the XML file to clean up entries
+ - [ ] define catalogue style
+ - [ ] create wjmentry.py
+ - [ ] create books.tex
+ - [ ] write wjm_catalogue.tex
+ - [ ] write biography.tex
+ - [ ] write library.tex
+ - [ ] make wjm_catalogue.pdf
+ - [ ] Review wjm_catalogue.pdf
+ - [ ] Edit all LaTeX files
+ - Repeat steps until perfect
