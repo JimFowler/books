@@ -1,6 +1,6 @@
 # Begin copyright
 #
-#  /home/jrf/Documents/books/Books20/Docs/Wjd/Makefile.am
+#  /home/jrf/Documents/books/Books20/Docs/Wjm/Makefile.am
 #  
 #   Part of the Books20 Project
 #
@@ -45,8 +45,6 @@ build_docs: ${SUB_DIRS} wjm_catalogue.pdf
 
 .PHONY: wjm_catalogue.pdf
 wjm_catalogue.pdf catalogue wjm: wjm_catalogue.tex biography.tex library.tex
-	books.tex wjm.bib wjm_baas_obit.bib
-	inventory94.tex author.ind
 	${LATEX} -draftmode wjm_catalogue
 	${BIBER} wjm_catalogue
 	${LATEX} -draftmode wjm_catalogue
@@ -57,8 +55,8 @@ author.ind: author.index
 	cp author.index author.ind
 
 .PHONY: the_books.tex
-the_books.tex: ../../Data/WJM/wjm_full.xml catalogue_xml.py
-	python catalogue_xml.py -s Year -o the_books.tex ../../Data/WJM/wjm_full.xml
+the_books.tex: wjm_books.xml catalogue_xml.py
+	python catalogue_xml.py -s Year -o the_books.tex wjm_books.xml
 
 .PHONY: test_wjm.pdf
 test_wjm.pdf: test_books.tex test_wjm.tex

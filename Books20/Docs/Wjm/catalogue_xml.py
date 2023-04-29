@@ -28,7 +28,8 @@ from nameparser.config import CONSTANTS
 
 from aabooks.lib import utils as aautils
 from aabooks.ajbbook import bookfile as bf
-import hjsentry
+#import hjsentry
+import wjmentry as hjsentry
 #import inv94entry
 
 CONSTANTS.initials_format='{first}{middle}'
