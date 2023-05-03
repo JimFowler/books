@@ -67,7 +67,7 @@ class CatEntry():
         '''
 
         new_str = raw_str.replace(r'&', r'\&')
-        new_str = raw_str.replace(r'$', r'\$')
+        new_str = new_str.replace(r'$', r'\$')
         return new_str
 
     def make_name_string(self, hname, name_style='first'):
