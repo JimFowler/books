@@ -28,8 +28,8 @@ from nameparser.config import CONSTANTS
 
 from aabooks.lib import utils as aautils
 from aabooks.ajbbook import bookfile as bf
-#import hjsentry
-import wjmentry as hjsentry
+#import wjmentry
+import wjmentry
 #import inv94entry
 
 CONSTANTS.initials_format='{first}{middle}'
@@ -44,7 +44,7 @@ def get_args():
     """Parse the command line arguments."""
 
     parser = argp.ArgumentParser(description=__DESCRIPTION__,
-                                 default_config_files=['~/.config/Books20/hjs.conf'])
+                                 default_config_files=['~/.config/Books20/wjm.conf'])
 
     aautils.standard_parser_args(parser)
 
@@ -84,8 +84,8 @@ def main():
     if args.verbose:
         pprint(args)
 
-    hjs_entry = hjsentry.HjsEntry()
-    #hjs_entry = inv94entry.InvEntry()
+    wjm_entry = wjmentry.WjmEntry()
+    #wjm_entry = inv94entry.InvEntry()
     transf = open('trans.py', 'w', encoding='UTF8')
 
 
@@ -98,17 +98,17 @@ def main():
         if args.sort:
             bookf.sort_by(args.sort)
 
-        hjs_entry.print_header(outf=filep)
+        wjm_entry.print_header(outf=filep)
         print('trans94 = {', file=transf)
         for count, ent in enumerate(bookf, start=1):
-            print('cat printing entry', count)
+            #print('cat printing entry', count)
             try:
-                hjs_entry.print_entry(count, ent, authp, transf=transf, outf=filep)
+                wjm_entry.print_entry(count, ent, authp, transf=transf, outf=filep)
             except [KeyError, ValueError] as exp:
                 pprint(exp)
                 print('problem with entry:', count)
                 pprint(ent)
-        hjs_entry.print_closing()
+        wjm_entry.print_closing()
 
     print('}', file=transf)
     transf.close()

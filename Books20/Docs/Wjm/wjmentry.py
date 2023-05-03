@@ -1,6 +1,6 @@
 ## Begin copyright
 ##
-##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/hjsentry.py
+##  /home/jrf/Documents/books/Books20/Tools/python/aabooks/ajbbook/wjmentry.py
 ##
 ##   Part of the Books20 Project
 ##
@@ -15,10 +15,8 @@
 ##
 ## End copyright
 '''
-A class definition for the HJS catalogue entry.  Although the
-original catalogue was written without this class, the class was
-create from the original catalogue and the output compared to the
-output of the original.
+A class definition for the WJM catalogue entry.  This was copied 
+from the hjsentry.py class
 
 '''
 import sys
@@ -27,16 +25,16 @@ from aabooks.ajbbook import catentry
 
 CONSTANTS.initials_format='{first} {middle}'
 
-class HjsEntry(catentry.CatEntry):
-    '''A class to create a HJS catalogue entry from an AJBEntry (see
-    ajbbook/ajbentry.py). An HJS catalogoue entry is for the Harlan
-    J. Smith catalogue in the McDonald Observatory Library.
+class WjmEntry(catentry.CatEntry):
+    '''A class to create a WJM catalogue entry from an AJBEntry (see
+    ajbbook/ajbentry.py). An WJM catalogoue entry is for the William
+    J. McDonald catalogue in the McDonald Observatory Library.
 
     '''
     def __init__(self):
         '''Set up the class entities if any.'''
         super().__init__()
-        #self.transf = open('hjs01_94.cvs', 'w', encoding='UTF8')
+        #self.transf = open('wjm01_94.cvs', 'w', encoding='UTF8')
         
     def print_header(self, outf=sys.stdout):
         '''Print the leading material for the catalogue.
@@ -63,7 +61,7 @@ class HjsEntry(catentry.CatEntry):
   \vspace*{0.5 cm}
   \noindent
  ''')
-        print('  printing entry', count)
+        #print('  printing entry', count)
         # add reference label
         # make the Author, Title line
         author = self.get_author_string(entry)
@@ -145,7 +143,11 @@ class HjsEntry(catentry.CatEntry):
                 trans_str += f''' 'hjs01' : '{entry.num_str()}', 'catentry' : '{count}' ''' + '},'
                 print(trans_str, file=transf)
             clean_com = self.clean_comment(comment)
-            print(self.protect(clean_com), file=outf)
+            vals = clean_com.split(':')
+            if 'shelf mark:' in clean_com and  not vals[1].strip():
+                print('shelf mark: missing', file=outf)
+            else:
+                print(self.protect(clean_com), file=outf)
             print(file=outf)
 
         print(entry.num_str(), file=outf)
