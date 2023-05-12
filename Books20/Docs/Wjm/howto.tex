@@ -1,0 +1,152 @@
+%% Begin copyright
+%%
+%%  /home/jrf/Documents/books/Books20/Docs/Wjm/howto.tex
+%%
+%%   Part of the Books20 Project
+%%
+%%   Copyright 2023 James R. Fowler
+%%
+%%   All rights reserved. No part of this publication may be
+%%   reproduced, stored in a retrival system, or transmitted
+%%   in any form or by any means, electronic, mechanical,
+%%   photocopying, recording, or otherwise, without prior written
+%%   permission of the author.
+%%
+%%
+%% End copyright
+
+\documentclass{article}
+
+\usepackage{books20}
+
+\begin{document}
+
+\title{How to Create wjm\_catalogue.pdf}
+\author{James R. Fowler}
+\date{3 March 2023}
+
+\maketitle
+
+\section{Dependencies}
+
+The wjm\_catalogue.pdf file is dependent on
+\begin{itemize}
+  \item wjm\_catalogue.tex, biography.tex, library.tex,
+  \item books.tex, author.ind.
+\end{itemize}
+
+\noindent
+The production via the \LaTeX\ system is dependent on the packages
+\begin{itemize}
+  \item fontenc, graphicx, wrapfig,
+  \item imakeidx, colophon,
+  \item books20.
+\end{itemize}
+
+
+% create initial books.tex and index with catalogue_xml.py
+\section{Creating the initial files}
+
+\subsection{wjm\_books.xml}
+The comma-separated variable file WJ\_McDonald\_library\_sorted.csv
+contains the original 2017 inventory of the WJM collection updated
+with the catalogue numbers from the 1971 inventory.  This file was
+created from the original Excel\textsuperscript{\texttrademark}\ file,
+WJ\_McDonald\_library.xlsx.
+To convert this file to an XML file use \texttt{convert\_cvs.py}.
+\begin{verbatim}
+convert_cvs.py -o wjm_books.xml WJ_McDonald_library_sorted.csv
+\end{verbatim}
+
+\subsection{the\_books.tex}
+To create books.tex and author.idx from scratch first run
+\texttt{catalogue\_xml.py} to create the author2.idx and
+the\_books.tex. Note that enty WJM 01.01(0).67 is not included
+in the catalogue or index
+
+\begin{verbatim}
+python3 catalogue_xml.py --output the_books.tex --sort Year wjm_full.xml
+\end{verbatim}
+or
+\begin{verbatim}
+make the_books.tex
+\end{verbatim}
+
+\section{Editing the files}
+% edit books.tex by hand
+\subsection{Editing books.tex}
+Copy the\_books.tex to books.tex and hand edit the file for final
+production. This is necessary because creating software to deal with
+all possible situation is difficult.  It is easier to edit the file by
+hand.
+
+\begin{itemize}
+\item For long titles split as
+\begin{verbatim}
+      \textbf{The Jupiter Effect; The Planets as Triggers}
+ 
+      \hspace{1em}\textbf{of Devastating Earthquakes}
+\end{verbatim}
+
+\item For long comments split as
+\begin{verbatim}
+    laid in with a letter from William Brunk, Chief Plantary Astronomy
+
+     \hspace{1em}forwarding this complementary copy to WJM
+\end{verbatim}
+
+ \item replace three initials from A.B. C. with A.B.C.
+   in author.index and books.tex.  Use the command
+   
+   \texttt{isearch-forward-regex "[A-Z]\.[A-Z]\. [A-Z]\."}
+
+ \item replace upper right, lower right with upper-right, lower-right
+   replace upper left, lower left with upper-left, lower-left.
+
+ \item Look for any " quote characters at the begining and end of strings
+       that have not been converted to LaTeX quotes
+
+     \item Separate inscriptions on individual lines and indent by 2em
+\begin{verbatim}
+inscription on inside front cover
+
+\hspace{2em}``In remb: of our trip together in the `City of Paris'
+
+\hspace{2em}To Samuel Goodman Esqr.
+
+\hspace{2em}with the best wishes of
+
+\hspace{2em}T. Reginald Jones
+\end{verbatim}
+
+  \item Swap any entries where it make sense for the ordering. Usually
+    putting a volume 1 before a volume 2.  Update the author.index
+    file if any references will change.
+
+\end{itemize}
+
+\section{Create the Final Index}
+Steps to creating the author.ind file
+\begin{itemize}
+  \item cp author2.idx to author.idx
+  \item run 'makeindex author.idx'
+  \item cp author.ind to author.index
+  \item Commit author.index
+\end{itemize}
+\noindent
+Edit the author.index file as follows,
+\begin{itemize}
+  \item replace three initials from A.B. C. with A.B.C.
+    in author.index and books.tex.  Use the following command in Emacs
+    to locate these occurrences
+   
+   \verb|isearch-forward-regex "[A-Z]\.[A-Z]\. [A-Z]d\."|
+
+ \item replace \verb|\myhref{74--75}| style entries
+   with \verb|\myhref{74}, \myhref{75}|
+\end{itemize}
+% create inventory94.tex
+
+% make wjm_catalogue.pdf
+
+\end{document}

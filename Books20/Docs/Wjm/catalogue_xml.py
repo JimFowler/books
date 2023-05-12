@@ -84,7 +84,7 @@ def main():
     if args.verbose:
         pprint(args)
 
-    wjm_entry = wjmentry.WjmEntry()
+    entry = wjmentry.WjmEntry()
     #wjm_entry = inv94entry.InvEntry()
     transf = open('trans.py', 'w', encoding='UTF8')
 
@@ -98,17 +98,17 @@ def main():
         if args.sort:
             bookf.sort_by(args.sort)
 
-        wjm_entry.print_header(outf=filep)
+        entry.print_header(outf=filep)
         print('trans94 = {', file=transf)
         for count, ent in enumerate(bookf, start=1):
             #print('cat printing entry', count)
             try:
-                wjm_entry.print_entry(count, ent, authp, transf=transf, outf=filep)
+                entry.print_entry(count, ent, authp, transf=transf, outf=filep)
             except [KeyError, ValueError] as exp:
                 pprint(exp)
                 print('problem with entry:', count)
                 pprint(ent)
-        wjm_entry.print_closing()
+        entry.print_closing()
 
     print('}', file=transf)
     transf.close()

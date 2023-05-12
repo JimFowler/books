@@ -44,7 +44,7 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} wjm_catalogue.pdf
 
 .PHONY: wjm_catalogue.pdf
-wjm_catalogue.pdf catalogue wjm: wjm_catalogue.tex biography.tex library.tex the_books.tex
+wjm_catalogue.pdf catalogue wjm: wjm_catalogue.tex biography.tex library.tex the_books.tex author.ind
 	${LATEX} -draftmode wjm_catalogue
 	${BIBER} wjm_catalogue
 	${LATEX} -draftmode wjm_catalogue
@@ -56,7 +56,8 @@ author.ind: author.index
 
 .PHONY: the_books.tex
 the_books.tex: wjm_books.xml catalogue_xml.py
-	python catalogue_xml.py -s Year -o the_books.tex wjm_books.xml
+	python catalogue_xml.py -o the_books.tex wjm_sorted.xml
+#python catalogue_xml.py -s Year -o the_books.tex wjm_sorted.xml
 
 .PHONY: test_wjm.pdf
 test_wjm.pdf: test_books.tex test_wjm.tex

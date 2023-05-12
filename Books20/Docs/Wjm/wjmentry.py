@@ -56,6 +56,9 @@ class WjmEntry(catentry.CatEntry):
 
         '''
 
+        if entry.num_str() == 'WJM 01.01(0).67':
+            return
+        
         tex_entry = self.protect(r'''\stepcounter{bksctr}
 \vbox{%
   \vspace*{0.5 cm}
@@ -91,7 +94,7 @@ class WjmEntry(catentry.CatEntry):
         try:
             place = entry['Publishers'][0]['Place'].split('-')[0]
             if place:
-                place += ','
+                place += ':'
         except IndexError:
             place = ''
 
