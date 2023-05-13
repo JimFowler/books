@@ -44,7 +44,7 @@ build_software: ${SUB_DIRS}
 build_docs: ${SUB_DIRS} wjm_catalogue.pdf
 
 .PHONY: wjm_catalogue.pdf
-wjm_catalogue.pdf catalogue wjm: wjm_catalogue.tex biography.tex library.tex the_books.tex author.ind
+wjm_catalogue.pdf catalogue wjm: wjm_catalogue.tex biography.tex library.tex books.tex author.ind
 	${LATEX} -draftmode wjm_catalogue
 	${BIBER} wjm_catalogue
 	${LATEX} -draftmode wjm_catalogue
