@@ -32,7 +32,8 @@
 The wjm\_catalogue.pdf file is dependent on
 \begin{itemize}
   \item wjm\_catalogue.tex, biography.tex, library.tex,
-  \item books.tex, author.ind.
+  \item books.tex, missing.tex, shelftom.tex, mtoshelf.tex,
+    \item titles.tex, and author.index.
 \end{itemize}
 
 \noindent
@@ -50,7 +51,7 @@ The production via the \LaTeX\ system is dependent on the packages
 \subsection{wjm\_books.xml}
 The comma-separated variable file WJ\_McDonald\_library\_sorted.csv
 contains the original 2017 inventory of the WJM collection updated
-with the catalogue numbers from the 1971 inventory.  This file was
+with the catalogue numbers from the 1971 inventory. This file was
 created from the original Excel\textsuperscript{\texttrademark}\ file,
 WJ\_McDonald\_library.xlsx.
 To convert this file to an XML file use \texttt{convert\_cvs.py}.
@@ -73,8 +74,6 @@ make the_books.tex
 \end{verbatim}
 
 \section{Editing the files}
-% edit books.tex by hand
-\subsection{Editing books.tex}
 Copy the\_books.tex to books.tex and hand edit the file for final
 production. This is necessary because creating software to deal with
 all possible situation is difficult.  It is easier to edit the file by
@@ -125,7 +124,64 @@ inscription on inside front cover
 
 \end{itemize}
 
-\section{Create the Final Index}
+\section{Create the Cross reference Index}
+Steps to creating crossref.tex
+\begin{itemize}
+\item execute \texttt{egrep 'target|shelf|M num' books.tex > crossref.csv}
+\item edit crossref.csv with emacs
+  \begin{itemize}
+  \item replace-string ``\verb|  \hypertarget\{entry:|'' with ' '
+  \item replace-string ``\verb|}{\footnotesize\arabic{\bksctr}} |'' with ', '
+  \item replace-string ``\verb|\textit\{|'' with ' '
+  \item replace-string ``\verb|\textsc\{\bfseries\{|'' with ', '
+  \item replace-string ``\verb|}^Q^Jshelf mark: |'' with ', '
+  \item replace-string ``\verb|^Q^JM num:|'' with ','
+  \end{itemize}
+  This should create a comma-separted file with column headers:
+
+  Cat Entry, LastName, Initials, Title, shelf mark, M num
+
+  You will need to hand edit the entries without an author/editor to
+  add the comma between lastname and initials
+\item run the python programs ?? to create titles,tex, shelftom.tex and mtoshelf.tex.
+
+  The shelftom.tex file will have a two column table format with 30 lines per page
+  with columns,
+
+  \verb-Shelf | M num | Cat Entry-
+
+  with Shelf and M Num swapped in mtoshelf.tex
+
+  The titles.tex file will have 30 rows per page with columns,
+
+  \verb-Title | Cat Entry | Shelf | M num-
+
+  Hand edit titles.tex to create short titles that fit on a line.  The
+  sort the table alphabetically.  Add \LaTeX\ table format commands.
+
+\end{itemize}
+
+\section{Create the Missing List}
+\begin{itemize}
+\item By hand, copy the 33 missing entries from books.tex to missing.tex.
+  This could have been done when the\_books.tex was generated but I didn't
+  know that I wanted a missing list then.
+\item edit the missing.tex file with emacs
+  \begin{itemize}
+  \item at the start of the file add ``\verb|\newcounter{missctr}|''
+  \item replace-string ``bksctr'' with ``missctr''
+    \item replace-string ``\verb|}}|'' with ``\verb|}|''
+  \item add the string ``\verb|\hspace{1em}cat.~entry: \myhref{nn}, |''
+    after ``\verb|{\footnotesize\arabic{missctr}|'' where
+    ``nn'' is the entry number used in the \verb|\hypertarget{}{}| command.
+  \item replace-string ``\verb|\hypertarget\{entry:nn}|'' with ' '
+    \item add an \verb|}| at the end of the line to close out the footnotesize command.
+    \item remove the publication information and all the comments
+  \end{itemize}
+\end{itemize}
+
+
+\section{Create the Author/Editor Index}
 Steps to creating the author.ind file
 \begin{itemize}
   \item cp author2.idx to author.idx

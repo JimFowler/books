@@ -24,21 +24,23 @@
 # C-ct toggle todo tags
 #
 #+SEQ_TODO: TODO STARTED APPT WAITING TEST | DEFERRED DONE 
-* STARTED Steps to creating the WJMcDonald catalogue [3/13]
+* STARTED Steps to creating the WJMcDonald catalogue [8/15]
  - [X] Convert the WJ_McDonald_library_sorted.csv to an ajbbooks XML file
    create convert_csv.py
    CSV column headers
    ID,Shelf Index,M Index,Title,Author(s),City,Publisher,
        Date,Ed.,Prt.,Last Page,Comments
  - [X] edit the XML file to clean up entries
- - [ ] define catalogue style
+ - [X] define catalogue style
  - [X] create wjmentry.py
- - [ ] create books.tex
- - [ ] create index files
- - [ ] write wjm_catalogue.tex
+ - [X] create books.tex
+ - [X] create index files
+ - [X] create missing entry list
+ - [ ] add short title index with cross ref to S/M numbers
+ - [X] write wjm_catalogue.tex
  - [ ] write biography.tex
  - [ ] write library.tex
  - [ ] make wjm_catalogue.pdf
  - [ ] proof read wjm_catalogue.pdf
  - [ ] Edit all LaTeX files
- - [ ] Repeat steps until perfect
+ - [ ] Repeat last three steps until perfect
