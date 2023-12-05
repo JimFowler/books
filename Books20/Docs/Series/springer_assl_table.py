@@ -1052,7 +1052,7 @@ ASSL_BOOK_LIST = [
      ['Moshe Elitzur'],
      'A', None, ''),
 
-    (171, ['Databases and On-line Data in', 'Astronomy'], '1991', 
+    (171, ['Databases and On-line Data in', 'Astronomy'], '1991 *',
      ['Miguel A. Albrecht', 'Daniel Egret'],
      'E', None, ''),
 
