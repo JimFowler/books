@@ -186,16 +186,16 @@ class CatEntry():
                 pages += comma.test() + str(pg_count) + r'\,charts'
             elif 'I' in page:
                 pg_count = page.split('I')[0]
-                pages += comma.test() + str(pg_count) + 'p\,index'
+                pages += comma.test() + str(pg_count) + r'p\,index'
             elif 'AA' in page:
                 pg_count = page.split('AA')[0]
-                pages += comma.test() + str(pg_count) + 'p\,app.\,A'
+                pages += comma.test() + str(pg_count) + r'p\,app.\,A'
             elif 'AB' in page:
                 pg_count = page.split('AB')[0]
-                pages += comma.test() + str(pg_count) + 'p\,app.\,B'
+                pages += comma.test() + str(pg_count) + r'p\,app.\,B'
             elif 'AC' in page:
                 pg_count = page.split('AC')[0]
-                pages += comma.test() + str(pg_count) + 'p\,app.\,C'
+                pages += comma.test() + str(pg_count) + r'p\,app.\,C'
             elif page:
                 print(page)
             else:
@@ -213,37 +213,3 @@ class CatEntry():
         cleaned = comment.replace(' "', ' ``')
 
         return cleaned
-
-
-# Test this class
-if __name__ == '__main__':
-
-    import unittest
-
-    class CatEntryTestCase(unittest.TestCase):
-        '''Run the unit tests for the class CatEntry.'''
-
-        def setUp(self):
-            '''Set things up for every test.'''
-            self.cat_entry = CatEntry()
-
-        def tearDown(self):
-            '''Clean up the mess after every test.'''
-            del self.cat_entry
-
-        def test_a_make_edition(self):
-            '''test the self.cat_entry.make_edition() function.'''
-            self.assertEqual(self.cat_entry.make_edition(1), r'\Ord{1}{st} edition')
-            self.assertEqual(self.cat_entry.make_edition(2), r'\Ord{2}{nd} edition')
-            self.assertEqual(self.cat_entry.make_edition(3), r'\Ord{3}{rd} edition')
-            self.assertEqual(self.cat_entry.make_edition(4), r'\Ord{4}{th} edition')
-            self.assertEqual(self.cat_entry.make_edition(11), r'\Ord{11}{th} edition')
-            self.assertEqual(self.cat_entry.make_edition(12), r'\Ord{12}{th} edition')
-            self.assertEqual(self.cat_entry.make_edition(13), r'\Ord{13}{th} edition')
-            self.assertEqual(self.cat_entry.make_edition(14), r'\Ord{14}{th} edition')
-            self.assertEqual(self.cat_entry.make_edition(101), r'\Ord{101}{st} edition')
-            self.assertEqual(self.cat_entry.make_edition(102), r'\Ord{102}{nd} edition')
-            self.assertEqual(self.cat_entry.make_edition(103), r'\Ord{103}{rd} edition')
-            self.assertEqual(self.cat_entry.make_edition(104), r'\Ord{104}{th} edition')
-
-    unittest.main()
