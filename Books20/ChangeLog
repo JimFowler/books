@@ -1,3 +1,11 @@
+2024-05-25  Jim Fowler  <jrf@Pergamon>
+
+	* aabooks/lib: move all unittests to explict test programs in
+	./tests.  This was done for entrylists.py, isbn.py,
+	pagination_xml.py, roman.py, search.py, and utils.py. This is in
+	preparation for a migration to a better build and installation
+	method.
+
 2023-02-05  Jim Fowler  <jrf@Pergamon>
 
 	* Docs/Hjs/hjsentry.py: Added space between index number and
