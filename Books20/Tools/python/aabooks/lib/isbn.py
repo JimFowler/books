@@ -107,7 +107,6 @@ def checksum(isbnlike):
 if __name__ == '__main__':
 
     import sys
-    import unittest
     import argparse
 
     # check for command line argument.  Run checksum rather
@@ -129,4 +128,3 @@ if __name__ == '__main__':
         else:
             print('The proper ISBN checksum is', cksum)
     sys.exit()
-
