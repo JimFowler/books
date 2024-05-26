@@ -1,5 +1,8 @@
 2024-05-26  Jim Fowler  <jrf@Pergamon>
 
+	* aabooks/journal: move all unit tests to explicit test programs
+	in ./tests.
+
 	* aabooks/ajbbook: move all unit tests to explicit test programs
 	in ./tests.  Note that ajbcomments.py and entrytext.py were not
 	moved as these are broken and the system no longer uses text
