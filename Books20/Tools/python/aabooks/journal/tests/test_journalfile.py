@@ -21,6 +21,7 @@ from lxml import etree
 
 from aabooks.journal import journalfile as jf
 
+
 class JournalFileTestCase(unittest.TestCase):
     '''The unit tests for the class JournalFile.'''
 
@@ -28,6 +29,7 @@ class JournalFileTestCase(unittest.TestCase):
         '''Create a new JournalFile for each test.'''
 
         self.jfile = jf.JournalFile()
+        self.test_xml = './aabooks/journal/tests/testjournals.xml'
 
     def tearDown(self):
         '''Clean up our mess from the last test.'''
@@ -37,8 +39,8 @@ class JournalFileTestCase(unittest.TestCase):
     def test_a_read_file_xml(self):
         '''Test the JournalFile.read_file_xml() method.'''
 
-        count = self.jfile.read_file('testjournals.xml')
-        jfile2 = jf.JournalFile('testjournals.xml')
+        count = self.jfile.read_file(self.test_xml)
+        jfile2 = jf.JournalFile(self.test_xml)
         self.assertEqual(count, 235)
         self.assertEqual(self.jfile, jfile2)
         del jfile2
@@ -46,14 +48,14 @@ class JournalFileTestCase(unittest.TestCase):
     def test_b_write_file_xml(self):
         '''Test the JournalFile.write_file_xml() method.'''
 
-        count = self.jfile.read_file('testjournals.xml')
+        count = self.jfile.read_file(self.test_xml)
         self.assertEqual(count, 235)
         self.assertTrue(self.jfile.write_file('testjournals_tmp.xml'))
 
     def test_c_make_short_title_list(self):
         '''Test the JournalFile.make_short_title_list() method.'''
 
-        count = self.jfile.read_file('testjournals.xml')
+        count = self.jfile.read_file(self.test_xml)
         self.assertEqual(count, 235)
 
         shorttitle = self.jfile.make_short_title_list()
@@ -64,12 +66,13 @@ class JournalFileTestCase(unittest.TestCase):
 
         test_parser = None
 
-        count = self.jfile.read_file('testjournals.xml')
+        count = self.jfile.read_file(self.test_xml)
         self.assertEqual(count, 235)
         self.assertTrue(self.jfile.write_file('testjournals_tmp.xml'))
 
         try:
-            test_schema = etree.XMLSchema(file='../../../xml/journalfile.xsd')
+            # Need a better way to find this schema file
+            test_schema = etree.XMLSchema(file='../../../../xml/journalfile.xsd')
             test_parser = etree.XMLParser(schema=test_schema)
             schema_good = True
         except etree.XMLSchemaParseError:
@@ -95,7 +98,7 @@ class JournalFileTestCase(unittest.TestCase):
 
         '''
 
-        self.jfile.read_file("testjournals.xml")
+        self.jfile.read_file(self.test_xml)
 
         answer_file = jf.JournalFile()
         for dummy in range(0, 2):
@@ -116,7 +119,7 @@ class JournalFileTestCase(unittest.TestCase):
         what is happening. 
 
         '''
-        self.jfile.read_file("testjournals.xml")
+        self.jfile.read_file(self.test_xml)
 
         answer_file = jf.JournalFile()
         for dummy in range(0, 2):
