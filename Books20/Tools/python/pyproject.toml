@@ -1,0 +1,29 @@
+#
+# pip install -v  .
+#
+[project]
+name = "Books20"
+description = "The Books20 project tools"
+readme = "README.md"
+authors = [
+	{name = "James R. Fowler", email = "jrf12@icloud.com"},
+       	]
+dynamic = ["version"]
+dependencies = [
+	     "pyqt5",
+	     "nameparser",
+	     "isbnlib"
+	     ]
+requires-python = ">=3.9"
+
+[project-urls]
+Repository = "git@github.com:JimFowler/books.git"
+
+
+[build-system]
+requires =["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tools.setuptools.dynamic]
+version = {attr = "aabooks.__version__"}
+

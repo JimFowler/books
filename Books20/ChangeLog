@@ -1,3 +1,14 @@
+2024-05-27  Jim Fowler  <jrf@Pergamon>
+
+	* Tools/python/pyproject.toml (Repository): Created a
+	pyproject.toml file because the old installation with 'python
+	setup.py install' is deprecated.  The new method is 'pip install'.
+	Still using the setup.py file to describe the tools.  Should
+	consider a different back end rather than setup.py.  However, that
+	is for the future.
+
+	Modifed pyproject.toml, README.md, and Makefile.am.
+
 2024-05-26  Jim Fowler  <jrf@Pergamon>
 
 	* aabooks/journal: move all unit tests to explicit test programs

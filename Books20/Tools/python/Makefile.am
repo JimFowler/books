@@ -91,7 +91,8 @@ distclean: ${SUB_DIRS} veryclean
 #
 .PHONY: install_python
 install_python:
-	python setup.py install --prefix=${PYTHON_INSTALL_DIR}
+	pip install --prefix=${PYTHON_INSTALL_DIR} .
+#	python setup.py install --prefix=${PYTHON_INSTALL_DIR}
 
 
 .PHONY: clean_tex

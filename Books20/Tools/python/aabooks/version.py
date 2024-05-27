@@ -28,7 +28,7 @@ Found this at
 https://stackoverflow.com/questions/458550/standard-way-to-embed-version-into-python-package
 """
 
-__version_info__ = ('2', '2', '0')
+__version_info__ = ('2', '2', '1')
 __major__ = __version_info__[0]
 __minor__ = __version_info__[1]
 __micro__ = __version_info__[2]
