@@ -20,10 +20,7 @@
 """AJBentry provides a class which can convert between a unicode text
 entry and a representation in python, typically a dictionary entry of
 the form Entry.py.entry()."""
-from pprint import pprint
-
 from aabooks.ajbbook import entryxml
-from aabooks.ajbbook import entrytext
 
 
 class AJBentry(dict):
@@ -70,14 +67,11 @@ class AJBentry(dict):
 
     """
 
-    def __init__(self, _entry_str=None):
+    def __init__(self):
 
         super().__init__()
 
         self.blank_entry()
-
-        if _entry_str:
-            entrytext.entry_from_text(self, _entry_str)
 
     def blank_entry(self):
         """Initialize a blank entry by setting known fields to
@@ -190,7 +184,7 @@ class AJBentry(dict):
     def not_empty(self, key):
         """Return the truth value of, 'key' existing
         in the entry and the key value is not empty."""
-        if self.__contains__(key) and self[key]:
+        if key in self and self[key]:
             return True
         return False
 
@@ -218,7 +212,7 @@ class AJBentry(dict):
 
         if 'title' in lower_key:
             sortkey = self['Title']
-            
+
         if 'num' in lower_key:
             # return the ajbnum string
             sortkey = self.sort_num_str()
@@ -232,7 +226,7 @@ class AJBentry(dict):
 
         if 'language' in lower_key:
             sortkey = self['Language']
-            
+
         if 'author' in lower_key:
             if self['Authors']:
                 sortkey = mk_sort_name(self['Authors'][0])
@@ -240,7 +234,7 @@ class AJBentry(dict):
                 sortkey = mk_sort_name(self['Editors'][0])
             else:
                 sortkey = ''
-                
+
         if 'editor' in lower_key or\
            'translator' in lower_key or \
            'compiler' in lower_key or \
@@ -265,19 +259,3 @@ class AJBentry(dict):
     def write_xml_from_entry(self):
         '''A call to the entryxml routine entry_to_xml()'''
         return entryxml.entry_to_xml(self)
-
-    def read_text_to_entry(self, line):
-        '''A call to the entrytext routine entry_from_text()'''
-        entrytext.entry_from_text(self, line)
-
-    def write_text_from_entry(self):
-        '''A call to the entrytext routine entry_to_text()'''
-        return entrytext.entry_to_text(self)
-
-#
-# Test everything
-#
-if __name__ == '__main__':
-
-    print('''All the functionality is tested
-in entrytext.py and entryxml.py''')
