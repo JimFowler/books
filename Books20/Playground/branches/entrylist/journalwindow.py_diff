@@ -1,0 +1,63 @@
+diff --git a/Books20/Tools/python/aabooks/journal/journalwindow.py b/Books20/Tools/python/aabooks/journal/journalwindow.py
+index 17c6dc8..45bcad2 100644
+--- a/Books20/Tools/python/aabooks/journal/journalwindow.py
++++ b/Books20/Tools/python/aabooks/journal/journalwindow.py
+@@ -206,8 +206,6 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+         del self._vardict['sdict']
+         
+         for count, entry in enumerate(self._vardict['journal_file']):
+-            if count < 1:
+-                continue
+ 
+             title = entry['Title']
+             sub_title = entry['subTitle']
+@@ -309,11 +307,11 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+         if self._vardict['cur_entry_number'] > self.max_entry_count:
+             ret = self._vardict['journal_file'].set_new_entry(\
+                             self._vardict['temp_entry'], \
+-                            self._vardict['cur_entry_number'])
++                            self._vardict['cur_entry_number'] - 1)
+         else:
+             ret = self._vardict['journal_file'].set_entry(\
+                             self._vardict['temp_entry'], \
+-                            self._vardict['cur_entry_number'])
++                            self._vardict['cur_entry_number'] - 1)
+ 
+         if not ret:
+             msg = '2 Entry invalid. No Title!\nNot saved in journalfile!'
+@@ -373,7 +371,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+         if not num or num < 1 or num > self.max_entry_count:
+             return
+ 
+-        self._vardict['journal_file'].set_new_entry(self._vardict['temp_entry'], num)
++        self._vardict['journal_file'].set_new_entry(self._vardict['temp_entry'], num - 1)
+         self._build_search_dictionary()
+         self._vardict['cur_entry_number'] = num
+         self.set_max_entry_count(self.max_entry_count + 1)
+@@ -390,7 +388,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+             return
+ 
+         self.set_max_entry_count(self._vardict['journal_file'].delete_entry(\
+-                                            self._vardict['cur_entry_number']))
++                                           self._vardict['cur_entry_number'] - 1))
+         self._build_search_dictionary()
+         if self.max_entry_count < 1:
+             self.insertButton.setEnable(False)
+@@ -423,7 +421,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+ 
+         # Display the actual entry data
+         self._vardict['temp_entry'] = self._vardict['journal_file'].get_entry(\
+-                                            self._vardict['cur_entry_number'])
++                                                self._vardict['cur_entry_number'] - 1)
+ 
+         if not self._vardict['temp_entry']:
+             return
+@@ -438,7 +436,7 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
+ 
+     def _print_entry(self):
+         '''Print a postscript file of the current display.'''
+-        pprint(self._vardict['journal_file'].get_entry(self._vardict['cur_entry_number']))
++        pprint(self._vardict['journal_file'].get_entry(self._vardict['cur_entry_number'] - 1))
+ 
+     def search(self, string):
+         '''Search the existing Titles and abbreviations for any entries

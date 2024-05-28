@@ -1,0 +1,22 @@
+Notes regarding graphical user interfaces or windows programs
+8 Dec 2018
+J. R. Fowler
+
+
+a main window program should have no public functions
+  all information passed in via __init__() and config file
+  interactive user input does the rest.
+  (However, external python file may need access to the functions)
+  Link buttons through the designer process
+  Link menu functions through the designer as well??
+
+ Use 0MQ to communicate between windows
+
+ keep number of instance attibutes to a minimum, use dictionaries?
+   This may not be possible! In which case use
+   #pylint: disable=too-many-instance-attributes
+
+ define ALL instance variables at the top of the window.  This way
+   we can identify what is available.
+   
+ Use '\' to continue long lines and not use the default indentation

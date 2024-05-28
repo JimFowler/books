@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Begin Copyright
+
+  /home/jrf/Documents/books/Books20/WebPages/xmlbooks.html
+  
+   Part of the Books20 Project
+
+   Copyright 2018 James R. Fowler
+
+   All rights reserved. No part of this publication may be
+   reproduced, stored in a retrival system, or transmitted
+   in any form or by any means, electronic, mechanical,
+   photocopying, recording, or otherwise, without prior written
+   permission of the author.
+
+
+End Copyright -->
+
+
+<html>
+<body>
+
+<div id='showCD'></div><br>
+<input type="button" onclick="previous()" value="<<">
+<input type="button" onclick="next()" value=">>">
+
+<script>
+var i = 0;
+var x;
+displayCD(i);
+
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this, i);
+        }
+    };
+    xmlhttp.open("GET", "/home/jrf/Documents/books/Books20/Data/Ajb/ajb68_books.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("Entry");
+    document.getElementById("showCD").innerHTML =
+    "Entry: " + i +
+    "<br>Title: " +
+    x[i].getElementsByTagName("Title")[0].childNodes[0].nodeValue +
+    "<br>Year: " + 
+    x[i].getElementsByTagName("Year")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+if (i < x.length-1) {
+  i++;
+  displayCD(i);
+  }
+}
+
+function previous() {
+if (i > 0) {
+  i--;
+  displayCD(i);
+  }
+}
+</script>
+
+</body>
+</html>

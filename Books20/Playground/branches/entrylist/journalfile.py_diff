@@ -1,0 +1,37 @@
+diff --git a/Books20/Tools/python/aabooks/journal/journalfile.py b/Books20/Tools/python/aabooks/journal/journalfile.py
+index fa136d7..18d323c 100644
+--- a/Books20/Tools/python/aabooks/journal/journalfile.py
++++ b/Books20/Tools/python/aabooks/journal/journalfile.py
+@@ -61,9 +61,8 @@ class JournalFile(entrylist.EntryList):
+ 
+         short_title_list = ''
+         for count, entry in enumerate(self):
+-            if count > 0:
+-                short_title_list = short_title_list + str(count) + \
+-                                   ' ' + entry['Title'] + '\n'
++            short_title_list = short_title_list + str(count+1) + \
++                ' ' + entry['Title'][:50] + '\n'
+ 
+         return short_title_list
+ 
+@@ -129,9 +128,8 @@ class JournalFile(entrylist.EntryList):
+ 
+         journals = etree.SubElement(jf_root, 'Journals')
+         for count, entry in enumerate(self):
+-            if count > 0:
+-                entry_xml = entry.write_xml_from_entry()
+-                journals.append(entry_xml)
++            entry_xml = entry.write_xml_from_entry()
++            journals.append(entry_xml)
+ 
+         jf_string = etree.tostring(jf_root,
+                                    xml_declaration=True,
+@@ -181,7 +179,7 @@ if __name__ == "__main__":
+             self.assertEqual(count, 235)
+ 
+             shorttitle = self.jfile.make_short_title_list()
+-            self.assertEqual(len(shorttitle), 9339)
++            self.assertEqual(len(shorttitle), 9337)
+ 
+         def test_d_check_schema(self):
+             '''Test the written XML file against the XSD schema.'''

@@ -1,0 +1,357 @@
+#+STARTUP: hidestars
+#
+# Headlines
+#  new headline at same level M-Ret
+#  open/close all headlines Shift-Tab
+#
+# Tags
+#  on headline C-c C-c
+#  common tags
+# Places: @home @fire @work
+# Projects: Home Books20 (subprojects?) Ares Radio Fire Books Book_Club
+#
+# Check boxes
+#   ** Topic [/]
+#      - [ ] task
+# Use C-c C-x C-b to toggle checkbox
+# 
+# add a timestamp C-c .
+# change item under cursor by one unit s-up/down
+# Scheduled C-c C-s
+# Deadline  C-c C-d
+#
+# TODO
+# C-ct toggle todo tags
+#
+#+SEQ_TODO: TODO STARTED APPT WAITING TEST | DEFERRED DONE 
+* Books20 Purpose                                                   :Books20:
+  Research and study of astronomy and astrophysics books produced in
+  the 20th Century.  Goal is to study the history of astronomy as
+  illustrated by books published. In addition I want to learn a bit
+  about book production.
+
+  Last updated 30 Aug 2021
+* Review how to study history
+* DONE Read how to write bibliographies, completed 13 Feb 2023
+  Nigel Hamilton, "How to do Biography"
+* Plan notebooks for History of Astronomy
+   Use 3-ring binders
+     - already have some, need paper
+     - can rearrange pages, need to date pages
+     - can use different types of pages
+   Use spiral bound
+     - stays together
+     - stays in order
+     - can't reorder
+   Use TeX?  This is a bit painful and means I need to sit
+   next to the computer when reading a history
+
+  Keep track of
+   the date read,
+   the page number of a note,
+   the references, add these to History.bib
+   
+* Read History of Astronomy
+* Read Biographies
+* Read Sociology of Astronomy
+* Read Astronomy
+* Read History of Scientific Journals
+* Graphing
+**** Find graph plotting software to show AJB/AAA counts
+* Define data base structure
+** Define queries for database both Collection and Books20
+*** Define AJB/AAA counts tables and nodes
+**** Added prev/next to AJBcounts.xlsx
+** Define data for Collection, use as test setup
+** test imports with LOAD CSV command
+** work on load_collection.cypher, use existing table structure as start
+** Implement prototype in both Sqlite3 and Neo4j
+** Write code for queries in both SQL and Cypher
+** Consider the use of graph database
+
+    Have already started with XML, so it might be useful to go fully
+    RDF in the database.  For example, TerminusDB,
+    https://terminusdb.com.  They are a graph DB and use RDF.  Also
+    consider Shacl https://www.w3.org/TR/Shacl as a replacement for
+    SPARQL or OWL https://www.w3.org/OWL. See also the Wikipedia
+    article https://en.wikipedia.org/wiki/Graph_database. A possible
+    database is Neo4j, another one is TigerGraph.
+** How to run a file of commands? cypher-shell or apoc.cypher.runFile
+** Can empty strings '' be used for NULL values? Yes
+** How to manage online database through server?
+   How to add accounts and databases
+** How can I open a database in python and send commands?
+** What are the problems I want to solve? Are they work a graph?
+   What books might be worth collecting in 20C astronomy and why?
+     topic areas e.g. comets, ISM, black holes,
+     particular authors,
+     particular publishers or series
+   What books illustrate the history of 20C astronomy?
+   What books were most popular with astronomers?
+   How did astronomer use books in 20C?
+      How many books in each topic area.
+   How did authorship change over 20C? multi-author works
+
+   Do I have the information to answer these questions or am I just
+   building a system to list and lookup the books published in 20C.
+
+* Get R and ESS for data analysis
+   Will I need the full power of R or is the statistics package in
+   Python adequate?  'R' is installed on Capella but not on Biblion
+   right now.  R has a literate programmming style called 'Sweave' and
+   a linter called 'lintr' which Emacs can use as 'flycheck'. May also
+   consider 'Rmarkdown' or 'Knitr'.  May use these tools for
+   documenting code chunks and programs but it will depend on the
+   publication requirements for the final markup language. Note
+   however, that 'Markdown' can produce \TeX files.
+* Refactor software, begun 23 Sept 2018
+*** Goals:
+**** To separate program specific files from generic files
+**** To create more generic functions in the library
+**** To identify other functions that could be moved to the genenic library
+**** To allow better code reuse
+**** To standardize code format to PEP-8
+***** to make code more readable and maintainable
+*** DONE Phase 1: rename BookEntry, complete 24 Sept 2018
+**** mv bookentry to aabooks
+     git mv bookentry aabooks
+**** replace links named bookentry with aabooks links
+      cd aabooks
+      rm bookentry
+      ln -s . aabooks
+**** update all files to use aabooks
+      ajbbooks, journals, Makefile.am, .gitignore
+      all *.py files in aabooks
+**** update setup.py
+**** update Books20/configure.ac to create aabooks/Makefile
+**** test installation
+**** test 
+**** merge with master
+*** DONE Phase 2: make program specific sub-directories, complete 25 Sept 2018
+**** create ajbbooks and journal sub-directories (possibly ajblib and jourlib)
+**** move ajbbooks specific files to ajbbooks, add __init__.py
+**** move journal specific files to journal (remove journal prefix to filenames)
+**** move QtDesigner files to appropriate sub-directory
+**** create Makefile.am for each subdirectory
+**** update Books20/configure.ac to create Makefile
+**** edit files to import from the correct path
+**** add version files to sub-directories
+**** test installation (do sub-directories copy?)
+**** test, test
+**** merge with master
+*** DONE Phase 3: establish PEP-8 compliance, complete 8 Dec 2018
+**** pylint on all files, didn't actually happen
+**** fix problems
+**** enjoy pretty code
+**** merge with master Sat Dec 8 17:41:23 2018 -0600
+      commit 90d32db279928663dd184ba1224f8c366b177a0e
+
+*** DONE Phase 4: Refactor for bad smells, complete 4 May 2022
+    At all times consider what can be converted to generic functions,
+    as well, consider what can be removed or simplified. 
+**** DONE add unittests to all remaining modules ajbbooks
+**** DONE Add page numbers to entry 22 Aug 2020 [13/13]
+     ajbnums may be an index to an entry or a reference to another
+     entry.  Will not need page number in this latter case
+     - [X] add to xml definition as optional item
+     - [X] test with validate_xml and ajbtest*_books.xml
+     - [X] add to AJB main window
+     - [X] add to ajbentry.py
+     - [X] add to entry to/from form
+     - [X] test
+     - [X] add to entry_write_xml
+     - [X] add to entry_read_xml
+     - [X] test write with new entries in new file
+     - [X] test read with new file you just made
+     - [X] test with existing file
+     - [X] commit
+     - [X] merge with master
+
+**** DONE split entryxml/text into separate file 27 Aug 2020 [16/16]
+     Makes a smaller file which pylint likes. Easier to maintain
+     and modify.
+    - [X] switch to branch aabooks
+    - [X] merge from master
+    - [X] move entry_to_xml() and entry_from_xml() to entryxml.py
+    - [X] import entryxml into ajbentry.py
+    - [X] add proper prefix to calls
+    - [X] test ajbentry.py
+    - [X] test entryxml.py comparison with UTF8 non-ascii characters
+    - [X] remove all if clauses from xml_entry_*
+    - [X] split entrytext from ajbentry.py into separate file
+    - [X] import entrytest into ajbentry.py
+    - [X] add proper prefix to calls
+    - [X] clean with pylint
+    - [X] test ajbentry
+    - [X] add unittests
+    - [X] update changelog
+    - [X] merge with master
+    - consider splitting out entrydisplay from ajbmainwindow.py
+**** DONE split journalentry.xml into entryxml.py 28 Aug 2020
+**** DONE removed lib/entry.py, nothing is ever used from it 29 Aug 2020
+     alternately make it an abstract class, but abstract base class
+     doesn't add any functionality to my usage so I should skip it.
+     Make AJBentry and JournalEntry as subclass of object
+**** DONE add entrylist.py, use zero based 30 Aug 2020 [6/6]
+    - [X] create entrylist.py
+    - [X]  update documentation
+    - [X] update ajbbooks/bookfile.py
+    - [X] update ajbwindow.py
+    - [X] update journal/journalfile.py
+    - [X] update journal/journalwindow.py
+**** DONE update unittests for ajbcomment.py 2 Sept 2020
+**** DONE create entrydisplay.py file for ajbbook 5 Sept 2020.
+**** DONE create entrydisplay.py file for journal 6 Sept 2020
+**** DONE make entrylist.py a zero-based list 22 April 2022
+***** make separate header
+***** update ajbbooks, journals, and other scripts
+**** DONE run pylint on lib, ajbbooks, journals, scripts 1 May 2022.
+*** DONE Phase 5: update the installation/distribution process, completed 27 May 2024
+**** DONE see https://packaging.python.org/ , complete 27 May 2024
+      because the use of 'python setup.py install' is deprecated
+      but the use of setup tools is not.  Use 'pip install -v .'
+      instead.
+***** consider moving to a different backend instead of setuptools 
+**** DONE create test directories and move unittests, complete 26 May 2924
+**** DONE convert Tools/python/README.txt to a markdown file README.md
+**** DONE delete modgrammar dependence, completed 27 May 2024
+***** remove modgrammar package 
+***** remove aabooks/ajbbook/ajbcomments.py
+***** remove aabooks/ajbbook/entrytext.py
+***** aabooks/ajbbook/ajbentry.py
+****** in __init__ remove if _entry_str
+****** remove read_text_to_entry()
+****** remove write_text_to_entry()
+****** remove if __name__ ...
+**** DONE update to python 3.11 or 3.12 complete 2024-02-23
+**** DONE update to python 3.09
+     update nameparser and modgrammer if possible
+*** Phase 6: refactor code to be better python
+**** convert Doc/Series tables from list of lists to JSON format
+**** convert Doc/Hjs/cat_entry.py for better generality
+**** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
+*** Add features
+**** STARTED add sort function
+***** DONE Determine what to sort on and how.
+***** DONE add sort to BookFile class
+***** add sort feature to ajbbooks 
+***** add sort JournalFile class
+***** add sort feature to journals
+**** STARTED update documentation
+**** add search all files feature to ajbbooks and journals
+**** add filename to __init__() in BookFile and JournalFile class
+**** add optional version string to standard_parser_args()
+     Need to consider how this is used in ajbbooks
+**** Merge entrynum with ajbbooks
+**** consider title/subtitle class
+    title subtitle subsubtitle...
+    convert to string(depth=-1, length=-1)
+    convert from string(sep=';')
+    convert to xml()
+    convert from xml()
+**** DONE get unique keys used in AJB, AAA, HJS and Journal entries. 2022-06-05
+**** DONE consider entrynum class or an ajbnum class
+    catname volume section (subsection) entrynum[suffix]
+    convert to string()
+    convert from string()
+    convert to xml()
+    convert from xml()
+**** DONE add entrylist generic class
+**** DONE __add__() and extend() to BookList and JournalList 15 May 2022
+* Finish catalogue of WJM collection
+* TODO Search book in ADS, review API
+  astroquery.nasa_ads see astroquery.readthedocs.io
+  try to get full data
+
+  can also query the Gaia database using pyvo
+  astropy is amazing
+
+*** Add doc strings to adsquery
+*** determine output format
+    can we extend the AJBEntry format, what is the base format/concepts?
+*** send email asking about source
+* TODO Get AJB/AAA table of contents into database
+** Create links to next/previous
+* DONE Catalogue HJS collection [24/24]
+  - [X] label boxes properly in the McD library 2023-01-02
+  - [X] Test class to print an AJB entry for catalogue_hjs.py 2022-12-28
+  - [X] Send email to Nat  2023-01-01
+    - ask about book plates and library stamps, who added them
+    - ask about completeness of collection
+  - [X] Add biography and bibliography to catalogue header.
+  - [X] verify 3rd proof reading in McD library
+  - [X] get pagination for missing entries
+  - [X] Send thank you letter to Joan before BoV meeting 29/30 July ? 2022-11-29
+  - [X] use section and subsection to record mailing
+      the mailing info is in the volume number so put box num in section
+      original books hjs01_books.xml vol 1 section 1
+      1st mailing in hjs02_books.xml vol 2 boxes (section) 1-4
+      2nd mailing in hjs03_books.xml vol 3 boxes (section) 1-3
+      3rd mailing in hjs04_books.xml vol 4 boxes (section) 1-3
+        3rd mailing not well documented.
+  - [X] Continue cataloguing books already in the library
+  - [X] Combine hjs??_books.xml files
+  - [X] Get HJS bibliography from ADS, 135 listed entries
+  - [X] write code to produce catalogue
+         sort by Year, Author, ??
+  - [X] Return boxes to library
+  - [X] Convert catalogue_xml.py to class HjsEntry()
+  - [X] Remove the books I took out or indicate that they are in my library??
+  - [X] Contact Phil Kelton re HJS collection arrival
+        sent 2023-01-22
+  - [X] Attempt to contact Jerry/Jane Wiant.
+        email sent 2023-01-08, phone call on 2023-01-15
+  - [X] Compare and contrast HJS 94  2023-02-16
+        write program to search for 'HJS 94' in comments
+        place those in a new bookfile using HJS 94 number
+          and put hjs01 number in comments
+        place entries without 'HJS 94' in a new bookfile
+        sort hjs94 books file by hjs94 number
+        save both files
+	compare and contrast!
+  - [X] Add missing items to hjs94 2023-02-16
+  - [X] Determine binding and/or covers 2023-02-01
+  - [X] More proofreadings
+  - [X] Create HJS, Catalogue, Inventory cross-reference dictionary 2023-02-22
+  - [X] Merge and edit catalogue build documentation
+        merge index, notes, pp_notes, and your brain.
+  - [X] Release catalogue to
+         Van, Teznie, library, Coyne, Tom, self, Joan?, Nat?
+* How to use Git
+
+#
+# edit makefile.<machine> to match your installation
+# or create a new makefile.<machine>  Done
+#
+
+#
+# Cloning a new copy of master
+#
+git clone ssh://git@github.com/JimFowler/books ??
+
+#
+# or branch with git
+#
+git branch aabooks
+git checkout aabook  (or git checkout -b aabooks)
+ln -s makefile.<machine> makefile.local
+./bootstrap && ./configure --prefix=$HOME
+make build_software
+make build_docs
+
+#
+# Merge changes from branch to master when done
+#
+git checkout master
+git pull origin master
+git merge aabooks
+git commit
+
+#
+# Tag version
+#
+git tag -a v2.? -m "a clever messages for this tag"
+#
+# record commit and command in Tools/python/versions
+# push to origin and github
+

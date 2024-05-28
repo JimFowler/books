@@ -1,0 +1,61 @@
+Sorting Booksfiles with AJB entries
+
+AJB entry objects look like
+
+Sort?   Field
+        self['Index'] = -1  # an integer > 0 (apparently never used or set. 'Index' is the
+		               key for the AJBnum in the xml file).
+sd      self['Num'] = {'volNum':-1,        # integer 1 <= 999  # Change Num to Index?
+                       'pageNum': -1,      # integer 1 <= 999
+                       'sectionNum':-1,    # integer 1 <= 999
+                       'subsectionNum':-1, # integer 1 <= 999
+                       'entryNum':-1,      # integer 1 <= 999
+                       'entrySuf':'',      # string 'a', 'b', 'c', ...
+                       'volume': ''}       # string 'AJB', 'AAA', 'HJS', 'JRF'
+sd      self['Authors'] = []        # list of HumanNames
+sd      self['Editors'] = []        # list of HumanNames
+sd      self['Compilers'] = []      # list of HumanNames
+sd      self['Contributors'] = []   # list of HumanNames
+sd      self['Translators'] = []    # list of HumanNames
+        self['TranslationOf'] = ''  # string version of 'Num' or Year
+	self['Reprint'] = ''        # string version of 'Num' or Year
+sd      self['Language'] = ''   # string "lang[/lang[...]"
+        self['Others'] = []     # list of string
+s       self['Title'] = ''      # string, subtitles seperated by ';'
+sd      self['Publishers'] = [] # list of dicts
+sd	            {'Place': "", 'PublisherName: ""}
+sd      self['Year'] = ''       # string nnnn[/nnnn]
+        self['Pagination'] = '' # string
+        self['Price'] = ''      # string Unit Quan [and Unit Quan [and ...]]
+        self['Reviews'] = []    # list of strings
+	                              "journal vol (part) page : reviewer"
+        self['Comments'] = ''   # list of strings
+        self['Keywords'] = []   # list of strings
+        self['OrigStr'] = ''    # string (only valid for early AJB files)
+
+The list.sort() function requires a sort_key to be used for the
+sorting process. This key is a numeric or lexical string value that is
+associated with the entry and is used for sorting. The sort key is
+provided by the BookFile::sort_key() function and is passed to the
+sort function as the key parameter. The sorting is currently done as
+list.sort(key=lambda entry: entry.sort_key(<field_name>).
+
+All sort keys are returned as strings and are sorted
+lexigraphically. To sort numerically we need to give the numerical
+value with leading zeros. These might be the sort_keys for the various
+fields in the AJBEntry object
+
+  'Index' : entry['Index']:06 (useful to return a list to its original order.)
+  'Num'   : volume volnum:03.section:03.subsection:02.entryNum:03suffix
+  'Authors' : first author, if there is none, use the first editor.
+  'Editors' :
+  'Compilers' :
+  'Contributers' :
+  'Translators'  :  entry['Author'][0].Lastname, ...Firstname, ...Middlename soffix?
+                    (this may change as we find strange names. How
+		    will the Unicode characters be sorted.  Test this out.)
+  'Place' :  entry['Publishers'][0]['Place']
+  'Publisher' | 'PublisherName' :  entry['Publishers'][0]['PublisherName']
+  'Year' : entry['Year']
+  'Title' : entry['Title']
+  'Language' : entry['Language']

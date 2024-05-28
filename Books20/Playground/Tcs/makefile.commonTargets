@@ -1,0 +1,88 @@
+.PHONY:		doc
+doc:		DOXYFILE?=$(HET_SRC_ROOT)/doxyfile handler_doc_source
+doc:		$(DOXYFILE)
+			$(DOXYVARS) doxygen $(DOXYFILE)
+			$(MAKE) -C doc/latex
+
+.PHONY:		docs
+docs:		$(ALL_DOCS)
+
+.PHONY:		sub_makes
+sub_makes:
+			@set -e ; \
+			for dir in $(SUB_MAKES) ; \
+			do \
+				echo "Making $$dir..." ; \
+				$(MAKE) --directory=$$dir ; \
+			done
+
+ifneq ($(HET_LOCAL_CLEAN_TARGET),yes)
+.PHONY:		clean
+clean:		$(HET_ADDITIONAL_CLEAN_TARGET)
+			@echo   "  Removing built and intermediate items..."
+			@rm -f lib/*.a *.a $(PROGRAM) $(ADD_PROGRAM_1) $(ADD_PROGRAM_2) core.* .*.d $(ALL_OBJS) $(LIBRARY_OBJS) .*.o $(HANDLER_DOC_SRC) $(HANDLER_DOC_HDR) $(ALL_DOCS)
+ifdef SUB_MAKES
+			@set -e ; \
+			for dir in $(SUB_MAKES) ; \
+			do \
+				echo "Cleaning $$dir..." ; \
+				$(MAKE) clean --directory=$$dir ; \
+			done
+endif
+endif
+
+$(DIRS):
+			@echo "Creating directories..."
+			@-mkdir $(DIRS)
+
+ifneq ($(HET_LOCAL_INSTALL_TARGET),yes)
+.PHONY:		install
+install:	basicInstall
+endif
+
+.PHONY:		basicInstall
+basicInstall:
+ifneq ($(HET_INSTALL),recursive)
+	if test $(USER) != "hetdex" ; \
+	then \
+	        echo "You must be running as "hetdex" to use this target"; \
+	        exit 1; \
+	fi
+	@echo "Attempting to install `pwd` into $(HET_DEPLOY_DIR); running as $(USER)"
+	@echo "Press return to continue..."
+	@read wait
+	@echo "Installing..."
+endif
+ifndef HET_NO_CONFIG_FILES_TO_INSTALL
+	@echo "  Installing config files..."
+	@install -d $(HET_DEPLOY_DIR)/etc/configfiles/
+	@cd etc ; find . -maxdepth 1 -exec install -p -m 444 {} $(HET_DEPLOY_DIR)/etc/configfiles/ \;
+endif
+ifdef PROGRAM
+	@echo "  Installing binary(s)..."
+	@install -d $(HET_DEPLOY_DIR)/bin/
+	@install -p -m 555 $(PROGRAM) $(HET_DEPLOY_DIR)/bin/
+endif
+ifdef ADD_PROGRAM_1
+	@echo "  Installing additional binary(s)..."
+	@install -d $(HET_DEPLOY_DIR)/bin/
+	@install -p -m 555 $(ADD_PROGRAM_1) $(HET_DEPLOY_DIR)/bin/
+endif
+ifdef ADD_PROGRAM_2
+	@echo "  Installing additional binary(s)..."
+	@install -d $(HET_DEPLOY_DIR)/bin/
+	@install -p -m 555 $(ADD_PROGRAM_2) $(HET_DEPLOY_DIR)/bin/
+endif
+ifdef SCRIPTS
+	@echo "  Installing script(s)..."
+	@install -d $(HET_DEPLOY_DIR)/bin/
+	@install -p -m 555 $(SCRIPTS) $(HET_DEPLOY_DIR)/bin/
+endif
+ifdef SUB_MAKES
+	@set -e ; \
+	for dir in $(SUB_MAKES) ; \
+	do \
+		echo "Installing $$dir..." ; \
+		$(MAKE) install HET_INSTALL=recursive --directory=$$dir ; \
+	done
+endif

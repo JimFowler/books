@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<system name="tcs">
+  XXX subsystem description and caveats for handlers goes here.
+
+  <handler name="query_trajectory" reentrant="false">
+    Calculates a trajectory based on the given parameters and returns the
+    trajectory descriptor.  Overloads are available for sidereal and non-sidereal
+    trajectories.  Parameters are identical to those of load_trajectory.
+  </handler>
+
+  <handler name="go_next" reentrant="false">
+    Sets the system up for the next trajectory.  The call returns on exception or
+    when the tracker is on trajectory.  If positioning of additional telescope
+    components is requested, those are assumed to be settled and corrected for
+    upon return.
+    <optional_parm name="move_dome" type="bool">
+      Flag indicating that the dome should be moved to the Azimuth of the
+      requested trajectory.  If given, and any error is encountered in positioning
+      the dome, the trajectory will be aborted and the corresponding exception
+      thrown.
+    </optional_parm>
+    <optional_parm name="move_structure" type="bool">
+      Flag indicating that the stucture should be moved to the Azimuth of the
+      requested trajectory.  If given, and any error is encountered in positioning
+      the structure, the trajectory will be aborted and the corresponding exception
+      thrown.
+    </optional_parm>
+    <optional_parm name="move_probes" type="bool">
+      Flag indicating that any configured PFIP metrology probes should be moved to the
+      requested position. @sa set_position
+    </optional_parm>
+    <optional_parm name="override_structure_correction" type="bool">
+      Flag indicating that the correction of the trajectory, for the error in the
+      placement of the structure, should be skipped.
+    </optional_parm>
+  </handler>
+
+  <handler name="load_trajectory" reentrant="false">
+    XXX
+  </handler>
+  <handler name="cancel_trajectory" reentrant="false">
+    Cancels any currently active trajectory.
+  </handler>
+  <handler name="tracker_abort" reentrant="false">
+    Sends an ABORT command to the tracker hardware, aborting an active trajectory or
+    move.
+  </handler>
+  <handler name="tracker_init" reentrant="false">
+    Sends an INIT command to the tracker hardware, initiating the initialization process for the tracker.
+  </handler>
+  <handler name="tracker_move_itf" reentrant="false">
+    Moves the tracker to the given ITF coordinate.
+    <required_parm name="x" type="double" unit="mm">Target x position, in ITF.</required_parm>
+    <required_parm name="y" type="double" unit="mm">Target y position, in ITF.</required_parm>
+    <required_parm name="z" type="double" unit="mm">Target z position, in ITF.</required_parm>
+    <required_parm name="rho" type="double" unit="degree">Target rho position, in ITF.</required_parm>
+    <required_parm name="theta" type="double" unit="degree">Target theta position, in ITF.</required_parm>
+    <required_parm name="phi" type="double" unit="degree">Target phi position, in ITF.</required_parm>
+    <required_parm name="type" type="string">The type of move requested, rel or abs, relative or absolute respectively.</required_parm>
+    <required_parm name="vel" type="string">The velocity with which to move: SLEW_SLOW, SLEW_FAST, TRK_SLOW or TRK_FAST. </required_parm>
+  </handler>
+  <handler name="tracker_move_tsf" reentrant="false">
+    Moves the tracker to the given TSF coordinate.
+    <required_parm name="x" type="double" unit="mm">Target x position, in TSF.</required_parm>
+    <required_parm name="y" type="double" unit="mm">Target y position, in TSF.</required_parm>
+    <required_parm name="z" type="double" unit="mm">Target z position, in TSF.</required_parm>
+    <required_parm name="rho" type="double" unit="degree">Target rho position, in TSF.</required_parm>
+    <required_parm name="theta" type="double" unit="degree">Target theta position, in TSF.</required_parm>
+    <required_parm name="phi" type="double" unit="degree">Target phi position, in TSF.</required_parm>
+    <required_parm name="type" type="string">The type of move requested, rel or abs, relative or absolute respectively.</required_parm>
+    <required_parm name="vel" type="string">The velocity with which to move: SLEW_SLOW, SLEW_FAST, TRK_SLOW or TRK_FAST. </required_parm>
+  </handler>
+  <handler name="tracker_move_angular" reentrant="false">
+    Moves the tracker to the given angular coordinates on sky.
+    <required_parm name="x" type="double" unit="arcsecond">Target telecentric x position.</required_parm>
+    <required_parm name="y" type="double" unit="arcsecond">Target telecentric y position.</required_parm>
+    <required_parm name="type" type="string">The type of move requested, rel or abs, relative or absolute respectively.</required_parm>
+    <required_parm name="vel" type="string">The velocity with which to move: SLEW_SLOW, SLEW_FAST, TRK_SLOW or TRK_FAST. </required_parm>
+  </handler>
+  <handler name="tracker_move_xy" reentrant="false">
+    Moves the tracker to the given absolute X and Y ITF coordinates. Normalizes all other ITF values to an on-sphere position.
+    <required_parm name="x" type="double" unit="arcsecond">Target telecentric x position.</required_parm>
+    <required_parm name="y" type="double" unit="arcsecond">Target telecentric y position.</required_parm>
+    <required_parm name="vel" type="string">The velocity with which to move: SLEW_SLOW, SLEW_FAST, TRK_SLOW or TRK_FAST. </required_parm>
+  </handler>
+  <handler name="tracker_position" reentrant="false">
+    Returns the current tracker position.
+  </handler>
+  <handler name="toggle_gui_token" reentrant="false">
+    Toggles the status of the master GUI token.  Once acquired, the same token must be provided to a subsequent call to release the token.
+    <required_parm name="token" type="string">The token requested or released.</required_parm>
+  </handler>
+  <handler name="get_current_trajectory_info" reentrant="true">
+    XXX
+  </handler>
+  <handler name="get_next_trajectory_info" reentrant="true">
+    XXX
+  </handler>
+  <handler name="get_current_local_sidereal_time" reentrant="true">
+    Returns the current LST, at the HET.
+    <return_parm name="lst" type="double" unit="hour">
+      Current local sidereal time at the HET.
+    </return_parm>
+  </handler>
+  <handler name="get_current_pointing" reentrant="true">
+    XXX
+  </handler>
+  <handler name="offset_trajectory" reentrant="false">
+    Recalculates the current trajectory based on the given offset.  Offsets may be given
+    in either delta RA,Dec or delta X,Y, angular units of arc seconds in either case.
+    When offseting by delta RA,Dec, the RA,Dec of the current trajectory (not current pointing)
+    is adjusted.  When offsetting by delta X,Y, the trajectory is recalculated to the RA,Dec
+    of the current pointing plus the given offset.  Ideally, prior to calling this method,
+    the trajectory will have already been recalculated based on the current structure
+    azimuth and elevation, in which case these two calling conventions have the same
+    semantics.
+
+    If the offset is flagged as a correction, then the old trajectory is simply
+    shifted by a delta that remains static over time.  The reported pointing coordinates
+    are adjusted by the given correction to reflect the original pointing prior to correction.
+    <optional_parm name="dra" type="double" unit="arcsecond">
+      The desired offset in arc seconds of right ascension.
+    </optional_parm>
+    <optional_parm name="ddec" type="double" unit="arcsecond">
+      The desired offset in arc seconds of declination.
+    </optional_parm>
+    <optional_parm name="dx_ang" type="double" unit="arcsecond">
+      The desired offset in arc seconds aligned to the X axis of the focal surface.
+    </optional_parm>
+    <optional_parm name="dy_ang" type="double" unit="arcsecond">
+      The desired offset in arc seconds aligned to the Y axis of the focal surface.
+    </optional_parm>
+    <optional_parm name="adjust_probes" type="bool">
+      Flag indicating that the movable probes should be adjusted to
+      account for the requested offset.
+    </optional_parm>
+    <optional_parm name="correction" type="bool">
+      Flag indicating that this offset is a correction to the current trajectory,
+      rather than an offset to a new trajectory.
+    </optional_parm>
+  </handler>
+  <handler name="correct_for_structure" reentrant="false">
+    XXX
+  </handler>
+  <handler name="pfip_open_shutter" reentrant="false">
+    XXX
+  </handler>
+  <handler name="pfip_clear_positions" reentrant="false">
+    Clears any set probe positions so that a subsequent move will not attempt to
+    repositions the probes.
+  </handler>
+  <handler name="pfip_close_shutter" reentrant="false">
+    XXX
+  </handler>
+  <handler name="pfip_insert_acquisition_pickoff" reentrant="false">
+    Inserts the acquisition camera pickoff mirror.
+  </handler>
+  <handler name="pfip_withdraw_acquisition_pickoff" reentrant="false">
+    Withdraws the acquisition camera pickoff mirror.
+  </handler>
+  <handler name="pfip_move_probes" reentrant="false">
+    Initiate any staged probe moves.  This call blocks until probes are in position.
+    @sa set_position
+  </handler>
+  <handler name="start" reentrant="false">
+    XXX
+  </handler>
+  <handler name="stop" reentrant="false">
+    XXX
+  </handler>
+  <handler name="activate" reentrant="false">
+    XXX
+  </handler>
+  <handler name="deactivate" reentrant="false">
+    XXX
+  </handler>
+  <handler name="force_state_event" reentrant="false">
+    XXX
+  </handler>
+  <handler name="add_correction" reentrant="false">
+    XXX
+  </handler>
+  <handler name="get_correction" reentrant="false">
+    XXX
+  </handler>
+  <handler name="reset" reentrant="false">
+    XXX
+  </handler>
+  <handler name="inject_metrology" reentrant="false">
+    XXX
+  </handler>
+  <handler name="set_fiducial" reentrant="false">
+    XXX
+  </handler>
+  <handler name="get_fiducial" reentrant="false">
+    XXX
+  </handler>
+  <handler name="set_analysis_region" reentrant="false">
+    XXX
+  </handler>
+  <handler name="get_analysis_region" reentrant="false">
+    XXX
+  </handler>
+  <handler name="apply_offset" reentrant="false">
+    XXX
+  </handler>
+  <handler name="tune" reentrant="false">
+    XXX
+  </handler>
+  <handler name="get_tuning" reentrant="false">
+    XXX
+  </handler>
+  <handler name="offset_fiducial" reentrant="false">
+    Offsets the metrology loop's fiducial either by telecentric angle or by
+    change in equatorial coordinates. Parameters are expected to be in arcseconds.
+    <optional_parm name="dx_asec" type="double">
+      Change of fiducial in arcseconds of x.
+    </optional_parm>
+    <optional_parm name="dy_asec" type="double">
+      Change of fiducial in arcseconds of y.
+    </optional_parm>
+    <optional_parm name="dra_asec" type="double">
+      Change of fiducial in arcseconds of RA.
+    </optional_parm>
+    <optional_parm name="ddec_asec" type="double">
+      Change of fiducial in arcseconds of Dec.
+    </optional_parm>
+    <required_parm name="compensate" type="bool">
+      Flag indicating the other probes that are setup should be moved sympathetic to the
+      centering motion of this probe.  Defaults to true.
+    </required_parm>
+  </handler>
+  <handler name="get_status" reentrant="false">
+    Returns the current status of the probe.  Throws an exception if the status
+    is unknown.  XXX document info returned as it evolves.
+  </handler>
+  <handler name="DMI_get_status" reentrant="false">
+    Returns the current status of the instrument.  Throws an exception if the status
+    is unknown.  XXX document info returned as it evolves.
+  </handler>
+  <handler name="set_position" reentrant="false">
+    Set the target offset for the probe.  This stages the move but does not
+    execute probe moves.  If parameters are given in x_ang, y_ang then the
+    probe will be positioned at these telecentric angles off of the focal
+    axis.  Otherwise, ra and dec are expected and should be given relative
+    to the trajectory at the time that the probes are moved.  An equinox
+    for the ra,dec is optional and defaults to 2000. @sa go_next, pfip_move_probes
+    <optional_parm name="x_ang" type="double">
+      On sky degrees off focal axis in X.
+    </optional_parm>
+    <optional_parm name="y_ang" type="double">
+      On sky degrees off focal axis in Y.
+    </optional_parm>
+    <optional_parm name="ra" type="double">
+      Right ascension in decimal hours.
+    </optional_parm>
+    <optional_parm name="dec" type="double">
+      Declination in degrees.
+    </optional_parm>
+    <optional_parm name="equinox" type="double">
+      Equinox for the given ra,dec.
+    </optional_parm>
+    <optional_parm name="trajectory" type="string">
+      If probe positions are given in absolute ra,dec they will be
+      converted to focal plain positions relative to the ra,dec
+      of the requested trajectory, either current or next.  This
+      defaults to current.
+    </optional_parm>
+  </handler>
+
+  <handler name="unset_position" reentrant="false">
+    Unset the target offset for the probe.  A subsequent move of another
+    probe may result in the unset probe being moved.
+  </handler>
+
+  <handler name="offset_itf" reentrant="false">
+    Applies the given delta(s) to the ITF zero point assumed for all subsequent
+    points sent to the tracker.  When called multiple times, the deltas are
+    additive.  When called while on trajectory, the change in the zero point is
+    applied immediately.  When called while off trajectory, the tracker is moved
+    from the current position to that position plus the given deltas.
+    In either case, the change to the ITF zero point persists until reset or the
+    control system is restarted.  At least one delta is required.
+    @sa reset_itf_offset, offset_sky, offset_focus.
+    <optional_parm name="dx" type="double">
+      Change in ITF x.
+    </optional_parm>
+    <optional_parm name="dy" type="double">
+      Change in ITF y.
+    </optional_parm>
+    <optional_parm name="dz" type="double">
+      Change in ITF z.
+    </optional_parm>
+    <optional_parm name="drho" type="double">
+      Change in ITF rho.
+    </optional_parm>
+    <optional_parm name="dtheta" type="double">
+      Change in ITF theta.
+    </optional_parm>
+    <optional_parm name="dphi" type="double">
+      Change in ITF phi.
+    </optional_parm>
+  </handler>
+  <handler name="reset_itf_offset" reentrant="false">
+    Resets the current ITF offset to to the base zero point offset.
+  </handler>
+  <handler name="get_itf_offset" reentrant="false">
+    Returns the current offset of the ITF sphere.
+  </handler>
+  <handler name="offset_sky" reentrant="false">
+    Adds the given angular offset on sky to the current offset applied to each
+    position sent to the tracker.  The change to the angular offset persists
+    until reset.  At least one delta is required.
+    @sa reset_sky_offset, offset_itf, offset_focus.
+    <optional_parm name="dx_ang" type="double">
+      Angular offset, in degrees, to apply along the tracker X axis.
+    </optional_parm>
+    <optional_parm name="dy_ang" type="double">
+      Angular offset, in degrees, to apply along the tracker Y axis.
+    </optional_parm>
+    <optional_parm name="move_probes" type="bool">
+      Flag indicating that the movable probes should be adjusted to
+      account for the requested offset.
+    </optional_parm>
+  </handler>
+  <handler name="reset_sky_offset" reentrant="false">
+    the current sky offset to zero.
+    <optional_parm name="move_probes" type="bool">
+      Flag indicating that the movable probes should be adjusted to
+      account for reset of the offset.
+    </optional_parm>
+  </handler>
+  <handler name="get_sky_offset" reentrant="false">
+    Returns the current angular offset on sky.
+  </handler>
+
+  <handler name="offset_focus" reentrant="false">
+    Add the given offset to the the distance held along the normal between the primary
+    and focal spheres.
+    <optional_parm name="dw" type="double">
+      Focus offset to be applied.
+    </optional_parm>
+  </handler>
+  <handler name="reset_focus_offset" reentrant="false">
+    Resets the current focus offset to zero.
+  </handler>
+  <handler name="get_focus_offset" reentrant="false">
+    Returns the current focus offset.
+  </handler>
+
+  <handler name="clear_fiducial" reentrant="false">
+    Resets the fiducial of the underlying metrology system so that the
+    next reading becomes the new fiducial.
+  </handler>
+
+  <handler name="set_filter" reentrant="false">
+    Set the requested filter for the camera.
+    <required_parm name="filter" type="int">
+      XXX update this to take a string...
+
+      For now, integer representation of the desired filter.
+    </required_parm>
+  </handler>
+
+  <handler name="offset_tiptilt" reentrant="false">
+    Adds the given tip and tilt offsets to the current trajectory.
+    <optional_parm name="dtheta" type="double">
+      Offset in degrees of theta.
+    </optional_parm>
+    <optional_parm name="dphi" type="double">
+      Offset in degrees of phi.
+    </optional_parm>
+  </handler>
+  <handler name="reset_tiptilt_offset" reentrant="false">
+    Resets the current tiptilt offset to zero.
+  </handler>
+  <handler name="get_tiptilt_offset" reentrant="false">
+    Returns the current angular offset on tiptilt.
+  </handler>
+  <handler name="reset_radec_offset" reentrant="false">
+    Resets the radec offset register to the current apparent coordinates.
+  </handler>
+  <handler name="get_radec_offset" reentrant="false">
+    Returns the current offset in apparent RA and DEC in arcseconds relative
+    to the coordinates stored in the radec offset register.
+  </handler>
+
+  <handler name="offset_probe" reentrant="false">
+    Offset a probe.
+    <required_parm name="dx_ang" type="double">
+      On sky offset in x telecentric angle in arcsec from current probe position.
+    </required_parm>
+    <required_parm name="dy_ang" type="double">
+      On sky offset in y telecentric angle in arcsec from current probe position.
+    </required_parm>
+  </handler>
+
+  <handler name="set_focus" reentrant="false">
+    Sets the focus of the system to a given w or the latest reading from the DMI.
+    <optional_parm name="w" type="double">
+      Focus setting in mm.
+    </optional_parm>
+  </handler>
+
+  <handler name="set_tiptilt_window_length" reentrant="false">
+    Sets the number of WFS tiptilt measurements that are integrated to produce a single
+    tiptilt correction from the WFS loop.
+    <optional_parm name="length" type="unsigned">
+      Number of samples to integrate.
+    </optional_parm>
+  </handler>
+
+  <handler name="get_tiptilt_window_length" reentrant="false">
+    Returns the number of samples that are averaged to produce a single tiptilt correction from
+    the WFS loop.  The magnitude of the correction is the resulting average divided by the
+    number of samples.
+  </handler>
+
+  <handler name="center" reentrant="false">
+    Moves the probe to the center the object within the aperture, based on the current
+    instantaneous error in telecentric x,y as reported by the WFS metrology pipeline.
+  </handler>
+
+  <handler name="set_focus_window_length" reentrant="false">
+    Sets the number of WFS focus measurements that are integrated to produce a single
+    focus correction from the WFS loop.
+    <optional_parm name="length" type="unsigned">
+      Number of samples to integrate.
+    </optional_parm>
+  </handler>
+
+  <handler name="get_focus_window_length" reentrant="false">
+    Returns the number of samples that are averaged to produce a single focus correction from
+    the WFS loop.  The magnitude of the correction is the resulting average divided by the
+    number of samples.
+  </handler>
+
+  <handler name="set_tiptilt_gain" reentrant="false">
+    Sets the gain factor applied to the tiptilt correction emitted by the loop.
+    <optional_parm name="gain" type="double">
+      The gain by which the correction is scaled prior to being applied to the trajectory.
+    </optional_parm>
+  </handler>
+
+  <handler name="get_tiptilt_gain" reentrant="false">
+    Returns the current gain factor applied to the tiptilt correction emitted by the loop.
+  </handler>
+
+  <handler name="set_focus_gain" reentrant="false">
+    Sets the gain factor applied to the focus correction emitted by the loop.
+    <optional_parm name="gain" type="double">
+      The gain by which the correction is scaled prior to being applied to the trajectory.
+    </optional_parm>
+  </handler>
+
+  <handler name="get_focus_gain" reentrant="false">
+    Returns the current gain factor applied to the focus correction emitted by the loop.
+  </handler>
+
+  <handler name="clear_trajectories" reentrant="false">
+    Cancels any active trajectory and clear both the current and next trajectories.
+  </handler>
+
+  <handler name="update_setup" reentrant="false">
+    Marks the system as being setup and ready for science instrument operations, or not.
+    <required_parm name="state" type="bool">
+      Flag indicating the state of the system.
+    </required_parm>
+  </handler>
+
+  <handler name="wait_for_setup" reentrant="true">
+    Returns when the system is flagged as being setup for observation.
+    <optional_parm name="timeout" type="double" unit="second">
+      Amount of time to spend waiting for the setup condition to be true.  If non-negative
+      and the time expires prior to the setup, then an exception is thrown.  If negative,
+      the call waits indefinitely.  Defaults to -1.
+    </optional_parm>
+  </handler>
+
+  <handler name="set_metadata" reentrant="true">
+    Sets all parameters given as header key metadata making the key/value pairs available
+    via get_metadata.
+  </handler>
+
+  <handler name="get_metadata" reentrant="true">
+    Returns all key/value pairs set through set_metadata.
+  </handler>
+
+  <handler name="disable_rho" reentrant="true">
+    Forces the rho value to remain fixed at zero the current trajectory points.
+    Note that this only impact trajectory points, not static tracker moves. This interface
+    is for engineering purposes only.
+  </handler>
+
+  <handler name="enable_rho" reentrant="true">
+    Reenables the application the rho value to trajectory points.
+    Note that this only impact trajectory points, not static tracker moves. This interface
+    is for engineering purposes only.
+  </handler>
+
+</system>

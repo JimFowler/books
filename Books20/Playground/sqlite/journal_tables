@@ -1,0 +1,97 @@
+Titles
+j_index title    parenj_index   0   # main title for parent
+j_index subtitle parenj_index level # subtitle for parent
+j_index abbrev   parenj_index  -1   # alternate title for parent
+
+Info
+#
+# may have multiple entries per main journal
+# if the journal merge from more than one or merged
+# into more the one. But probably not more
+# than three per main journal.  An info
+# entry occurs whenever a journal changes it
+# primary name for whatever reason.  Type may
+# be 'Next' or 'Prev'
+#
+j_index Date index type comment
+
+Publishers
+#
+# a publishers table will be useful when we expand the database
+# to include the books. nextP, previousP may need to in another table.
+#  (Consider storing just a string of p_index values [like a list]
+#
+p_index publisher places ? start end nextP previousP comment
+
+Title_publisher_relation
+#
+# may have more than one entry for main journals but not often
+#
+j_index pindex start end place comment
+
+Designators
+#
+# often has multiple entry for main journal
+#
+j_index designator_key designator_value
+
+Comments
+#
+#  Comments about a particular journal
+#  There may be more than one comment
+#  so we need another table for them.
+#  Basically we are storing strings
+#  referenced to a title.
+#
+j_index comment
+
+ToDo
+#
+# A list of tasks
+#
+Summary Task DataCreated DateCompleted
+
+Is there any other metadata that we want to maintain?
+
+
+
+What journal queries will be run? How to run them.
+
+Q1. Get all information about a  journal by Name or partial Name or Abbrev.
+
+Q2. Search for a journal by abbreviation or partial name
+
+ SELECT * FROM TITLES where title LIKE "%name%"[ and parentId == 0];
+   # where name has puctuation removed.
+   # this gets a list of jounals that are like the name given
+   # return list of names and present to user. Allow use to select.
+   # just like a journal search in xml. If parentId is not 0,
+   # titleId = parentId, return full journal info from titleId
+   
+Q3. Get all information from a main title link.
+
+Q4. Get partial information from a main title link.
+
+Q5. Find all journal published by publisher X.
+
+Q6. Find all journals in existence between start and end date.
+
+Q7. Trace the history of journal J.
+ A7. get all info records for J and sort by datetime
+
+Q8. Which publisher had the most journals for year xxxx or interval xxxx-yyyy
+
+May not be able to get all this information from the AJB/AAA alone,
+
+What view are needed?
+what indexes are needed? Probably none as this is not a large database.
+
+Parse the XML and place in database
+
+For the book database:
+
+Q1. Get all information about a book.
+
+Q2. Get/count all books by Author/Editor/Translator/... for date range.
+
+Q3. Get/count all books by Publisher for date range.

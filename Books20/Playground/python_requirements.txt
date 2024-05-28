@@ -1,0 +1,24 @@
+Non-standard library dependencies
+
+nameparser-0.3.3
+modgrammer-0.10 (only for older version 1 text comments)
+lxml (primarily etree)
+PyQt5
+configargparse
+matplotlib
+sqlite3
+isbnlib
+
+Standard packages
+setuptools  (actually distutils right now)
+unittest
+re
+pprint (for troubleshooting)
+pathlib  (only in entrylist right now)
+traceback
+argparse
+datetime
+csv
+itertools
+sys
+os

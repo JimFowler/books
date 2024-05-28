@@ -1,0 +1,83 @@
+22 April 2022
+
+Phase One
+Want to modify lib/entrylist.py to be a list of just entries.
+So we move the header to a separate variable under the entrylist
+instead of making it the first entry in the list.
+
+Then we don't have to check for the zero count when stepping through
+list.
+
+Phase Two
+Want to also add the ability to add two lists together by
+concatenating the headers and extending the lists
+
+Phase Three
+add sort functions on authors, titles, years, etc. Sort functions
+should be in the list calling function and passed to the list.sort()
+routine.
+
+
+For Lib
+
+Modify aabooks/lib/entrylist.py
+Ran unittests in master.  All pass successfully
+modify entrylist.py, make separate header variable and modified
+ max_entries()
+ran unittests in entrylist branch. All pass successfully
+commit as entrylist ff674bc
+see entrylist.py_diffs
+
+
+For Ajbbooks
+
+Modify aabooks/ajbbook/bookfile.py
+Ran unittests in master, test_c reports 19742!= 20142 for length of shortlist
+I believe this is due to the change in shortlist size so that it would
+fit in a window without wrapping lines around. I accept this failure
+and will modify this in the branch
+
+modify make_short_title_list
+modify write_file_xml
+modify write_file_txt
+
+
+Modify entry count for next/prev buttons in ajbwindow.py
+add '- 1' to line 485 in show_entry().  This means that the user display is
+still counting from 1 but internally we are counting from 0.
+
+modify save_entry
+modify insert_entry
+modify delete_entry
+modify show_entry
+
+testfile_tmp.xml is missing terminating return
+
+
+For Journals
+
+Modify aabooks/journal/journalfile.py
+Ran unittests in master. All four tests pass
+
+modify make_short_title_list
+modify write_file_xml
+modify test_c_make_short_title_list
+
+Modify aabooks/journal/journalwindow.py
+modify _build_search_dictionary
+modify show_entry()
+modify _save_entry
+modify _insert_entry
+modify delete_entry
+modify print_entry
+
+Modfy jsearch.py
+modify title_selected
+
+For Scripts
+fix duptitles
+fix findjournals
+fix fixrubles.py
+fix verify
+
+

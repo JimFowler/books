@@ -1,0 +1,9 @@
+<xs:schema xmlns="https://dummy.libxml2.validator"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ targetNamespace="https://dummy.libxml2.validator"
+ version="1.0"
+ elementFormDefault="unqualified"
+ attributeFormDefault="unqualified">
+<xs:import namespace="https://www.aab20.com" schemaLocation="bookfile2.xsd"/>
+</xs:schema>

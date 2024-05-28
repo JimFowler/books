@@ -1,0 +1,165 @@
+Some notes about XML schemas
+
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://www.aab20.com"
+	xmlns="https://www.aab20.com"
+	elementFormDefault="qualified">
+...
+</xs:schema>
+
+The following fragment:
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+indicates that the elements and data types used in the schema come
+from the "http://www.w3.org/2001/XMLSchema" namespace. It also
+specifies that the elements and data types that come from the
+"http://www.w3.org/2001/XMLSchema" namespace must be prefixed with xs:
+
+This fragment:
+targetNamespace="https://aab20.com"
+
+indicates that the elements defined by this schema (note, to, from,
+heading, body.) come from the "https://www.w3schools.com" namespace.
+
+This fragment:
+xmlns="https://aab20.com"
+
+indicates that the default namespace is "https://www.w3schools.com".
+
+This fragment:
+elementFormDefault="qualified"
+
+indicates that any elements used by the XML instance document which
+were declared in this schema must be namespace qualified.
+
+
+
+An *.xml file
+
+<note xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com note.xsd">
+...
+
+xmlns="https://www.w3wschools.com" specifies the name space.
+    www.w3schools.com is the default name space. This declaration
+    tells the schema-validator that all the elements used in this XML
+    document are declared in the "https://www.w3schools.com"
+    namespace.
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    declare the xsi attributes
+
+
+xsi:schemaLocation="https://www.w3schools.com note.xsd"> you can use
+    the schemaLocation attribute. This attribute has two values,
+    separated by a space. The first value is the namespace to use. The
+    second value is the location of the XML schema to use for that
+    namespace:
+
+An example from http://www.datypic.com/books/defxmlschema/chapter05.html
+
+Full example
+
+This example shows how xsi:schemaLocation can be used to pull together
+multiple schema documents. An import is used in chapter05ord.xsd to
+show the dependence on the prod namespace, but no schema location is
+provided in the schema; this type of "dangling" reference to product
+is allowed. This example also exhibits xsi:nil and xsi:type.
+
+Instance (chapter05.xml)
+
+<ord:order xmlns:ord="http://example.org/ord"
+   xmlns:prod="http://example.org/prod"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://example.org/prod chapter05prod.xsd
+                       http://example.org/ord chapter05ord.xsd">
+  <items>
+    <prod:product>
+      <number xsi:type="xs:short">557</number>
+      <name>Short-Sleeved Linen Blouse</name>
+      <size xsi:nil="true"></size>
+    </prod:product>
+  </items>
+</ord:order>
+
+Schema Document 1 (chapter05ord.xsd)
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://example.org/ord"
+            xmlns="http://example.org/ord"
+            xmlns:prod="http://example.org/prod">
+  <xs:import namespace="http://example.org/prod"/>
+  <xs:element name="order" type="OrderType"/>
+  <xs:complexType name="OrderType">
+    <xs:sequence>
+      <xs:element name="items" type="ItemsType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemsType">
+    <xs:sequence>
+      <xs:element ref="prod:product" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+Schema Document 2 (chapter05prod.xsd)
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://example.org/prod"
+            targetNamespace="http://example.org/prod">
+  <xs:element name="product" type="ProductType"/>
+  <xs:complexType name="ProductType">
+    <xs:sequence>
+      <xs:element name="number" type="xs:integer"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="size" nillable="true" type="SizeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SizeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:integer">
+        <xs:attribute name="system" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
+
+if no name space is associeated with the schema, the use
+
+<book
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="book.xsd">
+</book>
+
+Note that the namespace must be equal to the targetNamespace defined
+in the XML Schema.
+
+see also http://www.xfront.com/ZeroOneOrManyNamespaces.html for a
+discussion of how to organize namespaces when you have multiple
+schemas.
+
+Check out
+
+https://pypi.org/project/xmlschema/
+
+Remote Imports:
+
+lxml (and other packages) will apparently not import from untrusted
+remote sources.  https://het.as.utexas.edu/jrf/schema/bookfile2.xsd
+is an untrusted source.  Not doing the import prevent accidental
+down loads of malicious files.
+
+Consider the use of catalogs (whatever they are...) but do we want the
+security risk?  I think not, therefore validation should not normally
+be done except by special purpose programs like
+validateXML. 'bookfile'.xml and 'journalfile'.xml files should
+reference the name space and perhaps the documentation web pages but
+not the actual schemaLocation. All ajb??_books.xml should have
+'xmlns:bf="https://www.aab20.com/bookfile"' and all journals.xml
+should have 'xmlns:jf="https://www.aab20.com/journals"'
+
+

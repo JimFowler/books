@@ -1,0 +1,19 @@
+
+Write an XSL stylesheet to convert a BookFile to a TeX pretty-print
+format of book entries.  May need to modify a bit for the HJS
+collection as these are physical Items rather than Works or
+Expressions, in the FRBR notation.
+
+May want other style sheets for HTML or other TeX formats.
+Use python to convert BookFile to Excel spreadsheet format *.xslx
+
+The manuscript definition of a book entry is:
+
+Index Author
+Title
+Year, place of publication, Publisher
+Bibliographic description
+References to other lists
+Comments:
+Reasons why the book is important and any publishing history.
+

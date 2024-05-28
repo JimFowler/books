@@ -1,0 +1,13 @@
+Harlan J. Smith book collection at the McDonald Observatory
+8 Nov 2021
+
+Catalogue books from Harlan J. Smith collection from the first
+donation and the second donation using'ajbbooks'.  The IndexName
+should be 'HJS', the VolumeNumber should be 1 or 2 depending on the
+donation, the SectionNumber should be 1, the IndexNumber should be as
+catalogued. The page number should be 1.
+
+Comments should include a description of condition and any feature
+in the book, notations, jacket, etc.
+
+Add protective covers to any dust jackets.

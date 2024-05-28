@@ -1,0 +1,425 @@
+Notes about Databases
+30 April 2020
+
+From CMU 15-445 Introduction to Database Systems Fall/2019
+  CMU Database Systems YouTube channel
+
+This series of 26 course lectures from 2019 are an introduction
+to how one builds a database management system (DBMS).  Much of
+the material concerns internal structures within databases.  I
+have watched the entire series but have only taken notes on
+topics that seemed relevant to my work in using databases.
+
+Lecture 1 Introduction & Relational Models
+
+Lecture 2 Advanced SQL
+
+ SQL designed by IBM in 1973
+   release with DB2 in 1983
+   ANSI standard in 1986
+   ISO standard in 1987
+
+  The relational algebra is based on bag algebra
+ lists - ordered, which may contain duplicates
+  sets - unordered, without duplicates
+  bags - ordered, with duplicates
+
+ SQL uses bag algebra rather than set algebra
+
+ aggregate functions in SQL-92 (later versions may support other operators)
+   produce a single values from a bag of tuples
+     AVG(col)
+     MIN(col)
+     MAX(col)
+     SUM(col)
+     COUNT(col)
+
+   Can use DISTINCT keyword when specifying the column
+     SELECT COUNT( DISTINCT LastName) from Authors;
+
+ Strings in SQLite are case-sensitive and you can use single or double quotes
+   Can us UPPER(str) clause to do case-insensitive search
+   Can use regex function '%' to match any substring
+                       or '_' to match any one character
+
+  SQL-92 and beyond support string functions like SUBSTRING(name,0,5),
+    UPPER(name), and CONCAT
+
+  Date/Time function
+    syntax and offset vary between various database systems
+    SQLite3 uses CURRENT_TIMESTAMP keyword but timestamp is UT
+
+  Can nest query; inner queries can appear almost anywhere in a query
+    SELECT name FROM student
+      WHERE sid IN (
+        SELECT sid from enrolled
+	  WHERE cid = '15-445'
+      )
+
+  write outer query first to determine what you want in the final
+  answer, then determine where you are going to get the data and how.
+  These are difficult to optimize.
+  There are usually multiple ways that one can write a query
+    to get the same answer
+
+  Window function perform calculations across a set of tuples that
+    relate to a single row. Ex. ROW_NUMBER), RANK(), PARTITION_BY()
+
+
+  Common Tables Expressions
+    WITH cteMame AS (
+      SELECT ...
+    )
+    SELECT * FROM cteName
+
+   Like a named temporary table only for this query whereas
+      CREATE TABLE ... remains active for the session if not saved.
+
+  Always want to compute your answer as a single SQL statement. This
+  query can be optimized by the DBMS. CTEs make this possible.
+
+
+Lecture 3 Database Storage I
+Lecture 4 Database Storage II
+Lecture 5 Buffer Pools + Memory Management
+Lecture 6 Hash Tables
+Lecture 7 Tree Indexes I
+Lecture 8 Tree Indexes II
+
+  Use an index other than the primary key for faster searches
+  e.g., an index author last, first name or an index on titles
+
+  Consider an inverted index for partial searches
+
+Lecture 9 Multi-Threaded Index Concurrency Control
+Lecture 10 Sorting & Aggregations
+
+  Having an index on columns that you will want to sort
+  can speed up the sorting process if the index uses a
+  clustered B+Tree
+
+  https://15445.course.cs.cmu.edu/fall2019/project2
+
+  correctness first, performance second
+
+Lecture 11 Join Algorithms
+
+  indexes can help joins if the index is over the join clause
+  but ephemeral hash tables are faster
+
+Lecture 12 Query Execution I
+Lecture 13 Query Execution II
+Lecture 14 Query Planning & Optimization I
+Lecture 15 Query Planning & Optimization II
+
+  Can run ANALYZE TABLE to update statistics in SQLite
+
+Lecture 16 Concurrency Control Theory
+Lecture 17 Two-Phase Locking Concurrency
+Lecture 18 Timestamp Ordering Concurrency Control
+Lecture 19 Multi-Version Concurrency Control
+
+  if a write-ahead log (*.db.wal) is not empty, then rerun sqlite3
+     to recover the mssing commits
+     
+Lecture 20 Database Logging Schemes
+Lecture 21 ARIES Database Recovery
+
+
+
+Lecture 22 Introduction to Distributed Database Systems
+Lecture 23 Distributed  OLTP Processing
+Lecture 24 Distributed  OLAP Processing
+Lecture 25 Shashank Chavan
+Lecture 26 System Potpourri
+
+A transaction must be Atomic, Consistent, Isolated, Durable or ACID
+
+Socratica
+
+SELECT * FROM
+LeftTable
+_______ JOIN RightTable
+WHERE LeftTable.base_id = RightTable.base_id;
+
+INNER JOIN return only matching rows
+
+LEFT INNER JOIN return all matching rows and the unmatched rows from the
+left table with unmatched rows having Nulls in the empty columns
+
+RIGHT INNER JOIN return all matching rows and the unmatched rows from the
+right table with unmatched rows having Nulls in the empty columns
+
+FULL INNER JOIN returns all matching row the unmatched rows from both the
+left and right tables with unmatched rows having Nulls in the empty
+columns. SQLite does not support this.
+
+You can have the left and right table be the same table.
+This is known as a self join.
+
+Views can be used a virtual tables. Once the view is created it can be
+used as any other tables.  It provides security buy creating tables
+from other tables but with out sensitive data. Views also reduce
+complexity by creating tables with common selected data.
+
+A CROSS JOIN joins every row in the left tables with every row
+in the right table.
+
+Indexes can speed up searches for databases of 100,000,000
+records.
+
+Sql requires strict schemas and relational databases
+noSql
+
+
+
+Software Engineering
+
+Amdahl's Law
+If you send p percentage of time in a function call and you make
+that function run s times faster, then the overall speed up of your
+program will be,
+
+  overall speed up = (p/s + (1-p))**-1
+
+  for example, if you spend 60% of the time function foo and you
+  make foo run twice as fast, then the overall speed up of the program
+  will be 1.4.
+
+     (0.6 / 2 + 0.4)**-1 = 1.4
+
+Profiling with valgind, visualize with kcachegrind
+perf can be used as well to look at low level system counter
+  use hotspot to visualize the results of perf
+
+
+Programmers Manfesto
+A professional promise
+
+1. I will not produce harmful code. (You make the decision about
+harmful code.) Don't intoduce bugs
+
+2. The code that I produce will always be my best code.
+
+3. I will provide with each release a quick, sure, and repeatable
+proof that the code work as requested.
+
+4. I will make frequent small releases, I will not impeed progress.
+  smallness in release is how we make progress fast.
+
+5. I will fearlessly and relentlessly improve the code at every
+  opportunity, I will never make the code worse. (If you have
+  a test suite you trust, you can make changed in others code.)
+
+6. I will keep productivity high.
+
+7. I will continuously insure that others can cover for me
+  and that I can cover for them.
+
+8. I will produce estimates that are honest in both magnitude and
+precision. I will not make promises with out certainty.
+
+9. I will never stop learning and improving my craft.
+
+
+Test Driven Development
+  YouTube DevTernity 2017 Ian Cooper - TDD, Where Did it all go wrong
+ Kent Beck wrote the first book
+
+Test behaviors
+Avoid testing implemetation details
+
+The trigger for writing a new test
+is a new requirement.
+
+Test the public API not the implementation
+  You are testing the contract with the customer.
+  The tests should be the first consumer of your code.
+
+ So tests should be written outside the class, or module files.
+
+May be useful to write tests for implementation
+detail in order to understand the details but you
+should delete these test later.
+
+Red-Green-Refactor
+ Red - write a little test that fails or doesn't even compile.
+ Green - make the test suceed by what ever bad code you need.
+ Refactor - make it good code now.
+
+ basically get working code that performs the behaviour as quickly
+ as possible.  Then you will understand the problem.  It shows you
+ how you will implement the requirement.  Speed trumps design at this
+ phase. Make it run, then make it right!
+
+  Remove duplication, smells, and add patterns
+  Refactors does not include any new tests.
+  you are not changing behavior.
+
+  Coupling is what destroys software.
+
+  Martin Fowler's smells
+    duplicate code
+    long methods
+    large class
+    long parameter list
+    divergent change
+    shotgun surgery
+    feature envy
+    data clumps (comments)
+    primitive obssesion
+    switch statements
+
+ Refactoring is the ideal place to add patterns.
+
+Resourses:
+  James Shore
+  Martin Fowler
+  Kent Beck
+
+  gherkin behat.org
+
+
+Robert C. (Uncle Bob) Martin 
+ 8thlight.com
+ cleancoder.con
+
+
+
+Node.js and Javascript
+consider for the webservices
+
+node is a javascript engine for running javascript outside of a browser
+CRUD -- create, read, update, delete
+use RESTful APIs with node.js
+maps to HTTP methods post, get, put, delete
+  note that 'put'ting to a non-existant object is the same as create
+
+
+Python Tricks and Notes
+
+  if you are looping over indices in python, you are doing it wrong
+    think of 'for' as 'foreach'
+
+  Efficiency boils down to staying in L1 cache
+
+  Instead of zip use izip
+  sort() has a key value for a sort value
+
+  for loops now have an else
+
+  To set defaults that are can be overridden with environment variables
+     or command line arguments use
+     config = ChainMap(command_line_args, os.environ, defaults)
+  or use configargparse instead
+
+
+  use keyword arguments in function calls for readability
+
+  use named tuples
+   from collection import namedtuple
+  
+  if you do set up and tear downs, you should write a ContextManager
+    so you can use constructs like
+      with Context as c:
+      	   do something
+
+  We don't make get()/set() in python
+
+  Avoid unecessary packaging in favor of simpler code
+     should not have to import dot packages
+
+  Create custom exceptions
+    instead of print
+
+  Use properties instead of getter methods
+
+  create a context manager for recurring set-up and teardown logic
+    __enter__() and __exit()__ functions
+
+  use magic methods
+    __len__ instead of getSize()
+    __getitem__ instead of getThingbyIndex()
+    make tables iterable
+
+  add good __repr__ for better debugging
+    return '%s(%r)' % (self.__class__.__name__, self.something)
+
+
+Building Classes
+
+start with module doc strings.  Its your elevator speech
+
+Start class with your doc strings
+Inherit from object
+provide alternate constructor
+do make new classes if you don't need to.
+a class that has two methods one of which is __init__
+  so be refactored.
+
+
+
+Init and Distributions
+
+talk by http://daveops.com/ohio2015
+ talk by http://daveops.com/pycon2017
+
+vocabulary
+sdist -- a source distribution
+bdist -- a build distrubution
+wheel -- a type of bdist
+
+good practice is to distribute both wheels and sdist.
+library distribution and application distribution are different
+
+
+PyPA Python Packaging Authority
+has a Packaging Users Guide
+ https://packaging.python.org/
+cookiecutter takes templates and make directories/files
+   This is not installed yet.
+online services
+ github
+ travis-ci.org adds continuous integration uses github id
+  or jenkins
+ pypi
+  readthedocs can be used for your documentation
+  piptools to manage requirement
+build universal wheels which work under 2.7 or 3.x
+
+github and PyPI support Markdown markup language, i.e. README.md.
+The current version of anaconda supports Markdown.
+
+
+What am I doing?
+
+I am currently using anaconda on Biblion and homebrew on MacOs.
+Switch to anaconda on MacOs. Anaconda has its own build/publish system
+which support cross-platform installation
+
+
+Consider a git split, create Collection, CollectionData,
+
+Books20 copyleft (all of it?)v
+Books20Data is copyright
+
+Collections is copyleft
+CollectionsData is copyright
+
+distribute Books20.aabooks as a python module, at least to myself.
+It has to work on Ubuntu and MacOs at least.
+   who else might use it?
+Even if I don't distribute to other programmers I want create
+a clean package.
+
+
+
+Graph Database
+
+supports relationship rather than entities
+  generally stores triples as (node1, relationship, node2)
+ 
+ArangoDB  Apache
+TerminusDB GPL3
+Grakn Core  GNU
+JanusGraph Apache 2 with Linux support

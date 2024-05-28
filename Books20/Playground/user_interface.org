@@ -1,0 +1,16 @@
+#+TITLE Notes about a Web Based User Interface for Books20
+
+* What sort of user interface?
+
+** local python3/Qt5 - requires user host with python and a copy of the
+ database or a remotely accessible database
+
+** Remote web-based  node.js with node.red
+
+  node.js runs javascript on the server side as a web service.
+   Cross-platform, open source javescript engine with over one million
+   open source packages available
+   18.04 has  8.10
+   20.04 has 10.19
+   javescript for the browser and for node.js are different 
+  node.red runs as an application of node.js

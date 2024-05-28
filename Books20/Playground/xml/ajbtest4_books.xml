@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: nXML -*- -->
+
+<!--
+   This is a full BookFile with lots of Entries. The format is
+   based on the G2 elements.
+
+   xsi:schemaLocation="https://www.aab20.com bookfile2.xsd"
+-->
+<bf:BookFile
+    xmlns:bf="https://www.aab20.com/bookfile"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+ <bf:Header>
+Entry format
+
+  Num AJB_ID Author [and author [and …]] [ed.|comp.], Title, Place, Publisher, year, description, price, review [and review [and …]], comments
+
+  AJB_ID   volume.section[(subsection)].entry, for example 68.144(1).25 would be volume 68, section 144, subsection 1, and entry number 25.
+
+  Commas are field separators for automatic parsing.  Use the word ‘comma’ if you want the character in field string. We will use global search and replace after parsing into fields.
+
+  Save as Unicode UTF-8 text encoding. Skip section 4 in Part 1
+
+  For volume AJB ?? Index to the Literature of ????, started, finished, proofread
+
+ </bf:Header>
+
+ <bf:Entries>
+   <bf:Entry>
+     <bf:Index>
+ 	<bf:IndexName>  AJB</bf:IndexName>
+	<bf:VolumeNumber> 58</bf:VolumeNumber>
+	<bf:SectionNumber> 3</bf:SectionNumber>
+	<bf:SubSectionNumber> 0</bf:SubSectionNumber>
+	<bf:EntryNumber> 1</bf:EntryNumber>
+     </bf:Index>
+     <bf:Title> My First Book</bf:Title>
+     <bf:subTitle></bf:subTitle>
+     <bf:Authors>
+	<bf:Author>
+	 <bf:Person>
+	   <bf:Prefix>Dr</bf:Prefix>
+	   <bf:First>J</bf:First>
+	   <bf:Middle>Robert</bf:Middle>
+	   <bf:Last>Fowler</bf:Last>
+	   <bf:Suffix>IV</bf:Suffix>
+	 </bf:Person>
+	</bf:Author>
+	<bf:Author>
+	 <bf:CorporateBody>My Writing Business</bf:CorporateBody>
+	</bf:Author>
+     </bf:Authors>
+     <bf:Editors>
+	<bf:Editor>
+         <bf:Person>
+	   <bf:Last>Fowler</bf:Last>
+	 </bf:Person>
+	</bf:Editor>
+       <bf:Editor>
+	 <bf:Person>
+	   <bf:Last>Johnson</bf:Last>
+	 </bf:Person>
+       </bf:Editor>
+     </bf:Editors>
+     <bf:Translators>
+	<bf:Translator>
+	 <bf:CorporateBody>My Translating Business</bf:CorporateBody>
+	</bf:Translator>
+	<bf:Translator>
+	 <bf:CorporateBody>My Other Translating Business</bf:CorporateBody>
+	</bf:Translator>
+       <bf:Translator>
+	 <bf:Person>
+	   <bf:First>James</bf:First>
+	   <bf:Last>Fowler</bf:Last>
+	   <bf:Suffix>IV</bf:Suffix>
+	 </bf:Person>
+       </bf:Translator>
+     </bf:Translators>
+     <bf:Publishers>
+       <bf:Publisher>
+         <bf:Place>Oxford</bf:Place>
+         <bf:Name>Clarendon Press</bf:Name>
+       </bf:Publisher>
+       <bf:Publisher>
+         <bf:Place>New York</bf:Place>
+         <bf:Name>Oxford University Press</bf:Name>
+       </bf:Publisher>
+     </bf:Publishers>
+     <bf:Year>1958</bf:Year>
+     <bf:Edition>2</bf:Edition>
+     <bf:Pagination>12+345 pp</bf:Pagination>
+     <bf:Prices>
+       <bf:Price>$12.50</bf:Price>
+       <bf:Price>$6.00</bf:Price>
+     </bf:Prices>
+     <bf:TranslatedFrom>Italian</bf:TranslatedFrom>
+     <bf:Language>English</bf:Language>
+     <bf:ReprintOf> 
+	<bf:Index>
+	 <bf:IndexName>  AJB</bf:IndexName>
+	 <bf:VolumeNumber> 58</bf:VolumeNumber>
+	 <bf:SectionNumber> 3</bf:SectionNumber>
+	 <bf:SubSectionNumber> 0</bf:SubSectionNumber>
+	 <bf:EntryNumber> 4</bf:EntryNumber>
+	</bf:Index>
+     </bf:ReprintOf>
+     <bf:Reviews>
+       <bf:Review>ApJ 166 25</bf:Review>
+       <bf:Review>NAT 1985 Nr. 10 114</bf:Review>
+     </bf:Reviews>
+     <bf:Comments>
+       <bf:Comment>This is the first comment</bf:Comment>
+       <bf:Comment>This is the second comment</bf:Comment>
+     </bf:Comments>
+   </bf:Entry>
+
+   <bf:Entry>
+     <bf:Index>
+ 	<bf:IndexName>  AJB</bf:IndexName>
+	<bf:VolumeNumber> 58</bf:VolumeNumber>
+	<bf:SectionNumber> 3</bf:SectionNumber>
+	<bf:SubSectionNumber> 0</bf:SubSectionNumber>
+	<bf:EntryNumber> 4</bf:EntryNumber>
+     </bf:Index>
+     <bf:Title> My Second Book</bf:Title>
+     <bf:subTitle>the Number Two Book</bf:subTitle>
+     <bf:ReprintOf>
+	<bf:Year>1956</bf:Year>
+     </bf:ReprintOf>
+   </bf:Entry>
+
+ </bf:Entries>
+       
+</bf:BookFile>
+

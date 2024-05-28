@@ -1,0 +1,77 @@
+Current list of Makefiles.
+
+u == copied generic to directory
+e == edited with local mods
+c == added to configure.ac
+t == test build from configure
+b == test generic targets
+U == add real targets
+i == test install targets
+
+
+uectb ./Makefile
+
+uectbUi ./Manuscript/Makefile
+
+uectbUi ./WebPages/Makefile
+uectbUi ./WebPages/Images/Makefile
+
+uectbUi ./Docs/Makefile
+uectbUi ./Docs/DatabaseDesign/Makefile
+uectbUi ./Docs/Notes/Makefile
+uectbUi ./Docs/Quotes/Makefile
+uectbUi ./Docs/Series/Makefile
+uectbUi ./Docs/Style/Makefile
+
+uectb ./Tools/Makefile
+uectb ./Tools/build/Makefile
+uectbUi ./Tools/emacs/Makefile
+
+uectbUi ./Tools/python/bookentry/Makefile
+uectb ./Tools/python/bookentry/xml/Makefile
+
+uectb ./Tools/python/doc/Makefile # problems building and installing
+      ./Tools/python/doc/journals/Makefile
+      ./Tools/python/doc/ajbbooks/Makefile
+
+uectbUi ./Tools/TeX/Makefile
+
+ ./Tools/xml  ??
+
+
+
+Testing procedure
+
+copy previous Makefile or Makefile.am to *.orig
+copy Makefile_generic.am to Makefile.am in each directory that had a previous Makefile
+add relevant sub-directories to each Makefile.am
+update comment
+update configure.ac if new Makefile.am are required
+add proper makefile.local link
+run bootstrap and configure
+test generic make target and look for all responses
+  The previous has been completed succesfully
+
+test prefix from makefile.local
+  The previous has been completed succesfully
+
+Problem:
+  Makefile's don't work locally because BOOKS20_ROOT is not defined
+  and they can not find makefile.local.  Tcs defined HET_SRC_ROOT as
+  an environment variable to get around this. If defined in the environment
+  then local make works.
+ Answer:
+  Defined BOOKS20_ROOT in my .bashrc. Local make work successfully.
+
+Problem:
+  Where is BOOKS20_DIR used?
+  Can we use BOOKS20_ROOT in its place?
+ Answer:
+  No where except in local_vars. But may be used in install_*
+  or build_*. Will have to see if we need to use it.
+  
+
+Edit lower Makefile.am to add real targets
+get rid of echo for active targets
+test
+work upward to upper Makefile

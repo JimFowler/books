@@ -1,0 +1,11 @@
+<xs:schema
+  xmlns="https://dummy.libxml2.validator"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  targetNamespace="https://dummy.libxml2.validator"
+  version="1.0"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+ <xs:import namespace="https://www.aab20.com"
+   schemaLocation="https://het.as.utexas.edu/jrf/schema/bookfile2.xsd"/>
+</xs:schema>

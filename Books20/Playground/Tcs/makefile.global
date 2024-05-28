@@ -1,0 +1,218 @@
+#	makefile.global
+#
+#	 Written by Randy Bryant - McDonald Observatory
+#	Copyright 2013, University of Texas at Austin/McDonald Observatory.
+#
+#	$Log: Makefile,v $
+#
+
+HET_DEPLOY_DIR?= /opt/het/hetdex
+export HET_DEPLOY_DIR
+
+HET_DEPLOY_OWNER?= hetdex
+HET_DEPLOY_GROUP?= hetdex
+export HET_DEPLOY_OWNER
+export HET_DEPLOY_GROUP
+
+#
+# Defines that have no value are not needed here
+# They are here for documentation purposes and reference information when writing or modifiying a sub-dir Makefile(s)
+#
+
+empty=
+space=				$(empty) $(empty)
+space_dash_l=		$(empty) -l$(empty)
+dot_a_space=		$(empty).a $(empty)
+
+# Set UNAME prior to any includes so that system specific
+# fragments can be properly included.
+UNAME=			    $(shell uname -s)
+
+MAKEFILE_LOCAL?=    $(HET_SRC_ROOT)/makefile.$(shell hostname)
+ifeq (,$(wildcard $(MAKEFILE_LOCAL)))
+    MAKEFILE_LOCAL= $(HET_SRC_ROOT)/makefile.local
+endif
+
+ifeq (,$(wildcard $(MAKEFILE_LOCAL)))
+  ifeq (,$(WARN_MAKEFILE_LOCAL))
+     $(warning Missing local Makefile, assuming default build variables.)
+     MAKE += WARN_MAKEFILE_LOCAL=no
+  endif
+else
+include $(MAKEFILE_LOCAL)
+endif
+
+export HET_DEBUG_BUILD
+
+.SUFFIXES:	.d .thdl .tedl .etxt .htxt
+
+EPICS_ROOT?=	$(HET_AUXIL_ROOT)/epics/base
+PVAPI_ROOT?=	$(HET_AUXIL_ROOT)/PvApi
+CBLAS_ROOT?=	/usr/lib64/atlas
+CFITSIO_ROOT?=  $(HET_AUXIL_ROOT)/cfitsio
+GSL_ROOT?=		/usr/local
+#
+# Defines compilers and pre-processors
+#
+CC?=			gcc
+CXX?=			g++
+XSLTPROC=		xsltproc
+#
+# Other "-Dxxx" defiles for compiles
+#
+OS_REVISION=	$(shell uname -sr)
+LOCAL_MODS=		$(shell svn stat | grep ^M >/dev/null && echo '*')
+REVISION=		$(shell svn info | grep Revision | awk '{ print $$2 }')$(LOCAL_MODS)
+DATESTR=		$(shell date -u +%Y-%m-%dT%H:%M:%S.000)
+DEFINES=		-D_PROGRAM='"$(PROGRAM)-r$(REVISION) $(DATESTR)"' -D_REVISION='"$(REVISION)"' -D_UNAME='"$(UNAME)"' -D_OS_REVISION='"$(OS_REVISION)"' -D_DATESTR='"$(DATESTR)"'
+
+ifeq ($(TCS_BUILD_PGR_CAMERAS),yes)
+    DEFINES += -D_BUILD_PGR_CAMERAS
+endif
+
+#
+# Set variables we care about when building documentation.
+#
+DOXYVARS=		REVISION="$(REVISION)" HET_SRC_ROOT="$(HET_SRC_ROOT)"
+#
+# C and C++ compiler flags
+#
+ifeq ($(HET_DEBUG_BUILD),yes)
+CFLAGS?=		-Wall -Werror -g3 -O0
+CXXFLAGS?=		-Wall -Werror -g3 -O0
+else
+CFLAGS?=		-Wall -Werror -g -O3
+CXXFLAGS?=		-Wall -Werror -g -O3
+endif
+#
+# Loader flags passed to compilers for linking
+#
+LDFLAGS?=
+#
+# Defines include search directories used by all compiles
+#
+INCLUDES= \
+		-Iinclude \
+		-I$(HET_SRC_ROOT)/het_lib/photometry/include \
+		-I$(HET_SRC_ROOT)/het_lib/wfs_lib/include \
+		-I$(HET_SRC_ROOT)/het_lib/illum_lib/include \
+		-I$(HET_SRC_ROOT)/het_lib/cJSON/include \
+		-I$(HET_SRC_ROOT)/het_lib/messaging/include \
+		-I$(HET_SRC_ROOT)/het_lib/tthread/include \
+		-I$(HET_SRC_ROOT)/het_lib/common/include \
+		-I$(HET_SRC_ROOT)/het_lib/sla/include \
+		-I$(HET_SRC_ROOT)/het_lib/coord_trans/include \
+		-I$(HET_SRC_ROOT)/het_lib/logger/include \
+		-I$(LTL_ROOT)/include \
+		-I$(ZMQ_ROOT)/include \
+		-I$(CZMQ_ROOT)/include \
+		-I$(SQLITE_ROOT)/include \
+		-I$(GSL_ROOT)/include \
+		-I$(CFITSIO_ROOT)/include
+
+OBJS=
+#
+# Defines libraries to be linked with all programs
+#
+SUB_LIBRARIES=
+
+HET_LIBRARIES=	-L$(HET_SRC_ROOT)/het_lib/lib -lhet
+
+AUXIL_LIBRARIES= \
+				-L$(LTL_ROOT)/lib -lltl \
+				-L$(ZMQ_ROOT)/lib -lzmq \
+				-L$(CZMQ_ROOT)/lib -lczmq \
+				-L$(SQLITE_ROOT)/lib -lsqlite3 \
+				-L$(GSL_ROOT)/lib -lgsl -lgslcblas \
+				-L$(CFITSIO_ROOT)/lib -lcfitsio
+#
+# Build library names to be used as dependencies for all programs
+#
+include $(HET_SRC_ROOT)/makefile.buildLibNames
+
+#
+# Defines for system libraries to be linked with all programs
+#
+SYSTEM_LIBRARIES=-lpthread
+
+#
+# Rules to generate a .h from a .thdl
+#
+include/%.h:	%.thdl Makefile
+	@echo "  Generating $*.h..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/handler_descriptor_h.xsl $<
+
+%.h:	%.thdl Makefile
+	@echo "  Generating $*.h..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/handler_descriptor_h.xsl $<
+#
+# Rules to generate a .cpp from a .thdl
+#
+src/%.cpp:	%.thdl Makefile
+	@echo "  Generating $*.cpp..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/handler_descriptor_cpp.xsl $<
+
+%.cpp:	%.thdl Makefile
+	@echo "  Generating $*.cpp..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/handler_descriptor_cpp.xsl $<
+#
+# Rules to generate a .etxt from a .tedl
+#
+%.etxt:	%.tedl Makefile
+	@echo "  Generating $*.etxt..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/event_descriptor_doc.xsl $<
+#
+# Rules to generate a .htxt from a .thdl
+#
+%.htxt:	%.thdl Makefile
+	@echo "  Generating $*.htxt..."
+	$(XSLTPROC) -o $@ $(HET_SRC_ROOT)/handler_descriptor_doc.xsl $<
+#
+# Rules to compile a .c or .cpp into a .o
+#
+.%.o:	src/%.c Makefile
+	@echo "  Compiling $*..."
+	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+
+.%.o:	%.c Makefile
+	@echo "  Compiling $*..."
+	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+
+.%.o:	src/%.cpp Makefile
+	@echo "  Compiling $*..."
+	$(CXX) $(CXXFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+
+.%.o:	%.cpp Makefile
+	@echo "  Compiling $*..."
+	$(CXX) $(CXXFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+#
+# Rules to build a .a from .o(s)
+#
+lib/%.a:	$(LIBRARY_OBJS) Makefile
+	@echo "  Building library $@..."
+	@rm -f $@
+	ar r $@ $(LIBRARY_OBJS)
+#
+# Rules to build an executable from .o(s)
+#
+%:	.%.o Makefile
+	@echo "  Linking $*..."
+	$(CXX) $(LDFLAGS) -o $@ $(ALL_OBJS) $(SUB_LIBRARIES) $(HET_LIBRARIES) $(AUXIL_LIBRARIES) $(SYSTEM_LIBRARIES) 
+#
+# Rules to build dependencies
+#
+.%.d:	src/%.cpp $(ALL_HEADERS) Makefile
+	$(CXX) $(CXXFLAGS) -MM $(INCLUDES) -o /dev/stdout $< | \
+	sed "s/^.*.o:/.&/" >$@
+
+.%.d:	%.cpp $(ALL_HEADERS) Makefile
+	$(CXX) $(CXXFLAGS) -MM $(INCLUDES) -o /dev/stdout $< | \
+	sed "s/^.*.o:/.&/" >$@
+
+.%.d:	src/%.c $(ALL_HEADERS) Makefile
+	$(CC) $(CFLAGS) -MM $(INCLUDES) -o /dev/stdout $< | \
+	sed "s/^.*.o:/.&/" >$@
+
+.%.d:	%.c $(ALL_HEADERS) Makefile
+	$(CC) $(CFLAGS) -MM $(INCLUDES) -o /dev/stdout $< | \
+	sed "s/^.*.o:/.&/" >$@

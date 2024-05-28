@@ -1,0 +1,36 @@
+include $(HET_SRC_ROOT)/makefile.global
+
+PROGRAM=		tcs_server
+
+SUB_MAKES=		traj_comp
+
+include $(HET_SRC_ROOT)/makefile.genSrcsWithHandlerDocs
+ALL_SRCS=		$(all_srcs)
+ALL_HEADERS=	$(all_headers)
+ALL_OBJS=		$(all_objs)
+
+SUB_LIBRARIES= -L./traj_comp/lib -lpoint -L./traj_comp/NORADlib/lib -lnorad
+include $(HET_SRC_ROOT)/makefile.buildLibNames
+
+all:			sub_makes $(PROGRAM)
+
+echo:
+	echo HANDLER_DOC_XML $(HANDLER_DOC_XML)
+	echo HANDLER_DOC_HDR $(HANDLER_DOC_HDR)
+	echo HANDLER_DOC_SRC $(HANDLER_DOC_SRC)
+	echo HANDLER_DOC_OBJ $(HANDLER_DOC_OBJ)
+	echo ALL_SRCS $(ALL_SRCS)
+	echo ALL_HEADERS $(ALL_HEADERS)
+	echo ALL_OBJS $(ALL_OBJS)
+
+ifeq ($(HET_DEBUG_BUILD),yes)
+CXXFLAGS+=	-DTCS_DEBUG
+endif
+
+$(PROGRAM):		$(ALL_OBJS) $(LIBRARY_NAMES)
+
+include $(HET_SRC_ROOT)/makefile.commonTargets
+
+# include dependencies
+include $(HET_SRC_ROOT)/makefile.handlerDocDepends
+-include ${ALL_OBJS:.o=.d}

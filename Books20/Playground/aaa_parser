@@ -1,0 +1,29 @@
+Astronomy and Astrophysics Abstracts
+
+Section 3 Books
+Section 12 Conference Proceedings
+
+Example entries:
+|a|A._Beer (ed.)|t|Vistas in astronomy, Vol._13.|s|Oxford (UK): Pergamon Press, 8_+_296_p.|y|1972|k|Books|n|AAA007.003.001
+|a|F._Delobeau|t|The environment of the earth.|s|Astrophys. Space Sci. Libr. (Dordrecht (Netherlands): D. Reidel), Vol._28, 9_+_113_p.|y|1972|k|Books, Earth Atmosphere, Earth Ionosphere, Earth Magnetosphere|n|AAA007.003.002
+
+
+fields separated by '|' with field_name | field in pairs
+
+a == author
+t == title
+s == publisher as [translated from ... .] place : name, pagingation
+y == year
+k == subject 
+n == AAA entry number
+
+pagination and names have '_' for spaces, with sub-fields separated by ','
+|s| fields sometimes has translation information.
+
+use bookfile.py in ajbbook
+write standalone program to convert aribib format to XML files.
+ for line in lines:
+     entries = line.split('|')
+     convert entries to BookEntry()
+     
+Proofread XML files for correctness
