@@ -22,25 +22,24 @@ Installation
 Installing
 ==========
 
-BookEntry uses the python library *distutils* to install and
+Books20 uses the python tool *pip* to install and
 distribute the packages. More documentation about the installation
 program can be found by running the command
 
-``pydoc distutils.core.setup``
+``pip help``
 
-The BookEntry package may be installed from
+The Books20 package may be installed from
 the Tools directory with the command
 
-``python3 setup.py install``
+``pip install -v``
 
-My default is to install all the packages required for BookEntry in my
-home directory so I use
+The project currently uses the Anaconda 3 python package
+so I currently use the command,
 
-``python3 setup.py install --home=~``
+``pip install --prefix=<dirname> .``
 
-Or you can install in a different system directory with
-
-``python3 setup.py install --prefix=<dirname>``
+This will install in my version of python located in
+/home/jrf/anaconda3
 
 You may need superuser privileges to install in system directories.
 
@@ -55,17 +54,20 @@ in your ``.cshrc`` file.
 
 ``setenv PYTHONPATH /home/jrf/lib/python3.5/site-packages``
 
+Anaconda now automatically adds the relevant lines to your ``.bashrc``
+file so there is no need to do this unless you install in a different
+location.
 
 Building and Installing the Documentation
 =========================================
 
-The documentation can be found in ./Tools/doc. It is first written
-using Sphinx version 1.2.2 and is now building under Sphinx version
-1.4.6 (cf. `sphinx-doc.org <http://sphinx-doc.org/>`_). Output formats
-may be HTML, LaTeX, pdf, postscript, epub, or other formats.  I
-primarily use pdf and HTML.  (Making the pdf version requires that
-``pdflatex`` be installed.)  You can run ``make help`` to see what
-other formats are available.
+The documentation can be found in ./Tools/python/doc. It is first
+written using Sphinx version 1.2.2 and is now building under Sphinx
+version 7.3.7 as of May 2024 (cf. `sphinx-doc.org
+<http://sphinx-doc.org/>`_). Output formats may be HTML, LaTeX, pdf,
+postscript, epub, or other formats.  I primarily use pdf and HTML.
+(Making the pdf version requires that ``pdflatex`` be installed.)  You
+can run ``make help`` to see what other formats are available.
 
 To build the HTML and pdf documentation in the **doc** directory, run
 the command
