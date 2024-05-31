@@ -1,6 +1,6 @@
-# Updating the Books20 documentation #
-## 27 May 2024 ##
-## J. R. Fowler ##
+# Updating the Books20 documentation
+## 27 May 2024
+## J. R. Fowler
 
 ---
 
@@ -18,7 +18,15 @@ for the project. The tentative table of contents is,
   1.3 Layout of this document
 2. Installation
 3. Using the tools
+  3.1 ajbbooks
+  3.2 journal
+  3.3 findjournal
+  3.4 verify
+  3.5 ...
 4. Detailed description of the file formats and tools
+  4.1 lib
+  4.2 ajbbook
+  4.3 journal
 5. Code listings.
 
 To create images,
