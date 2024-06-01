@@ -121,7 +121,7 @@ def create_sort_menu(self, parent):
     '''
     sort_menu = parent.addMenu('Sort by')
     agroup = QtWidgets.QActionGroup(self)
-    for item in aj.__sort_fields__:
+    for item in aj.__sort_dict__:
         sort_action = create_action(self, item, checkable=True)
         sort_action.setEnabled(True)
         

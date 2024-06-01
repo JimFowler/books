@@ -24,6 +24,7 @@ import sys
 import traceback
 from lxml import etree
 
+from aabooks.ajbbook import __sort_dict__
 from aabooks.lib import entrylist
 from aabooks.ajbbook import ajbentry
 
@@ -218,8 +219,8 @@ class BookFile(entrylist.EntryList):
         '''Provides a wrapper function for sort().
 
         '''
-        print(f'sort_by: {sort_name}')
-        #self.sort(key = lambda entry: entry.sort_key(sort_name))
+        sortkey =__sort_dict__[sort_name]
+        self.sort(key = lambda entry: entry.sort_key(sortkey))
 
     def __add__(self, bookf):
         '''reimplement the __add__() or '+' function so that we can combine
