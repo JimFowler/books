@@ -61,7 +61,7 @@ def create_sort_menu(self, parent):
         
         sort_menu.addAction(sort_action)
         agroup.addAction(sort_action)
-    #agroup.triggered.connect(self.sort_triggered)
+    agroup.triggered.connect(self.sort_triggered)
 
 def create_menus(self, menu_bar):
     '''Create a set of menus for journal window'''

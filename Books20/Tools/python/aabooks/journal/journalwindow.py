@@ -153,6 +153,13 @@ class JournalWindow(QtWidgets.QMainWindow, ui_JournalEntry.Ui_JournalEntry):
         #pylint: enable = no-value-for-parameter
 
 
+    def sort_triggered(self, action):
+        '''Slot for QActionGroup.triggered.  'self' is the QAction
+        that was triggered.
+        '''
+        if self._vardict['journal_file']:
+            self._vardict['journal_file'].sort_by(action.iconText())
+    
     def display_is_valid(self):
         '''Check the display values for a valid journal entry.
         A valid journal entry has at least a title.  Returns

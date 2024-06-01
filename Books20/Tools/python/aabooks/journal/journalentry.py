@@ -47,6 +47,7 @@ class JournalEntry(dict):
         for k in keys:
             del self[k]
 
+        self['Index'] = -1
         self['Title'] = ''
         self['subTitle'] = ''
         self['subsubTitle'] = ''
@@ -73,6 +74,37 @@ class JournalEntry(dict):
         #               'LCCN', 'DDCN', etc
         #
         self['Comments'] = [] # should be a list of strings
+
+    def sort_key(self, key):
+        """Return a value that list.sort() can use to sort the JournalFile list.
+        'key' must a a string value of one of dict keys in the entry. For
+        the keys we do not yet now how to sort we do something???
+
+        """
+
+        sortkey = None
+
+        lower_key = key.lower()
+        sortkey = ''
+        
+        if 'year' in lower_key and self['startDate']:
+            sortkey = self['startDate']
+
+        if 'title' in lower_key:
+            sortkey = self['Title']
+
+        if 'place' in lower_key and self['Publishers'] \
+           and 'Place' in self['Publishers'][0]:
+            sortkey = self['Publishers'][0]['Place']
+
+        if 'publisher' in lower_key and self['Publishers'] \
+           and 'Name' in self['Publishers'][0]:
+            sortkey = self['Publishers'][0]['PublisherName']
+
+        if 'orig' in lower_key:
+            sortkey = self['Index']
+
+        return sortkey
 
     def is_valid(self):
         """journal entries are valid if they have a valid Title."""

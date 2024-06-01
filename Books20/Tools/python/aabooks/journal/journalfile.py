@@ -21,6 +21,7 @@ import os
 from lxml import etree
 
 from aabooks.lib import entrylist
+from aabooks.journal import __sort_dict__
 from aabooks.journal import journalentry
 
 __version__ = 0.1
@@ -102,6 +103,7 @@ class JournalFile(entrylist.EntryList):
                     temp_entry.read_xml_to_entry(entry)
                     if temp_entry.is_valid():
                         count += 1
+                        temp_entry['Index'] = count
                         self.set_new_entry(temp_entry)
 
         self._dirty = False
@@ -143,6 +145,13 @@ class JournalFile(entrylist.EntryList):
         self._dirty = False
 
         return True
+
+    def sort_by(self, sort_name):
+        '''Provides a wrapper function for sort().
+
+        '''
+        sortkey = __sort_dict__[sort_name]
+        self.sort(key = lambda entry: entry.sort_key(sortkey))
 
     def __add__(self, journalf):
         '''Reimplement the __add__() or '+' function so that we can combine
