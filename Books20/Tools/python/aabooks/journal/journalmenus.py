@@ -22,6 +22,7 @@
 # pylint: disable=too-many-arguments,eval-used
 
 from PyQt5 import QtGui, QtWidgets
+from aabooks.journal import __sort_dict__
 
 def create_action(self, text, slot=None, shortcut=None, icon=None,
                   tip=None, checkable=False, signal="triggered"):
@@ -46,6 +47,21 @@ def create_action(self, text, slot=None, shortcut=None, icon=None,
         action.setCheckable(True)
     return action
 
+
+def create_sort_menu(self, parent):
+    '''Create the sort menu under the edit menu.  We can sort
+    by the items in the sort list.
+
+    '''
+    sort_menu = parent.addMenu('Sort by')
+    agroup = QtWidgets.QActionGroup(self)
+    for item in __sort_dict__:
+        sort_action = create_action(self, item, checkable=True)
+        sort_action.setEnabled(True)
+        
+        sort_menu.addAction(sort_action)
+        agroup.addAction(sort_action)
+    #agroup.triggered.connect(self.sort_triggered)
 
 def create_menus(self, menu_bar):
     '''Create a set of menus for journal window'''
@@ -106,7 +122,9 @@ def create_menus(self, menu_bar):
     #action = create_action(self, 'Additional &Info...',
     #                       shortcut='Ctrl+T')
     #menu.addAction(action)
-
+    # Add sort sub-menu
+    create_sort_menu(self, menu)
+    
     action = create_action(self, '&Insert Symbol...',
                            slot='self._open_symbol_dialog',
                            shortcut='Ctrl+I')
@@ -117,12 +135,6 @@ def create_menus(self, menu_bar):
                            shortcut='Ctrl+H')
     menu.addAction(action)
 
-    # Create sort sub-menu
-    sort_menu = menu.addMenu('Sort By')
-
-    action = create_action(self, 'Journal Title')
-    action.setEnabled(False)
-    sort_menu.addAction(action)
 
     # set up the Entry menus
     menu = menu_bar.addMenu('Entry')

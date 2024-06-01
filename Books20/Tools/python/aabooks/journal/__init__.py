@@ -16,3 +16,21 @@
 ## End copyright
 '''Import the version string for everybody.'''
 from .version import __version__
+#
+# __sort_dict__ is used by the Sort By menu item chain
+#   to determine what key should be used in sorting journalentries
+#   in JournalFile objects.
+#
+# The menu_key is the word used in the Edit->Sort By menu.
+# sort_word is the value use in JournalFile.sort_by() as the key
+#   in journalentry.sort_key() that the list object journalfile will
+#   use when sorting the journalentries.
+#
+__sort_dict__ = {
+# menu_key : sort_word,
+    'Start Year' : 'year',
+    'Title' : 'title',
+    'Place' : 'place',
+    'Publisher' : 'publisher',
+    'Restore Orig Order' : 'orig',
+}
