@@ -237,8 +237,8 @@
 ***** DONE add sort to BookFile class, 29 Jun 2022
 ***** DONE Create sortbooks branch to work in, 30 May 2024 
 ***** DONE add sort feature to ajbbooks, 1 June 2024
-***** add sort JournalFile class
-***** add sort feature to journals
+***** DONE add sort JournalFile class, 1 June 2024
+***** DONE add sort feature to journals, 1 June 2024
 **** STARTED update documentation
 **** add search all files feature to ajbbooks and journals
 **** add filename to __init__() in BookFile and JournalFile class

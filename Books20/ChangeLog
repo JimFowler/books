@@ -1,8 +1,12 @@
 2024-06-01  Jim Fowler  <jrf@Pergamon>
 
+	* Tools/python/aabooks/journal: Added sort menu using QAction and
+	QActionGroup.  Can now link the menu signal to the
+	bookfile.sort_by slot. Can now sort and unsort.
+
 	* Tools/python/aabooks/ajbbook: Added sort menu using QAction and
 	QActionGroup.  Can now link the menu signal to the
-	bookfile.sort_by slot.
+	bookfile.sort_by slot. Can now sort and unsort.
 
 2024-05-30  Jim Fowler  <jrf@Pergamon>
 
