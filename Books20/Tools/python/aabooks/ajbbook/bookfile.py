@@ -166,6 +166,7 @@ class BookFile(entrylist.EntryList):
                     enttemp.read_xml_to_entry(entry)
                     if enttemp.is_valid():
                         count += 1
+                        enttemp['Index'] = count
                         self.set_new_entry(enttemp)
 
         self._dirty = False

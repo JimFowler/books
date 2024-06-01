@@ -235,18 +235,8 @@ class AJBentry(dict):
             else:
                 sortkey = ''
 
-        if 'editor' in lower_key or\
-           'translator' in lower_key or \
-           'compiler' in lower_key or \
-           'contributor' in lower_key:
-
-            lower_key += 's'
-            cap_key =lower_key.capitalize()
-            if self[cap_key]:
-                # if the list exists return the first name
-                sortkey =  mk_sort_name(self[cap_key][0])
-            else:
-                sortkey = ''
+        if 'orig' in lower_key:
+            sortkey = self['Index']
 
         return sortkey
     #
