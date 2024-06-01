@@ -104,7 +104,7 @@
    documenting code chunks and programs but it will depend on the
    publication requirements for the final markup language. Note
    however, that 'Markdown' can produce \TeX files.
-* Refactor software, begun 23 Sept 2018
+* STARTED Refactor software, begun 23 Sept 2018
 *** Goals:
 **** To separate program specific files from generic files
 **** To create more generic functions in the library
@@ -227,6 +227,7 @@
 **** DONE update to python 3.09
      update nameparser and modgrammer if possible
 *** Phase 6: refactor code to be better python
+**** Remove bookfile read_file_txt, write_file_txt
 **** convert Doc/Series tables from list of lists to JSON format
 **** convert Doc/Hjs/cat_entry.py for better generality
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
@@ -235,7 +236,7 @@
 ***** DONE Determine what to sort on and how, 29 Jun 2022
 ***** DONE add sort to BookFile class, 29 Jun 2022
 ***** DONE Create sortbooks branch to work in, 30 May 2024 
-***** add sort feature to ajbbooks 
+***** DONE add sort feature to ajbbooks, 1 June 2024
 ***** add sort JournalFile class
 ***** add sort feature to journals
 **** STARTED update documentation
