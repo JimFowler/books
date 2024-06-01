@@ -206,7 +206,8 @@ class AJBentry(dict):
             return sortname.lower()
 
         lower_key = key.lower()
-
+        sortkey = ''
+        
         if 'year' in lower_key:
             sortkey = self['Year']
 
@@ -217,11 +218,13 @@ class AJBentry(dict):
             # return the ajbnum string
             sortkey = self.sort_num_str()
 
-        if 'place' in lower_key:
+        if 'place' in lower_key and self['Publishers'] \
+           and 'Place' in self['Publishers'][0]:
             # return the first publisher place
             sortkey = self['Publishers'][0]['Place']
 
-        if 'publisher' in lower_key:
+        if 'publisher' in lower_key and self['Publishers'] \
+           and 'PublisherName' in self['Publishers'][0]:
             sortkey = self['Publishers'][0]['PublisherName']
 
         if 'language' in lower_key:
@@ -232,8 +235,6 @@ class AJBentry(dict):
                 sortkey = mk_sort_name(self['Authors'][0])
             elif self['Editors']:
                 sortkey = mk_sort_name(self['Editors'][0])
-            else:
-                sortkey = ''
 
         if 'orig' in lower_key:
             sortkey = self['Index']
