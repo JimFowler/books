@@ -19,7 +19,7 @@
 """Create the menus for the AJB Book Entry window
 """
 from PyQt5 import QtGui, QtWidgets
-from aabooks import ajbbook as aj
+from aabooks.ajbbook import __sort_dict__
 
 # pylint: disable=eval-used,too-many-arguments
 
@@ -121,7 +121,7 @@ def create_sort_menu(self, parent):
     '''
     sort_menu = parent.addMenu('Sort by')
     agroup = QtWidgets.QActionGroup(self)
-    for item in aj.__sort_dict__:
+    for item in __sort_dict__:
         sort_action = create_action(self, item, checkable=True)
         sort_action.setEnabled(True)
         
