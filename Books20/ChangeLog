@@ -1,5 +1,7 @@
 2024-06-01  Jim Fowler  <jrf@Pergamon>
 
+	* v2.3.0: add tag v2.3.0
+
 	* Tools/python/aabooks/journal: Added sort menu using QAction and
 	QActionGroup.  Can now link the menu signal to the
 	bookfile.sort_by slot. Can now sort and unsort.
