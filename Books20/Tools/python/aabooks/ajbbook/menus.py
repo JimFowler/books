@@ -19,6 +19,7 @@
 """Create the menus for the AJB Book Entry window
 """
 from PyQt5 import QtGui, QtWidgets
+from aabooks import ajbbook as aj
 
 # pylint: disable=eval-used,too-many-arguments
 
@@ -113,7 +114,20 @@ def create_file_menu(self, menu_bar):
                                tip='Close the Application')
     file_menu.addAction(new_action)
 
+def create_sort_menu(self, parent):
+    '''Create the sort menu under the edit menu.  We can sort
+    by the items in the sort list.
 
+    '''
+    sort_menu = parent.addMenu('Sort by')
+    agroup = QtWidgets.QActionGroup(self)
+    for item in aj.__sort_fields__:
+        sort_action = create_action(self, item, checkable=True)
+        sort_action.setEnabled(True)
+        
+        sort_menu.addAction(sort_action)
+        agroup.addAction(sort_action)
+    agroup.triggered.connect(self.sort_triggered)
 
 def create_edit_menu(self, menu_bar):
     """Create the edit menu."""
@@ -135,20 +149,11 @@ def create_edit_menu(self, menu_bar):
                                   slot='self.edit_header',
                                   shortcut='Ctrl+H')
 
-    origstr_action = create_action(self, 'Show Original String',
-                                   slot='self.show_orig_str')
+    #origstr_action = create_action(self, 'Show Original String',
+    #                               slot='self.show_orig_str')
 
     setvolnum_action = create_action(self, 'Set Volume Number...',
                                      slot='self.set_volume_number_interactive')
-
-    sort_ajbnum_action = create_action(self, 'AJB/AAA num')
-    sort_ajbnum_action.setEnabled(False)
-
-    sort_author_action = create_action(self, 'Author')
-    sort_author_action.setEnabled(False)
-
-    sort_restore_action = create_action(self, 'Restore orig order')
-    sort_restore_action.setEnabled(False)
 
     edit_menu = menu_bar.addMenu('&Edit')
     edit_menu.addAction(cut_action)
@@ -156,15 +161,11 @@ def create_edit_menu(self, menu_bar):
     edit_menu.addAction(paste_action)
     edit_menu.addAction(delete_action)
     edit_menu.addSeparator()
+    create_sort_menu(self, edit_menu)
+
     edit_menu.addAction(symbol_action)
     edit_menu.addAction(header_action)
-
-    sort_menu = edit_menu.addMenu('Sort by')
-    sort_menu.addAction(sort_ajbnum_action)
-    sort_menu.addAction(sort_author_action)
-    sort_menu.addAction(sort_restore_action)
-
-    edit_menu.addAction(origstr_action)
+    #edit_menu.addAction(origstr_action)
     edit_menu.addAction(setvolnum_action)
 
 

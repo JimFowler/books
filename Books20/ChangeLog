@@ -1,3 +1,15 @@
+2024-06-01  Jim Fowler  <jrf@Pergamon>
+
+	* Tools/python/aabooks/ajbbook: Added sort menu using QAction and
+	QActionGroup.  Can now link the menu signal to the
+	bookfile.sort_by slot.
+
+2024-05-30  Jim Fowler  <jrf@Pergamon>
+
+	* sortbooks: created branch sortbooks.  Deleted previous
+	sort_bookfile branch.  There were too many conflicts with
+	master.
+
 2024-05-27  Jim Fowler  <jrf@Pergamon>
 
 	* Tools/python/pyproject.toml (Repository): Created a

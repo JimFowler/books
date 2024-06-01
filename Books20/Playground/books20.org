@@ -232,8 +232,9 @@
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
 *** Add features
 **** STARTED add sort function
-***** DONE Determine what to sort on and how.
-***** DONE add sort to BookFile class
+***** DONE Determine what to sort on and how, 29 Jun 2022
+***** DONE add sort to BookFile class, 29 Jun 2022
+***** DONE Create sortbooks branch to work in, 30 May 2024 
 ***** add sort feature to ajbbooks 
 ***** add sort JournalFile class
 ***** add sort feature to journals

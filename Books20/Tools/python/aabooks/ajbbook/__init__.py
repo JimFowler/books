@@ -16,3 +16,5 @@
 ## End copyright
 '''Import the version string.'''
 from .version import __version__
+__sort_fields__ = ['Year', 'AJB/AAA Num', 'Author/Editor', 'Publisher', 'Place',
+                   'Language', 'Restore Orig Order']

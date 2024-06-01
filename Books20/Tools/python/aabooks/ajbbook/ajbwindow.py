@@ -122,6 +122,15 @@ class BookEntry(QtWidgets.QMainWindow, BookEntry_ui.Ui_MainWindow):
         menus.create_menus(self, self.menubar)
         self.connect_all_slots()
 
+    def sort_triggered(self, action):
+        '''Slot for QActionGroup.triggered.  'self' is the QAction
+        that was triggered.
+        '''
+        if self.bookfile:
+            print(f'sort_triggered: {action.iconText()}')
+            self.bookfile.sort_by(action.iconText())
+    
+
     def connect_all_slots(self):
         '''Connect all the slots and signals to each other.'''
         #pylint: disable = no-value-for-parameter

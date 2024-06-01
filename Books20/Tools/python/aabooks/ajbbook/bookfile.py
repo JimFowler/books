@@ -218,8 +218,8 @@ class BookFile(entrylist.EntryList):
         '''Provides a wrapper function for sort().
 
         '''
-
-        self.sort(key = lambda entry: entry.sort_key(sort_name))
+        print(f'sort_by: {sort_name}')
+        #self.sort(key = lambda entry: entry.sort_key(sort_name))
 
     def __add__(self, bookf):
         '''reimplement the __add__() or '+' function so that we can combine
