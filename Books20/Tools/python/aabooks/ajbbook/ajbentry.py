@@ -25,45 +25,9 @@ from aabooks.ajbbook import entryxml
 
 class AJBentry(dict):
 
-    """Read the information from a string and put the data in the
-    AJBentry dictionary. The entry is valid if there was a valid AJB
-    number (vol.section.index) and a title.
-
-    A line looks like:
-
-    Index AJB_Num Author, Title, Place, Publisher, Year, \
-    Pagination, Price, Reviews, Comments]
-
-    No field need be present except Index, AJB_Num, and Title.
-
-    Field 1 Index AJB_Num Author has format
-
-    Index AJB_Num [I. A. Author [jr.|III|...] [ and H. E. Another [and ...]]] \
-       [ed.|comp.|something else]
-
-    Field 2 Title
-
-    Field 3 Place
-
-       [name | name-name[-name[-...]] Name may contain spaces
-
-    Field 4 Publisher
-
-    Field 5 Year
-
-    Field 6 Pagination
-
-    Field 7 Price
-
-       [n+nnn [and nn+nnn [and ...] pp]]
-
-    Field 8 Reviews
-
-       [Journal vol page [and Journal vol page [and ...]]]
-
-    Field 9 Comment
-
-       See AJBcomments.py for a description of the comments grammer
+    """Read the information from an XML description and put the data in
+    the AJBentry dictionary. The entry is valid if there was a valid
+    AJB number (vol.section.index) and a title.
 
     """
 

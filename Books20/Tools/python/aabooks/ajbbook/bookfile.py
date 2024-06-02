@@ -68,64 +68,6 @@ class BookFile(entrylist.EntryList):
 
         return short_title_list
 
-    # Specific file type I/O
-
-    def read_file_txt(self):
-        """Open and read a .txt file and put the header stuff into
-        _header and the entries into the entry list. The header is
-        defined as everything before the first valid entry. If
-        filename is not given, we use the value set in
-        BookFile.set_filename() if valid. Note that we do not care if
-        the entries or header have been modified; that is the job of
-        the calling routine.
-
-        Return value is the number of record entries read."""
-
-        self.clear_list()
-
-        count = 0
-
-        for line in fileinput.input([self.filename]):
-            line = line.strip()
-            enttemp = ajbentry.AJBentry()
-
-            enttemp.read_text_to_entry(line)
-            if not enttemp.is_valid() and not count:
-                self.set_header(self.get_header() + line + '\n')
-
-            if enttemp.is_valid():
-                count += 1
-                self.set_new_entry(enttemp)
-
-            del enttemp
-
-        return count
-
-    def write_file_txt(self):
-        """Write the entry list and header to a .txt disk file.
-        if filename is not given, we use Aabooks._fileName instead.
-
-        Returns True if the file could be written or False otherwise."""
-
-        with open(self.filename, 'w', encoding='UTF8') as file_fd:
-
-            if file_fd.newlines:
-                newline = file_fd.newlines + file_fd.newline
-            else:
-                newline = '\n\n'
-
-            file_fd.write(self.get_header())
-            for count, ent in enumerate(self):
-                file_fd.write(str(count) + ' ' + ent.write_text_from_entry() \
-                              + newline)
-
-            file_fd.close()
-            self._dirty = False
-
-            return True
-
-        return False
-
     #
     # XML read/write
     #
