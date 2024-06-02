@@ -1,5 +1,12 @@
 2024-06-01  Jim Fowler  <jrf@Pergamon>
 
+	* Tools/python/pyproject.toml: Add dependency on
+	fast-autocomplete[levenshtein] for journal program.
+
+	* Tools/python/aabooks/ajbbook/bookfile.py: remove read_file_txt()
+	and write_file_txt().  This were no longer valid after the changes
+	of 27 May 2024 to remove the entrytext.py.
+
 	* v2.3.0: add tag v2.3.0
 
 	* Tools/python/aabooks/journal: Added sort menu using QAction and

@@ -12,7 +12,8 @@ dynamic = ["version"]
 dependencies = [
 	     "pyqt5",
 	     "nameparser",
-	     "isbnlib"
+	     "isbnlib",
+	     "fast-autocomplete[levenshtein]",
 	     ]
 requires-python = ">=3.9"
 
