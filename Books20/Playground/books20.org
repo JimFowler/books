@@ -232,7 +232,7 @@
 **** convert Doc/Hjs/cat_entry.py for better generality
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
 *** Add features
-**** STARTED add sort function
+**** DONE add sort function, 1 Jun 2024
 ***** DONE Determine what to sort on and how, 29 Jun 2022
 ***** DONE add sort to BookFile class, 29 Jun 2022
 ***** DONE Create sortbooks branch to work in, 30 May 2024 
@@ -240,7 +240,7 @@
 ***** DONE add sort JournalFile class, 1 June 2024
 ***** DONE add sort feature to journals, 1 June 2024
 **** STARTED update documentation
-**** add search all files feature to ajbbooks and journals
+**** STARTED add search all files feature to ajbbooks and journals
 **** add filename to __init__() in BookFile and JournalFile class
 **** add optional version string to standard_parser_args()
      Need to consider how this is used in ajbbooks

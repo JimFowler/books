@@ -1,5 +1,7 @@
 2024-06-01  Jim Fowler  <jrf@Pergamon>
 
+	* Tools/python/scripts/searchbooks.py: Began work on search program.
+
 	* Tools/python/pyproject.toml: Add dependency on
 	fast-autocomplete[levenshtein] for journal program.
 
