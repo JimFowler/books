@@ -226,9 +226,9 @@
 **** DONE update to python 3.11 or 3.12 complete 2024-02-23
 **** DONE update to python 3.09
      update nameparser and modgrammer if possible
-*** Phase 6: refactor code to be better python
-**** Remove bookfile read_file_txt, write_file_txt
-**** convert Doc/Series tables from list of lists to JSON format
+*** Phase 6: refactor code to be better python, started 1 June 2024
+**** DONE Remove bookfile read_file_txt, write_file_txt, 1 June 2024
+**** convert Doc/Series tables from list of lists to JSON format?
 **** convert Doc/Hjs/cat_entry.py for better generality
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
 *** Add features
