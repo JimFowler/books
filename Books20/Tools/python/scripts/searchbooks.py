@@ -31,9 +31,9 @@ Class output
    a bookfile
 
 
-Search Catagories
-ajbnum
+Fields
 
+HumanName (last, first, middle, 
 author
 editors
 AuthorEditor
@@ -42,12 +42,23 @@ compiler
 contributers
 AllPeople
 
+Strings
+ajbnum
 title
 comments
 place
 publisher
+keywords
+
+Date
 publication date (year)
 
+tasks
+  contains  # strings 'contain' other strings
+  numeric       # numbers|dates can be = != >= > <= <
+  date
+
+Field.task='string' [logical 
 
 
 Command Line/Config file Arguments
@@ -106,8 +117,8 @@ class SearchBooks():
         '''Set up the class structure'''
 
         self.bookfile = bf.BookFile()
-        #self.search =
-        #self.files =
+        self.search = ''
+        self.files = []
 
         self.set_header()
 
@@ -118,11 +129,16 @@ class SearchBooks():
         search terms
 
         '''
+    def clear_file(self):
+        '''Clear self.bookfile of previous entries.
 
+        '''
     def search(self):
         '''Perform the search with the search terms on the files'''
 
-
+        for afile in self.files:
+            new_entries = self.search_file(afile, self.search)
+            
 def main():
     '''Search the files'''
 
