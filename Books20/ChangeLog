@@ -1,3 +1,8 @@
+2024-06-05  Jim Fowler  <jrf@Pergamon>
+
+	* Tools/python/aabooks/version.py: Bump the library and scripts
+	version to 2.3.0 as the package is tagged.
+
 2024-06-01  Jim Fowler  <jrf@Pergamon>
 
 	* Tools/python/scripts/searchbooks.py: Began work on search program.
