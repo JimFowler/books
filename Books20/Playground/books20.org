@@ -229,7 +229,12 @@
 *** Phase 6: refactor code to be better python, started 1 June 2024
 **** DONE Remove bookfile read_file_txt, write_file_txt, 1 June 2024
 **** convert Doc/Series tables from list of lists to JSON format?
-**** convert Doc/Hjs/cat_entry.py for better generality
+     This will require changes in table.py as well.
+**** convert aabooks/ajbbook/cat_entry.py for better generality
+     This file is to create a printable LaTeX string from an entry.
+     Originally taken from Docs/Wjm/wjmentry.py with was also used
+     for the HJS catalogue; I want to provide a generic class to
+     allows creating a printable string given an AjbEntry or HjsEntry.
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
 *** Add features
 **** DONE add sort function, 1 Jun 2024
