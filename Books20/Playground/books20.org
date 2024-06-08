@@ -236,6 +236,7 @@
      for the HJS catalogue; I want to provide a generic class to
      allows creating a printable string given an AjbEntry or HjsEntry.
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
+**** update documentation (so I know what is going on...)
 *** Add features
 **** DONE add sort function, 1 Jun 2024
 ***** DONE Determine what to sort on and how, 29 Jun 2022
