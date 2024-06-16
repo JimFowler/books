@@ -39,5 +39,5 @@ setup(name='aabooks',
       packages=['aabooks', 'aabooks.lib', 'aabooks.ajbbook', 'aabooks.journal'],
       scripts=['scripts/aaaconvert', 'scripts/ajbbooks', 'scripts/journals',
                'scripts/ppxml', 'scripts/validate_xml', 'scripts/verify',
-               'scripts/findjournals'],
+               'scripts/findjournals', 'scripts/searchbooks'],
       package_data={'aabooks.lib': ['symbols.txt']},)
