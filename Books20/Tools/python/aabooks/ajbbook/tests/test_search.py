@@ -12,8 +12,8 @@ def mkname(ajbname: str) -> str:
 
 def mk_name_list() -> list[str]:
     '''Make a list for file names'''
-    name_list: list[str] = ['Ajb/ajb23_books.xml', 'Ajb/ajb63_books.xml', 'AAA/aaa08_books.xml',
-                            'AAA/aaa20_books.xml', 'AAA/aaa33_books.xml'] 
+
+    name_list: list[str] = ['Ajb/ajb63_books.xml', 'AAA/aaa33_books.xml']
     return [mkname(name) for name in name_list]
 
 
@@ -30,7 +30,34 @@ class SearchFunctionTestCase(unittest.TestCase):
         del self.search_file
         return super().tearDown()
 
-    def test_search(self) -> None:
+    def test_a(self) -> None:
         '''Test the search thing'''
         bfile: bf.BookFile = self.search_file.search()
+        self.assertEqual(len(bfile), 0)
+
+    def test_b_AnyPerson(self) -> None:
+        '''Test the AnyPerson search'''
+        search_file: search.SearchFiles = search.SearchFiles(search_terms='Abetti in AnyPerson',
+                                                        header='This is a test header string',
+                                                        files=mk_name_list())
+        bfile: bf.BookFile = search_file.search()
+        del search_file
+        self.assertEqual(len(bfile), 3)
+
+    def test_c_Author(self) -> None:
+        '''Test a specifc field for person'''
+        search_file: search.SearchFiles = search.SearchFiles(search_terms='Abetti in Authors',
+                                                        header='This is a test header string',
+                                                        files=mk_name_list())
+        bfile: bf.BookFile = search_file.search()
+        del search_file
+        self.assertEqual(len(bfile), 3)
+
+    def test_d_Editor(self) -> None:
+        '''Test a specifc field for person'''
+        search_file: search.SearchFiles = search.SearchFiles(search_terms='Abetti in Editors',
+                                                        header='This is a test header string',
+                                                        files=mk_name_list())
+        bfile: bf.BookFile = search_file.search()
+        del search_file
         self.assertEqual(len(bfile), 0)
