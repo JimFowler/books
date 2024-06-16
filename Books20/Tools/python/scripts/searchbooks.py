@@ -20,69 +20,10 @@
 '''Search the ajb??_books.xml and aaa??_books.xml files for
 a particular string
 
-
-Class inputs:
-   a bookfile
-   search categories
-   search parameters
-     and, or, not  ?
-
-Class output
-   a bookfile
-
-
-Fields
-
-HumanName (last, first, middle, 
-author
-editors
-AuthorEditor
-translator
-compiler
-contributers
-AllPeople
-
-Strings
-ajbnum
-title
-comments
-place
-publisher
-keywords
-
-Date
-publication date (year)
-
-tasks
-  contains  # strings 'contain' other strings
-  numeric       # numbers|dates can be = != >= > <= <
-  date
-
-Field.task='string' [logical 
-
-
-Command Line/Config file Arguments
-standard arg
-AJB/AAA locations
-search string  area=string
-
-output  a bookfile object, use ajbbooks to display
-
-what if the entry is a reference
-    print both? need to search for an AJBnum
-
-
-reverse lookup to catch references
-for every file in AAA and AJB
-  search fields
-  if found or reference
-     add to book file
 '''
 from pprint import pprint
 import configargparse as argp
 
-import aabooks.lib.utils as aautils
-from aabooks.ajbbook import bookfile as bf
 
 __VERSION__ = 'v1.0.0'
 
@@ -109,36 +50,7 @@ def getargs():
 
     return parser.parse_known_args()[0]
 
-class SearchBooks():
-    '''A class to consolidate the search functions to search book files
-    with AJB and AAA entries.'''
 
-    def __init__(self, **kwargs):
-        '''Set up the class structure'''
-
-        self.bookfile = bf.BookFile()
-        self.search = ''
-        self.files = []
-
-        self.set_header()
-
-    def set_header(self):
-        '''Write all relevant information to the books file header,
-        date/time
-        files
-        search terms
-
-        '''
-    def clear_file(self):
-        '''Clear self.bookfile of previous entries.
-
-        '''
-    def search(self):
-        '''Perform the search with the search terms on the files'''
-
-        for afile in self.files:
-            new_entries = self.search_file(afile, self.search)
-            
 def main():
     '''Search the files'''
 
