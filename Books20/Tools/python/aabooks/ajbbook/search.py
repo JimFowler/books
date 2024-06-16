@@ -107,7 +107,7 @@ __PERSON_LIST__: list = ['Authors', 'Editors', 'Translators',
 def search_people(entry: ajbentry.AJBentry, object: str,
                   action: 'str', field: str) -> bool:
     '''Check for object 'action' in the given entry fields'''
-    print(f'{object = }, {action = }, {field = }')
+    #print(f'{object = }, {action = }, {field = }')
     final_result: bool = False
     if field == 'AnyPerson':
         slist: list = __PERSON_LIST__

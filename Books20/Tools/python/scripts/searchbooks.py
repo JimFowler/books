@@ -24,6 +24,9 @@ a particular string
 from pprint import pprint
 import configargparse as argp
 
+from aabooks.lib import utils as aautils
+from aabooks.ajbbook import bookfile as bf
+from aabooks.ajbbook import search
 
 __VERSION__ = 'v1.0.0'
 
@@ -33,7 +36,7 @@ term and return an XML file with the found entries'''
 #
 # Parse the command line arguments
 #
-def getargs():
+def getargs() -> argp.ArgumentParser:
     '''Parse the command line arguments.'''
     parser = argp.ArgumentParser(description=__DESCRIPTION__,
                                  default_config_files=['~/.config/Books20/searchbooks.conf'])
@@ -42,12 +45,20 @@ def getargs():
 
     parser.add_argument('--search-term', '-s',
                         help='a logical string',
-                        type=str,
-                        default='Title.contains="stars"')
+                        type=str)
     
-    parser.add_argument('files',
-                        nargs='*')
+    parser.add_argument('--header',
+                        help='''a string to put in the header of the BookFile (default none)''',
+                        default = '')
 
+    parser.add_argument('--files', '-f',
+                        help='''a comma separated list of files to search,
+                        default is all of Data/Ajb''')
+
+    parser.add_argument('--output',
+                        help='''a name for the output files (default is search_books.xml)''',
+                        default='./search_books.xml')
+    
     return parser.parse_known_args()[0]
 
 
@@ -55,7 +66,17 @@ def main():
     '''Search the files'''
 
     args = getargs()
-    pprint(args)
+    if args.verbose:
+        pprint(args)
+
+    sobj = search.SearchFiles(search_terms=args.search_term, 
+                              files=args.files.split(','),
+                              header=args.header)
+    bfile: bf.BookFile = sobj.search()
+    if args.verbose:
+        print(f'found {len(bfile)} entries, writing to {args.output}')
+    bfile.write_file_xml(args.output)
+
 
 ##
 ## Do the work
