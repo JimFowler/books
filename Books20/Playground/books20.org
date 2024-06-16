@@ -236,7 +236,6 @@
      for the HJS catalogue; I want to provide a generic class to
      allows creating a printable string given an AjbEntry or HjsEntry.
 **** convert HjsEntry to its own file hjsentry.py in aabooks/ajbook
-**** update documentation (so I know what is going on...)
 *** Add features
 **** DONE add sort function, 1 Jun 2024
 ***** DONE Determine what to sort on and how, 29 Jun 2022
@@ -245,8 +244,9 @@
 ***** DONE add sort feature to ajbbooks, 1 June 2024
 ***** DONE add sort JournalFile class, 1 June 2024
 ***** DONE add sort feature to journals, 1 June 2024
-**** STARTED update documentation
-**** STARTED add search all files feature to ajbbooks and journals
+**** DONE add search all files feature to ajbbooks, complete 16 June 2024
+**** add search all files to journals
+**** update documentation
 **** add filename to __init__() in BookFile and JournalFile class
 **** add optional version string to standard_parser_args()
      Need to consider how this is used in ajbbooks
