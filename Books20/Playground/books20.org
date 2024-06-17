@@ -245,7 +245,6 @@
 ***** DONE add sort JournalFile class, 1 June 2024
 ***** DONE add sort feature to journals, 1 June 2024
 **** DONE add search all files feature to ajbbooks, complete 16 June 2024
-**** add search all files to journals
 **** update documentation
 **** add filename to __init__() in BookFile and JournalFile class
 **** add optional version string to standard_parser_args()
