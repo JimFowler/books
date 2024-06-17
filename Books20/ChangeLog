@@ -1,5 +1,9 @@
 2024-06-16  Jim Fowler  <jrf@Pergamon>
 
+	* Tools/python/aabooks/*/tests: corrected all tests to allow for
+	the fact that they have moved to ./tests.  Verified that all
+	worked correctly
+	
 	* Tools/python/scripts/searchbooks: Finished searchbooks and got
 	it to work today.
 
