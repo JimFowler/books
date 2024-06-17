@@ -213,6 +213,7 @@
       instead.
 ***** consider moving to a different backend instead of setuptools 
 **** DONE create test directories and move unittests, complete 26 May 2924
+**** DONE tested all unittest, complete 16 June 2024
 **** DONE convert Tools/python/README.txt to a markdown file README.md
 **** DONE delete modgrammar dependence, completed 27 May 2024
 ***** remove modgrammar package 
@@ -228,6 +229,9 @@
      update nameparser and modgrammer if possible
 *** Phase 6: refactor code to be better python, started 1 June 2024
 **** DONE Remove bookfile read_file_txt, write_file_txt, 1 June 2024
+**** STARTED Update documentation so I can know how the system works
+***** DONE create documentation branch, complete 16 June 2024
+***** create new single document for Books20
 **** convert Doc/Series tables from list of lists to JSON format?
      This will require changes in table.py as well.
 **** convert aabooks/ajbbook/cat_entry.py for better generality
