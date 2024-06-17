@@ -22,7 +22,7 @@ from lxml import etree
 #from aabooks.journal import entryxml as ex
 
 from aabooks.journal.journalentry import JournalEntry
-from aabooks.journal import testentry
+from aabooks.journal.tests import testentry
 
 
 class EntryTestCase(unittest.TestCase):
